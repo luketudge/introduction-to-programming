@@ -12,10 +12,6 @@ Instructions for installing the necessary software on your own computer.
 
 Some recommended books.
 
-## [Project](project)
-
-Information about the programming project.
-
 ## Topics
 
 ### Creating a computer program with Python
@@ -45,3 +41,7 @@ Information about the programming project.
 ### Relational databases
 
 ### GUIs
+
+## [Project](project)
+
+Information about the programming project.
