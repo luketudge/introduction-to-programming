@@ -14,7 +14,7 @@ Some recommended books.
 
 ## Topics
 
-### Creating a computer program with Python
+### [Creating a computer program with Python](topics/intro)
 
 ### Variables and data types
 
