@@ -28,7 +28,7 @@ There are various ways to run a *py* file with the Python interpreter. For examp
 
 ![](images/command_line.png)
 
-However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and [configured](../../software/Spyder.md) Spyder, then start it up. In Spyder, use the **Open** option from the **File** menu to open the text file that you just created.
+However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and [configured](../../software/spyder.md) Spyder, then start it up. In Spyder, use the **Open** option from the **File** menu to open the text file that you just created.
 
 The green **Run** arrow will run the currently open Python file. Click on this arrow, and then look at the **Console** window to see the effects of running your program. Whereas the editor window displays the *contents* of the text file containing the program, just as any other text editor would, the console window shows the *effects* of running the program.
 
