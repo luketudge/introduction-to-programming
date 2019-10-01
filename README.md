@@ -16,7 +16,7 @@ Some recommended books.
 
 ### [Creating a computer program with Python](topics/intro)
 
-### Variables and data types
+### [Variables and data types](topics/types)
 
 ### Sequences and mappings
 

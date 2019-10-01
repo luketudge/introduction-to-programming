@@ -6,11 +6,13 @@ To get the most out of the class, you should have some software installed on you
 
 ### Python 3
 
-The main programming language that we will learn about is Python 3. You will need to install it. The easiest way to do this on the most common operating systems (Windows, macOS, or Linux), is to install a program called Anaconda. Anaconda is a 'distribution' of various related pieces of software used in data science. Anaconda installs these separate pieces of software and provides a convenient environment in wich to organize, update, and add to them.
+The main programming language that we will learn about is Python 3. You will need to install it. The easiest way to do this on the most common operating systems (Windows, macOS, or Linux), is to install a program called Anaconda. Anaconda is a 'distribution' of various related pieces of software used in data science. Anaconda installs these separate pieces of software and provides a convenient environment in which to organize, update, and add to them.
 
 Download the installer for the Python 3 version of Anaconda [here](https://www.anaconda.com/distribution/). The page should detect your operating system automatically, but otherwise click on the relevant tab for Windows, macOS, or Linux. Additional installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/).
 
-If you are using a popular distribution of Linux, such as Ubuntu, Python 3 will already be installed on your computer. You can still install Anaconda if you wish, but you do not need to, and it may be easier to install the few remaining extras via your Linux package manager rather than Anaconda. Instructions for doing so are provided [here](linux.md).
+One thing that can occasionally cause problems for Anaconda is the name of the user account on your computer. If your username contains spaces or non-English characters (for example ä or ß or something in Arabic, or Devanagari, etc.), then Anaconda may have trouble understanding which directory your files are stored in. If you encounter error messages about paths or filenames, you could try creating a new user account on your computer with a username that contains only basic English characters and no spaces. Switch to this account before installing and running Anaconda.
+
+If you are using a popular distribution of Linux such as Ubuntu, Python 3 will already be installed on your computer. You can still install Anaconda if you wish, but you do not need to, and it may be easier to install the few remaining extras via your Linux package manager rather than via Anaconda. Instructions for doing so are provided [here](linux.md).
 
 ### Spyder
 
@@ -27,3 +29,4 @@ Once you have launched Spyder, there are a few highly recommended configuration 
 When we come to work with SQL databases, it will be convenient to have a program that can display the contents of a database. The DB Browser for SQLite is a simple program available for all the major operating systems. You can download it [here](https://sqlitebrowser.org/dl/).
 
 ### QT Designer
+

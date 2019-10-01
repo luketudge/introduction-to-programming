@@ -14,7 +14,7 @@ We won't create any programs that are as complex as Picard, which is the result 
 
 ## A Python program
 
-A Python computer program can be as simple as a single text file. This is what we will start with. Try opening up Notepad or your favorite text editor, and typing into it the Python command below. Make sure that you use a pure text editor like Notepad and not a word processor like Microsoft Word, because a word processor may not be able to save plain text or may insert additional unwanted content into a text file.
+A Python computer program can be as simple as a single file. This is what we will start with. Try opening up Notepad or your favorite text editor, and typing into it the Python command below. Make sure that you use a pure text editor like Notepad and not a word processor like Microsoft Word, because a word processor may not be able to save plain text or may insert additional unwanted content into a text file.
 
 ```python
 print('Hello.')
@@ -34,15 +34,13 @@ The green **Run** arrow will run the currently open Python file. Click on this a
 
 ![](images/console.png)
 
-You should see the contents of the quoted text in your program (e.g. `Hello.`) printed out in the console window like in the screenshot above.
+You should see the contents of the quoted text in your program (e.g. `Hello.`) printed out in the console window like in the screenshot above. We have now created and run our first Python program. What did this program do and how?
 
-We have now created and run our first Python program. What did this program do and how? Python is designed to be a more or less human-readable programming language. So in a simple program like this, it is easy to see what the commands in the program accomplish:
+Python is designed to be a more or less human-readable programming language, so in a simple program like this, it is easy to see how the commands in the program are structured:
 
 * `print` is a built-in Python function. It instructs Python to display a piece of text in the console window.
-* The parentheses `()` following `print` provide the input (often termed *argument*) to the function. In this case the text that should be printed out.
-* The quote marks `''` indicate to Python that the text that they enclose should just be treated as plain text, and not for example as a math formula to be calculated, a reference to another Python file or function, etc.)
-
-Later on we will cover the rules of Python syntax more systematically.
+* The parentheses `()` following `print` provide the input (often termed *argument*) to the function. In this case the argument is the text that we want to print out.
+* The quote marks `''` indicate to Python that the text that they enclose should be treated just as plain text, and not for example as a math formula, or a reference to another Python file or function, etc.)
 
 What if we write a program that does not contain valid Python syntax? For example, what if we forget to enclose the text that we would like to print in quote marks? Try editing your program so as to omit the quote marks, like this:
 
@@ -59,9 +57,11 @@ If you save and run this new version of the program, you will see an 'error mess
 SyntaxError: invalid syntax
 ```
 
-These error messages tell us that some part of our program is not a valid Python command, and so the Python interpreter could not finish running the program. The message tells us which line of our program was responsible (in this case line 1, the only line in the program), and sometimes a bit about what sort of error we made.
+These error messages tell us that some part of our program is not a valid Python command, and so the Python interpreter could not finish running the program. The message tells us which line of our program was responsible (in this case line 1, the only line in the program), and sometimes tells us a bit about what sort of error we made.
 
-Later we will also learn more about understanding and fixing errors in our programs.
+Later on we will cover the rules of Python syntax more systematically, and we will learn more about understanding and fixing errors in our programs. For now, we will look at a few more example programs to get a general idea of how Python works.
 
-For now we are done with the very basics.
+## More Python programs
+
+
 
