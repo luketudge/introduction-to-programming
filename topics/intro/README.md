@@ -178,12 +178,12 @@ That's it for this topic. Try the exercises below to get some practice.
 
 Open the [greeting_personal.py](examples/greeting_personal.py) program. Save a new version called *greeting_personal_v2.py* (or whatever you like), and add the following small improvements:
 
-* Improve the input part of the program so that it looks a little neater for the user when they type in their name. Add a space between the input prompt and the position where the user starts typing, so that when they type they see e.g. `What is your name? Morag` instead of `What is your name?Morag`.
+* Improve the input part of the program so that it looks a little neater for the user when they type in their name. Add a space between the input prompt and the position where the user starts typing, so that when they type they see for example `What is your name? Morag` instead of `What is your name?Morag`.
 * Add a dot to the end of the printed output so that it forms a correctly punctuated sentence. So the user sees for example `Hello Morag.` instead of just `Hello Morag`.
 
 ### 2
 
-Write a new program. This program should begin by asking the user for their name just as *greeting_personal.py* does. But then it asks them for their favorite color, and *addresses them by their name in the question*. Finally, the program prints out confirmation of their name and favorite color. The program should look something like this in action in the console:
+Write a new program. This program should begin by asking the user for their name just as *greeting_personal.py* does. But then it asks them for their favorite color, and addresses them by their name in the question. Finally, the program prints out confirmation of their name and favorite color. The program should look something like this in action in the console:
 
 ```
 What is your name? Morag
