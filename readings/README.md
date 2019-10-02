@@ -14,7 +14,7 @@ Python is a very popular programming language, and there are many, many books co
 
 **[Python Crash Course](https://nostarch.com/pythoncrashcourse2e) - Eric Matthes**. Also for beginners, but longer and more comprehensive than the other two beginner texts. Provides many clear 'recipes' for basic programming tasks, and includes good explanations of common problems and errors.
 
-### Advanced
+### Going further
 
 **[Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) - Jake VanderPlas**. A comprehensive introduction to working with data in Python, including machine learning. Assumes the reader is already familiar with Python.
 

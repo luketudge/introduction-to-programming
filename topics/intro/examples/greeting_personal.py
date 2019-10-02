@@ -8,9 +8,9 @@ Gets the user to type in their name.
 # Store the result in a variable.
 name = input('What is your name?')
 
-# Combine their name with a welcome message.
+# Combine the name with a welcome message.
 # Store the result in a new variable.
 message = 'Hello ' + name
 
-# Print out the welcome message.
+# Print out the contents of the welcome message variable.
 print(message)
