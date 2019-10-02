@@ -30,7 +30,7 @@ There are various ways to run a *py* file with the Python interpreter. For examp
 
 However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and [configured](../../software/spyder.md) Spyder, then start it up. In Spyder, use the **Open** option from the **File** menu (or the 'open' icon) to open the text file that you just created.
 
-The green **Run** arrow will run the currently open Python file. Click on this arrow, and then look at the **Console** window to see the effects of running your program. Whereas the editor window displays the *contents* of the text file containing the program, just as any other text editor would, the console window shows the *effects* of running the program (or of running other Python commands).
+The green **Run** arrow (▶) will run the currently open Python file. Click on this arrow, and then look at the **Console** window to see the effects of running your program. Whereas the editor window displays the *contents* of the text file containing the program, just as any other text editor would, the console window shows the *effects* of running the program (or of running other Python commands).
 
 ![](images/console.png)
 
@@ -132,6 +132,62 @@ Finally, the workings of [line 16](examples/greeting_personal.py#L16) should be 
 
 ## Using an IDE
 
-We have just introduced the basic workings of Python programs using a few simple examples. We have been editing and running these programs in the Spyder 'Integrated Development Environment' (IDE). So we turn finally to a few tips for using Spyder.
+We have just introduced the basic workings of Python programs using a few simple examples. We have been editing and running these programs in the Spyder 'Integrated Development Environment' (IDE). Let's finish by looking at a few tips for working with Spyder.
+
+### The editor
+
+The pane where you can edit and run Python programs is the editor. As we have seen, it is essentially just a text editor. But it adds a few useful features.
+
+You may already have noticed that the Spyder editor performs some basic checks of your program even before you run it. Small icons along the left margin of the editing pane highlight parts of the program that might require our attention. For example in the screenshot below we are being warned about a typing error on line 9 and reminded of a *TODO* note that we made for ourselves on line 13.
+
+![](images/editor.png)
+
+Spyder also has an autocomplete feature. If you are typing a new part of your program, you can begin typing something, then press the tab key (↹) and the Spyder editor will attempt to autocomplete the word that you are typing. This works if you are typing the name of a Python built-in function, or of a variable that you have defined elsewhere in your program. This feature can save you a lot of typing errors once you start working with many different functions or with variables that have long names.
+
+As well as running your whole program, Spyder allows you to run just parts of it. You can do this by highlighting the lines that you would like to run (or if it is just a single line then placing the cursor on this line is enough) and then selecting **Run selection or current line** from the **Run** menu. There is also a keyboard shortcut for this, which on most systems is *F9*. This feature is useful if you have written a new part or modified one part of your program and you want to test it in isolation. But don't be tempted to test your whole program this way, by selecting one section after another and running them in turn. Always test your program by running it as a whole via the 'run' arrow. This ensures that you are really testing the whole program as a self-contained unit, which is also how your program's users will run it.
+
+### The console
+
+We have already encountered the console as the place where any printouts or interactions with our program occur once it is run. But there is more to the console than this. We can also type single Python commands into the console, and they will be sent to the Python interpreter and run immediately, as if they were part of a program. Try it out: go to the console and where it is waiting with `In [...]:` type in a Python command (for example to print something out with `print()`) and press return. You should see the result, and then the `In [...]:` prompt will return, waiting for the next command.
+
+It is important to bear in mind this distinction between the editor and the console. Notice that when we type new lines into a text file that is open in the editor, those lines are not run and we do not see their effects anywhere. Nothing that we type into the editor has any effect until we save the changes and run the text file as a Python program. By contrast, whatever we type into the console is run as soon as we finish typing and press return.
+
+The console also 'remembers' what we have typed so far. For example, if you type `age = 37` into the console and press return, and then type `age + 1`, the console remembers that the first command defined a variable called `age` and will use whatever we assigned into it if we use this same variable name in subsequent commands. We can therefore use the console to test out and explore Python's behavior. A common working pattern if you are working on a new task as a Python beginner is to try various commands in the console first and check how they work (or whether they work at all), and then once you have found out what you need to know you switch to the editor and incorporate the new commands into whatever program you are working on.
+
+There are a few shortcuts for working with the console too. If you want to get back a command that you typed previously, put your cursor in the console and press the up arrow key (⬆). You should see again the last command that you entered. You can edit this command if you wish, and then run it again by pressing return. If you press the up arrow key repeatedly, you can search through all the commands that you have entered so far. These commands are also stored under the **History log** tab in Spyder.
+
+The shortcut *Ctrl* + *l* will clear away any output that is currently in the console. It isn't especially necessary to do this, but if you are tidy-minded it can help make things clearer if you have lots of printouts left over in the console and you wish to start afresh.
+
+Likewise, you can also erase the console's 'memory' for previous commands. This is a more useful feature. For example, if you would like to test out something completely new, you do not want to accidentally refer to variables that you have defined in previous commands while you were testing out something else. To 'reset' the console type the command `%reset`. You will be prompted to confirm that you really want to delete all the variables you have defined so far:
+
+```
+Once deleted, variables cannot be recovered. Proceed (y/[n])?
+```
+
+Note that the `%reset` command (and a few others that begin with the percent character `%`) is for use in the console only; it is not a valid Python command that you can put in a Python program.
+
+(If you have followed the instructions [here](../../software/spyder.md) for configuring Spyder's behavior, the console's memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)
+
+If you want to check what variables you have currently defined in the console (if any), and see some information about them, you can look in Spyder's **Variable explorer** tab.
+
+That's it for this topic. Try the exercises below to get some practice.
 
 ## Exercises
+
+### 1
+
+Open the [greeting_personal.py](examples/greeting_personal.py) program. Save a new version called *greeting_personal_v2.py* (or whatever you like), and add the following small improvements:
+
+* Improve the input part of the program so that it looks a little neater for the user when they type in their name. Add a space between the input prompt and the position where the user starts typing, so that when they type they see e.g. `What is your name? Morag` instead of `What is your name?Morag`.
+* Add a dot to the end of the printed output so that it forms a correctly punctuated sentence. So the user sees for example `Hello Morag.` instead of just `Hello Morag`.
+
+### 2
+
+Write a new program. This program should begin by asking the user for their name just as *greeting_personal.py* does. But then it asks them for their favorite color, and *addresses them by their name in the question*. Finally, the program prints out confirmation of their name and favorite color. The program should look something like this in action in the console:
+
+```
+What is your name? Morag
+What is your favorite color Morag? puce
+Your name is: Morag
+Your favorite color is: puce
+```
