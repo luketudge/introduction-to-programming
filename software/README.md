@@ -18,7 +18,7 @@ If you are using a popular distribution of Linux such as Ubuntu, Python 3 will a
 
 Python programs are just text files, so we can (and occasionally will) create them in a normal text editor. But this is tedious. An alternative is to use an 'Integrated Development Environment' (IDE). An IDE is like a text editor for writing computer programs, and provides many useful extra features such as automatically checking for mistakes in the program, and allowing us to run our program immediately to check whether it functions correctly.
 
-There are many IDEs available for Python. For beginners I recommend Spyder. Spyder is included by default in Anaconda, so if you have installed Anaconda you do not need to do anything more in order to get it. The user guide for Anaconda [here](https://docs.anaconda.com/anaconda/user-guide/getting-started/) shows how to launch Spyder from Anaconda.
+There are many IDEs available for Python. For beginners I recommend [Spyder](https://www.spyder-ide.org/). Spyder is included by default in Anaconda, so if you have installed Anaconda you do not need to do anything more in order to get it. The user guide for Anaconda [here](https://docs.anaconda.com/anaconda/user-guide/getting-started/) shows how to launch Spyder from Anaconda.
 
 Once you have launched Spyder, there are a few highly recommended configuration steps that you should carry out in order to be able to follow the class smoothly. These are described [here](spyder.md).
 
