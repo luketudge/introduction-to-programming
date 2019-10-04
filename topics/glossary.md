@@ -1,5 +1,109 @@
 # Glossary
 
-## machine code
+Like any other specialists, computer programmers use a lot of arcane vocabulary. Although much of this vocabulary could be simplified to everyday words that mean almost the same things, it is worth knowing the following basic technical terms, for a few reasons:
 
-Instructions for a computer in the form of a sequence of numbers, each of which refers to one operation that the computer can carry out. Modern computer programmers almost never write machine code. Instead, they write commands in plain text, and an intermediate program converts these commands into machine code so that the computer can execute them.
+* You are more likely to find the answers to your programming questions in internet searches if you formulate your search using the right terms.
+* The answers you find in internet searches will mostly be written using these terms.
+* Once you start working in programming, you will need to talk about the workings of your programs with other programmers.
+
+## argument
+
+An argument is the input to a [function](#function). When we use a function, we place any arguments that we want to give it in the parentheses following the function name. A function can have no arguments, or just one, or many. In the case of more than one argument, the arguments are separated by commas, for example the `print()` function can have multiple arguments:
+
+```python
+name = 'Morag'
+middle_initial = 'P'
+surname = 'Chundergruff'
+print(name, middle_initial, surname)
+```
+
+## assignment
+
+If one part of our program generates a piece of information, we may want to store that information and use it in some later part of our program. In this case, we can 'assign' the information into a [variable](#variable). This just means storing something under that variable name. In Python, assignment is done with the equals `=` symbol. Whatever results from the right-hand side is assigned into the variable name on the left-hand side.
+
+For example if we have asked for the user's name using the `input()` function, we can assign the result into a variable called `name`:
+
+```python
+name = input('What is your name? ')
+```
+
+## builtin
+
+Python provides a few fundamental [functions](#function) that are already available from the start. These are termed built-in functions, or 'builtins'. The `print()` function is one example of a builtin. You can read a full list of them [here](https://docs.python.org/3/library/functions.html#built-in-functions).
+
+## comment
+
+A comment is a human-language piece of text that we insert into our Python program. We indicate a comment by prepending the hash character `#`. The Python [interpreter](#interpreter) just ignores any line beginning with a hash character, so we can write whatever we like in our comments; they do not have to be valid Python commands. Comments have a few uses:
+
+* 'headings' to organize sections of the program
+* short explanations of how parts of the program work (where this is not otherwise obvious)
+* reminders to ourselves and collaborators of problems or parts of the program that need attention
+
+## concatenate
+
+In computing, to 'concatenate' means to stick together one after the other. So the result of concatenating `'Hello '` and `'world!'` is `'Hello world!'`.
+
+## docstring
+
+A docstring is a [string](#string) (i.e. a piece of text) that provides some human-readable information about the workings of our program. We can write docstrings into our programs o help the users of our programs understand what the program does and how they should use it. We indicate a docstring in our program by enclosing it in 'triple quotes' (`""" """`). A docstring at the top of a *py* file provides information about the whole file, and docstrings underneath the definitions of [functions](#function) apply only to that function.
+
+## evaluate
+
+To evaluate a Python command means to 'work out' its result. So the result of evaluating the Python expression `round(1.618 * 2)` is `3`. The Python interpreter first evaluates `1.618 * 2` and gets `3.236`, then evaluates `round(3.236)` and gets `3`.
+
+## function
+
+A function is a sequence of commands that performs a particular action (or multiple actions), and can be used in programs again and again. `print()` is an example of a function, and the action it performs is to display text for the user. Functions can come from many places. Some, such as `print()`, are already [built in](#builtin) to Python, but we can also create our own functions, or import them from a program somebody else has written. A function can have input [arguments](#argument). It may also have a [return value](#return), which we can [assign](#assignment) into a variable.
+
+In the example below, `len()` is the function, `'floccinaucinihilipilification'` is the argument, and the return value (which we have assigned into the variable `word_length`) will be `29`.
+
+```python
+word_length = len('floccinaucinihilipilification')
+```
+
+## IDE
+
+An **I**ntegrated **D**evelopment **E**nvironment is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for checking and running the contents of the program, exploring files, searching for help, etc. [Spyder](https://www.spyder-ide.org/) is the Python IDE that we use in this class.
+
+## interpreter
+
+A Python interpreter is a computer program that takes our text files of Python commands and turns them into machine code instructions that our computer can understand. We do not especially need to know about or get involved in this process ourselves. Instead, we write our programs as text files of Python commands, and the interpreter takes care of getting out computer to understand them. Strictly, the term 'Python' itself refers to the Python programming language, i.e. a specific set of rules that converts text commands into computer actions, but in practice many people use 'Python' to refer also to a Python interpreter program.
+
+## operator
+
+An operator is a symbol that produces some result when written in an expression along with some other components. For example, the `+` operator produces the sum of two numbers (for example in the expression `2 + 2`). Some operators may have different effects depending on the [type](#type) of the other components of the expression. For example, if used with [strings](#string) instead of numbers the `+` operator [concatenates](#concatenate) the strings.
+
+## return
+
+[Functions](#function) usually finish by outputting some kind of result. For example, the `len()` function outputs the length of its argument, and the `round()` function outputs the result of rounding its argument to the nearest whole number. We say that when a function has finished its work, the function 'returns', and whatever it gives us when it has finished is the function's 'return value'. For example the return value of `len('floccinaucinihilipilification')` is `29`, and the return value of `round(1.618)` is `2`.
+
+## string
+
+In computing 'string' essentially means a piece of text (because a piece of text is a 'string' of characters). The string is one of the basic [data types](#type) in Python. We indicate that we want Python to treat something as a string by enclosing it in quote marks `''`. The term 'string' is usually abbreviated to `str` in Python.
+
+## syntax
+
+Syntax refers to the rules governing what constitutes a valid command in a programming language. If we write a program that violates Python's syntax, then the Python interpreter will not be able to understand it, and instead will complain of a `SyntaxError`, for example:
+
+```python
+Python, please open my data file.
+```
+
+```
+    Python, please open my data file.
+                      ^
+SyntaxError: invalid syntax
+```
+
+## type
+
+Computer programs can handle information in different forms. For example, some pieces of information may be in the form of text, some may be numbers, and some may be more complex things such as a link to a file on the computer's disk, or a connection to a website. When we create or refer to information in our Python programs, Python needs to be able to know what type of information it is. Python has various [syntactical](#syntax) rules for determining what type a piece of information is. For example, quote marks `''` indicate a [string](#string) (i.e. text).
+
+## variable
+
+A variable is a name that stores some information for the duration of our program. We choose the name ourselves, and [assign](#assignment) into that name whatever information we wish to store. We can then use the variable in subsequent steps of the program. For example:
+
+```python
+x = 5
+print(x ** 0.5)
+```

@@ -12,35 +12,13 @@ Instructions for installing the necessary software on your own computer.
 
 Some recommended books.
 
-## Topics
+## [Topic listing](topics)
 
-### [Creating a computer program with Python](topics/intro)
+Head here to get started.
 
-### [Variables and data types](topics/types)
+## [Glossary](topics/glossary.md)
 
-### Sequences and mappings
-
-### Conditionals
-
-### Iteration
-
-### Functions
-
-### Modules
-
-### Documentation and packaging
-
-### Testing, debugging and getting help
-
-### Quantitative data analysis
-
-### Text processing
-
-### HTML and CSS
-
-### Relational databases
-
-### GUIs
+A glossary of Python programming terms.
 
 ## [Project](project)
 
