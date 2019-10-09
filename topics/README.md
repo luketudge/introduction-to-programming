@@ -1,8 +1,8 @@
 # Topics
 
-## [Creating a computer program with Python](intro)
+## [Creating a computer program with Python](intro.md)
 
-## [Variables and data types](types)
+## [Variables and data types](types.ipynb)
 
 ## Sequences and mappings
 
@@ -27,3 +27,4 @@
 ## Relational databases
 
 ## GUIs
+
