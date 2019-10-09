@@ -16,7 +16,7 @@ Some recommended books.
 
 Head here to get started.
 
-## [Glossary](topics/glossary.md)
+## [Glossary](topics/extras/glossary.md)
 
 A glossary of Python programming terms.
 
