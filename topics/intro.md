@@ -50,7 +50,7 @@ What if we write a program that does not contain valid Python syntax? For exampl
 print(Hello.)
 ```
 
-If you save and run this new version of the program, you will see an 'error message' appear in the console, like the one below.
+If you save and run this new version of the program, you will see an [error message](glossary.md#error) appear in the console, like the one below.
 
 ```
   File "my_program.py", line 1
@@ -59,15 +59,15 @@ If you save and run this new version of the program, you will see an 'error mess
 SyntaxError: invalid syntax
 ```
 
-These error messages tell us that some part of our program is not a valid Python command, and so the Python interpreter could not finish running the program. The message tells us which line of our program was responsible (in this case line 1, the only line in the program).
+Error messages that complain of a `SyntaxError` tell us that some part of our program is not a valid Python command, and so the Python interpreter could not finish running the program. The message tells us which line of our program was responsible (in this case line 1, the only line in the program).
 
-Later on we will cover the rules of Python syntax in more detail, and we will learn more about understanding and fixing errors in our programs. For now, we will look at a few more example programs to get a general idea of how Python works.
+As the class progresses, we will cover more of the rules of Python syntax. Later we will also learn more about understanding and fixing errors in our programs. For now, we will look at a few more example programs to get a general idea of how Python works.
 
 ## More Python programs
 
 ### [greeting.py](examples/greeting.py)
 
-Open the example program *greeting.py* in Spyder (you can find all the example programs for this section [here](examples)). This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.
+Open the example program *greeting.py* in Spyder (you can find all the example programs [here](examples)). This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.
 
 The first of these is the [docstring](glossary.md#docstring) at the top of the program:
 
