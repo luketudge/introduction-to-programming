@@ -33,7 +33,7 @@ Python provides a few fundamental [functions](#function) that are already availa
 
 ## call
 
-To 'call' a [function](#function) (or [method](#method)) simply means to run that function and make it do its work. The [syntax](#syntax) for calling a function is to place the parentheses `()` after the function name, and optionally to place any input [arguments](#argument) inside the parentheses.
+To 'call' a [function](#function) simply means to run that function and make it do its work. The [syntax](#syntax) for calling a function is to place parentheses `()` after the function name, and optionally to place any input [arguments](#argument) inside the parentheses.
 
 (See the entry on [functions](#function) for an example of a 'function call'.)
 
@@ -87,15 +87,20 @@ An integer is a whole number. So 2 is an integer, but 1.618 is not. 'Integer', a
 
 A Python interpreter is a computer program that takes our text files of Python commands and turns them into machine code instructions that our computer can understand. We do not especially need to know about or get involved in this process ourselves. Instead, we write our programs as text files of Python commands, and the interpreter takes care of getting out computer to understand them. Strictly, the term 'Python' itself refers to the Python programming language, i.e. a specific set of rules that converts text commands into computer actions, but in practice many people use 'Python' to refer also to a Python interpreter program.
 
-# list
+## list
 
 
 
-# method
+## method
 
+A method is a [function](#function) that is defined specially for variables of one data [type](#type). For example, there is a [string](#string) method called `upper()`, which [returns](#return) an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The [syntax](#syntax) for using a method is to access it via the variable that we want to apply it to. For example to get an uppercase version of a string variable using the `upper()` method:
 
+```python
+name = 'Morag'
+shouty_name = name.upper()
+```
 
-# mutability
+## mutability
 
 If a [type](#type) is 'mutable', this means that a [variable](#variable) of that type can have its contents changed or updated without having to be completely overwritten and [re-assigned](#assignment). For example, [lists](#list) are mutable, because applying a list [method](#method) can change the contents of the list without us assigning any result back into the list with `=`. When a mutable variable is changed even though we have not re-assigned it, we sometimes say that it has been changed 'in-place'.
 
@@ -150,7 +155,7 @@ Python, please open my data file.
 SyntaxError: invalid syntax
 ```
 
-# tuple
+## tuple
 
 
 

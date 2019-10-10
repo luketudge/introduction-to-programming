@@ -14,6 +14,8 @@ One thing that can occasionally cause problems for Anaconda is the name of the u
 
 If you are using a popular distribution of Linux such as Ubuntu, Python 3 will already be installed on your computer. You can still install Anaconda if you wish, but you do not need to, and it may be easier to install the few remaining extras via your Linux package manager rather than via Anaconda. Instructions for doing so are provided [here](linux.md).
 
+Be careful not to download and install Python 2. There are some important differences between Python 3 and the previous version. At a few points during the class we will note some of these differences just so that you are aware of them. But all of the example programs that we write will be for Python 3, and some may not even work correctly wih Python 2.
+
 ### Spyder
 
 Python programs are just text files, so we can (and occasionally will) create them in a normal text editor. But this is tedious. An alternative is to use an 'Integrated Development Environment' (IDE). An IDE is like a text editor for writing computer programs, and provides many useful extra features such as automatically checking for mistakes in the program, and allowing us to run our program immediately to check whether it functions correctly.
