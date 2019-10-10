@@ -14,7 +14,7 @@ One thing that can occasionally cause problems for Anaconda is the name of the u
 
 If you are using a popular distribution of Linux such as Ubuntu, Python 3 will already be installed on your computer. You can still install Anaconda if you wish, but you do not need to, and it may be easier to install the few remaining extras via your Linux package manager rather than via Anaconda. Instructions for doing so are provided [here](linux.md).
 
-Be careful not to download and install Python 2. There are some important differences between Python 3 and the previous version. At a few points during the class we will note some of these differences just so that you are aware of them. But all of the example programs that we write will be for Python 3, and some may not even work correctly wih Python 2.
+Be careful not to download and install Python 2. There are some important differences between Python 3 and 2. At a few points during the class we will note some of these differences just so that you are aware of them. But all of the example programs that we write will be for Python 3, and some may not even work correctly wih Python 2.
 
 ### Spyder
 
