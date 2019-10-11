@@ -4,7 +4,7 @@
 
 ## [Variables and data types](types.ipynb)
 
-## Sequences and mappings
+## [Sequences and mappings](sequences_mappings.ipynb)
 
 ## Conditionals
 
