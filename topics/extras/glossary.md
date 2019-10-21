@@ -51,13 +51,34 @@ A comment is a human-language piece of text that we insert into our Python progr
 * short explanations of how parts of the program work (where this is not otherwise obvious)
 * reminders to ourselves and collaborators of problems or parts of the program that need attention
 
+## comprehension
+
+A comprehension is a technique for creating multiple values by writing a 'formula' that generates those values, instead of writing them all out one by one. The [syntax](#syntax) for a comprehension uses the [keywords](#keyword) `for` and `in`.
+
+A 'list comprehension' creates the items in a new [list](#list). For example, the formula might apply some Python command `for` every entry `in` some other existing list, and store the result in a new list:
+
+```python
+shopping = ['eggs', 'bacon', 'black pudding']
+shopping_initials = [item[0] for item in shopping]
+```
+
+There are also comprehensions for creating [dictionaries](#dictionary).
+
 ## concatenate
 
 In computing, to 'concatenate' means to stick together one after the other. So the result of concatenating `'Hello '` and `'world!'` is `'Hello world!'`.
 
+## conditional
+
+
+
+## dictionary
+
+
+
 ## docstring
 
-A docstring is a [string](#string) (i.e. a piece of text) that provides some human-readable information about the workings of our program. We can write docstrings into our programs o help the users of our programs understand what the program does and how they should use it. We indicate a docstring in our program by enclosing it in 'triple quotes' (`""" """`). A docstring at the top of a *py* file provides information about the whole file, and docstrings underneath the definitions of [functions](#function) apply only to that function.
+A docstring is a [string](#string) (i.e. a piece of text) that provides some human-readable information about the workings of our program. We can write docstrings into our programs o help the users of our programs understand what the program does and how they should use it. We indicate a docstring in our program by enclosing it in 'triple quotes' (`""" """`). A docstring at the top of a *py* file provides information about the whole file, and docstrings underneath the definitions of [functions](#function) provide information about that function.
 
 ## error
 
@@ -92,11 +113,11 @@ word_length = len('floccinaucinihilipilification')
 
 ## IDE
 
-An **I**ntegrated **D**evelopment **E**nvironment is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for checking and running the contents of the program, exploring files, searching for help, etc. [Spyder](https://www.spyder-ide.org/) is the Python IDE that we use in this class.
+An Integrated Development Environment (or IDE) is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for checking and running the contents of the program, exploring files, searching for help, etc. [Spyder](https://www.spyder-ide.org/) is the Python IDE that we use in this class.
 
 ## index
 
-An 'index' is the position of a particular item in a sequence, such as in a [list](#list) or a [tuple](#tuple). Python's indexing system begins at 0. So the index of the first item in a sequence is 0, the index of the second item is 1, and so on. We can use indices to refer to an item that is stored in a sequence. The Python [syntax](#syntax) for using an index is to place it in square parentheses `[]` after the name of the variable that stores the sequence. So to print out the third item in a list called `shopping` we can type:
+An 'index' is the position of a particular item in a [sequence](#sequence), such as in a [list](#list) or a [tuple](#tuple). Python's indexing system begins at 0. So the index of the first item in a sequence is 0, the index of the second item is 1, and so on. We can use indices to refer to an item that is stored in a sequence. The Python [syntax](#syntax) for using an index is to place it in square parentheses `[]` after the name of the variable that stores the sequence. So to print out the third item in a list called `shopping` we can type:
 
 ```python
 print(shopping[2])
@@ -110,15 +131,19 @@ An integer is a whole number. So 2 is an integer, but 1.618 is not. 'Integer', a
 
 A Python interpreter is a computer program that takes our text files of Python commands and turns them into machine code instructions that our computer can understand. We do not especially need to know about or get involved in this process ourselves. Instead, we write our programs as text files of Python commands, and the interpreter takes care of getting out computer to understand them. Strictly, the term 'Python' itself refers to the Python programming language, i.e. a specific set of rules that converts text commands into computer actions, but in practice many people use 'Python' to refer also to a Python interpreter program.
 
+## keyword
+
+A keyword (sometimes also referred to as 'reserved word') is a word that has a special fixed meaning for Python. For example, the keyword `if` indicates a [condition](#conditional). We cannot use keywords as the names of [variables](#variable) (hence the term 'reserved word'). For a full list of all the keywords in Python, see [here](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
+
 ## list
 
-A list is a data [type](#type) that stores more than one [value](#value) in an ordered sequence. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
+A tuple is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
 
 ```python
 menu = ['jellied eels', 'black pudding', 'blancmange']
 ```
 
-Lists are very similar to [tuples](#tuple), which also store multiple values in an ordered sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
+Lists are very similar to [tuples](#tuple), another kind of sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
 
 ## method
 
@@ -170,6 +195,21 @@ An operator is a symbol that produces some result when written in an expression 
 
 [Functions](#function) usually finish by outputting some kind of result. For example, the `len()` function outputs the length of its argument, and the `round()` function outputs the result of rounding its argument to the nearest whole number. We say that when a function has finished its work, the function 'returns', and whatever it gives us when it has finished is the function's 'return value'. For example the return value of `len('floccinaucinihilipilification')` is `29`, and the return value of `round(1.618)` is `2`.
 
+## sequence
+
+Sequences are data [types](#type) that can store more than one [value](#value), and arrange those values in a given order. [Tuples](#tuple) and [lists](#list) are examples of sequences.
+
+## slice
+
+A slice is a subsection of a [sequence](#sequence). We can get a slice out of a sequence by giving a range of numbers as the [index](#index). The [syntax](#syntax) for this is to separate the beginning and end of the range with the colon character `:`. The end of a slice is interpreted as meaning 'up-to-but-not-including'.
+
+For example to get a slice of a list containing entries `1` and `2` (i.e. 'from `1` up to but not including `3`'):
+
+```python
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
+shopping[1:3]
+```
+
 ## string
 
 In computing 'string' essentially means a piece of text (because a piece of text is a 'string' of characters). The string is one of the basic data [types](#type) in Python. We indicate that we want Python to treat something as a string by enclosing it in quote marks `''` (or `""`). The term 'string' is abbreviated to `str` in Python.
@@ -180,13 +220,13 @@ Syntax refers to the rules governing what constitutes a valid command in a progr
 
 ## tuple
 
-A tuple is a data [type](#type) that stores more than one [value](#value) in an ordered sequence. The [syntax](#syntax) for creating a tuple is simply to separate the values in the sequence using commas (and for clarity, we can and should also place a pair of parentheses around the whole sequence, though this is not always absolutely necessary). For example:
+A tuple is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a tuple is simply to separate the values in the sequence using commas (and for clarity, we can and should also place a pair of parentheses around the whole sequence, though this is not always absolutely necessary). For example:
 
 ```python
 grades = (5.0, 4.0, 3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7, 1.3, 1.0, 0.9)
 ```
 
-Tuples are very similar to [lists](#list), which also store multiple values in an ordered sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
+Tuples are very similar to [lists](#list), another kind of sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
 
 ## type
 
