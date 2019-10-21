@@ -23,3 +23,5 @@ A glossary of Python programming terms.
 ## [Project](project)
 
 Information about the programming project.
+
+## [Contributing](contributing.md)
