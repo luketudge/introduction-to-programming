@@ -8,7 +8,7 @@ An intermediate step is required in order to run these text files as a program. 
 
 Most computer programs are organized as a collection of multiple such text files, each containing instructions for one aspect of the program's capabilities. There may be one or two main files that represent the starting point of the program, and these main files then refer to others. In addition, the program may include non-text files containing data needed by the program, such as images, sounds, database files, and so on.
 
-Click [here](https://github.com/metabrainz/picard) to see an example of a fairly complex computer program organized as a collection of files. This program, called [MusicBrainz Picard](https://picard.musicbrainz.org/), allows a user to tag music files with information about the artist, song name, album, etc. Take a look at just one file in the program, called [album.py](https://github.com/metabrainz/picard/blob/master/picard/album.py). This is a text file containing instructions written in Python. Its contents are not easily understandable at a first glance, even for an experienced programmer, but notice that it does at least contain some instructions that take the form of everyday English words, such as `from`, `for`, and `if`. It also contains some preamble detailing the license information for the program, which is completely intelligible to a normal human being (or to a lawyer). Further down, the contents become too complex to understand by skim reading, but we may notice some regularities. For example, this file seems to refer to other files in the overall program (note a reference to [config.py](https://github.com/metabrainz/picard/blob/master/picard/config.py) on [line 33](https://github.com/metabrainz/picard/blob/64c4153801ed418c11033ad73981f7209b9cbf63/picard/album.py#L33)).
+Click [here](https://github.com/metabrainz/picard) to see an example of a fairly complex computer program organized as a collection of files. This program, called [MusicBrainz Picard](https://picard.musicbrainz.org/), allows a user to tag music files with information about the artist, song name, album, etc. Take a look at just one file in the program, called [album.py](https://github.com/metabrainz/picard/blob/master/picard/album.py). This is a text file containing instructions written in Python. Its contents are not easily understandable at a first glance, even for an experienced programmer, but notice that it does at least contain some instructions that take the form of everyday English words, such as `from`, `for`, and `if`. It also contains some preamble detailing the license information for the program, which is completely intelligible to a normal human being (or at least to a lawyer). Further down, the contents become too complex to understand by skim reading, but we may notice some regularities. For example, this file seems to refer to other files in the overall program (note a reference to [config.py](https://github.com/metabrainz/picard/blob/master/picard/config.py) on [line 33](https://github.com/metabrainz/picard/blob/64c4153801ed418c11033ad73981f7209b9cbf63/picard/album.py#L33)).
 
 We won't create any programs that are as complex as Picard, which is the result of several programmers collaborating over a fairly long period of time. However, our programs will have approximately the same structure; they will be collections of text files containing instructions written according to the rules of the Python programming language.
 
@@ -86,7 +86,7 @@ If you start a new Python text file in Spyder via **New file** in the **File** m
 """
 Created on Wed Oct  2 10:25:12 2019
 
-@author: Morag.Chundergruff
+@author: Mildred.Bonk
 """
 ```
 
@@ -178,16 +178,16 @@ That's it for this topic. Try the exercises below to get some practice.
 
 Open the [greeting_personal.py](examples/greeting_personal.py) program. Save a new version called *greeting_personal_v2.py* (or whatever you like), and add the following small improvements:
 
-* Improve the input part of the program so that it looks a little neater for the user when they type in their name. Add a space between the input prompt and the position where the user starts typing, so that when they type they see for example `What is your name? Morag` instead of `What is your name?Morag`.
-* Add a dot to the end of the printed output so that it forms a correctly punctuated sentence. So the user sees for example `Hello Morag.` instead of just `Hello Morag`.
+* Improve the input part of the program so that it looks a little neater for the user when they type in their name. Add a space between the input prompt and the position where the user starts typing, so that when they type they see for example `What is your name? Mildred` instead of `What is your name?Mildred`.
+* Add a dot to the end of the printed output so that it forms a correctly punctuated sentence. So the user sees for example `Hello Mildred.` instead of just `Hello Mildred`.
 
 ### 2
 
 Write a new program. This program should begin by asking the user for their name just as *greeting_personal.py* does. But then it asks them for their favorite color, and addresses them by their name in the question. Finally, the program prints out confirmation of their name and favorite color. The program should look something like this in action in the console:
 
 ```
-What is your name? Morag
-What is your favorite color Morag? puce
-Your name is: Morag
+What is your name? Mildred
+What is your favorite color Mildred? puce
+Your name is: Mildred
 Your favorite color is: puce
 ```

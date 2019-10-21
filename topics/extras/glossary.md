@@ -11,9 +11,9 @@ Like any other specialists, computer programmers use a lot of arcane vocabulary.
 An argument is the input to a [function](#function). When we use a function, we place any arguments that we want to give it in the parentheses following the function name. A function can have no arguments, or just one, or many. In the case of more than one argument, the arguments are separated by commas, for example the `print()` function can have multiple arguments:
 
 ```python
-name = 'Morag'
-middle_initial = 'P'
-surname = 'Chundergruff'
+name = 'Mildred'
+middle_initial = 'L'
+surname = 'Bonk'
 print(name, middle_initial, surname)
 ```
 
@@ -150,7 +150,7 @@ Lists are very similar to [tuples](#tuple), another kind of sequence. The differ
 A method is a [function](#function) that is defined specially for variables of one data [type](#type). For example, there is a [string](#string) method called `upper()`, which [returns](#return) an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The [syntax](#syntax) for using a method is to access it via the variable that we want to apply it to. For example to get an uppercase version of a string variable using the `upper()` method:
 
 ```python
-name = 'Morag'
+name = 'Mildred'
 shouty_name = name.upper()
 ```
 
@@ -170,14 +170,14 @@ The opposite of 'mutable' is 'immutable'. [Strings](#string), [integers](#intege
 The string in the following example is not changed by calling its `.upper()` method:
 
 ```python
-name = 'Morag'
+name = 'Mildred'
 name.upper()
 ```
 
 Only here is it changed, because of the re-assignment with `=`:
 
 ```python
-name = 'Morag'
+name = 'Mildred'
 name = name.upper()
 ```
 
@@ -234,7 +234,7 @@ Computer programs can handle information in different forms. For example, some p
 
 ## value
 
-The contents stored in a [variable](#variable) are often called its 'value'. For example, `name` might be a [string](#string) variable whose value is `'Morag'`, and `height` might be a [float](#float) variable whose value is `1.96`.
+The contents stored in a [variable](#variable) are often called its 'value'. For example, `name` might be a [string](#string) variable whose value is `'Mildred'`, and `height` might be a [float](#float) variable whose value is `1.96`.
 
 ## variable
 
