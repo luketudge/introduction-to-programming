@@ -68,13 +68,21 @@ There are also comprehensions for creating [dictionaries](#dictionary).
 
 In computing, to 'concatenate' means to stick together one after the other. So the result of concatenating `'Hello '` and `'world!'` is `'Hello world!'`.
 
-## conditional
-
-
-
 ## dictionary
 
+A dictionary (often abbreviated to 'dict') is a [data type](#type) that can store multiple values. It does so by storing the values under labels, termed '[keys](#key)'.
 
+The [syntax](#syntax) for creating a dictionary is to place pairs of keys and values inside the 'curly braces' `{}`, separating each key from its associated value with a colon `:` and separating each pair from the next with a comma:
+
+```python
+info = {'name':'Mildred', 'age':22, 'location':'USA'}
+```
+
+ The keys of the dictionary can then be used as [indices](#index) to retrieve the values. For example:
+
+```python
+info['age']
+```
 
 ## docstring
 
@@ -131,9 +139,13 @@ An integer is a whole number. So 2 is an integer, but 1.618 is not. 'Integer', a
 
 A Python interpreter is a computer program that takes our text files of Python commands and turns them into machine code instructions that our computer can understand. We do not especially need to know about or get involved in this process ourselves. Instead, we write our programs as text files of Python commands, and the interpreter takes care of getting out computer to understand them. Strictly, the term 'Python' itself refers to the Python programming language, i.e. a specific set of rules that converts text commands into computer actions, but in practice many people use 'Python' to refer also to a Python interpreter program.
 
+## key
+
+The 'keys' of a dictionary are the labels under which the values in the dictionary are stored. See the entry on [dictionaries](#dictionary) for a more detailed explanation of this term.
+
 ## keyword
 
-A keyword (sometimes also referred to as 'reserved word') is a word that has a special fixed meaning for Python. For example, the keyword `if` indicates a [condition](#conditional). We cannot use keywords as the names of [variables](#variable) (hence the term 'reserved word'). For a full list of all the keywords in Python, see [here](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
+A keyword (sometimes also referred to as 'reserved word') is a word that has a special fixed meaning for Python. For example, the keyword `del` deletes something from Python's memory. We cannot use keywords as the names of [variables](#variable) (hence the term 'reserved word'). For a full list of all the keywords in Python, see [here](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
 
 ## list
 
