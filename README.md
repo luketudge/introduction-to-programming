@@ -9,7 +9,7 @@ Materials for the *Introduction to Programming* class.
 * Getting started
   - [Software](software). Instructions for installing the necessary software on your own computer.
   - [Readings](readings). Some recommended books.
-* [Topic listing](topics). Head here to get started.
+* [Topic listing](topics). Head here to start learning about programming with Python.
 * [Glossary](topics/extras/glossary.md). A glossary of Python programming terms.
 
 [Contribute](contributing.md) to the materials.
