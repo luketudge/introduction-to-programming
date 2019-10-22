@@ -22,7 +22,7 @@ Python programs are just text files, so we can (and occasionally will) create th
 
 There are many IDEs available for Python. For beginners I recommend [Spyder](https://www.spyder-ide.org/). Spyder is included by default in Anaconda, so if you have installed Anaconda you do not need to do anything more in order to get it. The user guide for Anaconda [here](https://docs.anaconda.com/anaconda/user-guide/getting-started/) shows how to launch Spyder from Anaconda.
 
-Once you have launched Spyder, there are a few highly recommended configuration steps that you should carry out in order to be able to follow the class smoothly. These are described [here](spyder.md).
+Once you have launched Spyder, there are a few *highly* recommended configuration steps that you should carry out in order to be able to follow the class smoothly. These are described [here](spyder.md).
 
 ## Extras
 
