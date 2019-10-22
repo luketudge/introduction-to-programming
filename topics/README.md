@@ -6,7 +6,7 @@
 
 ## [Sequences and mappings](sequences_mappings.ipynb)
 
-## Conditionals
+## [Conditionals](conditionals.ipynb)
 
 ## Iteration
 
@@ -27,4 +27,3 @@
 ## Relational databases
 
 ## GUIs
-
