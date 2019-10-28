@@ -28,6 +28,10 @@ Once you have launched Spyder, there are a few *highly* recommended configuratio
 
 There are a few tools that are useful just for one or two of the topics. Installing these is optional.
 
+### Atom
+
+Atom is a text editor produced by the developers of GitHub. When we come to learn about GitHub, you may find it easiest to interact with the site via the Atom editor. You can download it [here](https://flight-manual.atom.io/getting-started/sections/installing-atom/).
+
 ### Database browser
 
-When we come to work with SQL databases, it will be convenient to have a program that can display the contents of a database. The DB Browser for SQLite is a simple program available for all the major operating systems. You can download it [here](https://sqlitebrowser.org/dl/).
+When we come to work with SQL databases, it will be convenient to have a program that can display the contents of a database. The DB Browser for SQLite is a simple program for viewing and editing databases. You can download it [here](https://sqlitebrowser.org/dl/).

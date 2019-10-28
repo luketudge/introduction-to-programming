@@ -8,7 +8,7 @@ Like any other specialists, computer programmers use a lot of arcane vocabulary.
 
 ## argument
 
-An argument is the input to a [function](#function). When we use a function, we place any arguments that we want to give it in the parentheses following the function name. A function can have no arguments, or just one, or many. In the case of more than one argument, the arguments are separated by commas, for example the `print()` function can have multiple arguments:
+An argument is the input to a [function](#function). When we use a function, we place any arguments that we want to give it in the parentheses following the function name. A function can have no arguments, or just one, or many. In the case of more than one argument, the arguments are separated by commas. For example the `print()` function can have multiple arguments:
 
 ```python
 name = 'Mildred'
@@ -78,7 +78,7 @@ The [syntax](#syntax) for creating a dictionary is to place pairs of keys and va
 info = {'name':'Mildred', 'age':22, 'location':'USA'}
 ```
 
- The keys of the dictionary can then be used as [indices](#index) to retrieve the values. For example:
+The keys of the dictionary can then be used as [indices](#index) to retrieve the values. For example:
 
 ```python
 info['age']
@@ -156,6 +156,10 @@ menu = ['jellied eels', 'black pudding', 'blancmange']
 ```
 
 Lists are very similar to [tuples](#tuple), another kind of sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
+
+## mapping
+
+See [dictionary](#dictionary).
 
 ## method
 
