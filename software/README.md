@@ -26,7 +26,7 @@ Once you have launched Spyder, there are a few *highly* recommended configuratio
 
 ## Alternatives
 
-If you have trouble installing Python or Anaconda, you can instead opt to write and run your Python programs entirely online. [Python Anywhere](https://www.pythonanywhere.com/) is a website that provides online storage for your Python programs, along with a helpful text editor, and the ability to run your programs in the browser. Sign up for a free account, log in, and visit the 'Files' tab to edit your programs or create new ones.
+If you have trouble installing the software as described above, you can instead opt to write and run your Python programs entirely online. [Python Anywhere](https://www.pythonanywhere.com/) is a website that provides online storage for your Python programs, along with a helpful text editor, and the ability to run your programs in the browser. Sign up for a free account, log in, and visit the 'Files' tab to edit your programs or create new ones.
 
 ## Extras
 
