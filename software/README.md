@@ -24,6 +24,10 @@ There are many IDEs available for Python. For beginners I recommend [Spyder](htt
 
 Once you have launched Spyder, there are a few *highly* recommended configuration steps that you should carry out in order to be able to follow the class smoothly. These are described [here](spyder.md).
 
+## Alternatives
+
+If you have trouble installing Python or Anaconda, you can instead opt to write and run your Python programs entirely online. [Python Anywhere](https://www.pythonanywhere.com/) is a website that provides online storage for your Python programs, along with a helpful text editor, and the ability to run your programs in the browser. Sign up for a free account, log in, and visit the 'Files' tab to edit your programs or create new ones.
+
 ## Extras
 
 There are a few tools that are useful just for one or two of the topics. Installing these is optional.
