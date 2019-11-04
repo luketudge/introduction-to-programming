@@ -62,9 +62,9 @@ shopping_list[item_num]
 
     <ipython-input-4-0f7724690886> in <module>
           1 item_num = 2.5
-          2
+          2 
     ----> 3 shopping_list[item_num]
-
+    
 
     TypeError: list indices must be integers or slices, not float
 
@@ -85,9 +85,9 @@ shopping_list[item_num]
 
     <ipython-input-5-47a72c75adcf> in <module>
           1 item_num = 2.0
-          2
+          2 
     ----> 3 shopping_list[item_num]
-
+    
 
     TypeError: list indices must be integers or slices, not float
 
@@ -182,7 +182,7 @@ shopping_list[9000]
 
     <ipython-input-10-4a4ff19f7982> in <module>
     ----> 1 shopping_list[9000]
-
+    
 
     IndexError: list index out of range
 
@@ -494,7 +494,7 @@ info['shoe size']
 
     <ipython-input-28-4f6f7f8b880a> in <module>
     ----> 1 info['shoe size']
-
+    
 
     KeyError: 'shoe size'
 
@@ -513,7 +513,7 @@ info['USA']
 
     <ipython-input-29-bf82e9f85f00> in <module>
     ----> 1 info['USA']
-
+    
 
     KeyError: 'USA'
 
@@ -532,7 +532,7 @@ info[0]
 
     <ipython-input-30-cfc788aff63d> in <module>
     ----> 1 info[0]
-
+    
 
     KeyError: 0
 
@@ -571,7 +571,7 @@ shopping_tuple[1] = 'organic vegan bacon'
 
     <ipython-input-32-49481c46064b> in <module>
     ----> 1 shopping_tuple[1] = 'organic vegan bacon'
-
+    
 
     TypeError: 'tuple' object does not support item assignment
 
