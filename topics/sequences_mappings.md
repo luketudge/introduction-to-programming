@@ -290,10 +290,10 @@ This way of constructing a list is known as a 'list [comprehension](extras/gloss
 
 * pick a variable name, any variable name (for example `x`)
 * write:
-  - `for`
-  - then your chosen variable name
-  - then `in`
-  - then the name of the existing list that your new list is based on (for example our `shopping_list`)
+  * `for`
+  * then your chosen variable name
+  * then `in`
+  * then the name of the existing list that your new list is based on (for example our `shopping_list`)
 * to the left of this, write your chosen variable name again
 * do to this variable whatever it is that creates an item in your new list (for example apply the `len()` function)
 * enclose the whole thing in square parentheses
@@ -557,7 +557,19 @@ len(info)
 
 Earlier, we learned that most basic data types, such as [strings](extras/glossary.md#string), are [immutable](extras/glossary.md#mutability); they cannot be changed unless we overwrite them completely with a new [assignment](extras/glossary.md#assignment). And we learned that lists, on the other hand, are mutable. We can change single values in a list, and list [methods](extras/glossary.md#method) change the list without our having to re-[assign](extras/glossary.md#assignment) the result back into the list variable.
 
-Are dictionaries mutable? If a question like this occurs to you while learning about programming, the best thing to do is to ask yourself: What can I try in order to find out? Remember that one of the features that illustrated the mutability of lists compared to the immutability of tuples was the possibility of changing just one item in the list without re-assigning the whole list:
+Are dictionaries mutable? If a question like this occurs to you while learning about programming, the best thing to do is to ask yourself: What can I try in order to find out? If you are feeling adventurous, you can head to the Spyder console now and try to find out. Create for yourself a short dictionary (for example by copying and pasting the command above that created our `info` dictionary), then see if you can enter some more commands that will test for you whether dictionaries are mutable or immutable.
+
+(I have helpfully generated a block of filler text just below to prevent your eye from wandering down to the answer before you have tried it out.)
+
+
+```python
+print('SPOILER ALERT ' * 100)
+```
+
+    SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT 
+
+
+You might have found various ways of checking whether dictionaries are mutable. But here is one simple one. Remember that one of the features that illustrated the mutability of lists compared to the immutability of tuples was the possibility of changing just one item in the list without re-assigning the whole list:
 
 
 ```python
@@ -569,7 +581,7 @@ shopping_tuple[1] = 'organic vegan bacon'
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-32-49481c46064b> in <module>
+    <ipython-input-33-49481c46064b> in <module>
     ----> 1 shopping_tuple[1] = 'organic vegan bacon'
     
 
@@ -596,7 +608,7 @@ shopping_list
 
 
 
-So let's try this with a dictionary:
+So can we change just one item in our dictionary without having to re-assign the whole thing?
 
 
 ```python

@@ -68,6 +68,19 @@ There are also comprehensions for creating [dictionaries](#dictionary).
 
 In computing, to 'concatenate' means to stick together one after the other. So the result of concatenating `'Hello '` and `'world!'` is `'Hello world!'`.
 
+## control
+
+'Control' (or sometimes 'flow control') refers to controlling which parts of our program are run under which circumstances. A 'control statement' is a command that determines when a particular part of our program is run.
+
+For example, an 'if statement' ensures that part of our program will run only if a certain condition is fulfilled, and optionally what should be run if not. [Indentation](#indentation) is used to mark which lines of the program are controlled by the control statement:
+
+```python
+if 2 + 2 == 4:
+    print('Math is currently working correctly in this universe.')
+else:
+    print('Nothing is forbidden, everything is permitted.')
+```
+
 ## dictionary
 
 A dictionary (often abbreviated to 'dict') is a [data type](#type) that can store multiple values. It does so by storing the values under labels, termed '[keys](#key)'.
@@ -90,7 +103,7 @@ A docstring is a [string](#string) (i.e. a piece of text) that provides some hum
 
 ## error
 
-If part of our program cannot be carried out, either because we have not written it according to the allowed [syntax](#syntax) or because we have asked Python to do something that is not possible (such as open a non-existent file), then our program will stop running and Python will display a message with some information about the error. Any parts of the program that follow the occurrence of the error will not be carried out.
+Sometimes our program fails and cannot be completed, either because we have not written the program according to the allowed [syntax](#syntax) or because an [exception](#exception) occurs that our program cannot handle. In this case, our program will stop running and Python will display a message with some information about the 'error' that occurred. Any parts of the program that follow the occurrence of the error will not be carried out.
 
 An example error message:
 
@@ -103,7 +116,22 @@ SyntaxError: invalid syntax
 
 ## evaluate
 
-To evaluate a command or expression means to 'work out' its result. So the result of evaluating the Python expression `round(1.618 * 2)` is `3`. The Python interpreter first evaluates `1.618 * 2` and gets `3.236`, then evaluates `round(3.236)` and gets `3`. We sometimes say that a certain expression 'evaluates to' its result. So `round(1.618 * 2)` evaluates to `3`.
+To evaluate a command or expression means to 'work out' its result. So the result of evaluating the Python expression `round(1.618 * 2)` is `3`. The Python interpreter first evaluates `1.618 * 2` and gets `3.236`, then evaluates `round(3.236)` and gets `3`. We sometimes say that a certain expression 'evaluates to' its result. So for example `round(1.618 * 2)` evaluates to `3`, and `2 + 2 == 5` evaluates to `False`.
+
+## exception
+
+Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user, such as entering a word when our program expects a number, or trying to open a file that has been moved or deleted.
+
+We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action results in an exception. For example:
+
+```python
+try:
+    open('melville-moby_dick.txt')
+except FileNotFoundError:
+    print('The file is not there.')
+```
+
+If an exception occurs and we have not specified in our program what to do about it, then the result is an [error](#error) and our program stops.
 
 ## float
 
@@ -121,7 +149,13 @@ word_length = len('floccinaucinihilipilification')
 
 ## IDE
 
-An Integrated Development Environment (or IDE) is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for checking and running the contents of the program, exploring files, searching for help, etc. [Spyder](https://www.spyder-ide.org/) is the Python IDE that we use in this class.
+An Integrated Development Environment (or IDE) is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for running the program, checking its contents for mistakes, searching for help, etc. [Spyder](https://www.spyder-ide.org/) is the Python IDE that we use in this class.
+
+## indentation
+
+Python uses indentation (spaces at the beginning of a line) to mark some lines of a program as 'belonging to' a preceding [control statement](#control) that determines when or how often those lines should be run.
+
+This use of indentation is fairly specific to Python. In most other programming languages indentation is optional, and is used only for visual clarity; parentheses or other characters are used to control the structure of the program instead.
 
 ## index
 
@@ -199,6 +233,12 @@ name = name.upper()
 
 ('Mutable' [means 'changeable'](https://www.etymonline.com/word/mutable), and has the same origin as 'mutant', as in the *Teenage Mutant Ninja Turtles*.)
 
+## newline
+
+When we view a text file that is written over multiple lines, we just see the separate lines of text neatly displayed in our text editor or word processor. But behind the scenes our computer needs some way of storing information about where one line ends and the next begins. This is achieved by the use of a 'newline character' to represent the break between one line and the next. This character is not explicitly shown in a normal text editor, but it is there in the file. In some word processors, such as OpenOffice and Microsoft Word, you can opt to see the newline characters explicitly, and they are typically shown as a '[pilcrow](https://en.wikipedia.org/wiki/Pilcrow)' (¶).
+
+If we want to include a newline character in a [string](#string) in Python, we can represent it with the character combination `'\n'`. These two characters together are interpreted as a single character meaning 'start a new line here'.
+
 ## none
 
 The `None` data [type](#type) in Python is used to indicate something that is absent or undefined.
@@ -206,6 +246,10 @@ The `None` data [type](#type) in Python is used to indicate something that is ab
 ## operator
 
 An operator is a symbol that produces some result when written in an expression along with some other components. For example, the `+` operator produces the sum of two numbers (for example in the expression `2 + 2`). Some operators may have different effects depending on the [type](#type) of the other components of the expression. For example, if used with [strings](#string) instead of numbers the `+` operator [concatenates](#concatenate) the strings.
+
+## refactor
+
+Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Rewriting a program without changing any of its behavior is termed 'refactoring' the program.
 
 ## return
 
@@ -260,3 +304,7 @@ A variable is a name that stores some information for the duration of our progra
 x = 5
 print(x ** 0.5)
 ```
+
+## whitespace
+
+Any text characters that appear simply as blank space are termed 'whitespace' characters. The most common whitespace character is of course simply the space, but there are others, such as the [newline character](#newline) and the tab.

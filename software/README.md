@@ -14,7 +14,7 @@ One thing that can occasionally cause problems for Anaconda is the name of the u
 
 If you are using a popular distribution of Linux such as Ubuntu, Python 3 will already be installed on your computer. You can still install Anaconda if you wish, but you do not need to, and it may be easier to install the few remaining extras via your Linux package manager rather than via Anaconda. Instructions for doing so are provided [here](linux.md).
 
-Be careful not to download and install Python 2. There are some important differences between Python 3 and 2. At a few points during the class we will note some of these differences just so that you are aware of them. But all of the example programs that we write will be for Python 3, and some may not even work correctly wih Python 2.
+Be careful not to download and install Python 2. There are some important differences between Python 3 and 2. At a few points during the class we will note some of these differences just so that you are aware of them. But all of the example programs that we write will be for Python 3, and some may not even work correctly with Python 2.
 
 ### Spyder
 
@@ -26,16 +26,28 @@ Once you have launched Spyder, there are a few *highly* recommended configuratio
 
 ## Alternatives
 
-If you have trouble installing the software as described above, you can instead opt to write and run your Python programs entirely online. [Python Anywhere](https://www.pythonanywhere.com/) is a website that provides online storage for your Python programs, along with a helpful text editor, and the ability to run your programs in the browser. Sign up for a free account, log in, and visit the 'Files' tab to edit your programs or create new ones.
+If you have trouble installing the software as described above, you can instead opt to write and run your Python programs entirely online. [Python Anywhere](https://www.pythonanywhere.com/) is a website that provides online storage for your Python programs, along with a helpful text editor and the ability to run your programs in the browser. Sign up for a free account, log in, and visit the 'Files' tab to edit your programs or create new ones.
 
 ## Extras
 
 There are a few tools that are useful just for one or two of the topics. Installing these is optional.
 
-### Atom
+### GitHub
 
-Atom is a text editor produced by the developers of GitHub. When we come to learn about GitHub, you may find it easiest to interact with the site via the Atom editor. You can download it [here](https://flight-manual.atom.io/getting-started/sections/installing-atom/).
+GitHub is a platform that allows you to store and publish computer programs. It provides a lot of useful tools for tracking changes to your programs and collaborating with other developers. When we come to learn about GitHub, if you want to follow along you will need your own GitHub account. It is free and you can sign up [here](https://github.com/join).
+
+You can interact with GitHub directly in your web browser, and this is the simplest option if you would just like to get started and try it out. If you want to go further, then you can also download some software that allows you to interact with GitHub from your desktop.
+
+Here are a couple of options:
+
+#### Atom
+
+Atom is a text editor produced by the developers of GitHub. Among many other things, it allows you to edit text files (for example Python programs) and send the changes straight to GitHub. You can download it [here](https://flight-manual.atom.io/getting-started/sections/installing-atom/).
+
+#### GitHub Desktop
+
+If you decide you don't like the look of Atom or can't get it to work on your computer, a good alternative for Windows or macOS users is GitHub Desktop. Like Atom, it synchronizes files on your computer with the same files stored on GitHub. You can download it [here](https://desktop.github.com/).
 
 ### Database browser
 
-When we come to work with SQL databases, it will be convenient to have a program that can display the contents of a database. The DB Browser for SQLite is a simple program for viewing and editing databases. You can download it [here](https://sqlitebrowser.org/dl/).
+When we come to work with SQL and relational databases, it will be convenient to have a program that can display the contents of a database. The DB Browser for SQLite is a simple program for viewing and editing databases. You can download it [here](https://sqlitebrowser.org/dl/).
