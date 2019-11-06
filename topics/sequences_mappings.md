@@ -950,7 +950,8 @@ So for example, the user could choose to view only the top 2 books. Then the pro
 I have a list of the top 5 bestselling non-fiction books.
 How many of the top books would you like to see? 2
 The top 2 are:
-["'Inside Out' by Demi Moore", "'The United States of Trump' by Bill O'Reilly"]
+'Inside Out' by Demi Moore
+'The United States of Trump' by Bill O'Reilly
 ```
 
 Make sure that your program fulfills one additional requirement. It should still work correctly if you later come back and add more books to the list. You shouldn't need to change the rest of the program if you change the list of books.
