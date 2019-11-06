@@ -118,7 +118,7 @@ street_number
 
 
 
-It hasn't changed since its original assignment. Although we have been performing various operations with the variable, we have merely been testing out and looking at the results of these operations. The value of the variable has remained unchanged. The value of a string variable will always remain the same unless we overwrite it by assigning it again. If we want to change or update the value of a variable with the result of some calculation, then we can just assign that result back into the same variable name.
+It hasn't changed since its original assignment. Although we have been performing various operations with the variable, we have merely been testing out and looking at the results of these operations. The value of the variable has remained unchanged. The value of a string variable will always remain the same unless we overwrite it by assigning it again. If we want to change or update the value of a variable with the result of some calculation, then we must assign that result back into the same variable name.
 
 For example if we want to add a `'b'` to the `street_number` string (and then print it out to check its new value):
 
@@ -132,7 +132,7 @@ print(street_number)
     221b
 
 
-The opposite of immutability is 'mutability'. As it turns out, there are some data types that are mutable. That is, their contents can change without us having to overwrite them. We will meet one of these at the end of this lesson. Variables containing all the simple data types like single numbers and single pieces of text will only ever change if there is an `=` somewhere in our program that overwrites them.
+The opposite of immutability is 'mutability'. As it turns out, there are some data types that are mutable. That is, their contents can change without us having to overwrite them. We will meet one of these at the end of this lesson. But all the simple data types, such as strings and numbers, are immutable; string and numeric variables will only ever change their contents if there is an `=` somewhere in our program that overwrites them.
 
 Although this behavior can occasionally be a source of frustration, for example if we perform some calculations but forget to store the result in the relevant variable, in general immutability is a good thing. It would be annoying if every time we wanted to calculate something with our variables, this also overwrote their contents. For example, we might want to just print out the result of adding one year to somebody's age, without actually changing it.
 
@@ -141,11 +141,18 @@ Of course if we want to keep both the original value of a variable and store an 
 
 ```python
 age_next_year = age + 1
+
+print(age)
+print(age_next_year)
 ```
+
+    22
+    23
+
 
 ## Numeric data
 
-So far most of our examples have concerned the behavior of the string data type. Let's now consider how Python manages numerical data.
+So far most of our examples have concerned the behavior of the string data type. Let's now consider how Python manages numbers.
 
 Python distinguishes between two different ways of representing numbers. Numbers can be stored either as whole numbers (`1`, `2`, `3`, etc.) or as non-whole numbers (for example `1.618`, `2.718`, or `3.142`). Whole numbers are called [integers](extras/glossary.md#integer) (abbreviated to `int`), and non-whole numbers are called [floating point numbers](extras/glossary.md#float) (abbreviated to `float`). Just as there is a particular [syntactical](extras/glossary.md#syntax) rule for creating a string, namely the use of quote marks, so there are syntactical rules for creating integers and floats. The presence of a decimal point (`.`) indicates a float, and its absence indicates an integer.
 
@@ -226,7 +233,7 @@ type(precise_child_age)
 
 
 
-The result in such cases is always a float, even if the resulting quantity is a whole number:
+The result of a mathematical expression containing a mixture of integers and floats is always a float, even if the resulting quantity is a whole number:
 
 
 ```python
@@ -674,7 +681,7 @@ print(answer)
 
 Now would be a good moment to turn to the console in Spyder and explore some of the other string methods. In the console, create yourself a string variable (for example by entering a command like `word = 'floccinaucinihilipilification'`), then use the `dir()` function to view its available methods, then try to apply some of them to see what they do.
 
-Some string methods are a bit to complex for us at this stage. Try the following ones:
+Some string methods are a bit too complex for us at this stage. Try the following ones:
 
 * `capitalize()`
 * `count()`
@@ -728,21 +735,26 @@ Yes. In fact there are lots more. We will finish this lesson with a quick overvi
 
 ### Boolean
 
-Variables of [boolean](extras/glossary.md#boolean) type are very simple. They store one of only two possible values: `True` or `False`. Boolean values can be the result of various Python commands whose purpose is to check whether or not something is the case. For example, the string [method](extras/glossary.md#method) `startswith()` [returns](extras/glossary.md#return) a boolean value:
+Variables of [boolean](extras/glossary.md#boolean) type are very simple. They store one of only two possible values: `True` or `False`. Boolean values can be the result of various Python commands whose purpose is to check whether or not something is the case. For example, the string [method](extras/glossary.md#method) `startswith()` [returns](extras/glossary.md#return) a boolean value, `True` if the string starts with a particular substring, and `False` otherwise:
 
 
 ```python
 print(name)
-name.startswith('m')
+
+answer = name.startswith('m')
+
+print(answer)
+type(answer)
 ```
 
     Mildred T. Bonk
-
-
-
-
-
     False
+
+
+
+
+
+    bool
 
 
 
@@ -751,6 +763,20 @@ name.startswith('m')
 ### None
 
 Occasionally, the status of some piece of information in our program is neither true nor false nor a string nor a number nor anything, it is instead simply undefined. There is an 'empty' type called [`None`](extras/glossary.md#none) for this eventuality. We might occasionally [assign](extras/glossary.md#assignment) `None` into a variable as a default starting value, anticipating that this value might be changed later on in our program.
+
+
+```python
+proof_of_Riemann_conjecture = None
+
+type(proof_of_Riemann_conjecture)
+```
+
+
+
+
+    NoneType
+
+
 
 We can also sometimes get a `None` value if we try to [assign](extras/glossary.md#assignment) the result of a function that actually does not [return](extras/glossary.md#return) anything. For example, although the `print()` function serves to display output for the user of our program, it does not actually return any value that can be assigned. By default, a function that does not return anything returns `None`.
 
@@ -817,7 +843,7 @@ shopping[1] = 'organic vegan bacon'
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-40-21c829b36b26> in <module>
+    <ipython-input-41-21c829b36b26> in <module>
     ----> 1 shopping[1] = 'organic vegan bacon'
     
 

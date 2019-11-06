@@ -3,7 +3,7 @@
 * [Creating a computer program with Python](intro.md)
 * [Variables and data types](types.md)
 * [Sequences and mappings](sequences_mappings.md)
-* Conditionals
+* [Conditionals](conditionals.md)
 * Iteration
 * Functions
 * Modules

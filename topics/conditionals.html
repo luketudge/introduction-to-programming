@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>types</title>
+<title>conditionals</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,7 +13077,40 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Variables-and-data-types">Variables and data types<a class="anchor-link" href="#Variables-and-data-types">&#182;</a></h1><p>In the <a href="intro.md">introductory lesson</a>, we learned how to assign some data into a <a href="extras/glossary.md#variable">variable</a>. Below are a few examples. We will use these variables in the remainder of this lesson.</p>
+<h1 id="Conditionals">Conditionals<a class="anchor-link" href="#Conditionals">&#182;</a></h1><p>We are already able to write programs that are somewhat interactive; we get the user to type something in and then we process whatever they typed in. The next level of excitement for our users is to interact with a program that does completely <em>different</em> things depending on what they type in.</p>
+<p>So far, the 'flow' of our programs has always been linear; they carry out a series of steps in order, with no variations. We would now like to give the flow of our programs a branching structure, such that its behavior will vary depending on the circumstances. This can be achieved with <a href="extras/glossary.md#control">control statements</a>: lines of our program that do not on their own produce any result, but instead control when (or how often, or in what variations) other lines are run.</p>
+<p>One of the simplest kinds of control statement is a 'conditional' control statement. It tells Python to run certain lines of our program only if a certain condition is fulfilled. This is what we will learn about now.</p>
+<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">&#182;</a></h2><p>To give ourselves something to work towards, let's imagine a fairly simple toy program that we would like to create.</p>
+<p><strong>hoff.py</strong>:</p>
+<ul>
+<li>Ask the user to enter their name and surname.</li>
+<li>Find one interesting thing to say about their name:<ul>
+<li>If they are called 'David Hasselhoff', ask "Are you THE David Hasselhoff?"<ul>
+<li>If they say yes, say "Wow!"</li>
+<li>If they say no, say "Well that is quite a coincidence that you have the same name."</li>
+</ul>
+</li>
+<li>Else if their surname is 'Hasselhoff', ask "Any relation to David Hasselhoff?"<ul>
+<li>If they say yes, say "Wow!"</li>
+<li>If they say no, say "You never know, you might be."</li>
+</ul>
+</li>
+<li>Else if their initials are 'DH', say "You have the same initials as David Hasselhoff!"</li>
+<li>Else if their first name is a variant of 'David' such as 'Dave', 'Davy', 'Dafydd', say "Your name is a bit like 'David', as in 'David Hasselhoff'."</li>
+<li>Else, as a last resort, say " suppose you could change your name to something more interesting, like 'David Hasselhoff'."</li>
+</ul>
+</li>
+</ul>
+<p>The branching structure of our target program is moderately complex. We will build it up step by step, learning about the necessary programming techniques as we go.</p>
+<h2 id="Booleans">Booleans<a class="anchor-link" href="#Booleans">&#182;</a></h2><p>We have already briefly met the <a href="extras/glossary.md#boolean">booleans</a>. Not Mrs. Boolean and her husband Julian, but the Python <a href="extras/glossary.md#type">data type</a> that stores one of just two possible values: <code>True</code> or <code>False</code>. In order to be able to build conditions into our programs, we need first to learn a bit more about booleans and the logic that governs them.</p>
+<h3 id="Logic">Logic<a class="anchor-link" href="#Logic">&#182;</a></h3><p>Certain statements in Python result in a boolean value. These are all 'logical' statements that ask a 'yes/no' question. The symbols used in them are mostly similar to mathematical notation:</p>
+<ul>
+<li><code>&gt;</code> 'is greater than'</li>
+<li><code>&lt;</code> 'is less than'</li>
+<li><code>&gt;=</code> 'is greater than or equal to'</li>
+<li><code>&lt;=</code> 'is less than or equal to'</li>
+</ul>
+<p>Python allows us to combine such symbols with variables and with literal numbers in much the same way as in math:</p>
 
 </div>
 </div>
@@ -13087,34 +13120,44 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred T. Bonk&#39;</span>
-<span class="n">street</span> <span class="o">=</span> <span class="s1">&#39;Credibility Street&#39;</span>
-<span class="n">street_number</span> <span class="o">=</span> <span class="s1">&#39;221&#39;</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">22</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mf">1.96</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We have also learned about the important distinction between variables that store text (termed <a href="extras/glossary.md#string">strings</a> and abbreviated to <code>str</code>) and variables that store numbers. The form of the data stored in a variable (text, number, something else) is called its <a href="extras/glossary.md#type">type</a>.</p>
-<p>If we are reading a simple Python program, it will often be obvious what type a variable is, either because the author of the program has given the variable a good descriptive name, or because we can find and clearly understand the line of the program on which the variable is defined. But appearances can occasionally be deceptive. For example, the <code>street_number</code> variable above is a string that happens to contain digits. These can occur from time to time in programming, in cases where the digits do not really represent a mathematical quantity or might sometimes need to have extra non-number characters added to them (for example, Sherlock Holmes lives at house number 221b, which we can't represent and manipulate as an actual number).</p>
-<p>If we are unsure what type of data is stored in a variable, we can check at the console using the <a href="extras/glossary.md#builtin">built-in</a> Python function <code>type()</code>.</p>
+
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">street_number</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span>
 </pre></div>
 
     </div>
@@ -13133,7 +13176,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>str</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -13141,21 +13184,13 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Python is fairly strict about what we can and cannot do with various types. If we try to get Python to <a href="extras/glossary.md#evaluate">evaluate</a> a mathematical expression that contains a string variable, we will encounter an <a href="extras/glossary.md#error">error</a>.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">street_number</span> <span class="o">+</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">z</span>
 </pre></div>
 
     </div>
@@ -13168,18 +13203,15 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-3-69d4580a9089&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>street_number <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span>
 
-<span class="ansi-red-fg">TypeError</span>: must be str, not int</pre>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
+
 </div>
 
 </div>
@@ -13189,7 +13221,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>However, some Python functions and <a href="extras/glossary.md#operator">operators</a> are somewhat flexible, and may instead do different things depending on the type of the variable that they are applied to. For example, the multiplication operator <code>*</code> performs normal math multiplication for variables that store numbers, but for strings it instead repeats their contents.</p>
+<p>What if we want to check whether two things are exactly equal? Here there is a small syntactical problem, because the equals symbol <code>=</code> is already in use for <a href="extras/glossary.md#assignment">assigning</a> to a variable. Python therefore uses a double equals symbol <code>==</code> to mean 'is equal to' in the mathematical sense.</p>
 
 </div>
 </div>
@@ -13199,7 +13231,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">height</span> <span class="o">*</span> <span class="mi">2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
 </pre></div>
 
     </div>
@@ -13218,7 +13250,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3.92</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13232,7 +13264,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">*</span> <span class="mi">3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="mi">2</span>
 </pre></div>
 
     </div>
@@ -13251,7 +13283,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;Mildred T. BonkMildred T. BonkMildred T. Bonk&#39;</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -13263,7 +13295,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python's occasional flexibility about data types is a double-edged sword. On the one hand, it allows for some concise intuitive commands, such as using <code>+</code> to combine strings or <code>*</code> to repeat them. But on the other hand, it means that we can occasionally make some big mistakes in our programs without immediately becoming aware of it. For example, if we found that <code>street_number</code> had been entered incorrectly and in fact needed an extra zero adding to it, then we might be tempted to multiply it by 10 in order to achieve this. Python would give no warning and would go ahead with what we asked even though the result is not what we want. In this case, our program might end up sending somebody's automated delivery a lot further down the street than we intended.</p>
+<p><code>==</code> is also applicable to strings. As you might expect, it checks whether the contents of the two strings are exactly the same.</p>
 
 </div>
 </div>
@@ -13273,7 +13305,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">street_number</span> <span class="o">*</span> <span class="mi">10</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name1</span> <span class="o">=</span> <span class="s1">&#39;David Hasselhoff&#39;</span>
+<span class="n">name2</span> <span class="o">=</span> <span class="s1">&#39;David Hasselhoff&#39;</span>
+
+<span class="n">name1</span> <span class="o">==</span> <span class="n">name2</span>
 </pre></div>
 
     </div>
@@ -13292,7 +13327,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;221221221221221221221221221221&#39;</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -13304,7 +13339,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A correct way to add an extra 0 to a string would be to add another string containing the <code>'0'</code> <em>character</em>.</p>
+<p>Remember that lowercase and uppercase letters are not considered to be the same character, and that a space counts as a character.</p>
 
 </div>
 </div>
@@ -13314,7 +13349,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">street_number</span> <span class="o">+</span> <span class="s1">&#39;0&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name1</span> <span class="o">==</span> <span class="s1">&#39;david hasselhoff&#39;</span>
 </pre></div>
 
     </div>
@@ -13333,7 +13368,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;2210&#39;</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13341,21 +13376,13 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Assignment-and-immutability">Assignment and immutability<a class="anchor-link" href="#Assignment-and-immutability">&#182;</a></h2><p>'Assignment and immutability' is of course the title of a novel by Jane Austen. But it also refers to two important concepts in Python programming. We already met <a href="extras/glossary.md#assignment">assignment</a> above. To understand immutability, let's remind ourselves of something. Take a look at the value of the <code>street_number</code> variable after everything that we have been doing with it above.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">street_number</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name1</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff &#39;</span>
 </pre></div>
 
     </div>
@@ -13374,7 +13401,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;221&#39;</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13386,8 +13413,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It hasn't changed since its original assignment. Although we have been performing various operations with the variable, we have merely been testing out and looking at the results of these operations. The value of the variable has remained unchanged. The value of a string variable will always remain the same unless we overwrite it by assigning it again. If we want to change or update the value of a variable with the result of some calculation, then we must assign that result back into the same variable name.</p>
-<p>For example if we want to add a <code>'b'</code> to the <code>street_number</code> string (and then print it out to check its new value):</p>
+<p>Finally, we may combine or negate logical statements using the Python <a href="extras/glossary.md#keyword">keywords</a> <code>and</code>, <code>or</code>, and <code>not</code>.</p>
 
 </div>
 </div>
@@ -13397,9 +13423,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">street_number</span> <span class="o">=</span> <span class="n">street_number</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">street_number</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">or</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
 </pre></div>
 
     </div>
@@ -13412,38 +13436,27 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>221b
-</pre>
-</div>
-</div>
 
-</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The opposite of immutability is 'mutability'. As it turns out, there are some data types that are mutable. That is, their contents can change without us having to overwrite them. We will meet one of these at the end of this lesson. But all the simple data types, such as strings and numbers, are immutable; string and numeric variables will only ever change their contents if there is an <code>=</code> somewhere in our program that overwrites them.</p>
-<p>Although this behavior can occasionally be a source of frustration, for example if we perform some calculations but forget to store the result in the relevant variable, in general immutability is a good thing. It would be annoying if every time we wanted to calculate something with our variables, this also overwrote their contents. For example, we might want to just print out the result of adding one year to somebody's age, without actually changing it.</p>
-<p>Of course if we want to keep both the original value of a variable and store an updated one, we can just assign the updated value into a <em>new</em> variable. In such cases it is a good idea to choose an expressive variable name that says something about what the changed value means. For example:</p>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age_next_year</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">1</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
 </pre></div>
 
     </div>
@@ -13456,36 +13469,27 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>22
-23
-</pre>
-</div>
-</div>
 
-</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Numeric-data">Numeric data<a class="anchor-link" href="#Numeric-data">&#182;</a></h2><p>So far most of our examples have concerned the behavior of the string data type. Let's now consider how Python manages numbers.</p>
-<p>Python distinguishes between two different ways of representing numbers. Numbers can be stored either as whole numbers (<code>1</code>, <code>2</code>, <code>3</code>, etc.) or as non-whole numbers (for example <code>1.618</code>, <code>2.718</code>, or <code>3.142</code>). Whole numbers are called <a href="extras/glossary.md#integer">integers</a> (abbreviated to <code>int</code>), and non-whole numbers are called <a href="extras/glossary.md#float">floating point numbers</a> (abbreviated to <code>float</code>). Just as there is a particular <a href="extras/glossary.md#syntax">syntactical</a> rule for creating a string, namely the use of quote marks, so there are syntactical rules for creating integers and floats. The presence of a decimal point (<code>.</code>) indicates a float, and its absence indicates an integer.</p>
-<p>Take a look back at the <code>age</code> and <code>height</code> variables that we defined above. We can see that Python has stored these as two different types.</p>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="ow">not</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
 
     </div>
@@ -13504,7 +13508,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>int</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13512,13 +13516,21 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As in math, parentheses are not always necessary, but they can help make our program clearer to read.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13537,7 +13549,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>float</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -13545,23 +13557,13 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that even if the number represented is a whole number, if we include a decimal point its type will still be float.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mf">1.0</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="ow">not</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13580,7 +13582,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>float</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13592,7 +13594,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For historical reasons, the syntax of programming languages (along with many other conventions in computing in general) is heavily influenced by British and US English. If you come from a part of the world where the comma is used as a decimal separator instead of the point, for example Germany, then beware that Python does not interpret it this way. If you try to create a float using the comma, the result will not be as expected. Surprisingly, however, you will not see an <a href="extras/glossary.md#error">error message</a> either. Instead, Python interprets commas as separating two different things, and so will store the two numbers together in a new kind of variable (called a <a href="extras/glossary.md#tuple">tuple</a>) that can contain more than one value.</p>
+<h3 id="Conversion-to-boolean">Conversion to boolean<a class="anchor-link" href="#Conversion-to-boolean">&#182;</a></h3><p>That covers the very basics of logical statements in Python. Before we see how to turn logical statements into conditions for carrying out a part of a our program, let's take a brief detour to consider a slight quirk in the way Python handles the boolean data type.</p>
+<p>We have learned that some data types can be converted into others, using <a href="extras/glossary.md#builtin">built-in</a> functions that have the same names as the type we wish to convert to (for example <code>int()</code> for converting to integer, and <code>str()</code> for converting to string). Initially, it may seem strange to allow converting other types into booleans, since booleans are always just <code>True</code> or <code>False</code>. Is the integer <code>42</code> on its own a 'true' number or a 'false' number? What about a string like <code>'JavaScript is a terrible programming language.'</code>? (Of course, some strings may contain true statements, but Python can't be expected to work this out.)</p>
+<p>Nonetheless, Python does allow us to convert other data types to boolean. How does it decide whether numbers or strings are 'true' or not? If you feel like a challenge, you might like to head to the Spyder console now and try converting a few strings and numbers to boolean (the type conversion function is <code>bool()</code>) to see whether you can discover the pattern.</p>
+<p>The answer follows after this block of text:</p>
 
 </div>
 </div>
@@ -13602,9 +13607,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">3</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SPOILER ALERT &#39;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13621,7 +13624,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 3)
+<pre>SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT 
 </pre>
 </div>
 </div>
@@ -13633,10 +13636,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>But more about tuples later.</p>
-<p>How should we decide whether to store a number as integer or float? If we want to store a non-whole number, the decision is easy; it has to be a float. But what about something like somebody's age? Here, we have to think about what concept the number is supposed to represent in the real world, and consider whether we want to treat the units of that concept as atomic or as divisible into parts. For example, we can think of someone's age as being a count of the number of whole years that they have survived. But we can also think of it as a continuous measure of how much time they have survived. Children in particular often like to give their age as a continuous quantity like 'six-and-three-quarters'.</p>
-<p>As it turns out, there are many cases in which the difference between integers and floats does not actually matter for the functioning of our program. Python is quite flexible with number types.</p>
-<p>It allows us to mix integer and float numbers in the same mathematical expression:</p>
+<p>Let's try a string first:</p>
 
 </div>
 </div>
@@ -13646,10 +13646,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">child_age</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">precise_child_age</span> <span class="o">=</span> <span class="n">child_age</span> <span class="o">+</span> <span class="mf">0.75</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">precise_child_age</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;JavaScript is a terrible programming language.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13668,7 +13665,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>float</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -13680,7 +13677,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The result of a mathematical expression containing a mixture of integers and floats is always a float, even if the resulting quantity is a whole number:</p>
+<p>That seems like a sensible answer. But what about other strings?</p>
 
 </div>
 </div>
@@ -13690,9 +13687,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;JavaScript is an excellent programming language.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13711,7 +13706,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>float</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -13723,7 +13718,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A calculation that involves only integers and that results in a whole number will produce an integer:</p>
+<p>No! That's not right.</p>
+<p>In fact, Python treats any string as <code>True</code>, with just one exception: an empty string with no characters in it at all:</p>
 
 </div>
 </div>
@@ -13733,9 +13729,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13754,7 +13748,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>int</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13766,7 +13760,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If a calculation with integers results in a non-whole number then Python does the reasonable thing and nonetheless stores the result as a float instead of rounding it off:</p>
+<p>This principle generalizes to the other data types. 'Empty' things are <code>False</code>, and all other things are <code>True</code>. An empty list <code>[]</code>, for example, is treated as <code>False</code>, but a list that has any contents at all is treated as <code>True</code>.</p>
 
 </div>
 </div>
@@ -13776,9 +13770,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">three_quarters</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">three_quarters</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">([])</span>
 </pre></div>
 
     </div>
@@ -13797,7 +13789,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>float</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13805,22 +13797,13 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Indeed, any calculation involving division will result in a float, even if the result is a whole number (you might find this rule a little less intuitive):</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">two_halves</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">two_halves</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">([</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13839,7 +13822,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>float</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -13851,7 +13834,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If we are dividing integers and we would like to insist that the result also be an integer, then we can use a double slash <code>//</code> for so-called 'floor division'. The result is 'rounded down':</p>
+<p>For numbers, <code>0</code> is the only 'empty number', and all others are treated as <code>True</code>.</p>
 
 </div>
 </div>
@@ -13861,11 +13844,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lego_bricks</span> <span class="o">=</span> <span class="mi">52</span>
-<span class="n">bricks_per_house</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">houses_built</span> <span class="o">=</span> <span class="n">lego_bricks</span> <span class="o">//</span> <span class="n">bricks_per_house</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">houses_built</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13878,41 +13857,27 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-</pre>
-</div>
-</div>
 
-</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Aside:-Python-2">Aside: Python 2<a class="anchor-link" href="#Aside:-Python-2">&#182;</a></h3><p>A previous version of Python, Python 2, was slightly less flexible about numeric data types. The result of division with integers in Python 2 was always an integer, with the non-whole part discarded. This could produce some surprises for the unwary, such as the result of <code>1 / 2</code> being <code>0</code>.</p>
-<p>We are learning to program with Python 3, and almost all new Python software is written for Python 3, so you do not need to worry about this. Just be aware of it if you see some older Python examples or programs when searching online.</p>
-<h2 id="Type-conversion">Type conversion<a class="anchor-link" href="#Type-conversion">&#182;</a></h2><p>What if we have data of one type, but we need it to be of another? For example, we have stored the house number of an address as a string because we might need to append letters to it, but now in another part of our program we need to do some math with it, perhaps in order to find out the address of a next-door neighbor.</p>
-<p>Python has functions that convert one data type into another. Each of these functions has the same name as the abbreviated name of the data type that we are converting to. So for example <code>str()</code> converts to string, and <code>int()</code> to integer.</p>
-<p>We can apply these functions to variables within a calculation that would otherwise result in an error:</p>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number_beast</span> <span class="o">=</span> <span class="s1">&#39;666&#39;</span>
-
-<span class="n">neighbor_beast</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">neighbor_beast</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13925,37 +13890,27 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>668
-</pre>
-</div>
-</div>
 
-</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>And here is a similar example but imagining we had first stored the house number as an integer:</p>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number_beast</span> <span class="o">=</span> <span class="mi">666</span>
-
-<span class="n">annexe_beast</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">annexe_beast</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13968,13 +13923,15 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>666b
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
+
 </div>
 
 </div>
@@ -13984,8 +13941,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Remind yourself one more time that the values of string and numeric variables are not changed unless we overwrite them with an <code>=</code> assignment. Forgetting that this principle also applies to type conversion can lead to a common beginners' mistake.</p>
-<p>Line 2 in this example has no effect on the type of the <code>number_beast</code>variable because it is not assigned anywhere:</p>
+<p>This may seem slightly weird. But this convention of treating non-empty things as being somehow 'true' is common to many programming languages. As we will see later, it is important to be aware of this behavior.</p>
+<h2 id="if">if<a class="anchor-link" href="#if">&#182;</a></h2><p>Now that we know how to express conditions in Python, we just need to know how to apply them to certain commands, so that those commands are only carried out if the condition is true. The <a href="extras/glossary.md#keyword">keyword</a> that we need for this is <code>if</code>, which has essentially the same meaning in Python as in English.</p>
+<p>This is how it is used, applied to the very first condition in our target program:</p>
 
 </div>
 </div>
@@ -13995,12 +13953,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number_beast</span> <span class="o">=</span> <span class="mi">666</span>
-<span class="nb">str</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
 
-<span class="n">annexe_beast</span> <span class="o">=</span> <span class="n">number_beast</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">annexe_beast</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14016,18 +13972,10 @@ div#notebook {
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-23-293d2fd1f181&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> str<span class="ansi-blue-fg">(</span>number_beast<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> 
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>annexe_beast <span class="ansi-blue-fg">=</span> number_beast <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">&#39;b&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> 
-<span class="ansi-green-intense-fg ansi-bold">      6</span> print<span class="ansi-blue-fg">(</span>annexe_beast<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What is your name and surname? David Hasselhoff
+Are you THE Hoff?
+</pre>
 </div>
 </div>
 
@@ -14038,7 +13986,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here the problem is fixed:</p>
+<p>Because the user entered the exact string <code>'David Hasselhoff'</code>, the condition following the <code>if</code> keyword <a href="extras/glossary.md#evaluate">evaluated</a> to <code>True</code> and so the <code>print()</code> command just below it was executed.</p>
+<p>We should always test our conditions with both the positive and negative case to check that we have got them right. So let's try it again, this time entering a name that should not trigger the <code>print()</code> command:</p>
 
 </div>
 </div>
@@ -14048,12 +13997,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number_beast</span> <span class="o">=</span> <span class="mi">666</span>
-<span class="n">number_beast</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
 
-<span class="n">annexe_beast</span> <span class="o">=</span> <span class="n">number_beast</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">annexe_beast</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14070,7 +14017,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>666b
+<pre>What is your name and surname? Mildred Bonk
 </pre>
 </div>
 </div>
@@ -14082,10 +14029,21 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We saw above that Python handles the two numeric data types integer and float fairly flexibly and intuitively if we mix them in mathematical expressions. For this reason it is not so often necessary to convert variables between these two types.</p>
-<p>(The most common case in which we do want to do this is in order to convert float to integer. We will later encounter some situations in which we definitely need integers.)</p>
-<h2 id="User-input">User input<a class="anchor-link" href="#User-input">&#182;</a></h2><p>Let's take a look at a common situation in which type conversion from string to numeric is necessary. In one of our first example programs, <a href="examples/greeting_personal.py#L9">greeting_personal.py</a>, we used the <code>input()</code> function in order to prompt the user to type something in at the console.</p>
-<p>The <code>input()</code> function always <a href="extras/glossary.md#return">returns</a> a string, even if the user types in a valid number. If we try to do math with the result, we will encounter an error:</p>
+<p>Good. This time we did not see the printed output.</p>
+<p>So here is the general <a href="extras/glossary.md#syntax">syntax</a> for an <code>if</code> statement:</p>
+<ul>
+<li>write <code>if</code></li>
+<li>then write your condition<ul>
+<li>this should be something that results in a boolean <code>True</code> or <code>False</code></li>
+</ul>
+</li>
+<li>then write a colon <code>:</code></li>
+<li>underneath all this, write the command (or multiple commands) that should be executed if your condition is true<ul>
+<li>these must be <a href="extras/glossary.md#indentation">indented</a> (i.e. they should be preceded by spaces to move them rightwards)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Indentation">Indentation<a class="anchor-link" href="#Indentation">&#182;</a></h3><p>That last rule is important. It is the indentation in our example above that marks the <code>print()</code> line as 'belonging to' the <code>if</code> statement. Let's see what happens if we forget the indentation:</p>
 
 </div>
 </div>
@@ -14095,8 +14053,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
-<span class="n">age_next_year</span> <span class="o">=</span> <span class="n">user_age</span> <span class="o">+</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14112,26 +14072,13 @@ div#notebook {
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>How old are you? 52
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-25-e69a11705ffd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> user_age <span class="ansi-blue-fg">=</span> input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;How old are you? &#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>age_next_year <span class="ansi-blue-fg">=</span> user_age <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span>
-
-<span class="ansi-red-fg">TypeError</span>: must be str, not int</pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-25-fdc1d519ea77&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">4</span>
+<span class="ansi-red-fg">    print(&#39;Are you THE Hoff?&#39;)</span>
+        ^
+<span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> expected an indented block
+</pre>
 </div>
 </div>
 
@@ -14142,8 +14089,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python has no way of knowing what type of data we want to get from the user. So in order to 'play it safe' and always be consistent, Python makes it a string and leaves it up to us to convert the contents of the string if necessary.</p>
-<p>So if we want to get numbers from the user, we must first convert the result of <code>input()</code>:</p>
+<p>The content of this error message is fairly clear: Python was expecting some indentation after the <code>if</code> statement.</p>
+<p>This use of indentation to mark lines of a program as belonging to a <a href="extras/glossary.md#control">control statement</a> is specific to Python, and is not a feature of most other programming languages. It is one of Python's most controversial features, and also one of the more challenging things for beginners to get used to.</p>
+<p>So let's look at a few more variants of the <code>if</code> statement above, to check your understanding of the role of indentation. First of all, an example with more than one indented line after the <code>if</code>:</p>
 
 </div>
 </div>
@@ -14153,11 +14101,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
-<span class="n">user_age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">user_age</span><span class="p">)</span>
-<span class="n">age_next_year</span> <span class="o">=</span> <span class="n">user_age</span> <span class="o">+</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The really real Hoff?&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14174,8 +14122,9 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>How old are you? 52
-53
+<pre>What is your name and surname? David Hasselhoff
+Are you THE Hoff?
+The really real Hoff?
 </pre>
 </div>
 </div>
@@ -14187,142 +14136,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The example program <a href="examples/age_next_year.py">age_next_year.py</a> shows how to use this pattern of Python commands in a simple program. If you would like to explore type conversion a little more, open up the file in Spyder, save a new copy of it, for example under the name <em>age_next_year_v2.py</em>, and try out a few changes:</p>
-<ul>
-<li>Does it matter for the workings of the program if you convert the user input to float instead of integer?</li>
-<li>Why is it necessary to use the <code>str()</code> type conversion function on <a href="examples/age_next_year.py#L14">line 14</a>? What happens if you remove it?</li>
-<li>What happens if the user enters a non-whole number for their age, such as <code>6.75</code>?</li>
-</ul>
-<h3 id="Another-aside:-Python-2-again">Another aside: Python 2 again<a class="anchor-link" href="#Another-aside:-Python-2-again">&#182;</a></h3><p>One of the other most noticeable differences in the previous version of Python was the behavior of the <code>input()</code> function. Confusingly, in Python 2 this function treated the user's input not as a string, nor even as a number, but as a <em>Python command</em>, which Python 2 would then <a href="extras/glossary.md#evaluate">evaluate</a>. In theory this allowed malicious or just clumsy users to completely mess up the workings of a program by entering their own Python commands at the console while the program was running. So Python 3 takes the much safer option of just treating all user inputs as strings.</p>
-<p>Again, you do not need to worry about this since we will always be working with Python 3. Just be aware of it if you encounter old Python examples on the internet.</p>
-<h2 id="Methods">Methods<a class="anchor-link" href="#Methods">&#182;</a></h2><p>As we have seen, Python's <a href="extras/glossary.md#type">type</a> system lays down some (mostly) sensible rules about what we can and cannot do with various types of data. For example, we can perform division with integers and floats but not with strings. How does this work 'behind the scenes'? It turns out that for any variable we can access a list of the things that it is possible to do with a variable of that type. Along with the actual data stored in a variable, Python stores various links to the operations that it is possible to carry out with that type of data.</p>
-<p>The <code>dir()</code> function returns this list of possibilities for a certain variable. Let's try it for our <code>name</code> variable. Since this variable is a string, <code>dir()</code> tells us what it is possible to do with strings.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[27]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;__add__&#39;,
- &#39;__class__&#39;,
- &#39;__contains__&#39;,
- &#39;__delattr__&#39;,
- &#39;__dir__&#39;,
- &#39;__doc__&#39;,
- &#39;__eq__&#39;,
- &#39;__format__&#39;,
- &#39;__ge__&#39;,
- &#39;__getattribute__&#39;,
- &#39;__getitem__&#39;,
- &#39;__getnewargs__&#39;,
- &#39;__gt__&#39;,
- &#39;__hash__&#39;,
- &#39;__init__&#39;,
- &#39;__init_subclass__&#39;,
- &#39;__iter__&#39;,
- &#39;__le__&#39;,
- &#39;__len__&#39;,
- &#39;__lt__&#39;,
- &#39;__mod__&#39;,
- &#39;__mul__&#39;,
- &#39;__ne__&#39;,
- &#39;__new__&#39;,
- &#39;__reduce__&#39;,
- &#39;__reduce_ex__&#39;,
- &#39;__repr__&#39;,
- &#39;__rmod__&#39;,
- &#39;__rmul__&#39;,
- &#39;__setattr__&#39;,
- &#39;__sizeof__&#39;,
- &#39;__str__&#39;,
- &#39;__subclasshook__&#39;,
- &#39;capitalize&#39;,
- &#39;casefold&#39;,
- &#39;center&#39;,
- &#39;count&#39;,
- &#39;encode&#39;,
- &#39;endswith&#39;,
- &#39;expandtabs&#39;,
- &#39;find&#39;,
- &#39;format&#39;,
- &#39;format_map&#39;,
- &#39;index&#39;,
- &#39;isalnum&#39;,
- &#39;isalpha&#39;,
- &#39;isdecimal&#39;,
- &#39;isdigit&#39;,
- &#39;isidentifier&#39;,
- &#39;islower&#39;,
- &#39;isnumeric&#39;,
- &#39;isprintable&#39;,
- &#39;isspace&#39;,
- &#39;istitle&#39;,
- &#39;isupper&#39;,
- &#39;join&#39;,
- &#39;ljust&#39;,
- &#39;lower&#39;,
- &#39;lstrip&#39;,
- &#39;maketrans&#39;,
- &#39;partition&#39;,
- &#39;replace&#39;,
- &#39;rfind&#39;,
- &#39;rindex&#39;,
- &#39;rjust&#39;,
- &#39;rpartition&#39;,
- &#39;rsplit&#39;,
- &#39;rstrip&#39;,
- &#39;split&#39;,
- &#39;splitlines&#39;,
- &#39;startswith&#39;,
- &#39;strip&#39;,
- &#39;swapcase&#39;,
- &#39;title&#39;,
- &#39;translate&#39;,
- &#39;upper&#39;,
- &#39;zfill&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>(Note that it is only very rarely that we will need to use the <code>dir()</code> function in an actual program. It is instead a useful function to enter at the console when we are experimenting and checking Python's behavior. It can be particularly useful when we encounter a new <a href="extras/glossary.md#type">type</a> and want an overview of the sorts of things that it can do.)</p>
-<p>In the output from <code>dir()</code> we see various things enclosed in double underscores <code>__ __</code>. We do not need to concern ourselves with these for the moment. They define the behavior of strings when they appear in various Python commands. For example, the <code>__add__</code> entry refers to the behavior of strings when we combine them with the <code>+</code> operator.</p>
-<p>The entries that interest us for the moment are those without underscores. These are the names of functions that can be applied to strings. Functions that are defined especially for one data type and can be accessed through variables of that type are called '<a href="extras/glossary.md#method">methods</a>' for that data type. For example, the penultimate entry in the list of string methods above is a method called <code>upper</code>. This method <a href="extras/glossary.md#return">returns</a> an all UPPERCASE version of the string. This method is special to strings; it wouldn't make any sense for other data types.</p>
-<p>The syntax for <a href="extras/glossary.md#call">calling</a> a method has a lot in common with the syntax for calling any other function:</p>
-<ul>
-<li>Place parentheses after the name of the method.</li>
-<li>(Optionally) place any input <a href="extras/glossary.md#argument">arguments</a> for the method inside the parentheses.</li>
-</ul>
-<p>But there is an important difference. We first 'go into' the variable that we want to apply the method to, and get the method from there. To go into a variable like this in Python, we place a dot (<code>.</code>) after its name.</p>
-<p>So to call the <code>upper()</code> method on our string variable <code>name</code>:</p>
+<p>Because both of these lines are indented, they both belong to the <code>if</code> statement, and so both of them will be run if the condition is true.</p>
+<p>Where we have multiple indented lines that all belong together, they must all be indented to the same extent. Varying indentation doesn't just look untidy, it also prevents Python from interpreting our program correctly:</p>
 
 </div>
 </div>
@@ -14332,7 +14147,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The really real Hoff?&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14345,15 +14164,17 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;MILDRED T. BONK&#39;</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;tokenize&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">5</span>
+<span class="ansi-red-fg">    print(&#39;The really real Hoff?&#39;)</span>
+    ^
+<span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> unindent does not match any outer indentation level
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14363,8 +14184,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that we do not also need to put the variable inside the parentheses, as we do with functions. Because we have accessed the method by first going into a particular variable, Python already understands that we wish to apply the method to that same variable.</p>
-<p>Indeed, if we make this mistake, we may get an error message telling us that we have given too many <a href="extras/glossary.md#argument">input arguments</a>:</p>
+<p>Now consider what happens in the variation below:</p>
 
 </div>
 </div>
@@ -14374,7 +14194,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The really real Hoff?&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14390,14 +14214,10 @@ div#notebook {
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-29-b59fa512a01b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>name<span class="ansi-blue-fg">.</span>upper<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">TypeError</span>: upper() takes no arguments (1 given)</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What is your name and surname? Mildred Bonk
+The really real Hoff?
+</pre>
 </div>
 </div>
 
@@ -14408,7 +14228,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>And remember once again that strings are <a href="#extras/glossary.md#mutability">immutable</a>. Calling a method of a string variable does not change the string, it merely <a href="extras/glossary.md#return">returns</a> the result.</p>
+<p>This one does not result in an error. It is <a href="extras/glossary.md#syntax">syntactically</a> valid, but it does something a bit different from what we want.</p>
+<p>Notice that the user typed in a name that did not make the <code>if</code> condition true. So the first <code>print()</code> line was not run. But the second <code>print()</code> line <em>was</em> run. This is because it was not indented. As we learned above, indentation tells Python which lines belong to a control statement. If a line is not indented, it is not influenced by the preceding control statement, and so is always run, just like any normal line of the program. The first 'unindented' line after a block of indented lines marks the end of a control statement's influence, and a return to the normal linear structure of a Python program, where every line is always run.</p>
+<p>For the sake of clarity, it is a good idea to also place blank lines before and after a block of indented lines, to mark them out clearly from the rest of the program. For example:</p>
 
 </div>
 </div>
@@ -14418,9 +14240,12 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Thank you, and goodbye.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14437,7 +14262,9 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mildred T. Bonk
+<pre>What is your name and surname? David Hasselhoff
+Are you THE Hoff?
+Thank you, and goodbye.
 </pre>
 </div>
 </div>
@@ -14449,7 +14276,17 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Some methods require additional input <a href="extras/glossary.md#argument">arguments</a>. For example the string method <code>count()</code> counts how many times a particular 'substring' appears inside a string variable. The input argument is the substring to count:</p>
+<h3 id="Debugging">Debugging<a class="anchor-link" href="#Debugging">&#182;</a></h3><p>If you are trying to write an <code>if</code> statement and you keep encountering <a href="extras/glossary.md#error">errors</a>, here are some of the most common mistakes to check for:</p>
+<ul>
+<li>Have you forgotten the colon <code>:</code> at the end of the if statement?</li>
+<li>Have you used <code>=</code> where you meant to use <code>==</code>?</li>
+<li>Have you forgotten to indent, or indented inconsistently?</li>
+</ul>
+<h2 id="if-...-elif-...-else">if ... elif ... else<a class="anchor-link" href="#if-...-elif-...-else">&#182;</a></h2><p>We now have the main ingredient of our target program: conditional statements. Most of the rest of what we will learn in this lesson is elaborating on this basic ingredient.</p>
+<p>The English-language description of our target program is structured as a series of conditions. The first begins with 'if', subsequent ones begin with 'else if', and the last begins simply with 'else'. That is, we want to keep checking a series of conditions until we find one that is true, and have a final 'last resort' condition that only applies if none of the others was true. This is fairly easy to put together, so long as we remember the basic syntax for a conditional statement. We just need to introduce new <a href="extras/glossary.md#keyword">keywords</a>.</p>
+<p>Python abbreviates 'else if' to <code>elif</code>. The <code>elif</code> keyword checks a new condition, but only if none of the preceding conditions was true.</p>
+<p>'Else' is the same in Python as it is in English. The <code>else</code> keyword does not require any condition, since it merely specifies what to do if none of the preceding conditions was true. But like all <a href="extras/glossary.md#control">control statements</a> it does still require a colon.</p>
+<p>Let's see an <code>if</code> ... <code>elif</code> ... <code>else</code> structure in action, using a simplified version of our target program:</p>
 
 </div>
 </div>
@@ -14459,9 +14296,22 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
 
-<span class="n">name</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+<span class="c1"># Get the separate names and initials.</span>
+<span class="n">user_names</span> <span class="o">=</span> <span class="n">user_name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">user_firstname</span> <span class="o">=</span> <span class="n">user_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">user_surname</span> <span class="o">=</span> <span class="n">user_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">user_initials</span> <span class="o">=</span> <span class="n">user_firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">user_surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">user_surname</span> <span class="o">==</span> <span class="s1">&#39;Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Any relation to David Hasselhoff?&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">user_initials</span> <span class="o">==</span> <span class="s1">&#39;DH&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You have the same initials as David Hasselhoff!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Never mind, I suppose you could change it to something more interesting, like &#39;David Hasselhoff&#39;.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14478,22 +14328,10 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mildred T. Bonk
+<pre>What is your name and surname? Dafydd Hasselhoff
+Any relation to David Hasselhoff?
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[31]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
-</div>
-
 </div>
 
 </div>
@@ -14503,7 +14341,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that Python strings are 'case-sensitive'. UPPERCASE characters are not considered the same as their lowercase counterparts:</p>
+<p>(If you are wondering about that bit where we extract the user's two names and initials, go to the Spyder console and explore the string <a href="extras/glossary.md#method">method</a> <code>split()</code> and also look back at <a href="extras/glossary.md#index">indexing</a>.)</p>
+<p>The user entered 'Dafydd Hasselhoff', and this triggered the first <code>elif</code> statement, on line 11 above. Notice that the condition for the second <code>elif</code> statement is also true, since Dafydd Hasselhoff's initials are also 'DH', but this second <code>elif</code> was not triggered; an <code>elif</code> statement is only applied if none of the preceding conditions was true.</p>
+<p>Notice also the pattern of indentation. The additional <a href="extras/glossary.md#control">control statements</a> with <code>elif</code> and <code>else</code> are not themselves indented, but the <code>print()</code> commands that belong to them are.</p>
+<h2 id="Nested-conditions">Nested conditions<a class="anchor-link" href="#Nested-conditions">&#182;</a></h2><p>We need one more major insight into Python's <a href="extras/glossary.md#syntax">syntax</a> for conditionals before we are ready to write a complete version of our target program. For the first two conditions in our program (whether the full name is 'David Hasselhoff' or the surname is 'Hasselhoff'), we need to ask a follow up question and then apply another condition to the answer to that follow-up question. We can almost achieve this already using the techniquess we have just learned, if we add a little leap of imagination.</p>
+<p>Remember that Python uses <a href="extras/glossary.md#indentation">indentation</a> to mark lines of a program as belonging to a preceding control statement. If we have one control statement inside another (for example one condition that only needs to be checked once another has been found to be true), then the lines that belong to the 'inner' control statement must be indented yet further, to indicate that they belong to that inner control statement and not to the 'outer' one.</p>
+<p>This is easiest to understand by just looking at an example. So here is the first condition of our program, with the additional follow-up question added:</p>
 
 </div>
 </div>
@@ -14513,8 +14356,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">street</span><span class="p">)</span>
-<span class="n">street</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="n">is_hoff</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff? &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_hoff</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wow!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s amazing!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14531,22 +14379,10 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Credibility Street
+<pre>What is your name and surname? David Hasselhoff
+Are you THE Hoff? no
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[32]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0</pre>
-</div>
-
 </div>
 
 </div>
@@ -14556,8 +14392,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python <a href="extras/glossary.md#syntax">syntax</a> allows methods to be applied one after another within the same command. Immediately after calling one method, we can use the <code>.</code> syntax again to call another method on the <em>result</em> of calling the first method.</p>
-<p>For example, to first get a lowercase version of a string and then count the occurrences of a particular character in that lowercase version:</p>
+<p>The user answered 'no' to the second question we posed, so the 'inner' <code>if</code> statement was not triggered, and the indented lines that followed it were not run.</p>
+<p>And note that if the first <code>if</code> statement is not triggered, none of the rest is run:</p>
 
 </div>
 </div>
@@ -14567,7 +14403,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">street</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="n">is_hoff</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff? &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_hoff</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wow!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s amazing!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14580,15 +14422,13 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What is your name and surname? Mildred Bonk
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14598,8 +14438,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A common pattern when dealing with user input is to apply a few string methods to the input in order to 'clean' it. If we would like to make our program a little more robust to variations in user behavior, we can for example strip away any surrounding spaces that they typed by accident (with the <code>strip()</code> method), and then convert the result to lowercase (with the <code>lower()</code> method).</p>
-<p>For example to allow the user to type <code>'yes'</code>, <code>'Yes'</code>, <code>'YES'</code>, or even <code>'      yEs'</code> and make all these inputs equivalent to <code>'yes'</code>:</p>
+<p>Again, to really firm up our understanding of the role of indentation, let's consider a variation that behaves differently:</p>
 
 </div>
 </div>
@@ -14609,10 +14448,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Would you like a buttered crumpet? &#39;</span><span class="p">)</span>
-<span class="n">answer</span> <span class="o">=</span> <span class="n">answer</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="n">is_hoff</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff? &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_hoff</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wow!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s amazing!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14629,8 +14471,9 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Would you like a buttered crumpet?       YES
-yes
+<pre>What is your name and surname? David Hasselhoff
+Are you THE Hoff? no
+That&#39;s amazing!
 </pre>
 </div>
 </div>
@@ -14642,29 +14485,22 @@ yes
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now would be a good moment to turn to the console in Spyder and explore some of the other string methods. In the console, create yourself a string variable (for example by entering a command like <code>word = 'floccinaucinihilipilification'</code>), then use the <code>dir()</code> function to view its available methods, then try to apply some of them to see what they do.</p>
-<p>Some string methods are a bit too complex for us at this stage. Try the following ones:</p>
+<p>This time, the second <code>print()</code> was indented, but only to the same extent as the other lines that follow the 'outer' <code>if</code> statement. This marks it as belonging to the outer <code>if</code> statement, so it is run if the outer <code>if</code> condition is true, regardless of whether the 'inner' one is also true.</p>
+<p>You can think of the role of indentation in Python as similar to its role in a series of nested bullet points in an ordinary document:</p>
 <ul>
-<li><code>capitalize()</code></li>
-<li><code>count()</code></li>
-<li><code>endswith()</code></li>
-<li><code>find()</code></li>
-<li><code>index()</code> (Note the subtle difference from <code>find()</code>.)</li>
-<li><code>lower()</code></li>
-<li><code>lstrip()</code></li>
-<li><code>replace()</code></li>
-<li><code>rstrip()</code></li>
-<li><code>split()</code></li>
-<li><code>startswith()</code></li>
-<li><code>strip()</code></li>
-<li><code>swapcase()</code></li>
-<li><code>title()</code></li>
-<li><code>upper()</code></li>
+<li>This is a bullet point.<ul>
+<li>This is a sub-point related to the first.</li>
+<li>So is this.<ul>
+<li>And this is a sub-sub-point related to the one just above.</li>
 </ul>
-<p>If you are feeling adventurous you can just try these out and see whether you can work out what they do. If so, make sure to test them with a variety of different strings to check that you have really understood their behavior. If you would like to check or need some help with examples, you can search online for <em>Python string method x</em> or you can read the official documentation for all of Python's string methods <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">here</a>.</p>
-<p>We will look now at just one more string method together, because it is a very useful one, but whose use is not completely straightforward. The <code>format()</code> method inserts the values of other variables into certain positions in a string. This is particularly useful for preparing neat printouts for the users of our programs.</p>
-<p>To use <code>format()</code>, our string must contain the characters <code>{}</code> in the positions where we would like to insert something. These positions are termed 'replacement fields', and they will be replaced by the values from the variables that we give as <a href="extras/glossary.md#argument">arguments</a> to the <code>format()</code> method.</p>
-<p>Let's see an example using <code>format()</code> to print out a few different pieces of information contained in the variables we created at the beginning of this lesson:</p>
+</li>
+<li>But this is back to being a sub-point related to the very first one.</li>
+</ul>
+</li>
+<li>And this finally is just yet another bullet point in the main list of bullet points.</li>
+</ul>
+<h2 id="More-debugging">More debugging<a class="anchor-link" href="#More-debugging">&#182;</a></h2><p>We haven't yet attempted the last condition in our target program, which checks whether the user's first name is one of a few variants of 'David'. Let's give it a try. We will for now skip the preceding conditions, and also ask only for the user's first name, just to keep the example clear and simple.</p>
+<p>We learned earlier that we can combine conditions using the <code>or</code> <a href="extras/glossary.md#keyword">keyword</a>, and that this keyword seems to have more or less the same meaning as it does in English. So how about this:</p>
 
 </div>
 </div>
@@ -14674,9 +14510,10 @@ yes
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;User </span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1"> years old and </span><span class="si">{}</span><span class="s1"> meters tall.&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>
 
-<span class="n">message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14689,15 +14526,14 @@ yes
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;User Mildred T. Bonk is 22 years old and 1.96 meters tall.&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What is your name? Dafydd
+Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14707,12 +14543,7 @@ yes
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that if we have multiple <code>{}</code> replacement fields, these are replaced with the values of the variables that we give to <code>format()</code> in the order that we enter them. Notice also that we did not have to use the <code>str()</code> type conversion function to convert the two numeric variables <code>age</code> and <code>height</code> into strings; <code>format()</code> handles variables of different types automatically.</p>
-<p>There is a little bit more to the <code>format()</code> method than this. For example, we can also specify how many decimal places of a <a href="extras/glossary.md#float">float</a> to insert into the string, and other details. But this is enough for now about <code>format()</code>, and about string methods in general. If you would like to see an example of a program that makes use of a few string methods, take a look at <a href="examples/name_trivia.py">name_trivia.py</a>.</p>
-<p>You might be wondering whether the two numeric data types that we have learned about also have methods. They do. But because we tend to work with numbers primarily using mathematical <a href="extras/glossary.md#operator">operators</a>, we rarely need to work directly with their methods as we do for strings.</p>
-<h2 id="Other-types">Other types<a class="anchor-link" href="#Other-types">&#182;</a></h2><p>Are there other data types in Python? Is there anything in the world worth talking about other than words and numbers?</p>
-<p>Yes. In fact there are lots more. We will finish this lesson with a quick overview of a few more types. We will learn about these in more detail in the lessons that follow.</p>
-<h3 id="Boolean">Boolean<a class="anchor-link" href="#Boolean">&#182;</a></h3><p>Variables of <a href="extras/glossary.md#boolean">boolean</a> type are very simple. They store one of only two possible values: <code>True</code> or <code>False</code>. Boolean values can be the result of various Python commands whose purpose is to check whether or not something is the case. For example, the string <a href="extras/glossary.md#method">method</a> <code>startswith()</code> <a href="extras/glossary.md#return">returns</a> a boolean value, <code>True</code> if the string starts with a particular substring, and <code>False</code> otherwise:</p>
+<p>That looks right. But we should always test our conditions with both the positive and the negative case:</p>
 
 </div>
 </div>
@@ -14722,12 +14553,10 @@ yes
 <div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>
 
-<span class="n">answer</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14744,23 +14573,10 @@ yes
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mildred T. Bonk
-False
+<pre>What is your name? Mildred
+Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[36]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>bool</pre>
-</div>
-
 </div>
 
 </div>
@@ -14770,8 +14586,8 @@ False
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(If you were expecting <code>True</code> above, remember that strings are case-sensitive.)</p>
-<h3 id="None">None<a class="anchor-link" href="#None">&#182;</a></h3><p>Occasionally, the status of some piece of information in our program is neither true nor false nor a string nor a number nor anything, it is instead simply undefined. There is an 'empty' type called <a href="extras/glossary.md#none"><code>None</code></a> for this eventuality. We might occasionally <a href="extras/glossary.md#assignment">assign</a> <code>None</code> into a variable as a default starting value, anticipating that this value might be changed later on in our program.</p>
+<p>What just happened? The user entered 'Mildred', which shouldn't trigger the <code>if</code> statement. But it did. Our program did not work as expected. We did not get an <a href="extras/glossary.md#error">error</a>, it is just that the program's behavior is wrong. This can be the hardest kind of problem to diagnose.</p>
+<p>Let's check a few things step by step. First of all, did the <code>input()</code> function really correctly store what the user entered?</p>
 
 </div>
 </div>
@@ -14781,9 +14597,7 @@ False
 <div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">proof_of_Riemann_conjecture</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">proof_of_Riemann_conjecture</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">user_firstname</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14796,15 +14610,13 @@ False
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>NoneType</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mildred
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14814,7 +14626,7 @@ False
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also sometimes get a <code>None</code> value if we try to <a href="extras/glossary.md#assignment">assign</a> the result of a function that actually does not <a href="extras/glossary.md#return">return</a> anything. For example, although the <code>print()</code> function serves to display output for the user of our program, it does not actually return any value that can be assigned. By default, a function that does not return anything returns <code>None</code>.</p>
+<p>Ok. Does the first bit of the <code>if</code> condition somehow not work properly?</p>
 
 </div>
 </div>
@@ -14824,9 +14636,10 @@ False
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi.&#39;</span><span class="p">)</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;triggered&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;not triggered&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14843,22 +14656,9 @@ False
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hi.
+<pre>not triggered
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>NoneType</pre>
-</div>
-
 </div>
 
 </div>
@@ -14868,8 +14668,7 @@ False
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Tuple">Tuple<a class="anchor-link" href="#Tuple">&#182;</a></h3><p>We briefly encountered the <a href="extras/glossary.md#tuple">tuple</a> by mistake earlier, when we tried to create a <a href="extras/glossary.md#float">float</a> using a comma for the decimal separator instead of a point. The comma is not the correct Python <a href="extras/glossary.md#tuple">syntax</a> for the decimal separator, but it turns out that it <em>is</em> the correct syntax for something else: separating multiple values in a sequence. The result is a data type that does exactly that; it stores multiple values in a sequence. Although not an absolutely necessary aspect of the syntax, it is an extremely common convention to also place parentheses around the sequence of values when creating a tuple, as this makes our program clearer.</p>
-<p>Here is an example of creating a tuple:</p>
+<p>That still seems right. So is it the full condition that is the problem?</p>
 
 </div>
 </div>
@@ -14879,52 +14678,10 @@ False
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">)</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">shopping</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[39]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>tuple</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can refer to the values in a tuple using their <a href="extras/glossary.md#index">indices</a>, their numbered positions in the sequence. We place the index in square parentheses <code>[]</code> after the name of the tuple variable.</p>
-<p>Beware that Python's numbering system for sequences begins at zero. So the first value in a tuple has index <code>0</code>, the second value has index <code>1</code>, and so on.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">shopping</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shopping</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;triggered&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;not triggered&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14941,8 +14698,7 @@ False
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>eggs
-bacon
+<pre>triggered
 </pre>
 </div>
 </div>
@@ -14954,17 +14710,20 @@ bacon
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We cannot change individual values in a tuple. Here is what happens if we try:</p>
+<p>Aha! So it seems to be the inclusion of <code>or</code> that is the problem. Let's confirm with another example, using some other string than the user's name:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;organic vegan bacon&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="s1">&#39;Ishmael&#39;</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;triggered&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;not triggered&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14980,14 +14739,9 @@ bacon
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-41-21c829b36b26&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>shopping<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;organic vegan bacon&#39;</span>
-
-<span class="ansi-red-fg">TypeError</span>: &#39;tuple&#39; object does not support item assignment</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>triggered
+</pre>
 </div>
 </div>
 
@@ -14998,41 +14752,90 @@ bacon
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Like all the data types we have encountered so far, tuples are <a href="extras/glossary.md#mutability">immutable</a>. If we want to change the contents of a tuple variable, we must overwrite the whole thing by assigning it anew with <code>=</code>.</p>
+<p>So what was going on in the statements above?</p>
+<p>In everyday English, the word 'or' can be used to join a set of possible alternatives, as in 'Dave, or Davy, or Dafydd'. In logic, and in Python, 'or' has a more specific meaning. It means:</p>
+<ul>
+<li>Look to the left of the 'or', and find out whether the statement written there is true.</li>
+<li>Independently of whatever is to the left, look to the right of the 'or', and find out whether the statement written there is true.</li>
+<li>If at least one of the two statements is true, the whole statement is true.</li>
+</ul>
+<p>So <code>or</code> expects to find a fully-formed logical statement on either side of itself. This was the case in our earlier example of <code>or</code>, in which either side of the <code>or</code> was a complete statement on its own:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;organic vegan bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[41]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="List">List<a class="anchor-link" href="#List">&#182;</a></h3><p>Not being able to change individual values in a tuple seems like a very onerous restriction. What if we are working with data that need to be updated or added to as our program runs? <a href="extras/glossary.md#list">Lists</a>, the final data type that we will learn about in this lesson, provide just this ability. A list is an ordered sequence of values, just like a tuple, but it is <a href="extras/glossary.md#mutability">mutable</a>; we can change one item in a list without having to re-assign the whole thing.</p>
-<p>The <a href="extras/glossary.md#syntax">syntax</a> for creating a list is the same as for creating a tuple, except with square parentheses in place of round ones:</p>
+
+</div>
 
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[42]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">]</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15051,7 +14854,7 @@ bacon
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>list</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -15063,7 +14866,9 @@ bacon
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python allows us to change individual values in a list:</p>
+<p>If <code>or</code> expects to find a fully-formed logical statement on either side of itself, why did our condition for the user's name not simply result in an error? After all, <code>'Dafydd'</code> is not a fully-formed logical statement on his own.</p>
+<p>Remember the slightly weird convention that all non-empty things are <code>True</code> when converted to <a href="extras/glossary.md#boolean">boolean</a>. So for the purposes of logical conditions, <code>'Dafydd'</code> is <code>True</code>, as is any non-empty string. This means that the statement <code>user_firstname == 'Dave' or 'Dafydd'</code> is always <code>True</code>, regardless of what the contents of the <code>user_firstname</code> variable are, because at least one of the two things either side of the <code>or</code> is <code>True</code>.</p>
+<p>So here is the correct way to use <code>or</code> in our example. Each side of the <code>or</code> must be a statement involving the <code>user_firstname</code> variable:</p>
 
 </div>
 </div>
@@ -15073,9 +14878,10 @@ bacon
 <div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;organic vegan bacon&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15092,7 +14898,7 @@ bacon
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;eggs&#39;, &#39;organic vegan bacon&#39;, &#39;black pudding&#39;]
+<pre>What is your name? Mildred
 </pre>
 </div>
 </div>
@@ -15104,7 +14910,7 @@ bacon
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are also list <a href="extras/glossary.md#method">methods</a>, like the string methods we learned about above. For example, there is a list method called <code>append()</code> for adding a new value to the end of the list:</p>
+<p>But joining multiple such statements all checking the same variable quickly gets tedious and difficult to read. For example if we want to check three variants of 'David' rather than just two, the condition would be:</p>
 
 </div>
 </div>
@@ -15114,9 +14920,7 @@ bacon
 <div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sausages&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Davy&#39;</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dafydd&#39;</span>
 </pre></div>
 
     </div>
@@ -15129,13 +14933,15 @@ bacon
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;eggs&#39;, &#39;organic vegan bacon&#39;, &#39;black pudding&#39;, &#39;sausages&#39;]
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
 </div>
+
 </div>
 
 </div>
@@ -15145,8 +14951,8 @@ bacon
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Notice what just happened. The <code>append()</code> method changed the list without our having to <a href="extras/glossary.md#assignment">assign</a> the result back into the list variable with <code>=</code>. This is different from the behavior of string methods. As we learned above, string methods always just <a href="extras/glossary.md#return">return</a> the result of whatever it is that they do with the string, but they do not change the string while doing so. List methods just go ahead and change the list.</p>
-<p>This distinction is important, and forgetting it can lead to some frustrating mistakes. Let's see what happens if we try to use a list method as if it were a string method, and assign its return value back into the original list variable:</p>
+<p>There is a better option in such cases. If we want to check whether a variable has one of several possible values, we can ask whether that variable's value is 'in' a <a href="extras/glossary.md#list">list</a> of possibilities, using the <code>in</code> <a href="extras/glossary.md#keyword">keyword</a>.</p>
+<p>For example:</p>
 
 </div>
 </div>
@@ -15156,9 +14962,98 @@ bacon
 <div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="n">shopping_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;more sausages&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Dave&#39;</span><span class="p">,</span> <span class="s1">&#39;Davy&#39;</span><span class="p">,</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">]</span>
+</pre></div>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[46]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So if you ever find yourself checking multiple possible values of a variable using <code>or</code>, consider using <code>in</code> instead.</p>
+<p>That concludes the techniques necessary to write a basic version of our target program. You can take a look at the finished version <a href="examples/hoff.py">hoff.py</a>. This program looks quite complex, but it is made of the building blocks we wrote above, with some very small refinements. Some extra blank lines have been added to clearly separate the multiple conditions that are checked.</p>
+<h2 id="Handling-errors">Handling errors<a class="anchor-link" href="#Handling-errors">&#182;</a></h2><p>Let's conclude by learning about another kind of control statement. To keep things simple, we won't incorporate it into <strong>hoff.py</strong>, though it could be useful there too.</p>
+<p>We have met <a href="extras/glossary.md#error">errors</a> before. Some errors are just fatal for our program, and will always stop it from running. For example, there is nothing that Python can do about a <code>SyntaxError</code>; if we have written something that it just does not understand, then Python has to give up:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Python</span><span class="p">,</span> <span class="n">please</span> <span class="n">do</span> <span class="n">some</span> <span class="n">amazing</span> <span class="n">machine</span> <span class="n">learning</span><span class="o">.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-47-925621985029&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    Python, please do some amazing machine learning.</span>
+                    ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Other errors, however, are not necessarily fatal for our program.</p>
+<p>Consider an abbreviated version of one of our earlier programs, <a href="examples/age_next_year.py">age_next_year.py</a>, and see what happens if the user misunderstands what is required of them, and enters some input that our program cannot handle:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
+
+<span class="n">age_next_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15175,8 +15070,27 @@ bacon
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>None
+<pre>How old are you? Let me introduce myself first, I am Mildred.
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-48-3266fdc533a9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> age <span class="ansi-blue-fg">=</span> input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;How old are you? &#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>age_next_year <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>age<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>age_next_year<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;Let me introduce myself first, I am Mildred.&#39;</pre>
 </div>
 </div>
 
@@ -15187,17 +15101,27 @@ bacon
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>print()</code> function suddenly seems to have no effect, and prints nothing. This is because our list has gone. List methods do not do their work by outputting a <a href="extras/glossary.md#return">return value</a> as string methods do. Most list methods do not output anything. As we learned a moment ago, the output of a function that does not have any defined output is the <code>None</code> value. So our list has become just <code>None</code>.</p>
+<p>It is pretty clear what has gone wrong, but in case we aren't sure, the error message identifies the conversion of the string <code>'Let me introduce myself first, I am Mildred.'</code> to integer as the problem.</p>
+<p>This error is not a <code>SyntaxError</code>; our program is entirely <a href="extras/glossary.md#syntax">syntactically valid</a>. Instead, it is a <code>ValueError</code>. We have asked Python to do something with a variable, and the thing that we have asked for might be totally ok, it is just that the specific <a href="extras/glossary.md#value">value</a> of the variable turns out not to be suitable for what we asked for. Here, for example, we have asked for conversion from string to integer, but the string variable does not contain a suitable number.</p>
+<p>Problems like this one can be dealt with without stopping our program, because they don't make it impossible for Python to understand what we want. A non-fatal error (i.e. one that does not completely flummox Python) is termed an '<a href="extras/glossary.md#exception">exception</a>'. When an exception occurs, we have the option of dealing with it in some way, and it is only if we do not deal with it that it becomes an <a href="extras/glossary.md#error">error</a> and stops the program. (Though in practice you will hear many people use the terms 'exception' and 'error' as synonyms.)</p>
+<p>If we wish, we can instruct Python to 'try' to do something, but then to do something else if doing the first thing results in an exception. This concept is very similar to an <code>if</code> condition, but the condition is 'if the following actions result in an exception'. To apply this, we need to specify two things. We need to say what actions we want to 'try', and what actions we want to carry out if an exception occurs while trying those actions. There are new <a href="extras/glossary.md#keyword">keywords</a> <code>try</code> and <code>except</code> for each of these, respectively.</p>
+<p>Let's see an example:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">age_next_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;That is not a valid age.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15210,15 +15134,14 @@ bacon
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[47]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>NoneType</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>How old are you? fifty-two
+That is not a valid age.
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -15228,34 +15151,131 @@ bacon
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So beware. If you want to change a list, it is enough to just use the list method. Don't assign the result back into the list variable.</p>
-<p>As you did for string methods above, take a moment to go to the console in Spyder and explore the behavior of some of the list methods. Try to discover what the following methods do:</p>
+<p>The general <a href="extras/glossary.md#syntax">syntax</a> for this kind of statement is:</p>
 <ul>
-<li><code>clear()</code></li>
-<li><code>count()</code></li>
-<li><code>index()</code></li>
-<li><code>insert()</code></li>
-<li><code>remove()</code></li>
-<li><code>reverse()</code></li>
-<li><code>sort()</code></li>
+<li>write <code>try</code>, followed by a colon <code>:</code></li>
+<li>then write the actions you want to try<ul>
+<li>these should be <a href="extras/glossary.md#indentation">indented</a></li>
 </ul>
-<p>Because list methods just change the contents of the list behind the scenes and do not produce output, you will need to <code>print()</code> your list after applying each method to see what change has taken place.</p>
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><h3 id="1">1<a class="anchor-link" href="#1">&#182;</a></h3><p>A good way to strengthen your understanding of how Python works is to test that understanding regularly. When you test out a command in the console, try first to predict what the result will be, and only then type it in to check whether you were right. What is the result of each of the following short programs?</p>
-<h4 id="a)">a)<a class="anchor-link" href="#a)">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred T. Bonk&#39;</span>
-<span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="n">m_count</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">m_count</span><span class="p">)</span>
+</li>
+<li>write <code>except</code></li>
+<li>then write the name of the type of exception/error that might occur</li>
+<li>then write a colon <code>:</code></li>
+<li>then write the alternative actions<ul>
+<li>these too should be indented</li>
+</ul>
+</li>
+</ul>
+<p>There are some similarities with the syntax for the <code>if</code> ... <code>else</code> statement, namely the colon and the indentation. Both of these things are part of the general syntax for all <a href="extras/glossary.md#control">control statements</a>, and we will encounter them again in later lessons.</p>
+<p>Let's see another example, this time to handle the possibility that the user asks for a list item that is beyond the length of the list:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">]</span>
+
+<span class="n">item_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What item of shopping would you like to see? &#39;</span><span class="p">)</span>
+<span class="n">item_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">item_number</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">[</span><span class="n">item_number</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There aren&#39;t that many items of shopping.&quot;</span><span class="p">)</span>
 </pre></div>
-<h4 id="b)">b)<a class="anchor-link" href="#b)">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Mildred T. Bonk&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">1.96</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What item of shopping would you like to see? 9000
+There aren&#39;t that many items of shopping.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How did I know that the exception to watch out for was <code>IndexError</code>? In a long career filled with silly programming mistakes I have seen a lot of error messages, and so I just know what a lot of the common exceptions will be. But if you are building a program and you want to write a <code>try</code> ... <code>except</code> to deal with an expected problem, then the first thing you should do is to go to the console and deliberately provoke that expected problem to see what type of exception it is. The type of exception is printed at the bottom of the error message.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">9000</span><span class="p">]</span>
 </pre></div>
-<h4 id="c)">c)<a class="anchor-link" href="#c)">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="s1">&#39;T.&#39;</span><span class="p">,</span> <span class="s1">&#39;Bonk&#39;</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="o">.</span><span class="n">reverse</span><span class="p">())</span>
-</pre></div>
-<h3 id="2">2<a class="anchor-link" href="#2">&#182;</a></h3><p>The <a href="https://en.wikipedia.org/wiki/Age_disparity_in_sexual_relationships#The_%22half-your-age-plus-seven%22_rule">'half-your-age-plus-seven' rule</a> is a folk rule of thumb used to calculate the minimum socially acceptable age of your dating partners, given your age. The rule asserts that if your age is $x$, then the minimum socially acceptable age for your partner is:</p>
-$$
-\frac{x}{2} + 7
-$$<p>Write a program that asks the user for their age, and then tells them the result of applying this rule of thumb.</p>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-51-4a4ff19f7982&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>shopping_list<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">9000</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is important not to get carried away with <code>try</code> ... <code>except</code> and attempt to cover all possible problems so that your program is 'foolproof'. If something occurs that your program is just not supposed to deal with, then your program should stop, and this is ok. Error messages can be very informative; if you try to suppress them all, you won't be warned when your program fails or be told why it failed. Use <code>try</code> ... <code>except</code> to deal with specific, anticipated problems.</p>
+<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><h3 id="1">1<a class="anchor-link" href="#1">&#182;</a></h3><p>Take a look at the finished <a href="examples/hoff.py">hoff.py</a> program. One thing that is not so good about this program is that it is not very easily modifiable. If we later changed our minds and wanted to adapt this program so that 'Barbra Streisand' is the interesting name instead of 'David Hasselhoff', then we would need to change the name in at least 8 different places. And we would need to go quite far down in our program to find the list of names similar to 'David' and change that.</p>
+<p>Re-write this program so that the string <code>'David Hasselhoff'</code> only appears once at the very beginning of the program, and the list of variants of 'David' also appears once at the beginning of the program. Once you have improved the program in this way, check that it still works as it did before. Then check that you only need to change these two initial lines so that the whole program uses a different interesting name. For example, you can try 'Barbra Streisand', with 'Barbara', 'Barb', and 'Barbie' as the variants of 'Barbra'.</p>
+<p>(Improving a program but without changing its basic functionality is called <a href="extras/glossary.md#refactor">refactoring</a> the program.)</p>
+<h3 id="2">2<a class="anchor-link" href="#2">&#182;</a></h3><p>Write a new program. The program asks the user for the answers to three questions:</p>
+<ul>
+<li>How old are they?</li>
+<li>How tall are they (in meters)?</li>
+<li>Do they have their parents' permission to ride rollercoasters?</li>
+</ul>
+<p>Then tell the user whether they are allowed to ride the rollercoaster at the theme park. The rules are:</p>
+<ul>
+<li>They must be at least 10 years old.</li>
+<li>They must be at least 1 meter and 30 centimeters tall.</li>
+<li>They cannot be taller than 2 meters.</li>
+<li>If they are younger than 14 years old, they must have their parents' permission.</li>
+</ul>
 
 </div>
 </div>

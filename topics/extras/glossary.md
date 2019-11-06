@@ -103,7 +103,7 @@ A docstring is a [string](#string) (i.e. a piece of text) that provides some hum
 
 ## error
 
-If part of our program cannot be carried out, either because we have not written it according to the allowed [syntax](#syntax) or because we have asked Python to do something that is not possible (such as open a non-existent file), then our program will stop running and Python will display a message with some information about the error. Any parts of the program that follow the occurrence of the error will not be carried out.
+Sometimes our program fails and cannot be completed, either because we have not written the program according to the allowed [syntax](#syntax) or because an [exception](#exception) occurs that our program cannot handle. In this case, our program will stop running and Python will display a message with some information about the 'error' that occurred. Any parts of the program that follow the occurrence of the error will not be carried out.
 
 An example error message:
 
@@ -117,6 +117,21 @@ SyntaxError: invalid syntax
 ## evaluate
 
 To evaluate a command or expression means to 'work out' its result. So the result of evaluating the Python expression `round(1.618 * 2)` is `3`. The Python interpreter first evaluates `1.618 * 2` and gets `3.236`, then evaluates `round(3.236)` and gets `3`. We sometimes say that a certain expression 'evaluates to' its result. So for example `round(1.618 * 2)` evaluates to `3`, and `2 + 2 == 5` evaluates to `False`.
+
+## exception
+
+Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user, such as entering a word when our program expects a number, or trying to open a file that has been moved or deleted.
+
+We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action results in an exception. For example:
+
+```python
+try:
+    open('melville-moby_dick.txt')
+except FileNotFoundError:
+    print('The file is not there.')
+```
+
+If an exception occurs and we have not specified in our program what to do about it, then the result is an [error](#error) and our program stops.
 
 ## float
 
@@ -231,6 +246,10 @@ The `None` data [type](#type) in Python is used to indicate something that is ab
 ## operator
 
 An operator is a symbol that produces some result when written in an expression along with some other components. For example, the `+` operator produces the sum of two numbers (for example in the expression `2 + 2`). Some operators may have different effects depending on the [type](#type) of the other components of the expression. For example, if used with [strings](#string) instead of numbers the `+` operator [concatenates](#concatenate) the strings.
+
+## refactor
+
+Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Rewriting a program without changing any of its behavior is termed 'refactoring' the program.
 
 ## return
 
