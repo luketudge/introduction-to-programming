@@ -68,11 +68,9 @@ There are also comprehensions for creating [dictionaries](#dictionary).
 
 In computing, to 'concatenate' means to stick together one after the other. So the result of concatenating `'Hello '` and `'world!'` is `'Hello world!'`.
 
-## control
+## condition
 
-'Control' (or sometimes 'flow control') refers to controlling which parts of our program are run under which circumstances. A 'control statement' is a command that determines when a particular part of our program is run.
-
-For example, an 'if statement' ensures that part of our program will run only if a certain condition is fulfilled, and optionally what should be run if not. [Indentation](#indentation) is used to mark which lines of the program are controlled by the control statement:
+A condition is a [control statement](#control) that ensures that part of our program will run only if a certain statement is true, and optionally what should be run if that statement is false. A condition begins with the [keyword](#keyword) `if`. For example:
 
 ```python
 if 2 + 2 == 4:
@@ -80,6 +78,12 @@ if 2 + 2 == 4:
 else:
     print('Nothing is forbidden, everything is permitted.')
 ```
+
+## control
+
+'Control' (or sometimes 'flow control') refers to controlling which parts of our program are run under which circumstances. A 'control statement' is a command that determines when a particular part of our program is run. [Indentation](#indentation) is used to mark which lines of the program are controlled by the control statement.
+
+Examples of control statements include [conditions](#condition), [loops](#loop), and statements for handling [exceptions](#exception).
 
 ## dictionary
 
@@ -120,7 +124,7 @@ To evaluate a command or expression means to 'work out' its result. So the resul
 
 ## exception
 
-Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user, such as entering a word when our program expects a number, or trying to open a file that has been moved or deleted.
+Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user (such as entering a word when our program expects a number), or trying to open a file that has been moved or deleted.
 
 We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action results in an exception. For example:
 
@@ -171,7 +175,11 @@ An integer is a whole number. So 2 is an integer, but 1.618 is not. 'Integer', a
 
 ## interpreter
 
-A Python interpreter is a computer program that takes our text files of Python commands and turns them into machine code instructions that our computer can understand. We do not especially need to know about or get involved in this process ourselves. Instead, we write our programs as text files of Python commands, and the interpreter takes care of getting out computer to understand them. Strictly, the term 'Python' itself refers to the Python programming language, i.e. a specific set of rules that converts text commands into computer actions, but in practice many people use 'Python' to refer also to a Python interpreter program.
+A Python interpreter is a computer program that takes our text files of Python commands and turns them into machine code instructions that our computer can understand. We do not especially need to know about or get involved in this process ourselves. Instead, we write our programs as text files of Python commands, and the interpreter takes care of getting our computer to understand them. Strictly, the term 'Python' itself refers to the Python programming language, i.e. a specific set of [syntactical rules](#syntax) that converts text commands into computer actions, but in practice many people use 'Python' to refer also to a Python interpreter program.
+
+## iterable
+
+A [data type](#type) is 'iterable' if it contains multiple values, and it is possible to 'go through' those values one by one. 'Going through' the values in an iterable is called 'iterating'. [Strings](#string) are iterable (we can iterate through their characters), and so are [lists](#list) and [tuples](#tuple) (we can iterate through their items). [Dictionaries](#dictionary) too are iterable. The most common way of iterating is to use a [loop](#loop).
 
 ## key
 
@@ -190,6 +198,26 @@ menu = ['jellied eels', 'black pudding', 'blancmange']
 ```
 
 Lists are very similar to [tuples](#tuple), another kind of sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
+
+## loop
+
+A loop is a [control statement](#control) that repeats certain lines of a program multiple times.
+
+Loops can use the `for` and `in` [keywords](#keyword) to repeat the given actions for every item in an [iterable](#iterable). For example:
+
+```python
+menu = ['jellied eels', 'black pudding', 'blancmange']
+for item in menu:
+    print(item)
+```
+
+Of they can use the `while` [keyword](#keyword) to repeat the given actions until a particular condition is no longer fulfilled. For example:
+
+```python
+answer = 'yes'
+while answer == 'yes':
+    answer = input("Do you want to keep typing 'yes'? ")
+```
 
 ## mapping
 
