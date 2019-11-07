@@ -1,3 +1,6 @@
+<h1>Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Assignment-and-immutability" data-toc-modified-id="Assignment-and-immutability-1">Assignment and immutability</a></span></li><li><span><a href="#Numeric-data" data-toc-modified-id="Numeric-data-2">Numeric data</a></span><ul class="toc-item"><li><span><a href="#Python-2" data-toc-modified-id="Python-2-2.1">Python 2</a></span></li></ul></li><li><span><a href="#Type-conversion" data-toc-modified-id="Type-conversion-3">Type conversion</a></span></li><li><span><a href="#User-input" data-toc-modified-id="User-input-4">User input</a></span><ul class="toc-item"><li><span><a href="#Python-2-again" data-toc-modified-id="Python-2-again-4.1">Python 2 again</a></span></li></ul></li><li><span><a href="#Methods" data-toc-modified-id="Methods-5">Methods</a></span></li><li><span><a href="#Other-types" data-toc-modified-id="Other-types-6">Other types</a></span><ul class="toc-item"><li><span><a href="#Boolean" data-toc-modified-id="Boolean-6.1">Boolean</a></span></li><li><span><a href="#None" data-toc-modified-id="None-6.2">None</a></span></li><li><span><a href="#Tuple" data-toc-modified-id="Tuple-6.3">Tuple</a></span></li><li><span><a href="#List" data-toc-modified-id="List-6.4">List</a></span></li></ul></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-7">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-7.1">1</a></span><ul class="toc-item"><li><span><a href="#a)" data-toc-modified-id="a)-7.1.1">a)</a></span></li><li><span><a href="#b)" data-toc-modified-id="b)-7.1.2">b)</a></span></li><li><span><a href="#c)" data-toc-modified-id="c)-7.1.3">c)</a></span></li></ul></li><li><span><a href="#2" data-toc-modified-id="2-7.2">2</a></span></li></ul></li></ul></div>
+
 # Variables and data types
 
 In the [introductory lesson](intro.md), we learned how to assign some data into a [variable](extras/glossary.md#variable). Below are a few examples. We will use these variables in the remainder of this lesson.
@@ -310,7 +313,7 @@ print(houses_built)
     5
 
 
-### Aside: Python 2
+### Python 2
 
 A previous version of Python, Python 2, was slightly less flexible about numeric data types. The result of division with integers in Python 2 was always an integer, with the non-whole part discarded. This could produce some surprises for the unwary, such as the result of `1 / 2` being `0`.
 
@@ -450,7 +453,7 @@ The example program [age_next_year.py](examples/age_next_year.py) shows how to u
 * Why is it necessary to use the `str()` type conversion function on [line 14](examples/age_next_year.py#L14)? What happens if you remove it?
 * What happens if the user enters a non-whole number for their age, such as `6.75`?
 
-### Another aside: Python 2 again
+### Python 2 again
 
 One of the other most noticeable differences in the previous version of Python was the behavior of the `input()` function. Confusingly, in Python 2 this function treated the user's input not as a string, nor even as a number, but as a *Python command*, which Python 2 would then [evaluate](extras/glossary.md#evaluate). In theory this allowed malicious or just clumsy users to completely mess up the workings of a program by entering their own Python commands at the console while the program was running. So Python 3 takes the much safer option of just treating all user inputs as strings.
 

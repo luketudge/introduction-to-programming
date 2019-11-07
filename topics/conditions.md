@@ -1,4 +1,7 @@
-# Conditionals
+<h1>Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-1">Objective</a></span></li><li><span><a href="#Booleans" data-toc-modified-id="Booleans-2">Booleans</a></span><ul class="toc-item"><li><span><a href="#Logic" data-toc-modified-id="Logic-2.1">Logic</a></span></li><li><span><a href="#Conversion-to-boolean" data-toc-modified-id="Conversion-to-boolean-2.2">Conversion to boolean</a></span></li></ul></li><li><span><a href="#if" data-toc-modified-id="if-3">if</a></span><ul class="toc-item"><li><span><a href="#Indentation" data-toc-modified-id="Indentation-3.1">Indentation</a></span></li><li><span><a href="#Debugging" data-toc-modified-id="Debugging-3.2">Debugging</a></span></li></ul></li><li><span><a href="#if-...-elif-...-else" data-toc-modified-id="if-...-elif-...-else-4">if ... elif ... else</a></span></li><li><span><a href="#Nested-conditions" data-toc-modified-id="Nested-conditions-5">Nested conditions</a></span></li><li><span><a href="#More-debugging" data-toc-modified-id="More-debugging-6">More debugging</a></span></li><li><span><a href="#Handling-errors" data-toc-modified-id="Handling-errors-7">Handling errors</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-8">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-8.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-8.2">2</a></span></li></ul></li></ul></div>
+
+# Conditions
 
 We are already able to write programs that are somewhat interactive; we get the user to type something in and then we process whatever they typed in. The next level of excitement for our users is to interact with a program that does completely *different* things depending on what they type in.
 
@@ -214,6 +217,20 @@ not (2 + 2 == 4)
 
 
 
+Python provides an abbreviation for `not` together with `==`. The symbols `!=` stand for 'is not equal to'.
+
+
+```python
+2 + 2 != 4
+```
+
+
+
+
+    False
+
+
+
 ### Conversion to boolean
 
 That covers the very basics of logical statements in Python. Before we see how to turn logical statements into conditions for carrying out a part of a our program, let's take a brief detour to consider a slight quirk in the way Python handles the boolean data type.
@@ -399,7 +416,7 @@ print('Are you THE Hoff?')
 ```
 
 
-      File "<ipython-input-25-fdc1d519ea77>", line 4
+      File "<ipython-input-26-fdc1d519ea77>", line 4
         print('Are you THE Hoff?')
             ^
     IndentationError: expected an indented block
@@ -466,22 +483,7 @@ This one does not result in an error. It is [syntactically](extras/glossary.md#s
 
 Notice that the user typed in a name that did not make the `if` condition true. So the first `print()` line was not run. But the second `print()` line *was* run. This is because it was not indented. As we learned above, indentation tells Python which lines belong to a control statement. If a line is not indented, it is not influenced by the preceding control statement, and so is always run, just like any normal line of the program. The first 'unindented' line after a block of indented lines marks the end of a control statement's influence, and a return to the normal linear structure of a Python program, where every line is always run.
 
-For the sake of clarity, it is a good idea to also place blank lines before and after a block of indented lines, to mark them out clearly from the rest of the program. For example:
-
-
-```python
-user_name = input('What is your name and surname? ')
-
-if user_name == 'David Hasselhoff':
-    print('Are you THE Hoff?')
-
-print('Thank you, and goodbye.')
-```
-
-    What is your name and surname? David Hasselhoff
-    Are you THE Hoff?
-    Thank you, and goodbye.
-
+For the sake of clarity, it is a good idea to also place blank lines before and after a block of indented lines, to mark them out clearly from the rest of the program.
 
 ### Debugging
 
@@ -814,7 +816,7 @@ age_next_year = int(age) + 1
 print(age_next_year)
 ```
 
-    How old are you? Let me introduce myself first, I am Mildred.
+    How old are you? fifty-two
 
 
 
@@ -829,10 +831,10 @@ print(age_next_year)
           4 print(age_next_year)
 
 
-    ValueError: invalid literal for int() with base 10: 'Let me introduce myself first, I am Mildred.'
+    ValueError: invalid literal for int() with base 10: 'fifty-two'
 
 
-It is pretty clear what has gone wrong, but in case we aren't sure, the error message identifies the conversion of the string `'Let me introduce myself first, I am Mildred.'` to integer as the problem.
+It is pretty clear what has gone wrong, but in case we aren't sure, the error message identifies the conversion of the string `'fifty-two'` to integer as the problem.
 
 This error is not a `SyntaxError`; our program is entirely [syntactically valid](extras/glossary.md#syntax). Instead, it is a `ValueError`. We have asked Python to do something with a variable, and the thing that we have asked for might be totally ok, it is just that the specific [value](extras/glossary.md#value) of the variable turns out not to be suitable for what we asked for. Here, for example, we have asked for conversion from string to integer, but the string variable does not contain a suitable number.
 
@@ -908,13 +910,7 @@ shopping_list[9000]
     IndexError: list index out of range
 
 
-Here are some more of the most common types of exception that you might encounter:
-
-* `NameError`: We have tried to use a [variable](extras/glossary.md#variable), but no variable with that name has been [assigned](extras/glossary.md#assignment) yet.
-* `IndexError`: We have used an [index](extras/glossary.md#index) that goes beyond the length of whatever we are trying to apply the index to (e.g. a [list](extras/glossary.md#list)).
-* `ValueError`: We have supplied an invalid input [value](extras/glossary.md#value) to a [function](extras/glossary.md#function).
-* `TypeError`: We have tried to do something with one [data type](extras/glossary.md#type), but that thing only works for a different data type.
-* `FileNotFoundError`: We have tried to open a file that does not exist.
+The glossary entry on [exceptions](extras/glossary.md#exception) lists some of the most common types of exception that you might encounter.
 
 It is important not to get carried away with `try` ... `except` and attempt to cover all possible problems so that your program is 'foolproof'. If something occurs that your program is just not supposed to deal with, then your program should stop, and this is ok. Error messages can be very informative; if you try to suppress them all, you won't be warned when your program fails or be told why it failed. Use `try` ... `except` to deal with specific, anticipated problems.
 

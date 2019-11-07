@@ -1,6 +1,9 @@
+<h1>Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-1">Objective</a></span></li><li><span><a href="#Loops" data-toc-modified-id="Loops-2">Loops</a></span></li><li><span><a href="#Iterables" data-toc-modified-id="Iterables-3">Iterables</a></span></li><li><span><a href="#Indentation-again" data-toc-modified-id="Indentation-again-4">Indentation again</a></span></li><li><span><a href="#while-loops" data-toc-modified-id="while-loops-5">while loops</a></span><ul class="toc-item"><li><span><a href="#Debugging" data-toc-modified-id="Debugging-5.1">Debugging</a></span></li></ul></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-6">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-6.1">1</a></span><ul class="toc-item"><li><span><a href="#a)" data-toc-modified-id="a)-6.1.1">a)</a></span></li><li><span><a href="#b)" data-toc-modified-id="b)-6.1.2">b)</a></span></li><li><span><a href="#c)" data-toc-modified-id="c)-6.1.3">c)</a></span></li></ul></li><li><span><a href="#2" data-toc-modified-id="2-6.2">2</a></span></li></ul></li></ul></div>
+
 # Iteration
 
-In the [previous lesson](conditionals.md) we learned about [control statements](extras/glossary.md#control): lines of our program that do not themselves accomplish any action, but instead control something about when other lines of our program are run. That is, they determine the 'flow' of the program. We focused on 'conditional' control statements, which set a condition according to which further lines of the program are either run or not.
+In the [previous lesson](conditions.md) we learned about [control statements](extras/glossary.md#control): lines of our program that do not themselves accomplish any action, but instead control something about when other lines of our program are run. That is, they determine the 'flow' of the program. We focused on 'conditional' control statements, which set a condition according to which further lines of the program are either run or not.
 
 There are other ways in which we might want to control the flow of our program. For example, we might want to run a certain line more than once, maybe many times, or even indefinitely until a certain goal is achieved. Repeating lines of our program is sometimes termed '[iteration](extras/glossary.md#iterable)'. This is what we will learn about now.
 
@@ -26,7 +29,7 @@ There is some branching in this program too, so we will need to use the techniqu
 
 In programming, we should try to avoid repeating ourselves. This principle is so fundamental that there is a commonly-used acronym [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself) (**D**on't **R**epeat **Y**ourself) that people use to remind each other of it. The opposite of a 'DRY' programming style is sometimes pejoratively termed a 'WET' programming style (variously either '**W**rite **E**verything **T**wice' or '**W**e **E**njoy **T**yping').
 
-## loops
+## Loops
 
 One way of achieving repetition is to use a [sequence](extras/glossary.md#sequence). Remember that sequences are [data types](extras/glossary.md#type) that store multiple values in order, such as [tuples](extras/glossary.md#sequence) and [lists](extras/glossary.md#list). We have in fact already seen one way of performing an action repeatedly for each item in a sequence. Remember that list [comprehensions](extras/glossary.md#comprehension) create a new list by systematically applying the same action to all the items in another list, in order.
 
@@ -239,7 +242,7 @@ for index, item in enumerate(shopping_list):
 
 ## Indentation again
 
-To once again test our understanding of the role of [indentation](extras/glossary.md#indentation) in Python [syntax](extras/glossary.md#syntax), let's look at an example of a *loop within a loop*. This is similar in structure to the example program [hoff.py](examples/hoff.py) from the [previous lesson](conditionals.md), in which we saw some conditions 'nested' inside other conditions.
+To once again test our understanding of the role of [indentation](extras/glossary.md#indentation) in Python [syntax](extras/glossary.md#syntax), let's look at an example of a *loop within a loop*. This is similar in structure to the example program [hoff.py](examples/hoff.py) from the [previous lesson](conditions.md), in which we saw some conditions 'nested' inside other conditions.
 
 Here it is:
 

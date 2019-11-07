@@ -126,6 +126,14 @@ To evaluate a command or expression means to 'work out' its result. So the resul
 
 Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user (such as entering a word when our program expects a number), or trying to open a file that has been moved or deleted. When an exception occurs, we say that our program has '[raised](#raise)' an exception.
 
+Python distinguishes among various different kinds of exception. Some of the most common ones that we are likely to encounter are:
+
+* `NameError`: We have tried to use a [variable](#variable), but no variable with that name has been [assigned](#assignment) yet.
+* `IndexError`: We have used an [index](#index) that goes beyond the length of whatever we are trying to apply the index to (e.g. a [list](#list)).
+* `ValueError`: We have supplied an invalid input [value](#value) to a [function](#function).
+* `TypeError`: We have tried to do something with a particular [data type](#type), but that thing only works for a different data type.
+* `FileNotFoundError`: We have tried to open a file that does not exist.
+
 We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action raises an exception. For example:
 
 ```python
@@ -278,7 +286,7 @@ An operator is a symbol that produces some result when written in an expression 
 
 ## raise
 
-When an [exception](#exception) occurs during the running of a program, we say that the program has 'raised' an exception. (See the entry on [exceptions](#exception) for more details.)
+When an [exception](#exception) occurs during the running of a program, we say that the program has 'raised an exception'. (See the entry on [exceptions](#exception) for more details.) This is similar to the use of the word 'raise' in English in phrases like 'to raise an issue'.
 
 We can also deliberately instruct our program to raise an exception, using the `raise` [keyword](#keyword). For example:
 
@@ -288,7 +296,7 @@ raise ValueError('That is an invalid value.')
 
 ## refactor
 
-Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Rewriting a program without changing any of its behavior is termed 'refactoring' the program.
+Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Reorganizing a program without changing any of its behavior is termed 'refactoring' the program.
 
 ## return
 

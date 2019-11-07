@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>conditionals</title>
+<title>conditions</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,7 +13077,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Conditionals">Conditionals<a class="anchor-link" href="#Conditionals">&#182;</a></h1><p>We are already able to write programs that are somewhat interactive; we get the user to type something in and then we process whatever they typed in. The next level of excitement for our users is to interact with a program that does completely <em>different</em> things depending on what they type in.</p>
+<p><h1>Contents<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-1">Objective</a></span></li><li><span><a href="#Booleans" data-toc-modified-id="Booleans-2">Booleans</a></span><ul class="toc-item"><li><span><a href="#Logic" data-toc-modified-id="Logic-2.1">Logic</a></span></li><li><span><a href="#Conversion-to-boolean" data-toc-modified-id="Conversion-to-boolean-2.2">Conversion to boolean</a></span></li></ul></li><li><span><a href="#if" data-toc-modified-id="if-3">if</a></span><ul class="toc-item"><li><span><a href="#Indentation" data-toc-modified-id="Indentation-3.1">Indentation</a></span></li><li><span><a href="#Debugging" data-toc-modified-id="Debugging-3.2">Debugging</a></span></li></ul></li><li><span><a href="#if-...-elif-...-else" data-toc-modified-id="if-...-elif-...-else-4">if ... elif ... else</a></span></li><li><span><a href="#Nested-conditions" data-toc-modified-id="Nested-conditions-5">Nested conditions</a></span></li><li><span><a href="#More-debugging" data-toc-modified-id="More-debugging-6">More debugging</a></span></li><li><span><a href="#Handling-errors" data-toc-modified-id="Handling-errors-7">Handling errors</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-8">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-8.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-8.2">2</a></span></li></ul></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Conditions">Conditions<a class="anchor-link" href="#Conditions">&#182;</a></h1><p>We are already able to write programs that are somewhat interactive; we get the user to type something in and then we process whatever they typed in. The next level of excitement for our users is to interact with a program that does completely <em>different</em> things depending on what they type in.</p>
 <p>So far, the 'flow' of our programs has always been linear; they carry out a series of steps in order, with no variations. We would now like to give the flow of our programs a branching structure, such that its behavior will vary depending on the circumstances. This can be achieved with <a href="extras/glossary.md#control">control statements</a>: lines of our program that do not on their own produce any result, but instead control when (or how often, or in what variations) other lines are run.</p>
 <p>One of the simplest kinds of control statement is a 'conditional' control statement. It tells Python to run certain lines of our program only if a certain condition is fulfilled. This is what we will learn about now.</p>
 <h2 id="Objective">Objective<a class="anchor-link" href="#Objective">&#182;</a></h2><p>To give ourselves something to work towards, let's imagine a fairly simple toy program that we would like to create.</p>
@@ -13594,6 +13602,47 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Python provides an abbreviation for <code>not</code> together with <code>==</code>. The symbols <code>!=</code> stand for 'is not equal to'.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">4</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Conversion-to-boolean">Conversion to boolean<a class="anchor-link" href="#Conversion-to-boolean">&#182;</a></h3><p>That covers the very basics of logical statements in Python. Before we see how to turn logical statements into conditions for carrying out a part of a our program, let's take a brief detour to consider a slight quirk in the way Python handles the boolean data type.</p>
 <p>We have learned that some data types can be converted into others, using <a href="extras/glossary.md#builtin">built-in</a> functions that have the same names as the type we wish to convert to (for example <code>int()</code> for converting to integer, and <code>str()</code> for converting to string). Initially, it may seem strange to allow converting other types into booleans, since booleans are always just <code>True</code> or <code>False</code>. Is the integer <code>42</code> on its own a 'true' number or a 'false' number? What about a string like <code>'JavaScript is a terrible programming language.'</code>? (Of course, some strings may contain true statements, but Python can't be expected to work this out.)</p>
 <p>Nonetheless, Python does allow us to convert other data types to boolean. How does it decide whether numbers or strings are 'true' or not? If you feel like a challenge, you might like to head to the Spyder console now and try converting a few strings and numbers to boolean (the type conversion function is <code>bool()</code>) to see whether you can discover the pattern.</p>
@@ -13604,7 +13653,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SPOILER ALERT &#39;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
@@ -13643,51 +13692,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;JavaScript is a terrible programming language.&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>That seems like a sensible answer. But what about other strings?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;JavaScript is an excellent programming language.&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;JavaScript is a terrible programming language.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13718,8 +13726,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>No! That's not right.</p>
-<p>In fact, Python treats any string as <code>True</code>, with just one exception: an empty string with no characters in it at all:</p>
+<p>That seems like a sensible answer. But what about other strings?</p>
 
 </div>
 </div>
@@ -13729,7 +13736,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;JavaScript is an excellent programming language.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13748,7 +13755,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -13760,7 +13767,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This principle generalizes to the other data types. 'Empty' things are <code>False</code>, and all other things are <code>True</code>. An empty list <code>[]</code>, for example, is treated as <code>False</code>, but a list that has any contents at all is treated as <code>True</code>.</p>
+<p>No! That's not right.</p>
+<p>In fact, Python treats any string as <code>True</code>, with just one exception: an empty string with no characters in it at all:</p>
 
 </div>
 </div>
@@ -13770,7 +13778,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">([])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13798,9 +13806,50 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This principle generalizes to the other data types. 'Empty' things are <code>False</code>, and all other things are <code>True</code>. An empty list <code>[]</code>, for example, is treated as <code>False</code>, but a list that has any contents at all is treated as <code>True</code>.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">([])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">([</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">])</span>
@@ -13816,7 +13865,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13841,43 +13890,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13896,7 +13912,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13910,7 +13926,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13938,6 +13954,39 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13950,7 +13999,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
@@ -13994,7 +14043,7 @@ Are you THE Hoff?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
@@ -14050,7 +14099,7 @@ Are you THE Hoff?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
@@ -14074,7 +14123,7 @@ Are you THE Hoff?
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-25-fdc1d519ea77&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">4</span>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-26-fdc1d519ea77&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">4</span>
 <span class="ansi-red-fg">    print(&#39;Are you THE Hoff?&#39;)</span>
         ^
 <span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> expected an indented block
@@ -14098,7 +14147,7 @@ Are you THE Hoff?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
@@ -14144,7 +14193,7 @@ The really real Hoff?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
@@ -14191,7 +14240,7 @@ The really real Hoff?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
@@ -14230,52 +14279,7 @@ The really real Hoff?
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This one does not result in an error. It is <a href="extras/glossary.md#syntax">syntactically</a> valid, but it does something a bit different from what we want.</p>
 <p>Notice that the user typed in a name that did not make the <code>if</code> condition true. So the first <code>print()</code> line was not run. But the second <code>print()</code> line <em>was</em> run. This is because it was not indented. As we learned above, indentation tells Python which lines belong to a control statement. If a line is not indented, it is not influenced by the preceding control statement, and so is always run, just like any normal line of the program. The first 'unindented' line after a block of indented lines marks the end of a control statement's influence, and a return to the normal linear structure of a Python program, where every line is always run.</p>
-<p>For the sake of clarity, it is a good idea to also place blank lines before and after a block of indented lines, to mark them out clearly from the rest of the program. For example:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Thank you, and goodbye.&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>What is your name and surname? David Hasselhoff
-Are you THE Hoff?
-Thank you, and goodbye.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<p>For the sake of clarity, it is a good idea to also place blank lines before and after a block of indented lines, to mark them out clearly from the rest of the program.</p>
 <h3 id="Debugging">Debugging<a class="anchor-link" href="#Debugging">&#182;</a></h3><p>If you are trying to write an <code>if</code> statement and you keep encountering <a href="extras/glossary.md#error">errors</a>, here are some of the most common mistakes to check for:</p>
 <ul>
 <li>Have you forgotten the colon <code>:</code> at the end of the if statement?</li>
@@ -15070,7 +15074,7 @@ Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>How old are you? Let me introduce myself first, I am Mildred.
+<pre>How old are you? fifty-two
 </pre>
 </div>
 </div>
@@ -15090,7 +15094,7 @@ Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>age_next_year <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>age<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>age_next_year<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;Let me introduce myself first, I am Mildred.&#39;</pre>
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;fifty-two&#39;</pre>
 </div>
 </div>
 
@@ -15101,7 +15105,7 @@ Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is pretty clear what has gone wrong, but in case we aren't sure, the error message identifies the conversion of the string <code>'Let me introduce myself first, I am Mildred.'</code> to integer as the problem.</p>
+<p>It is pretty clear what has gone wrong, but in case we aren't sure, the error message identifies the conversion of the string <code>'fifty-two'</code> to integer as the problem.</p>
 <p>This error is not a <code>SyntaxError</code>; our program is entirely <a href="extras/glossary.md#syntax">syntactically valid</a>. Instead, it is a <code>ValueError</code>. We have asked Python to do something with a variable, and the thing that we have asked for might be totally ok, it is just that the specific <a href="extras/glossary.md#value">value</a> of the variable turns out not to be suitable for what we asked for. Here, for example, we have asked for conversion from string to integer, but the string variable does not contain a suitable number.</p>
 <p>Problems like this one can be dealt with without stopping our program, because they don't make it impossible for Python to understand what we want. A non-fatal error (i.e. one that does not completely flummox Python) is termed an '<a href="extras/glossary.md#exception">exception</a>'. When an exception occurs, we have the option of dealing with it in some way, and it is only if we do not deal with it that it becomes an <a href="extras/glossary.md#error">error</a> and stops the program. (Though in practice you will hear many people use the terms 'exception' and 'error' as synonyms.)</p>
 <p>If we wish, we can instruct Python to 'try' to do something, but then to do something else if doing the first thing results in an exception. This concept is very similar to an <code>if</code> condition, but the condition is 'if the following actions result in an exception'. To apply this, we need to specify two things. We need to say what actions we want to 'try', and what actions we want to carry out if an exception occurs while trying those actions. There are new <a href="extras/glossary.md#keyword">keywords</a> <code>try</code> and <code>except</code> for each of these, respectively.</p>
@@ -15259,14 +15263,7 @@ There aren&#39;t that many items of shopping.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here are some more of the most common types of exception that you might encounter:</p>
-<ul>
-<li><code>NameError</code>: We have tried to use a <a href="extras/glossary.md#variable">variable</a>, but no variable with that name has been <a href="extras/glossary.md#assignment">assigned</a> yet.</li>
-<li><code>IndexError</code>: We have used an <a href="extras/glossary.md#index">index</a> that goes beyond the length of whatever we are trying to apply the index to (e.g. a <a href="extras/glossary.md#list">list</a>).</li>
-<li><code>ValueError</code>: We have supplied an invalid input <a href="extras/glossary.md#value">value</a> to a <a href="extras/glossary.md#function">function</a>.</li>
-<li><code>TypeError</code>: We have tried to do something with one <a href="extras/glossary.md#type">data type</a>, but that thing only works for a different data type.</li>
-<li><code>FileNotFoundError</code>: We have tried to open a file that does not exist.</li>
-</ul>
+<p>The glossary entry on <a href="extras/glossary.md#exception">exceptions</a> lists some of the most common types of exception that you might encounter.</p>
 <p>It is important not to get carried away with <code>try</code> ... <code>except</code> and attempt to cover all possible problems so that your program is 'foolproof'. If something occurs that your program is just not supposed to deal with, then your program should stop, and this is ok. Error messages can be very informative; if you try to suppress them all, you won't be warned when your program fails or be told why it failed. Use <code>try</code> ... <code>except</code> to deal with specific, anticipated problems.</p>
 <h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><h3 id="1">1<a class="anchor-link" href="#1">&#182;</a></h3><p>Take a look at the finished <a href="examples/hoff.py">hoff.py</a> program. One thing that is not so good about this program is that it is not very easily modifiable. If we later changed our minds and wanted to adapt this program so that 'Barbra Streisand' is the interesting name instead of 'David Hasselhoff', then we would need to change the name in at least 8 different places. And we would need to go quite far down in our program to find the list of names similar to 'David' and change that.</p>
 <p>Re-write this program so that the string <code>'David Hasselhoff'</code> only appears once at the very beginning of the program, and the list of variants of 'David' also appears once at the beginning of the program. Once you have improved the program in this way, check that it still works as it did before. Then check that you only need to change these two initial lines so that the whole program uses a different interesting name. For example, you can try 'Barbra Streisand', with 'Barbara', 'Barb', and 'Barbie' as the variants of 'Barbra'.</p>
