@@ -104,9 +104,9 @@ This program requires the user to type in some information. As with *greeting.py
 
 ![](images/input.png)
 
-Beware that when you run a program that requires user input, the program will wait indefinitely until it has received that input. While your program is still running, you won't be able to run it again or run any other program. You can tell that a program is currently running in the console if you see that the square 'stop' icon above the console is lit red, like in the screenshot above. To finish your program and continue editing it or working on other programs, you must first let your running program finish. In this case, you can achieve this by doing as the program asks and typing in your name at the console where the input prompt is displayed.
+Beware that when you run a program that requires user input, the program will wait indefinitely until it has received that input. While your program is still running, you won't be able to run it again or run any other program. You can tell that a program is currently running in the console if you see that the square 'stop' icon (■) above the console is lit red, like in the screenshot above. To finish your program and continue editing it or working on other programs, you must first let your running program finish. In this case, you can achieve this by doing as the program asks and typing in your name at the console where the input prompt is displayed.
 
-(Alternatively, if you get stuck with a program running and you just want to break off, you can stop it by clicking on the red 'stop' icon. You should then see that the 'stop' icon is no longer red, and that the console once again displays something like `In [...]:` ready for the next program to run.)
+(Alternatively, if you get stuck with a program running and you just want to break off, you can stop it by clicking on the red 'stop' icon. You should then see that the 'stop' icon is no longer red, and that the console once again displays something like `In [...]:` ready for the next program to run. Yet another alternative for stopping a running program is to press the key combination *ctrl* + *c*.)
 
 You should have seen that *greeting_personal.py* responded with a greeting containing whatever name you typed in.
 

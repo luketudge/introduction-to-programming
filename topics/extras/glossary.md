@@ -58,7 +58,7 @@ A comprehension is a technique for creating multiple values by writing a 'formul
 A 'list comprehension' creates the items in a new [list](#list). For example, the formula might apply some Python command `for` every entry `in` some other existing list, and store the result in a new list:
 
 ```python
-shopping = ['eggs', 'bacon', 'black pudding']
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 shopping_initials = [item[0] for item in shopping]
 ```
 
@@ -163,9 +163,10 @@ This use of indentation is fairly specific to Python. In most other programming 
 
 ## index
 
-An 'index' is the position of a particular item in a [sequence](#sequence), such as in a [list](#list) or a [tuple](#tuple). Python's indexing system begins at 0. So the index of the first item in a sequence is 0, the index of the second item is 1, and so on. We can use indices to refer to an item that is stored in a sequence. The Python [syntax](#syntax) for using an index is to place it in square parentheses `[]` after the name of the variable that stores the sequence. So to print out the third item in a list called `shopping` we can type:
+An 'index' is the position of a particular item in a [sequence](#sequence), such as in a [list](#list) or a [tuple](#tuple). Python's indexing system begins at 0. So the index of the first item in a sequence is 0, the index of the second item is 1, and so on. We can use indices to refer to an item that is stored in a sequence. The Python [syntax](#syntax) for using an index is to place it in square parentheses `[]` after the name of the variable that stores the sequence. So to print out the third item in a list we can type:
 
 ```python
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 print(shopping[2])
 ```
 
@@ -194,7 +195,7 @@ A keyword (sometimes also referred to as 'reserved word') is a word that has a s
 A tuple is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
 
 ```python
-menu = ['jellied eels', 'black pudding', 'blancmange']
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 ```
 
 Lists are very similar to [tuples](#tuple), another kind of sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).

@@ -518,6 +518,12 @@ guess
 
 
 
+### Debugging
+
+Be careful with `while`. Because it repeats certain lines of our program indefinitely, we can get stuck running those lines *forever* if we forget to put something into the indented text of the `while` loop that could stop it. When you write a `while` loop, check that among the indented lines below it there is something that can stop the loop, either a `break`, or a command that can make the condition in the `while` control statement false.
+
+If you run your program and you discover that you have made a mistake and it wants to run until the end of the universe, remember that you can stop a running program either by clicking the red stop square at the top of the console, or by pressing the key combination *ctrl* + *c*.
+
 That's it, we now know everything we need to know in order to write our target program. At least in principle. If you feel like a challenge, you might like to have a go at finishing off the program yourself before you take a look at the finished example, [guess_the_animal.py](examples/guess_the_animal.py).
 
 If you want to add some extra hints about African swallows, you can find some facts about them [here](http://montypython.50webs.com/scripts/Holy_Grail/Scene1.htm).

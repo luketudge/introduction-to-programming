@@ -401,7 +401,7 @@ ten_numbers
 
 
 
-Notice that the end of a range is interpreted in the same way as the end index of a slice, which we learned about above. `range(5, 10)` means 'the integers from `5` up to *but not including* `10`. Also like slices, we can omit the starting number if we want to start from `0`. So `range(10)` is a shorthand for `range(0, 10)`.
+Notice that the end of a range is interpreted in the same way as the end index of a [slice](extras/glossary.md#slice), which we learned about above. `range(5, 10)` means 'the integers from `5` up to *but not including* `10`. Also like slices, we can omit the starting number if we want to start from `0`. So `range(10)` is a shorthand for `range(0, 10)`.
 
 Ranges are often useful for creating a new list that contains some mathematical sequence. For example we can get a list of square numbers by requesting '`x` squared' for every `x` in a range:
 
