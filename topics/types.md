@@ -558,8 +558,8 @@ The entries that interest us for the moment are those without underscores. These
 
 The syntax for [calling](extras/glossary.md#call) a method has a lot in common with the syntax for calling any other function:
 
-* Place parentheses after the name of the method.
-* (Optionally) place any input [arguments](extras/glossary.md#argument) for the method inside the parentheses.
+* place parentheses after the name of the method
+* (optionally) place any input [arguments](extras/glossary.md#argument) for the method inside the parentheses
 
 But there is an important difference. We first 'go into' the variable that we want to apply the method to, and get the method from there. To go into a variable like this in Python, we place a dot (`.`) after its name.
 

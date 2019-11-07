@@ -7,7 +7,7 @@
 * [Sequences and mappings](sequences_mappings.md)
 * [Conditionals](conditionals.md)
 * [Iteration](iteration.md)
-* Functions
+* [Functions](functions.md)
 * Modules
 * Files
 

@@ -124,9 +124,9 @@ To evaluate a command or expression means to 'work out' its result. So the resul
 
 ## exception
 
-Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user (such as entering a word when our program expects a number), or trying to open a file that has been moved or deleted.
+Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user (such as entering a word when our program expects a number), or trying to open a file that has been moved or deleted. When an exception occurs, we say that our program has '[raised](#raise)' an exception.
 
-We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action results in an exception. For example:
+We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action raises an exception. For example:
 
 ```python
 try:
@@ -135,7 +135,7 @@ except FileNotFoundError:
     print('The file is not there.')
 ```
 
-If an exception occurs and we have not specified in our program what to do about it, then the result is an [error](#error) and our program stops.
+If an exception is raised and we have not specified in our program what to do about it, then the result is an [error](#error) and our program stops.
 
 ## float
 
@@ -275,6 +275,16 @@ The `None` data [type](#type) in Python is used to indicate something that is ab
 ## operator
 
 An operator is a symbol that produces some result when written in an expression along with some other components. For example, the `+` operator produces the sum of two numbers (for example in the expression `2 + 2`). Some operators may have different effects depending on the [type](#type) of the other components of the expression. For example, if used with [strings](#string) instead of numbers the `+` operator [concatenates](#concatenate) the strings.
+
+## raise
+
+When an [exception](#exception) occurs during the running of a program, we say that the program has 'raised' an exception. (See the entry on [exceptions](#exception) for more details.)
+
+We can also deliberately instruct our program to raise an exception, using the `raise` [keyword](#keyword). For example:
+
+```python
+raise ValueError('That is an invalid value.')
+```
 
 ## refactor
 

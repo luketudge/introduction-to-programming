@@ -15259,6 +15259,14 @@ There aren&#39;t that many items of shopping.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Here are some more of the most common types of exception that you might encounter:</p>
+<ul>
+<li><code>NameError</code>: We have tried to use a <a href="extras/glossary.md#variable">variable</a>, but no variable with that name has been <a href="extras/glossary.md#assignment">assigned</a> yet.</li>
+<li><code>IndexError</code>: We have used an <a href="extras/glossary.md#index">index</a> that goes beyond the length of whatever we are trying to apply the index to (e.g. a <a href="extras/glossary.md#list">list</a>).</li>
+<li><code>ValueError</code>: We have supplied an invalid input <a href="extras/glossary.md#value">value</a> to a <a href="extras/glossary.md#function">function</a>.</li>
+<li><code>TypeError</code>: We have tried to do something with one <a href="extras/glossary.md#type">data type</a>, but that thing only works for a different data type.</li>
+<li><code>FileNotFoundError</code>: We have tried to open a file that does not exist.</li>
+</ul>
 <p>It is important not to get carried away with <code>try</code> ... <code>except</code> and attempt to cover all possible problems so that your program is 'foolproof'. If something occurs that your program is just not supposed to deal with, then your program should stop, and this is ok. Error messages can be very informative; if you try to suppress them all, you won't be warned when your program fails or be told why it failed. Use <code>try</code> ... <code>except</code> to deal with specific, anticipated problems.</p>
 <h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><h3 id="1">1<a class="anchor-link" href="#1">&#182;</a></h3><p>Take a look at the finished <a href="examples/hoff.py">hoff.py</a> program. One thing that is not so good about this program is that it is not very easily modifiable. If we later changed our minds and wanted to adapt this program so that 'Barbra Streisand' is the interesting name instead of 'David Hasselhoff', then we would need to change the name in at least 8 different places. And we would need to go quite far down in our program to find the list of names similar to 'David' and change that.</p>
 <p>Re-write this program so that the string <code>'David Hasselhoff'</code> only appears once at the very beginning of the program, and the list of variants of 'David' also appears once at the beginning of the program. Once you have improved the program in this way, check that it still works as it did before. Then check that you only need to change these two initial lines so that the whole program uses a different interesting name. For example, you can try 'Barbra Streisand', with 'Barbara', 'Barb', and 'Barbie' as the variants of 'Barbra'.</p>

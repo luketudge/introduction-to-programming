@@ -908,6 +908,14 @@ shopping_list[9000]
     IndexError: list index out of range
 
 
+Here are some more of the most common types of exception that you might encounter:
+
+* `NameError`: We have tried to use a [variable](extras/glossary.md#variable), but no variable with that name has been [assigned](extras/glossary.md#assignment) yet.
+* `IndexError`: We have used an [index](extras/glossary.md#index) that goes beyond the length of whatever we are trying to apply the index to (e.g. a [list](extras/glossary.md#list)).
+* `ValueError`: We have supplied an invalid input [value](extras/glossary.md#value) to a [function](extras/glossary.md#function).
+* `TypeError`: We have tried to do something with one [data type](extras/glossary.md#type), but that thing only works for a different data type.
+* `FileNotFoundError`: We have tried to open a file that does not exist.
+
 It is important not to get carried away with `try` ... `except` and attempt to cover all possible problems so that your program is 'foolproof'. If something occurs that your program is just not supposed to deal with, then your program should stop, and this is ok. Error messages can be very informative; if you try to suppress them all, you won't be warned when your program fails or be told why it failed. Use `try` ... `except` to deal with specific, anticipated problems.
 
 ## Exercises

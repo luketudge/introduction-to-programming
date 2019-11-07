@@ -24,6 +24,8 @@ There is some branching in this program too, so we will need to use the techniqu
 * **Robustness**. We can easily make small mistakes while copying, pasting, and modifying the repeated lines. This may break our program.
 * **Flexibility**. If we later decide that we would like to change some aspect of the repeated actions, we must change it in multiple places in our program. This is laborious, and may again introduce mistakes if we forget to make the change in one of the repetitions.
 
+In programming, we should try to avoid repeating ourselves. This principle is so fundamental that there is a commonly-used acronym [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself) (**D**on't **R**epeat **Y**ourself) that people use to remind each other of it. The opposite of a 'DRY' programming style is sometimes pejoratively termed a 'WET' programming style (variously either '**W**rite **E**verything **T**wice' or '**W**e **E**njoy **T**yping').
+
 ## loops
 
 One way of achieving repetition is to use a [sequence](extras/glossary.md#sequence). Remember that sequences are [data types](extras/glossary.md#type) that store multiple values in order, such as [tuples](extras/glossary.md#sequence) and [lists](extras/glossary.md#list). We have in fact already seen one way of performing an action repeatedly for each item in a sequence. Remember that list [comprehensions](extras/glossary.md#comprehension) create a new list by systematically applying the same action to all the items in another list, in order.
