@@ -1,3 +1,6 @@
+<h1>Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Sequences" data-toc-modified-id="Sequences-1">Sequences</a></span><ul class="toc-item"><li><span><a href="#Indexing" data-toc-modified-id="Indexing-1.1">Indexing</a></span></li><li><span><a href="#Slicing" data-toc-modified-id="Slicing-1.2">Slicing</a></span></li><li><span><a href="#Comprehensions" data-toc-modified-id="Comprehensions-1.3">Comprehensions</a></span></li><li><span><a href="#Range" data-toc-modified-id="Range-1.4">Range</a></span><ul class="toc-item"><li><span><a href="#Python-2" data-toc-modified-id="Python-2-1.4.1">Python 2</a></span></li></ul></li></ul></li><li><span><a href="#Mappings" data-toc-modified-id="Mappings-2">Mappings</a></span><ul class="toc-item"><li><span><a href="#Dictionaries" data-toc-modified-id="Dictionaries-2.1">Dictionaries</a></span><ul class="toc-item"><li><span><a href="#Mutability-again" data-toc-modified-id="Mutability-again-2.1.1">Mutability again</a></span></li><li><span><a href="#Dictionary-methods" data-toc-modified-id="Dictionary-methods-2.1.2">Dictionary methods</a></span></li></ul></li></ul></li><li><span><a href="#Choosing-a-data-representation" data-toc-modified-id="Choosing-a-data-representation-3">Choosing a data representation</a></span><ul class="toc-item"><li><span><a href="#Tuple-or-list?" data-toc-modified-id="Tuple-or-list?-3.1">Tuple or list?</a></span></li><li><span><a href="#List-or-dictionary?" data-toc-modified-id="List-or-dictionary?-3.2">List or dictionary?</a></span></li></ul></li><li><span><a href="#Nested-data-representations" data-toc-modified-id="Nested-data-representations-4">Nested data representations</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-5">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-5.1">1</a></span><ul class="toc-item"><li><span><a href="#a)" data-toc-modified-id="a)-5.1.1">a)</a></span></li><li><span><a href="#b)" data-toc-modified-id="b)-5.1.2">b)</a></span></li><li><span><a href="#c)" data-toc-modified-id="c)-5.1.3">c)</a></span></li></ul></li><li><span><a href="#2" data-toc-modified-id="2-5.2">2</a></span></li></ul></li></ul></div>
+
 # Sequences and mappings
 
 In the [previous lesson](types.md), we learned about some of the different data [types](extras/glossary.md#type) that Python recognizes, and we saw that Python treats each of them differently. In this lesson we will continue learning about types, but we will focus on a few particular types that are especially useful for many programming tasks, and whose behavior it is worth considering in more detail.
@@ -401,7 +404,7 @@ ten_numbers
 
 
 
-Notice that the end of a range is interpreted in the same way as the end index of a slice, which we learned about above. `range(5, 10)` means 'the integers from `5` up to *but not including* `10`. Also like slices, we can omit the starting number if we want to start from `0`. So `range(10)` is a shorthand for `range(0, 10)`.
+Notice that the end of a range is interpreted in the same way as the end index of a [slice](extras/glossary.md#slice), which we learned about above. `range(5, 10)` means 'the integers from `5` up to *but not including* `10`. Also like slices, we can omit the starting number if we want to start from `0`. So `range(10)` is a shorthand for `range(0, 10)`.
 
 Ranges are often useful for creating a new list that contains some mathematical sequence. For example we can get a list of square numbers by requesting '`x` squared' for every `x` in a range:
 
@@ -419,7 +422,7 @@ squares
 
 
 
-#### Aside: Python 2
+#### Python 2
 
 Back in Python 2, the `range()` function did the more intuitive thing and just returned a full list of the requested integers. This was good for the simplicity and clarity of Python programs, but bad for efficient use of the computer's memory, so it was changed in Python 3.
 

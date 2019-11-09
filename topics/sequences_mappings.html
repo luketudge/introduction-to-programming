@@ -13077,6 +13077,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><h1>Contents<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Sequences" data-toc-modified-id="Sequences-1">Sequences</a></span><ul class="toc-item"><li><span><a href="#Indexing" data-toc-modified-id="Indexing-1.1">Indexing</a></span></li><li><span><a href="#Slicing" data-toc-modified-id="Slicing-1.2">Slicing</a></span></li><li><span><a href="#Comprehensions" data-toc-modified-id="Comprehensions-1.3">Comprehensions</a></span></li><li><span><a href="#Range" data-toc-modified-id="Range-1.4">Range</a></span><ul class="toc-item"><li><span><a href="#Python-2" data-toc-modified-id="Python-2-1.4.1">Python 2</a></span></li></ul></li></ul></li><li><span><a href="#Mappings" data-toc-modified-id="Mappings-2">Mappings</a></span><ul class="toc-item"><li><span><a href="#Dictionaries" data-toc-modified-id="Dictionaries-2.1">Dictionaries</a></span><ul class="toc-item"><li><span><a href="#Mutability-again" data-toc-modified-id="Mutability-again-2.1.1">Mutability again</a></span></li><li><span><a href="#Dictionary-methods" data-toc-modified-id="Dictionary-methods-2.1.2">Dictionary methods</a></span></li></ul></li></ul></li><li><span><a href="#Choosing-a-data-representation" data-toc-modified-id="Choosing-a-data-representation-3">Choosing a data representation</a></span><ul class="toc-item"><li><span><a href="#Tuple-or-list?" data-toc-modified-id="Tuple-or-list?-3.1">Tuple or list?</a></span></li><li><span><a href="#List-or-dictionary?" data-toc-modified-id="List-or-dictionary?-3.2">List or dictionary?</a></span></li></ul></li><li><span><a href="#Nested-data-representations" data-toc-modified-id="Nested-data-representations-4">Nested data representations</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-5">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-5.1">1</a></span><ul class="toc-item"><li><span><a href="#a)" data-toc-modified-id="a)-5.1.1">a)</a></span></li><li><span><a href="#b)" data-toc-modified-id="b)-5.1.2">b)</a></span></li><li><span><a href="#c)" data-toc-modified-id="c)-5.1.3">c)</a></span></li></ul></li><li><span><a href="#2" data-toc-modified-id="2-5.2">2</a></span></li></ul></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Sequences-and-mappings">Sequences and mappings<a class="anchor-link" href="#Sequences-and-mappings">&#182;</a></h1><p>In the <a href="types.html">previous lesson</a>, we learned about some of the different data <a href="extras/glossary.md#type">types</a> that Python recognizes, and we saw that Python treats each of them differently. In this lesson we will continue learning about types, but we will focus on a few particular types that are especially useful for many programming tasks, and whose behavior it is worth considering in more detail.</p>
 <h2 id="Sequences">Sequences<a class="anchor-link" href="#Sequences">&#182;</a></h2><p>We have already met both <a href="extras/glossary.md#tuple">tuples</a> and <a href="extras/glossary.md#list">lists</a>.</p>
 
@@ -14050,7 +14058,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Notice that the end of a range is interpreted in the same way as the end index of a slice, which we learned about above. <code>range(5, 10)</code> means 'the integers from <code>5</code> up to <em>but not including</em> <code>10</code>. Also like slices, we can omit the starting number if we want to start from <code>0</code>. So <code>range(10)</code> is a shorthand for <code>range(0, 10)</code>.</p>
+<p>Notice that the end of a range is interpreted in the same way as the end index of a <a href="extras/glossary.md#slice">slice</a>, which we learned about above. <code>range(5, 10)</code> means 'the integers from <code>5</code> up to <em>but not including</em> <code>10</code>. Also like slices, we can omit the starting number if we want to start from <code>0</code>. So <code>range(10)</code> is a shorthand for <code>range(0, 10)</code>.</p>
 <p>Ranges are often useful for creating a new list that contains some mathematical sequence. For example we can get a list of square numbers by requesting '<code>x</code> squared' for every <code>x</code> in a range:</p>
 
 </div>
@@ -14094,7 +14102,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Aside:-Python-2">Aside: Python 2<a class="anchor-link" href="#Aside:-Python-2">&#182;</a></h4><p>Back in Python 2, the <code>range()</code> function did the more intuitive thing and just returned a full list of the requested integers. This was good for the simplicity and clarity of Python programs, but bad for efficient use of the computer's memory, so it was changed in Python 3.</p>
+<h4 id="Python-2">Python 2<a class="anchor-link" href="#Python-2">&#182;</a></h4><p>Back in Python 2, the <code>range()</code> function did the more intuitive thing and just returned a full list of the requested integers. This was good for the simplicity and clarity of Python programs, but bad for efficient use of the computer's memory, so it was changed in Python 3.</p>
 
 </div>
 </div>

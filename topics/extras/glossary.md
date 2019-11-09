@@ -58,7 +58,7 @@ A comprehension is a technique for creating multiple values by writing a 'formul
 A 'list comprehension' creates the items in a new [list](#list). For example, the formula might apply some Python command `for` every entry `in` some other existing list, and store the result in a new list:
 
 ```python
-shopping = ['eggs', 'bacon', 'black pudding']
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 shopping_initials = [item[0] for item in shopping]
 ```
 
@@ -124,9 +124,17 @@ To evaluate a command or expression means to 'work out' its result. So the resul
 
 ## exception
 
-Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user (such as entering a word when our program expects a number), or trying to open a file that has been moved or deleted.
+Sometimes something 'exceptional' happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user (such as entering a word when our program expects a number), or trying to open a file that has been moved or deleted. When an exception occurs, we say that our program has '[raised](#raise)' an exception.
 
-We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action results in an exception. For example:
+Python distinguishes among various different kinds of exception. Some of the most common ones that we are likely to encounter are:
+
+* `NameError`: We have tried to use a [variable](#variable), but no variable with that name has been [assigned](#assignment) yet.
+* `IndexError`: We have used an [index](#index) that goes beyond the length of whatever we are trying to apply the index to (e.g. a [list](#list)).
+* `ValueError`: We have supplied an invalid input [value](#value) to a [function](#function).
+* `TypeError`: We have tried to do something with a particular [data type](#type), but that thing only works for a different data type.
+* `FileNotFoundError`: We have tried to open a file that does not exist.
+
+We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action raises an exception. For example:
 
 ```python
 try:
@@ -135,7 +143,7 @@ except FileNotFoundError:
     print('The file is not there.')
 ```
 
-If an exception occurs and we have not specified in our program what to do about it, then the result is an [error](#error) and our program stops.
+If an exception is raised and we have not specified in our program what to do about it, then the result is an [error](#error) and our program stops.
 
 ## float
 
@@ -163,9 +171,10 @@ This use of indentation is fairly specific to Python. In most other programming 
 
 ## index
 
-An 'index' is the position of a particular item in a [sequence](#sequence), such as in a [list](#list) or a [tuple](#tuple). Python's indexing system begins at 0. So the index of the first item in a sequence is 0, the index of the second item is 1, and so on. We can use indices to refer to an item that is stored in a sequence. The Python [syntax](#syntax) for using an index is to place it in square parentheses `[]` after the name of the variable that stores the sequence. So to print out the third item in a list called `shopping` we can type:
+An 'index' is the position of a particular item in a [sequence](#sequence), such as in a [list](#list) or a [tuple](#tuple). Python's indexing system begins at 0. So the index of the first item in a sequence is 0, the index of the second item is 1, and so on. We can use indices to refer to an item that is stored in a sequence. The Python [syntax](#syntax) for using an index is to place it in square parentheses `[]` after the name of the variable that stores the sequence. So to print out the third item in a list we can type:
 
 ```python
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 print(shopping[2])
 ```
 
@@ -194,7 +203,7 @@ A keyword (sometimes also referred to as 'reserved word') is a word that has a s
 A tuple is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
 
 ```python
-menu = ['jellied eels', 'black pudding', 'blancmange']
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 ```
 
 Lists are very similar to [tuples](#tuple), another kind of sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
@@ -275,9 +284,19 @@ The `None` data [type](#type) in Python is used to indicate something that is ab
 
 An operator is a symbol that produces some result when written in an expression along with some other components. For example, the `+` operator produces the sum of two numbers (for example in the expression `2 + 2`). Some operators may have different effects depending on the [type](#type) of the other components of the expression. For example, if used with [strings](#string) instead of numbers the `+` operator [concatenates](#concatenate) the strings.
 
+## raise
+
+When an [exception](#exception) occurs during the running of a program, we say that the program has 'raised an exception'. (See the entry on [exceptions](#exception) for more details.) This is similar to the use of the word 'raise' in English in phrases like 'to raise an issue'.
+
+We can also deliberately instruct our program to raise an exception, using the `raise` [keyword](#keyword). For example:
+
+```python
+raise ValueError('That is an invalid value.')
+```
+
 ## refactor
 
-Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Rewriting a program without changing any of its behavior is termed 'refactoring' the program.
+Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Reorganizing a program without changing any of its behavior is termed 'refactoring' the program.
 
 ## return
 
