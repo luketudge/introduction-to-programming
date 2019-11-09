@@ -10,19 +10,18 @@ def yorn(question):
 
     The function is 'forgiving' and allows:
     * surrounding spaces
-    * lower or uppercse answers
-    * any word beginning with either 'y' or 'n'
+    * lower or uppercase answers
 
     Returns a boolean, so that the function can be used in an 'if' statement.
 
     Example:
         >>> yorn('Would you like a buttered crumpet?')
-        Would you like a buttered crumpet? (y/n) YES!
+        Would you like a buttered crumpet? (y/n)     Y
         True
 
     Arguments:
         question: A string prompt.
-        The additional prompt '(y/n)' will be appended.
+        The additional prompt ' (y/n) ' will be appended.
 
     Returns:
         Boolean
@@ -32,7 +31,7 @@ def yorn(question):
 
     while answer not in ['y', 'n']:
         answer = input(question + ' (y/n) ')
-        answer = answer.strip().lower()[:1]
+        answer = answer.strip().lower()
 
     if answer == 'y':
         return True
@@ -42,9 +41,9 @@ def yorn(question):
 
 # The program itself:
 
-fun_facts = ['a',
-             'b',
-             'c']
+fun_facts = ['Elephants gestate for 21 months.',
+             'There are more tin cans than people.',
+             'The record number of marshmallows stuffed up one nostril is 604.']
 
 if yorn('Would you like to hear some fun facts?'):
 
