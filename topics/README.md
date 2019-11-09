@@ -13,7 +13,7 @@ You can also view interactive versions of the topic pages on [Binder](https://my
 * [Conditions](conditions.md)
 * [Iteration](iteration.md)
 * [Functions](functions.md)
-* Modules
+* [Modules](modules.md)
 * Files
 
 ## Software development
