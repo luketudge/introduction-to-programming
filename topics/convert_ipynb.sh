@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Convert .ipynb to some more web-friendly formats.
-for FORMAT in markdown html
-do
-  jupyter nbconvert --to $FORMAT *.ipynb
-done
 
-# In the generated files, replace .ipynb with the extension of each format.
-# So links to other topic pages will link to the version with the same format.
-for SUFFIX in md html
-do
-  sed -i "s/\.ipynb/.$SUFFIX/g" *.$SUFFIX
-done
+# Markdown.
+# Use these as the default pages linked from the README.
+jupyter nbconvert --to markdown *.ipynb
+sed -i "s/\.ipynb/.md/g" *.md
+
+# HTML.
+# Not really using these, but might as well make them.
+# Put them in a separate folder to avoid cluttering the page.
+jupyter nbconvert --to html *.ipynb --output-dir html
+sed -i "s/\.ipynb/.html/g" html/*.html
