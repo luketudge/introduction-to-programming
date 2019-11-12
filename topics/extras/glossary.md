@@ -163,6 +163,12 @@ word_length = len('floccinaucinihilipilification')
 
 An Integrated Development Environment (or IDE) is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for running the program, checking its contents for mistakes, searching for help, etc. [Spyder](https://www.spyder-ide.org/) is the Python IDE that we use in this class.
 
+## import
+
+The contents of a [module](#module) contained in one file can be 'brought in' to the current program file using the Python [keyword](#keyword) `import`. This is known as 'importing' the module, in the same sense as importing foreign goods into a country.
+
+Once imported, the contents of a module are available under the module's [namespace](#namespace).
+
 ## indentation
 
 Python uses indentation (spaces at the beginning of a line) to mark some lines of a program as 'belonging to' a preceding [control statement](#control) that determines when or how often those lines should be run.
@@ -241,6 +247,12 @@ name = 'Mildred'
 shouty_name = name.upper()
 ```
 
+## module
+
+A 'module' is simply any text file containing Python commands. However, in practice the term 'module' tends to be reserved for files that do not in themselves run any program that accomplishes a task or produces an output, but instead serve merely to define various [functions](#function) or [variables](#variable) that can be used in other programs. The contents of a module can be incorporated into another program file by [importing](#import) them.
+
+(Compare the term '[script](#script)'.)
+
 ## mutability
 
 If a [type](#type) is 'mutable', this means that a [variable](#variable) of that type can have its contents changed or updated without having to be completely overwritten and [re-assigned](#assignment). For example, [lists](#list) are mutable, because applying a list [method](#method) can change the contents of the list without us assigning any result back into the list with `=`. When a mutable variable is changed even though we have not re-assigned it, we sometimes say that it has been changed 'in-place'.
@@ -269,6 +281,18 @@ name = name.upper()
 ```
 
 ('Mutable' [means 'changeable'](https://www.etymonline.com/word/mutable), and has the same origin as 'mutant', as in the *Teenage Mutant Ninja Turtles*.)
+
+## namespace
+
+We can think of our current Python program as creating a sort of 'workspace' in our computer's temporary memory, where all the [variables](#variable), [functions](#function), etc. created in the program are stored and held ready for use as the program runs. Within this main workspace we may have separate 'subspaces' that store some of these things together under a common name, for example because they have a common origin or all need to refer to one another in order to function properly. Such a subspace is known as a 'namespace'.
+
+When we [import](#import) a [module](#module), its contents are available under a namespace that by default has the same name as the file containing the module.
+
+To access things that are stored in a namespace rather than in the main workspace of our program, we simply prepend the name of the namespace, followed by a dot. So for example to use a function called `useful_function()` from a namespace called `my_module`:
+
+```python
+my_module.useful_function()
+```
 
 ## newline
 
@@ -301,6 +325,10 @@ Sometimes we may want to change the structure of a program, but without actually
 ## return
 
 [Functions](#function) usually finish by outputting some kind of result. For example, the `len()` function outputs the length of its argument, and the `round()` function outputs the result of rounding its argument to the nearest whole number. We say that when a function has finished its work, the function 'returns', and whatever it gives us when it has finished is the function's 'return value'. For example the return value of `len('floccinaucinihilipilification')` is `29`, and the return value of `round(1.618)` is `2`.
+
+## script
+
+A script is a text file containing commands that are intended to be run, in order, as a program. The sense of 'script' here is the same as in an actor's script, which tells them what to say and do. Not all text files containing commands are scripts. Some may instead be [modules](#module), which do not of themselves run a specific program, but instead provide extra components that other programs may make use of.
 
 ## sequence
 
@@ -355,3 +383,7 @@ print(x ** 0.5)
 ## whitespace
 
 Any text characters that appear simply as blank space are termed 'whitespace' characters. The most common whitespace character is of course simply the space, but there are others, such as the [newline character](#newline) and the tab.
+
+## wildcard
+
+A wildcard is a symbol used in computing to stand for 'everything' or 'anything'. Wildcards are common to many programming languages, not just Python. The most common wildcard symbol is the asterisk (or 'star') `*`. Wildcards can be used together with other characters to refer to 'all things that match a particular pattern'. For example, when referring to file names, the expression `*.txt` means 'all files ending in *.txt*'.
