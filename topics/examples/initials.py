@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-A program providing a single function for getting the intials from a name.
+A module providing a single function for getting the intials from a name.
 """
 
 def get_initials(name, n=1, uppercase=False):
