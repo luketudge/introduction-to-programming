@@ -674,7 +674,7 @@ What information should we put in a docstring, and how should we organize it? Th
 * The [return value](extras/glossary.md#return).
 * Whether the function [raises](extras/glossary.md#raise) any exceptions.
 
-You can see an example docstring for our `get_initials()` function in the example program [initials.py](examples/initials.py).
+You can see an example docstring for our `get_initials()` function in the example program [initials.py](examples/initials.py). (In case you are wondering what is going on on line 43 of this file, this will be explained in the next lesson.)
 
 ## Function or loop?
 
@@ -733,7 +733,7 @@ Take a look at the [fun_facts.py](examples/fun_facts.py) example program. It def
 
 ### 2
 
-Write a new program. The program defines a single function, called `first_n_words()`. The function turns a piece of text into a list of the first few words contained in the text. Here are the details of how it should work:
+Write a new program, called *words.py*. The program defines a single function, called `first_n_words()`. The function turns a piece of text into a list of the first few words contained in the text. Here are the details of how it should work:
 
 * Take a string argument called `text` and an integer argument called `n`.
 * Return a list containing the first `n` words in `text`.

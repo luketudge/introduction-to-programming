@@ -85,6 +85,19 @@ else:
 
 Examples of control statements include [conditions](#condition), [loops](#loop), and statements for handling [exceptions](#exception).
 
+## csv
+
+'CSV' stands for 'Comma Separated Values'. This is a text file format for storing spreadsheet data. In a CSV file, the comma character is used as a [separator](#separator) between the columns of the spreadsheet.
+
+For example, the contents of a simple CSV file might look like this when viewed in a text editor:
+
+```
+Name,Age,Location
+Mildred,22,USA
+Ishmael,19,USA
+Sherlock,39,GB
+```
+
 ## dictionary
 
 A dictionary (often abbreviated to 'dict') is a [data type](#type) that can store multiple values. It does so by storing the values under labels, termed '[keys](#key)'.
@@ -103,7 +116,25 @@ info['age']
 
 ## docstring
 
-A docstring is a [string](#string) (i.e. a piece of text) that provides some human-readable information about the workings of our program. We can write docstrings into our programs o help the users of our programs understand what the program does and how they should use it. We indicate a docstring in our program by enclosing it in 'triple quotes' (`""" """`). A docstring at the top of a *py* file provides information about the whole file, and docstrings underneath the definitions of [functions](#function) provide information about that function.
+A docstring is a [string](#string) (i.e. a piece of text) that provides some human-readable information about the workings of our program. We can write docstrings into our programs o help the users of our programs understand what the program does and how they should use it. We indicate a docstring in our program by enclosing it in 'triple quotes' (`""" """`). A docstring at the top of a *.py* file provides information about the whole file, and a docstring underneath the definition of a [function](#function) provides information about that function.
+
+## dunder
+
+The 'double underscore' `__ __` is sometimes abbreviated to 'dunder', because people who have to say 'double underscore' a lot are usually very busy people and need to save every second they can. Python uses double underscores surrounding a name to indicate that that name is involved in the 'behind the scenes' workings of Python and is not usually intended to be used directly.
+
+If a [method](#method) is enclosed in double underscores, that method determines something about the behavior of a particular [data type](#type) in different circumstances. For example, the `__add__()` method determines what happens when a variable of that type is used in conjunction with the `+` [operator](#operator). So:
+
+```python
+x.__add__(1)
+```
+
+is what happens behind the scenes when we write:
+
+```python
+x + 1
+```
+
+If a [variable](#variable) is enclosed in double underscores, that variable determines something about the organization of a program. For example, the `__file__` variable stores the name of the file that the current program was run from.
 
 ## error
 
@@ -162,6 +193,12 @@ word_length = len('floccinaucinihilipilification')
 ## IDE
 
 An Integrated Development Environment (or IDE) is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for running the program, checking its contents for mistakes, searching for help, etc. [Spyder](https://www.spyder-ide.org/) is the Python IDE that we use in this class.
+
+## import
+
+The contents of a [module](#module) contained in one file can be 'brought in' to the current program file using the Python [keyword](#keyword) `import`. This is known as 'importing' the module, in the same sense as importing foreign goods into a country.
+
+Once imported, the contents of a module are available under the module's [namespace](#namespace).
 
 ## indentation
 
@@ -241,6 +278,12 @@ name = 'Mildred'
 shouty_name = name.upper()
 ```
 
+## module
+
+A 'module' is simply any text file containing Python commands. However, in practice the term 'module' tends to be reserved for files that do not in themselves run any program that accomplishes a task or produces an output, but instead serve merely to define various [functions](#function) or [variables](#variable) that can be used in other programs. The contents of a module can be incorporated into another program file by [importing](#import) them.
+
+(Compare the term '[script](#script)'.)
+
 ## mutability
 
 If a [type](#type) is 'mutable', this means that a [variable](#variable) of that type can have its contents changed or updated without having to be completely overwritten and [re-assigned](#assignment). For example, [lists](#list) are mutable, because applying a list [method](#method) can change the contents of the list without us assigning any result back into the list with `=`. When a mutable variable is changed even though we have not re-assigned it, we sometimes say that it has been changed 'in-place'.
@@ -270,6 +313,18 @@ name = name.upper()
 
 ('Mutable' [means 'changeable'](https://www.etymonline.com/word/mutable), and has the same origin as 'mutant', as in the *Teenage Mutant Ninja Turtles*.)
 
+## namespace
+
+We can think of our current Python program as creating a sort of 'workspace' in our computer's temporary memory, where all the [variables](#variable), [functions](#function), etc. created in the program are stored and held ready for use as the program runs. Within this main workspace we may have separate 'subspaces' that store some of these things together under a common name, for example because they have a common origin or all need to refer to one another in order to function properly. Such a subspace is known as a 'namespace'.
+
+When we [import](#import) a [module](#module), its contents are available under a namespace that by default has the same name as the file containing the module.
+
+To access things that are stored in a namespace rather than in the main workspace of our program, we simply prepend the name of the namespace, followed by a dot. So for example to use a function called `useful_function()` from a namespace called `my_module`:
+
+```python
+my_module.useful_function()
+```
+
 ## newline
 
 When we view a text file that is written over multiple lines, we just see the separate lines of text neatly displayed in our text editor or word processor. But behind the scenes our computer needs some way of storing information about where one line ends and the next begins. This is achieved by the use of a 'newline character' to represent the break between one line and the next. This character is not explicitly shown in a normal text editor, but it is there in the file. In some word processors, such as OpenOffice and Microsoft Word, you can opt to see the newline characters explicitly, and they are typically shown as a '[pilcrow](https://en.wikipedia.org/wiki/Pilcrow)' (¶).
@@ -283,6 +338,26 @@ The `None` data [type](#type) in Python is used to indicate something that is ab
 ## operator
 
 An operator is a symbol that produces some result when written in an expression along with some other components. For example, the `+` operator produces the sum of two numbers (for example in the expression `2 + 2`). Some operators may have different effects depending on the [type](#type) of the other components of the expression. For example, if used with [strings](#string) instead of numbers the `+` operator [concatenates](#concatenate) the strings.
+
+## OS
+
+The Operating System (abbreviated to 'OS') for a computer is the 'main program' that runs on that computer when it starts, and within which all other programs run. The operating system handles the tasks that are common to all programs, such as locating files, connecting to external devices, and so on. The most popular types of operating system are Microsoft Windows, macOS, and Linux.
+
+## path
+
+The full location of a file on a computer is known as that file's 'path'. This is the same sense of 'path' as in the English phrase 'a path through the woods'; a file's path describes a series of turnings to take in the file system in order to get to that file.
+
+Different [operating systems](#OS) describe paths in different ways. Linux uses the forward slash character `/` as a [separator](#separator) between each branch in the path. So an example path looks like this:
+
+```
+/home/mildred/Documents/my_program.py
+```
+
+Windows uses the backslash `\` as the separator and starts with a letter identifying the drive on which the file is located. For example:
+
+```
+C:\Users\Mildred\Documents\my_program.py
+```
 
 ## raise
 
@@ -301,6 +376,20 @@ Sometimes we may want to change the structure of a program, but without actually
 ## return
 
 [Functions](#function) usually finish by outputting some kind of result. For example, the `len()` function outputs the length of its argument, and the `round()` function outputs the result of rounding its argument to the nearest whole number. We say that when a function has finished its work, the function 'returns', and whatever it gives us when it has finished is the function's 'return value'. For example the return value of `len('floccinaucinihilipilification')` is `29`, and the return value of `round(1.618)` is `2`.
+
+## script
+
+A script is a text file containing commands that are intended to be run, in order, as a program. The sense of 'script' here is the same as in an actor's script, which tells them what to say and do. Not all text files containing commands are scripts. Some may instead be [modules](#module), which do not of themselves run a specific program, but instead provide extra components that other programs may make use of.
+
+## separator
+
+A separator is a character that is used to separate different parts of a piece of text. Separators can occur in many different contexts:
+
+*Python commands*. For example, the comma character is used as the separator for multiple [arguments](#argument) to a [function](#function) in Python.
+
+*File paths*. A separator character is used to divide the various directories that lead to the location of a file in a file [path](#path).
+
+*Spreadsheet files*. A separator is used in some text file formats to separate the columns of a spreadsheet. For example, in the [csv](#csv) file format, a comma separates the columns.
 
 ## sequence
 
@@ -355,3 +444,7 @@ print(x ** 0.5)
 ## whitespace
 
 Any text characters that appear simply as blank space are termed 'whitespace' characters. The most common whitespace character is of course simply the space, but there are others, such as the [newline character](#newline) and the tab.
+
+## wildcard
+
+A wildcard is a symbol used in computing to stand for 'everything' or 'anything'. Wildcards are common to many programming languages, not just Python. The most common wildcard symbol is the asterisk (or 'star') `*`. Wildcards can be used together with other characters to refer to 'all things that match a particular pattern'. For example, when referring to file names, the expression `*.txt` means 'all files ending in *.txt*'.

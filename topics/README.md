@@ -13,7 +13,8 @@ You can also view interactive versions of the topic pages on [Binder](https://my
 * [Conditions](conditions.md)
 * [Iteration](iteration.md)
 * [Functions](functions.md)
-* Modules
+* [Modules](modules.md)
+* The standard library
 * Files
 
 ## Software development
@@ -21,6 +22,7 @@ You can also view interactive versions of the topic pages on [Binder](https://my
 * Testing
 * Collaboration
 * Documentation
+* Style
 
 ## Specialist topics
 
