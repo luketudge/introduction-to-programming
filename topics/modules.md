@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Imports" data-toc-modified-id="Imports-1">Imports</a></span><ul class="toc-item"><li><span><a href="#Debugging" data-toc-modified-id="Debugging-1.1">Debugging</a></span></li><li><span><a href="#Namespaces" data-toc-modified-id="Namespaces-1.2">Namespaces</a></span></li><li><span><a href="#Star-imports" data-toc-modified-id="Star-imports-1.3">Star imports</a></span></li><li><span><a href="#Selective-imports" data-toc-modified-id="Selective-imports-1.4">Selective imports</a></span></li></ul></li><li><span><a href="#Methods-revisited" data-toc-modified-id="Methods-revisited-2">Methods revisited</a></span></li><li><span><a href="#Special-names" data-toc-modified-id="Special-names-3">Special names</a></span><ul class="toc-item"><li><span><a href="#Special-variables" data-toc-modified-id="Special-variables-3.1">Special variables</a></span></li><li><span><a href="#Special-methods" data-toc-modified-id="Special-methods-3.2">Special methods</a></span></li></ul></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-4">Exercise</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-4.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-4.2">2</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Imports" data-toc-modified-id="Imports-1">Imports</a></span><ul class="toc-item"><li><span><a href="#Debugging" data-toc-modified-id="Debugging-1.1">Debugging</a></span></li><li><span><a href="#Namespaces" data-toc-modified-id="Namespaces-1.2">Namespaces</a></span></li><li><span><a href="#Star-imports" data-toc-modified-id="Star-imports-1.3">Star imports</a></span></li><li><span><a href="#Selective-imports" data-toc-modified-id="Selective-imports-1.4">Selective imports</a></span></li></ul></li><li><span><a href="#Methods-revisited" data-toc-modified-id="Methods-revisited-2">Methods revisited</a></span></li><li><span><a href="#Special-names" data-toc-modified-id="Special-names-3">Special names</a></span><ul class="toc-item"><li><span><a href="#Special-variables" data-toc-modified-id="Special-variables-3.1">Special variables</a></span></li><li><span><a href="#Special-methods" data-toc-modified-id="Special-methods-3.2">Special methods</a></span></li></ul></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-4">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-4.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-4.2">2</a></span></li></ul></li></ul></div>
 
 # Modules
 
@@ -168,7 +168,7 @@ But note that there is a big difference in clarity when compared to the star imp
 
 ## Methods revisited
 
-We have in fact already met [namespaces](extras/glossary.md#namespace) in a slightly different guise. We have learned about [methods](extras/glossary.md#method): functions that are 'attached' to only one [type](extras/glossary.md#type) of variable. We focused mainly on [string](extras/glossary.md#string) methods, because strings have lots of methods available to them. Each [variable](extras/glossary.md) in Python has its own namespace, and in that namespace are stored links to the methods available for variables of that type.
+We have in fact already met [namespaces](extras/glossary.md#namespace) in a slightly different guise. We have learned about [methods](extras/glossary.md#method): functions that are 'attached' to only one [type](extras/glossary.md#type) of variable. We focused mainly on [string](extras/glossary.md#string) methods, because strings have lots of methods available to them. Each variable in Python has its own namespace, and in that namespace are stored links to the methods available for variables of that type.
 
 Recall how this works:
 
@@ -557,7 +557,7 @@ You get the general idea.
 
 But please don't understand from this that you should actually use these double-underscored methods in your programs. You should not. They are not intended to be used directly. We will only encounter them again much later on in our programming careers, when we come to define our own new [data types](extras/glossary.md#type). Then we will need to define some of these special methods so that Python knows what to do with variables of our new type when we combine them with `+` or index them with `[]`. For now, forget about special methods.
 
-## Exercise
+## Exercises
 
 ### 1
 
