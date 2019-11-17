@@ -19,7 +19,7 @@ name2 = input('User 2 enter your full name: ')
 for n_letters in range(1, 4):
     ID1 = initials.get_initials(name1, n=n_letters)
     ID2 = initials.get_initials(name2, n=n_letters)
-    
+
     # If the two IDs are not the same, we have tried enough letters.
     # So stop.
     if ID1 != ID2:
