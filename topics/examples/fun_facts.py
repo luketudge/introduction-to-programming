@@ -3,6 +3,7 @@
 A program to display some fun facts.
 """
 
+
 # A function to help with the rest of the program:
 
 def yorn(question):
