@@ -20,11 +20,11 @@ A Python computer program can be as simple as a single file. This is what we wil
 print('Hello.')
 ```
 
-Programming languages are strict about the correct [syntax](extras/glossary.md#syntax) for their commands, so make sure that you have put the right number of parentheses and quotation marks in the right places. Then save this file somewhere on your computer as a *py* file, for example as `my_program.py`. Note also that most programming languages do not cope well with files that have spaces in their names (the interpreter may think that a file name with a space refers to two separate files or commands), so avoid spaces in the filename and use the underscore character (`_`) to separate words instead.
+Programming languages are strict about the correct [syntax](extras/glossary.md#syntax) for their commands, so make sure that you have put the right number of parentheses and quotation marks in the right places. Then save this file somewhere on your computer as a *.py* file, for example as *my_program.py*. Note also that most programming languages do not cope well with files that have spaces in their names (the interpreter may think that a file name with a space refers to two separate files or commands), so avoid spaces in the filename and use the underscore character (`_`) to separate words instead.
 
-The *py* file suffix does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions [here](../software) if you haven't already.)
+The *.py* file suffix does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions [here](../software) if you haven't already.)
 
-There are various ways to run a *py* file with the Python interpreter. For example, we can just run it the old-school way from the command line as shown below.
+There are various ways to run a *.py* file with the Python interpreter. For example, we can just run it the old-school way from the command line as shown below.
 
 ![](images/command_line.png)
 
@@ -61,13 +61,17 @@ SyntaxError: invalid syntax
 
 Error messages that complain of a `SyntaxError` tell us that some part of our program is not a valid Python command, and so the Python interpreter could not finish running the program. The message tells us which line of our program was responsible (in this case line 1, the only line in the program).
 
-As the class progresses, we will cover more of the rules of Python syntax. Later we will also learn more about understanding and fixing errors in our programs. For now, we will look at a few more example programs to get a general idea of how Python works.
+As the class progresses, we will cover more of the rules of Python [syntax](extras/glossary.md#syntax). Later we will also learn more about understanding and fixing errors in our programs. For now, we will look at a few more example programs to get a general idea of how Python works.
 
 ## More Python programs
 
 ### [greeting.py](examples/greeting.py)
 
-Open the example program *greeting.py* in Spyder (you can find all the example programs [here](examples)). This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.
+Open the example program *greeting.py* in Spyder.
+
+(You can find all the example programs [here](examples). The archive file [intro_prog_examples.zip](examples/intro_prog_examples.zip) contains all the programs. Download this and unzip it to the directory that you are working in.)
+
+This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.
 
 The first of these is the [docstring](extras/glossary.md#docstring) at the top of the program:
 
@@ -119,7 +123,7 @@ There are some important things to note about assigning variables. You can explo
 * Unlike in math, the two sides of an equation with `=` are not interchangeable. Instead, the result of the command on the right is first worked out (or [evaluated](extras/glossary.md#evaluate)) and then assigned into the name on the left. (Try swapping the two sides of the `=` command on [line 9](examples/greeting_personal.py#L9)).
 * The order of lines in a Python program matters. Python runs each line in turn. So if our program uses a variable, that variable must be assigned *above* the line on which it is used. (Try placing [line 16](examples/greeting_personal.py#L16) at the top of the program file instead of at the bottom).
 * We can use almost any name we like for a variable. We need only be consistent in using that same name throughout our program. (Try replacing both occurrences of the variable `name` with something arbitrary like `x` or `y`).
-* There are however some limitations on valid variable names in Python. For example, they can contain numbers but cannot begin with a number (Try replacing both occurrences of the variable `name` with either `name1` or `1name`), and they cannot contain spaces because Python would interpret this as the names of two separate variables (Try replacing `name` with `my name`).
+* There are however some limitations on valid variable names in Python. For example, they can contain numbers but cannot begin with a number (try replacing both occurrences of the variable `name` with either `name1` or `1name`), and they cannot contain spaces because Python would interpret this as the names of two separate variables (try replacing `name` with `my name`).
 * It is possible to use the name of a built-in function (such as `print` or `input`) as a variable name in Python, but this is not a good idea as it will temporarily overwrite the function and prevent us from using it in the remainder of our program. (Try replacing both occurrences of the variable `name` with `print`).
 
 In general, we should avoid choosing abstract variable names like `x` and try always to choose a variable name that describes the intended contents of the variable.
