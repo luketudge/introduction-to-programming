@@ -71,7 +71,7 @@ As the class progresses, we will cover more of the rules of Python syntax. Later
 
 Open the example program *greeting.py* in Spyder.
 
-(You can find all the example programs [here](examples). The archive file [intro_prog_examples.zip](examples/intro_prog_examples.zip) contains all the programs. Download this and unzip it to the directory that you are working in.)
+(You can find all the example programs [here](examples). The compressed file [intro_prog_examples.zip](examples/intro_prog_examples.zip) contains all the programs. Download this file and unzip it to the directory that you are working in.)
 
 This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.
 
