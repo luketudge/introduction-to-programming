@@ -20,9 +20,11 @@ A Python computer program can be as simple as a single file. This is what we wil
 print('Hello.')
 ```
 
-Programming languages are strict about the correct [syntax](extras/glossary.md#syntax) for their commands, so make sure that you have put the right number of parentheses and quotation marks in the right places. Then save this file somewhere on your computer as a *.py* file, for example as *my_program.py*. Note also that most programming languages do not cope well with files that have spaces in their names (the interpreter may think that a file name with a space refers to two separate files or commands), so avoid spaces in the filename and use the underscore character (`_`) to separate words instead.
+The rules governing what counts as a valid command in a programming language are known as the [syntax](extras/glossary.md#syntax) of that programming language. Programming languages are strict about correct syntax, so make sure that you have put the right number of parentheses and quotation marks in the right places.
 
-The *.py* file suffix does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions [here](../software) if you haven't already.)
+Now save your new text file somewhere on your computer with the file extension *.py*, for example as *my_program.py*. Note also that most programming languages do not cope well with files that have spaces in their names (the interpreter may think that a file name with a space refers to two separate files or commands), so avoid spaces in the filename and use the underscore character (`_`) to separate words instead.
+
+The *.py* file extension does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions [here](../software) if you haven't already.)
 
 There are various ways to run a *.py* file with the Python interpreter. For example, we can just run it the old-school way from the command line as shown below.
 
@@ -44,7 +46,7 @@ Python is designed to be a more or less human-readable programming language, so 
 * The parentheses `()` following `print` provide the input (often termed the [argument](glossary.m#argument)) to the function. In this case the argument is the text that we want to print out.
 * The quote marks `''` indicate to Python that the text that they enclose should be treated just as plain text (and not for example as a math formula, or a reference to another Python file or some other stored information).
 
-What if we write a program that does not contain valid Python syntax? For example, what if we forget to enclose the text that we would like to print in quote marks? Try editing your program so as to omit the quote marks, like this:
+What if we write a program that does not contain valid Python [syntax](extras/glossary.md#syntax)? For example, what if we forget to enclose the text that we would like to print in quote marks? Try editing your program so as to omit the quote marks, like this:
 
 ```python
 print(Hello.)
@@ -61,7 +63,7 @@ SyntaxError: invalid syntax
 
 Error messages that complain of a `SyntaxError` tell us that some part of our program is not a valid Python command, and so the Python interpreter could not finish running the program. The message tells us which line of our program was responsible (in this case line 1, the only line in the program).
 
-As the class progresses, we will cover more of the rules of Python [syntax](extras/glossary.md#syntax). Later we will also learn more about understanding and fixing errors in our programs. For now, we will look at a few more example programs to get a general idea of how Python works.
+As the class progresses, we will cover more of the rules of Python syntax. Later we will also learn more about understanding and fixing errors in our programs. For now, we will look at a few more example programs to get a general idea of how Python works.
 
 ## More Python programs
 
