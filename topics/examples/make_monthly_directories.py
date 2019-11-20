@@ -3,11 +3,10 @@
 Create multiple directories.
 
 The directories are named by year, with subdirectories for each month.
-We could use these directories for organizing invoices, for example.
 """
 
 # The os module from the standard library.
-# This module provides functions for creating directories.
+# This module provides the functions for creating directories.
 import os
 
 
