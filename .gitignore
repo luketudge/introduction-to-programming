@@ -2,7 +2,7 @@
 
 # Example directories created in standard_library.ipynb
 topics/my_new_directory
-topics/examples/invoices/
+topics/examples/invoices/*
 
 
 #### General Python ignores ####

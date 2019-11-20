@@ -12,7 +12,6 @@ import os
 
 
 main_dirname = 'invoices'
-
 years = range(2015, 2020)
 months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
