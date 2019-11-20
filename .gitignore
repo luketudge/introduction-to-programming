@@ -1,3 +1,12 @@
+#### Project-specific ignores ####
+
+# Example directories created in standard_library.ipynb
+topics/my_new_directory
+topics/examples/invoices/
+
+
+#### General Python ignores ####
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

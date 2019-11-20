@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Assignment-and-immutability" data-toc-modified-id="Assignment-and-immutability-1">Assignment and immutability</a></span></li><li><span><a href="#Numeric-data" data-toc-modified-id="Numeric-data-2">Numeric data</a></span><ul class="toc-item"><li><span><a href="#Python-2" data-toc-modified-id="Python-2-2.1">Python 2</a></span></li></ul></li><li><span><a href="#Type-conversion" data-toc-modified-id="Type-conversion-3">Type conversion</a></span></li><li><span><a href="#User-input" data-toc-modified-id="User-input-4">User input</a></span><ul class="toc-item"><li><span><a href="#Python-2-again" data-toc-modified-id="Python-2-again-4.1">Python 2 again</a></span></li></ul></li><li><span><a href="#Methods" data-toc-modified-id="Methods-5">Methods</a></span><ul class="toc-item"><li><span><a href="#String-formatting" data-toc-modified-id="String-formatting-5.1">String formatting</a></span></li></ul></li><li><span><a href="#Other-types" data-toc-modified-id="Other-types-6">Other types</a></span><ul class="toc-item"><li><span><a href="#Boolean" data-toc-modified-id="Boolean-6.1">Boolean</a></span></li><li><span><a href="#None" data-toc-modified-id="None-6.2">None</a></span></li><li><span><a href="#Tuple" data-toc-modified-id="Tuple-6.3">Tuple</a></span></li><li><span><a href="#List" data-toc-modified-id="List-6.4">List</a></span></li></ul></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-7">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-7.1">1</a></span><ul class="toc-item"><li><span><a href="#a)" data-toc-modified-id="a)-7.1.1">a)</a></span></li><li><span><a href="#b)" data-toc-modified-id="b)-7.1.2">b)</a></span></li><li><span><a href="#c)" data-toc-modified-id="c)-7.1.3">c)</a></span></li></ul></li><li><span><a href="#2" data-toc-modified-id="2-7.2">2</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Strings" data-toc-modified-id="Strings-1">Strings</a></span></li><li><span><a href="#Assignment-and-immutability" data-toc-modified-id="Assignment-and-immutability-2">Assignment and immutability</a></span></li><li><span><a href="#Numeric-data" data-toc-modified-id="Numeric-data-3">Numeric data</a></span><ul class="toc-item"><li><span><a href="#Python-2" data-toc-modified-id="Python-2-3.1">Python 2</a></span></li></ul></li><li><span><a href="#Type-conversion" data-toc-modified-id="Type-conversion-4">Type conversion</a></span></li><li><span><a href="#User-input" data-toc-modified-id="User-input-5">User input</a></span><ul class="toc-item"><li><span><a href="#Python-2-again" data-toc-modified-id="Python-2-again-5.1">Python 2 again</a></span></li></ul></li><li><span><a href="#Methods" data-toc-modified-id="Methods-6">Methods</a></span><ul class="toc-item"><li><span><a href="#String-formatting" data-toc-modified-id="String-formatting-6.1">String formatting</a></span></li></ul></li><li><span><a href="#Other-types" data-toc-modified-id="Other-types-7">Other types</a></span><ul class="toc-item"><li><span><a href="#Boolean" data-toc-modified-id="Boolean-7.1">Boolean</a></span></li><li><span><a href="#None" data-toc-modified-id="None-7.2">None</a></span></li><li><span><a href="#Tuple" data-toc-modified-id="Tuple-7.3">Tuple</a></span></li><li><span><a href="#List" data-toc-modified-id="List-7.4">List</a></span></li></ul></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-8">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-8.1">1</a></span><ul class="toc-item"><li><span><a href="#a)" data-toc-modified-id="a)-8.1.1">a)</a></span></li><li><span><a href="#b)" data-toc-modified-id="b)-8.1.2">b)</a></span></li><li><span><a href="#c)" data-toc-modified-id="c)-8.1.3">c)</a></span></li></ul></li><li><span><a href="#2" data-toc-modified-id="2-8.2">2</a></span></li></ul></li></ul></div>
 
 # Variables and data types
 
@@ -14,11 +14,37 @@ age = 22
 height = 1.96
 ```
 
+## Strings
+
 We have also learned about the important distinction between variables that store text (termed [strings](extras/glossary.md#string) and abbreviated to `str`) and variables that store numbers. The form of the data stored in a variable (text, number, something else) is called its [type](extras/glossary.md#type).
 
-If we are reading a simple Python program, it will often be obvious what type a variable is, either because the author of the program has given the variable a good descriptive name, or because we can find and clearly understand the line of the program on which the variable is defined. But appearances can occasionally be deceptive. For example, the `street_number` variable above is a string that happens to contain digits. These can occur from time to time in programming, in cases where the digits do not really represent a mathematical quantity or might sometimes need to have extra non-number characters added to them (for example, Sherlock Holmes lives at house number 221b, which we can't represent and manipulate as an actual number).
+In the examples above, the variables `name`, `street`, and `street_number` are of type string. We can see this from the way that they are written. The [syntax](extras/glossary.md#syntax) for creating a string is simply to enclose the text of the string in quote marks (`''`). Quote marks distinguish strings (i.e. literal text) from other things such as numbers, the names of other variables, or Python commands, all of which are written without quote marks. This is similar to the use of quote marks in everyday English. Think of the lyrics to the song [Say My Name](https://en.wikipedia.org/wiki/Say_My_Name) by Destiny's Child. When Beyoncé issues the instruction *say my name*, she intends *my name* to be replaced by her actual name when the instructions are carried out. This is equivalent to the following short Python program, albeit with `print()` in place of *say*, since Python has no `say()` function:
 
-If we are unsure what type of data is stored in a variable, we can check at the console using the [built-in](extras/glossary.md#builtin) Python function `type()`.
+
+```python
+my_name = 'Beyoncé'
+
+print(my_name)
+```
+
+    Beyoncé
+
+
+What if the lyrics to the song were subtly different and included quote marks around '*my name*' (i.e. *say 'my name'*)? One use of quote marks in English is to clarify that a piece of text is to be interpreted literally, and not replaced with whatever the text refers to. So this version of the song would be equivalent to the following short Python program:
+
+
+```python
+my_name = 'Beyoncé'
+
+print('my_name')
+```
+
+    my_name
+
+
+When it comes to data types, appearances can occasionally be deceptive. For example, the `street_number` variable that we created above is a string that happens to contain digits. These can occur from time to time in programming, in cases where the digits do not really represent a mathematical quantity or might sometimes need to have extra non-number characters added to them (for example, Sherlock Holmes lives at house number 221b, which we can't represent and manipulate as an actual number).
+
+If we are unsure what type of data is stored in a variable, we can check at the console using the [built-in](extras/glossary.md#builtin) Python function `type()`:
 
 
 ```python
@@ -44,7 +70,7 @@ street_number + 1
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-3-69d4580a9089> in <module>
+    <ipython-input-5-69d4580a9089> in <module>
     ----> 1 street_number + 1
     
 
@@ -107,7 +133,9 @@ street_number + '0'
 
 ## Assignment and immutability
 
-'Assignment and immutability' is of course the title of a novel by Jane Austen. But it also refers to two important concepts in Python programming. We already met [assignment](extras/glossary.md#assignment) above. To understand immutability, let's remind ourselves of something. Take a look at the value of the `street_number` variable after everything that we have been doing with it above.
+'Assignment and immutability' is of course the title of a novel by Jane Austen. But it also refers to two important concepts in Python programming. We learned about [assignment](extras/glossary.md#assignment) earlier; when we assign some value to a variable, we store that value under the name of the variable, and can retrieve it using that name.
+
+To understand immutability, let's remind ourselves of something. Take a look at the value of the `street_number` variable after everything that we have been doing with it above.
 
 
 ```python
@@ -372,7 +400,7 @@ print(annexe_beast)
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-23-293d2fd1f181> in <module>
+    <ipython-input-25-293d2fd1f181> in <module>
           2 str(number_beast)
           3 
     ----> 4 annexe_beast = number_beast + 'b'
@@ -422,7 +450,7 @@ age_next_year = user_age + 1
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-25-e69a11705ffd> in <module>
+    <ipython-input-27-e69a11705ffd> in <module>
           1 user_age = input('How old are you? ')
     ----> 2 age_next_year = user_age + 1
     
@@ -594,7 +622,7 @@ name.upper(name)
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-29-b59fa512a01b> in <module>
+    <ipython-input-31-b59fa512a01b> in <module>
     ----> 1 name.upper(name)
     
 
@@ -848,7 +876,7 @@ shopping[1] = 'organic vegan bacon'
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-41-21c829b36b26> in <module>
+    <ipython-input-43-21c829b36b26> in <module>
     ----> 1 shopping[1] = 'organic vegan bacon'
     
 
