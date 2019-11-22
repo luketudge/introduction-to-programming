@@ -183,7 +183,7 @@ print(age_next_year)
 
 ## Numeric data
 
-So far most of our examples have concerned the behavior of the string data type. Let's now consider how Python manages numbers.
+So far most of our examples have concerned the behavior of the [string](extras/glossary.md#string) data type. Let's now consider how Python manages numbers.
 
 Python distinguishes between two different ways of representing numbers. Numbers can be stored either as whole numbers (`1`, `2`, `3`, etc.) or as non-whole numbers (for example `1.618`, `2.718`, or `3.142`). Whole numbers are called [integers](extras/glossary.md#integer) (abbreviated to `int`), and non-whole numbers are called [floating point numbers](extras/glossary.md#float) (abbreviated to `float`). Just as there is a particular [syntactical](extras/glossary.md#syntax) rule for creating a string, namely the use of quote marks, so there are syntactical rules for creating integers and floats. The presence of a decimal point (`.`) indicates a float, and its absence indicates an integer.
 

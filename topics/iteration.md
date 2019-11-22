@@ -571,9 +571,8 @@ No, that's not it.
 At the end of the game, tell the user how many guesses they needed before getting the correct answer. Omit this if the user did not guess correctly at all. So for example if they got it right already on the second round, the printout at the end should look like:
 
 ```
-Correct!
+Correct! You got it after 2 guesses.
 It was the african swallow.
-You got it after 2 guesses.
 ```
 
 For all of these modifications, the program should continue to work correctly if you later add more hints to the `hints` list at the top of the file.
