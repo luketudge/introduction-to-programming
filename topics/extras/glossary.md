@@ -87,7 +87,7 @@ Examples of control statements include [conditions](#condition), [loops](#loop),
 
 ## csv
 
-'CSV' stands for 'Comma Separated Values'. This is a text file format for storing spreadsheet data. In a CSV file, the comma character is used as a [separator](#separator) between the columns of the spreadsheet.
+'CSV' stands for 'Comma Separated Values' and refers to a text file format for storing spreadsheet data. In a CSV file, the comma character is used as a [separator](#separator) between the columns of the spreadsheet.
 
 For example, the contents of a simple CSV file might look like this when viewed in a text editor:
 
@@ -97,6 +97,10 @@ Mildred,22,USA
 Ishmael,19,USA
 Sherlock,39,GB
 ```
+
+## delimiter
+
+See [separator](#separator).
 
 ## dictionary
 
@@ -113,6 +117,10 @@ The keys of the dictionary can then be used as [indices](#index) to retrieve the
 ```python
 info['age']
 ```
+
+## directory
+
+Another term for a folder in a computer's file system.
 
 ## docstring
 
@@ -345,7 +353,7 @@ The Operating System (abbreviated to 'OS') for a computer is the 'main program' 
 
 ## path
 
-The full location of a file on a computer is known as that file's 'path'. This is the same sense of 'path' as in the English phrase 'a path through the woods'; a file's path describes a series of turnings to take in the file system in order to get to that file.
+The location of a file within the directory system of a computer is known as that file's 'path'. This is the same sense of 'path' as in the English phrase 'a path through the woods'; a file's path describes a series of turnings to take in the file system in order to get to that file.
 
 Different [operating systems](#OS) describe paths in different ways. Linux uses the forward slash character `/` as a [separator](#separator) between each branch in the path. So an example path looks like this:
 
@@ -358,6 +366,8 @@ Windows uses the backslash `\` as the separator and starts with a letter identif
 ```
 C:\Users\Mildred\Documents\my_program.py
 ```
+
+Paths can be 'absolute', which means that they describe the full path to a file starting all the way back from the base of the directory system (sometimes called the 'root' directory). Or they can be 'relative', which means that they describe the path to a file starting from some other directory than the root directory, usually the directory that we are currently working in.
 
 ## raise
 
@@ -390,6 +400,8 @@ A separator is a character that is used to separate different parts of a piece o
 *File paths*. A separator character is used to divide the various directories that lead to the location of a file in a file [path](#path).
 
 *Spreadsheet files*. A separator is used in some text file formats to separate the columns of a spreadsheet. For example, in the [csv](#csv) file format, a comma separates the columns.
+
+You may occasionally also encounter the term 'delimiter' used with essentially the same meaning as 'separator'. Technically, a delimiter character marks the limits of some entity (i.e. its beginning and its end). For example, the quote marks `''` mark the beginning and end of a [string](#string). But since delimiting an entity can in a certain sense also be thought of as separating it from its surroundings, the two terms are often effectively synonyms and the distinction is one that only matters to the sort of person whose mission in life is to make sure nobody is wrong on the internet.
 
 ## sequence
 
