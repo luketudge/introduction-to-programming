@@ -29,7 +29,7 @@ name = input('What is your name? ')
 
 ## boolean
 
-A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in Python) stores either of the two possible [values](#value) `True` or `False`. Boolean values often result from a Python command that checks a given condition, for example `2 > 1` (which [evaluates](#evaluate) to `True` because `2` is indeed greater than `1`).
+A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in Python) stores either of the two possible [values](#value) `True` or `False`. Boolean values often result from a Python command that checks a given condition, for example `2 > 1` [evaluates](#evaluate) to `True` because `2` is indeed greater than `1`.
 
 (The term 'boolean' is derived from the name of [George Boole](https://en.wikipedia.org/wiki/George_Boole), who developed various mathematical methods for working with logical True/False values.)
 
@@ -142,7 +142,7 @@ is what happens behind the scenes when we write:
 x + 1
 ```
 
-If a [variable](#variable) is enclosed in double underscores, that variable determines something about the organization of a program. For example, the `__file__` variable stores the name of the file that the current program was run from.
+If a [variable](#variable) is enclosed in double underscores, that variable determines something about the organization of a program. For example, the `__file__` variable stores the [path](#path) to the file that the current program is in.
 
 ## error
 
@@ -265,7 +265,7 @@ for item in menu:
     print(item)
 ```
 
-Of they can use the `while` [keyword](#keyword) to repeat the given actions until a particular condition is no longer fulfilled. For example:
+Or they can use the `while` [keyword](#keyword) to repeat the given actions until a particular condition is no longer fulfilled. For example:
 
 ```python
 answer = 'yes'
@@ -351,6 +351,12 @@ An operator is a symbol that produces some result when written in an expression 
 
 The Operating System (abbreviated to 'OS') for a computer is the 'main program' that runs on that computer when it starts, and within which all other programs run. The operating system handles the tasks that are common to all programs, such as locating files, connecting to external devices, and so on. The most popular types of operating system are Microsoft Windows, macOS, and Linux.
 
+## package
+
+A package is a program that adds to the functionality of an existing program. For example, Python packages add new [modules](#module) to a Python installation.
+
+A 'package manager' is a program that downloads, installs, and updates packages. For example, one of the functions of [Anaconda](https://www.anaconda.com/distribution/) is to act as a package manager for Python and other data science software.
+
 ## path
 
 The location of a file within the directory system of a computer is known as that file's 'path'. This is the same sense of 'path' as in the English phrase 'a path through the woods'; a file's path describes a series of turnings to take in the file system in order to get to that file.
@@ -382,6 +388,12 @@ raise ValueError('That is an invalid value.')
 ## refactor
 
 Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Reorganizing a program without changing any of its behavior is termed 'refactoring' the program.
+
+## repository
+
+A repository (sometimes abbreviated to 'repo') is a place where the various files constituting a computer program are stored, usually online. People who want to install a program can fetch the current version of the program from its repository.
+
+There are various internet platforms that host repositories. [GitHub](https://github.com/) is one of the most popular. The Python Package Index ([PyPI](https://pypi.org/)) is a repository specifically for Python [packages](#package).
 
 ## return
 
