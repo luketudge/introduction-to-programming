@@ -14,7 +14,7 @@ You can also view interactive versions of the topic pages on [Binder](https://my
 * [Iteration](iteration.md)
 * [Functions](functions.md)
 * [Modules](modules.md)
-* The standard library
+* [The standard library](standard_library.md)
 * Files
 
 ## Software development
