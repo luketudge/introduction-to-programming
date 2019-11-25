@@ -33,7 +33,7 @@ In programming, we should try to avoid repeating ourselves. This principle is so
 
 One way of achieving repetition is to use a [sequence](extras/glossary.md#sequence). Remember that sequences are [data types](extras/glossary.md#type) that store multiple values in order, such as [tuples](extras/glossary.md#sequence) and [lists](extras/glossary.md#list). We have in fact already seen one way of performing an action repeatedly for each item in a sequence. Remember that list [comprehensions](extras/glossary.md#comprehension) create a new list by systematically applying the same action to all the items in another list, in order.
 
-Here again is one of the example comprehensions that we saw in the [lesson on sequences](sequences_mappings.md):
+Here again is one of the example comprehensions that we saw in the [lesson on sequences](sequences_mappings.md#Comprehensions):
 
 
 ```python
@@ -331,7 +331,7 @@ print('The end.')
 
     I'm thinking of an animal.
     Hint: It weighs five ounces.
-    What is it? gerbil
+    What is it? european swallow
     No, that's not it.
     Hint: It beats its wings 43 times per second.
     What is it? african swallow
@@ -386,12 +386,15 @@ First of all, let's check for ourselves what even happens to the `guess` variabl
 
 ```python
 guess = input('What is it? ')
-
-guess
 ```
 
     What is it? 
 
+
+
+```python
+guess
+```
 
 
 
@@ -469,13 +472,13 @@ guess
 ```
 
     What is it? 
-    Enter the name of an animal: gerbil
+    Enter the name of an animal: european swallow
 
 
 
 
 
-    'gerbil'
+    'european swallow'
 
 
 
@@ -518,14 +521,13 @@ guess
 
     What is it? 
     Enter the name of an animal: 
-    Enter the name of an animal: 
-    Enter the name of an animal: gerbil
+    Enter the name of an animal: european swallow
 
 
 
 
 
-    'gerbil'
+    'european swallow'
 
 
 
