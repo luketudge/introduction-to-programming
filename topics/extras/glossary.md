@@ -150,7 +150,7 @@ Sometimes our program fails and cannot be completed, either because we have not 
 
 An example error message:
 
-```python
+```
   File "my_first_program.py", line 9
     Python, please do some amazing machine learning.
                     ^
@@ -186,11 +186,11 @@ If an exception is raised and we have not specified in our program what to do ab
 
 ## float
 
-In Python, and in computing in general, 'float' is a term for a non-whole number, such as 1.618. This is one of the basic data [types](#type) that Python can represent. It is distinguished from whole numbers (or [integers](#integer)) such as 1, 2, 3, etc. Strictly speaking, the term 'float' does not refer to non-whole numbers in general but rather to a specific method for storing non-whole numbers in computers, called '[floating-point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic)'. But for our purposes we can take the term 'float' to mean simply 'non-whole number'.
+In Python, and in computing in general, 'float' is a term for a non-whole number, such as 1.618. This is one of the basic data [types](#type) that Python can represent. It is distinguished from whole numbers (or [integers](#integer)) such as 1, 2, 3, etc. Strictly speaking, the term 'float' does not refer to non-whole numbers in general but rather to a specific method for storing non-whole numbers in computers, called '[floating-point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic)'. But for basic purposes we can take the term 'float' to mean simply 'non-whole number'.
 
 ## function
 
-A function is a sequence of commands that performs a particular action (or multiple actions), and can be used in programs again and again. `print()` is an example of a function, and the action it performs is to display text for the user. Functions can come from many places. Some, such as `print()`, are already [built in](#builtin) to Python, but we can also create our own functions, or import them from a program somebody else has written. When we run a function, we say that we [call](#call) the function. A function can have input [arguments](#argument). It may also have a [return value](#return), which we can [assign](#assignment) into a variable.
+A function is a sequence of commands that performs a particular action (or multiple actions), and can be used in programs again and again. `print()` is an example of a function, and the action it performs is to display text for the user. Functions can come from many places. Some, such as `print()`, are already [built in](#builtin) to Python, but we can also create our own functions, or [import](#import) them from a program somebody else has written. When we run a function, we say that we [call](#call) the function. A function can have input [arguments](#argument). It may also have a [return value](#return), which we can [assign](#assignment) into a variable.
 
 In the example below, we call the `len()` function with the argument `'floccinaucinihilipilification'`, and it returns the value `29` (which we then assign into the variable `word_length`).
 
@@ -323,7 +323,7 @@ name = name.upper()
 
 ## namespace
 
-We can think of our current Python program as creating a sort of 'workspace' in our computer's temporary memory, where all the [variables](#variable), [functions](#function), etc. created in the program are stored and held ready for use as the program runs. Within this main workspace we may have separate 'subspaces' that store some of these things together under a common name, for example because they have a common origin or all need to refer to one another in order to function properly. Such a subspace is known as a 'namespace'.
+We can think of our current Python program as creating a sort of 'workspace' in our computer's temporary memory, where all the [variables](#variable), [functions](#function), etc. created in the program are stored and held ready for use as the program runs. Within this main workspace we may have separate 'subspaces' that store some of these things together under a common name, for example because they have a common origin or because they all need to refer to one another in order to function properly. Such a subspace is known as a 'namespace'.
 
 When we [import](#import) a [module](#module), its contents are available under a namespace that by default has the same name as the file containing the module.
 
