@@ -1,6 +1,6 @@
 # Spyder configuration
 
-In order to avoid some common difficulties, you should change two important options within Spyder. Start up Spyder. Go to the **Tools** menu and select **Preferences**. You should change a few of the preferences.
+In order to avoid some common difficulties, you should change a few important options within Spyder. Start up Spyder. Go to the **Tools** menu and select **Preferences**. You should change a few of the preferences.
 
 ## Running programs
 
