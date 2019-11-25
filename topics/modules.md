@@ -10,7 +10,7 @@ You may reasonably ask why we would want to do this. If we are writing a program
 For a simple program like *fun_facts.py*, a single file is fine, and is even a good idea. Multiple files are unnecessary for simple, short programs. But for more complex programs, separating functions off from the rest of the program has some advantages:
 
 * **Clarity**. The functions file shows the algorithmic workings of each component of the program, but the main program file shows how those components are combined to create the overall program structure. We know which file to go to if we want to change either the overall structure or the details of the program.
-* **Portability**. A file that contains only functions can be re-used by a different program. The alternative, copying and pasting the function definition into every program file that needs it, is prone to mistakes and makes our programs inflexible ('[DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself)').
+* **Portability**. A file that contains only functions can be re-used by a different program. The alternative, copying and pasting the function definition into every new program that needs it, is prone to mistakes and makes our programs inflexible ('[DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself)').
 
 A Python file that contains an actual program that will 'do something' when run is often termed a [script](extras/glossary.md#script), because it is providing the Python [interpreter](extras/glossary.md#interpreter) with line-by-line instructions telling it what to do, like the script for an actor. A file that instead contains only function definitions (and possibly also some variables) intended to be used elsewhere is often termed a [module](extras/glossary.md#module). A basic structure for a simple multi-file Python program is to have one module file providing some functions, along with a script file (the 'main' file) that gets those functions and actually does something with them.
 
@@ -20,9 +20,9 @@ Let's see how this works, using the [initials.py](examples/initials.py) file tha
 
 We can almost already create a multi-file program given what we have learned so far, and there is very little in *ids.py* that is unfamiliar. We know how to use functions, and we know how to use additional [control statements](extras/glossary.md#control) to determine what actions are taken when, how often, and so on.
 
-The only new ingredient is how to 'get' the contents of one file into another. This is fairly easy. The [keyword](extras/glossary.md#keyword) `import` runs another Python file and then makes its contents (i.e. any functions or variables that were created in the course of running it) available in the current file. The [syntax](extras/glossary.md#syntax) for importing the contents of a file is simply to write `import` followed by the name of the file, without the *.py* file extension.
+The only new ingredient is how to 'get' the contents of one file into another. This is fairly easy. The [keyword](extras/glossary.md#keyword) `import` runs another Python file and then makes its contents (i.e. any functions or variables that were created in the course of running it) available in the current program. The [syntax](extras/glossary.md#syntax) for importing the contents of a file is simply to write `import` followed by the name of the file, without the *.py* file extension.
 
-So this is how we can import the contents of *initials.py* file into another Python file:
+So this is how we can import the contents of *initials.py* into another Python program:
 
 
 ```python
@@ -33,7 +33,7 @@ We can see this command on [line 12](examples/ids.py#L12) of *ids.py*.
 
 ### Debugging
 
-Note that in order for an `import` statement to work, the file that we are importing must be located in the directory that we are working in. This means the directory in which our main program file is saved. So if you are writing your own example program in the Spyder editor to test the example commands as we go along, make sure that your copy of *initials.py* is located in the same directory in which you have saved your example program.
+Note that in order for an `import` statement to work, the file that we are importing must be located in the directory that we are working in. This is the directory in which our main program file is saved. So if you are writing your own example program in the Spyder editor to test the example commands as we go along, make sure that your copy of *initials.py* is located in the same directory in which you have saved your example program.
 
 If we try to import a module file that does not exist or is not in the current directory, we get an error:
 
@@ -90,7 +90,7 @@ get_initials('Mildred Bonk')
     NameError: name 'get_initials' is not defined
 
 
-There is just one more missing ingredient (I really promise this time, only one more). Instead of just taking everything from the imported file and putting it all into individual variables that we can use in the normal way, Python's `import` puts all the imported contents into their own '[namespace](extras/glossary.md#namespace)'. A namespace is a bit like a directory for variables. It stores multiple variables all under the same name, for neatness of organization. We can access individual variables within a namespace by writing first the name of the namespace (which here is simply the name of the imported module), followed by a dot `.`, like this:
+There is just one more missing ingredient (I really promise this time, only one more). Instead of just taking everything from the imported file and putting it all into individual variables that we can use in the normal way, Python's `import` puts all the imported contents into their own '[namespace](extras/glossary.md#namespace)'. A namespace is a bit like a folder for variables. It stores multiple variables all under the same name, for neatness of organization. We can access individual variables within a namespace by writing first the name of the namespace (which here is simply the name of the imported module), followed by a dot `.`, like this:
 
 
 ```python
@@ -110,7 +110,7 @@ Isn't this just an annoying extra complexity, another chance to get something wr
 
 Imagine that you have a very long program containing a lot of variables. And then you decide that you want to import into this program a very useful but also very long [module](extras/glossary.md#module) that provides some great functions that you need. If `import` simply dumped everything from both files together in the same workspace, then you would need to first check carefully and make sure that none of the names of variables or functions in one file were the same as those in the other, because if they were, the names would 'clash' and one would overwrite the other. By keeping imported things in a separate namespace, such accidental overwrites are avoided. It is entirely possible to import a module (for example called *my_module.py*) containing a function or variable called `x` and also to have something called `x` in your main program. The former will be available as `my_module.x` whereas the latter will be available simply as `x`.
 
-Likewise, imagine that you need to import functions from more than one module. Again, if these modules unfortunately happen to contain functions with the same name, they would overwrite each other if simply dumped into the main workspace. But thanks to namespaces, clashing function names are totally fine; one function can be available as, for example, `module_a.useful_function()` and the other as `module_b.useful_function()`.
+Likewise, imagine that you need to import the contents of more than one module. Again, if these modules unfortunately happen to contain things with the same name, they would overwrite each other if simply dumped into the main workspace. But thanks to namespaces, clashing names are totally fine; for example one function can be available as `module_a.useful_function()` and the other as `module_b.useful_function()`.
 
 ### Star imports
 
@@ -139,11 +139,11 @@ This is sometimes termed a 'star import', because of the use of the 'star' symbo
 
 The star import shortcut is there if you really need it, but the general consensus among Python users is that it is not a good idea. It erases all the benefits that namespaces bring for the robustness and clarity of our program. My advice is to reserve it only for very short programs that only import one module, and whose purpose is simply to demonstrate the use of that one module.
 
-You will sometimes see star imports used in online examples or documentation, to help keep an example short ([here](https://plotnine.readthedocs.io/en/stable/generated/plotnine.geoms.geom_bar.html#examples) is one example). This is fine for examples and demonstrations, but don't copy it into your own programs.
+You will sometimes see star imports used in online examples or demonstrations, to help keep a demonstration short ([here](https://plotnine.readthedocs.io/en/stable/generated/plotnine.geoms.geom_bar.html#examples) is one example). This is fine for a quick demo, but don't copy it into your own programs.
 
 ### Selective imports
 
-A better use of the `from` keyword is to select just one thing that we would like to import from a module. For example, we can import just the `get_initials()` function from *initials.py* (admittedly, this is somewhat redundant here, since `get_initials()` is the only thing in *initials.py* anyway):
+A better use of the `from` keyword is to select just one thing that we would like to import from a module. For example, we can import just the `get_initials()` function from *initials.py* (though this is somewhat redundant here, since `get_initials()` is the only thing in *initials.py* anyway):
 
 
 ```python
@@ -168,9 +168,9 @@ But note that there is a big difference in clarity when compared to the star imp
 
 ## Methods revisited
 
-We have in fact already met [namespaces](extras/glossary.md#namespace) in a slightly different guise. We have learned about [methods](extras/glossary.md#method): functions that are 'attached' to only one [type](extras/glossary.md#type) of variable. We focused mainly on [string](extras/glossary.md#string) methods, because strings have lots of methods available to them. Each variable in Python has its own namespace, and in that namespace are stored links to the methods available for variables of that type.
+We have in fact already met [namespaces](extras/glossary.md#namespace) in a slightly different guise. In the [lesson on types](types.md#Methods) we learned about [methods](extras/glossary.md#method): functions that are 'attached' to only one [type](extras/glossary.md#type) of variable. We focused mainly on [string](extras/glossary.md#string) methods, because strings have lots of methods available to them.
 
-Recall how this works:
+Recall how the syntax for methods works:
 
 
 ```python
@@ -186,7 +186,7 @@ user_name.upper()
 
 
 
-This is the same 'dot' notation that we just used for getting something from an imported module's namespace, because the underlying mechanism is essentially the same.
+This is the same 'dot' notation that we just used for getting something from an imported module's namespace, because the underlying mechanism is essentially the same. Each variable in Python has its own namespace, and in that namespace are stored links to the methods available for variables of that type.
 
 Likewise, just as we used the `dir()` function to find out what methods a variable has available to it, we can also use `dir()` to find out the contents of an imported module's namespace (and again, we can ignore for now the 'special' contents surrounded by double underscores `__ __`):
 
@@ -352,7 +352,7 @@ __name__
 
 The main namespace (i.e. the place where everything goes that wasn't imported from elsewhere) is called `'__main__'`.
 
-We can make use of this fact within our programs to find out whether our program has been imported into another program (in which case it will have its own `__name__` such as `'initials'` or `'my_module'` or whatever) or is just being run directly on its own (in which case its `__name__` will be `'__main__'`).
+We can make use of this fact within our programs to find out whether our program has been imported into another program (in which case it will have its own `__name__`, such as `'initials'` or `'my_module'` or whatever) or whether it is being run directly on its own (in which case its `__name__` will be `'__main__'`).
 
 The short educational program [slim_shady.py](examples/slim_shady.py) demonstrates this difference in action. Let's see first of all what happens if we import *slim_shady.py* as a module:
 
@@ -373,7 +373,7 @@ Now open up *slim_shady.py* in the Spyder editor and instead of importing it, ju
 
 You may now be asking yourself a question that has become quite familiar: This is amazing fun, but what use is it?
 
-Take a look at [line 43](examples/initials.py#L43) of the *initials.py* module. This line applies a [condition](extras/glossary.md#condition), which is something that we are already familiar with. The condition checks whether the value of `__name__` is `'__main__'`, and so is effectively asking 'Am I being run as the main program (or am I just being imported into another program)?' This means that the indented lines following the condition will only be run if we have run the file as its own program, not if we import the file into another program. Try it out. Open *initials.py* in the Spyder editor and run it as a stand-alone program. You will see the results of the final two `print()` statements displayed in the console.
+Take a look at [line 44](examples/initials.py#L44) of the *initials.py* module. This line applies a [condition](extras/glossary.md#condition), which is something that we are already familiar with. The condition checks whether the value of `__name__` is `'__main__'`, and so is effectively asking: 'Am I being run as the main program (or am I just being imported into another program)?' This means that the indented lines following the condition will only be run if we have run the file as its own program, not if we import the file into another program. Try it out. Open *initials.py* in the Spyder editor and run it as a stand-alone program by just clicking 'run'. You will see the results of the final two `print()` statements displayed in the console. Note that we did not see these when we [imported](extras/glossary.md#import) *initials.py* earlier.
 
 The `if __name__ == '__main__':` condition can be useful for us as programmers while developing and testing a [module](extras/glossary.md#module). If we place a few quick checks of our module's behavior beneath this condition, we can keep checking that our module still works as desired each time we make improvements or additions, by just running the module as a [script](extras/glossary.md#script). But our tests won't disturb us or our collaborators when we come to actually use the module by importing it into another program.
 
@@ -381,9 +381,9 @@ This concept of building in tests to our programs and checking their behavior as
 
 ### Special methods
 
-We are done with the most important concepts for this lesson: [modules](extras/glossary.md#module) and [namespaces](extras/glossary.md#namespace). For the sake of completeness, we will now also look briefly at the double-underscored [methods](extras/glossary.md#method) that appear when we `dir()` a [string](extras/glossary.md#string) variable. But consider this bonus material; it provides a peek behind the scenes in Python and is included just to satisfy your curiosity.
+We are done with the most important concepts for this lesson: [modules](extras/glossary.md#module) and [namespaces](extras/glossary.md#namespace). For the sake of completeness, we will now also look briefly at the double-underscored [methods](extras/glossary.md#method) that appear when we `dir()` a variable. But consider this bonus material; it provides a peek behind the scenes in Python and is included just to satisfy your curiosity.
 
-Let's take a look at these special string methods again, using a new string variable:
+Let's take a look at these special string methods again, using a new [string](extras/glossary.md#string) variable:
 
 
 ```python
