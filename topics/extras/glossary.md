@@ -231,6 +231,10 @@ An integer is a whole number. So 2 is an integer, but 1.618 is not. 'Integer', a
 
 A Python interpreter is a computer program that takes our text files of Python commands and turns them into machine code instructions that our computer can understand. We do not especially need to know about or get involved in this process ourselves. Instead, we write our programs as text files of Python commands, and the interpreter takes care of getting our computer to understand them. Strictly, the term 'Python' itself refers to the Python programming language, i.e. a specific set of [syntactical rules](#syntax) that converts text commands into computer actions, but in practice many people use 'Python' to refer also to a Python interpreter program.
 
+## IO
+
+In computing, 'IO' is an abbreviation of 'Input/Output', and refers to anything to do with getting information into and out of a computer program or system. For example, a program may get input from a human being typing at the keyboard or by reading from a text file, and it may send output to the screen or write it into a text file.
+
 ## iterable
 
 A [data type](#type) is 'iterable' if it contains multiple values, and it is possible to 'go through' those values one by one. 'Going through' the values in an iterable is called 'iterating'. [Strings](#string) are iterable (we can iterate through their characters), and so are [lists](#list) and [tuples](#tuple) (we can iterate through their items). [Dictionaries](#dictionary) too are iterable. The most common way of iterating is to use a [loop](#loop).
