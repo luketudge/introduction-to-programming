@@ -2,19 +2,21 @@
 
 To get the most out of the class, you should have some software installed on your own computer so that you can try out the exercises at home.
 
+The instructions provided here assume that the operating system for your computer is either Windows or macOS. If instead of Windows or macOS you are using a popular distribution of Linux such as Ubuntu, follow the [instructions for Linux](linux.md) instead.
+
 ## Essentials
 
 ### Python 3
 
-The main programming language that we will learn about is Python 3. You will need to install it. The easiest way to do this on the most common operating systems (Windows, macOS, or Linux), is to install a program called Anaconda. Anaconda is a 'distribution' of various related pieces of software used in data science. Anaconda installs these separate pieces of software and provides a convenient environment in which to organize, update, and add to them.
+The main programming language that we will learn about is Python 3. You will need to install it.
 
-Download the installer for the Python 3 version of Anaconda [here](https://www.anaconda.com/distribution/). The page should detect your operating system automatically, but otherwise click on the relevant tab for Windows, macOS, or Linux. Additional installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/).
+The easiest way to get Python 3 on the most common operating systems (Windows and macOS), is to install a program called Anaconda. Anaconda is a 'distribution' of various related pieces of software used in data science. Anaconda installs these separate pieces of software and provides a convenient environment in which to organize, update, and add to them.
+
+Download the installer for the Python 3 version of Anaconda [here](https://www.anaconda.com/distribution/). The page should detect your operating system automatically, but otherwise click on the relevant tab for Windows or macOS. Additional installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/). If you encounter problems during or after installation, there is some help provided [here](https://docs.anaconda.com/anaconda/user-guide/troubleshooting/).
 
 One thing that can occasionally cause problems for Anaconda is the name of the user account on your computer. If your username contains spaces or non-English characters (for example *ä* or *ß* or something in Arabic, or Devanagari, etc.), then Anaconda may have trouble understanding which directory your files are stored in. If you encounter error messages about paths or filenames, you could try creating a new user account on your computer with a username that contains only of basic English characters and no spaces. Switch to this account before installing and running Anaconda.
 
-If you are using a popular distribution of Linux such as Ubuntu, Python 3 will already be installed on your computer. You can still install Anaconda if you wish, but you do not need to, and it may be easier to install the few remaining extras via your Linux package manager rather than via Anaconda. Instructions for doing so are provided [here](linux.md).
-
-Be careful not to download and install Python 2. There are some important differences between Python 3 and 2. At a few points during the class we will note some of these differences just so that you are aware of them. But all of the example programs that we write will be for Python 3, and some may not even work correctly with Python 2.
+Be careful not to download and install Python 2. There are some important differences between Python 2 and 3. At a few points during the class we will note some of these differences just so that you are aware of them. But all of the example programs that we write will be for Python 3, and some may not even work correctly with Python 2.
 
 ### Spyder
 
@@ -30,7 +32,7 @@ If you have trouble installing the software as described above, you can instead 
 
 ## Extras
 
-There are a few tools that are useful just for one or two of the topics. Installing these is optional.
+There are a few tools that are useful just for one or two of the topics. Installing these is optional, and you can wait until we get to the relevant topic to decide whether you want to install them.
 
 ### GitHub
 
