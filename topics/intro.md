@@ -170,7 +170,7 @@ Likewise, you can also erase the console's 'memory' of previous commands. This i
 Once deleted, variables cannot be recovered. Proceed (y/[n])?
 ```
 
-Note that the `%reset` command (and a few others that begin with the percent character `%`) is for use in the console only; it is not a valid Python command that you can put in a Python program.
+Note that the `%reset` command (and others that begin with the percent character `%`) is for use in the console only; it is not a valid Python command that you can put in a Python program.
 
 (If you have followed the instructions [here](../software/spyder.md) for configuring Spyder's behavior, the console's memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)
 

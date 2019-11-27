@@ -237,7 +237,7 @@ In computing, 'IO' is an abbreviation of 'Input/Output', and refers to anything 
 
 ## iterable
 
-A [data type](#type) is 'iterable' if it contains multiple values, and it is possible to 'go through' those values one by one. 'Going through' the values in an iterable is called 'iterating'. [Strings](#string) are iterable (we can iterate through their characters), and so are [lists](#list) and [tuples](#tuple) (we can iterate through their items). [Dictionaries](#dictionary) too are iterable. The most common way of iterating is to use a [loop](#loop).
+A [data type](#type) is 'iterable' if it contains multiple values, and it is possible to 'go through' those values one by one. 'Going through' the values in an iterable is called 'iterating'. [Strings](#string) are iterable (we can iterate through their characters), and so are [lists](#list) and [tuples](#tuple) (we can iterate through their items). The most common way of iterating is to use a [loop](#loop).
 
 ## key
 
