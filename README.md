@@ -1,5 +1,6 @@
 # Introduction to Programming
 
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/luketudge/introduction-to-programming)
 [![](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?filepath=topics)
 [![](https://img.shields.io/lgtm/alerts/g/luketudge/introduction-to-programming.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/luketudge/introduction-to-programming/alerts/)
 [![](https://img.shields.io/lgtm/grade/python/g/luketudge/introduction-to-programming.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/luketudge/introduction-to-programming/context:python)
