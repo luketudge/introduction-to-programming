@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Sequences" data-toc-modified-id="Sequences-1">Sequences</a></span><ul class="toc-item"><li><span><a href="#Indexing" data-toc-modified-id="Indexing-1.1">Indexing</a></span></li><li><span><a href="#Slicing" data-toc-modified-id="Slicing-1.2">Slicing</a></span></li><li><span><a href="#Comprehensions" data-toc-modified-id="Comprehensions-1.3">Comprehensions</a></span></li><li><span><a href="#Range" data-toc-modified-id="Range-1.4">Range</a></span><ul class="toc-item"><li><span><a href="#Python-2" data-toc-modified-id="Python-2-1.4.1">Python 2</a></span></li></ul></li></ul></li><li><span><a href="#Mappings" data-toc-modified-id="Mappings-2">Mappings</a></span><ul class="toc-item"><li><span><a href="#Dictionaries" data-toc-modified-id="Dictionaries-2.1">Dictionaries</a></span><ul class="toc-item"><li><span><a href="#Mutability-again" data-toc-modified-id="Mutability-again-2.1.1">Mutability again</a></span></li><li><span><a href="#Dictionary-methods" data-toc-modified-id="Dictionary-methods-2.1.2">Dictionary methods</a></span></li></ul></li></ul></li><li><span><a href="#Choosing-a-data-representation" data-toc-modified-id="Choosing-a-data-representation-3">Choosing a data representation</a></span><ul class="toc-item"><li><span><a href="#Tuple-or-list?" data-toc-modified-id="Tuple-or-list?-3.1">Tuple or list?</a></span></li><li><span><a href="#List-or-dictionary?" data-toc-modified-id="List-or-dictionary?-3.2">List or dictionary?</a></span></li></ul></li><li><span><a href="#Nested-data-representations" data-toc-modified-id="Nested-data-representations-4">Nested data representations</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-5">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-5.1">1</a></span><ul class="toc-item"><li><span><a href="#a)" data-toc-modified-id="a)-5.1.1">a)</a></span></li><li><span><a href="#b)" data-toc-modified-id="b)-5.1.2">b)</a></span></li><li><span><a href="#c)" data-toc-modified-id="c)-5.1.3">c)</a></span></li></ul></li><li><span><a href="#2" data-toc-modified-id="2-5.2">2</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Sequences" data-toc-modified-id="Sequences-1">Sequences</a></span><ul class="toc-item"><li><span><a href="#Indexing" data-toc-modified-id="Indexing-1.1">Indexing</a></span></li><li><span><a href="#Slicing" data-toc-modified-id="Slicing-1.2">Slicing</a></span><ul class="toc-item"><li><span><a href="#Degenerate-indices" data-toc-modified-id="Degenerate-indices-1.2.1">Degenerate indices</a></span></li></ul></li><li><span><a href="#Comprehensions" data-toc-modified-id="Comprehensions-1.3">Comprehensions</a></span></li><li><span><a href="#Range" data-toc-modified-id="Range-1.4">Range</a></span><ul class="toc-item"><li><span><a href="#Python-2" data-toc-modified-id="Python-2-1.4.1">Python 2</a></span></li></ul></li></ul></li><li><span><a href="#Mappings" data-toc-modified-id="Mappings-2">Mappings</a></span><ul class="toc-item"><li><span><a href="#Dictionaries" data-toc-modified-id="Dictionaries-2.1">Dictionaries</a></span><ul class="toc-item"><li><span><a href="#Mutability-again" data-toc-modified-id="Mutability-again-2.1.1">Mutability again</a></span></li><li><span><a href="#Dictionary-methods" data-toc-modified-id="Dictionary-methods-2.1.2">Dictionary methods</a></span></li></ul></li></ul></li><li><span><a href="#Choosing-a-data-representation" data-toc-modified-id="Choosing-a-data-representation-3">Choosing a data representation</a></span><ul class="toc-item"><li><span><a href="#Tuple-or-list?" data-toc-modified-id="Tuple-or-list?-3.1">Tuple or list?</a></span></li><li><span><a href="#List-or-dictionary?" data-toc-modified-id="List-or-dictionary?-3.2">List or dictionary?</a></span></li></ul></li><li><span><a href="#Nested-data-representations" data-toc-modified-id="Nested-data-representations-4">Nested data representations</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-5">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-5.1">1</a></span><ul class="toc-item"><li><span><a href="#a)" data-toc-modified-id="a)-5.1.1">a)</a></span></li><li><span><a href="#b)" data-toc-modified-id="b)-5.1.2">b)</a></span></li><li><span><a href="#c)" data-toc-modified-id="c)-5.1.3">c)</a></span></li></ul></li><li><span><a href="#2" data-toc-modified-id="2-5.2">2</a></span></li></ul></li></ul></div>
 
 # Sequences and mappings
 
@@ -262,6 +262,26 @@ shopping_list[3:]
 
 Note that in the two last examples above, we were able to use the same index (`3`) both to end one slice and to begin another one, without the two slices 'overlapping' (i.e. both containing item `3`). This is one of the subtle advantages of Python's interpretation of indices as 'dividing lines'.
 
+#### Degenerate indices
+
+Python is somewhat forgiving about slices. If we ask for a slice that goes beyond the length of the sequence, instead of an [error](extras/glossary.md#error), we just get as much of the sequence as is possible.
+
+
+```python
+shopping_list[3:9000]
+```
+
+
+
+
+    ['sausages', 'bread', 'Mazola', 'gravy mix']
+
+
+
+An [index](extras/glossary.md#index) that goes beyond the length of a sequence is occasionally termed, in rather colorful language, a 'degenerate index'.
+
+Note that this is different from asking for a *single item* that is beyond the length of the sequence. If we try this, there is no such item for Python to give us, so we do get an error, as we saw above.
+
 ### Comprehensions
 
 We have seen that the square parentheses can be used to create a list. The items in the list are separated by commas. Often, we will want to create a list without having to write out every individual item explicitly. If there is some regular pattern to the items in our desired list, we can generate them based on that pattern. For example, the pattern might be that the items in our desired list are all related to the items in another list in some consistent way.
@@ -495,7 +515,7 @@ info['shoe size']
 
     KeyError                                  Traceback (most recent call last)
 
-    <ipython-input-28-4f6f7f8b880a> in <module>
+    <ipython-input-29-4f6f7f8b880a> in <module>
     ----> 1 info['shoe size']
     
 
@@ -514,7 +534,7 @@ info['USA']
 
     KeyError                                  Traceback (most recent call last)
 
-    <ipython-input-29-bf82e9f85f00> in <module>
+    <ipython-input-30-bf82e9f85f00> in <module>
     ----> 1 info['USA']
     
 
@@ -533,7 +553,7 @@ info[0]
 
     KeyError                                  Traceback (most recent call last)
 
-    <ipython-input-30-cfc788aff63d> in <module>
+    <ipython-input-31-cfc788aff63d> in <module>
     ----> 1 info[0]
     
 
@@ -584,7 +604,7 @@ shopping_tuple[1] = 'organic vegan bacon'
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-33-49481c46064b> in <module>
+    <ipython-input-34-49481c46064b> in <module>
     ----> 1 shopping_tuple[1] = 'organic vegan bacon'
     
 
