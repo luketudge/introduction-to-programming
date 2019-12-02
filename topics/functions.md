@@ -161,7 +161,7 @@ print
 
 ### Keyword arguments
 
-Some functions are a little more complex. As well as taking one or more arguments in the standard way that we have seen so far, some functions can take some additional special arguments that modify the behavior of the function in some way. These arguments have specific names, and we must assign values into those specific names (with `=`) in order to make them work.
+Some functions are a little more complex. As well as taking one or more arguments in the standard way that we have seen so far, some functions can take some additional special arguments that modify the behavior of the function in some way. These arguments have specific names, and we can assign values into those specific names (with `=`) in order to make them work.
 
 If this sounds a little abstract, it will become much clearer with an example. The `print()` function can also take some additional named arguments called `sep` and `end`. `sep` (an abbreviation of 'separator') specifies characters to print in between all the other arguments, and `end` specifies some characters to print at the end:
 
@@ -214,7 +214,7 @@ print('and I am very excited to be using your computer program.')
     Hello my name is Mildredand I am very excited to be using your computer program.
 
 
-When you look at the official Python [documentation for the `print()` function](https://docs.python.org/3/library/functions.html#print), you will see the possible input arguments written out in the header. When you first encounter a function that you would like to use, it is a good idea to seek out the documentation and look for this header, to see what the input arguments are, and whether any of them set default behavior that you might want to change.
+When you look at the official Python [documentation for the `print()` function](https://docs.python.org/3/library/functions.html#print), you will see the possible input arguments written out in the header, and you will see the default values for the keyword arguments. For example, inside the parentheses you will see `end='\n'`, giving the default value for the `end` keyword argument (the character combination `'\n'` is used to represent the [newline character](extras/glossary.md#newline)). When you first encounter a function that you would like to use, it is a good idea to seek out the documentation and look for this header, to see what the input arguments are, and whether any of them set default behavior that you might want to change.
 
 ## Return values
 
