@@ -26,6 +26,8 @@ You can also view interactive versions of the topic pages on [Google Colaborator
 
 ## Specialist topics
 
+* Array computing
+* Images
 * Data analysis
 * Natural language processing
 * The internet
