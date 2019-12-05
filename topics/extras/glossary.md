@@ -27,6 +27,17 @@ For example if we have asked for the user's name using the `input()` function, w
 name = input('What is your name? ')
 ```
 
+## attribute
+
+An attribute is like a variable that is 'attached' to another variable, providing some additional information or functionality. For example, file objects have an attribute called `closed`, which stores a [boolean](#boolean) value stating whether the file is closed or not. We can access attributes using a `.`, like this:
+
+```python
+f = open('example.txt', mode='w')
+f.closed
+```
+
+This is the same [syntax](#syntax) as for accessing a [method](#method). Indeed, methods are a kind of attribute.
+
 ## boolean
 
 A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in Python) stores either of the two possible [values](#value) `True` or `False`. Boolean values often result from a Python command that checks a given condition, for example `2 > 1` [evaluates](#evaluate) to `True` because `2` is indeed greater than `1`.
@@ -264,8 +275,8 @@ A loop is a [control statement](#control) that repeats certain lines of a progra
 Loops can use the `for` and `in` [keywords](#keyword) to repeat the given actions for every item in an [iterable](#iterable). For example:
 
 ```python
-menu = ['jellied eels', 'black pudding', 'blancmange']
-for item in menu:
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
+for item in shopping:
     print(item)
 ```
 
@@ -283,7 +294,7 @@ See [dictionary](#dictionary).
 
 ## method
 
-A method is a [function](#function) that is defined specially for variables of one data [type](#type). For example, there is a [string](#string) method called `upper()`, which [returns](#return) an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The [syntax](#syntax) for using a method is to access it via the variable that we want to apply it to. For example to get an uppercase version of a string variable using the `upper()` method:
+A method is a [function](#function) that is defined specially for variables of one data [type](#type). For example, there is a [string](#string) method called `upper()`, which [returns](#return) an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The [syntax](#syntax) for using a method is to access it via the variable that we want to apply it to, by placing a `.` after the name of the variable. For example to get an uppercase version of a string variable using the `upper()` method:
 
 ```python
 name = 'Mildred'
@@ -303,7 +314,7 @@ If a [type](#type) is 'mutable', this means that a [variable](#variable) of that
 The list in the following example is changed in-place by the `.reverse()` method:
 
 ```python
-shopping = ['eggs', 'bacon', 'black pudding']
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 shopping.reverse()
 ```
 
@@ -345,7 +356,7 @@ If we want to include a newline character in a [string](#string) in Python, we c
 
 ## none
 
-The `None` data [type](#type) in Python is used to indicate something that is absent or undefined.
+The `None` data [type](#type) in Python is used to indicate something that is undefined or has no particular content.
 
 ## operator
 
