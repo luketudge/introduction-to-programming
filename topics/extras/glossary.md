@@ -155,6 +155,17 @@ x + 1
 
 If a [variable](#variable) is enclosed in double underscores, that variable determines something about the organization of a program. For example, the `__file__` variable stores the [path](#path) to the file that the current program is in.
 
+## encoding
+
+Computers store information in the form of numbers. If we want to store text in a computer, we need some way of allocating each text character a unique number, so that when we read the text data, we turn the stored numbers back into the correct characters. A system for allocating a unique number to each character is known as a 'text encoding'. If we need to transfer text data from one computer to another, we need to make sure that the computer reading the data uses the same encoding for reading as the computer that wrote the data used for writing it.
+
+There are many different text encodings, but the two most important ones to be aware of are:
+
+* [ASCII](https://en.wikipedia.org/wiki/ASCII). This system is universally agreed upon and standard across all normal computers, but it only covers the English alphabet. We cannot use ASCII for non-English characters such as `'à'` or for Devanagari, Sinhalese, emojis, etc.
+* [UTF-8](https://en.wikipedia.org/wiki/UTF-8). This system includes many symbols in many writing systems and is by far the most widely-used on the internet. It is also usually the default encoding on Linux [operating systems](#OS). For characters that are defined in the ASCII encoding, UTF-8 uses the same system as ASCII, so for these characters the two encodings are equivalent.
+
+Some [operating systems](#OS), most notably Windows and macOS, do not always use UTF-8 by default to encode non-ASCII characters. They may instead use a variety of other encodings with names like 'Latin-1', 'ISO-8859', or 'Windows-1252'. Some of these are equivalent for certain subsets of characters, and only become incompatible for a few obscure characters, such as special kinds of quote mark. And to add yet more to the confusion, these various non-UTF-8 encodings are frequently given the wrong name, even in official places such as the documentation for Windows.
+
 ## error
 
 Sometimes our program fails and cannot be completed, either because we have not written the program according to the allowed [syntax](#syntax) or because an [exception](#exception) occurs that our program cannot handle. In this case, our program will stop running and Python will display a message with some information about the 'error' that occurred. Any parts of the program that follow the occurrence of the error will not be carried out.
