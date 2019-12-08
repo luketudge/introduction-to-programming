@@ -109,6 +109,10 @@ Ishmael,19,USA
 Sherlock,39,GB
 ```
 
+## dataframe
+
+A structure that stores data in rows and columns is sometimes termed a 'dataframe' in computing. A more everyday term is simply 'table'.
+
 ## delimiter
 
 See [separator](#separator).
@@ -261,6 +265,10 @@ In computing, 'IO' is an abbreviation of 'Input/Output', and refers to anything 
 
 A [data type](#type) is 'iterable' if it contains multiple values, and it is possible to 'go through' those values one by one. 'Going through' the values in an iterable is called 'iterating'. [Strings](#string) are iterable (we can iterate through their characters), and so are [lists](#list) and [tuples](#tuple) (we can iterate through their items). The most common way of iterating is to use a [loop](#loop).
 
+## JSON
+
+JavaScript Object Notation (JSON) is a text file format for storing data. It stores data as a group of nested [lists](#list) and [dictionaries](#dictionary) that contain [strings](#string) and numbers, using the same [syntax](#syntax) as Python. As the name suggests, JSON was inspired by the JavScript programming language, but the syntax of this language was itself inspired by Python and by other similar programming languages. The JSON format is commonly used for transferring data between programs written in different languages, or for transferring data over the internet.
+
 ## key
 
 The 'keys' of a dictionary are the labels under which the values in the dictionary are stored. See the entry on [dictionaries](#dictionary) for a more detailed explanation of this term.
@@ -323,6 +331,8 @@ shouty_name = name.upper()
 A 'module' is simply any text file containing Python commands. However, in practice the term 'module' tends to be reserved for files that do not in themselves run any program that accomplishes a task or produces an output, but instead serve merely to define various [functions](#function) or [variables](#variable) that can be used in other programs. The contents of a module can be incorporated into another program file by [importing](#import) them.
 
 (Compare the term '[script](#script)'.)
+
+We may write our own modules, or we may make use of pre-made modules that are either built in to Python or are provided as part of additional [packages](#package) that we have installed.
 
 ## mutability
 

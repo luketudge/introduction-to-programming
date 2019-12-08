@@ -1,3 +1,3 @@
 #!/bin/bash
 
-zip intro_prog_examples.zip *.py data/*.txt
+zip intro_prog_examples.zip *.py data/*
