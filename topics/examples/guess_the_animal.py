@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Play a game of 'guess the animal'.
-With hints.
+Play a game of 'guess the animal', with hints.
 """
 
 correct_answer = 'african swallow'
