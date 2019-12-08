@@ -279,6 +279,12 @@ shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 
 Lists are very similar to [tuples](#tuple), another kind of sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
 
+## locale
+
+Computer users want to be able to interact with their computer in way that takes into account certain pieces of information about the user's language and location. For example, the user may want dates and currency amounts displayed in a certain format, or they may want to see the time displayed in their time zone. A computer's [operating system](#OS) may store this user-specific information and make it available to all programs so that they can use it to customize the user's experience. This bundle of information is often termed a 'locale'.
+
+Among other things, the locale may contain information on the user's preferred [encoding](#encoding) for new text files.
+
 ## loop
 
 A loop is a [control statement](#control) that repeats certain lines of a program multiple times.
