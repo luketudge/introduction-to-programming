@@ -15,7 +15,7 @@ You can also view interactive versions of the topic pages on [Google Colaborator
 * [Functions](functions.md)
 * [Modules](modules.md)
 * [The standard library](standard_library.md)
-* Files
+* [Files](files.md)
 
 ## Software development
 
