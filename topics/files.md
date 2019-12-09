@@ -1039,119 +1039,23 @@ type(penguins_data)
 
 
 ```python
-penguins_data
+print(penguins_data)
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Bird</th>
-      <th>HeartRate</th>
-      <th>Depth</th>
-      <th>Duration</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>EP19</td>
-      <td>88.8</td>
-      <td>5.0</td>
-      <td>1.050000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>EP19</td>
-      <td>103.4</td>
-      <td>9.0</td>
-      <td>1.183333</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>EP19</td>
-      <td>97.4</td>
-      <td>22.0</td>
-      <td>1.916667</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>EP19</td>
-      <td>85.3</td>
-      <td>25.5</td>
-      <td>3.466667</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>EP19</td>
-      <td>60.6</td>
-      <td>30.5</td>
-      <td>7.083333</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>EP3901</td>
-      <td>48.4</td>
-      <td>170.0</td>
-      <td>11.533333</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>EP3901</td>
-      <td>50.8</td>
-      <td>37.0</td>
-      <td>8.216667</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>EP3901</td>
-      <td>49.6</td>
-      <td>160.0</td>
-      <td>11.300000</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>EP3901</td>
-      <td>56.4</td>
-      <td>180.0</td>
-      <td>10.283333</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>EP3901</td>
-      <td>55.2</td>
-      <td>170.0</td>
-      <td>10.366667</td>
-    </tr>
-  </tbody>
-</table>
-<p>125 rows × 4 columns</p>
-</div>
-
+           Bird  HeartRate  Depth   Duration
+    0      EP19       88.8    5.0   1.050000
+    1      EP19      103.4    9.0   1.183333
+    2      EP19       97.4   22.0   1.916667
+    3      EP19       85.3   25.5   3.466667
+    4      EP19       60.6   30.5   7.083333
+    ..      ...        ...    ...        ...
+    120  EP3901       48.4  170.0  11.533333
+    121  EP3901       50.8   37.0   8.216667
+    122  EP3901       49.6  160.0  11.300000
+    123  EP3901       56.4  180.0  10.283333
+    124  EP3901       55.2  170.0  10.366667
+    
+    [125 rows x 4 columns]
 
 
 The `read_csv()` function has an [argument](extras/glossary.md#argument) called `sep`, which allows us to specify what character is used as the [separator](extras/glossary.md#separator). If we [look at the documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html) we see that the default value for `sep` is `','`.
@@ -1165,302 +1069,64 @@ If we want to read a delimited text file with a semicolon separator, we can spec
 filepath = os.path.join('data', 'penguins_DE.csv')
 penguins_data = pandas.read_csv(filepath, sep=';', decimal=',')
 
-penguins_data
+print(penguins_data)
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Bird</th>
-      <th>HeartRate</th>
-      <th>Depth</th>
-      <th>Duration</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>EP19</td>
-      <td>88.8</td>
-      <td>5.0</td>
-      <td>1.050000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>EP19</td>
-      <td>103.4</td>
-      <td>9.0</td>
-      <td>1.183333</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>EP19</td>
-      <td>97.4</td>
-      <td>22.0</td>
-      <td>1.916667</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>EP19</td>
-      <td>85.3</td>
-      <td>25.5</td>
-      <td>3.466667</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>EP19</td>
-      <td>60.6</td>
-      <td>30.5</td>
-      <td>7.083333</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>EP3901</td>
-      <td>48.4</td>
-      <td>170.0</td>
-      <td>11.533333</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>EP3901</td>
-      <td>50.8</td>
-      <td>37.0</td>
-      <td>8.216667</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>EP3901</td>
-      <td>49.6</td>
-      <td>160.0</td>
-      <td>11.300000</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>EP3901</td>
-      <td>56.4</td>
-      <td>180.0</td>
-      <td>10.283333</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>EP3901</td>
-      <td>55.2</td>
-      <td>170.0</td>
-      <td>10.366667</td>
-    </tr>
-  </tbody>
-</table>
-<p>125 rows × 4 columns</p>
-</div>
-
+           Bird  HeartRate  Depth   Duration
+    0      EP19       88.8    5.0   1.050000
+    1      EP19      103.4    9.0   1.183333
+    2      EP19       97.4   22.0   1.916667
+    3      EP19       85.3   25.5   3.466667
+    4      EP19       60.6   30.5   7.083333
+    ..      ...        ...    ...        ...
+    120  EP3901       48.4  170.0  11.533333
+    121  EP3901       50.8   37.0   8.216667
+    122  EP3901       49.6  160.0  11.300000
+    123  EP3901       56.4  180.0  10.283333
+    124  EP3901       55.2  170.0  10.366667
+    
+    [125 rows x 4 columns]
 
 
 As well as just providing a neater display format, `pandas`' interpretation of delimited text files as tables allows us to analyze and manipulate the data more easily than as raw text. For example, the `pandas.DataFrame` has a method `describe()` for producing a statistical summary of the data:
 
 
 ```python
-penguins_data.describe()
+print(penguins_data.describe())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>HeartRate</th>
-      <th>Depth</th>
-      <th>Duration</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>125.000000</td>
-      <td>125.00000</td>
-      <td>125.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>56.924000</td>
-      <td>56.79936</td>
-      <td>7.311231</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>26.343033</td>
-      <td>47.75013</td>
-      <td>4.074564</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>22.800000</td>
-      <td>5.00000</td>
-      <td>1.050000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>36.300000</td>
-      <td>30.56000</td>
-      <td>3.299983</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>48.400000</td>
-      <td>40.87000</td>
-      <td>8.100000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>76.600000</td>
-      <td>56.15000</td>
-      <td>10.500000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>134.000000</td>
-      <td>225.00000</td>
-      <td>18.150000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+            HeartRate      Depth    Duration
+    count  125.000000  125.00000  125.000000
+    mean    56.924000   56.79936    7.311231
+    std     26.343033   47.75013    4.074564
+    min     22.800000    5.00000    1.050000
+    25%     36.300000   30.56000    3.299983
+    50%     48.400000   40.87000    8.100000
+    75%     76.600000   56.15000   10.500000
+    max    134.000000  225.00000   18.150000
 
 
 And it allows us to select columns using a list of column names as an [index](extras/glossary.md#index) (Note the double square parentheses, one set for indexing, and one set to indicate that the indices take the form of a [list](extras/glossary.md#list)):
 
 
 ```python
-penguins_data[['Depth', 'Duration']]
+print(penguins_data[['Depth', 'Duration']])
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Depth</th>
-      <th>Duration</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.0</td>
-      <td>1.050000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>9.0</td>
-      <td>1.183333</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>22.0</td>
-      <td>1.916667</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>25.5</td>
-      <td>3.466667</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>30.5</td>
-      <td>7.083333</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>170.0</td>
-      <td>11.533333</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>37.0</td>
-      <td>8.216667</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>160.0</td>
-      <td>11.300000</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>180.0</td>
-      <td>10.283333</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>170.0</td>
-      <td>10.366667</td>
-    </tr>
-  </tbody>
-</table>
-<p>125 rows × 2 columns</p>
-</div>
-
+         Depth   Duration
+    0      5.0   1.050000
+    1      9.0   1.183333
+    2     22.0   1.916667
+    3     25.5   3.466667
+    4     30.5   7.083333
+    ..     ...        ...
+    120  170.0  11.533333
+    121   37.0   8.216667
+    122  160.0  11.300000
+    123  180.0  10.283333
+    124  170.0  10.366667
+    
+    [125 rows x 2 columns]
 
 
 We will set `pandas` aside for now, but we will come back to it in more detail when we learn about using Python for data analysis.
