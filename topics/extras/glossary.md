@@ -27,6 +27,17 @@ For example if we have asked for the user's name using the `input()` function, w
 name = input('What is your name? ')
 ```
 
+## attribute
+
+An attribute is like a variable that is 'attached' to another variable, providing some additional information or functionality. For example, file objects have an attribute called `closed`, which stores a [boolean](#boolean) value stating whether the file is closed or not. We can access attributes using a `.`, like this:
+
+```python
+f = open('example.txt', mode='w')
+f.closed
+```
+
+This is the same [syntax](#syntax) as for accessing a [method](#method). Indeed, methods are a kind of attribute.
+
 ## boolean
 
 A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in Python) stores either of the two possible [values](#value) `True` or `False`. Boolean values often result from a Python command that checks a given condition, for example `2 > 1` [evaluates](#evaluate) to `True` because `2` is indeed greater than `1`.
@@ -98,6 +109,10 @@ Ishmael,19,USA
 Sherlock,39,GB
 ```
 
+## dataframe
+
+A structure that stores data in rows and columns is sometimes termed a 'dataframe' in computing. A more everyday term is simply 'table'.
+
 ## delimiter
 
 See [separator](#separator).
@@ -143,6 +158,17 @@ x + 1
 ```
 
 If a [variable](#variable) is enclosed in double underscores, that variable determines something about the organization of a program. For example, the `__file__` variable stores the [path](#path) to the file that the current program is in.
+
+## encoding
+
+Computers store information in the form of numbers. If we want to store text in a computer, we need some way of allocating each text character a unique number, so that when we read the text data, we turn the stored numbers back into the correct characters. A system for allocating a unique number to each character is known as a 'text encoding'. If we need to transfer text data from one computer to another, we need to make sure that the computer reading the data uses the same encoding for reading as the computer that wrote the data used for writing it.
+
+There are many different text encodings, but the two most important ones to be aware of are:
+
+* [ASCII](https://en.wikipedia.org/wiki/ASCII). This system is universally agreed upon and standard across all normal computers, but it only covers the English alphabet. We cannot use ASCII for non-English characters such as `'à'` or for Devanagari, Sinhalese, emojis, etc.
+* [UTF-8](https://en.wikipedia.org/wiki/UTF-8). This system includes many symbols in many writing systems and is by far the most widely-used on the internet. It is also usually the default encoding on Linux [operating systems](#OS). For characters that are defined in the ASCII encoding, UTF-8 uses the same system as ASCII, so for these characters the two encodings are equivalent.
+
+Some [operating systems](#OS), most notably Windows and macOS, do not always use UTF-8 by default to encode non-ASCII characters. They may instead use a variety of other encodings with names like 'Latin-1', 'ISO-8859', or 'Windows-1252'. Some of these are equivalent for certain subsets of characters, and only become incompatible for a few obscure characters, such as special kinds of quote mark. And to add yet more to the confusion, these various non-UTF-8 encodings are frequently given the wrong name, even in official places such as the documentation for Windows.
 
 ## error
 
@@ -239,6 +265,10 @@ In computing, 'IO' is an abbreviation of 'Input/Output', and refers to anything 
 
 A [data type](#type) is 'iterable' if it contains multiple values, and it is possible to 'go through' those values one by one. 'Going through' the values in an iterable is called 'iterating'. [Strings](#string) are iterable (we can iterate through their characters), and so are [lists](#list) and [tuples](#tuple) (we can iterate through their items). The most common way of iterating is to use a [loop](#loop).
 
+## JSON
+
+JavaScript Object Notation (JSON) is a text file format for storing data. It stores data as a group of nested [lists](#list) and [dictionaries](#dictionary) that contain [strings](#string) and numbers, using the same [syntax](#syntax) as Python. As the name suggests, JSON was inspired by the JavScript programming language, but the syntax of this language was itself inspired by Python and by other similar programming languages. The JSON format is commonly used for transferring data between programs written in different languages, or for transferring data over the internet.
+
 ## key
 
 The 'keys' of a dictionary are the labels under which the values in the dictionary are stored. See the entry on [dictionaries](#dictionary) for a more detailed explanation of this term.
@@ -257,6 +287,12 @@ shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 
 Lists are very similar to [tuples](#tuple), another kind of sequence. The difference is that tuples are [immutable](#mutability), whereas lists are [mutable](#list).
 
+## locale
+
+Computer users want to be able to interact with their computer in way that takes into account certain pieces of information about the user's language and location. For example, the user may want dates and currency amounts displayed in a certain format, or they may want to see the time displayed in their time zone. A computer's [operating system](#OS) may store this user-specific information and make it available to all programs so that they can use it to customize the user's experience. This bundle of information is often termed a 'locale'.
+
+Among other things, the locale may contain information on the user's preferred [encoding](#encoding) for new text files.
+
 ## loop
 
 A loop is a [control statement](#control) that repeats certain lines of a program multiple times.
@@ -264,8 +300,8 @@ A loop is a [control statement](#control) that repeats certain lines of a progra
 Loops can use the `for` and `in` [keywords](#keyword) to repeat the given actions for every item in an [iterable](#iterable). For example:
 
 ```python
-menu = ['jellied eels', 'black pudding', 'blancmange']
-for item in menu:
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
+for item in shopping:
     print(item)
 ```
 
@@ -283,7 +319,7 @@ See [dictionary](#dictionary).
 
 ## method
 
-A method is a [function](#function) that is defined specially for variables of one data [type](#type). For example, there is a [string](#string) method called `upper()`, which [returns](#return) an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The [syntax](#syntax) for using a method is to access it via the variable that we want to apply it to. For example to get an uppercase version of a string variable using the `upper()` method:
+A method is a [function](#function) that is defined specially for variables of one data [type](#type). For example, there is a [string](#string) method called `upper()`, which [returns](#return) an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The [syntax](#syntax) for using a method is to access it via the variable that we want to apply it to, by placing a `.` after the name of the variable. For example to get an uppercase version of a string variable using the `upper()` method:
 
 ```python
 name = 'Mildred'
@@ -296,6 +332,8 @@ A 'module' is simply any text file containing Python commands. However, in pract
 
 (Compare the term '[script](#script)'.)
 
+We may write our own modules, or we may make use of pre-made modules that are either built in to Python or are provided as part of additional [packages](#package) that we have installed.
+
 ## mutability
 
 If a [type](#type) is 'mutable', this means that a [variable](#variable) of that type can have its contents changed or updated without having to be completely overwritten and [re-assigned](#assignment). For example, [lists](#list) are mutable, because applying a list [method](#method) can change the contents of the list without us assigning any result back into the list with `=`. When a mutable variable is changed even though we have not re-assigned it, we sometimes say that it has been changed 'in-place'.
@@ -303,7 +341,7 @@ If a [type](#type) is 'mutable', this means that a [variable](#variable) of that
 The list in the following example is changed in-place by the `.reverse()` method:
 
 ```python
-shopping = ['eggs', 'bacon', 'black pudding']
+shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 shopping.reverse()
 ```
 
@@ -345,7 +383,7 @@ If we want to include a newline character in a [string](#string) in Python, we c
 
 ## none
 
-The `None` data [type](#type) in Python is used to indicate something that is absent or undefined.
+The `None` data [type](#type) in Python is used to indicate something that is undefined or has no particular content.
 
 ## operator
 
