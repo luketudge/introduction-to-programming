@@ -237,15 +237,22 @@ print('Your name has', n_letters, 'letters.')
 
 Does the `print()` function have a [return value](extras/glossary.md#return)? At first, it may seem as though it does. Doesn't it return the printed text?
 
+Let's see what happens if we try to [assign](extras/glossary.md#assignment) the return value of `print()` into a variable:
+
 
 ```python
 text = print('Hello.')
-
-type(text)
 ```
 
     Hello.
 
+
+What is the [type](extras/glossary.md#type) of this variable? If `print()` returns the printed text, then we should expect that this variable is a [string](extras/glossary.md#string). But it is not:
+
+
+```python
+type(text)
+```
 
 
 
@@ -254,7 +261,9 @@ type(text)
 
 
 
-As we can see here, `print()` has no return value (it returns [`None`](extras/glossary.md#none)). It is important to distinguish between what a function *does* and what it *returns*. Sometimes, a function simply 'does things' but does not produce a return value that we can [assign](extras/glossary.md#assignment) into a variable. The *effect* of the `print()` function is to display text, but the text is not its return value. Any effects of a function that are not reflected in its return value are termed 'side effects' of the function. Displaying text is a 'side effect' of the `print()` function, though that may sound like a strange way of talking about it.
+As we can see here, `print()` returns [`None`](extras/glossary.md#none). The `None` value in Python stands for something that has not been defined, so if we get `None` as the return value of a function, this essentially means that the function has no return value.
+
+It is important to distinguish between what a function *does* and what it *returns*. Sometimes, a function simply 'does things' but does not produce a return value that we can [assign](extras/glossary.md#assignment) into a variable. The *effect* of the `print()` function is to display text, but the text is not its return value. Any effects of a function that are not reflected in its return value are termed 'side effects' of the function. Displaying text is a 'side effect' of the `print()` function, though that may sound like a strange way of talking about it.
 
 We have encountered this phenomenon before in a slightly different guise when we learned about list methods. Remember that list methods just go ahead and change the list, and they don't return the changed list, they return `None`. Changing the contents of the list is a 'side effect' of list methods.
 
@@ -334,7 +343,7 @@ user_id = get_initials(user_name)
 
     NameError                                 Traceback (most recent call last)
 
-    <ipython-input-19-05f0e1156bc4> in <module>
+    <ipython-input-20-05f0e1156bc4> in <module>
     ----> 1 user_id = get_initials(user_name)
     
 
@@ -404,7 +413,7 @@ print(initials)
 
     NameError                                 Traceback (most recent call last)
 
-    <ipython-input-22-af522d26ad22> in <module>
+    <ipython-input-23-af522d26ad22> in <module>
     ----> 1 print(initials)
     
 
@@ -529,7 +538,7 @@ raise ValueError('OMG that is not valid. You have broken your computer FOR EVER.
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-29-b55543e1f431> in <module>
+    <ipython-input-30-b55543e1f431> in <module>
     ----> 1 raise ValueError('OMG that is not valid. You have broken your computer FOR EVER.')
     
 
@@ -583,11 +592,11 @@ get_initials('Mildred T. Bonk')
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-32-d78bf5992a4b> in <module>
+    <ipython-input-33-d78bf5992a4b> in <module>
     ----> 1 get_initials('Mildred T. Bonk')
     
 
-    <ipython-input-30-ab9b076cef55> in get_initials(name, n, uppercase)
+    <ipython-input-31-ab9b076cef55> in get_initials(name, n, uppercase)
           4     if n_names != 2:
           5         error_message = "'{}' contains {} names but should contain 2."
     ----> 6         raise ValueError(error_message.format(name, n_names))
