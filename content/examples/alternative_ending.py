@@ -15,7 +15,7 @@ filepath = os.path.join('data', filename)
 
 alt_file_prefix = 'alternative_'
 alt_filepath = os.path.join('data', alt_file_prefix + filename)
-alt_ending = '\n\nBut then I woke up and it was all a dream.\n'
+alt_ending = '\n\nBut then I woke up and it was all a dream!\n'
 
 end_text = 'the end'
 

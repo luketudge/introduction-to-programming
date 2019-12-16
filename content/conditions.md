@@ -466,8 +466,6 @@ if user_name == 'David Hasselhoff':
 
 If you have written an `if` statement followed by multiple indented lines, you may find it helpful to hold up a ruler to your computer screen to check that the indentation is consistent throughout. This is a technique that even expert Python programmers have to resort to at some point.
 
-![](images/indentation.png)
-
 Now consider what happens in the variation below:
 
 

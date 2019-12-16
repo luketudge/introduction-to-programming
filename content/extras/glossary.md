@@ -1,6 +1,6 @@
 # Glossary
 
-Like any other specialists, computer programmers use a lot of arcane vocabulary. Although much of this vocabulary could be simplified to everyday words that mean almost the same things, it is worth knowing the following basic technical terms, for a few reasons:
+Like any other specialists, computer programmers use a lot of arcane vocabulary. Although some of this vocabulary could be simplified to everyday words that mean almost the same things, it is worth knowing the following basic technical terms, for a few reasons:
 
 * You are more likely to find the answers to your programming questions in internet searches if you formulate your search using the right terms.
 * The answers you find in internet searches will mostly be written using these terms.
