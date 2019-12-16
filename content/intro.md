@@ -1,3 +1,6 @@
+<h1>Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Computer-programs" data-toc-modified-id="Computer-programs-1">Computer programs</a></span></li><li><span><a href="#A-Python-program" data-toc-modified-id="A-Python-program-2">A Python program</a></span></li><li><span><a href="#More-Python-programs" data-toc-modified-id="More-Python-programs-3">More Python programs</a></span><ul class="toc-item"><li><span><a href="#greeting.py" data-toc-modified-id="greeting.py-3.1">greeting.py</a></span></li><li><span><a href="#greeting_personal.py" data-toc-modified-id="greeting_personal.py-3.2">greeting_personal.py</a></span></li></ul></li><li><span><a href="#Using-an-IDE" data-toc-modified-id="Using-an-IDE-4">Using an IDE</a></span><ul class="toc-item"><li><span><a href="#The-editor" data-toc-modified-id="The-editor-4.1">The editor</a></span></li><li><span><a href="#The-console" data-toc-modified-id="The-console-4.2">The console</a></span></li></ul></li><li><span><a href="#Using-the-class-notes" data-toc-modified-id="Using-the-class-notes-5">Using the class notes</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-6">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-6.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-6.2">2</a></span></li></ul></li></ul></div>
+
 # Creating a computer program with Python
 
 ## Computer programs
@@ -16,6 +19,7 @@ We won't create any programs that are as complex as Picard, which is the result 
 
 A Python computer program can be as simple as a single file. This is what we will start with. Try opening up Notepad or your favorite text editor, and typing into it the Python command below. Make sure that you use a pure text editor like Notepad and not a word processor like Microsoft Word, because a word processor may not be able to save plain text or may insert additional unwanted content into a text file.
 
+
 ```python
 print('Hello.')
 ```
@@ -24,13 +28,9 @@ The rules governing what counts as a valid command in a programming language are
 
 Now save your new text file somewhere on your computer with the file extension *.py*, for example as *my_program.py*. Note also that most programming languages do not cope well with files that have spaces in their names (the interpreter may think that a file name with a space refers to two separate files or commands), so avoid spaces in the filename and use the underscore character (`_`) to separate words instead.
 
-The *.py* file extension does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions [here](../software) if you haven't already.)
+The *.py* file extension does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions [here](extras/software) if you haven't already.)
 
-There are various ways to run a *.py* file with the Python interpreter. For example, we can just run it the old-school way from the command line as shown below.
-
-![](images/command_line.png)
-
-However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and [configured](../software/spyder.md) Spyder, then start it up. In Spyder, use the **Open** option from the **File** menu (or the 'open' icon 📂) to open the text file that you just created.
+There are various ways to run a *.py* file with the Python interpreter. For example, we can just run it the old-school way from the command line. However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and [configured](extras/software/spyder.md) Spyder, then start it up. In Spyder, use the **Open** option from the **File** menu (or the 'open' icon 📂) to open the text file that you just created.
 
 The green **Run** arrow (▶) will run the currently open Python file. Click on this arrow, and then look at the **Console** window to see the effects of running your program. Whereas the editor window displays the *contents* of the text file containing the program, just as any other text editor would, the console window shows the *effects* of running the program (or of running other Python commands).
 
@@ -47,6 +47,7 @@ Python is designed to be a more or less human-readable programming language, so 
 * The quote marks `''` indicate to Python that the text that they enclose should be treated just as plain text (and not for example as a math formula, or a reference to another Python file or some other stored information).
 
 What if we write a program that does not contain valid Python [syntax](extras/glossary.md#syntax)? For example, what if we forget to enclose the text that we would like to print in quote marks? Try editing your program so as to omit the quote marks, like this:
+
 
 ```python
 print(Hello.)
@@ -67,15 +68,16 @@ As the class progresses, we will cover more of the rules of Python syntax. Later
 
 ## More Python programs
 
-### [greeting.py](examples/greeting.py)
+You can find all the example programs [here](examples). The compressed file [intro_prog_examples.zip](examples/intro_prog_examples.zip) contains all the programs. Download this file and unzip it to the directory that you are working in.
 
-Open the example program *greeting.py* in Spyder.
+### greeting.py
 
-(You can find all the example programs [here](examples). The compressed file [intro_prog_examples.zip](examples/intro_prog_examples.zip) contains all the programs. Download this file and unzip it to the directory that you are working in.)
+Open the example program [greeting.py](examples/greeting.py) in Spyder.
 
 This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.
 
 The first of these is the [docstring](extras/glossary.md#docstring) at the top of the program:
+
 
 ```python
 """
@@ -86,6 +88,7 @@ A program to print out a welcome message.
 Text placed in triple quotes at the top of a program (and in some other places, as we will learn later) provides extra information for other developers or users of our program. Use this space to describe briefly what your program does, and for more complex programs some indication of how to use it.
 
 If you start a new Python text file in Spyder via **New file** in the **File** menu (or via the icon), you will see that Spyder inserts a docstring automatically. Something like this:
+
 
 ```python
 # -*- coding: utf-8 -*-
@@ -102,9 +105,9 @@ The second new feature in *greeting.py* is the [inline comment](extras/glossary.
 
 Finally, on [line 6](examples/greeting.py#L6) we see an example of another use of comments: to make a 'note to self' of what still needs to be added to the program. It is conventional to mark such comments with the text `TODO`. Here we have noted that we would like to make the greeting personal by asking the user to type in their name. This is what the next example program achieves.
 
-### [greeting_personal.py](examples/greeting_personal.py)
+### greeting_personal.py
 
-Open the *greeting_personal.py* program. Before you run it, read the Python commands that it contains and try to guess what the effect of running the program will be. Then run the program to check your guess.
+Open the [greeting_personal.py](examples/greeting_personal.py) program. Before you run it, read the Python commands that it contains and try to guess what the effect of running the program will be. Then run the program to check your guess.
 
 This program requires the user to type in some information. As with *greeting.py*, all the action occurs over in the console window. After you click on the 'run' icon, look to the console window. You should see that the program has displayed a 'prompt', i.e. some text telling the user what they are expected to do, and is now waiting for the user to type something in.
 
@@ -166,15 +169,46 @@ The shortcut *Ctrl* + *l* will clear away any output that is currently in the co
 
 Likewise, you can also erase the console's 'memory' of previous commands. This is a more useful feature. For example, if you would like to test out something completely new, you do not want to accidentally refer to variables that you have defined in previous commands while you were testing out something else. To 'reset' the console type in the command `%reset`. You will be prompted to confirm that you really want to delete all the variables you have defined so far:
 
+
+```python
+%reset
 ```
-Once deleted, variables cannot be recovered. Proceed (y/[n])?
-```
+
+    Once deleted, variables cannot be recovered. Proceed (y/[n])? y
+
 
 Note that the `%reset` command (and others that begin with the percent character `%`) is for use in the console only; it is not a valid Python command that you can put in a Python program.
 
-(If you have followed the instructions [here](../software/spyder.md) for configuring Spyder's behavior, the console's memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)
+(If you have followed the [recommended configuration instructions](extras/software/spyder.md) for Spyder, the console's memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)
 
-If you want to check what variables you have currently defined in the console (if any), and see some information about them, you can look in Spyder's **Variable explorer** tab.
+If you want to check what variables you have currently defined in the console (if any), and see some information about them, you can look in Spyder's **Variable explorer** tab. It looks like this:
+
+![](images/variable_explorer.png)
+
+## Using the class notes
+
+In this introductory lesson, you have already seen a few examples of Python commands. These are always presented with a different font and background, like this:
+
+
+```python
+print('Hello.')
+```
+
+When you encounter such examples, you can type them into your own Spyder console to see their effects. You should explore and try out variations of some of the commands, to check that you understand how they work (remember that you can press the up arrow key in the console to retrieve and edit the last command that you entered).
+
+For most of the examples of Python commands above, I presented them without showing their effects, so as to encourage you to try them out yourself. From now on, I will always show the example commands together with their expected effects (if any) displayed immediately below. Like this:
+
+
+```python
+print('Hello.')
+```
+
+    Hello.
+
+
+Wherever you see a link to an example program (for example [greeting_personal.py](examples/greeting_personal.py)), it will take you to an online page displaying the program. To run and edit the example programs yourself, you should first download them to your computer. You can get all the examples by downloading and unzipping the file [intro_prog_examples.zip](examples/intro_prog_examples.zip).
+
+Most of the other links in the topic pages will take you to the [glossary](extras/glossary.md). Here there are explanations of important Python and general programming terms. You can follow these links to refresh your memory if you have forgotten what a term means.
 
 That's it for this topic. Try the exercises below to get some practice.
 
@@ -186,6 +220,8 @@ Open the [greeting_personal.py](examples/greeting_personal.py) program. Save a n
 
 * Improve the input part of the program so that it looks a little neater for the user when they type in their name. Add a space between the input prompt and the position where the user starts typing, so that when they type they see for example `What is your name? Mildred` instead of `What is your name?Mildred`.
 * Add a dot to the end of the printed output so that it forms a correctly punctuated sentence. So the user sees for example `Hello Mildred.` instead of just `Hello Mildred`.
+
+Make sure to run your improved version to check that your changes work as expected.
 
 ### 2
 

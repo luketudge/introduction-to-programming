@@ -1,6 +1,7 @@
 #### Project-specific ignores ####
 
-topics/examples/data/alternative_*
+content/examples/data/alternative_*
+
 
 #### General Python ignores ####
 
