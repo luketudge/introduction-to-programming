@@ -1,6 +1,6 @@
 # Topics
 
-You can also view interactive versions of the topic pages on [Google Colaboratory](https://colab.research.google.com/github/luketudge/introduction-to-programming) or on [Binder](https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?filepath=topics).
+You can also view interactive versions of the topic pages on [Binder](https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?filepath=topics) (can be quite slow to load) or [Google Colaboratory](https://colab.research.google.com/github/luketudge/introduction-to-programming) (works better, but requires a Google account).
 
 ## Get started
 
@@ -19,6 +19,7 @@ You can also view interactive versions of the topic pages on [Google Colaborator
 
 ## Software development
 
+* The command line
 * Testing
 * Collaboration
 * Documentation

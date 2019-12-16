@@ -24,13 +24,13 @@ The rules governing what counts as a valid command in a programming language are
 
 Now save your new text file somewhere on your computer with the file extension *.py*, for example as *my_program.py*. Note also that most programming languages do not cope well with files that have spaces in their names (the interpreter may think that a file name with a space refers to two separate files or commands), so avoid spaces in the filename and use the underscore character (`_`) to separate words instead.
 
-The *.py* file extension does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions [here](../software) if you haven't already.)
+The *.py* file extension does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions [here](extras/software) if you haven't already.)
 
 There are various ways to run a *.py* file with the Python interpreter. For example, we can just run it the old-school way from the command line as shown below.
 
 ![](images/command_line.png)
 
-However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and [configured](../software/spyder.md) Spyder, then start it up. In Spyder, use the **Open** option from the **File** menu (or the 'open' icon 📂) to open the text file that you just created.
+However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and [configured](extras/software/spyder.md) Spyder, then start it up. In Spyder, use the **Open** option from the **File** menu (or the 'open' icon 📂) to open the text file that you just created.
 
 The green **Run** arrow (▶) will run the currently open Python file. Click on this arrow, and then look at the **Console** window to see the effects of running your program. Whereas the editor window displays the *contents* of the text file containing the program, just as any other text editor would, the console window shows the *effects* of running the program (or of running other Python commands).
 
@@ -67,11 +67,11 @@ As the class progresses, we will cover more of the rules of Python syntax. Later
 
 ## More Python programs
 
+You can find all the example programs [here](examples). The compressed file [intro_prog_examples.zip](examples/intro_prog_examples.zip) contains all the programs. Download this file and unzip it to the directory that you are working in.
+
 ### [greeting.py](examples/greeting.py)
 
 Open the example program *greeting.py* in Spyder.
-
-(You can find all the example programs [here](examples). The compressed file [intro_prog_examples.zip](examples/intro_prog_examples.zip) contains all the programs. Download this file and unzip it to the directory that you are working in.)
 
 This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.
 
@@ -172,7 +172,7 @@ Once deleted, variables cannot be recovered. Proceed (y/[n])?
 
 Note that the `%reset` command (and others that begin with the percent character `%`) is for use in the console only; it is not a valid Python command that you can put in a Python program.
 
-(If you have followed the instructions [here](../software/spyder.md) for configuring Spyder's behavior, the console's memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)
+(If you have followed the instructions [here](extras/software/spyder.md) for configuring Spyder's behavior, the console's memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)
 
 If you want to check what variables you have currently defined in the console (if any), and see some information about them, you can look in Spyder's **Variable explorer** tab.
 
