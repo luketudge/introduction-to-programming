@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Imports" data-toc-modified-id="Imports-1">Imports</a></span><ul class="toc-item"><li><span><a href="#Debugging" data-toc-modified-id="Debugging-1.1">Debugging</a></span></li><li><span><a href="#Namespaces" data-toc-modified-id="Namespaces-1.2">Namespaces</a></span></li><li><span><a href="#Star-imports" data-toc-modified-id="Star-imports-1.3">Star imports</a></span></li><li><span><a href="#Selective-imports" data-toc-modified-id="Selective-imports-1.4">Selective imports</a></span></li></ul></li><li><span><a href="#Methods-revisited" data-toc-modified-id="Methods-revisited-2">Methods revisited</a></span></li><li><span><a href="#Special-names" data-toc-modified-id="Special-names-3">Special names</a></span><ul class="toc-item"><li><span><a href="#Special-variables" data-toc-modified-id="Special-variables-3.1">Special variables</a></span></li><li><span><a href="#Special-methods" data-toc-modified-id="Special-methods-3.2">Special methods</a></span></li></ul></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-4">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-4.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-4.2">2</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Imports" data-toc-modified-id="Imports-1">Imports</a></span><ul class="toc-item"><li><span><a href="#Debugging" data-toc-modified-id="Debugging-1.1">Debugging</a></span></li><li><span><a href="#Namespaces" data-toc-modified-id="Namespaces-1.2">Namespaces</a></span></li><li><span><a href="#Star-imports" data-toc-modified-id="Star-imports-1.3">Star imports</a></span></li><li><span><a href="#Selective-imports" data-toc-modified-id="Selective-imports-1.4">Selective imports</a></span></li></ul></li><li><span><a href="#Methods-revisited" data-toc-modified-id="Methods-revisited-2">Methods revisited</a></span></li><li><span><a href="#Special-names" data-toc-modified-id="Special-names-3">Special names</a></span><ul class="toc-item"><li><span><a href="#Special-variables" data-toc-modified-id="Special-variables-3.1">Special variables</a></span><ul class="toc-item"><li><span><a href="#__name__" data-toc-modified-id="__name__-3.1.1"><code>__name__</code></a></span></li></ul></li><li><span><a href="#Special-methods" data-toc-modified-id="Special-methods-3.2">Special methods</a></span></li></ul></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-4">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-4.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-4.2">2</a></span></li></ul></li></ul></div>
 
 # Modules
 
@@ -248,6 +248,8 @@ print(initials.__doc__)
     
 
 
+#### `__name__`
+
 It is rare that we will want to refer to these special variables in a simple program. But there is one common exception to this. Take a look at [line 43](examples/initials.py#L43) of *initials.py*. This line refers to a special variable, called `__name__`.
 
 To understand how this special variable is being used here, let's first look at its contents:
@@ -389,90 +391,44 @@ Let's take a look at these special string methods again, using a new [string](ex
 ```python
 word = 'Hello'
 
-dir(word)
+for x in dir(word):
+    if x.startswith('__'):
+        print(x)
 ```
 
-
-
-
-    ['__add__',
-     '__class__',
-     '__contains__',
-     '__delattr__',
-     '__dir__',
-     '__doc__',
-     '__eq__',
-     '__format__',
-     '__ge__',
-     '__getattribute__',
-     '__getitem__',
-     '__getnewargs__',
-     '__gt__',
-     '__hash__',
-     '__init__',
-     '__init_subclass__',
-     '__iter__',
-     '__le__',
-     '__len__',
-     '__lt__',
-     '__mod__',
-     '__mul__',
-     '__ne__',
-     '__new__',
-     '__reduce__',
-     '__reduce_ex__',
-     '__repr__',
-     '__rmod__',
-     '__rmul__',
-     '__setattr__',
-     '__sizeof__',
-     '__str__',
-     '__subclasshook__',
-     'capitalize',
-     'casefold',
-     'center',
-     'count',
-     'encode',
-     'endswith',
-     'expandtabs',
-     'find',
-     'format',
-     'format_map',
-     'index',
-     'isalnum',
-     'isalpha',
-     'isdecimal',
-     'isdigit',
-     'isidentifier',
-     'islower',
-     'isnumeric',
-     'isprintable',
-     'isspace',
-     'istitle',
-     'isupper',
-     'join',
-     'ljust',
-     'lower',
-     'lstrip',
-     'maketrans',
-     'partition',
-     'replace',
-     'rfind',
-     'rindex',
-     'rjust',
-     'rpartition',
-     'rsplit',
-     'rstrip',
-     'split',
-     'splitlines',
-     'startswith',
-     'strip',
-     'swapcase',
-     'title',
-     'translate',
-     'upper',
-     'zfill']
-
+    __add__
+    __class__
+    __contains__
+    __delattr__
+    __dir__
+    __doc__
+    __eq__
+    __format__
+    __ge__
+    __getattribute__
+    __getitem__
+    __getnewargs__
+    __gt__
+    __hash__
+    __init__
+    __init_subclass__
+    __iter__
+    __le__
+    __len__
+    __lt__
+    __mod__
+    __mul__
+    __ne__
+    __new__
+    __reduce__
+    __reduce_ex__
+    __repr__
+    __rmod__
+    __rmul__
+    __setattr__
+    __sizeof__
+    __str__
+    __subclasshook__
 
 
 These special methods govern the behavior of a variable in different circumstances. For example, when we 'add to' a variable using the `+` [operator](extras/glossary.md#operator), behind the scenes the special method `__add__()` is [called](extras/glossary.md#call). So the following two statements achieve the same thing:
