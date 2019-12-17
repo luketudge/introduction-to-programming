@@ -3,4 +3,5 @@ jupyter
 jupyter-contrib-nbextensions
 pandas
 pytest
+requests
 selenium
