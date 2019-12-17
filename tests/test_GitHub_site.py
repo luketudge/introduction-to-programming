@@ -12,10 +12,16 @@ TOPICS = ['Creating a computer program with Python',
           'The standard library',
           'Files']
 
+OTHER_PAGES = ['Software',
+               'Readings',
+               'Example programs',
+               'Glossary',
+               'Contribute']
 
-def test_topic_pages(browser):
 
-    # Do we get the main page?
+def test_GitHub_site(browser):
+
+    # Are we starting on the main page?
     assert 'introduction-to-programming' in browser.title
 
     # Navigate to the topics page.
@@ -34,5 +40,17 @@ def test_topic_pages(browser):
         # Does it have a table of contents?
         assert 'Contents' in browser.page_source
 
-        # Go back.
+        browser.back()
+
+    browser.back()
+
+    # Visit each of the other pages.
+    for page in OTHER_PAGES:
+
+        page_link = browser.find_element_by_link_text(page)
+        page_link.click()
+
+        # Did we get it?
+        assert page in browser.page_source
+
         browser.back()

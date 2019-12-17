@@ -13,5 +13,4 @@ Materials for the *Introduction to Programming* class.
 * [Topic listing](content). Head here to start learning about programming with Python.
 * [Example programs](content/examples). View the example programs or download them to your computer.
 * [Glossary](content/extras/glossary.md). A glossary of Python programming terms.
-
-[Contribute](contributing.md) to the materials.
+* [Contributing](contributing.md) to the materials.
