@@ -1,4 +1,7 @@
 #!/bin/bash
 
-pytest -v
+echo '#### Tests ####'
+pytest -v tests
+
+echo '#### Style checks ####'
 flake8 content

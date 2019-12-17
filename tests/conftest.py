@@ -8,7 +8,7 @@ URL = 'https://github.com/luketudge/introduction-to-programming/tree/'
 BRANCHES = ['master', 'in-progress']
 
 
-@pytest.fixture(scope='session', params=BRANCHES)
+@pytest.fixture(params=BRANCHES)
 def browser(request):
 
     browser = WebDriver()
