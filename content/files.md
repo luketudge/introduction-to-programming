@@ -228,15 +228,13 @@ The syntax for this perhaps looks a little strange, but has its logic:
 text = open(filepath).read()
 ```
 
-When all we want to do is to read in the entire contents of a text file, we can stick to this one-liner combination of `open()` and `read()`.
-
-When would we not want to read in the entire contents of the file? One such situation is if we want to search in the file until we find something that we are looking for, and then stop. For example, imagine that we want to find the first line in *Moby Dick* that contains the word 'whale'.
+When all we want to do is to read in the entire contents of a text file, we can stick to this one-liner combination of `open()` and `read()`. But when would we not want to read in the entire contents of the file? One such situation is if we want to search in the file until we find something that we are looking for, and then stop. For example, imagine that we want to find the first line in *Moby Dick* that contains the word 'whale'.
 
 One way to do this would be to just read in the entire file and then search in the resulting string. We could for example split the entire string into lines, go through them in a [loop](extras/glossary.md#loop), then `break` out of the loop when we find a line containing `'whale'`. Like this:
 
 
 ```python
-lines = text.split('\n')
+lines = text.splitlines()
 
 for line in lines:
     if target_word in line.lower():
@@ -249,9 +247,7 @@ print(msg.format(target_word, line))
     The first line containing 'whale' is: [...] name a whale-fish is to be called in our tongue leaving out, through
 
 
-(If you are wondering about `split('\n')`, here we are overriding the default value of the [argument](extras/glossary.md#argument) to the `split()` method. The default is to split at any [whitespace](extras/glossary.md#whitespace), but we want to split at every [newline character](extras/glossary.md#newline). We encountered the newline character briefly [in the lesson on functions](functions.md#Keyword-arguments) when we looked at the `end` argument to the `print()` function.)
-
-But another way to do this would be to read in the contents of the file only one line at a time, then stop reading when we find the line we are searching for. File objects are [iterable](extras/glossary.md#iterable). If we loop through a file object, each run of the loop gives us the next line from the file. (Take a look back at the [lesson on iteration](iteration.md#Iterables) if you need to remind yourself about iterable types.)
+A different way to do this would be to read in the contents of the file only one line at a time, then stop reading when we find the line we are searching for. File objects are [iterable](extras/glossary.md#iterable). If we loop through a file object, each run of the loop gives us the next line from the file. (Take a look back at the [lesson on iteration](iteration.md#Iterables) if you need to remind yourself about iterable types.)
 
 So we could also find the first line containing `'whale'` like this:
 
