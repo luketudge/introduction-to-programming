@@ -17,6 +17,18 @@ surname = 'Bonk'
 print(name, middle_initial, surname)
 ```
 
+## assertion
+
+An assertion is a statement that 'asserts' that a particular statement is true, in the same sense of the English verb 'to assert'. If the asserted statement is true, nothing happens and the program may continue as normal, but if it is not true, then an [exception](#exception) is raised.
+
+Assertions can be used to make sure that a program is running as expected at a crucial point, because to continue otherwise would be time-consuming or would make the problem more difficult to diagnose later. Assertions are also commonly used in test programs that check the correct functioning of another program.
+
+There are a few different ways to write assertions in Python, but the simplest is using the `assert` [keyword](#keyword) together with the statement to be checked. For example:
+
+```python
+assert 2 + 2 == 4
+```
+
 ## assignment
 
 If one part of our program generates a piece of information, we may want to store that information and use it in some later part of our program. In this case, we can 'assign' the information into a [variable](#variable). This just means storing something under that variable name. In Python, assignment is done with the equals `=` symbol. Whatever results from the right-hand side is assigned into the variable name on the left-hand side.
