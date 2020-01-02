@@ -46,9 +46,9 @@ def spoonerize(wordpair):
     """
 
     words = wordpair.split()
-    nwords = len(words)
 
-    if len(words) != 2:
+    nwords = len(words)
+    if nwords != 2:
         error_msg = '{} contains {} words but 2 expected.'
         raise ValueError(error_msg.format(words, nwords))
 

@@ -515,7 +515,7 @@ The contents stored in a [variable](#variable) are often called its 'value'. For
 A variable is a name that stores some information for the duration of our program. We choose the name ourselves, and [assign](#assignment) into that name whatever information we wish to store. We can then use the variable in subsequent steps of the program. For example:
 
 ```python
-x = 5
+x = 2
 print(x ** 0.5)
 ```
 
