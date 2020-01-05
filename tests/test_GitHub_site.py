@@ -45,6 +45,7 @@ EXAMPLE_FILES = [
     'name_trivia.py',
     'slim_shady.py',
     'spoonerisms.py',
+    'test_math_is_working_as_normal.py',
     'test_spoonerisms.py',
 ]
 

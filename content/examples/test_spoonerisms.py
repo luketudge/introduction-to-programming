@@ -36,6 +36,13 @@ def test_spoonerize_with_initial_vowel():
     assert result == 'farty arce'
 
 
+def test_spoonerize_with_qu():
+
+    result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know
+
+    assert result == 'quaint fartz'
+
+
 def test_spoonerize_exception():
 
     # Note: match='3' because the error message should mention

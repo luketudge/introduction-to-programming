@@ -56,6 +56,10 @@ A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in 
 
 (The term 'boolean' is derived from the name of [George Boole](https://en.wikipedia.org/wiki/George_Boole), who developed various mathematical methods for working with logical True/False values.)
 
+## bug
+
+A bug is an aspect of a program that does not function as desired. For example, a [function](#function) might give the wrong [return value](#return), or part of the program might unexpectedly raise an [exception](#exception).
+
 ## builtin
 
 Python provides a few fundamental [functions](#function) that are already available from the start. These are termed built-in functions, or 'builtins'. The `print()` function is one example of a builtin. You can read a full list of them [here](https://docs.python.org/3/library/functions.html#built-in-functions).
@@ -152,6 +156,10 @@ Another term for a folder in a computer's file system.
 ## docstring
 
 A docstring is a [string](#string) (i.e. a piece of text) that provides some human-readable information about the workings of our program. We can write docstrings into our programs o help the users of our programs understand what the program does and how they should use it. We indicate a docstring in our program by enclosing it in 'triple quotes' (`""" """`). A docstring at the top of a *.py* file provides information about the whole file, and a docstring underneath the definition of a [function](#function) provides information about that function.
+
+## DRY
+
+'Don't Repeat Yourself' is a principle that can help with developing flexible programs that can more easily be extended, or can more easily be fixed when mistakes are discovered. A feature of a program that is repeated in many places will need to be found and changed in many places if you decide it must be changed. This opens up a lot of scope for mistakes.
 
 ## dunder
 
@@ -443,6 +451,10 @@ raise ValueError('That is an invalid value.')
 
 Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Reorganizing a program without changing any of its behavior is termed 'refactoring' the program.
 
+## regression
+
+
+
 ## repository
 
 A repository (sometimes abbreviated to 'repo') is a place where the various files constituting a computer program are stored, usually online. People who want to install a program can fetch the current version of the program from its repository.
@@ -491,6 +503,10 @@ In computing 'string' essentially means a piece of text (because a piece of text
 ## syntax
 
 Syntax refers to the rules governing what constitutes a valid command in a programming language. If we write a program that violates Python's syntax, then the Python interpreter will not be able to understand it, and instead will complain of a 'syntax [error](#error)'.
+
+# TDD
+
+TDD stands for 'Test-Driven Development', an approach to software development in which the developer first writes a test that will check that their change to the main program works as desired, and only then moves on to writing that change to the main program.
 
 ## tuple
 

@@ -250,7 +250,7 @@ os.getcwd()
 
 
 
-    '/home/lt/GitHub/introduction-to-programming/topics'
+    '/home/lt/GitHub/introduction-to-programming/content'
 
 
 
@@ -273,17 +273,25 @@ os.listdir()
      'sequences_mappings.md',
      'standard_library.md',
      'types.md',
+     'files.md',
      'convert_ipynb.sh',
+     'intro.md',
      '.md_checkpoints',
      'sequences_mappings.md',
+     'testing.md',
      'conditions.md',
+     '.pytest_cache',
+     'files.md',
+     'command_line.md',
      'iteration.md',
      'modules.md',
      'iteration.md',
+     'command_line.md',
      'README.md',
      'functions.md',
      'examples',
      'extras',
+     'standard_library.md',
      'conditions.md']
 
 
@@ -386,7 +394,7 @@ os.getcwd()
 
 
 
-    '/home/lt/GitHub/introduction-to-programming/topics'
+    '/home/lt/GitHub/introduction-to-programming/content'
 
 
 
@@ -478,7 +486,7 @@ os.getcwd()
 
 
 
-    '/home/lt/GitHub/introduction-to-programming/topics/my_new_directory'
+    '/home/lt/GitHub/introduction-to-programming/content/my_new_directory'
 
 
 
@@ -493,7 +501,7 @@ os.getcwd()
 
 
 
-    '/home/lt/GitHub/introduction-to-programming/topics'
+    '/home/lt/GitHub/introduction-to-programming/content'
 
 
 
@@ -549,7 +557,7 @@ os.path.abspath('examples')
 
 
 
-    '/home/lt/GitHub/introduction-to-programming/topics/examples'
+    '/home/lt/GitHub/introduction-to-programming/content/examples'
 
 
 
