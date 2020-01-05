@@ -506,7 +506,7 @@ Syntax refers to the rules governing what constitutes a valid command in a progr
 
 # TDD
 
-TDD stands for Test-Driven Development, an approach to software development in which the developer first writes a test program that will check that their main program works as desired, and only then moves on to writing the main program itself so that it fulfills the requirements of the test program.
+TDD stands for 'Test-Driven Development', an approach to software development in which the developer first writes a test that will check that their change to the main program works as desired, and only then moves on to writing that change to the main program.
 
 ## tuple
 
