@@ -25,7 +25,7 @@ The links below take you to the static versions of the pages.
 ## Software development
 
 * [The command line](command_line.md)
-* [Testing](testing.md)
+* Testing
 * Collaboration
 * Documentation
 * Style

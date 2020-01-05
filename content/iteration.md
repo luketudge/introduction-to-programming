@@ -166,7 +166,9 @@ for x in 42:
 
 ### Range
 
-The curious range type that we [learned about in the lesson on sequences](sequences_mappings.md#Range) is iterable. Iteration with `range()` iterates through the integers in the specified range (remember, up to *but not including* the specified end of the range):
+The curious range type that we [learned about in the lesson on sequences](sequences_mappings.md#Range) is iterable. Iteration with `range()` iterates through the integers in the specified range (remember, up to *but not including* the specified end of the range). So to go through the numbers 1 to 10 inclusive, use `range(1, 11)`.
+
+For example, to print out the squares of all these numbers we would write:
 
 
 ```python

@@ -232,7 +232,7 @@ initials.__file__
 
 
 
-    '/home/lt/GitHub/introduction-to-programming/topics/examples/initials.py'
+    '/home/lt/GitHub/introduction-to-programming/content/examples/initials.py'
 
 
 

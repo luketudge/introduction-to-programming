@@ -1,7 +1,15 @@
+bs4
 flake8
+imageio
 jupyter
 jupyter-contrib-nbextensions
+matplotlib
+nltk
+numpy
 pandas
 pytest
 requests
 selenium
+sklearn
+spyder
+statsmodels

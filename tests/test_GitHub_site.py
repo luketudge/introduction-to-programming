@@ -14,6 +14,7 @@ TOPICS = [
     'Modules',
     'The standard library',
     'Files',
+    'The command line',
     'Testing',
 ]
 
