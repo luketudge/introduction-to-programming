@@ -4,49 +4,61 @@
 
 TOPIC_PAGE = 'Topic listing'
 
-TOPICS = ['Creating a computer program with Python',
-          'Variables and data types',
-          'Sequences and mappings',
-          'Conditions',
-          'Iteration',
-          'Functions',
-          'Modules',
-          'The standard library',
-          'Files']
+TOPICS = [
+    'Creating a computer program with Python',
+    'Variables and data types',
+    'Sequences and mappings',
+    'Conditions',
+    'Iteration',
+    'Functions',
+    'Modules',
+    'The standard library',
+    'Files',
+    'The command line',
+    'Testing',
+]
 
-OTHER_PAGES = ['Software',
-               'Readings',
-               'Example programs',
-               'Glossary',
-               'Contributing']
+OTHER_PAGES = [
+    'Software',
+    'Readings',
+    'Example programs',
+    'Glossary',
+    'Contributing',
+]
 
 
 # %% Files
 
-EXAMPLE_FILES = ['age_next_year.py',
-                 'greeting.py',
-                 'ids.py',
-                 'make_monthly_directories.py',
-                 'alternative_ending.py',
-                 'fun_facts.py',
-                 'guess_the_animal.py',
-                 'initials.py',
-                 'my_program.py',
-                 'slim_shady.py',
-                 'circle.py',
-                 'greeting_personal.py',
-                 'hoff.py',
-                 'name_trivia.py']
+EXAMPLE_FILES = [
+    'age_next_year.py',
+    'alternative_ending.py',
+    'circle.py',
+    'fun_facts.py',
+    'greeting.py',
+    'greeting_personal.py',
+    'guess_the_animal.py',
+    'hoff.py',
+    'ids.py',
+    'initials.py',
+    'make_monthly_directories.py',
+    'my_program.py',
+    'name_trivia.py',
+    'slim_shady.py',
+    'spoonerisms.py',
+    'test_spoonerisms.py',
+]
 
-DATA_FILES = ['austen-sense.txt',
-              'melville-moby_dick.txt',
-              'penguins_DE.csv',
-              'top_10_bands.txt',
-              'top_5_bands_UTF8.txt',
-              'guardian_taramasalata.json',
-              'penguins.csv',
-              'README.md',
-              'top_5_bands_LATIN1.txt']
+DATA_FILES = [
+    'austen-sense.txt',
+    'melville-moby_dick.txt',
+    'penguins_DE.csv',
+    'top_10_bands.txt',
+    'top_5_bands_UTF8.txt',
+    'guardian_taramasalata.json',
+    'penguins.csv',
+    'README.md',
+    'top_5_bands_LATIN1.txt',
+]
 
 DATA_FILES = ['data/' + f for f in DATA_FILES]
 

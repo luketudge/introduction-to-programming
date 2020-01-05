@@ -649,7 +649,7 @@ get_initials(uncles_name, n=2)
 
 
 ```python
-get_initials('David Hasselhoff', uppercase=True)
+get_initials('David Hasselhoff', uppercase=True)::
 ```
 
 
