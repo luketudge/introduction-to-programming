@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Example-program" data-toc-modified-id="Example-program-1">Example program</a></span></li><li><span><a href="#Built-in-tests" data-toc-modified-id="Built-in-tests-2">Built-in tests</a></span></li><li><span><a href="#Test-functions" data-toc-modified-id="Test-functions-3">Test functions</a></span><ul class="toc-item"><li><span><a href="#Assertions" data-toc-modified-id="Assertions-3.1">Assertions</a></span></li><li><span><a href="#Failing-tests" data-toc-modified-id="Failing-tests-3.2">Failing tests</a></span></li></ul></li><li><span><a href="#Test-runners" data-toc-modified-id="Test-runners-4">Test runners</a></span><ul class="toc-item"><li><span><a href="#pytest" data-toc-modified-id="pytest-4.1">pytest</a></span><ul class="toc-item"><li><span><a href="#Command-line-usage" data-toc-modified-id="Command-line-usage-4.1.1">Command line usage</a></span></li><li><span><a href="#Output" data-toc-modified-id="Output-4.1.2">Output</a></span></li><li><span><a href="#Testing-exceptions" data-toc-modified-id="Testing-exceptions-4.1.3">Testing exceptions</a></span></li></ul></li></ul></li><li><span><a href="#Test-driven-development" data-toc-modified-id="Test-driven-development-5">Test-driven development</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-6">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-6.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-6.2">2</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Example-program" data-toc-modified-id="Example-program-1">Example program</a></span></li><li><span><a href="#Built-in-tests" data-toc-modified-id="Built-in-tests-2">Built-in tests</a></span></li><li><span><a href="#Test-functions" data-toc-modified-id="Test-functions-3">Test functions</a></span><ul class="toc-item"><li><span><a href="#Assertions" data-toc-modified-id="Assertions-3.1">Assertions</a></span></li><li><span><a href="#Failing-tests" data-toc-modified-id="Failing-tests-3.2">Failing tests</a></span></li></ul></li><li><span><a href="#Test-runners" data-toc-modified-id="Test-runners-4">Test runners</a></span><ul class="toc-item"><li><span><a href="#pytest" data-toc-modified-id="pytest-4.1">pytest</a></span><ul class="toc-item"><li><span><a href="#Command-line-usage" data-toc-modified-id="Command-line-usage-4.1.1">Command line usage</a></span></li><li><span><a href="#Output" data-toc-modified-id="Output-4.1.2">Output</a></span></li><li><span><a href="#Verbose-mode" data-toc-modified-id="Verbose-mode-4.1.3">Verbose mode</a></span></li><li><span><a href="#Testing-exceptions" data-toc-modified-id="Testing-exceptions-4.1.4">Testing exceptions</a></span></li></ul></li></ul></li><li><span><a href="#Test-driven-development" data-toc-modified-id="Test-driven-development-5">Test-driven development</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-6">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-6.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-6.2">2</a></span></li></ul></li></ul></div>
 
 # Testing
 
@@ -262,7 +262,7 @@ For example:
     [1m[31mE         ?  +[0m
     
     [1m[31mtest_spoonerisms.py[0m:43: AssertionError
-    [31m========================= [31m[1m1 failed[0m, [32m5 passed[0m[31m in 0.04s[0m[31m ==========================[0m
+    [31m========================= [31m[1m1 failed[0m, [32m5 passed[0m[31m in 0.03s[0m[31m ==========================[0m
 
 
 Remember a couple of important things from the previous lesson on the [command line](command_line.md):
@@ -302,7 +302,7 @@ Here for demonstration purposes I have just included a second test file [test_ma
     [1m[31mE         ?  +[0m
     
     [1m[31mtest_spoonerisms.py[0m:43: AssertionError
-    [31m========================= [31m[1m1 failed[0m, [32m7 passed[0m[31m in 0.06s[0m[31m ==========================[0m
+    [31m========================= [31m[1m1 failed[0m, [32m7 passed[0m[31m in 0.04s[0m[31m ==========================[0m
 
 
 #### Output
@@ -327,6 +327,50 @@ The *FAILURES* section then provides details of each failed test. As well as jus
 > `E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'`
 
 Here we see what the result of the `spoonerize()` function really was, compared to what our test expected it to be.
+
+#### Verbose mode
+
+If you would like to see even more information about the tests, you can run pytest in '[verbose](extras/glossary.md#verbose)' mode. In computing, the term 'verbose' has approximately the same meaning as in everyday English, but in reference to the output of a computer program rather than a human being's use of language. A program that is run in verbose mode will 'talk more', i.e. give more detailed printed output.
+
+Many command line command accept additional options in the form of a word or single letter preceded by a dash (`-`). The option for running pytest in verbose mode is `-v`. The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:
+
+
+```python
+! pytest -v
+```
+
+    [1m============================= test session starts ==============================[0m
+    platform linux -- Python 3.6.9, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/lt/GitHub/introduction-to-programming/venv/bin/python3
+    cachedir: .pytest_cache
+    rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
+    collected 8 items                                                              [0m
+    
+    test_math_is_working_as_normal.py::test_two_plus_two_equals_four [32mPASSED[0m[32m  [ 12%][0m
+    test_math_is_working_as_normal.py::test_division_by_zero_is_undefined [32mPASSED[0m[32m [ 25%][0m
+    test_spoonerisms.py::test_find_first_vowel [32mPASSED[0m[32m                        [ 37%][0m
+    test_spoonerisms.py::test_spoonerize [32mPASSED[0m[32m                              [ 50%][0m
+    test_spoonerisms.py::test_spoonerize_with_multiple_consonants [32mPASSED[0m[32m     [ 62%][0m
+    test_spoonerisms.py::test_spoonerize_with_initial_vowel [32mPASSED[0m[32m           [ 75%][0m
+    test_spoonerisms.py::test_spoonerize_with_qu [31mFAILED[0m[31m                      [ 87%][0m
+    test_spoonerisms.py::test_spoonerize_exception [32mPASSED[0m[31m                    [100%][0m
+    
+    =================================== FAILURES ===================================
+    [31m[1m___________________________ test_spoonerize_with_qu ____________________________[0m
+    
+    [1m    def test_spoonerize_with_qu():[0m
+    [1m    [0m
+    [1m        result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know[0m
+    [1m    [0m
+    [1m>       assert result == 'quaint fartz'[0m
+    [1m[31mE       AssertionError: assert 'qaint fuartz' == 'quaint fartz'[0m
+    [1m[31mE         - qaint fuartz[0m
+    [1m[31mE         ?        -[0m
+    [1m[31mE         + quaint fartz[0m
+    [1m[31mE         ?  +[0m
+    
+    [1m[31mtest_spoonerisms.py[0m:43: AssertionError
+    [31m========================= [31m[1m1 failed[0m, [32m7 passed[0m[31m in 0.05s[0m[31m ==========================[0m
+
 
 #### Testing exceptions
 
@@ -355,7 +399,7 @@ with pytest.raises(ValueError):
 
     Failed                                    Traceback (most recent call last)
 
-    <ipython-input-17-8e4b5f8643d9> in <module>
+    <ipython-input-18-8e4b5f8643d9> in <module>
           1 with pytest.raises(ValueError):
     ----> 2     int('52')
     
@@ -392,7 +436,7 @@ with pytest.raises(ValueError, match='OMG that is not valid. You have broken you
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-18-a8e5f8cbc3a4> in <module>
+    <ipython-input-19-a8e5f8cbc3a4> in <module>
           1 with pytest.raises(ValueError, match='OMG that is not valid. You have broken your computer FOR EVER.'):
     ----> 2     int('fifty-two')
     
@@ -405,7 +449,7 @@ with pytest.raises(ValueError, match='OMG that is not valid. You have broken you
 
     AssertionError                            Traceback (most recent call last)
 
-    <ipython-input-18-a8e5f8cbc3a4> in <module>
+    <ipython-input-19-a8e5f8cbc3a4> in <module>
           1 with pytest.raises(ValueError, match='OMG that is not valid. You have broken your computer FOR EVER.'):
     ----> 2     int('fifty-two')
     

@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Calling-functions" data-toc-modified-id="Calling-functions-1">Calling functions</a></span></li><li><span><a href="#Arguments" data-toc-modified-id="Arguments-2">Arguments</a></span><ul class="toc-item"><li><span><a href="#Keyword-arguments" data-toc-modified-id="Keyword-arguments-2.1">Keyword arguments</a></span></li></ul></li><li><span><a href="#Return-values" data-toc-modified-id="Return-values-3">Return values</a></span><ul class="toc-item"><li><span><a href="#Side-effects" data-toc-modified-id="Side-effects-3.1">Side effects</a></span></li></ul></li><li><span><a href="#Defining-functions" data-toc-modified-id="Defining-functions-4">Defining functions</a></span><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-4.1">Objective</a></span></li><li><span><a href="#Default-values" data-toc-modified-id="Default-values-4.2">Default values</a></span></li><li><span><a href="#Raising-exceptions" data-toc-modified-id="Raising-exceptions-4.3">Raising exceptions</a></span></li></ul></li><li><span><a href="#Docstrings" data-toc-modified-id="Docstrings-5">Docstrings</a></span></li><li><span><a href="#Function-or-loop?" data-toc-modified-id="Function-or-loop?-6">Function or loop?</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-7">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-7.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-7.2">2</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Calling-functions" data-toc-modified-id="Calling-functions-1">Calling functions</a></span></li><li><span><a href="#Arguments" data-toc-modified-id="Arguments-2">Arguments</a></span><ul class="toc-item"><li><span><a href="#Keyword-arguments" data-toc-modified-id="Keyword-arguments-2.1">Keyword arguments</a></span></li></ul></li><li><span><a href="#Return-values" data-toc-modified-id="Return-values-3">Return values</a></span><ul class="toc-item"><li><span><a href="#Side-effects" data-toc-modified-id="Side-effects-3.1">Side effects</a></span></li></ul></li><li><span><a href="#Defining-functions" data-toc-modified-id="Defining-functions-4">Defining functions</a></span><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-4.1">Objective</a></span></li><li><span><a href="#Default-values" data-toc-modified-id="Default-values-4.2">Default values</a></span></li><li><span><a href="#Raising-exceptions" data-toc-modified-id="Raising-exceptions-4.3">Raising exceptions</a></span></li></ul></li><li><span><a href="#Docstrings" data-toc-modified-id="Docstrings-5">Docstrings</a></span></li><li><span><a href="#Building-functions" data-toc-modified-id="Building-functions-6">Building functions</a></span></li><li><span><a href="#Function-or-loop?" data-toc-modified-id="Function-or-loop?-7">Function or loop?</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-8">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-8.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-8.2">2</a></span></li></ul></li></ul></div>
 
 # Functions
 
@@ -649,7 +649,7 @@ get_initials(uncles_name, n=2)
 
 
 ```python
-get_initials('David Hasselhoff', uppercase=True)::
+get_initials('David Hasselhoff', uppercase=True)
 ```
 
 
@@ -684,6 +684,106 @@ What information should we put in a docstring, and how should we organize it? Th
 * Whether the function [raises](extras/glossary.md#raise) any exceptions.
 
 You can see an example docstring for our `get_initials()` function in the example program [initials.py](examples/initials.py). (In case you are wondering what is going on on line 43 of this file, this will be explained in the next lesson.)
+
+## Building functions
+
+Writing functions can be a little more difficult than writing other Python control statements. A function is somewhat like a 'black box'; when we use a function, we put in some input [arguments](extras/glossary.md#argument) and get out a [return value](extras/glossary.md#return), but we don't have easy access to the steps that go on inside the body of the function. So when we write a function we often don't know whether it works correctly or not until we have finished writing it and can finally [call](extras/glossary.md#call) it. If we find that it does not work as we wanted, it can be difficult to see what went wrong.
+
+As a beginner to programming, you should therefore avoid trying to write a function all in one go, unless the function is extremely simple. Instead, start by writing out the steps in the body of the function as normal Python commands without indentation. Test each of these steps as you go along. Then only turn them into a function once you have finished and checked them all.
+
+For example, imagine we would like to write a function for finding the length of the hypotenuse $z$ of a right-angled triangle given the lengths of the two other sides $x$ and $y$, according to the formula:
+
+$$
+z = (x^2 + y^2)^\frac{1}{2}
+$$
+
+Start by writing out the header line of the function using `def`, but turn this line into a comment using `#` so that Python won't run it yet. Then define some temporary variables to provide example inputs for the function, using the same names that you have given them in the function header. Choose some inputs for which you know the correct answer (for example, `x=3, y=4` should give a return value of `5`):
+
+
+```python
+#def hypotenuse(x, y):
+x = 3
+y = 4
+```
+
+Now add in the first step in the function body, for example getting the squares of the two given side lengths, and print it out to check it looks right:
+
+
+```python
+#def hypotenuse(x, y):
+x = 3
+y = 4
+
+x_sq = x**2
+y_sq = y**2
+
+print(x_sq, y_sq)
+```
+
+    9 16
+
+
+Keep adding steps and checking as you go along. For example:
+
+
+```python
+#def hypotenuse(x, y):
+x = 3
+y = 4
+
+sum_sq = x**2 + y**2
+
+print(sum_sq)
+```
+
+    25
+
+
+
+```python
+#def hypotenuse(x, y):
+x = 3
+y = 4
+
+sum_sq = x**2 + y**2
+z = sum_sq**(1/2)
+
+print(z)
+```
+
+    5.0
+
+
+Now that you have finished all the steps inside the function and checked them, you can turn them into the finished function with four changes:
+
+* Remove the `#` from the function header.
+* Delete the temporary variables that you used as example inputs.
+* Indent the other lines so that they become part of the function.
+* Turn the final `print()` statement into a `return` statement instead.
+
+
+```python
+def hypotenuse(x, y):
+
+    sum_sq = x**2 + y**2
+    z = sum_sq**(1/2)
+
+    return z
+```
+
+Don't forget to test your finished function with the same input arguments you used while building it:
+
+
+```python
+hypotenuse(3, 4)
+```
+
+
+
+
+    5.0
+
+
 
 ## Function or loop?
 
