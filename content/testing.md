@@ -240,29 +240,29 @@ For example:
 ! pytest test_spoonerisms.py
 ```
 
-    [1m============================= test session starts ==============================[0m
+    ============================= test session starts ==============================
     platform linux -- Python 3.6.9, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
     rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
-    collected 6 items                                                              [0m
+    collected 6 items                                                              
     
-    test_spoonerisms.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[31m                                               [100%][0m
+    test_spoonerisms.py ....F.                                               [100%]
     
     =================================== FAILURES ===================================
-    [31m[1m___________________________ test_spoonerize_with_qu ____________________________[0m
+    ___________________________ test_spoonerize_with_qu ____________________________
     
-    [1m    def test_spoonerize_with_qu():[0m
-    [1m    [0m
-    [1m        result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know[0m
-    [1m    [0m
-    [1m>       assert result == 'quaint fartz'[0m
-    [1m[31mE       AssertionError: assert 'qaint fuartz' == 'quaint fartz'[0m
-    [1m[31mE         - qaint fuartz[0m
-    [1m[31mE         ?        -[0m
-    [1m[31mE         + quaint fartz[0m
-    [1m[31mE         ?  +[0m
+        def test_spoonerize_with_qu():
+        
+            result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know
+        
+    >       assert result == 'quaint fartz'
+    E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'
+    E         - qaint fuartz
+    E         ?        -
+    E         + quaint fartz
+    E         ?  +
     
-    [1m[31mtest_spoonerisms.py[0m:43: AssertionError
-    [31m========================= [31m[1m1 failed[0m, [32m5 passed[0m[31m in 0.03s[0m[31m ==========================[0m
+    test_spoonerisms.py:43: AssertionError
+    ========================= 1 failed, 5 passed in 0.03s ==========================
 
 
 Remember a couple of important things from the previous lesson on the [command line](command_line.md):
@@ -279,30 +279,30 @@ Here for demonstration purposes I have just included a second test file [test_ma
 ! pytest
 ```
 
-    [1m============================= test session starts ==============================[0m
+    ============================= test session starts ==============================
     platform linux -- Python 3.6.9, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
     rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
-    collected 8 items                                                              [0m
+    collected 8 items                                                              
     
-    test_math_is_working_as_normal.py [32m.[0m[32m.[0m[32m                                     [ 25%][0m
-    test_spoonerisms.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[31m                                               [100%][0m
+    test_math_is_working_as_normal.py ..                                     [ 25%]
+    test_spoonerisms.py ....F.                                               [100%]
     
     =================================== FAILURES ===================================
-    [31m[1m___________________________ test_spoonerize_with_qu ____________________________[0m
+    ___________________________ test_spoonerize_with_qu ____________________________
     
-    [1m    def test_spoonerize_with_qu():[0m
-    [1m    [0m
-    [1m        result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know[0m
-    [1m    [0m
-    [1m>       assert result == 'quaint fartz'[0m
-    [1m[31mE       AssertionError: assert 'qaint fuartz' == 'quaint fartz'[0m
-    [1m[31mE         - qaint fuartz[0m
-    [1m[31mE         ?        -[0m
-    [1m[31mE         + quaint fartz[0m
-    [1m[31mE         ?  +[0m
+        def test_spoonerize_with_qu():
+        
+            result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know
+        
+    >       assert result == 'quaint fartz'
+    E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'
+    E         - qaint fuartz
+    E         ?        -
+    E         + quaint fartz
+    E         ?  +
     
-    [1m[31mtest_spoonerisms.py[0m:43: AssertionError
-    [31m========================= [31m[1m1 failed[0m, [32m7 passed[0m[31m in 0.04s[0m[31m ==========================[0m
+    test_spoonerisms.py:43: AssertionError
+    ========================= 1 failed, 7 passed in 0.04s ==========================
 
 
 #### Output
@@ -339,37 +339,37 @@ Many command line command accept additional options in the form of a word or sin
 ! pytest -v
 ```
 
-    [1m============================= test session starts ==============================[0m
+    ============================= test session starts ==============================
     platform linux -- Python 3.6.9, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/lt/GitHub/introduction-to-programming/venv/bin/python3
     cachedir: .pytest_cache
     rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
-    collected 8 items                                                              [0m
+    collected 8 items                                                              
     
-    test_math_is_working_as_normal.py::test_two_plus_two_equals_four [32mPASSED[0m[32m  [ 12%][0m
-    test_math_is_working_as_normal.py::test_division_by_zero_is_undefined [32mPASSED[0m[32m [ 25%][0m
-    test_spoonerisms.py::test_find_first_vowel [32mPASSED[0m[32m                        [ 37%][0m
-    test_spoonerisms.py::test_spoonerize [32mPASSED[0m[32m                              [ 50%][0m
-    test_spoonerisms.py::test_spoonerize_with_multiple_consonants [32mPASSED[0m[32m     [ 62%][0m
-    test_spoonerisms.py::test_spoonerize_with_initial_vowel [32mPASSED[0m[32m           [ 75%][0m
-    test_spoonerisms.py::test_spoonerize_with_qu [31mFAILED[0m[31m                      [ 87%][0m
-    test_spoonerisms.py::test_spoonerize_exception [32mPASSED[0m[31m                    [100%][0m
+    test_math_is_working_as_normal.py::test_two_plus_two_equals_four PASSED  [ 12%]
+    test_math_is_working_as_normal.py::test_division_by_zero_is_undefined PASSED [ 25%]
+    test_spoonerisms.py::test_find_first_vowel PASSED                        [ 37%]
+    test_spoonerisms.py::test_spoonerize PASSED                              [ 50%]
+    test_spoonerisms.py::test_spoonerize_with_multiple_consonants PASSED     [ 62%]
+    test_spoonerisms.py::test_spoonerize_with_initial_vowel PASSED           [ 75%]
+    test_spoonerisms.py::test_spoonerize_with_qu FAILED                      [ 87%]
+    test_spoonerisms.py::test_spoonerize_exception PASSED                    [100%]
     
     =================================== FAILURES ===================================
-    [31m[1m___________________________ test_spoonerize_with_qu ____________________________[0m
+    ___________________________ test_spoonerize_with_qu ____________________________
     
-    [1m    def test_spoonerize_with_qu():[0m
-    [1m    [0m
-    [1m        result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know[0m
-    [1m    [0m
-    [1m>       assert result == 'quaint fartz'[0m
-    [1m[31mE       AssertionError: assert 'qaint fuartz' == 'quaint fartz'[0m
-    [1m[31mE         - qaint fuartz[0m
-    [1m[31mE         ?        -[0m
-    [1m[31mE         + quaint fartz[0m
-    [1m[31mE         ?  +[0m
+        def test_spoonerize_with_qu():
+        
+            result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know
+        
+    >       assert result == 'quaint fartz'
+    E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'
+    E         - qaint fuartz
+    E         ?        -
+    E         + quaint fartz
+    E         ?  +
     
-    [1m[31mtest_spoonerisms.py[0m:43: AssertionError
-    [31m========================= [31m[1m1 failed[0m, [32m7 passed[0m[31m in 0.05s[0m[31m ==========================[0m
+    test_spoonerisms.py:43: AssertionError
+    ========================= 1 failed, 7 passed in 0.05s ==========================
 
 
 #### Testing exceptions

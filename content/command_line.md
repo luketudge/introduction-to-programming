@@ -126,11 +126,11 @@ There are also a few commands that are special to IPython itself, and are not pa
 ```
 
     command_line.md  functions.md     sequences_mappings.md
-    conditions.md    [0m[01;34mimages[0m/          sequences_mappings.md
+    conditions.md    images/          sequences_mappings.md
     conditions.md       intro.md      standard_library.md
-    [01;32mconvert_ipynb.sh[0m*   intro.md         standard_library.md
-    [01;34mexamples[0m/           iteration.md  testing.md
-    [01;34mextras[0m/             iteration.md     types.md
+    convert_ipynb.sh*   intro.md         standard_library.md
+    examples/           iteration.md  testing.md
+    extras/             iteration.md     types.md
     files.md         modules.md    types.md
     files.md            modules.md
     functions.md     README.md
@@ -143,12 +143,12 @@ You can also use `%ls` together with the name of a subdirectory to see its conte
 %ls examples
 ```
 
-    age_next_year.py       [0m[01;32mguess_the_animal.py[0m*         name_trivia.py
+    age_next_year.py       guess_the_animal.py*         name_trivia.py
     alternative_ending.py  hoff.py                      README.md
     circle.py              ids.py                       slim_shady.py
-    [01;34mdata[0m/                  initials.py                  spoonerisms.py
-    fun_facts.py           [01;31mintro_prog_examples.zip[0m      test_spoonerisms.py
-    greeting_personal.py   make_monthly_directories.py  [01;32mzip_all.sh[0m*
+    data/                  initials.py                  spoonerisms.py
+    fun_facts.py           intro_prog_examples.zip      test_spoonerisms.py
+    greeting_personal.py   make_monthly_directories.py  zip_all.sh*
     greeting.py            my_program.py
 
 
