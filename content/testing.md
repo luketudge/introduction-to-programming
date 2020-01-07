@@ -262,7 +262,7 @@ For example:
     E         ?  +
     
     test_spoonerisms.py:43: AssertionError
-    ========================= 1 failed, 5 passed in 0.03s ==========================
+    ========================= 1 failed, 5 passed in 0.04s ==========================
 
 
 Remember a couple of important things from the previous lesson on the [command line](command_line.md):
@@ -302,7 +302,7 @@ Here for demonstration purposes I have just included a second test file [test_ma
     E         ?  +
     
     test_spoonerisms.py:43: AssertionError
-    ========================= 1 failed, 7 passed in 0.04s ==========================
+    ========================= 1 failed, 7 passed in 0.05s ==========================
 
 
 #### Output
@@ -369,7 +369,7 @@ Many command line command accept additional options in the form of a word or sin
     E         ?  +
     
     test_spoonerisms.py:43: AssertionError
-    ========================= 1 failed, 7 passed in 0.05s ==========================
+    ========================= 1 failed, 7 passed in 0.04s ==========================
 
 
 #### Testing exceptions
@@ -480,7 +480,7 @@ There is a *lot* more that pytest can do, but that covers our basic needs at thi
 
 In the example above, I presented a completed example program, and we learned about the process of writing tests for the program. In reality, many software developers follow the opposite pattern: They first write a test for a new feature that they would like their main program to have, and only then do they write that part of the main program.
 
-This approach to software development is broadly termed 'test-driven development' (or [TDD](extras/glossary.md#TDD)), because it uses tests to guide the development of the program. The general working pattern in test-driven development is as follows:
+This approach to software development is broadly termed 'test-driven development' (or [TDD](extras/glossary.md#tdd)), because it uses tests to guide the development of the program. The general working pattern in test-driven development is as follows:
 
 * First write a test.
 

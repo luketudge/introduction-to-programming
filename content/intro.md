@@ -141,7 +141,7 @@ Finally, the workings of [line 16](examples/greeting_personal.py#L16) should be 
 
 ## Using an IDE
 
-We have just introduced the basic workings of Python programs using a few simple examples. We have been editing and running these programs in the Spyder [IDE](extras/glossary.md#IDE). Let's finish by looking at a few tips for working with Spyder.
+We have just introduced the basic workings of Python programs using a few simple examples. We have been editing and running these programs in the Spyder [IDE](extras/glossary.md#ide). Let's finish by looking at a few tips for working with Spyder.
 
 ### The editor
 

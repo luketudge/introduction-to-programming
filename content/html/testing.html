@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link href="data:text/css;charset=utf-8,%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%2Eocticon%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Afill%3A%20currentColor%3B%0Avertical%2Dalign%3A%20text%2Dbottom%3B%0A%7D%0Abody%20%2Eanchor%20%7B%0Afloat%3A%20left%3B%0Aline%2Dheight%3A%201%3B%0Amargin%2Dleft%3A%20%2D20px%3B%0Apadding%2Dright%3A%204px%3B%0A%7D%0Abody%20%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Abody%20h1%20%2Eocticon%2Dlink%2C%0Abody%20h2%20%2Eocticon%2Dlink%2C%0Abody%20h3%20%2Eocticon%2Dlink%2C%0Abody%20h4%20%2Eocticon%2Dlink%2C%0Abody%20h5%20%2Eocticon%2Dlink%2C%0Abody%20h6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%231b1f23%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%2C%0Abody%20h2%3Ahover%20%2Eanchor%2C%0Abody%20h3%3Ahover%20%2Eanchor%2C%0Abody%20h4%3Ahover%20%2Eanchor%2C%0Abody%20h5%3Ahover%20%2Eanchor%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Abody%20%7B%0A%2Dms%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%2324292e%3B%0Aline%2Dheight%3A%201%2E5%3B%0Afont%2Dfamily%3A%20%2Dapple%2Dsystem%2CBlinkMacSystemFont%2CSegoe%20UI%2CHelvetica%2CArial%2Csans%2Dserif%2CApple%20Color%20Emoji%2CSegoe%20UI%20Emoji%2CSegoe%20UI%20Symbol%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E5%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Abody%20%2Epl%2Dc%20%7B%0Acolor%3A%20%236a737d%3B%0A%7D%0Abody%20%2Epl%2Dc1%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23005cc5%3B%0A%7D%0Abody%20%2Epl%2De%2C%0Abody%20%2Epl%2Den%20%7B%0Acolor%3A%20%236f42c1%3B%0A%7D%0Abody%20%2Epl%2Ds%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsmi%20%7B%0Acolor%3A%20%2324292e%3B%0A%7D%0Abody%20%2Epl%2Dent%20%7B%0Acolor%3A%20%2322863a%3B%0A%7D%0Abody%20%2Epl%2Dk%20%7B%0Acolor%3A%20%23d73a49%3B%0A%7D%0Abody%20%2Epl%2Dpds%2C%0Abody%20%2Epl%2Ds%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsr%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsra%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23032f62%3B%0A%7D%0Abody%20%2Epl%2Dsmw%2C%0Abody%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23e36209%3B%0A%7D%0Abody%20%2Epl%2Dbu%20%7B%0Acolor%3A%20%23b31d28%3B%0A%7D%0Abody%20%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b31d28%3B%0Acolor%3A%20%23fafbfc%3B%0A%7D%0Abody%20%2Epl%2Dc2%20%7B%0Abackground%2Dcolor%3A%20%23d73a49%3B%0Acolor%3A%20%23fafbfc%3B%0A%7D%0Abody%20%2Epl%2Dc2%3Abefore%20%7B%0Acontent%3A%20%22%5EM%22%3B%0A%7D%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2322863a%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dml%20%7B%0Acolor%3A%20%23735c0f%3B%0A%7D%0Abody%20%2Epl%2Dmh%2C%0Abody%20%2Epl%2Dmh%20%2Epl%2Den%2C%0Abody%20%2Epl%2Dms%20%7B%0Acolor%3A%20%23005cc5%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dmi%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%20%2Epl%2Dmb%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffeef0%3B%0Acolor%3A%20%23b31d28%3B%0A%7D%0Abody%20%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23f0fff4%3B%0Acolor%3A%20%2322863a%3B%0A%7D%0Abody%20%2Epl%2Dmc%20%7B%0Abackground%2Dcolor%3A%20%23ffebda%3B%0Acolor%3A%20%23e36209%3B%0A%7D%0Abody%20%2Epl%2Dmi2%20%7B%0Abackground%2Dcolor%3A%20%23005cc5%3B%0Acolor%3A%20%23f6f8fa%3B%0A%7D%0Abody%20%2Epl%2Dmdr%20%7B%0Acolor%3A%20%236f42c1%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dba%20%7B%0Acolor%3A%20%23586069%3B%0A%7D%0Abody%20%2Epl%2Dsg%20%7B%0Acolor%3A%20%23959da5%3B%0A%7D%0Abody%20%2Epl%2Dcorl%20%7B%0Acolor%3A%20%23032f62%3B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20details%20%7B%0Adisplay%3A%20block%3B%0A%7D%0Abody%20summary%20%7B%0Adisplay%3A%20list%2Ditem%3B%0A%7D%0Abody%20a%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Abody%20a%3Aactive%2C%0Abody%20a%3Ahover%20%7B%0Aoutline%2Dwidth%3A%200%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20inherit%3B%0Afont%2Dweight%3A%20bolder%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%20%2E67em%200%3B%0A%7D%0Abody%20img%20%7B%0Aborder%2Dstyle%3A%20none%3B%0A%7D%0Abody%20code%2C%0Abody%20kbd%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20monospace%2Cmonospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20hr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0Aoverflow%3A%20visible%3B%0A%7D%0Abody%20input%20%7B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20input%20%7B%0Aoverflow%3A%20visible%3B%0A%7D%0Abody%20%5Btype%3Dcheckbox%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Abody%20input%20%7B%0Afont%2Dfamily%3A%20inherit%3B%0Afont%2Dsize%3A%20inherit%3B%0Aline%2Dheight%3A%20inherit%3B%0A%7D%0Abody%20a%20%7B%0Acolor%3A%20%230366d6%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20a%3Ahover%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20hr%20%7B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23dfe2e5%3B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0A%7D%0Abody%20hr%3Abefore%20%7B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%20hr%3Aafter%20%7B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%20table%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Abody%20td%2C%0Abody%20th%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20details%20summary%20%7B%0Acursor%3A%20pointer%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%2032px%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%2024px%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%2020px%3B%0A%7D%0Abody%20h3%2C%0Abody%20h4%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Abody%20h5%2C%0Abody%20h6%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20p%20%7B%0Amargin%2Dbottom%3A%2010px%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Abody%20ol%2C%0Abody%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Apadding%2Dleft%3A%200%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Abody%20ol%20ol%20ol%2C%0Abody%20ol%20ul%20ol%2C%0Abody%20ul%20ol%20ol%2C%0Abody%20ul%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Abody%20dd%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Abody%20code%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20input%3A%3A%2Dwebkit%2Dinner%2Dspin%2Dbutton%2C%0Abody%20input%3A%3A%2Dwebkit%2Douter%2Dspin%2Dbutton%20%7B%0A%2Dwebkit%2Dappearance%3A%20none%3B%0Aappearance%3A%20none%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20%2Eborder%20%7B%0Aborder%3A%201px%20solid%20%23e1e4e8%21important%3B%0A%7D%0Abody%20%2Eborder%2D0%20%7B%0Aborder%3A%200%21important%3B%0A%7D%0Abody%20%2Eborder%2Dbottom%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23e1e4e8%21important%3B%0A%7D%0Abody%20%2Erounded%2D1%20%7B%0Aborder%2Dradius%3A%203px%21important%3B%0A%7D%0Abody%20%2Ebg%2Dwhite%20%7B%0Abackground%2Dcolor%3A%20%23fff%21important%3B%0A%7D%0Abody%20%2Ebg%2Dgray%2Dlight%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%21important%3B%0A%7D%0Abody%20%2Etext%2Dgray%2Dlight%20%7B%0Acolor%3A%20%236a737d%21important%3B%0A%7D%0Abody%20%2Emb%2D0%20%7B%0Amargin%2Dbottom%3A%200%21important%3B%0A%7D%0Abody%20%2Emy%2D2%20%7B%0Amargin%2Dbottom%3A%208px%21important%3B%0Amargin%2Dtop%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D0%20%7B%0Apadding%2Dleft%3A%200%21important%3B%0A%7D%0Abody%20%2Epy%2D0%20%7B%0Apadding%2Dbottom%3A%200%21important%3B%0Apadding%2Dtop%3A%200%21important%3B%0A%7D%0Abody%20%2Epl%2D1%20%7B%0Apadding%2Dleft%3A%204px%21important%3B%0A%7D%0Abody%20%2Epl%2D2%20%7B%0Apadding%2Dleft%3A%208px%21important%3B%0A%7D%0Abody%20%2Epy%2D2%20%7B%0Apadding%2Dbottom%3A%208px%21important%3B%0Apadding%2Dtop%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D3%2C%0Abody%20%2Epx%2D3%20%7B%0Apadding%2Dleft%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epx%2D3%20%7B%0Apadding%2Dright%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epl%2D4%20%7B%0Apadding%2Dleft%3A%2024px%21important%3B%0A%7D%0Abody%20%2Epl%2D5%20%7B%0Apadding%2Dleft%3A%2032px%21important%3B%0A%7D%0Abody%20%2Epl%2D6%20%7B%0Apadding%2Dleft%3A%2040px%21important%3B%0A%7D%0Abody%20%2Ef6%20%7B%0Afont%2Dsize%3A%2012px%21important%3B%0A%7D%0Abody%20%2Elh%2Dcondensed%20%7B%0Aline%2Dheight%3A%201%2E25%21important%3B%0A%7D%0Abody%20%2Etext%2Dbold%20%7B%0Afont%2Dweight%3A%20600%21important%3B%0A%7D%0Abody%3Abefore%20%7B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%3Aafter%20%7B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%21important%3B%0A%7D%0Abody%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%21important%3B%0A%7D%0Abody%20a%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20blockquote%2C%0Abody%20dl%2C%0Abody%20ol%2C%0Abody%20p%2C%0Abody%20pre%2C%0Abody%20table%2C%0Abody%20ul%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20hr%20%7B%0Abackground%2Dcolor%3A%20%23e1e4e8%3B%0Aborder%3A%200%3B%0Aheight%3A%20%2E25em%3B%0Amargin%3A%2024px%200%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20blockquote%20%7B%0Aborder%2Dleft%3A%20%2E25em%20solid%20%23dfe2e5%3B%0Acolor%3A%20%236a737d%3B%0Apadding%3A%200%201em%3B%0A%7D%0Abody%20blockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20kbd%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%3B%0Aborder%3A%201px%20solid%20%23c6cbd1%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23959da5%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23959da5%3B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Apadding%3A%203px%205px%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Afont%2Dweight%3A%20600%3B%0Aline%2Dheight%3A%201%2E25%3B%0Amargin%2Dbottom%3A%2016px%3B%0Amargin%2Dtop%3A%2024px%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23eaecef%3B%0Apadding%2Dbottom%3A%20%2E3em%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%20%2E875em%3B%0A%7D%0Abody%20h6%20%7B%0Acolor%3A%20%236a737d%3B%0Afont%2Dsize%3A%20%2E85em%3B%0A%7D%0Abody%20ol%2C%0Abody%20ul%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ol%20ul%2C%0Abody%20ul%20ol%2C%0Abody%20ul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20li%20%7B%0Aword%2Dwrap%3A%20break%2Dall%3B%0A%7D%0Abody%20li%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Abody%20li%2Bli%20%7B%0Amargin%2Dtop%3A%20%2E25em%3B%0A%7D%0Abody%20dl%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dt%20%7B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20600%3B%0Amargin%2Dtop%3A%2016px%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dd%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0Apadding%3A%200%2016px%3B%0A%7D%0Abody%20table%20%7B%0Adisplay%3A%20block%3B%0Aoverflow%3A%20auto%3B%0Awidth%3A%20100%25%3B%0A%7D%0Abody%20table%20th%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20table%20td%2C%0Abody%20table%20th%20%7B%0Aborder%3A%201px%20solid%20%23dfe2e5%3B%0Apadding%3A%206px%2013px%3B%0A%7D%0Abody%20table%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23c6cbd1%3B%0A%7D%0Abody%20table%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f6f8fa%3B%0A%7D%0Abody%20img%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Amax%2Dwidth%3A%20100%25%3B%0A%7D%0Abody%20img%5Balign%3Dright%5D%20%7B%0Apadding%2Dleft%3A%2020px%3B%0A%7D%0Abody%20img%5Balign%3Dleft%5D%20%7B%0Apadding%2Dright%3A%2020px%3B%0A%7D%0Abody%20code%20%7B%0Abackground%2Dcolor%3A%20rgba%2827%2C31%2C35%2C%2E05%29%3B%0Aborder%2Dradius%3A%203px%3B%0Afont%2Dsize%3A%2085%25%3B%0Amargin%3A%200%3B%0Apadding%3A%20%2E2em%20%2E4em%3B%0A%7D%0Abody%20pre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20pre%3Ecode%20%7B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0Awhite%2Dspace%3A%20pre%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20%2Ehighlight%20pre%2C%0Abody%20pre%20%7B%0Abackground%2Dcolor%3A%20%23f6f8fa%3B%0Aborder%2Dradius%3A%203px%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Aoverflow%3A%20auto%3B%0Apadding%3A%2016px%3B%0A%7D%0Abody%20pre%20code%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0Adisplay%3A%20inline%3B%0Aline%2Dheight%3A%20inherit%3B%0Amargin%3A%200%3B%0Amax%2Dwidth%3A%20auto%3B%0Aoverflow%3A%20visible%3B%0Apadding%3A%200%3B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20%2Ecommit%2Dtease%2Dsha%20%7B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2090%25%3B%0A%7D%0Abody%20%2Eblob%2Dwrapper%20%7B%0Aborder%2Dbottom%2Dleft%2Dradius%3A%203px%3B%0Aborder%2Dbottom%2Dright%2Dradius%3A%203px%3B%0Aoverflow%2Dx%3A%20auto%3B%0Aoverflow%2Dy%3A%20hidden%3B%0A%7D%0Abody%20%2Eblob%2Dwrapper%2Dembedded%20%7B%0Amax%2Dheight%3A%20240px%3B%0Aoverflow%2Dy%3A%20auto%3B%0A%7D%0Abody%20%2Eblob%2Dnum%20%7B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0Acolor%3A%20rgba%2827%2C31%2C35%2C%2E3%29%3B%0Acursor%3A%20pointer%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0Aline%2Dheight%3A%2020px%3B%0Amin%2Dwidth%3A%2050px%3B%0Apadding%2Dleft%3A%2010px%3B%0Apadding%2Dright%3A%2010px%3B%0Atext%2Dalign%3A%20right%3B%0Auser%2Dselect%3A%20none%3B%0Avertical%2Dalign%3A%20top%3B%0Awhite%2Dspace%3A%20nowrap%3B%0Awidth%3A%201%25%3B%0A%7D%0Abody%20%2Eblob%2Dnum%3Ahover%20%7B%0Acolor%3A%20rgba%2827%2C31%2C35%2C%2E6%29%3B%0A%7D%0Abody%20%2Eblob%2Dnum%3Abefore%20%7B%0Acontent%3A%20attr%28data%2Dline%2Dnumber%29%3B%0A%7D%0Abody%20%2Eblob%2Dcode%20%7B%0Aline%2Dheight%3A%2020px%3B%0Apadding%2Dleft%3A%2010px%3B%0Apadding%2Dright%3A%2010px%3B%0Aposition%3A%20relative%3B%0Avertical%2Dalign%3A%20top%3B%0A%7D%0Abody%20%2Eblob%2Dcode%2Dinner%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0Aoverflow%3A%20visible%3B%0Awhite%2Dspace%3A%20pre%3B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20%2Epl%2Dtoken%2Eactive%2C%0Abody%20%2Epl%2Dtoken%3Ahover%20%7B%0Abackground%3A%20%23ffea7f%3B%0Acursor%3A%20pointer%3B%0A%7D%0Abody%20kbd%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%3B%0Aborder%3A%201px%20solid%20%23d1d5da%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23c6cbd1%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23c6cbd1%3B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%3A%2011px%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Aline%2Dheight%3A%2010px%3B%0Apadding%3A%203px%205px%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Aborder%2Dcolor%3A%20%230366d6%3B%0Aposition%3A%20relative%3B%0Az%2Dindex%3A%201%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%221%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%201%3B%0Atab%2Dsize%3A%201%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%222%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%202%3B%0Atab%2Dsize%3A%202%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%223%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%203%3B%0Atab%2Dsize%3A%203%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%224%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%204%3B%0Atab%2Dsize%3A%204%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%225%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%205%3B%0Atab%2Dsize%3A%205%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%226%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%206%3B%0Atab%2Dsize%3A%206%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%227%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%207%3B%0Atab%2Dsize%3A%207%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%228%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%208%3B%0Atab%2Dsize%3A%208%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%229%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%209%3B%0Atab%2Dsize%3A%209%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2210%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2010%3B%0Atab%2Dsize%3A%2010%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2211%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2011%3B%0Atab%2Dsize%3A%2011%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2212%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2012%3B%0Atab%2Dsize%3A%2012%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%20%2E2em%20%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20hr%20%7B%0Aborder%2Dbottom%2Dcolor%3A%20%23eee%3B%0A%7D%0Abody%20%2Epl%2D0%20%7B%0Apadding%2Dleft%3A%200%21important%3B%0A%7D%0Abody%20%2Epl%2D1%20%7B%0Apadding%2Dleft%3A%204px%21important%3B%0A%7D%0Abody%20%2Epl%2D2%20%7B%0Apadding%2Dleft%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D3%20%7B%0Apadding%2Dleft%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epl%2D4%20%7B%0Apadding%2Dleft%3A%2024px%21important%3B%0A%7D%0Abody%20%2Epl%2D5%20%7B%0Apadding%2Dleft%3A%2032px%21important%3B%0A%7D%0Abody%20%2Epl%2D6%20%7B%0Apadding%2Dleft%3A%2040px%21important%3B%0A%7D%0Abody%20%2Epl%2D7%20%7B%0Apadding%2Dleft%3A%2048px%21important%3B%0A%7D%0Abody%20%2Epl%2D8%20%7B%0Apadding%2Dleft%3A%2064px%21important%3B%0A%7D%0Abody%20%2Epl%2D9%20%7B%0Apadding%2Dleft%3A%2080px%21important%3B%0A%7D%0Abody%20%2Epl%2D10%20%7B%0Apadding%2Dleft%3A%2096px%21important%3B%0A%7D%0Abody%20%2Epl%2D11%20%7B%0Apadding%2Dleft%3A%20112px%21important%3B%0A%7D%0Abody%20%2Epl%2D12%20%7B%0Apadding%2Dleft%3A%20128px%21important%3B%0A%7D%0A" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>
+Contents<span class="tocSkip"></span>
+</h1>
+<div class="toc">
+<ul class="toc-item">
+<li>
+<span><a href="#Example-program" data-toc-modified-id="Example-program-1">Example program</a></span>
+</li>
+<li>
+<span><a href="#Built-in-tests" data-toc-modified-id="Built-in-tests-2">Built-in tests</a></span>
+</li>
+<li>
+<span><a href="#Test-functions" data-toc-modified-id="Test-functions-3">Test functions</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#Assertions" data-toc-modified-id="Assertions-3.1">Assertions</a></span>
+</li>
+<li>
+<span><a href="#Failing-tests" data-toc-modified-id="Failing-tests-3.2">Failing tests</a></span>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#Test-runners" data-toc-modified-id="Test-runners-4">Test runners</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#pytest" data-toc-modified-id="pytest-4.1">pytest</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#Command-line-usage" data-toc-modified-id="Command-line-usage-4.1.1">Command line usage</a></span>
+</li>
+<li>
+<span><a href="#Output" data-toc-modified-id="Output-4.1.2">Output</a></span>
+</li>
+<li>
+<span><a href="#Verbose-mode" data-toc-modified-id="Verbose-mode-4.1.3">Verbose mode</a></span>
+</li>
+<li>
+<span><a href="#Testing-exceptions" data-toc-modified-id="Testing-exceptions-4.1.4">Testing exceptions</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#Test-driven-development" data-toc-modified-id="Test-driven-development-5">Test-driven development</a></span>
+</li>
+<li>
+<span><a href="#Exercises" data-toc-modified-id="Exercises-6">Exercises</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#1" data-toc-modified-id="1-6.1">1</a></span>
+</li>
+<li>
+<span><a href="#2" data-toc-modified-id="2-6.2">2</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="testing">Testing</h1>
+<p>As you have probably noticed by now, it is easy to make mistakes when writing a computer program. Computers cannot easily guess what it is that we want of them, nor do they have any idea of what sort of things it is reasonable to want to do. So we must give a computer precise, <a href="glossary.html#syntax">syntactically correct</a> instructions that represent exactly what we want to do, and if we get this wrong, the computer will either be unable to do as we asked, in which case our program will break off with an <a href="glossary.html#error">error</a>, or it will happily carry out the instructions we gave it, even when these are not actually the instructions that we wanted to give, and even if we have mistakenly instructed it to do something stupid or malicious such as emailing the contents of our downloads folder to our boss. It is therefore important to check our programs carefully for mistakes.</p>
+<p>Up until now, we have been able to check a program fairly easily by simply running it, if it is just a <a href="glossary.html#script">script</a>, or importing it and then using its functions in the console if it is a <a href="glossary.html#module">module</a>. But this sort of informal testing can only take us so far. Once we start writing programs that may take multiple different actions depending on user input, subtle mistakes may be difficult to detect in a quick informal test, because they only arise for some inputs and not others. For these reasons, most software developers test their programs systematically as they go along. Instead of testing a program manually, they write a second program whose only purpose is to test the main program. This test program tries out the main program with different inputs, and verifies that its behavior is as expected. In other words, a test program automates the process of testing the main program.</p>
+<p>Writing test programs can be tedious. As if we didn't already have enough work to do writing the main program, we now have to write another one that won't even be part of the finished product. It is tempting to dispense with testing, especially if a project is small. But we should not. Good tests act as a reasonable guarantee that our program functions correctly. And as the saying goes: Most customers prefer a product that actually works.</p>
+<h2 id="example-program">Example program</h2>
+<p>In the spirit of the class so far, we won't actually be developing a product that any healthy customer would want to download. Instead, we have a program for producing <a href="https://en.wikipedia.org/wiki/Spoonerism">spoonerisms</a>. A spoonerism is a play on words in which the initial consonants (or groups of consonants) of two words are swapped. For example:</p>
+<ul>
+<li>crushing blow → blushing crow</li>
+<li>cosy nook → nosy cook</li>
+<li>wasted term → tasted werm</li>
+</ul>
+<p>Since this lesson is about testing, we will look at the finished example program already. Our task will be to write some tests for the program. Let's import the program as <a href="glossary.html#module">module</a> and make some informal tests first. (If you need to refresh your understanding of modules and imports, take a look back at the <a href="modules.html">lesson on modules</a>.)</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> spoonerisms
+
+<span class="bu">dir</span>(spoonerisms)</code></pre></div>
+<pre><code>['VOWELS',
+ '__builtins__',
+ '__cached__',
+ '__doc__',
+ '__file__',
+ '__loader__',
+ '__name__',
+ '__package__',
+ '__spec__',
+ 'find_first_vowel',
+ 'spoonerize']</code></pre>
+<p>The main function is <code>spoonerize()</code>. We can look at its <a href="glossary.html#docstring">docstring</a> using the <code>help()</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">help</span>(spoonerisms.spoonerize)</code></pre></div>
+<pre><code>Help on function spoonerize in module spoonerisms:
+
+spoonerize(wordpair)
+    Spoonerize a word pair.
+    
+    A spoonerism switches the initial consonant clusters of words.
+    
+    Example:
+        &gt;&gt;&gt; spoonerize('smart fella')
+        'fart smella'
+    
+    Argument:
+        wordpair: A string containing exactly two words.
+    
+    Returns:
+        A string containing the spoonerized phrase.
+    
+    Raises ValueError:
+        If wordpair does not contain exactly two words.</code></pre>
+<p>Let's test the example input given in the docstring:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">spoonerisms.spoonerize(<span class="st">'smart fella'</span>)</code></pre></div>
+<pre><code>'fart smella'</code></pre>
+<p>This module is very slightly more complex than those we have encountered so far. In addition to the main function, it includes an additional 'helper function' that is <a href="glossary.html#call">called</a> from within the main function, and whose purpose is to find the location of the first vowel in a word (according to Python's zero-based <a href="glossary.html#index">indexing</a>). For example:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">spoonerisms.find_first_vowel(<span class="st">'smart'</span>)</code></pre></div>
+<pre><code>2</code></pre>
+<p>This helper function in turn depends on a variable called <code>VOWELS</code>, a string containing the characters considered to be vowels. These could just have been defined within the <code>find_first_vowel()</code> function, but including them as a variable allows us later to add more vowels easily if we want to extend the module's capabilities.</p>
+<p>This is a good point to start writing tests; our program has gone beyond just a single function, and we might want to add to its capabilities in the future. Before we begin writing the tests, you might want to take a look at the module file <a href="../examples/spoonerisms.py">spoonerisms.py</a> and quickly assure yourself that you understand how it works.</p>
+<h2 id="built-in-tests">Built-in tests</h2>
+<p>The module in fact already incorporates one short test of its workings. It uses the <code>__name__</code> special variable to print out a result when the module is run as the main program. This is something that we learned about in the <a href="modules.html#__name__">lesson on modules</a>. This sort of 'built-in test' can take us quite far, and is especially helpful early on in the development of a program. We will learn about a few ways in which a separate test program can be more convenient as development goes on. But first we need to cover the basics of test programs.</p>
+<h2 id="test-functions">Test functions</h2>
+<p>A test program goes in a separate file. This file usually has the same name as the file that it tests, but prefixed with <em>test_</em>. So in our case our test file will be called <em>test_spoonerisms.py</em>. Among the first things that the test program should do is import the module to be tested, since it will need to <a href="glossary.html#call">call</a> that module's functions and check their results. After importing the module to be tested, the test program defines functions, each of which tests one aspect of the module.</p>
+<p>Test functions look a little different from the functions we have written so far. They do not have any <a href="glossary.html#return">return value</a>, and in most cases they have no input <a href="glossary.html#argument">arguments</a> either. In place of a return value, most test functions instead make an <a href="glossary.html#assertion">assertion</a>.</p>
+<h3 id="assertions">Assertions</h3>
+<p>What is an assertion? An assertion is yet another kind of <a href="glossary.html#control">control statement</a>. You can think of it as a special kind of <a href="glossary.html#condition">condition</a>, like in an <code>if</code> statement. Similar to an <code>if</code> statement, an assertion checks whether a particular condition is true or false, for example checking whether two things are equal using <code>==</code>. But unlike an <code>if</code> statement, we do not specify what happens when the condition is true and what happens when it is false. Instead, an assertion has fixed consequences: If the condition is true, nothing happens and the program continues as normal; if the condition is not true, an <a href="glossary.html#exception">exception</a> is raised.</p>
+<p>An assertion begins with the <a href="glossary.html#keyword">keyword</a> <code>assert</code>. Here is an example of an assertion that is true:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">assert</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span></code></pre></div>
+<p>As you can see, nothing happens when Python runs this line. A true assertion just 'passes' and the Python interpreter moves on to the next line of the program.</p>
+<p>Compare this with what happens when an assertion is untrue. We get an <code>AssertionError</code>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">assert</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">5</span></code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+AssertionError                            Traceback (most recent call last)
+
+&lt;ipython-input-7-71c257695901&gt; in &lt;module&gt;
+----&gt; 1 assert 2 + 2 == 5
+
+
+AssertionError: </code></pre>
+<p>We can therefore use an assertion to check whether the <a href="glossary.html#return">return value</a> of a function is as expected. For example for the <code>spoonerize()</code> function from our example module:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">result <span class="op">=</span> spoonerisms.spoonerize(<span class="st">'smart fella'</span>)
+
+<span class="cf">assert</span> result <span class="op">==</span> <span class="st">'fart smella'</span></code></pre></div>
+<p>The simplest test functions are just functions that contain one assertion. No input arguments or return value are needed; the function's only purpose is to alert us by raising an exception if things are not working as expected. Like test files, the names of test functions should be prefixed with <code>test_</code>, and then state what is being tested. Here is an example for our <code>spoonerize()</code> function, turning the assertion above into a test function.</p>
+<p>(If you need first to remind yourself of the syntax for functions, take a look back at the <a href="functions.html#Defining-functions">lesson on functions</a>.)</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> test_spoonerize():
+    result <span class="op">=</span> spoonerisms.spoonerize(<span class="st">'smart fella'</span>)
+    <span class="cf">assert</span> result <span class="op">==</span> <span class="st">'fart smella'</span></code></pre></div>
+<p>When we <a href="glossary.html#call">call</a> our test function, no exception is raised, confirming that the assertion was true.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">test_spoonerize()</code></pre></div>
+<p>Take a look at the finished test file for our example module, <a href="../examples/test_spoonerisms.py">test_spoonerisms.py</a>. You will see that it first imports the <em>spoonerisms</em> module, then defines several test functions like the one above. Each of these tests one aspect of the workings of the <em>spoonerisms</em> module. (There is one slightly different test function at the very end of the file. Ignore this for now; we will come to it in a moment.)</p>
+<p>If we would like to test any aspect of the <em>spoonerisms</em> module, we can import the test module and run its functions, confirming that no exceptions occur:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> test_spoonerisms
+
+test_spoonerisms.test_find_first_vowel()
+test_spoonerisms.test_spoonerize()</code></pre></div>
+<h3 id="failing-tests">Failing tests</h3>
+<p>For demonstration purposes, the test module includes one test that checks a feature of the <em>spoonerisms</em> module that has not yet been implemented (treating the character combination 'qu' as a consonant), so that you can see what happens when a test fails:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">test_spoonerisms.test_spoonerize_with_qu()</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+AssertionError                            Traceback (most recent call last)
+
+&lt;ipython-input-12-21a514241976&gt; in &lt;module&gt;
+----&gt; 1 test_spoonerisms.test_spoonerize_with_qu()
+
+
+~/GitHub/introduction-to-programming/content/../examples/test_spoonerisms.py in test_spoonerize_with_qu()
+     41     result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know
+     42 
+---&gt; 43     assert result == 'quaint fartz'
+     44 
+     45 
+
+
+AssertionError: </code></pre>
+<h2 id="test-runners">Test runners</h2>
+<p>Our solution so far isn't entirely satisfactory. We wanted to have an <em>automated</em> test of our module, so that we can, for example, quickly run the tests each time we make changes, and make sure that our changes haven't broken anything. Importing the test module and then running each of its tests individually is very laborious. Because automated testing is such a common task in programming, most programming languages provide time-saving tools for running multiple tests with a single command. These tools are sometimes termed 'test runners'.</p>
+<h3 id="pytest">pytest</h3>
+<p>Python's built-in test runner is provided in a module called <code>unittest</code> in the <a href="standard_library.html">standard library</a>. However, there are also a few excellent <a href="standard_library.html#Third-party-packages">third-party packages</a> that provide test runners with additional features. We will look at one of these instead, called <em>pytest</em>. pytest is a very popular third-party test runner package for Python. Since it is provided as part of the default installation of Anaconda, you should not need to install it before trying out the examples below.</p>
+<p>If you want to check whether pytest is installed and available for you, you can try <a href="glossary.html#import">importing</a> it. Check that you do not see a <code>ModuleNotFoundError</code> when you try the following command:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pytest</code></pre></div>
+<h4 id="command-line-usage">Command line usage</h4>
+<p>pytest is typically run from the operating system's <a href="command_line.html">command line</a>. The command <code>pytest</code>, followed by the name of the test file that we would like to run, will run all of the functions within that file whose names begin with <code>test_</code>.</p>
+<p>For example:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span> pytest test_spoonerisms.py</code></pre></div>
+<pre><code>============================= test session starts ==============================
+platform linux -- Python 3.6.9, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
+rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
+collected 6 items                                                              
+
+test_spoonerisms.py ....F.                                               [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_spoonerize_with_qu ____________________________
+
+    def test_spoonerize_with_qu():
+    
+        result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know
+    
+&gt;       assert result == 'quaint fartz'
+E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'
+E         - qaint fuartz
+E         ?        -
+E         + quaint fartz
+E         ?  +
+
+test_spoonerisms.py:43: AssertionError
+========================= 1 failed, 5 passed in 0.04s ==========================</code></pre>
+<p>Remember a couple of important things from the previous lesson on the <a href="command_line.html">command line</a>:</p>
+<ul>
+<li>For this command to work, the test file <em>test_spoonerisms.py</em> and the module to be tested <em>spoonerisms.py</em> need to be located in your current working directory.</li>
+<li>Commands beginning with <code>!</code> are not standard Python commands, they are commands for the operating system's command line. They only work in the Spyder console, not in a Python program.</li>
+</ul>
+<p>pytest can even be used to run tests from more than one test file. If we do not specify the name of a test file, then pytest will search for all files in the current working directory whose names begin with <em>test_</em>, and run all the functions within those files whose names begin with <code>test_</code>. This feature becomes very useful once we have a more complex program spread over multiple files. A typical pattern of organization is to create separate test files for each major component of the program to be tested.</p>
+<p>Here for demonstration purposes I have just included a second test file <a href="../examples/test_math_is_working_as_normal.py">test_math_is_working_as_normal.py</a> containing some spurious tests:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span> pytest</code></pre></div>
+<pre><code>============================= test session starts ==============================
+platform linux -- Python 3.6.9, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
+rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
+collected 8 items                                                              
+
+test_math_is_working_as_normal.py ..                                     [ 25%]
+test_spoonerisms.py ....F.                                               [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_spoonerize_with_qu ____________________________
+
+    def test_spoonerize_with_qu():
+    
+        result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know
+    
+&gt;       assert result == 'quaint fartz'
+E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'
+E         - qaint fuartz
+E         ?        -
+E         + quaint fartz
+E         ?  +
+
+test_spoonerisms.py:43: AssertionError
+========================= 1 failed, 7 passed in 0.05s ==========================</code></pre>
+<h4 id="output">Output</h4>
+<p>pytest provides a lot of additional useful information that we did not get when just running the test functions manually. Let's go through the output from the pytest session we ran above and see what it all means.</p>
+<blockquote>
+<p><code>rootdir: /home/lt/GitHub/introduction-to-programming/content/examples</code></p>
+</blockquote>
+<p>This is a confirmation of the working directory that we ran pytest from. The pytest session will have included test files from this directory and its subdirectories.</p>
+<blockquote>
+<p><code>collected 8 items</code></p>
+</blockquote>
+<p>We can read here how many test functions pytest found in our test files.</p>
+<blockquote>
+<p><code>test_math_is_working_as_normal.py ..</code> <code>test_spoonerisms.py ....F.</code></p>
+</blockquote>
+<p>Here we see each test file listed individually. After the name of the file, each dot represents a test that passed, and each 'F' represents a test that failed.</p>
+<p>The <em>FAILURES</em> section then provides details of each failed test. As well as just the standard <code>AssertionError</code>, pytest tells us some more about the specific nature of the failure. In complex cases, this output can be very detailed indeed, for example listing all the variables that were available at the time of the failure, what their values were, and so on. In this fairly simple case the crucial line is this one:</p>
+<blockquote>
+<p><code>E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'</code></p>
+</blockquote>
+<p>Here we see what the result of the <code>spoonerize()</code> function really was, compared to what our test expected it to be.</p>
+<h4 id="verbose-mode">Verbose mode</h4>
+<p>If you would like to see even more information about the tests, you can run pytest in '<a href="glossary.html#verbose">verbose</a>' mode. In computing, the term 'verbose' has approximately the same meaning as in everyday English, but in reference to the output of a computer program rather than a human being's use of language. A program that is run in verbose mode will 'talk more', i.e. give more detailed printed output.</p>
+<p>Many command line command accept additional options in the form of a word or single letter preceded by a dash (<code>-</code>). The option for running pytest in verbose mode is <code>-v</code>. The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span> pytest <span class="op">-</span>v</code></pre></div>
+<pre><code>============================= test session starts ==============================
+platform linux -- Python 3.6.9, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/lt/GitHub/introduction-to-programming/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
+collected 8 items                                                              
+
+test_math_is_working_as_normal.py::test_two_plus_two_equals_four PASSED  [ 12%]
+test_math_is_working_as_normal.py::test_division_by_zero_is_undefined PASSED [ 25%]
+test_spoonerisms.py::test_find_first_vowel PASSED                        [ 37%]
+test_spoonerisms.py::test_spoonerize PASSED                              [ 50%]
+test_spoonerisms.py::test_spoonerize_with_multiple_consonants PASSED     [ 62%]
+test_spoonerisms.py::test_spoonerize_with_initial_vowel PASSED           [ 75%]
+test_spoonerisms.py::test_spoonerize_with_qu FAILED                      [ 87%]
+test_spoonerisms.py::test_spoonerize_exception PASSED                    [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_spoonerize_with_qu ____________________________
+
+    def test_spoonerize_with_qu():
+    
+        result = spoonerisms.spoonerize('faint quartz')  # tenuous, I know
+    
+&gt;       assert result == 'quaint fartz'
+E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'
+E         - qaint fuartz
+E         ?        -
+E         + quaint fartz
+E         ?  +
+
+test_spoonerisms.py:43: AssertionError
+========================= 1 failed, 7 passed in 0.04s ==========================</code></pre>
+<h4 id="testing-exceptions">Testing exceptions</h4>
+<p>The <a href="glossary.html#docstring">docstring</a> for our <code>spoonerize()</code> function mentions an <a href="glossary.html#exception">exception</a> (see <a href="../examples/spoonerisms.py#L44">here</a>). If we have promised our users that certain situations will result in an exception, then we should also test this. But testing the occurrence of an exception presents a slight problem. We would like our test to continue as normal if the expected exception is raised, but we would like it to raise an exception otherwise, which is the opposite of what exceptions normally do.</p>
+<p>pytest provides a function called <code>raises()</code> to handle this kind of test. This function works together with the Python <code>with</code> <a href="glossary.html#keyword">keyword</a> to create a context in which to test for the occurrence of an exception. Our program will not be interrupted if the expected exception is raised within the <code>raises()</code> context, but an exception will be raised if we reach the end of the context and the expected exception has <em>not</em> been raised.</p>
+<p>If this sounds a little abstract, it may be clearer with an example (and if you need to remind yourself about the <code>with</code> keyword, look back at the <a href="files.html#Context-managers">lesson on files</a>, where we first encountered it):</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>):
+    <span class="bu">int</span>(<span class="st">'fifty-two'</span>)</code></pre></div>
+<p>Nothing happens here, because the indented line <code>int('fifty-two')</code> does indeed raise a <code>ValueError</code>. Compare what happens with a line that does not raise a <code>ValueError</code>. The final line of the error message is nicely informative:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>):
+    <span class="bu">int</span>(<span class="st">'52'</span>)</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+Failed                                    Traceback (most recent call last)
+
+&lt;ipython-input-18-8e4b5f8643d9&gt; in &lt;module&gt;
+      1 with pytest.raises(ValueError):
+----&gt; 2     int('52')
+
+
+~/GitHub/introduction-to-programming/venv/lib/python3.6/site-packages/_pytest/python_api.py in __exit__(self, exc_type, exc_val, exc_tb)
+    743         __tracebackhide__ = True
+    744         if exc_type is None:
+--&gt; 745             fail(self.message)
+    746         assert self.excinfo is not None
+    747         if not issubclass(exc_type, self.expected_exception):
+
+
+~/GitHub/introduction-to-programming/venv/lib/python3.6/site-packages/_pytest/outcomes.py in fail(msg, pytrace)
+    126     &quot;&quot;&quot;
+    127     __tracebackhide__ = True
+--&gt; 128     raise Failed(msg=msg, pytrace=pytrace)
+    129 
+    130 
+
+
+Failed: DID NOT RAISE &lt;class 'ValueError'&gt;</code></pre>
+<p>pytest's <code>raises()</code> function even allows us to test for specific content in the exception's error message. The additional <code>match</code> <a href="glossary.html#argument">argument</a> specifies a string pattern to search for in the error message. If the pattern is not found, the final line of the error message again describes the failure in detail:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>, match<span class="op">=</span><span class="st">'OMG that is not valid. You have broken your computer FOR EVER.'</span>):
+    <span class="bu">int</span>(<span class="st">'fifty-two'</span>)</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-19-a8e5f8cbc3a4&gt; in &lt;module&gt;
+      1 with pytest.raises(ValueError, match='OMG that is not valid. You have broken your computer FOR EVER.'):
+----&gt; 2     int('fifty-two')
+
+
+ValueError: invalid literal for int() with base 10: 'fifty-two'
+
+
+During handling of the above exception, another exception occurred:
+
+
+AssertionError                            Traceback (most recent call last)
+
+&lt;ipython-input-19-a8e5f8cbc3a4&gt; in &lt;module&gt;
+      1 with pytest.raises(ValueError, match='OMG that is not valid. You have broken your computer FOR EVER.'):
+----&gt; 2     int('fifty-two')
+
+
+~/GitHub/introduction-to-programming/venv/lib/python3.6/site-packages/_pytest/python_api.py in __exit__(self, exc_type, exc_val, exc_tb)
+    753         self.excinfo.fill_unfilled(exc_info)
+    754         if self.match_expr is not None:
+--&gt; 755             self.excinfo.match(self.match_expr)
+    756         return True
+
+
+~/GitHub/introduction-to-programming/venv/lib/python3.6/site-packages/_pytest/_code/code.py in match(self, regexp)
+    640         __tracebackhide__ = True
+    641         if not re.search(regexp, str(self.value)):
+--&gt; 642             assert 0, &quot;Pattern {!r} not found in {!r}&quot;.format(regexp, str(self.value))
+    643         return True
+    644 
+
+
+AssertionError: Pattern 'OMG that is not valid. You have broken your computer FOR EVER.' not found in &quot;invalid literal for int() with base 10: 'fifty-two'&quot;</code></pre>
+<p>The final test in our example test file uses the <code>raises()</code> function to test that the exception that we wrote into the <code>spoonerize()</code> function is working properly. Take a look at it <a href="../examples/test_spoonerisms.py#L46">here</a> and check that you understand how it works.</p>
+<p>There is a <em>lot</em> more that pytest can do, but that covers our basic needs at this level. If you would like to explore some more useful pytest features, you can read the guides at the <a href="https://docs.pytest.org/en/latest/">pytest documentation site</a>.</p>
+<h2 id="test-driven-development">Test-driven development</h2>
+<p>In the example above, I presented a completed example program, and we learned about the process of writing tests for the program. In reality, many software developers follow the opposite pattern: They first write a test for a new feature that they would like their main program to have, and only then do they write that part of the main program.</p>
+<p>This approach to software development is broadly termed 'test-driven development' (or <a href="glossary.html#tdd">TDD</a>), because it uses tests to guide the development of the program. The general working pattern in test-driven development is as follows:</p>
+<ul>
+<li>First write a test.</li>
+</ul>
+<p>This might be a test that checks for a new feature of the main program that hasn't yet been written. Or it might be a test that tests a mistake or <a href="glossary.html#bug">bug</a> that somebody has reported in our program.</p>
+<ul>
+<li>Run the test and check that it fails.</li>
+</ul>
+<p>Importantly, we should not only check that the test fails, but also check that it fails <em>for the reason we expected</em>. For example, our test should not fail because we have made some mistake in the test itself, such as naming a variable incorrectly. Instead, the test should fail by encountering exactly the problem or omission that we wrote the test to identify. A test that fails for the reason that we expect it to fail is known as an 'expected failure'. Expected failures are important for first assuring ourselves that we have written the test itself correctly before we continue.</p>
+<ul>
+<li>Now write part of the main program so that it passes the test.</li>
+</ul>
+<p>This is the 'normal' part of test-driven development, in which we write a part of our program.</p>
+<ul>
+<li>Run <em>all</em> your tests.</li>
+</ul>
+<p>When we think we have got the main program right, we should run not just the new test that we just wrote but all of the tests that we have written so far. This ensures that not only have we got the new part of our program right, but we have also not inadvertently broken any of the existing parts of our program in the process. A situation in which a change to one part of a program unexpectedly breaks other aspects of the program is termed a '<a href="glossary.html#regression">regression</a>', and becomes more likely as our program becomes more complex. One of the purposes of testing in general is to help spot regressions as soon as they occur.</p>
+<ul>
+<li>Once the test passes, write the next test.</li>
+</ul>
+<p>There is rather more to test-driven development, and to testing in general, than what we have covered here, but these are the basic starting points. Try some exercises.</p>
+<h2 id="exercises">Exercises</h2>
+<h3 id="section">1</h3>
+<p>The test function <code>test_spoonerize_with_qu()</code> in our test file <a href="../examples/test_spoonerisms.py">test_spoonerisms.py</a> fails. Improve the main <a href="../examples/spoonerisms.py">spoonerisms module</a> so that this test passes. When you think that you have got it right, run all the tests in the test file using pytest. Check that <code>test_spoonerize_with_qu()</code> now passes, and make sure that your changes have not introduced any <a href="glossary.html#regression">regressions</a> that cause the other tests to fail.</p>
+<h3 id="section-1">2</h3>
+<p>The letter <em>y</em> presents some problems for spoonerisms in English. Sometimes it is a vowel and sometimes it is a consonant. Assume the following simple rule which will work in most cases:</p>
+<blockquote>
+<p>At the beginning of a word, <em>y</em> is a consonant. Otherwise it is a vowel.</p>
+</blockquote>
+<p>According to this rule, a spoonerism should treat an initial <em>y</em> as the 'head' of a word and should swap it with the head of the other word in the spoonerism as normal. For example:</p>
+<ul>
+<li>four years → your fears</li>
+</ul>
+<p>But a <em>y</em> elsewhere should be treated as a vowel and not included in the 'head' of the word. For example:</p>
+<ul>
+<li>sly drinkies → dry slinkies</li>
+</ul>
+<p>Modify the <a href="../examples/spoonerisms.py">spoonerisms module</a> to take this new rule into account. But do so according to the test-driven development pattern as described above. Write a new test function in the <a href="../examples/test_spoonerisms.py">test_spoonerisms.py</a> test file first, and verify that you get the expected failure. Only then may you write your planned improvement.</p>
+<p>You might want to write more than one test function to make sure that you have covered all the relevant possibilities.</p>
+<p>When you have made your changes to <em>spoonerisms.py</em>, use pytest to run all of the test functions in the test file. Check that your new test function passes and that your changes have not caused any of the other tests to fail.</p>
+</body>
+</html>

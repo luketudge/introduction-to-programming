@@ -1,11 +1,11 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Basic-commands" data-toc-modified-id="Basic-commands-1">Basic commands</a></span><ul class="toc-item"><li><span><a href="#cd" data-toc-modified-id="cd-1.1">cd</a></span></li><li><span><a href="#dir" data-toc-modified-id="dir-1.2">dir</a></span></li><li><span><a href="#python" data-toc-modified-id="python-1.3">python</a></span></li></ul></li><li><span><a href="#Spyder" data-toc-modified-id="Spyder-2">Spyder</a></span><ul class="toc-item"><li><span><a href="#IPython" data-toc-modified-id="IPython-2.1">IPython</a></span><ul class="toc-item"><li><span><a href="#Magic" data-toc-modified-id="Magic-2.1.1">Magic</a></span></li></ul></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Basic-commands" data-toc-modified-id="Basic-commands-1">Basic commands</a></span><ul class="toc-item"><li><span><a href="#cd" data-toc-modified-id="cd-1.1">cd</a></span></li><li><span><a href="#ls" data-toc-modified-id="ls-1.2">ls</a></span></li><li><span><a href="#python" data-toc-modified-id="python-1.3">python</a></span></li></ul></li><li><span><a href="#Spyder" data-toc-modified-id="Spyder-2">Spyder</a></span><ul class="toc-item"><li><span><a href="#IPython" data-toc-modified-id="IPython-2.1">IPython</a></span><ul class="toc-item"><li><span><a href="#Magic" data-toc-modified-id="Magic-2.1.1">Magic</a></span></li></ul></li></ul></li></ul></div>
 
 # The command line
 
 We have now covered all the basics of working with Python: the use of [variables](extras/glossary.md#variable), different [data types](extras/glossary.md#type), various [control statements](extras/glossary.md#control), [exceptions](extras/glossary.md#exception), [functions](extras/glossary.md#function), and the organization of programs as [modules](extras/glossary.md#module). There are still a great many important features of Python to learn, but with what we have covered so far it is already possible to write useful programs. Over the next few lessons we will mostly take a break from Python itself to focus on a few important aspects of software development: the process of building a working computer program.
 
-While learning about software development, we will on a few occasions need to step outside Python and give commands to our computer's operating system more directly. All the major [operating systems](extras/glossary.md#OS) provide a means to accomplish basic tasks by typing in commands instead of clicking on icons or menu options. This is the way that operating systems used to work before they evolved graphical interfaces. The place where we can type in commands for the operating system is variously called the 'command line', 'command prompt', 'console', or 'terminal' (though for die-hard pedants some of these terms refer to subtly different aspects of interaction with the operating system).
+While learning about software development, we will on a few occasions need to step outside Python and give commands to our computer's operating system more directly. All the major [operating systems](extras/glossary.md#os) provide a means to accomplish basic tasks by typing in commands instead of clicking on icons or menu options. This is the way that operating systems used to work before they evolved graphical interfaces. The place where we can type in commands for the operating system is variously called the 'command line', 'command prompt', 'console', or 'terminal' (though for die-hard pedants some of these terms refer to subtly different aspects of interaction with the operating system).
 
 The steps needed to find the command line differ slightly across different operating systems. On Linux and macOS, an application called the 'Terminal' provides a command line. It looks like this:
 
@@ -13,7 +13,7 @@ The steps needed to find the command line differ slightly across different opera
 
 On Windows, a similar-looking application called the 'Command prompt' serves the same function. Alternatively, if you have installed Anaconda as recommended for the class, you can access the command line via an app called 'Anaconda Prompt'. The [online documentation](https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-anaconda-prompt) for Anaconda provides a few more details about this app.
 
-Unfortunately, different operating systems understand different commands. Windows in particular differs from the others. So in order to ensure that the demonstrations work for all of us, we will limit our use of the command line just to what is necessary for the techniques we need to learn, and we will use the command line in a way that is compatible with all the major operating systems.
+Unfortunately, different operating systems understand different commands. Windows in particular differs from the others. So in order to ensure that the demonstrations work for all of us, we will limit our use of the command line just to what is necessary for the techniques we need to learn. In the few cases that different commands are needed on different operating systems, I will let you know.
 
 ## Basic commands
 
@@ -33,11 +33,9 @@ To move 'up' one directory in your computer's file system, use `cd` followed by 
 
 ![](images/cd_dot_dot.png)
 
-### dir
+### ls
 
-To see the contents of the current directory, use the command `dir`. For example:
-
-![](images/dir.png)
+To see the contents of the current directory, use the command `ls`. Only Linux and macOS recognize the `ls` command. On Windows, you will need to use `dir` instead.
 
 ### python
 
@@ -62,15 +60,16 @@ In the Spyder console, if you place an exclamation mark character (`!`) at the b
 ! dir
 ```
 
-    command_line.md  functions.md     sequences_mappings.md
-    conditions.md    images	     sequences_mappings.md
-    conditions.md	    intro.md      standard_library.md
-    convert_ipynb.sh    intro.md	     standard_library.md
-    examples	    iteration.md  testing.md
-    extras		    iteration.md     types.md
-    files.md	    modules.md    types.md
-    files.md	    modules.md
-    functions.md     README.md
+    command_line.md	 functions.md	  sequences_mappings.md
+    command_line.md		 html		  sequences_mappings.md
+    conditions.md	 images		  standard_library.md
+    conditions.md		 intro.md	  standard_library.md
+    convert_page_formats.sh  intro.md	  testing.md
+    examples		 iteration.md  testing.md
+    extras			 iteration.md	  types.md
+    files.md		 modules.md	  types.md
+    files.md		 modules.md
+    functions.md		 README.md
 
 
 There are a couple of important things to note about this way of using the Spyder console. First of all, don't confuse Python commands with commands for the operating system. The operating system does not recognize Python commands, so if you accidentally prefix Python commands with `!`, you will see an error message (the exact content of which will depend on your operating system).
@@ -104,7 +103,7 @@ As well as displaying some information about the version of Python that Spyder i
 
 There are also a few commands that are special to IPython itself, and are not passed on to either Python or the operating system. These commands all begin with the percent character `%`. The documentation for IPython fancifully refers to these as 'magic' commands. We do not really need to use these magic commands often, or ever, but one or two of them can occasionally be useful as a shortcut when testing things out in the console:
 
-* `%pwd` (an abbreviation of **p**rint **w**orking **d**irectory) will tell you what [directory](xtras/glossary.md#directory) you are currently working in.
+* `%pwd` (an abbreviation of **p**rint **w**orking **d**irectory) will tell you what [directory](extras/glossary.md#directory) you are currently working in.
 
 
 ```python
@@ -125,15 +124,16 @@ There are also a few commands that are special to IPython itself, and are not pa
 %ls
 ```
 
-    command_line.md  functions.md     sequences_mappings.md
-    conditions.md    images/          sequences_mappings.md
-    conditions.md       intro.md      standard_library.md
-    convert_ipynb.sh*   intro.md         standard_library.md
-    examples/           iteration.md  testing.md
-    extras/             iteration.md     types.md
-    files.md         modules.md    types.md
-    files.md            modules.md
-    functions.md     README.md
+    command_line.md        functions.md     sequences_mappings.md
+    command_line.md           html/            sequences_mappings.md
+    conditions.md          images/          standard_library.md
+    conditions.md             intro.md      standard_library.md
+    convert_page_formats.sh*  intro.md         testing.md
+    examples/                 iteration.md  testing.md
+    extras/                   iteration.md     types.md
+    files.md               modules.md    types.md
+    files.md                  modules.md
+    functions.md           README.md
 
 
 You can also use `%ls` together with the name of a subdirectory to see its contents.
@@ -143,13 +143,17 @@ You can also use `%ls` together with the name of a subdirectory to see its conte
 %ls examples
 ```
 
-    age_next_year.py       guess_the_animal.py*         name_trivia.py
-    alternative_ending.py  hoff.py                      README.md
-    circle.py              ids.py                       slim_shady.py
-    data/                  initials.py                  spoonerisms.py
-    fun_facts.py           intro_prog_examples.zip      test_spoonerisms.py
-    greeting_personal.py   make_monthly_directories.py  zip_all.sh*
-    greeting.py            my_program.py
+    age_next_year.py       intro_prog_examples.zip
+    alternative_ending.py  make_monthly_directories.py
+    circle.py              my_program.py
+    data/                  name_trivia.py
+    fun_facts.py           __pycache__/
+    greeting_personal.py   README.md
+    greeting.py            slim_shady.py
+    guess_the_animal.py*   spoonerisms.py
+    hoff.py                test_math_is_working_as_normal.py
+    ids.py                 test_spoonerisms.py
+    initials.py            zip_all.sh*
 
 
 * `%reset` deletes any variables that you have created in the console so far (first asking you to confirm that you want to do this).

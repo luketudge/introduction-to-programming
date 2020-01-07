@@ -16,4 +16,4 @@ sudo apt-get install spyder3 python3-bs4 python3-imageio python3-matplotlib pyth
 
 You will be prompted to enter your user password, and you should then see some printouts about the packages being downloaded and installed.
 
-Once you have finished installing these extras, you should be able to find Spyder among your applications. Once you have launched Spyder, follow the configuration steps described [here](spyder.md).
+Once you have finished installing these extras, you should be able to find Spyder among your applications. Once you have launched Spyder, follow the [recommended configuration steps](spyder.md).

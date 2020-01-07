@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link href="data:text/css;charset=utf-8,%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%2Eocticon%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Afill%3A%20currentColor%3B%0Avertical%2Dalign%3A%20text%2Dbottom%3B%0A%7D%0Abody%20%2Eanchor%20%7B%0Afloat%3A%20left%3B%0Aline%2Dheight%3A%201%3B%0Amargin%2Dleft%3A%20%2D20px%3B%0Apadding%2Dright%3A%204px%3B%0A%7D%0Abody%20%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Abody%20h1%20%2Eocticon%2Dlink%2C%0Abody%20h2%20%2Eocticon%2Dlink%2C%0Abody%20h3%20%2Eocticon%2Dlink%2C%0Abody%20h4%20%2Eocticon%2Dlink%2C%0Abody%20h5%20%2Eocticon%2Dlink%2C%0Abody%20h6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%231b1f23%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%2C%0Abody%20h2%3Ahover%20%2Eanchor%2C%0Abody%20h3%3Ahover%20%2Eanchor%2C%0Abody%20h4%3Ahover%20%2Eanchor%2C%0Abody%20h5%3Ahover%20%2Eanchor%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Abody%20%7B%0A%2Dms%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%2324292e%3B%0Aline%2Dheight%3A%201%2E5%3B%0Afont%2Dfamily%3A%20%2Dapple%2Dsystem%2CBlinkMacSystemFont%2CSegoe%20UI%2CHelvetica%2CArial%2Csans%2Dserif%2CApple%20Color%20Emoji%2CSegoe%20UI%20Emoji%2CSegoe%20UI%20Symbol%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E5%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Abody%20%2Epl%2Dc%20%7B%0Acolor%3A%20%236a737d%3B%0A%7D%0Abody%20%2Epl%2Dc1%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23005cc5%3B%0A%7D%0Abody%20%2Epl%2De%2C%0Abody%20%2Epl%2Den%20%7B%0Acolor%3A%20%236f42c1%3B%0A%7D%0Abody%20%2Epl%2Ds%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsmi%20%7B%0Acolor%3A%20%2324292e%3B%0A%7D%0Abody%20%2Epl%2Dent%20%7B%0Acolor%3A%20%2322863a%3B%0A%7D%0Abody%20%2Epl%2Dk%20%7B%0Acolor%3A%20%23d73a49%3B%0A%7D%0Abody%20%2Epl%2Dpds%2C%0Abody%20%2Epl%2Ds%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsr%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsra%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23032f62%3B%0A%7D%0Abody%20%2Epl%2Dsmw%2C%0Abody%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23e36209%3B%0A%7D%0Abody%20%2Epl%2Dbu%20%7B%0Acolor%3A%20%23b31d28%3B%0A%7D%0Abody%20%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b31d28%3B%0Acolor%3A%20%23fafbfc%3B%0A%7D%0Abody%20%2Epl%2Dc2%20%7B%0Abackground%2Dcolor%3A%20%23d73a49%3B%0Acolor%3A%20%23fafbfc%3B%0A%7D%0Abody%20%2Epl%2Dc2%3Abefore%20%7B%0Acontent%3A%20%22%5EM%22%3B%0A%7D%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2322863a%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dml%20%7B%0Acolor%3A%20%23735c0f%3B%0A%7D%0Abody%20%2Epl%2Dmh%2C%0Abody%20%2Epl%2Dmh%20%2Epl%2Den%2C%0Abody%20%2Epl%2Dms%20%7B%0Acolor%3A%20%23005cc5%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dmi%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%20%2Epl%2Dmb%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffeef0%3B%0Acolor%3A%20%23b31d28%3B%0A%7D%0Abody%20%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23f0fff4%3B%0Acolor%3A%20%2322863a%3B%0A%7D%0Abody%20%2Epl%2Dmc%20%7B%0Abackground%2Dcolor%3A%20%23ffebda%3B%0Acolor%3A%20%23e36209%3B%0A%7D%0Abody%20%2Epl%2Dmi2%20%7B%0Abackground%2Dcolor%3A%20%23005cc5%3B%0Acolor%3A%20%23f6f8fa%3B%0A%7D%0Abody%20%2Epl%2Dmdr%20%7B%0Acolor%3A%20%236f42c1%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dba%20%7B%0Acolor%3A%20%23586069%3B%0A%7D%0Abody%20%2Epl%2Dsg%20%7B%0Acolor%3A%20%23959da5%3B%0A%7D%0Abody%20%2Epl%2Dcorl%20%7B%0Acolor%3A%20%23032f62%3B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20details%20%7B%0Adisplay%3A%20block%3B%0A%7D%0Abody%20summary%20%7B%0Adisplay%3A%20list%2Ditem%3B%0A%7D%0Abody%20a%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Abody%20a%3Aactive%2C%0Abody%20a%3Ahover%20%7B%0Aoutline%2Dwidth%3A%200%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20inherit%3B%0Afont%2Dweight%3A%20bolder%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%20%2E67em%200%3B%0A%7D%0Abody%20img%20%7B%0Aborder%2Dstyle%3A%20none%3B%0A%7D%0Abody%20code%2C%0Abody%20kbd%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20monospace%2Cmonospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20hr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0Aoverflow%3A%20visible%3B%0A%7D%0Abody%20input%20%7B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20input%20%7B%0Aoverflow%3A%20visible%3B%0A%7D%0Abody%20%5Btype%3Dcheckbox%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Abody%20input%20%7B%0Afont%2Dfamily%3A%20inherit%3B%0Afont%2Dsize%3A%20inherit%3B%0Aline%2Dheight%3A%20inherit%3B%0A%7D%0Abody%20a%20%7B%0Acolor%3A%20%230366d6%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20a%3Ahover%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20hr%20%7B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23dfe2e5%3B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0A%7D%0Abody%20hr%3Abefore%20%7B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%20hr%3Aafter%20%7B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%20table%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Abody%20td%2C%0Abody%20th%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20details%20summary%20%7B%0Acursor%3A%20pointer%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%2032px%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%2024px%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%2020px%3B%0A%7D%0Abody%20h3%2C%0Abody%20h4%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Abody%20h5%2C%0Abody%20h6%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20p%20%7B%0Amargin%2Dbottom%3A%2010px%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Abody%20ol%2C%0Abody%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Apadding%2Dleft%3A%200%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Abody%20ol%20ol%20ol%2C%0Abody%20ol%20ul%20ol%2C%0Abody%20ul%20ol%20ol%2C%0Abody%20ul%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Abody%20dd%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Abody%20code%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20input%3A%3A%2Dwebkit%2Dinner%2Dspin%2Dbutton%2C%0Abody%20input%3A%3A%2Dwebkit%2Douter%2Dspin%2Dbutton%20%7B%0A%2Dwebkit%2Dappearance%3A%20none%3B%0Aappearance%3A%20none%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20%2Eborder%20%7B%0Aborder%3A%201px%20solid%20%23e1e4e8%21important%3B%0A%7D%0Abody%20%2Eborder%2D0%20%7B%0Aborder%3A%200%21important%3B%0A%7D%0Abody%20%2Eborder%2Dbottom%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23e1e4e8%21important%3B%0A%7D%0Abody%20%2Erounded%2D1%20%7B%0Aborder%2Dradius%3A%203px%21important%3B%0A%7D%0Abody%20%2Ebg%2Dwhite%20%7B%0Abackground%2Dcolor%3A%20%23fff%21important%3B%0A%7D%0Abody%20%2Ebg%2Dgray%2Dlight%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%21important%3B%0A%7D%0Abody%20%2Etext%2Dgray%2Dlight%20%7B%0Acolor%3A%20%236a737d%21important%3B%0A%7D%0Abody%20%2Emb%2D0%20%7B%0Amargin%2Dbottom%3A%200%21important%3B%0A%7D%0Abody%20%2Emy%2D2%20%7B%0Amargin%2Dbottom%3A%208px%21important%3B%0Amargin%2Dtop%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D0%20%7B%0Apadding%2Dleft%3A%200%21important%3B%0A%7D%0Abody%20%2Epy%2D0%20%7B%0Apadding%2Dbottom%3A%200%21important%3B%0Apadding%2Dtop%3A%200%21important%3B%0A%7D%0Abody%20%2Epl%2D1%20%7B%0Apadding%2Dleft%3A%204px%21important%3B%0A%7D%0Abody%20%2Epl%2D2%20%7B%0Apadding%2Dleft%3A%208px%21important%3B%0A%7D%0Abody%20%2Epy%2D2%20%7B%0Apadding%2Dbottom%3A%208px%21important%3B%0Apadding%2Dtop%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D3%2C%0Abody%20%2Epx%2D3%20%7B%0Apadding%2Dleft%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epx%2D3%20%7B%0Apadding%2Dright%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epl%2D4%20%7B%0Apadding%2Dleft%3A%2024px%21important%3B%0A%7D%0Abody%20%2Epl%2D5%20%7B%0Apadding%2Dleft%3A%2032px%21important%3B%0A%7D%0Abody%20%2Epl%2D6%20%7B%0Apadding%2Dleft%3A%2040px%21important%3B%0A%7D%0Abody%20%2Ef6%20%7B%0Afont%2Dsize%3A%2012px%21important%3B%0A%7D%0Abody%20%2Elh%2Dcondensed%20%7B%0Aline%2Dheight%3A%201%2E25%21important%3B%0A%7D%0Abody%20%2Etext%2Dbold%20%7B%0Afont%2Dweight%3A%20600%21important%3B%0A%7D%0Abody%3Abefore%20%7B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%3Aafter%20%7B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%21important%3B%0A%7D%0Abody%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%21important%3B%0A%7D%0Abody%20a%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20blockquote%2C%0Abody%20dl%2C%0Abody%20ol%2C%0Abody%20p%2C%0Abody%20pre%2C%0Abody%20table%2C%0Abody%20ul%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20hr%20%7B%0Abackground%2Dcolor%3A%20%23e1e4e8%3B%0Aborder%3A%200%3B%0Aheight%3A%20%2E25em%3B%0Amargin%3A%2024px%200%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20blockquote%20%7B%0Aborder%2Dleft%3A%20%2E25em%20solid%20%23dfe2e5%3B%0Acolor%3A%20%236a737d%3B%0Apadding%3A%200%201em%3B%0A%7D%0Abody%20blockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20kbd%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%3B%0Aborder%3A%201px%20solid%20%23c6cbd1%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23959da5%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23959da5%3B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Apadding%3A%203px%205px%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Afont%2Dweight%3A%20600%3B%0Aline%2Dheight%3A%201%2E25%3B%0Amargin%2Dbottom%3A%2016px%3B%0Amargin%2Dtop%3A%2024px%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23eaecef%3B%0Apadding%2Dbottom%3A%20%2E3em%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%20%2E875em%3B%0A%7D%0Abody%20h6%20%7B%0Acolor%3A%20%236a737d%3B%0Afont%2Dsize%3A%20%2E85em%3B%0A%7D%0Abody%20ol%2C%0Abody%20ul%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ol%20ul%2C%0Abody%20ul%20ol%2C%0Abody%20ul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20li%20%7B%0Aword%2Dwrap%3A%20break%2Dall%3B%0A%7D%0Abody%20li%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Abody%20li%2Bli%20%7B%0Amargin%2Dtop%3A%20%2E25em%3B%0A%7D%0Abody%20dl%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dt%20%7B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20600%3B%0Amargin%2Dtop%3A%2016px%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dd%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0Apadding%3A%200%2016px%3B%0A%7D%0Abody%20table%20%7B%0Adisplay%3A%20block%3B%0Aoverflow%3A%20auto%3B%0Awidth%3A%20100%25%3B%0A%7D%0Abody%20table%20th%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20table%20td%2C%0Abody%20table%20th%20%7B%0Aborder%3A%201px%20solid%20%23dfe2e5%3B%0Apadding%3A%206px%2013px%3B%0A%7D%0Abody%20table%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23c6cbd1%3B%0A%7D%0Abody%20table%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f6f8fa%3B%0A%7D%0Abody%20img%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Amax%2Dwidth%3A%20100%25%3B%0A%7D%0Abody%20img%5Balign%3Dright%5D%20%7B%0Apadding%2Dleft%3A%2020px%3B%0A%7D%0Abody%20img%5Balign%3Dleft%5D%20%7B%0Apadding%2Dright%3A%2020px%3B%0A%7D%0Abody%20code%20%7B%0Abackground%2Dcolor%3A%20rgba%2827%2C31%2C35%2C%2E05%29%3B%0Aborder%2Dradius%3A%203px%3B%0Afont%2Dsize%3A%2085%25%3B%0Amargin%3A%200%3B%0Apadding%3A%20%2E2em%20%2E4em%3B%0A%7D%0Abody%20pre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20pre%3Ecode%20%7B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0Awhite%2Dspace%3A%20pre%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20%2Ehighlight%20pre%2C%0Abody%20pre%20%7B%0Abackground%2Dcolor%3A%20%23f6f8fa%3B%0Aborder%2Dradius%3A%203px%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Aoverflow%3A%20auto%3B%0Apadding%3A%2016px%3B%0A%7D%0Abody%20pre%20code%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0Adisplay%3A%20inline%3B%0Aline%2Dheight%3A%20inherit%3B%0Amargin%3A%200%3B%0Amax%2Dwidth%3A%20auto%3B%0Aoverflow%3A%20visible%3B%0Apadding%3A%200%3B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20%2Ecommit%2Dtease%2Dsha%20%7B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2090%25%3B%0A%7D%0Abody%20%2Eblob%2Dwrapper%20%7B%0Aborder%2Dbottom%2Dleft%2Dradius%3A%203px%3B%0Aborder%2Dbottom%2Dright%2Dradius%3A%203px%3B%0Aoverflow%2Dx%3A%20auto%3B%0Aoverflow%2Dy%3A%20hidden%3B%0A%7D%0Abody%20%2Eblob%2Dwrapper%2Dembedded%20%7B%0Amax%2Dheight%3A%20240px%3B%0Aoverflow%2Dy%3A%20auto%3B%0A%7D%0Abody%20%2Eblob%2Dnum%20%7B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0Acolor%3A%20rgba%2827%2C31%2C35%2C%2E3%29%3B%0Acursor%3A%20pointer%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0Aline%2Dheight%3A%2020px%3B%0Amin%2Dwidth%3A%2050px%3B%0Apadding%2Dleft%3A%2010px%3B%0Apadding%2Dright%3A%2010px%3B%0Atext%2Dalign%3A%20right%3B%0Auser%2Dselect%3A%20none%3B%0Avertical%2Dalign%3A%20top%3B%0Awhite%2Dspace%3A%20nowrap%3B%0Awidth%3A%201%25%3B%0A%7D%0Abody%20%2Eblob%2Dnum%3Ahover%20%7B%0Acolor%3A%20rgba%2827%2C31%2C35%2C%2E6%29%3B%0A%7D%0Abody%20%2Eblob%2Dnum%3Abefore%20%7B%0Acontent%3A%20attr%28data%2Dline%2Dnumber%29%3B%0A%7D%0Abody%20%2Eblob%2Dcode%20%7B%0Aline%2Dheight%3A%2020px%3B%0Apadding%2Dleft%3A%2010px%3B%0Apadding%2Dright%3A%2010px%3B%0Aposition%3A%20relative%3B%0Avertical%2Dalign%3A%20top%3B%0A%7D%0Abody%20%2Eblob%2Dcode%2Dinner%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0Aoverflow%3A%20visible%3B%0Awhite%2Dspace%3A%20pre%3B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20%2Epl%2Dtoken%2Eactive%2C%0Abody%20%2Epl%2Dtoken%3Ahover%20%7B%0Abackground%3A%20%23ffea7f%3B%0Acursor%3A%20pointer%3B%0A%7D%0Abody%20kbd%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%3B%0Aborder%3A%201px%20solid%20%23d1d5da%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23c6cbd1%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23c6cbd1%3B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%3A%2011px%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Aline%2Dheight%3A%2010px%3B%0Apadding%3A%203px%205px%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Aborder%2Dcolor%3A%20%230366d6%3B%0Aposition%3A%20relative%3B%0Az%2Dindex%3A%201%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%221%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%201%3B%0Atab%2Dsize%3A%201%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%222%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%202%3B%0Atab%2Dsize%3A%202%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%223%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%203%3B%0Atab%2Dsize%3A%203%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%224%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%204%3B%0Atab%2Dsize%3A%204%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%225%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%205%3B%0Atab%2Dsize%3A%205%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%226%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%206%3B%0Atab%2Dsize%3A%206%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%227%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%207%3B%0Atab%2Dsize%3A%207%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%228%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%208%3B%0Atab%2Dsize%3A%208%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%229%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%209%3B%0Atab%2Dsize%3A%209%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2210%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2010%3B%0Atab%2Dsize%3A%2010%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2211%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2011%3B%0Atab%2Dsize%3A%2011%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2212%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2012%3B%0Atab%2Dsize%3A%2012%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%20%2E2em%20%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20hr%20%7B%0Aborder%2Dbottom%2Dcolor%3A%20%23eee%3B%0A%7D%0Abody%20%2Epl%2D0%20%7B%0Apadding%2Dleft%3A%200%21important%3B%0A%7D%0Abody%20%2Epl%2D1%20%7B%0Apadding%2Dleft%3A%204px%21important%3B%0A%7D%0Abody%20%2Epl%2D2%20%7B%0Apadding%2Dleft%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D3%20%7B%0Apadding%2Dleft%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epl%2D4%20%7B%0Apadding%2Dleft%3A%2024px%21important%3B%0A%7D%0Abody%20%2Epl%2D5%20%7B%0Apadding%2Dleft%3A%2032px%21important%3B%0A%7D%0Abody%20%2Epl%2D6%20%7B%0Apadding%2Dleft%3A%2040px%21important%3B%0A%7D%0Abody%20%2Epl%2D7%20%7B%0Apadding%2Dleft%3A%2048px%21important%3B%0A%7D%0Abody%20%2Epl%2D8%20%7B%0Apadding%2Dleft%3A%2064px%21important%3B%0A%7D%0Abody%20%2Epl%2D9%20%7B%0Apadding%2Dleft%3A%2080px%21important%3B%0A%7D%0Abody%20%2Epl%2D10%20%7B%0Apadding%2Dleft%3A%2096px%21important%3B%0A%7D%0Abody%20%2Epl%2D11%20%7B%0Apadding%2Dleft%3A%20112px%21important%3B%0A%7D%0Abody%20%2Epl%2D12%20%7B%0Apadding%2Dleft%3A%20128px%21important%3B%0A%7D%0A" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>
+Contents<span class="tocSkip"></span>
+</h1>
+<div class="toc">
+<ul class="toc-item">
+<li>
+<span><a href="#Objective" data-toc-modified-id="Objective-1">Objective</a></span>
+</li>
+<li>
+<span><a href="#Booleans" data-toc-modified-id="Booleans-2">Booleans</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#Logic" data-toc-modified-id="Logic-2.1">Logic</a></span>
+</li>
+<li>
+<span><a href="#Conversion-to-boolean" data-toc-modified-id="Conversion-to-boolean-2.2">Conversion to boolean</a></span>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#if" data-toc-modified-id="if-3">if</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#Indentation" data-toc-modified-id="Indentation-3.1">Indentation</a></span>
+</li>
+<li>
+<span><a href="#Debugging" data-toc-modified-id="Debugging-3.2">Debugging</a></span>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#if-elif-else" data-toc-modified-id="if-elif-else-4">if elif else</a></span>
+</li>
+<li>
+<span><a href="#Nested-conditions" data-toc-modified-id="Nested-conditions-5">Nested conditions</a></span>
+</li>
+<li>
+<span><a href="#More-debugging" data-toc-modified-id="More-debugging-6">More debugging</a></span>
+</li>
+<li>
+<span><a href="#in" data-toc-modified-id="in-7">in</a></span>
+</li>
+<li>
+<span><a href="#Handling-errors" data-toc-modified-id="Handling-errors-8">Handling errors</a></span>
+</li>
+<li>
+<span><a href="#Exercises" data-toc-modified-id="Exercises-9">Exercises</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#1" data-toc-modified-id="1-9.1">1</a></span>
+</li>
+<li>
+<span><a href="#2" data-toc-modified-id="2-9.2">2</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="conditions">Conditions</h1>
+<p>We are already able to write programs that are somewhat interactive; we get the user to type something in and then we process whatever they typed in. The next level of excitement for our users is to interact with a program that does completely <em>different</em> things depending on what they type in.</p>
+<p>So far, the 'flow' of our programs has always been linear; they carry out a series of steps in order, with no variations. We would now like to give the flow of our programs a branching structure, such that its behavior will vary depending on the circumstances. This can be achieved with <a href="glossary.html#control">control statements</a>: lines of our program that do not on their own produce any result, but instead control when (or how often, or in what variations) other lines are run.</p>
+<p>One of the simplest kinds of control statement is a 'conditional' control statement. It tells Python to run certain lines of our program only if a certain condition is fulfilled. This is what we will learn about now.</p>
+<h2 id="objective">Objective</h2>
+<p>To give ourselves something to work towards, let's imagine a fairly simple toy program that we would like to create.</p>
+<p><strong>hoff.py</strong>:</p>
+<ul>
+<li>Ask the user to enter their name and surname.</li>
+<li>Find one interesting thing to say about their name:</li>
+<li>If they are called 'David Hasselhoff', ask &quot;Are you THE David Hasselhoff?&quot;
+<ul>
+<li>If they say yes, say &quot;Wow!&quot;</li>
+<li>If they say no, say &quot;Well that is quite a coincidence that you have the same name.&quot;</li>
+</ul></li>
+<li>Else if their surname is 'Hasselhoff', ask &quot;Any relation to David Hasselhoff?&quot;
+<ul>
+<li>If they say yes, say &quot;Wow!&quot;</li>
+<li>If they say no, say &quot;You never know, you might be.&quot;</li>
+</ul></li>
+<li>Else if their initials are 'DH', say &quot;You have the same initials as David Hasselhoff!&quot;</li>
+<li>Else if their first name is a variant of 'David' such as 'Dave', 'Davy', 'Dafydd', say &quot;Your name is a bit like 'David', as in 'David Hasselhoff'.&quot;</li>
+<li>Else, as a last resort, say &quot; suppose you could change your name to something more interesting, like 'David Hasselhoff'.&quot;</li>
+</ul>
+<p>The branching structure of our target program is moderately complex. We will build it up step by step, learning about the necessary programming techniques as we go.</p>
+<h2 id="booleans">Booleans</h2>
+<p>We have already briefly met the <a href="glossary.html#boolean">booleans</a>. Not Mrs. Boolean and her husband Julian, but the Python <a href="glossary.html#type">data type</a> that stores one of just two possible values: <code>True</code> or <code>False</code>. In order to be able to build conditions into our programs, we need first to learn a bit more about booleans and the logic that governs them.</p>
+<h3 id="logic">Logic</h3>
+<p>Certain statements in Python result in a boolean value. These are all 'logical' statements that ask a 'yes/no' question. The symbols used in them are mostly similar to mathematical notation:</p>
+<ul>
+<li><code>&gt;</code> 'is greater than'</li>
+<li><code>&lt;</code> 'is less than'</li>
+<li><code>&gt;=</code> 'is greater than or equal to'</li>
+<li><code>&lt;=</code> 'is less than or equal to'</li>
+</ul>
+<p>Python allows us to combine such symbols with variables and with literal numbers in much the same way as in math:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> <span class="dv">2</span>
+y <span class="op">=</span> <span class="dv">3</span>
+z <span class="op">=</span> <span class="dv">7</span>
+
+x <span class="op">&gt;</span> y</code></pre></div>
+<pre><code>False</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">&gt;=</span> <span class="dv">2</span></code></pre></div>
+<pre><code>True</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="dv">0</span> <span class="op">&lt;</span> x <span class="op">&lt;=</span> z</code></pre></div>
+<pre><code>True</code></pre>
+<p>What if we want to check whether two things are exactly equal? Here there is a small syntactical problem, because the equals symbol <code>=</code> is already in use for <a href="glossary.html#assignment">assigning</a> to a variable. Python therefore uses a double equals symbol <code>==</code> to mean 'is equal to' in the mathematical sense.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">==</span> y</code></pre></div>
+<pre><code>False</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">==</span> <span class="dv">2</span></code></pre></div>
+<pre><code>True</code></pre>
+<p><code>==</code> is also applicable to strings. As you might expect, it checks whether the contents of the two strings are exactly the same.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name1 <span class="op">=</span> <span class="st">'David Hasselhoff'</span>
+name2 <span class="op">=</span> <span class="st">'David Hasselhoff'</span>
+
+name1 <span class="op">==</span> name2</code></pre></div>
+<pre><code>True</code></pre>
+<p>Remember that lowercase and uppercase letters are not considered to be the same character, and that a space counts as a character.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name1 <span class="op">==</span> <span class="st">'david hasselhoff'</span></code></pre></div>
+<pre><code>False</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name1 <span class="op">==</span> <span class="st">'David Hasselhoff '</span></code></pre></div>
+<pre><code>False</code></pre>
+<p>Finally, we may combine or negate logical statements using the Python <a href="glossary.html#keyword">keywords</a> <code>and</code>, <code>or</code>, and <code>not</code>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span> <span class="kw">or</span> <span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span></code></pre></div>
+<pre><code>True</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span> <span class="kw">and</span> <span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span></code></pre></div>
+<pre><code>False</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">not</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span></code></pre></div>
+<pre><code>False</code></pre>
+<p>As in math, parentheses are not always necessary, but they can help make our program clearer to read.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">(<span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span>) <span class="kw">or</span> (<span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span>)</code></pre></div>
+<pre><code>True</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">not</span> (<span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span>)</code></pre></div>
+<pre><code>False</code></pre>
+<p>Python provides an abbreviation for <code>not</code> together with <code>==</code>. The symbols <code>!=</code> stand for 'is not equal to'.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">4</span></code></pre></div>
+<pre><code>False</code></pre>
+<h3 id="conversion-to-boolean">Conversion to boolean</h3>
+<p>That covers the very basics of logical statements in Python. Before we see how to turn logical statements into conditions for carrying out a part of a our program, let's take a brief detour to consider a slight quirk in the way Python handles the boolean data type.</p>
+<p>We have learned that some data types can be converted into others, using <a href="glossary.html#builtin">built-in</a> functions that have the same names as the type we wish to convert to (for example <code>int()</code> for converting to integer, and <code>str()</code> for converting to string). Initially, it may seem strange to allow converting other types into booleans, since booleans are always just <code>True</code> or <code>False</code>. Is the integer <code>42</code> on its own a 'true' number or a 'false' number? What about a string like <code>'JavaScript is a terrible programming language.'</code>? (Of course, some strings may contain true statements, but Python can't be expected to work this out.)</p>
+<p>Nonetheless, Python does allow us to convert other data types to boolean. How does it decide whether numbers or strings are 'true' or not? If you feel like a challenge, you might like to head to the Spyder console now and try converting a few strings and numbers to boolean (the type conversion function is <code>bool()</code>) to see whether you can discover the pattern.</p>
+<p>The answer follows after this block of text:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(<span class="st">'SPOILER ALERT '</span> <span class="op">*</span> <span class="dv">100</span>)</code></pre></div>
+<pre><code>SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT </code></pre>
+<p>Let's try a string first:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">bool</span>(<span class="st">'JavaScript is a terrible programming language.'</span>)</code></pre></div>
+<pre><code>True</code></pre>
+<p>That seems like a sensible answer. But what about other strings?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">bool</span>(<span class="st">'JavaScript is an excellent programming language.'</span>)</code></pre></div>
+<pre><code>True</code></pre>
+<p>No! That's not right.</p>
+<p>In fact, Python treats any string as <code>True</code>, with just one exception: an empty string with no characters in it at all:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">bool</span>(<span class="st">''</span>)</code></pre></div>
+<pre><code>False</code></pre>
+<p>This principle generalizes to the other data types. 'Empty' things are <code>False</code>, and all other things are <code>True</code>. An empty list <code>[]</code>, for example, is treated as <code>False</code>, but a list that has any contents at all is treated as <code>True</code>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">bool</span>([])</code></pre></div>
+<pre><code>False</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">bool</span>([<span class="st">'eggs'</span>, <span class="st">'bacon'</span>, <span class="st">'black pudding'</span>])</code></pre></div>
+<pre><code>True</code></pre>
+<p>For numbers, <code>0</code> is the only 'empty number', and all others are treated as <code>True</code>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">bool</span>(<span class="dv">0</span>)</code></pre></div>
+<pre><code>False</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">bool</span>(<span class="dv">42</span>)</code></pre></div>
+<pre><code>True</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">bool</span>(<span class="op">-</span><span class="dv">1</span>)</code></pre></div>
+<pre><code>True</code></pre>
+<p>This may seem slightly weird. But this convention of treating non-empty things as being somehow 'true' is common to many programming languages. As we will see later, it is important to be aware of this behavior.</p>
+<h2 id="if">if</h2>
+<p>Now that we know how to express conditions in Python, we just need to know how to apply them to certain commands, so that those commands are only carried out if the condition is true. The <a href="glossary.html#keyword">keyword</a> that we need for this is <code>if</code>, which has essentially the same meaning in Python as in English.</p>
+<p>This is how it is used, applied to the very first condition in our target program:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    <span class="bu">print</span>(<span class="st">'Are you THE Hoff?'</span>)</code></pre></div>
+<pre><code>What is your name and surname? David Hasselhoff
+Are you THE Hoff?</code></pre>
+<p>Because the user entered the exact string <code>'David Hasselhoff'</code>, the condition following the <code>if</code> keyword <a href="glossary.html#evaluate">evaluated</a> to <code>True</code> and so the <code>print()</code> command just below it was executed.</p>
+<p>We should always test our conditions with both the positive and negative case to check that we have got them right. So let's try it again, this time entering a name that should not trigger the <code>print()</code> command:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    <span class="bu">print</span>(<span class="st">'Are you THE Hoff?'</span>)</code></pre></div>
+<pre><code>What is your name and surname? Mildred Bonk</code></pre>
+<p>Good. This time we did not see the printed output.</p>
+<p>So here is the general <a href="glossary.html#syntax">syntax</a> for an <code>if</code> statement:</p>
+<ul>
+<li>write <code>if</code></li>
+<li>then write your condition</li>
+<li>this should be something that results in a boolean <code>True</code> or <code>False</code></li>
+<li>then write a colon <code>:</code></li>
+<li>underneath all this, write the command (or multiple commands) that should be executed if your condition is true</li>
+<li>these must be <a href="glossary.html#indentation">indented</a> (i.e. they should be preceded by spaces to move them rightwards)</li>
+</ul>
+<h3 id="indentation">Indentation</h3>
+<p>That last rule is important. It is the indentation in our example above that marks the <code>print()</code> line as 'belonging to' the <code>if</code> statement. Let's see what happens if we forget the indentation:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+<span class="bu">print</span>(<span class="st">'Are you THE Hoff?'</span>)</code></pre></div>
+<pre><code>  File &quot;&lt;ipython-input-26-fdc1d519ea77&gt;&quot;, line 4
+    print('Are you THE Hoff?')
+        ^
+IndentationError: expected an indented block</code></pre>
+<p>The content of this error message is fairly clear: Python was expecting some indentation after the <code>if</code> statement.</p>
+<p>This use of indentation to mark lines of a program as belonging to a <a href="glossary.html#control">control statement</a> is specific to Python, and is not a feature of most other programming languages. It is one of Python's most controversial features, and also one of the more challenging things for beginners to get used to.</p>
+<p>So let's look at a few more variants of the <code>if</code> statement above, to check your understanding of the role of indentation. First of all, an example with more than one indented line after the <code>if</code>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    <span class="bu">print</span>(<span class="st">'Are you THE Hoff?'</span>)
+    <span class="bu">print</span>(<span class="st">'The really real Hoff?'</span>)</code></pre></div>
+<pre><code>What is your name and surname? David Hasselhoff
+Are you THE Hoff?
+The really real Hoff?</code></pre>
+<p>Because both of these lines are indented, they both belong to the <code>if</code> statement, and so both of them will be run if the condition is true.</p>
+<p>Where we have multiple indented lines that all belong together, they must all be indented to the same extent. Varying indentation doesn't just look untidy, it also prevents Python from interpreting our program correctly:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    <span class="bu">print</span>(<span class="st">'Are you THE Hoff?'</span>)
+   <span class="bu">print</span>(<span class="st">'The really real Hoff?'</span>)</code></pre></div>
+<pre><code>  File &quot;&lt;tokenize&gt;&quot;, line 5
+    print('The really real Hoff?')
+    ^
+IndentationError: unindent does not match any outer indentation level</code></pre>
+<p>If you have written an <code>if</code> statement followed by multiple indented lines, you may find it helpful to hold up a ruler to your computer screen to check that the indentation is consistent throughout. This is a technique that even expert Python programmers have to resort to at some point.</p>
+<p>Now consider what happens in the variation below:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    <span class="bu">print</span>(<span class="st">'Are you THE Hoff?'</span>)
+<span class="bu">print</span>(<span class="st">'The really real Hoff?'</span>)</code></pre></div>
+<pre><code>What is your name and surname? Mildred Bonk
+The really real Hoff?</code></pre>
+<p>This one does not result in an error. It is <a href="glossary.html#syntax">syntactically</a> valid, but it does something a bit different from what we want.</p>
+<p>Notice that the user typed in a name that did not make the <code>if</code> condition true. So the first <code>print()</code> line was not run. But the second <code>print()</code> line <em>was</em> run. This is because it was not indented. As we learned above, indentation tells Python which lines belong to a control statement. If a line is not indented, it is not influenced by the preceding control statement, and so is always run, just like any normal line of the program. The first 'unindented' line after a block of indented lines marks the end of a control statement's influence, and a return to the normal linear structure of a Python program, where every line is always run.</p>
+<p>For the sake of clarity, it is a good idea to also place blank lines before and after a block of indented lines, to mark them out clearly from the rest of the program.</p>
+<h3 id="debugging">Debugging</h3>
+<p>If you are trying to write an <code>if</code> statement and you keep encountering <a href="glossary.html#error">errors</a>, here are some of the most common mistakes to check for:</p>
+<ul>
+<li>Have you forgotten the colon <code>:</code> at the end of the if statement?</li>
+<li>Have you used <code>=</code> where you meant to use <code>==</code>?</li>
+<li>Have you forgotten to indent, or indented inconsistently?</li>
+</ul>
+<h2 id="if-elif-else">if elif else</h2>
+<p>We now have the main ingredient of our target program: conditional statements. Most of the rest of what we will learn in this lesson is elaborating on this basic ingredient.</p>
+<p>The English-language description of our target program is structured as a series of conditions. The first begins with 'if', subsequent ones begin with 'else if', and the last begins simply with 'else'. That is, we want to keep checking a series of conditions until we find one that is true, and have a final 'last resort' condition that only applies if none of the others was true. This is fairly easy to put together, so long as we remember the basic syntax for a conditional statement. We just need to introduce new <a href="glossary.html#keyword">keywords</a>.</p>
+<p>Python abbreviates 'else if' to <code>elif</code>. The <code>elif</code> keyword checks a new condition, but only if none of the preceding conditions was true.</p>
+<p>'Else' is the same in Python as it is in English. The <code>else</code> keyword does not require any condition, since it merely specifies what to do if none of the preceding conditions was true. But like all <a href="glossary.html#control">control statements</a> it does still require a colon.</p>
+<p>Let's see an <code>if</code> ... <code>elif</code> ... <code>else</code> structure in action, using a simplified version of our target program:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="co"># Get the separate names and initials.</span>
+user_names <span class="op">=</span> user_name.split()
+user_firstname <span class="op">=</span> user_names[<span class="dv">0</span>]
+user_surname <span class="op">=</span> user_names[<span class="dv">1</span>]
+user_initials <span class="op">=</span> user_firstname[<span class="dv">0</span>] <span class="op">+</span> user_surname[<span class="dv">0</span>]
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    <span class="bu">print</span>(<span class="st">'Are you THE Hoff?'</span>)
+<span class="cf">elif</span> user_surname <span class="op">==</span> <span class="st">'Hasselhoff'</span>:
+    <span class="bu">print</span>(<span class="st">'Any relation to David Hasselhoff?'</span>)
+<span class="cf">elif</span> user_initials <span class="op">==</span> <span class="st">'DH'</span>:
+    <span class="bu">print</span>(<span class="st">'You have the same initials as David Hasselhoff!'</span>)
+<span class="cf">else</span>:
+    <span class="bu">print</span>(<span class="st">&quot;Never mind, I suppose you could change it to something more interesting, like 'David Hasselhoff'.&quot;</span>)</code></pre></div>
+<pre><code>What is your name and surname? Dafydd Hasselhoff
+Any relation to David Hasselhoff?</code></pre>
+<p>(If you are wondering about that bit where we extract the user's two names and initials, go to the Spyder console and explore the string <a href="glossary.html#method">method</a> <code>split()</code> and also look back at <a href="glossary.html#index">indexing</a>.)</p>
+<p>The user entered 'Dafydd Hasselhoff', and this triggered the first <code>elif</code> statement, on line 11 above. Notice that the condition for the second <code>elif</code> statement is also true, since Dafydd Hasselhoff's initials are also 'DH', but this second <code>elif</code> was not triggered; an <code>elif</code> statement is only applied if none of the preceding conditions was true.</p>
+<p>Notice also the pattern of indentation. The additional <a href="glossary.html#control">control statements</a> with <code>elif</code> and <code>else</code> are not themselves indented, but the <code>print()</code> commands that belong to them are.</p>
+<h2 id="nested-conditions">Nested conditions</h2>
+<p>We need one more major insight into Python's <a href="glossary.html#syntax">syntax</a> for conditionals before we are ready to write a complete version of our target program. For the first two conditions in our program (whether the full name is 'David Hasselhoff' or the surname is 'Hasselhoff'), we need to ask a follow up question and then apply another condition to the answer to that follow-up question. We can almost achieve this already using the techniquess we have just learned, if we add a little leap of imagination.</p>
+<p>Remember that Python uses <a href="glossary.html#indentation">indentation</a> to mark lines of a program as belonging to a preceding control statement. If we have one control statement inside another (for example one condition that only needs to be checked once another has been found to be true), then the lines that belong to the 'inner' control statement must be indented yet further, to indicate that they belong to that inner control statement and not to the 'outer' one.</p>
+<p>This is easiest to understand by just looking at an example. So here is the first condition of our program, with the additional follow-up question added:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    is_hoff <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Are you THE Hoff? '</span>)
+    <span class="cf">if</span> is_hoff <span class="op">==</span> <span class="st">'yes'</span>:
+        <span class="bu">print</span>(<span class="st">'Wow!'</span>)
+        <span class="bu">print</span>(<span class="st">&quot;That's amazing!&quot;</span>)</code></pre></div>
+<pre><code>What is your name and surname? David Hasselhoff
+Are you THE Hoff? no</code></pre>
+<p>The user answered 'no' to the second question we posed, so the 'inner' <code>if</code> statement was not triggered, and the indented lines that followed it were not run.</p>
+<p>And note that if the first <code>if</code> statement is not triggered, none of the rest is run:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    is_hoff <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Are you THE Hoff? '</span>)
+    <span class="cf">if</span> is_hoff <span class="op">==</span> <span class="st">'yes'</span>:
+        <span class="bu">print</span>(<span class="st">'Wow!'</span>)
+        <span class="bu">print</span>(<span class="st">&quot;That's amazing!&quot;</span>)</code></pre></div>
+<pre><code>What is your name and surname? Mildred Bonk</code></pre>
+<p>Again, to really firm up our understanding of the role of indentation, let's consider a variation that behaves differently:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name and surname? '</span>)
+
+<span class="cf">if</span> user_name <span class="op">==</span> <span class="st">'David Hasselhoff'</span>:
+    is_hoff <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Are you THE Hoff? '</span>)
+    <span class="cf">if</span> is_hoff <span class="op">==</span> <span class="st">'yes'</span>:
+        <span class="bu">print</span>(<span class="st">'Wow!'</span>)
+    <span class="bu">print</span>(<span class="st">&quot;That's amazing!&quot;</span>)</code></pre></div>
+<pre><code>What is your name and surname? David Hasselhoff
+Are you THE Hoff? no
+That's amazing!</code></pre>
+<p>This time, the second <code>print()</code> was indented, but only to the same extent as the other lines that follow the 'outer' <code>if</code> statement. This marks it as belonging to the outer <code>if</code> statement, so it is run if the outer <code>if</code> condition is true, regardless of whether the 'inner' one is also true.</p>
+<p>You can think of the role of indentation in Python as similar to its role in a series of nested bullet points in an ordinary document:</p>
+<ul>
+<li>This is a bullet point.</li>
+<li>This is a sub-point related to the first.</li>
+<li>So is this.
+<ul>
+<li>And this is a sub-sub-point related to the one just above.</li>
+</ul></li>
+<li>But this is back to being a sub-point related to the very first one.</li>
+<li>And this finally is just yet another bullet point in the main list of bullet points.</li>
+</ul>
+<h2 id="more-debugging">More debugging</h2>
+<p>We haven't yet attempted the last condition in our target program, which checks whether the user's first name is one of a few variants of 'David'. Let's give it a try. We will for now skip the preceding conditions, and also ask only for the user's first name, just to keep the example clear and simple.</p>
+<p>We learned earlier that we can combine conditions using the <code>or</code> <a href="glossary.html#keyword">keyword</a>, and that this keyword seems to have more or less the same meaning as it does in English. So how about this:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_firstname <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name? '</span>)
+
+<span class="cf">if</span> user_firstname <span class="op">==</span> <span class="st">'Dave'</span> <span class="kw">or</span> <span class="st">'Dafydd'</span>:
+    <span class="bu">print</span>(<span class="st">&quot;Your name is a bit like 'David', as in 'David Hasselhoff'.&quot;</span>)</code></pre></div>
+<pre><code>What is your name? Dafydd
+Your name is a bit like 'David', as in 'David Hasselhoff'.</code></pre>
+<p>That looks right. But we should always test our conditions with both the positive and the negative case:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_firstname <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name? '</span>)
+
+<span class="cf">if</span> user_firstname <span class="op">==</span> <span class="st">'Dave'</span> <span class="kw">or</span> <span class="st">'Dafydd'</span>:
+    <span class="bu">print</span>(<span class="st">&quot;Your name is a bit like 'David', as in 'David Hasselhoff'.&quot;</span>)</code></pre></div>
+<pre><code>What is your name? Mildred
+Your name is a bit like 'David', as in 'David Hasselhoff'.</code></pre>
+<p>What just happened? The user entered 'Mildred', which shouldn't trigger the <code>if</code> statement. But it did. Our program did not work as expected. We did not get an <a href="glossary.html#error">error</a>, it is just that the program's behavior is wrong. This can be the hardest kind of problem to diagnose.</p>
+<p>Let's check a few things step by step. First of all, did the <code>input()</code> function really correctly store what the user entered?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(user_firstname)</code></pre></div>
+<pre><code>Mildred</code></pre>
+<p>Ok. Does the first bit of the <code>if</code> condition somehow not work properly?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">if</span> user_firstname <span class="op">==</span> <span class="st">'Dave'</span>:
+    <span class="bu">print</span>(<span class="st">'triggered'</span>)
+<span class="cf">else</span>:
+    <span class="bu">print</span>(<span class="st">'not triggered'</span>)</code></pre></div>
+<pre><code>not triggered</code></pre>
+<p>That still seems right. So is it the full condition that is the problem?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">if</span> user_firstname <span class="op">==</span> <span class="st">'Dave'</span> <span class="kw">or</span> <span class="st">'Dafydd'</span>:
+    <span class="bu">print</span>(<span class="st">'triggered'</span>)
+<span class="cf">else</span>:
+    <span class="bu">print</span>(<span class="st">'not triggered'</span>)</code></pre></div>
+<pre><code>triggered</code></pre>
+<p>Aha! So it seems to be the inclusion of <code>or</code> that is the problem. Let's confirm with another example, using some other string than the user's name:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">if</span> <span class="st">'Ishmael'</span> <span class="op">==</span> <span class="st">'Dave'</span> <span class="kw">or</span> <span class="st">'Dafydd'</span>:
+    <span class="bu">print</span>(<span class="st">'triggered'</span>)
+<span class="cf">else</span>:
+    <span class="bu">print</span>(<span class="st">'not triggered'</span>)</code></pre></div>
+<pre><code>triggered</code></pre>
+<p>So what was going on in the statements above?</p>
+<p>In everyday English, the word 'or' can be used to join a set of possible alternatives, as in 'Dave, or Davy, or Dafydd'. In logic, and in Python, 'or' has a more specific meaning. It means:</p>
+<ul>
+<li>Look to the left of the 'or', and find out whether the statement written there is true.</li>
+<li>Independently of whatever is to the left, look to the right of the 'or', and find out whether the statement written there is true.</li>
+<li>If at least one of the two statements is true, the whole statement is true.</li>
+</ul>
+<p>So <code>or</code> expects to find a fully-formed logical statement on either side of itself. This was the case in our earlier example of <code>or</code>, in which either side of the <code>or</code> was a complete statement on its own:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span></code></pre></div>
+<pre><code>True</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span></code></pre></div>
+<pre><code>False</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">(<span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span>) <span class="kw">or</span> (<span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span>)</code></pre></div>
+<pre><code>True</code></pre>
+<p>If <code>or</code> expects to find a fully-formed logical statement on either side of itself, why did our condition for the user's name not simply result in an error? After all, <code>'Dafydd'</code> is not a fully-formed logical statement on his own.</p>
+<p>Remember the slightly weird convention that all non-empty things are <code>True</code> when converted to <a href="glossary.html#boolean">boolean</a>. So for the purposes of logical conditions, <code>'Dafydd'</code> is <code>True</code>, as is any non-empty string. This means that the statement <code>user_firstname == 'Dave' or 'Dafydd'</code> is always <code>True</code>, regardless of what the contents of the <code>user_firstname</code> variable are, because at least one of the two things either side of the <code>or</code> is <code>True</code>.</p>
+<p>So here is the correct way to use <code>or</code> in our example. Each side of the <code>or</code> must be a statement involving the <code>user_firstname</code> variable:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_firstname <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What is your name? '</span>)
+
+<span class="cf">if</span> user_firstname <span class="op">==</span> <span class="st">'Dave'</span> <span class="kw">or</span> user_firstname <span class="op">==</span> <span class="st">'Dafydd'</span>:
+    <span class="bu">print</span>(<span class="st">&quot;Your name is a bit like 'David', as in 'David Hasselhoff'.&quot;</span>)</code></pre></div>
+<pre><code>What is your name? Mildred</code></pre>
+<h2 id="in">in</h2>
+<p>Using <code>or</code> to join up multiple statements that all check the same variable quickly gets tedious and difficult to read. For example if we want to check three variants of 'David' rather than just two, the condition would be:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_firstname <span class="op">==</span> <span class="st">'Dave'</span> <span class="kw">or</span> user_firstname <span class="op">==</span> <span class="st">'Davy'</span> <span class="kw">or</span> user_firstname <span class="op">==</span> <span class="st">'Dafydd'</span></code></pre></div>
+<pre><code>False</code></pre>
+<p>There is a better option in such cases. If we want to check whether a variable has one of several possible values, we can ask whether that variable's value is 'in' a <a href="glossary.html#list">list</a> of possibilities, using the <code>in</code> <a href="glossary.html#keyword">keyword</a>.</p>
+<p>For example:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_firstname <span class="kw">in</span> [<span class="st">'Dave'</span>, <span class="st">'Davy'</span>, <span class="st">'Dafydd'</span>]</code></pre></div>
+<pre><code>False</code></pre>
+<p>So if you ever find yourself checking multiple possible values of a variable using <code>or</code>, consider using <code>in</code> instead.</p>
+<p>That concludes the techniques necessary to write a basic version of our target program. You can take a look at the finished version <a href="../examples/hoff.py">hoff.py</a>. This program looks quite complex, but it is made of the building blocks we wrote above, with some very small refinements. Some extra blank lines have been added to clearly separate the multiple conditions that are checked.</p>
+<h2 id="handling-errors">Handling errors</h2>
+<p>Let's conclude by learning about another kind of control statement. To keep things simple, we won't incorporate it into <strong>hoff.py</strong>, though it could be useful there too.</p>
+<p>We have met <a href="glossary.html#error">errors</a> before. Some errors are just fatal for our program, and will always stop it from running. For example, there is nothing that Python can do about a <code>SyntaxError</code>; if we have written something that it just does not understand, then Python has to give up:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">Python, please do some amazing machine learning.</code></pre></div>
+<pre><code>  File &quot;&lt;ipython-input-47-925621985029&gt;&quot;, line 1
+    Python, please do some amazing machine learning.
+                    ^
+SyntaxError: invalid syntax</code></pre>
+<p>Other errors, however, are not necessarily fatal for our program.</p>
+<p>Consider an abbreviated version of one of our earlier programs, <a href="../examples/age_next_year.py">age_next_year.py</a>, and see what happens if the user misunderstands what is required of them, and enters some input that our program cannot handle:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you? '</span>)
+
+age_next_year <span class="op">=</span> <span class="bu">int</span>(age) <span class="op">+</span> <span class="dv">1</span>
+<span class="bu">print</span>(age_next_year)</code></pre></div>
+<pre><code>How old are you? fifty-two
+
+
+
+---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-48-3266fdc533a9&gt; in &lt;module&gt;
+      1 age = input('How old are you? ')
+      2 
+----&gt; 3 age_next_year = int(age) + 1
+      4 print(age_next_year)
+
+
+ValueError: invalid literal for int() with base 10: 'fifty-two'</code></pre>
+<p>It is pretty clear what has gone wrong, but in case we aren't sure, the error message identifies the conversion of the string <code>'fifty-two'</code> to integer as the problem.</p>
+<p>This error is not a <code>SyntaxError</code>; our program is entirely <a href="glossary.html#syntax">syntactically valid</a>. Instead, it is a <code>ValueError</code>. We have asked Python to do something with a variable, and the thing that we have asked for might be totally ok, it is just that the specific <a href="glossary.html#value">value</a> of the variable turns out not to be suitable for what we asked for. Here, for example, we have asked for conversion from string to integer, but the string variable does not contain a suitable number.</p>
+<p>Problems like this one can be dealt with without stopping our program, because they don't make it impossible for Python to understand what we want. A non-fatal error (i.e. one that does not completely flummox Python) is termed an '<a href="glossary.html#exception">exception</a>'. When an exception occurs, we have the option of dealing with it in some way, and it is only if we do not deal with it that it becomes an <a href="glossary.html#error">error</a> and stops the program. (Though in practice you will hear many people use the terms 'exception' and 'error' as synonyms.)</p>
+<p>If we wish, we can instruct Python to 'try' to do something, but then to do something else if doing the first thing results in an exception. This concept is very similar to an <code>if</code> condition, but the condition is 'if the following actions result in an exception'. To apply this, we need to specify two things. We need to say what actions we want to 'try', and what actions we want to carry out if an exception occurs while trying those actions. There are new <a href="glossary.html#keyword">keywords</a> <code>try</code> and <code>except</code> for each of these, respectively.</p>
+<p>Let's see an example:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you? '</span>)
+
+<span class="cf">try</span>:
+    age_next_year <span class="op">=</span> <span class="bu">int</span>(age) <span class="op">+</span> <span class="dv">1</span>
+    <span class="bu">print</span>(age_next_year)
+<span class="cf">except</span> <span class="pp">ValueError</span>:
+    <span class="bu">print</span>(<span class="st">'That is not a valid age.'</span>)</code></pre></div>
+<pre><code>How old are you? fifty-two
+That is not a valid age.</code></pre>
+<p>The general <a href="glossary.html#syntax">syntax</a> for this kind of statement is:</p>
+<ul>
+<li>write <code>try</code>, followed by a colon <code>:</code></li>
+<li>then write the actions you want to try</li>
+<li>these should be <a href="glossary.html#indentation">indented</a></li>
+<li>write <code>except</code></li>
+<li>then write the name of the type of exception/error that might occur</li>
+<li>then write a colon <code>:</code></li>
+<li>then write the alternative actions</li>
+<li>these too should be indented</li>
+</ul>
+<p>There are some similarities with the syntax for the <code>if</code> ... <code>else</code> statement, namely the colon and the indentation. Both of these things are part of the general syntax for all <a href="glossary.html#control">control statements</a>, and we will encounter them again in later lessons.</p>
+<p>Let's see another example, this time to handle the possibility that the user asks for a list item that is beyond the length of the list:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping_list <span class="op">=</span> [<span class="st">'eggs'</span>, <span class="st">'bacon'</span>, <span class="st">'black pudding'</span>]
+
+item_number <span class="op">=</span> <span class="bu">input</span>(<span class="st">'What item of shopping would you like to see? '</span>)
+item_number <span class="op">=</span> <span class="bu">int</span>(item_number) <span class="op">-</span> <span class="dv">1</span>
+
+<span class="cf">try</span>:
+    <span class="bu">print</span>(shopping_list[item_number])
+<span class="cf">except</span> <span class="pp">IndexError</span>:
+    <span class="bu">print</span>(<span class="st">&quot;There aren't that many items of shopping.&quot;</span>)</code></pre></div>
+<pre><code>What item of shopping would you like to see? 9000
+There aren't that many items of shopping.</code></pre>
+<p>How did I know that the exception to watch out for was <code>IndexError</code>? In a long career filled with silly programming mistakes I have seen a lot of error messages, and so I just know what a lot of the common exceptions will be. But if you are building a program and you want to write a <code>try</code> ... <code>except</code> to deal with an expected problem, then the first thing you should do is to go to the console and deliberately provoke that expected problem to see what type of exception it is. The type of exception is printed at the bottom of the error message.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping_list[<span class="dv">9000</span>]</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+IndexError                                Traceback (most recent call last)
+
+&lt;ipython-input-51-4a4ff19f7982&gt; in &lt;module&gt;
+----&gt; 1 shopping_list[9000]
+
+
+IndexError: list index out of range</code></pre>
+<p>The glossary entry on <a href="glossary.html#exception">exceptions</a> lists some of the most common types of exception that you might encounter.</p>
+<p>It is important not to get carried away with <code>try</code> ... <code>except</code> and attempt to cover all possible problems so that your program is 'foolproof'. If something occurs that your program is just not supposed to deal with, then your program should stop, and this is ok. Error messages can be very informative; if you try to suppress them all, you won't be warned when your program fails or be told why it failed. Use <code>try</code> ... <code>except</code> to deal with specific, anticipated problems.</p>
+<h2 id="exercises">Exercises</h2>
+<h3 id="section">1</h3>
+<p>Take a look at the finished <a href="../examples/hoff.py">hoff.py</a> program. One thing that is not so good about this program is that it is not very easily modifiable. If we later changed our minds and wanted to adapt this program so that 'Barbra Streisand' is the interesting name instead of 'David Hasselhoff', then we would need to change the name in at least 8 different places. And we would need to go quite far down in our program to find the list of names similar to 'David' and change that.</p>
+<p>Re-write this program so that the string <code>'David Hasselhoff'</code> only appears once at the very beginning of the program, and the list of variants of 'David' also appears once at the beginning of the program. Once you have improved the program in this way, check that it still works as it did before. Then check that you only need to change these two initial lines so that the whole program uses a different interesting name. For example, you can try 'Barbra Streisand', with 'Barbara', 'Barb', and 'Barbie' as the variants of 'Barbra'.</p>
+<p>(Improving a program but without changing its basic functionality is called <a href="glossary.html#refactor">refactoring</a> the program.)</p>
+<h3 id="section-1">2</h3>
+<p>Write a new program. The program asks the user for the answers to three questions:</p>
+<ul>
+<li>How old are they?</li>
+<li>How tall are they (in meters)?</li>
+<li>Do they have their parents' permission to ride rollercoasters?</li>
+</ul>
+<p>Then tell the user whether they are allowed to ride the rollercoaster at the theme park. The rules are:</p>
+<ul>
+<li>They must be at least 10 years old.</li>
+<li>They must be at least 1 meter and 30 centimeters tall.</li>
+<li>They cannot be taller than 2 meters.</li>
+<li>If they are younger than 14 years old, they must have their parents' permission.</li>
+</ul>
+</body>
+</html>
