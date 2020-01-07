@@ -299,7 +299,7 @@ A keyword (sometimes also referred to as 'reserved word') is a word that has a s
 
 ## list
 
-A tuple is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
+A list is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
 
 ```python
 shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
