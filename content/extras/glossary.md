@@ -186,9 +186,9 @@ Computers store information in the form of numbers. If we want to store text in 
 There are many different text encodings, but the two most important ones to be aware of are:
 
 * [ASCII](https://en.wikipedia.org/wiki/ASCII). This system is universally agreed upon and standard across all normal computers, but it only covers the English alphabet. We cannot use ASCII for non-English characters such as `'à'` or for Devanagari, Sinhalese, emojis, etc.
-* [UTF-8](https://en.wikipedia.org/wiki/UTF-8). This system includes many symbols in many writing systems and is by far the most widely-used on the internet. It is also usually the default encoding on Linux [operating systems](#OS). For characters that are defined in the ASCII encoding, UTF-8 uses the same system as ASCII, so for these characters the two encodings are equivalent.
+* [UTF-8](https://en.wikipedia.org/wiki/UTF-8). This system includes many symbols in many writing systems and is by far the most widely-used on the internet. It is also usually the default encoding on Linux [operating systems](#os). For characters that are defined in the ASCII encoding, UTF-8 uses the same system as ASCII, so for these characters the two encodings are equivalent.
 
-Some [operating systems](#OS), most notably Windows and macOS, do not always use UTF-8 by default to encode non-ASCII characters. They may instead use a variety of other encodings with names like 'Latin-1', 'ISO-8859', or 'Windows-1252'. Some of these are equivalent for certain subsets of characters, and only become incompatible for a few obscure characters, such as special kinds of quote mark. And to add yet more to the confusion, these various non-UTF-8 encodings are frequently given the wrong name, even in official places such as the documentation for Windows.
+Some [operating systems](#os), most notably Windows and macOS, do not always use UTF-8 by default to encode non-ASCII characters. They may instead use a variety of other encodings with names like 'Latin-1', 'ISO-8859', or 'Windows-1252'. Some of these are equivalent for certain subsets of characters, and only become incompatible for a few obscure characters, such as special kinds of quote mark. And to add yet more to the confusion, these various non-UTF-8 encodings are frequently given the wrong name, even in official places such as the documentation for Windows.
 
 ## error
 
@@ -309,7 +309,7 @@ Lists are very similar to [tuples](#tuple), another kind of sequence. The differ
 
 ## locale
 
-Computer users want to be able to interact with their computer in way that takes into account certain pieces of information about the user's language and location. For example, the user may want dates and currency amounts displayed in a certain format, or they may want to see the time displayed in their time zone. A computer's [operating system](#OS) may store this user-specific information and make it available to all programs so that they can use it to customize the user's experience. This bundle of information is often termed a 'locale'.
+Computer users want to be able to interact with their computer in way that takes into account certain pieces of information about the user's language and location. For example, the user may want dates and currency amounts displayed in a certain format, or they may want to see the time displayed in their time zone. A computer's [operating system](#os) may store this user-specific information and make it available to all programs so that they can use it to customize the user's experience. This bundle of information is often termed a 'locale'.
 
 Among other things, the locale may contain information on the user's preferred [encoding](#encoding) for new text files.
 
@@ -423,7 +423,7 @@ A 'package manager' is a program that downloads, installs, and updates packages.
 
 The location of a file within the directory system of a computer is known as that file's 'path'. This is the same sense of 'path' as in the English phrase 'a path through the woods'; a file's path describes a series of turnings to take in the file system in order to get to that file.
 
-Different [operating systems](#OS) describe paths in different ways. Linux uses the forward slash character `/` as a [separator](#separator) between each branch in the path. So an example path looks like this:
+Different [operating systems](#os) describe paths in different ways. Linux uses the forward slash character `/` as a [separator](#separator) between each branch in the path. So an example path looks like this:
 
 ```
 /home/mildred/Documents/my_program.py

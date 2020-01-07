@@ -329,7 +329,7 @@ print(uncles_id)
 
 We notice that the next two users have the same ID. So now we decide that a better way to allocate IDs would be to use the first *two* letters of each user's first and surname. We have not picked a great way of approaching this task. Because we have copied and pasted almost the same lines three times to accomplish the same task, we now have to change things in several places whenever we decide that we want to change something about the way that that task is accomplished. We are fallible human beings and we are likely to miss one of the places in which the change is necessary, thus introducing mistakes into our program. [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself).
 
-It would be nice if there were just a function that could take a user name as its [argument](extras/glossary.md#argument) and [return](extras/glossary.md#) the user's initials. Then we could use it in our program. Even better would be if we could modify this function's behavior, and for the modified behavior to take effect wherever the function is used. This would allow us to make changes in just one place that take effect for the whole program.
+It would be nice if there were just a function that could take a user name as its [argument](extras/glossary.md#argument) and [return](extras/glossary.md#return) the user's initials. Then we could use it in our program. Even better would be if we could modify this function's behavior, and for the modified behavior to take effect wherever the function is used. This would allow us to make changes in just one place that take effect for the whole program.
 
 Maybe there is a built-in function that suits our needs?
 

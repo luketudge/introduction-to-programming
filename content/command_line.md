@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Basic-commands" data-toc-modified-id="Basic-commands-1">Basic commands</a></span><ul class="toc-item"><li><span><a href="#cd" data-toc-modified-id="cd-1.1">cd</a></span></li><li><span><a href="#dir" data-toc-modified-id="dir-1.2">dir</a></span></li><li><span><a href="#python" data-toc-modified-id="python-1.3">python</a></span></li></ul></li><li><span><a href="#Spyder" data-toc-modified-id="Spyder-2">Spyder</a></span><ul class="toc-item"><li><span><a href="#IPython" data-toc-modified-id="IPython-2.1">IPython</a></span><ul class="toc-item"><li><span><a href="#Magic" data-toc-modified-id="Magic-2.1.1">Magic</a></span></li></ul></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Basic-commands" data-toc-modified-id="Basic-commands-1">Basic commands</a></span><ul class="toc-item"><li><span><a href="#cd" data-toc-modified-id="cd-1.1">cd</a></span></li><li><span><a href="#ls" data-toc-modified-id="ls-1.2">ls</a></span></li><li><span><a href="#python" data-toc-modified-id="python-1.3">python</a></span></li></ul></li><li><span><a href="#Spyder" data-toc-modified-id="Spyder-2">Spyder</a></span><ul class="toc-item"><li><span><a href="#IPython" data-toc-modified-id="IPython-2.1">IPython</a></span><ul class="toc-item"><li><span><a href="#Magic" data-toc-modified-id="Magic-2.1.1">Magic</a></span></li></ul></li></ul></li></ul></div>
 
 # The command line
 
@@ -13,7 +13,7 @@ The steps needed to find the command line differ slightly across different opera
 
 On Windows, a similar-looking application called the 'Command prompt' serves the same function. Alternatively, if you have installed Anaconda as recommended for the class, you can access the command line via an app called 'Anaconda Prompt'. The [online documentation](https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-anaconda-prompt) for Anaconda provides a few more details about this app.
 
-Unfortunately, different operating systems understand different commands. Windows in particular differs from the others. So in order to ensure that the demonstrations work for all of us, we will limit our use of the command line just to what is necessary for the techniques we need to learn, and we will use the command line in a way that is compatible with all the major operating systems.
+Unfortunately, different operating systems understand different commands. Windows in particular differs from the others. So in order to ensure that the demonstrations work for all of us, we will limit our use of the command line just to what is necessary for the techniques we need to learn. In the few cases that different commands are needed on different operating systems, I will let you know.
 
 ## Basic commands
 
@@ -33,11 +33,9 @@ To move 'up' one directory in your computer's file system, use `cd` followed by 
 
 ![](images/cd_dot_dot.png)
 
-### dir
+### ls
 
-To see the contents of the current directory, use the command `dir`. For example:
-
-![](images/dir.png)
+To see the contents of the current directory, use the command `ls`. Only Linux and macOS recognize the `ls` command. On Windows, you will need to use `dir` instead.
 
 ### python
 

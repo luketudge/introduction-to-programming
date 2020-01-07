@@ -218,7 +218,7 @@ That was a very short introduction to using the standard library. Our next task 
 
 How do we even make new folders in Python? We don't know. But we head over to Google and search for 'Python make new folder' and see that the first few results all mention the `os` module.
 
-`os` is another module from Python's standard library. The letters 'OS' stand for [Operating System](extras/glossary.md#OS), and the `os` module handles various tasks that involve interacting with the operating system of a computer, primarily with its system of files and folders. `os` is probably the most commonly-used module from the standard library. Once we go beyond the simplest programs, we will almost always need to use the computer's file system to locate or create files.
+`os` is another module from Python's standard library. The letters 'OS' stand for [Operating System](extras/glossary.md#os), and the `os` module handles various tasks that involve interacting with the operating system of a computer, primarily with its system of files and folders. `os` is probably the most commonly-used module from the standard library. Once we go beyond the simplest programs, we will almost always need to use the computer's file system to locate or create files.
 
 Let's import it.
 
@@ -274,16 +274,17 @@ os.listdir()
      'standard_library.md',
      'types.md',
      'files.md',
-     'convert_ipynb.sh',
      'intro.md',
      '.md_checkpoints',
      'sequences_mappings.md',
+     'testing.md',
      'testing.md',
      'conditions.md',
      '.pytest_cache',
      'files.md',
      'command_line.md',
      'iteration.md',
+     'convert_page_formats.sh',
      'modules.md',
      'iteration.md',
      'command_line.md',
@@ -292,6 +293,7 @@ os.listdir()
      'examples',
      'extras',
      'standard_library.md',
+     'html',
      'conditions.md']
 
 
@@ -513,7 +515,7 @@ The slightly more robust solution that we will use in our program is to always s
 
 The [path](extras/glossary.md#path) to a file or directory is a description of its location within the file system of the computer. The path describes a series of turnings to take in the file system in order to get to a particular location. A particular character, known as a [separator](extras/glossary.md#separator) (or occasionally as a 'delimiter') marks out each new directory along the path.
 
-The result of `os.getcwd()` that you see above is an example of a path. It gives the path to the directory in which the files for these lessons are located on my computer. So this path tells us to start in the 'home' directory, then go into the 'lt' directory, and so on. Because the [operating system](extras/glossary.md#OS) on my computer is Linux, the separator for the directories along the path is the forward slash '/'. If you are working on a Windows computer, you will see a different separator in the path that you get from `os.getcwd()`.
+The result of `os.getcwd()` that you see above is an example of a path. It gives the path to the directory in which the files for these lessons are located on my computer. So this path tells us to start in the 'home' directory, then go into the 'lt' directory, and so on. Because the [operating system](extras/glossary.md#os) on my computer is Linux, the separator for the directories along the path is the forward slash '/'. If you are working on a Windows computer, you will see a different separator in the path that you get from `os.getcwd()`.
 
 The `os` module contains an entire submodule, called `path`, for dealing with paths. The `os.path` submodule provides a variable (note: not a function, so no parentheses needed) that stores the path separator for the operating system that you are using:
 

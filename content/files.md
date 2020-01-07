@@ -38,9 +38,6 @@ filepath = os.path.join('data', 'melville-moby_dick.txt')
 print(filepath)
 ```
 
-    data/melville-moby_dick.txt
-
-
 
 ```python
 f = open(filepath)
@@ -89,7 +86,7 @@ type(f)
 
 If you were hoping it would just be a [string](extras/glossary.md#string) containing the contents of the file, you will be disappointed. As is sometimes the case, an intermediate step lies between us and our seemingly simple goal. First we open the file, *then* we read in its contents.
 
-`type()` tells us that `open()` has [returned](extras/glossary.md#return) a `TextIOWrapper`. The 'IO' part stands for [Input/Output](extras/glossary.md#IO). This abbreviation is used quite broadly in computing to refer to any process that involves getting or sending information from or to some resource that is external to the computer program, such as a human being, the internet, or a file. The `TextIOWrapper` is a data type specifically for connecting to text files, then reading from and writing to them.
+`type()` tells us that `open()` has [returned](extras/glossary.md#return) a `TextIOWrapper`. The 'IO' part stands for [Input/Output](extras/glossary.md#io). This abbreviation is used quite broadly in computing to refer to any process that involves getting or sending information from or to some resource that is external to the computer program, such as a human being, the internet, or a file. The `TextIOWrapper` is a data type specifically for connecting to text files, then reading from and writing to them.
 
 This entity (which we have now stored in our `f` variable) is more commonly and more simply referred to as a 'file object'. A file object has [methods](extras/glossary.md#method) for reading and writing, as we can see if we apply the `dir()` function:
 
@@ -517,7 +514,7 @@ print(open(filename).read())
 
 ### Context managers
 
-In all of the examples above in which we wrote text to a file, we made sure to close the file using the `close()` [method](extras/glossary.md#method) once we had finished writing. This is a good idea. Behind the scenes, it makes some difference to our computer whether a connection to a file is open or not. An open file connection takes up some of the computer's available memory, particularly if we are in the process of writing a large amount of text, and this memory may be sorely needed by viruses and malware. In addition, some [operating systems](extras/glossary.md#OS) set a limit to the number of files that may be open at any one time.
+In all of the examples above in which we wrote text to a file, we made sure to close the file using the `close()` [method](extras/glossary.md#method) once we had finished writing. This is a good idea. Behind the scenes, it makes some difference to our computer whether a connection to a file is open or not. An open file connection takes up some of the computer's available memory, particularly if we are in the process of writing a large amount of text, and this memory may be sorely needed by viruses and malware. In addition, some [operating systems](extras/glossary.md#os) set a limit to the number of files that may be open at any one time.
 
 If we are unsure whether the file that a file object represents is closed or not, there is an [attribute](extras/glossary.md#attribute) of the file object, called `closed`, that tells us. We can access this attribute using the same `.` notation as for accessing methods (but note no parentheses because `closed` is not a function, it is just a piece of information):
 
@@ -665,7 +662,7 @@ An astute question to ask at this point is: How does Python know what cleaning u
 
 If you were wondering this, then you may congratulate yourself on having asked an astute question.
 
-The answer is that behind the scenes, the [type](extras/glossary.md) of the variable that is created in the `with` statement determines what cleaning up it does when the statement ends. Python looks at the variable and runs one of its hidden 'special methods'. Remember what we learned about these special methods back [in the lesson on modules](modules.md#Special-methods). They are [methods](extras/glossary.md#method) that are not intended to be used directly, but that determine a type's behavior in different situations.
+The answer is that behind the scenes, the [type](extras/glossary.md#type) of the variable that is created in the `with` statement determines what cleaning up it does when the statement ends. Python looks at the variable and runs one of its hidden 'special methods'. Remember what we learned about these special methods back [in the lesson on modules](modules.md#Special-methods). They are [methods](extras/glossary.md#method) that are not intended to be used directly, but that determine a type's behavior in different situations.
 
 Let's look again at what methods a file object has, this time taking a look at the special methods enclosed in double underscores `__ __`. We can use the *Moby Dick* file again:
 
@@ -772,13 +769,13 @@ ASCII is a bit restrictive when it comes to handling text in general. It doesn't
 
 Unfortunately, there is no universal system agreed upon for encoding the characters that are not covered by ASCII. As computers became more common outside the English-speaking world, each group of users that wanted to exchange text containing non-English characters went ahead and developed their own encodings. The result is that today there are various different ways of storing text on a computer if that text contains non-ASCII characters.
 
-There has since been some movement towards standardization, but it is incomplete. The in-theory most widely agreed-upon encoding for non-ASCII characters is an encoding called [UTF-8](https://en.wikipedia.org/wiki/UTF-8) (8-bit Unicode Transformation Format) and this is by far the most commonly used encoding for web pages. However, some of the most popular [operating systems](extras/glossary.md#OS), Windows and macOS, do not use UTF-8 by default when reading or writing text files. Instead, they use a variety of other encodings.
+There has since been some movement towards standardization, but it is incomplete. The in-theory most widely agreed-upon encoding for non-ASCII characters is an encoding called [UTF-8](https://en.wikipedia.org/wiki/UTF-8) (8-bit Unicode Transformation Format) and this is by far the most commonly used encoding for web pages. However, some of the most popular [operating systems](extras/glossary.md#os), Windows and macOS, do not use UTF-8 by default when reading or writing text files. Instead, they use a variety of other encodings.
 
 ### Locales
 
-How does Python know which encoding to use when we read and write text files? As you may have noticed when we looked at the [Python documentation page for `open()`](https://docs.python.org/3/library/functions.html#open), there is an `encoding` [argument](extras/glossary.md#argument) to the `open()` function. We can use this to ensure that `open()` uses a particular encoding when reading or writing a file. But in the examples above we didn't enter anything for the `encoding` argument. So what encoding did `open()` use by default? It uses whatever the computer's [operating system](extras/glossary.md#OS) says is the current user's preferred encoding.
+How does Python know which encoding to use when we read and write text files? As you may have noticed when we looked at the [Python documentation page for `open()`](https://docs.python.org/3/library/functions.html#open), there is an `encoding` [argument](extras/glossary.md#argument) to the `open()` function. We can use this to ensure that `open()` uses a particular encoding when reading or writing a file. But in the examples above we didn't enter anything for the `encoding` argument. So what encoding did `open()` use by default? It uses whatever the computer's [operating system](extras/glossary.md#os) says is the current user's preferred encoding.
 
-You might not be aware that you have a preferred encoding, but your computer will almost certainly have chosen one for you when you set your preferred language. Your computer stores this and other preferences concerning language and location together in a bundle of information often termed your [locale](extras/glossary.md). Your user locale usually contains information about your time zone, language, and so on, and various programs may make use of the information in your locale to customize your user experience.
+You might not be aware that you have a preferred encoding, but your computer will almost certainly have chosen one for you when you set your preferred language. Your computer stores this and other preferences concerning language and location together in a bundle of information often termed your [locale](extras/glossary.md#locale). Your user locale usually contains information about your time zone, language, and so on, and various programs may make use of the information in your locale to customize your user experience.
 
 The `locale` module from Python's [standard library](standard_library.md) allows you to access this information from within a Python program. The `getpreferredencoding()` function will tell you what encoding your computer thinks you prefer:
 
@@ -1173,7 +1170,7 @@ These data too look rather messy when read as raw text. The structure of the tex
 
 For example, notice that the text file begins with an opening 'curly brace' ( *{* ), the same as is used in Python for [creating a dictionary](sequences_mappings.md#Dictionaries). The similarity to the dictionary syntax continues, with what look like pairs of [keys](extras/glossary.md#key) and their associated values separated by the colon character ( *:* ). Further down the file we can also see an opening square parenthesis, as if to [create a list](types.md#List).
 
-This file stores information in the form of nested lists and dictionaries that contain strings and numbers, using the same syntax as in a Python program. This format is known as [JSON](extras/glossary.md), which stands for JavaScript Object Notation. As the name suggests, this file format was inspired by the JavaScript programming language, but this language uses a syntax for basic data types that is essentially the same as Python's, and is similar to that of many other programming languages.
+This file stores information in the form of nested lists and dictionaries that contain strings and numbers, using the same syntax as in a Python program. This format is known as [JSON](extras/glossary.md#json), which stands for JavaScript Object Notation. As the name suggests, this file format was inspired by the JavaScript programming language, but this language uses a syntax for basic data types that is essentially the same as Python's, and is similar to that of many other programming languages.
 
 ### Reading
 

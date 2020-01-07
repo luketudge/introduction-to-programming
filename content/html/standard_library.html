@@ -206,7 +206,7 @@ circle.circumference(<span class="dv">10</span>)</code></pre></div>
 <li>Inside each of those year folders, we would like a separate folder for each month.</li>
 </ul>
 <p>How do we even make new folders in Python? We don't know. But we head over to Google and search for 'Python make new folder' and see that the first few results all mention the <code>os</code> module.</p>
-<p><code>os</code> is another module from Python's standard library. The letters 'OS' stand for <a href="glossary.html#OS">Operating System</a>, and the <code>os</code> module handles various tasks that involve interacting with the operating system of a computer, primarily with its system of files and folders. <code>os</code> is probably the most commonly-used module from the standard library. Once we go beyond the simplest programs, we will almost always need to use the computer's file system to locate or create files.</p>
+<p><code>os</code> is another module from Python's standard library. The letters 'OS' stand for <a href="glossary.html#os">Operating System</a>, and the <code>os</code> module handles various tasks that involve interacting with the operating system of a computer, primarily with its system of files and folders. <code>os</code> is probably the most commonly-used module from the standard library. Once we go beyond the simplest programs, we will almost always need to use the computer's file system to locate or create files.</p>
 <p>Let's import it.</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> os</code></pre></div>
 <p>We won't <code>dir()</code> the <code>os</code> module here, simply because it contains <em>a lot</em> of things. But if you like you can go to the console in Spyder and type in <code>dir(os)</code> to see the full list of contents (make sure you have first typed in <code>import os</code> so that you too have imported the <code>os</code> module).</p>
@@ -229,16 +229,17 @@ circle.circumference(<span class="dv">10</span>)</code></pre></div>
  'standard_library.html',
  'types.html',
  'files.html',
- 'convert_ipynb.sh',
  'intro.html',
  '.html_checkpoints',
  'sequences_mappings.html',
+ 'testing.html',
  'testing.html',
  'conditions.html',
  '.pytest_cache',
  'files.html',
  'command_line.html',
  'iteration.html',
+ 'convert_page_formats.sh',
  'modules.html',
  'iteration.html',
  'command_line.html',
@@ -247,6 +248,7 @@ circle.circumference(<span class="dv">10</span>)</code></pre></div>
  'examples',
  'extras',
  'standard_library.html',
+ 'html',
  'conditions.html']</code></pre>
 <p>The contents of your current directory may of course differ from mine, but you should see that 'my_new_directory' is in there.</p>
 <p>Since this first new directory was just an example to test out the workings of <code>os.mkdir()</code>, let's tidy up and delete the example directory. <code>os</code> provides a function for this too, <code>os.rmdir()</code> (in programming, 'rm' is often used as an abbreviation for 'remove'):</p>
@@ -355,7 +357,7 @@ os.getcwd()</code></pre></div>
 <h3 id="paths">Paths</h3>
 <p>The slightly more robust solution that we will use in our program is to always stay in the current working directory, and when we have an action that should take place in another directory, specify the 'path' that leads to that directory from the current one.</p>
 <p>The <a href="glossary.html#path">path</a> to a file or directory is a description of its location within the file system of the computer. The path describes a series of turnings to take in the file system in order to get to a particular location. A particular character, known as a <a href="glossary.html#separator">separator</a> (or occasionally as a 'delimiter') marks out each new directory along the path.</p>
-<p>The result of <code>os.getcwd()</code> that you see above is an example of a path. It gives the path to the directory in which the files for these lessons are located on my computer. So this path tells us to start in the 'home' directory, then go into the 'lt' directory, and so on. Because the <a href="glossary.html#OS">operating system</a> on my computer is Linux, the separator for the directories along the path is the forward slash '/'. If you are working on a Windows computer, you will see a different separator in the path that you get from <code>os.getcwd()</code>.</p>
+<p>The result of <code>os.getcwd()</code> that you see above is an example of a path. It gives the path to the directory in which the files for these lessons are located on my computer. So this path tells us to start in the 'home' directory, then go into the 'lt' directory, and so on. Because the <a href="glossary.html#os">operating system</a> on my computer is Linux, the separator for the directories along the path is the forward slash '/'. If you are working on a Windows computer, you will see a different separator in the path that you get from <code>os.getcwd()</code>.</p>
 <p>The <code>os</code> module contains an entire submodule, called <code>path</code>, for dealing with paths. The <code>os.path</code> submodule provides a variable (note: not a function, so no parentheses needed) that stores the path separator for the operating system that you are using:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">os.path.sep</code></pre></div>
 <pre><code>'/'</code></pre>
