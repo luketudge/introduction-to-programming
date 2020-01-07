@@ -1,9 +1,6 @@
 # Topics
 
-You can view interactive versions of the topic pages on:
-
-* [Binder](https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?filepath=topics) (can be quite slow to load)
-* [Google Colaboratory](https://colab.research.google.com/github/luketudge/introduction-to-programming) (works well, but requires a Google account)
+You can view interactive versions of the topic pages on [Binder](https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?filepath=topics) (can be quite slow to load), or on [Google Colaboratory](https://colab.research.google.com/github/luketudge/introduction-to-programming) (works well, but requires a Google account).
 
 The links below take you to the static versions of the pages.
 
@@ -26,7 +23,7 @@ The links below take you to the static versions of the pages.
 
 * [The command line](command_line.md)
 * [Testing](testing.md)
-* Collaboration
+* GitHub
 * Documentation
 * Style
 

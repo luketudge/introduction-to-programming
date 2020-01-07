@@ -453,7 +453,7 @@ Sometimes we may want to change the structure of a program, but without actually
 
 ## regression
 
-
+A situation in which a change to one part of a program unexpectedly breaks other aspects of the program.
 
 ## repository
 

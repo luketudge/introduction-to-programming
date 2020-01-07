@@ -3,60 +3,47 @@
 import os
 import zipfile
 
-
 import pytest
 import requests
 from selenium import webdriver
 
-
-# %% Paths
-
-BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-
-TEMP_FILENAME = os.path.join(BASE_PATH, 'temp.zip')
+from . import constants
 
 
-# %% URLs
-
-URL = 'https://github.com/luketudge/introduction-to-programming/'
-BRANCHES = ['master', 'in-progress']
-
-
-# %% Helper function
+# %% Helper functions
 
 def delete_temp_file():
 
     try:
-        os.remove(TEMP_FILENAME)
+        os.remove(constants.TEMP_FILENAME)
     except FileNotFoundError:
         pass
 
 
 # %% Fixtures
 
-@pytest.fixture(params=BRANCHES)
-def browser(request):
+@pytest.fixture(scope='session')
+def browser():
 
     fb = webdriver.Firefox()
-    fb.get(URL + 'tree/' + request.param)
 
     yield fb
 
     fb.quit()
 
 
-@pytest.fixture(params=BRANCHES)
+@pytest.fixture(params=constants.BRANCHES)
 def file(request):
 
     delete_temp_file()
 
-    url = URL + 'blob/' + request.param + '/content/examples/intro_prog_examples.zip'
+    url = constants.REMOTE_URL + 'blob/' + request.param + '/content/examples/intro_prog_examples.zip'
     r = requests.get(url, params={'raw': 'true'})
 
-    with open(TEMP_FILENAME, mode='wb') as f:
+    with open(constants.TEMP_FILENAME, mode='wb') as f:
         f.write(r.content)
 
-    with zipfile.ZipFile(TEMP_FILENAME) as f:
+    with zipfile.ZipFile(constants.TEMP_FILENAME) as f:
         yield f
 
     delete_temp_file()

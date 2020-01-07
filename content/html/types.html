@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link href="data:text/css;charset=utf-8,%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%2Eocticon%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Afill%3A%20currentColor%3B%0Avertical%2Dalign%3A%20text%2Dbottom%3B%0A%7D%0Abody%20%2Eanchor%20%7B%0Afloat%3A%20left%3B%0Aline%2Dheight%3A%201%3B%0Amargin%2Dleft%3A%20%2D20px%3B%0Apadding%2Dright%3A%204px%3B%0A%7D%0Abody%20%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Abody%20h1%20%2Eocticon%2Dlink%2C%0Abody%20h2%20%2Eocticon%2Dlink%2C%0Abody%20h3%20%2Eocticon%2Dlink%2C%0Abody%20h4%20%2Eocticon%2Dlink%2C%0Abody%20h5%20%2Eocticon%2Dlink%2C%0Abody%20h6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%231b1f23%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%2C%0Abody%20h2%3Ahover%20%2Eanchor%2C%0Abody%20h3%3Ahover%20%2Eanchor%2C%0Abody%20h4%3Ahover%20%2Eanchor%2C%0Abody%20h5%3Ahover%20%2Eanchor%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Abody%20%7B%0A%2Dms%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%2324292e%3B%0Aline%2Dheight%3A%201%2E5%3B%0Afont%2Dfamily%3A%20%2Dapple%2Dsystem%2CBlinkMacSystemFont%2CSegoe%20UI%2CHelvetica%2CArial%2Csans%2Dserif%2CApple%20Color%20Emoji%2CSegoe%20UI%20Emoji%2CSegoe%20UI%20Symbol%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E5%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Abody%20%2Epl%2Dc%20%7B%0Acolor%3A%20%236a737d%3B%0A%7D%0Abody%20%2Epl%2Dc1%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23005cc5%3B%0A%7D%0Abody%20%2Epl%2De%2C%0Abody%20%2Epl%2Den%20%7B%0Acolor%3A%20%236f42c1%3B%0A%7D%0Abody%20%2Epl%2Ds%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsmi%20%7B%0Acolor%3A%20%2324292e%3B%0A%7D%0Abody%20%2Epl%2Dent%20%7B%0Acolor%3A%20%2322863a%3B%0A%7D%0Abody%20%2Epl%2Dk%20%7B%0Acolor%3A%20%23d73a49%3B%0A%7D%0Abody%20%2Epl%2Dpds%2C%0Abody%20%2Epl%2Ds%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsr%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsra%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23032f62%3B%0A%7D%0Abody%20%2Epl%2Dsmw%2C%0Abody%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23e36209%3B%0A%7D%0Abody%20%2Epl%2Dbu%20%7B%0Acolor%3A%20%23b31d28%3B%0A%7D%0Abody%20%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b31d28%3B%0Acolor%3A%20%23fafbfc%3B%0A%7D%0Abody%20%2Epl%2Dc2%20%7B%0Abackground%2Dcolor%3A%20%23d73a49%3B%0Acolor%3A%20%23fafbfc%3B%0A%7D%0Abody%20%2Epl%2Dc2%3Abefore%20%7B%0Acontent%3A%20%22%5EM%22%3B%0A%7D%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2322863a%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dml%20%7B%0Acolor%3A%20%23735c0f%3B%0A%7D%0Abody%20%2Epl%2Dmh%2C%0Abody%20%2Epl%2Dmh%20%2Epl%2Den%2C%0Abody%20%2Epl%2Dms%20%7B%0Acolor%3A%20%23005cc5%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dmi%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%20%2Epl%2Dmb%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffeef0%3B%0Acolor%3A%20%23b31d28%3B%0A%7D%0Abody%20%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23f0fff4%3B%0Acolor%3A%20%2322863a%3B%0A%7D%0Abody%20%2Epl%2Dmc%20%7B%0Abackground%2Dcolor%3A%20%23ffebda%3B%0Acolor%3A%20%23e36209%3B%0A%7D%0Abody%20%2Epl%2Dmi2%20%7B%0Abackground%2Dcolor%3A%20%23005cc5%3B%0Acolor%3A%20%23f6f8fa%3B%0A%7D%0Abody%20%2Epl%2Dmdr%20%7B%0Acolor%3A%20%236f42c1%3B%0Afont%2Dweight%3A%20700%3B%0A%7D%0Abody%20%2Epl%2Dba%20%7B%0Acolor%3A%20%23586069%3B%0A%7D%0Abody%20%2Epl%2Dsg%20%7B%0Acolor%3A%20%23959da5%3B%0A%7D%0Abody%20%2Epl%2Dcorl%20%7B%0Acolor%3A%20%23032f62%3B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20details%20%7B%0Adisplay%3A%20block%3B%0A%7D%0Abody%20summary%20%7B%0Adisplay%3A%20list%2Ditem%3B%0A%7D%0Abody%20a%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Abody%20a%3Aactive%2C%0Abody%20a%3Ahover%20%7B%0Aoutline%2Dwidth%3A%200%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20inherit%3B%0Afont%2Dweight%3A%20bolder%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%20%2E67em%200%3B%0A%7D%0Abody%20img%20%7B%0Aborder%2Dstyle%3A%20none%3B%0A%7D%0Abody%20code%2C%0Abody%20kbd%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20monospace%2Cmonospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20hr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0Aoverflow%3A%20visible%3B%0A%7D%0Abody%20input%20%7B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20input%20%7B%0Aoverflow%3A%20visible%3B%0A%7D%0Abody%20%5Btype%3Dcheckbox%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Abody%20input%20%7B%0Afont%2Dfamily%3A%20inherit%3B%0Afont%2Dsize%3A%20inherit%3B%0Aline%2Dheight%3A%20inherit%3B%0A%7D%0Abody%20a%20%7B%0Acolor%3A%20%230366d6%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20a%3Ahover%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20hr%20%7B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23dfe2e5%3B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0A%7D%0Abody%20hr%3Abefore%20%7B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%20hr%3Aafter%20%7B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%20table%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Abody%20td%2C%0Abody%20th%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20details%20summary%20%7B%0Acursor%3A%20pointer%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%2032px%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%2024px%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%2020px%3B%0A%7D%0Abody%20h3%2C%0Abody%20h4%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Abody%20h5%2C%0Abody%20h6%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20p%20%7B%0Amargin%2Dbottom%3A%2010px%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Abody%20ol%2C%0Abody%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Apadding%2Dleft%3A%200%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Abody%20ol%20ol%20ol%2C%0Abody%20ol%20ul%20ol%2C%0Abody%20ul%20ol%20ol%2C%0Abody%20ul%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Abody%20dd%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Abody%20code%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20input%3A%3A%2Dwebkit%2Dinner%2Dspin%2Dbutton%2C%0Abody%20input%3A%3A%2Dwebkit%2Douter%2Dspin%2Dbutton%20%7B%0A%2Dwebkit%2Dappearance%3A%20none%3B%0Aappearance%3A%20none%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20%2Eborder%20%7B%0Aborder%3A%201px%20solid%20%23e1e4e8%21important%3B%0A%7D%0Abody%20%2Eborder%2D0%20%7B%0Aborder%3A%200%21important%3B%0A%7D%0Abody%20%2Eborder%2Dbottom%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23e1e4e8%21important%3B%0A%7D%0Abody%20%2Erounded%2D1%20%7B%0Aborder%2Dradius%3A%203px%21important%3B%0A%7D%0Abody%20%2Ebg%2Dwhite%20%7B%0Abackground%2Dcolor%3A%20%23fff%21important%3B%0A%7D%0Abody%20%2Ebg%2Dgray%2Dlight%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%21important%3B%0A%7D%0Abody%20%2Etext%2Dgray%2Dlight%20%7B%0Acolor%3A%20%236a737d%21important%3B%0A%7D%0Abody%20%2Emb%2D0%20%7B%0Amargin%2Dbottom%3A%200%21important%3B%0A%7D%0Abody%20%2Emy%2D2%20%7B%0Amargin%2Dbottom%3A%208px%21important%3B%0Amargin%2Dtop%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D0%20%7B%0Apadding%2Dleft%3A%200%21important%3B%0A%7D%0Abody%20%2Epy%2D0%20%7B%0Apadding%2Dbottom%3A%200%21important%3B%0Apadding%2Dtop%3A%200%21important%3B%0A%7D%0Abody%20%2Epl%2D1%20%7B%0Apadding%2Dleft%3A%204px%21important%3B%0A%7D%0Abody%20%2Epl%2D2%20%7B%0Apadding%2Dleft%3A%208px%21important%3B%0A%7D%0Abody%20%2Epy%2D2%20%7B%0Apadding%2Dbottom%3A%208px%21important%3B%0Apadding%2Dtop%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D3%2C%0Abody%20%2Epx%2D3%20%7B%0Apadding%2Dleft%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epx%2D3%20%7B%0Apadding%2Dright%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epl%2D4%20%7B%0Apadding%2Dleft%3A%2024px%21important%3B%0A%7D%0Abody%20%2Epl%2D5%20%7B%0Apadding%2Dleft%3A%2032px%21important%3B%0A%7D%0Abody%20%2Epl%2D6%20%7B%0Apadding%2Dleft%3A%2040px%21important%3B%0A%7D%0Abody%20%2Ef6%20%7B%0Afont%2Dsize%3A%2012px%21important%3B%0A%7D%0Abody%20%2Elh%2Dcondensed%20%7B%0Aline%2Dheight%3A%201%2E25%21important%3B%0A%7D%0Abody%20%2Etext%2Dbold%20%7B%0Afont%2Dweight%3A%20600%21important%3B%0A%7D%0Abody%3Abefore%20%7B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%3Aafter%20%7B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0Adisplay%3A%20table%3B%0A%7D%0Abody%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%21important%3B%0A%7D%0Abody%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%21important%3B%0A%7D%0Abody%20a%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20blockquote%2C%0Abody%20dl%2C%0Abody%20ol%2C%0Abody%20p%2C%0Abody%20pre%2C%0Abody%20table%2C%0Abody%20ul%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20hr%20%7B%0Abackground%2Dcolor%3A%20%23e1e4e8%3B%0Aborder%3A%200%3B%0Aheight%3A%20%2E25em%3B%0Amargin%3A%2024px%200%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20blockquote%20%7B%0Aborder%2Dleft%3A%20%2E25em%20solid%20%23dfe2e5%3B%0Acolor%3A%20%236a737d%3B%0Apadding%3A%200%201em%3B%0A%7D%0Abody%20blockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20kbd%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%3B%0Aborder%3A%201px%20solid%20%23c6cbd1%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23959da5%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23959da5%3B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Apadding%3A%203px%205px%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Afont%2Dweight%3A%20600%3B%0Aline%2Dheight%3A%201%2E25%3B%0Amargin%2Dbottom%3A%2016px%3B%0Amargin%2Dtop%3A%2024px%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23eaecef%3B%0Apadding%2Dbottom%3A%20%2E3em%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%20%2E875em%3B%0A%7D%0Abody%20h6%20%7B%0Acolor%3A%20%236a737d%3B%0Afont%2Dsize%3A%20%2E85em%3B%0A%7D%0Abody%20ol%2C%0Abody%20ul%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ol%20ul%2C%0Abody%20ul%20ol%2C%0Abody%20ul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20li%20%7B%0Aword%2Dwrap%3A%20break%2Dall%3B%0A%7D%0Abody%20li%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Abody%20li%2Bli%20%7B%0Amargin%2Dtop%3A%20%2E25em%3B%0A%7D%0Abody%20dl%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dt%20%7B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20600%3B%0Amargin%2Dtop%3A%2016px%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dd%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0Apadding%3A%200%2016px%3B%0A%7D%0Abody%20table%20%7B%0Adisplay%3A%20block%3B%0Aoverflow%3A%20auto%3B%0Awidth%3A%20100%25%3B%0A%7D%0Abody%20table%20th%20%7B%0Afont%2Dweight%3A%20600%3B%0A%7D%0Abody%20table%20td%2C%0Abody%20table%20th%20%7B%0Aborder%3A%201px%20solid%20%23dfe2e5%3B%0Apadding%3A%206px%2013px%3B%0A%7D%0Abody%20table%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23c6cbd1%3B%0A%7D%0Abody%20table%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f6f8fa%3B%0A%7D%0Abody%20img%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Amax%2Dwidth%3A%20100%25%3B%0A%7D%0Abody%20img%5Balign%3Dright%5D%20%7B%0Apadding%2Dleft%3A%2020px%3B%0A%7D%0Abody%20img%5Balign%3Dleft%5D%20%7B%0Apadding%2Dright%3A%2020px%3B%0A%7D%0Abody%20code%20%7B%0Abackground%2Dcolor%3A%20rgba%2827%2C31%2C35%2C%2E05%29%3B%0Aborder%2Dradius%3A%203px%3B%0Afont%2Dsize%3A%2085%25%3B%0Amargin%3A%200%3B%0Apadding%3A%20%2E2em%20%2E4em%3B%0A%7D%0Abody%20pre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20pre%3Ecode%20%7B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0Awhite%2Dspace%3A%20pre%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20%2Ehighlight%20pre%2C%0Abody%20pre%20%7B%0Abackground%2Dcolor%3A%20%23f6f8fa%3B%0Aborder%2Dradius%3A%203px%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Aoverflow%3A%20auto%3B%0Apadding%3A%2016px%3B%0A%7D%0Abody%20pre%20code%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0Adisplay%3A%20inline%3B%0Aline%2Dheight%3A%20inherit%3B%0Amargin%3A%200%3B%0Amax%2Dwidth%3A%20auto%3B%0Aoverflow%3A%20visible%3B%0Apadding%3A%200%3B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20%2Ecommit%2Dtease%2Dsha%20%7B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2090%25%3B%0A%7D%0Abody%20%2Eblob%2Dwrapper%20%7B%0Aborder%2Dbottom%2Dleft%2Dradius%3A%203px%3B%0Aborder%2Dbottom%2Dright%2Dradius%3A%203px%3B%0Aoverflow%2Dx%3A%20auto%3B%0Aoverflow%2Dy%3A%20hidden%3B%0A%7D%0Abody%20%2Eblob%2Dwrapper%2Dembedded%20%7B%0Amax%2Dheight%3A%20240px%3B%0Aoverflow%2Dy%3A%20auto%3B%0A%7D%0Abody%20%2Eblob%2Dnum%20%7B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0Acolor%3A%20rgba%2827%2C31%2C35%2C%2E3%29%3B%0Acursor%3A%20pointer%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0Aline%2Dheight%3A%2020px%3B%0Amin%2Dwidth%3A%2050px%3B%0Apadding%2Dleft%3A%2010px%3B%0Apadding%2Dright%3A%2010px%3B%0Atext%2Dalign%3A%20right%3B%0Auser%2Dselect%3A%20none%3B%0Avertical%2Dalign%3A%20top%3B%0Awhite%2Dspace%3A%20nowrap%3B%0Awidth%3A%201%25%3B%0A%7D%0Abody%20%2Eblob%2Dnum%3Ahover%20%7B%0Acolor%3A%20rgba%2827%2C31%2C35%2C%2E6%29%3B%0A%7D%0Abody%20%2Eblob%2Dnum%3Abefore%20%7B%0Acontent%3A%20attr%28data%2Dline%2Dnumber%29%3B%0A%7D%0Abody%20%2Eblob%2Dcode%20%7B%0Aline%2Dheight%3A%2020px%3B%0Apadding%2Dleft%3A%2010px%3B%0Apadding%2Dright%3A%2010px%3B%0Aposition%3A%20relative%3B%0Avertical%2Dalign%3A%20top%3B%0A%7D%0Abody%20%2Eblob%2Dcode%2Dinner%20%7B%0Acolor%3A%20%2324292e%3B%0Afont%2Dfamily%3A%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Afont%2Dsize%3A%2012px%3B%0Aoverflow%3A%20visible%3B%0Awhite%2Dspace%3A%20pre%3B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20%2Epl%2Dtoken%2Eactive%2C%0Abody%20%2Epl%2Dtoken%3Ahover%20%7B%0Abackground%3A%20%23ffea7f%3B%0Acursor%3A%20pointer%3B%0A%7D%0Abody%20kbd%20%7B%0Abackground%2Dcolor%3A%20%23fafbfc%3B%0Aborder%3A%201px%20solid%20%23d1d5da%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23c6cbd1%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23c6cbd1%3B%0Acolor%3A%20%23444d56%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%3A%2011px%20SFMono%2DRegular%2CConsolas%2CLiberation%20Mono%2CMenlo%2CCourier%2Cmonospace%3B%0Aline%2Dheight%3A%2010px%3B%0Apadding%3A%203px%205px%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Aborder%2Dcolor%3A%20%230366d6%3B%0Aposition%3A%20relative%3B%0Az%2Dindex%3A%201%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%221%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%201%3B%0Atab%2Dsize%3A%201%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%222%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%202%3B%0Atab%2Dsize%3A%202%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%223%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%203%3B%0Atab%2Dsize%3A%203%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%224%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%204%3B%0Atab%2Dsize%3A%204%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%225%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%205%3B%0Atab%2Dsize%3A%205%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%226%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%206%3B%0Atab%2Dsize%3A%206%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%227%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%207%3B%0Atab%2Dsize%3A%207%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%228%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%208%3B%0Atab%2Dsize%3A%208%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%229%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%209%3B%0Atab%2Dsize%3A%209%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2210%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2010%3B%0Atab%2Dsize%3A%2010%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2211%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2011%3B%0Atab%2Dsize%3A%2011%3B%0A%7D%0Abody%20%2Etab%2Dsize%5Bdata%2Dtab%2Dsize%3D%2212%22%5D%20%7B%0A%2Dmoz%2Dtab%2Dsize%3A%2012%3B%0Atab%2Dsize%3A%2012%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%20%2E2em%20%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20hr%20%7B%0Aborder%2Dbottom%2Dcolor%3A%20%23eee%3B%0A%7D%0Abody%20%2Epl%2D0%20%7B%0Apadding%2Dleft%3A%200%21important%3B%0A%7D%0Abody%20%2Epl%2D1%20%7B%0Apadding%2Dleft%3A%204px%21important%3B%0A%7D%0Abody%20%2Epl%2D2%20%7B%0Apadding%2Dleft%3A%208px%21important%3B%0A%7D%0Abody%20%2Epl%2D3%20%7B%0Apadding%2Dleft%3A%2016px%21important%3B%0A%7D%0Abody%20%2Epl%2D4%20%7B%0Apadding%2Dleft%3A%2024px%21important%3B%0A%7D%0Abody%20%2Epl%2D5%20%7B%0Apadding%2Dleft%3A%2032px%21important%3B%0A%7D%0Abody%20%2Epl%2D6%20%7B%0Apadding%2Dleft%3A%2040px%21important%3B%0A%7D%0Abody%20%2Epl%2D7%20%7B%0Apadding%2Dleft%3A%2048px%21important%3B%0A%7D%0Abody%20%2Epl%2D8%20%7B%0Apadding%2Dleft%3A%2064px%21important%3B%0A%7D%0Abody%20%2Epl%2D9%20%7B%0Apadding%2Dleft%3A%2080px%21important%3B%0A%7D%0Abody%20%2Epl%2D10%20%7B%0Apadding%2Dleft%3A%2096px%21important%3B%0A%7D%0Abody%20%2Epl%2D11%20%7B%0Apadding%2Dleft%3A%20112px%21important%3B%0A%7D%0Abody%20%2Epl%2D12%20%7B%0Apadding%2Dleft%3A%20128px%21important%3B%0A%7D%0A" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>
+Contents<span class="tocSkip"></span>
+</h1>
+<div class="toc">
+<ul class="toc-item">
+<li>
+<span><a href="#Strings" data-toc-modified-id="Strings-1">Strings</a></span>
+</li>
+<li>
+<span><a href="#Assignment-and-immutability" data-toc-modified-id="Assignment-and-immutability-2">Assignment and immutability</a></span>
+</li>
+<li>
+<span><a href="#Numeric-data" data-toc-modified-id="Numeric-data-3">Numeric data</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#Python-2" data-toc-modified-id="Python-2-3.1">Python 2</a></span>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#Type-conversion" data-toc-modified-id="Type-conversion-4">Type conversion</a></span>
+</li>
+<li>
+<span><a href="#User-input" data-toc-modified-id="User-input-5">User input</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#Python-2-again" data-toc-modified-id="Python-2-again-5.1">Python 2 again</a></span>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#Methods" data-toc-modified-id="Methods-6">Methods</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#String-formatting" data-toc-modified-id="String-formatting-6.1">String formatting</a></span>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#Other-types" data-toc-modified-id="Other-types-7">Other types</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#Boolean" data-toc-modified-id="Boolean-7.1">Boolean</a></span>
+</li>
+<li>
+<span><a href="#None" data-toc-modified-id="None-7.2">None</a></span>
+</li>
+<li>
+<span><a href="#Tuple" data-toc-modified-id="Tuple-7.3">Tuple</a></span>
+</li>
+<li>
+<span><a href="#List" data-toc-modified-id="List-7.4">List</a></span>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#Exercises" data-toc-modified-id="Exercises-8">Exercises</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#1" data-toc-modified-id="1-8.1">1</a></span>
+<ul class="toc-item">
+<li>
+<span><a href="#a)" data-toc-modified-id="a)-8.1.1">a)</a></span>
+</li>
+<li>
+<span><a href="#b)" data-toc-modified-id="b)-8.1.2">b)</a></span>
+</li>
+<li>
+<span><a href="#c)" data-toc-modified-id="c)-8.1.3">c)</a></span>
+</li>
+</ul>
+</li>
+<li>
+<span><a href="#2" data-toc-modified-id="2-8.2">2</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="variables-and-data-types">Variables and data types</h1>
+<p>In the <a href="intro.html">introductory lesson</a>, we learned how to assign some data into a <a href="glossary.html#variable">variable</a>. Below are a few examples. We will use these variables in the remainder of this lesson.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name <span class="op">=</span> <span class="st">'Mildred T. Bonk'</span>
+street <span class="op">=</span> <span class="st">'Credibility Street'</span>
+street_number <span class="op">=</span> <span class="st">'221'</span>
+age <span class="op">=</span> <span class="dv">22</span>
+height <span class="op">=</span> <span class="fl">1.96</span></code></pre></div>
+<h2 id="strings">Strings</h2>
+<p>We have also learned about the important distinction between variables that store text (termed <a href="glossary.html#string">strings</a> and abbreviated to <code>str</code>) and variables that store numbers. The form of the data stored in a variable (text, number, something else) is called its <a href="glossary.html#type">type</a>.</p>
+<p>In the examples above, the variables <code>name</code>, <code>street</code>, and <code>street_number</code> are of type string. We can see this from the way that they are written. The <a href="glossary.html#syntax">syntax</a> for creating a string is simply to enclose the text of the string in quote marks (<code>''</code>). Quote marks distinguish strings (i.e. literal text) from other things such as numbers, the names of other variables, or Python commands, all of which are written without quote marks. This is similar to the use of quote marks in everyday English. Think of the lyrics to the song <a href="https://en.wikipedia.org/wiki/Say_My_Name">Say My Name</a> by Destiny's Child. When Beyoncé issues the instruction <em>say my name</em>, she intends <em>my name</em> to be replaced by her actual name when the instructions are carried out. This is equivalent to the following short Python program, albeit with <code>print()</code> in place of <em>say</em>, since Python has no <code>say()</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">my_name <span class="op">=</span> <span class="st">'Beyoncé'</span>
+
+<span class="bu">print</span>(my_name)</code></pre></div>
+<pre><code>Beyoncé</code></pre>
+<p>What if the lyrics to the song were subtly different and included quote marks around '<em>my name</em>' (i.e. <em>say 'my name'</em>)? One use of quote marks in English is to clarify that a piece of text is to be interpreted literally, and not replaced with whatever the text refers to. So this version of the song would be equivalent to the following short Python program:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">my_name <span class="op">=</span> <span class="st">'Beyoncé'</span>
+
+<span class="bu">print</span>(<span class="st">'my_name'</span>)</code></pre></div>
+<pre><code>my_name</code></pre>
+<p>When it comes to data types, appearances can occasionally be deceptive. For example, the <code>street_number</code> variable that we created above is a string that happens to contain digits. These can occur from time to time in programming, in cases where the digits do not really represent a mathematical quantity or might sometimes need to have extra non-number characters added to them (for example, Sherlock Holmes lives at house number 221b, which we can't represent and manipulate as an actual number).</p>
+<p>If we are unsure what type of data is stored in a variable, we can check at the console using the <a href="glossary.html#builtin">built-in</a> Python function <code>type()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">type</span>(street_number)</code></pre></div>
+<pre><code>str</code></pre>
+<p>Python is fairly strict about what we can and cannot do with various types. If we try to get Python to <a href="glossary.html#evaluate">evaluate</a> a mathematical expression that contains a string variable, we will encounter an <a href="glossary.html#error">error</a>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">street_number <span class="op">+</span> <span class="dv">1</span></code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-5-69d4580a9089&gt; in &lt;module&gt;
+----&gt; 1 street_number + 1
+
+
+TypeError: must be str, not int</code></pre>
+<p>However, some Python functions and <a href="glossary.html#operator">operators</a> are somewhat flexible, and may instead do different things depending on the type of the variable that they are applied to. For example, the multiplication operator <code>*</code> performs normal math multiplication for variables that store numbers, but for strings it instead repeats their contents.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">height <span class="op">*</span> <span class="dv">2</span></code></pre></div>
+<pre><code>3.92</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name <span class="op">*</span> <span class="dv">3</span></code></pre></div>
+<pre><code>'Mildred T. BonkMildred T. BonkMildred T. Bonk'</code></pre>
+<p>Python's occasional flexibility about data types is a double-edged sword. On the one hand, it allows for some concise intuitive commands, such as using <code>+</code> to combine strings or <code>*</code> to repeat them. But on the other hand, it means that we can occasionally make some big mistakes in our programs without immediately becoming aware of it. For example, if we found that <code>street_number</code> had been entered incorrectly and in fact needed an extra zero adding to it, then we might be tempted to multiply it by 10 in order to achieve this. Python would give no warning and would go ahead with what we asked even though the result is not what we want. In this case, our program might end up sending somebody's automated delivery a lot further down the street than we intended.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">street_number <span class="op">*</span> <span class="dv">10</span></code></pre></div>
+<pre><code>'221221221221221221221221221221'</code></pre>
+<p>A correct way to add an extra 0 to a string would be to add another string containing the <code>'0'</code> <em>character</em>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">street_number <span class="op">+</span> <span class="st">'0'</span></code></pre></div>
+<pre><code>'2210'</code></pre>
+<h2 id="assignment-and-immutability">Assignment and immutability</h2>
+<p>'Assignment and immutability' is of course the title of a novel by Jane Austen. But it also refers to two important concepts in Python programming. We learned about <a href="glossary.html#assignment">assignment</a> earlier; when we assign some value to a variable, we store that value under the name of the variable, and can retrieve it using that name.</p>
+<p>To understand immutability, let's remind ourselves of something. Take a look at the value of the <code>street_number</code> variable after everything that we have been doing with it above.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">street_number</code></pre></div>
+<pre><code>'221'</code></pre>
+<p>It hasn't changed since its original assignment. Although we have been performing various operations with the variable, we have merely been testing out and looking at the results of these operations. The value of the variable has remained unchanged. The value of a string variable will always remain the same unless we overwrite it by assigning it again. If we want to change or update the value of a variable with the result of some calculation, then we must assign that result back into the same variable name.</p>
+<p>For example if we want to add a <code>'b'</code> to the <code>street_number</code> string (and then print it out to check its new value):</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">street_number <span class="op">=</span> street_number <span class="op">+</span> <span class="st">'b'</span>
+
+<span class="bu">print</span>(street_number)</code></pre></div>
+<pre><code>221b</code></pre>
+<p>The opposite of immutability is 'mutability'. As it turns out, there are some data types that are mutable. That is, their contents can change without us having to overwrite them. We will meet one of these at the end of this lesson. But all the simple data types, such as strings and numbers, are immutable; string and numeric variables will only ever change their contents if there is an <code>=</code> somewhere in our program that overwrites them.</p>
+<p>Although this behavior can occasionally be a source of frustration, for example if we perform some calculations but forget to store the result in the relevant variable, in general immutability is a good thing. It would be annoying if every time we wanted to calculate something with our variables, this also overwrote their contents. For example, we might want to just print out the result of adding one year to somebody's age, without actually changing it.</p>
+<p>Of course if we want to keep both the original value of a variable and store an updated one, we can just assign the updated value into a <em>new</em> variable. In such cases it is a good idea to choose an expressive variable name that says something about what the changed value means. For example:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">age_next_year <span class="op">=</span> age <span class="op">+</span> <span class="dv">1</span>
+
+<span class="bu">print</span>(age)
+<span class="bu">print</span>(age_next_year)</code></pre></div>
+<pre><code>22
+23</code></pre>
+<h2 id="numeric-data">Numeric data</h2>
+<p>So far most of our examples have concerned the behavior of the <a href="glossary.html#string">string</a> data type. Let's now consider how Python manages numbers.</p>
+<p>Python distinguishes between two different ways of representing numbers. Numbers can be stored either as whole numbers (<code>1</code>, <code>2</code>, <code>3</code>, etc.) or as non-whole numbers (for example <code>1.618</code>, <code>2.718</code>, or <code>3.142</code>). Whole numbers are called <a href="glossary.html#integer">integers</a> (abbreviated to <code>int</code>), and non-whole numbers are called <a href="glossary.html#float">floating point numbers</a> (abbreviated to <code>float</code>). Just as there is a particular <a href="glossary.html#syntax">syntactical</a> rule for creating a string, namely the use of quote marks, so there are syntactical rules for creating integers and floats. The presence of a decimal point (<code>.</code>) indicates a float, and its absence indicates an integer.</p>
+<p>Take a look back at the <code>age</code> and <code>height</code> variables that we defined above. We can see that Python has stored these as two different types.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">type</span>(age)</code></pre></div>
+<pre><code>int</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">type</span>(height)</code></pre></div>
+<pre><code>float</code></pre>
+<p>Note that even if the number represented is a whole number, if we include a decimal point its type will still be float.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">grade <span class="op">=</span> <span class="fl">1.0</span>
+
+<span class="bu">type</span>(grade)</code></pre></div>
+<pre><code>float</code></pre>
+<p>For historical reasons, the syntax of programming languages (along with many other conventions in computing in general) is heavily influenced by British and US English. If you come from a part of the world where the comma is used as a decimal separator instead of the point, for example Germany, then beware that Python does not interpret it this way. If you try to create a float using the comma, the result will not be as expected. Surprisingly, however, you will not see an <a href="glossary.html#error">error message</a> either. Instead, Python interprets commas as separating two different things, and so will store the two numbers together in a new kind of variable (called a <a href="glossary.html#tuple">tuple</a>) that can contain more than one value.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">grade <span class="op">=</span> <span class="dv">1</span>,<span class="dv">3</span>
+
+<span class="bu">print</span>(grade)</code></pre></div>
+<pre><code>(1, 3)</code></pre>
+<p>But more about tuples later.</p>
+<p>How should we decide whether to store a number as integer or float? If we want to store a non-whole number, the decision is easy; it has to be a float. But what about something like somebody's age? Here, we have to think about what concept the number is supposed to represent in the real world, and consider whether we want to treat the units of that concept as atomic or as divisible into parts. For example, we can think of someone's age as being a count of the number of whole years that they have survived. But we can also think of it as a continuous measure of how much time they have survived. Children in particular often like to give their age as a continuous quantity like 'six-and-three-quarters'.</p>
+<p>As it turns out, there are many cases in which the difference between integers and floats does not actually matter for the functioning of our program. Python is quite flexible with number types.</p>
+<p>It allows us to mix integer and float numbers in the same mathematical expression:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">child_age <span class="op">=</span> <span class="dv">6</span>
+precise_child_age <span class="op">=</span> child_age <span class="op">+</span> <span class="fl">0.75</span>
+
+<span class="bu">type</span>(precise_child_age)</code></pre></div>
+<pre><code>float</code></pre>
+<p>The result of a mathematical expression containing a mixture of integers and floats is always a float, even if the resulting quantity is a whole number:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">answer <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="fl">2.0</span>
+
+<span class="bu">type</span>(answer)</code></pre></div>
+<pre><code>float</code></pre>
+<p>A calculation that involves only integers and that results in a whole number will produce an integer:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">answer <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span>
+
+<span class="bu">type</span>(answer)</code></pre></div>
+<pre><code>int</code></pre>
+<p>If a calculation with integers results in a non-whole number then Python does the reasonable thing and nonetheless stores the result as a float instead of rounding it off:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">three_quarters <span class="op">=</span> <span class="dv">3</span> <span class="op">/</span> <span class="dv">4</span>
+
+<span class="bu">type</span>(three_quarters)</code></pre></div>
+<pre><code>float</code></pre>
+<p>Indeed, any calculation involving division will result in a float, even if the result is a whole number (you might find this rule a little less intuitive):</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">two_halves <span class="op">=</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span>
+<span class="bu">type</span>(two_halves)</code></pre></div>
+<pre><code>float</code></pre>
+<p>If we are dividing integers and we would like to insist that the result also be an integer, then we can use a double slash <code>//</code> for so-called 'floor division'. The result is 'rounded down':</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">lego_bricks <span class="op">=</span> <span class="dv">52</span>
+bricks_per_house <span class="op">=</span> <span class="dv">10</span>
+houses_built <span class="op">=</span> lego_bricks <span class="op">//</span> bricks_per_house
+
+<span class="bu">print</span>(houses_built)</code></pre></div>
+<pre><code>5</code></pre>
+<h3 id="python-2">Python 2</h3>
+<p>A previous version of Python, Python 2, was slightly less flexible about numeric data types. The result of division with integers in Python 2 was always an integer, with the non-whole part discarded. This could produce some surprises for the unwary, such as the result of <code>1 / 2</code> being <code>0</code>.</p>
+<p>We are learning to program with Python 3, and almost all new Python software is written for Python 3, so you do not need to worry about this. Just be aware of it if you see some older Python examples or programs when searching online.</p>
+<h2 id="type-conversion">Type conversion</h2>
+<p>What if we have data of one type, but we need it to be of another? For example, we have stored the house number of an address as a string because we might need to append letters to it, but now in another part of our program we need to do some math with it, perhaps in order to find out the address of a next-door neighbor.</p>
+<p>Python has functions that convert one data type into another. Each of these functions has the same name as the abbreviated name of the data type that we are converting to. So for example <code>str()</code> converts to string, and <code>int()</code> to integer.</p>
+<p>We can apply these functions to variables within a calculation that would otherwise result in an error:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">number_beast <span class="op">=</span> <span class="st">'666'</span>
+
+neighbor_beast <span class="op">=</span> <span class="bu">int</span>(number_beast) <span class="op">+</span> <span class="dv">2</span>
+
+<span class="bu">print</span>(neighbor_beast)</code></pre></div>
+<pre><code>668</code></pre>
+<p>And here is a similar example but imagining we had first stored the house number as an integer:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">number_beast <span class="op">=</span> <span class="dv">666</span>
+
+annexe_beast <span class="op">=</span> <span class="bu">str</span>(number_beast) <span class="op">+</span> <span class="st">'b'</span>
+
+<span class="bu">print</span>(annexe_beast)</code></pre></div>
+<pre><code>666b</code></pre>
+<p>Remind yourself one more time that the values of string and numeric variables are not changed unless we overwrite them with an <code>=</code> assignment. Forgetting that this principle also applies to type conversion can lead to a common beginners' mistake.</p>
+<p>Line 2 in this example has no effect on the type of the <code>number_beast</code>variable because it is not assigned anywhere:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">number_beast <span class="op">=</span> <span class="dv">666</span>
+<span class="bu">str</span>(number_beast)
+
+annexe_beast <span class="op">=</span> number_beast <span class="op">+</span> <span class="st">'b'</span>
+
+<span class="bu">print</span>(annexe_beast)</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-25-293d2fd1f181&gt; in &lt;module&gt;
+      2 str(number_beast)
+      3 
+----&gt; 4 annexe_beast = number_beast + 'b'
+      5 
+      6 print(annexe_beast)
+
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
+<p>Here the problem is fixed:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">number_beast <span class="op">=</span> <span class="dv">666</span>
+number_beast <span class="op">=</span> <span class="bu">str</span>(number_beast)
+
+annexe_beast <span class="op">=</span> number_beast <span class="op">+</span> <span class="st">'b'</span>
+
+<span class="bu">print</span>(annexe_beast)</code></pre></div>
+<pre><code>666b</code></pre>
+<p>We saw above that Python handles the two numeric data types integer and float fairly flexibly and intuitively if we mix them in mathematical expressions. For this reason it is not so often necessary to convert variables between these two types.</p>
+<p>(The most common case in which we do want to do this is in order to convert float to integer. We will later encounter some situations in which we definitely need integers.)</p>
+<h2 id="user-input">User input</h2>
+<p>Let's take a look at a common situation in which type conversion from string to numeric is necessary. In one of our first example programs, <a href="../examples/greeting_personal.py#L9">greeting_personal.py</a>, we used the <code>input()</code> function in order to prompt the user to type something in at the console.</p>
+<p>The <code>input()</code> function always <a href="glossary.html#return">returns</a> a string, even if the user types in a valid number. If we try to do math with the result, we will encounter an error:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you? '</span>)
+age_next_year <span class="op">=</span> user_age <span class="op">+</span> <span class="dv">1</span></code></pre></div>
+<pre><code>How old are you? 52
+
+
+
+---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-27-e69a11705ffd&gt; in &lt;module&gt;
+      1 user_age = input('How old are you? ')
+----&gt; 2 age_next_year = user_age + 1
+
+
+TypeError: must be str, not int</code></pre>
+<p>Python has no way of knowing what type of data we want to get from the user. So in order to 'play it safe' and always be consistent, Python makes it a string and leaves it up to us to convert the contents of the string if necessary.</p>
+<p>So if we want to get numbers from the user, we must first convert the result of <code>input()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">user_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you? '</span>)
+user_age <span class="op">=</span> <span class="bu">int</span>(user_age)
+age_next_year <span class="op">=</span> user_age <span class="op">+</span> <span class="dv">1</span>
+
+<span class="bu">print</span>(age_next_year)</code></pre></div>
+<pre><code>How old are you? 52
+53</code></pre>
+<p>The example program <a href="../examples/age_next_year.py">age_next_year.py</a> shows how to use this pattern of Python commands in a simple program. If you would like to explore type conversion a little more, open up the file in Spyder, save a new copy of it, for example under the name <em>age_next_year_v2.py</em>, and try out a few changes:</p>
+<ul>
+<li>Does it matter for the workings of the program if you convert the user input to float instead of integer?</li>
+<li>Why is it necessary to use the <code>str()</code> type conversion function on <a href="../examples/age_next_year.py#L14">line 14</a>? What happens if you remove it?</li>
+<li>What happens if the user enters a non-whole number for their age, such as <code>6.75</code>?</li>
+</ul>
+<h3 id="python-2-again">Python 2 again</h3>
+<p>One of the other most noticeable differences in the previous version of Python was the behavior of the <code>input()</code> function. Confusingly, in Python 2 this function treated the user's input not as a string, nor even as a number, but as a <em>Python command</em>, which Python 2 would then <a href="glossary.html#evaluate">evaluate</a>. In theory this allowed malicious or just clumsy users to completely mess up the workings of a program by entering their own Python commands at the console while the program was running. So Python 3 takes the much safer option of just treating all user inputs as strings.</p>
+<p>Again, you do not need to worry about this since we will always be working with Python 3. Just be aware of it if you encounter old Python examples on the internet.</p>
+<h2 id="methods">Methods</h2>
+<p>As we have seen, Python's <a href="glossary.html#type">type</a> system lays down some (mostly) sensible rules about what we can and cannot do with various types of data. For example, we can perform division with integers and floats but not with strings. How does this work 'behind the scenes'? It turns out that for any variable we can access a list of the things that it is possible to do with a variable of that type. Along with the actual data stored in a variable, Python stores various links to the operations that it is possible to carry out with that type of data.</p>
+<p>The <code>dir()</code> function returns this list of possibilities for a certain variable. Let's try it for our <code>name</code> variable. Since this variable is a string, <code>dir()</code> tells us what it is possible to do with strings.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">dir</span>(name)</code></pre></div>
+<pre><code>['__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getnewargs__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mod__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rmod__',
+ '__rmul__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'capitalize',
+ 'casefold',
+ 'center',
+ 'count',
+ 'encode',
+ 'endswith',
+ 'expandtabs',
+ 'find',
+ 'format',
+ 'format_map',
+ 'index',
+ 'isalnum',
+ 'isalpha',
+ 'isdecimal',
+ 'isdigit',
+ 'isidentifier',
+ 'islower',
+ 'isnumeric',
+ 'isprintable',
+ 'isspace',
+ 'istitle',
+ 'isupper',
+ 'join',
+ 'ljust',
+ 'lower',
+ 'lstrip',
+ 'maketrans',
+ 'partition',
+ 'replace',
+ 'rfind',
+ 'rindex',
+ 'rjust',
+ 'rpartition',
+ 'rsplit',
+ 'rstrip',
+ 'split',
+ 'splitlines',
+ 'startswith',
+ 'strip',
+ 'swapcase',
+ 'title',
+ 'translate',
+ 'upper',
+ 'zfill']</code></pre>
+<p>(Note that it is only very rarely that we will need to use the <code>dir()</code> function in an actual program. It is instead a useful function to enter at the console when we are experimenting and checking Python's behavior. It can be particularly useful when we encounter a new <a href="glossary.html#type">type</a> and want an overview of the sorts of things that it can do.)</p>
+<p>In the output from <code>dir()</code> we see various things enclosed in double underscores <code>__ __</code>. We do not need to concern ourselves with these for the moment. They define the behavior of strings when they appear in various Python commands. For example, the <code>__add__</code> entry refers to the behavior of strings when we combine them with the <code>+</code> operator.</p>
+<p>The entries that interest us for the moment are those without underscores. These are the names of functions that can be applied to strings. Functions that are defined especially for one data type and can be accessed through variables of that type are called '<a href="glossary.html#method">methods</a>' for that data type. For example, the penultimate entry in the list of string methods above is a method called <code>upper</code>. This method <a href="glossary.html#return">returns</a> an all UPPERCASE version of the string. This method is special to strings; it wouldn't make any sense for other data types.</p>
+<p>The syntax for <a href="glossary.html#call">calling</a> a method has a lot in common with the syntax for calling any other function:</p>
+<ul>
+<li>place parentheses after the name of the method</li>
+<li>(optionally) place any input <a href="glossary.html#argument">arguments</a> for the method inside the parentheses</li>
+</ul>
+<p>But there is an important difference. We first 'go into' the variable that we want to apply the method to, and get the method from there. To go into a variable like this in Python, we place a dot (<code>.</code>) after its name.</p>
+<p>So to call the <code>upper()</code> method on our string variable <code>name</code>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name.upper()</code></pre></div>
+<pre><code>'MILDRED T. BONK'</code></pre>
+<p>Note that we do not also need to put the variable inside the parentheses, as we do with functions. Because we have accessed the method by first going into a particular variable, Python already understands that we wish to apply the method to that same variable.</p>
+<p>Indeed, if we make this mistake, we may get an error message telling us that we have given too many <a href="glossary.html#argument">input arguments</a>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name.upper(name)</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-31-b59fa512a01b&gt; in &lt;module&gt;
+----&gt; 1 name.upper(name)
+
+
+TypeError: upper() takes no arguments (1 given)</code></pre>
+<p>And remember once again that strings are <a href="#glossary.html#mutability">immutable</a>. Calling a method of a string variable does not change the string, it merely <a href="glossary.html#return">returns</a> the result.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name.upper()
+
+<span class="bu">print</span>(name)</code></pre></div>
+<pre><code>Mildred T. Bonk</code></pre>
+<p>Some methods require additional input <a href="glossary.html#argument">arguments</a>. For example the string method <code>count()</code> counts how many times a particular 'substring' appears inside a string variable. The input argument is the substring to count:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(name)
+
+name.count(<span class="st">'d'</span>)</code></pre></div>
+<pre><code>Mildred T. Bonk
+
+
+
+
+
+2</code></pre>
+<p>Note that Python strings are 'case-sensitive'. UPPERCASE characters are not considered the same as their lowercase counterparts:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(street)
+street.count(<span class="st">'s'</span>)</code></pre></div>
+<pre><code>Credibility Street
+
+
+
+
+
+0</code></pre>
+<p>Python <a href="glossary.html#syntax">syntax</a> allows methods to be applied one after another within the same command. Immediately after calling one method, we can use the <code>.</code> syntax again to call another method on the <em>result</em> of calling the first method.</p>
+<p>For example, to first get a lowercase version of a string and then count the occurrences of a particular character in that lowercase version:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">street.lower().count(<span class="st">'s'</span>)</code></pre></div>
+<pre><code>1</code></pre>
+<p>A common pattern when dealing with user input is to apply a few string methods to the input in order to 'clean' it. If we would like to make our program a little more robust to variations in user behavior, we can for example strip away any surrounding spaces that they typed by accident (with the <code>strip()</code> method), and then convert the result to lowercase (with the <code>lower()</code> method).</p>
+<p>For example to allow the user to type <code>'yes'</code>, <code>'Yes'</code>, <code>'YES'</code>, or even <code>'      yEs'</code> and make all these inputs equivalent to <code>'yes'</code>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Would you like a buttered crumpet? '</span>)
+answer <span class="op">=</span> answer.strip().lower()
+
+<span class="bu">print</span>(answer)</code></pre></div>
+<pre><code>Would you like a buttered crumpet?       YES
+yes</code></pre>
+<p>Now would be a good moment to turn to the console in Spyder and explore some of the other string methods. In the console, create yourself a string variable (for example by entering a command like <code>word = 'floccinaucinihilipilification'</code>), then use the <code>dir()</code> function to view its available methods, then try to apply some of them to see what they do.</p>
+<p>Some string methods are a bit too complex for us at this stage. Try the following ones:</p>
+<ul>
+<li><code>capitalize()</code></li>
+<li><code>count()</code></li>
+<li><code>endswith()</code></li>
+<li><code>find()</code></li>
+<li><code>index()</code> (Note the subtle difference from <code>find()</code>.)</li>
+<li><code>lower()</code></li>
+<li><code>lstrip()</code></li>
+<li><code>replace()</code></li>
+<li><code>rstrip()</code></li>
+<li><code>split()</code></li>
+<li><code>startswith()</code></li>
+<li><code>strip()</code></li>
+<li><code>swapcase()</code></li>
+<li><code>title()</code></li>
+<li><code>upper()</code></li>
+</ul>
+<p>If you are feeling adventurous you can just try these out and see whether you can work out what they do. If so, make sure to test them with a variety of different strings to check that you have really understood their behavior. If you would like to check or need some help with examples, you can search online for <em>Python string method x</em> or you can read the official documentation for all of Python's string methods <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">here</a>.</p>
+<p>You might be wondering whether the two numeric data types that we have learned about also have methods. They do. But because we tend to work with numbers primarily using mathematical <a href="glossary.html#operator">operators</a>, we rarely need to work directly with their methods as we do for strings.</p>
+<h3 id="string-formatting">String formatting</h3>
+<p>We will look now at just one more string method together, because it is a very useful one, but whose use is not completely straightforward. The <code>format()</code> method inserts the values of other variables into certain positions in a string. This is particularly useful for preparing neat printouts for the users of our programs.</p>
+<p>To use <code>format()</code>, our string must contain the characters <code>{}</code> in the positions where we would like to insert something. These positions are termed 'replacement fields', and they will be replaced by the values from the variables that we give as <a href="glossary.html#argument">arguments</a> to the <code>format()</code> method.</p>
+<p>Let's see an example using <code>format()</code> to print out a few different pieces of information contained in the variables we created at the beginning of this lesson:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">message <span class="op">=</span> <span class="st">'User </span><span class="sc">{}</span><span class="st"> is </span><span class="sc">{}</span><span class="st"> years old and </span><span class="sc">{}</span><span class="st"> meters tall.'</span>
+
+message.<span class="bu">format</span>(name, age, height)</code></pre></div>
+<pre><code>'User Mildred T. Bonk is 22 years old and 1.96 meters tall.'</code></pre>
+<p>We can see that if we have multiple <code>{}</code> replacement fields, these are replaced with the values of the variables that we give to <code>format()</code> in the order that we enter them. Notice also that we did not have to use the <code>str()</code> type conversion function to convert the two numeric variables <code>age</code> and <code>height</code> into strings; <code>format()</code> handles variables of different types automatically.</p>
+<p>There is a little bit more to the <code>format()</code> method than this. For example, we can also specify how many decimal places of a <a href="glossary.html#float">float</a> to insert into the string, and other details. But this is enough for now about <code>format()</code>, and about string methods in general. If you would like to see an example of a program that makes use of a few string methods, take a look at <a href="../examples/name_trivia.py">name_trivia.py</a>.</p>
+<h2 id="other-types">Other types</h2>
+<p>Are there other data types in Python? Is there anything in the world worth talking about other than words and numbers?</p>
+<p>Yes. In fact there are lots more. We will finish this lesson with a quick overview of a few more types. We will learn about these in more detail in the lessons that follow.</p>
+<h3 id="boolean">Boolean</h3>
+<p>Variables of <a href="glossary.html#boolean">boolean</a> type are very simple. They store one of only two possible values: <code>True</code> or <code>False</code>. Boolean values can be the result of various Python commands whose purpose is to check whether or not something is the case. For example, the string <a href="glossary.html#method">method</a> <code>startswith()</code> <a href="glossary.html#return">returns</a> a boolean value, <code>True</code> if the string starts with a particular substring, and <code>False</code> otherwise:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(name)
+
+answer <span class="op">=</span> name.startswith(<span class="st">'m'</span>)
+
+<span class="bu">print</span>(answer)
+<span class="bu">type</span>(answer)</code></pre></div>
+<pre><code>Mildred T. Bonk
+False
+
+
+
+
+
+bool</code></pre>
+<p>(If you were expecting <code>True</code> above, remember that strings are case-sensitive.)</p>
+<h3 id="none">None</h3>
+<p>Occasionally, the status of some piece of information in our program is neither true nor false nor a string nor a number nor anything, it is instead simply undefined. There is an 'empty' type called <a href="glossary.html#none"><code>None</code></a> for this eventuality. We might occasionally <a href="glossary.html#assignment">assign</a> <code>None</code> into a variable as a default starting value, anticipating that this value might be changed later on in our program.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">proof_of_Riemann_conjecture <span class="op">=</span> <span class="va">None</span>
+
+<span class="bu">type</span>(proof_of_Riemann_conjecture)</code></pre></div>
+<pre><code>NoneType</code></pre>
+<p>We can also sometimes get a <code>None</code> value if we try to <a href="glossary.html#assignment">assign</a> the result of a function that actually does not <a href="glossary.html#return">return</a> anything. For example, although the <code>print()</code> function serves to display output for the user of our program, it does not actually return any value that can be assigned. By default, a function that does not return anything returns <code>None</code>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> <span class="bu">print</span>(<span class="st">'Hi.'</span>)
+
+<span class="bu">type</span>(x)</code></pre></div>
+<pre><code>Hi.
+
+
+
+
+
+NoneType</code></pre>
+<h3 id="tuple">Tuple</h3>
+<p>We briefly encountered the <a href="glossary.html#tuple">tuple</a> by mistake earlier, when we tried to create a <a href="glossary.html#float">float</a> using a comma for the decimal separator instead of a point. The comma is not the correct Python <a href="glossary.html#tuple">syntax</a> for the decimal separator, but it turns out that it <em>is</em> the correct syntax for something else: separating multiple values in a sequence. The result is a data type that does exactly that; it stores multiple values in a sequence. Although not an absolutely necessary aspect of the syntax, it is an extremely common convention to also place parentheses around the sequence of values when creating a tuple, as this makes our program clearer.</p>
+<p>Here is an example of creating a tuple:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping <span class="op">=</span> (<span class="st">'eggs'</span>, <span class="st">'bacon'</span>, <span class="st">'black pudding'</span>)
+
+<span class="bu">type</span>(shopping)</code></pre></div>
+<pre><code>tuple</code></pre>
+<p>We can refer to the values in a tuple using their <a href="glossary.html#index">indices</a>, their numbered positions in the sequence. We place the index in square parentheses <code>[]</code> after the name of the tuple variable.</p>
+<p>Beware that Python's numbering system for sequences begins at zero. So the first value in a tuple has index <code>0</code>, the second value has index <code>1</code>, and so on.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(shopping[<span class="dv">0</span>])
+<span class="bu">print</span>(shopping[<span class="dv">1</span>])</code></pre></div>
+<pre><code>eggs
+bacon</code></pre>
+<p>We cannot change individual values in a tuple. Here is what happens if we try:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping[<span class="dv">1</span>] <span class="op">=</span> <span class="st">'organic vegan bacon'</span></code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-43-21c829b36b26&gt; in &lt;module&gt;
+----&gt; 1 shopping[1] = 'organic vegan bacon'
+
+
+TypeError: 'tuple' object does not support item assignment</code></pre>
+<p>Like all the data types we have encountered so far, tuples are <a href="glossary.html#mutability">immutable</a>. If we want to change the contents of a tuple variable, we must overwrite the whole thing by assigning it anew with <code>=</code>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping <span class="op">=</span> (<span class="st">'eggs'</span>, <span class="st">'organic vegan bacon'</span>, <span class="st">'black pudding'</span>)</code></pre></div>
+<h3 id="list">List</h3>
+<p>Not being able to change individual values in a tuple seems like a very onerous restriction. What if we are working with data that need to be updated or added to as our program runs? <a href="glossary.html#list">Lists</a>, the final data type that we will learn about in this lesson, provide just this ability. A list is an ordered sequence of values, just like a tuple, but it is <a href="glossary.html#mutability">mutable</a>; we can change one item in a list without having to re-assign the whole thing.</p>
+<p>The <a href="glossary.html#syntax">syntax</a> for creating a list is the same as for creating a tuple, except with square parentheses in place of round ones:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping_list <span class="op">=</span> [<span class="st">'eggs'</span>, <span class="st">'bacon'</span>, <span class="st">'black pudding'</span>]
+
+<span class="bu">type</span>(shopping_list)</code></pre></div>
+<pre><code>list</code></pre>
+<p>Python allows us to change individual values in a list:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping_list[<span class="dv">1</span>] <span class="op">=</span> <span class="st">'organic vegan bacon'</span>
+
+<span class="bu">print</span>(shopping_list)</code></pre></div>
+<pre><code>['eggs', 'organic vegan bacon', 'black pudding']</code></pre>
+<p>There are also list <a href="glossary.html#method">methods</a>, like the string methods we learned about above. For example, there is a list method called <code>append()</code> for adding a new value to the end of the list:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping_list.append(<span class="st">'sausages'</span>)
+
+<span class="bu">print</span>(shopping_list)</code></pre></div>
+<pre><code>['eggs', 'organic vegan bacon', 'black pudding', 'sausages']</code></pre>
+<p>Notice what just happened. The <code>append()</code> method changed the list without our having to <a href="glossary.html#assignment">assign</a> the result back into the list variable with <code>=</code>. This is different from the behavior of string methods. As we learned above, string methods always just <a href="glossary.html#return">return</a> the result of whatever it is that they do with the string, but they do not change the string while doing so. List methods just go ahead and change the list.</p>
+<p>This distinction is important, and forgetting it can lead to some frustrating mistakes. Let's see what happens if we try to use a list method as if it were a string method, and assign its return value back into the original list variable:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping_list <span class="op">=</span> shopping_list.append(<span class="st">'more sausages'</span>)
+
+<span class="bu">print</span>(shopping_list)</code></pre></div>
+<pre><code>None</code></pre>
+<p>The <code>print()</code> function suddenly seems to have no effect, and prints nothing. This is because our list has gone. List methods do not do their work by outputting a <a href="glossary.html#return">return value</a> as string methods do. Most list methods do not output anything. As we learned a moment ago, the output of a function that does not have any defined output is the <code>None</code> value. So our list has become just <code>None</code>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">type</span>(shopping_list)</code></pre></div>
+<pre><code>NoneType</code></pre>
+<p>So beware. If you want to change a list, it is enough to just use the list method. Don't assign the result back into the list variable.</p>
+<p>As you did for string methods above, take a moment to go to the console in Spyder and explore the behavior of some of the list methods. Try to discover what the following methods do:</p>
+<ul>
+<li><code>clear()</code></li>
+<li><code>count()</code></li>
+<li><code>index()</code></li>
+<li><code>insert()</code></li>
+<li><code>remove()</code></li>
+<li><code>reverse()</code></li>
+<li><code>sort()</code></li>
+</ul>
+<p>Because list methods just change the contents of the list behind the scenes and do not produce output, you will need to <code>print()</code> your list after applying each method to see what change has taken place.</p>
+<h2 id="exercises">Exercises</h2>
+<h3 id="section">1</h3>
+<p>A good way to strengthen your understanding of how Python works is to test that understanding regularly. When you test out a command in the console, try first to predict what the result will be, and only then type it in to check whether you were right. What is the result of each of the following short programs?</p>
+<h4 id="a">a)</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name <span class="op">=</span> <span class="st">'Mildred T. Bonk'</span>
+name.lower()
+m_count <span class="op">=</span> name.count(<span class="st">'m'</span>)
+<span class="bu">print</span>(m_count)</code></pre></div>
+<h4 id="b">b)</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">info <span class="op">=</span> (<span class="st">'Mildred T. Bonk'</span>, <span class="dv">22</span>, <span class="fl">1.96</span>)
+<span class="bu">print</span>(info[<span class="dv">1</span>].lower())</code></pre></div>
+<h4 id="c">c)</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">names <span class="op">=</span> [<span class="st">'Mildred'</span>, <span class="st">'T.'</span>, <span class="st">'Bonk'</span>]
+<span class="bu">print</span>(names.reverse())</code></pre></div>
+<h3 id="section-1">2</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Age_disparity_in_sexual_relationships#The_%22half-your-age-plus-seven%22_rule">'half-your-age-plus-seven' rule</a> is a folk rule of thumb used to calculate the minimum socially acceptable age of your dating partners, given your age. The rule asserts that if your age is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>, then the minimum socially acceptable age for your partner is:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>+</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">
+\frac{x}{2} + 7
+</annotation></semantics></math></p>
+<p>Write a program that asks the user for their age, and then tells them the result of applying this rule of thumb.</p>
+</body>
+</html>
