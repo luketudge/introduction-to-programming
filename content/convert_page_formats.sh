@@ -70,3 +70,6 @@ done
 
 # Convert the main README to an index.html.
 mv html/README.html html/index.html
+
+rm -f html/intro_prog_html.zip
+zip html/intro_prog_html.zip html/*.html
