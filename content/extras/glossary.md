@@ -58,7 +58,7 @@ A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in 
 
 ## bug
 
-A bug is an aspect of a program that does not function as desired. For example, a [function](#function) might give the wrong [return value](#return), or part of the program might unexpectedly raise an [exception](#exception).
+A bug is an aspect of a program that does not work as desired. For example, a [function](#function) might give the wrong [return value](#return), or part of the program might unexpectedly raise an [exception](#exception).
 
 ## builtin
 
@@ -534,6 +534,10 @@ A variable is a name that stores some information for the duration of our progra
 x = 2
 print(x ** 0.5)
 ```
+
+## versioning
+
+'Versioning', or more often 'version control' is the process of tracking the changes we make in successive versions of a computer program. This is important because we may sometimes need to check whether we and our colleagues are working on the same version of a program, or we may need to go back to an earlier version when we discover that our latest fabulous improvements have in fact completely broken everything.
 
 ## whitespace
 
