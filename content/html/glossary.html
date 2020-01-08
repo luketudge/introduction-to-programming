@@ -77,7 +77,7 @@ f.closed</code></pre></div>
 <p>A <a href="#variable">variable</a> of boolean data <a href="#type">type</a> (abbreviated to <code>bool</code> in Python) stores either of the two possible <a href="#value">values</a> <code>True</code> or <code>False</code>. Boolean values often result from a Python command that checks a given condition, for example <code>2 &gt; 1</code> <a href="#evaluate">evaluates</a> to <code>True</code> because <code>2</code> is indeed greater than <code>1</code>.</p>
 <p>(The term 'boolean' is derived from the name of <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>, who developed various mathematical methods for working with logical True/False values.)</p>
 <h2 id="bug">bug</h2>
-<p>A bug is an aspect of a program that does not function as desired. For example, a <a href="#function">function</a> might give the wrong <a href="#return">return value</a>, or part of the program might unexpectedly raise an <a href="#exception">exception</a>.</p>
+<p>A bug is an aspect of a program that does not work as desired. For example, a <a href="#function">function</a> might give the wrong <a href="#return">return value</a>, or part of the program might unexpectedly raise an <a href="#exception">exception</a>.</p>
 <h2 id="builtin">builtin</h2>
 <p>Python provides a few fundamental <a href="#function">functions</a> that are already available from the start. These are termed built-in functions, or 'builtins'. The <code>print()</code> function is one example of a builtin. You can read a full list of them <a href="https://docs.python.org/3/library/functions.html#built-in-functions">here</a>.</p>
 <h2 id="call">call</h2>
@@ -203,7 +203,7 @@ SyntaxError: invalid syntax</code></pre>
 <h2 id="keyword">keyword</h2>
 <p>A keyword (sometimes also referred to as 'reserved word') is a word that has a special fixed meaning for Python. For example, the keyword <code>del</code> deletes something from Python's memory. We cannot use keywords as the names of <a href="#variable">variables</a> (hence the term 'reserved word'). For a full list of all the keywords in Python, see <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">here</a>.</p>
 <h2 id="list">list</h2>
-<p>A tuple is a kind of <a href="#sequence">sequence</a>; it can store multiple <a href="#value">values</a> arranged in order. The <a href="#syntax">syntax</a> for creating a list is to enclose the values in the sequence inside square parentheses <code>[]</code> and separate the values with commas. For example:</p>
+<p>A list is a kind of <a href="#sequence">sequence</a>; it can store multiple <a href="#value">values</a> arranged in order. The <a href="#syntax">syntax</a> for creating a list is to enclose the values in the sequence inside square parentheses <code>[]</code> and separate the values with commas. For example:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">shopping <span class="op">=</span> [<span class="st">'eggs'</span>, <span class="st">'bacon'</span>, <span class="st">'black pudding'</span>, <span class="st">'sausages'</span>]</code></pre></div>
 <p>Lists are very similar to <a href="#tuple">tuples</a>, another kind of sequence. The difference is that tuples are <a href="#mutability">immutable</a>, whereas lists are <a href="#list">mutable</a>.</p>
 <h2 id="locale">locale</h2>
@@ -306,12 +306,16 @@ shopping[<span class="dv">1</span>:<span class="dv">3</span>]</code></pre></div>
 <p>Tuples are very similar to <a href="#list">lists</a>, another kind of sequence. The difference is that tuples are <a href="#mutability">immutable</a>, whereas lists are <a href="#list">mutable</a>.</p>
 <h2 id="type">type</h2>
 <p>Computer programs can handle information in different forms. For example, some pieces of information may be in the form of text, some may be numbers, and some may be more complex things such as a link to a file on the computer's disk, or a connection to a website. When we create or refer to information in our Python programs, Python needs to be able to know what type of information it is. Python has various <a href="#syntax">syntactical</a> rules for determining what type a new variable is when we create one in our program. For example, quote marks <code>''</code> indicate a <a href="#string">string</a> (i.e. text).</p>
+<h2 id="url">URL</h2>
+<p>A 'Uniform Resource Locator' is a piece of text that indicates how a 'resource' (e.g. some data or computing service on the internet) can be accessed. More commonly we refer to a URL as a 'web address'. An example URL is <code>https://en.wikipedia.org/wiki/Python_(programming_language)</code>.</p>
 <h2 id="value">value</h2>
 <p>The contents stored in a <a href="#variable">variable</a> are often called its 'value'. For example, <code>name</code> might be a <a href="#string">string</a> variable whose value is <code>'Mildred'</code>, and <code>height</code> might be a <a href="#float">float</a> variable whose value is <code>1.96</code>.</p>
 <h2 id="variable">variable</h2>
 <p>A variable is a name that stores some information for the duration of our program. We choose the name ourselves, and <a href="#assignment">assign</a> into that name whatever information we wish to store. We can then use the variable in subsequent steps of the program. For example:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> <span class="dv">2</span>
 <span class="bu">print</span>(x <span class="op">**</span> <span class="fl">0.5</span>)</code></pre></div>
+<h2 id="versioning">versioning</h2>
+<p>'Versioning', or more often 'version control' is the process of tracking the changes we make in successive versions of a computer program. This is important because we may sometimes need to check whether we and our colleagues are working on the same version of a program, or we may need to go back to an earlier version when we discover that our latest fabulous improvements have in fact completely broken everything.</p>
 <h2 id="whitespace">whitespace</h2>
 <p>Any text characters that appear simply as blank space are termed 'whitespace' characters. The most common whitespace character is of course simply the space, but there are others, such as the <a href="#newline">newline character</a> and the tab.</p>
 <h2 id="wildcard">wildcard</h2>

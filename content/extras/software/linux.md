@@ -1,9 +1,9 @@
 # Installation on Linux
 
-If you are using a major Linux distribution, for example a recent version of Ubuntu, Python 3 will already be installed on your computer. You can check just to be sure by opening a terminal and entering the following command (note the uppercase `V`):
+If you are using a major Linux distribution, for example a recent version of Ubuntu, Python 3 will already be installed on your computer. You can check just to be sure by opening a terminal and entering the following command:
 
 ```shell
-python3 -V
+python3 --version
 ```
 
 You should see some information about your version of Python 3, if it is installed. If it is not, then you may see an error message or you may be prompted to install it.

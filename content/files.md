@@ -38,6 +38,9 @@ filepath = os.path.join('data', 'melville-moby_dick.txt')
 print(filepath)
 ```
 
+    data/melville-moby_dick.txt
+
+
 
 ```python
 f = open(filepath)

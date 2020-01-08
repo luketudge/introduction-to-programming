@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Example-program" data-toc-modified-id="Example-program-1">Example program</a></span></li><li><span><a href="#Built-in-tests" data-toc-modified-id="Built-in-tests-2">Built-in tests</a></span></li><li><span><a href="#Test-functions" data-toc-modified-id="Test-functions-3">Test functions</a></span><ul class="toc-item"><li><span><a href="#Assertions" data-toc-modified-id="Assertions-3.1">Assertions</a></span></li><li><span><a href="#Failing-tests" data-toc-modified-id="Failing-tests-3.2">Failing tests</a></span></li></ul></li><li><span><a href="#Test-runners" data-toc-modified-id="Test-runners-4">Test runners</a></span><ul class="toc-item"><li><span><a href="#pytest" data-toc-modified-id="pytest-4.1">pytest</a></span><ul class="toc-item"><li><span><a href="#Command-line-usage" data-toc-modified-id="Command-line-usage-4.1.1">Command line usage</a></span></li><li><span><a href="#Output" data-toc-modified-id="Output-4.1.2">Output</a></span></li><li><span><a href="#Verbose-mode" data-toc-modified-id="Verbose-mode-4.1.3">Verbose mode</a></span></li><li><span><a href="#Testing-exceptions" data-toc-modified-id="Testing-exceptions-4.1.4">Testing exceptions</a></span></li></ul></li></ul></li><li><span><a href="#Test-driven-development" data-toc-modified-id="Test-driven-development-5">Test-driven development</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-6">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-6.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-6.2">2</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Example-program" data-toc-modified-id="Example-program-1">Example program</a></span></li><li><span><a href="#Built-in-tests" data-toc-modified-id="Built-in-tests-2">Built-in tests</a></span></li><li><span><a href="#Test-functions" data-toc-modified-id="Test-functions-3">Test functions</a></span><ul class="toc-item"><li><span><a href="#Assertions" data-toc-modified-id="Assertions-3.1">Assertions</a></span></li><li><span><a href="#Failing-tests" data-toc-modified-id="Failing-tests-3.2">Failing tests</a></span></li></ul></li><li><span><a href="#Test-runners" data-toc-modified-id="Test-runners-4">Test runners</a></span><ul class="toc-item"><li><span><a href="#pytest" data-toc-modified-id="pytest-4.1">pytest</a></span><ul class="toc-item"><li><span><a href="#Command-line-usage" data-toc-modified-id="Command-line-usage-4.1.1">Command line usage</a></span></li><li><span><a href="#Output" data-toc-modified-id="Output-4.1.2">Output</a></span></li><li><span><a href="#Verbosity" data-toc-modified-id="Verbosity-4.1.3">Verbosity</a></span></li><li><span><a href="#Testing-exceptions" data-toc-modified-id="Testing-exceptions-4.1.4">Testing exceptions</a></span></li></ul></li></ul></li><li><span><a href="#Test-driven-development" data-toc-modified-id="Test-driven-development-5">Test-driven development</a></span></li><li><span><a href="#Exercises" data-toc-modified-id="Exercises-6">Exercises</a></span><ul class="toc-item"><li><span><a href="#1" data-toc-modified-id="1-6.1">1</a></span></li><li><span><a href="#2" data-toc-modified-id="2-6.2">2</a></span></li></ul></li></ul></div>
 
 # Testing
 
@@ -262,7 +262,7 @@ For example:
     E         ?  +
     
     test_spoonerisms.py:43: AssertionError
-    ========================= 1 failed, 5 passed in 0.04s ==========================
+    ========================= 1 failed, 5 passed in 0.03s ==========================
 
 
 Remember a couple of important things from the previous lesson on the [command line](command_line.md):
@@ -328,15 +328,15 @@ The *FAILURES* section then provides details of each failed test. As well as jus
 
 Here we see what the result of the `spoonerize()` function really was, compared to what our test expected it to be.
 
-#### Verbose mode
+#### Verbosity
 
 If you would like to see even more information about the tests, you can run pytest in '[verbose](extras/glossary.md#verbose)' mode. In computing, the term 'verbose' has approximately the same meaning as in everyday English, but in reference to the output of a computer program rather than a human being's use of language. A program that is run in verbose mode will 'talk more', i.e. give more detailed printed output.
 
-Many command line command accept additional options in the form of a word or single letter preceded by a dash (`-`). The option for running pytest in verbose mode is `-v`. The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:
+The option for running pytest in verbose mode is `--verbose`, or in abbreviated form `-v` (look back at [the previous lesson](command_line.md#options) if you need to remind yourself about command line options). The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:
 
 
 ```python
-! pytest -v
+! pytest --verbose
 ```
 
     ============================= test session starts ==============================
@@ -369,7 +369,7 @@ Many command line command accept additional options in the form of a word or sin
     E         ?  +
     
     test_spoonerisms.py:43: AssertionError
-    ========================= 1 failed, 7 passed in 0.04s ==========================
+    ========================= 1 failed, 7 passed in 0.05s ==========================
 
 
 #### Testing exceptions

@@ -522,6 +522,10 @@ Tuples are very similar to [lists](#list), another kind of sequence. The differe
 
 Computer programs can handle information in different forms. For example, some pieces of information may be in the form of text, some may be numbers, and some may be more complex things such as a link to a file on the computer's disk, or a connection to a website. When we create or refer to information in our Python programs, Python needs to be able to know what type of information it is. Python has various [syntactical](#syntax) rules for determining what type a new variable is when we create one in our program. For example, quote marks `''` indicate a [string](#string) (i.e. text).
 
+## URL
+
+A 'Uniform Resource Locator' is a piece of text that indicates how a 'resource' (e.g. some data or computing service on the internet) can be accessed. More commonly we refer to a URL as a 'web address'. An example URL is `https://en.wikipedia.org/wiki/Python_(programming_language)`.
+
 ## value
 
 The contents stored in a [variable](#variable) are often called its 'value'. For example, `name` might be a [string](#string) variable whose value is `'Mildred'`, and `height` might be a [float](#float) variable whose value is `1.96`.
