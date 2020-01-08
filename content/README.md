@@ -1,8 +1,8 @@
 # Topics
 
-You can view interactive versions of the topic pages on [Binder](https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?filepath=topics) (can be quite slow to load), or on [Google Colaboratory](https://colab.research.google.com/github/luketudge/introduction-to-programming) (works well, but requires a Google account).
+The links below take you to pages hosted here on the GitHub site for the class.
 
-The links below take you to the static versions of the pages.
+If you prefer, you can view interactive versions of the topic pages on [Binder](https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?filepath=topics) (can be quite slow to load), or on [Google Colaboratory](https://colab.research.google.com/github/luketudge/introduction-to-programming) (works well, but requires a Google account), or you can [download the pages as html](html/intro_prog_html.zip) (click **Download**) and browse them offline.
 
 ## Get started
 
@@ -23,7 +23,7 @@ The links below take you to the static versions of the pages.
 
 * [The command line](command_line.md)
 * [Testing](testing.md)
-* GitHub
+* [GitHub](github.md)
 * Documentation
 * Style
 

@@ -36,6 +36,7 @@ TOPIC_PAGES = [
     'Files',
     'The command line',
     'Testing',
+    'GitHub',
 ]
 
 

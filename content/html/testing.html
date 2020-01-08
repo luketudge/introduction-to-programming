@@ -81,7 +81,7 @@ Contents<span class="tocSkip"></span>
 <span><a href="#Output" data-toc-modified-id="Output-4.1.2">Output</a></span>
 </li>
 <li>
-<span><a href="#Verbose-mode" data-toc-modified-id="Verbose-mode-4.1.3">Verbose mode</a></span>
+<span><a href="#Verbosity" data-toc-modified-id="Verbosity-4.1.3">Verbosity</a></span>
 </li>
 <li>
 <span><a href="#Testing-exceptions" data-toc-modified-id="Testing-exceptions-4.1.4">Testing exceptions</a></span>
@@ -251,7 +251,7 @@ E         + quaint fartz
 E         ?  +
 
 test_spoonerisms.py:43: AssertionError
-========================= 1 failed, 5 passed in 0.04s ==========================</code></pre>
+========================= 1 failed, 5 passed in 0.03s ==========================</code></pre>
 <p>Remember a couple of important things from the previous lesson on the <a href="command_line.html">command line</a>:</p>
 <ul>
 <li>For this command to work, the test file <em>test_spoonerisms.py</em> and the module to be tested <em>spoonerisms.py</em> need to be located in your current working directory.</li>
@@ -303,10 +303,10 @@ test_spoonerisms.py:43: AssertionError
 <p><code>E       AssertionError: assert 'qaint fuartz' == 'quaint fartz'</code></p>
 </blockquote>
 <p>Here we see what the result of the <code>spoonerize()</code> function really was, compared to what our test expected it to be.</p>
-<h4 id="verbose-mode">Verbose mode</h4>
+<h4 id="verbosity">Verbosity</h4>
 <p>If you would like to see even more information about the tests, you can run pytest in '<a href="glossary.html#verbose">verbose</a>' mode. In computing, the term 'verbose' has approximately the same meaning as in everyday English, but in reference to the output of a computer program rather than a human being's use of language. A program that is run in verbose mode will 'talk more', i.e. give more detailed printed output.</p>
-<p>Many command line command accept additional options in the form of a word or single letter preceded by a dash (<code>-</code>). The option for running pytest in verbose mode is <code>-v</code>. The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span> pytest <span class="op">-</span>v</code></pre></div>
+<p>The option for running pytest in verbose mode is <code>--verbose</code>, or in abbreviated form <code>-v</code> (look back at <a href="command_line.html#options">the previous lesson</a> if you need to remind yourself about command line options). The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span> pytest <span class="op">--</span>verbose</code></pre></div>
 <pre><code>============================= test session starts ==============================
 platform linux -- Python 3.6.9, pytest-5.3.2, py-1.8.1, pluggy-0.13.1 -- /home/lt/GitHub/introduction-to-programming/venv/bin/python3
 cachedir: .pytest_cache
@@ -337,7 +337,7 @@ E         + quaint fartz
 E         ?  +
 
 test_spoonerisms.py:43: AssertionError
-========================= 1 failed, 7 passed in 0.04s ==========================</code></pre>
+========================= 1 failed, 7 passed in 0.05s ==========================</code></pre>
 <h4 id="testing-exceptions">Testing exceptions</h4>
 <p>The <a href="glossary.html#docstring">docstring</a> for our <code>spoonerize()</code> function mentions an <a href="glossary.html#exception">exception</a> (see <a href="../examples/spoonerisms.py#L44">here</a>). If we have promised our users that certain situations will result in an exception, then we should also test this. But testing the occurrence of an exception presents a slight problem. We would like our test to continue as normal if the expected exception is raised, but we would like it to raise an exception otherwise, which is the opposite of what exceptions normally do.</p>
 <p>pytest provides a function called <code>raises()</code> to handle this kind of test. This function works together with the Python <code>with</code> <a href="glossary.html#keyword">keyword</a> to create a context in which to test for the occurrence of an exception. Our program will not be interrupted if the expected exception is raised within the <code>raises()</code> context, but an exception will be raised if we reach the end of the context and the expected exception has <em>not</em> been raised.</p>

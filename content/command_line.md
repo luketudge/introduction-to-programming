@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Basic-commands" data-toc-modified-id="Basic-commands-1">Basic commands</a></span><ul class="toc-item"><li><span><a href="#cd" data-toc-modified-id="cd-1.1">cd</a></span></li><li><span><a href="#ls" data-toc-modified-id="ls-1.2">ls</a></span></li><li><span><a href="#python" data-toc-modified-id="python-1.3">python</a></span></li></ul></li><li><span><a href="#Spyder" data-toc-modified-id="Spyder-2">Spyder</a></span><ul class="toc-item"><li><span><a href="#IPython" data-toc-modified-id="IPython-2.1">IPython</a></span><ul class="toc-item"><li><span><a href="#Magic" data-toc-modified-id="Magic-2.1.1">Magic</a></span></li></ul></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Basic-commands" data-toc-modified-id="Basic-commands-1">Basic commands</a></span><ul class="toc-item"><li><span><a href="#cd" data-toc-modified-id="cd-1.1">cd</a></span></li><li><span><a href="#ls" data-toc-modified-id="ls-1.2">ls</a></span></li><li><span><a href="#echo" data-toc-modified-id="echo-1.3">echo</a></span></li><li><span><a href="#python" data-toc-modified-id="python-1.4">python</a></span></li><li><span><a href="#Options" data-toc-modified-id="Options-1.5">Options</a></span></li></ul></li><li><span><a href="#Spyder" data-toc-modified-id="Spyder-2">Spyder</a></span><ul class="toc-item"><li><span><a href="#IPython" data-toc-modified-id="IPython-2.1">IPython</a></span><ul class="toc-item"><li><span><a href="#Magic" data-toc-modified-id="Magic-2.1.1">Magic</a></span></li></ul></li></ul></li></ul></div>
 
 # The command line
 
@@ -17,7 +17,7 @@ Unfortunately, different operating systems understand different commands. Window
 
 ## Basic commands
 
-Let's take a look at a very few of the most basic commands that we can use in the command line. All of these are compatible with the major operating systems. If you would like to try them out, open up your command line app as described above.
+Let's take a look at a very few of the most basic commands that we can use in the command line. Unless otherwise stated, all of these are compatible with the major operating systems. If you would like to try them out, open up your command line app as described above.
 
 ### cd
 
@@ -35,7 +35,17 @@ To move 'up' one directory in your computer's file system, use `cd` followed by 
 
 ### ls
 
-To see the contents of the current directory, use the command `ls`. Only Linux and macOS recognize the `ls` command. On Windows, you will need to use `dir` instead.
+To see the contents of the current directory, use the command `ls` (an abbreviation of 'list').
+
+![](images/ls.png)
+
+**Windows**: Only Linux and macOS recognize the `ls` command. On Windows, you will need to use `dir` instead.
+
+### echo
+
+The command line's equivalent of Python's `print()` function is called `echo`. The command line will 'echo back' to us anything that we enter after the `echo` command:
+
+![](images/echo.png)
 
 ### python
 
@@ -49,6 +59,14 @@ Beware that if you just type `python`, without specifying a file to run, then yo
 
 ![](images/exit.png)
 
+### Options
+
+Just as Python functions may accept certain optional [arguments](extras/glossary.md#argument) that vary their behavior, so too do many programs that are run from the command line. In the context of the command line, these are sometimes called 'options' or 'flags'. In command line [syntax](extras/glossary.md#syntax), options are preceded by a double dash `--` (or sometimes a single dash `-` for abbreviated, single letter options), and follow the main command, separated by a space.
+
+For example, if we want to ask our Python [interpreter](extras/glossary.md#interpreter) program what version of Python it is, we can run it with the `--version` option. This prints out our Python version rather than launching Python:
+
+![](images/options.png)
+
 ## Spyder
 
 The Spyder console provides a means of sending commands to the operating system. This is quicker and simpler than finding your command line app and then using `cd` to navigate to the directory that you want to work in. If you can make the following example work from Spyder, I recommend using this method of interacting with the command line, as it will save you switching between two different windows.
@@ -57,19 +75,10 @@ In the Spyder console, if you place an exclamation mark character (`!`) at the b
 
 
 ```python
-! dir
+! echo hello
 ```
 
-    command_line.md	 functions.md	  sequences_mappings.md
-    command_line.md		 html		  sequences_mappings.md
-    conditions.md	 images		  standard_library.md
-    conditions.md		 intro.md	  standard_library.md
-    convert_page_formats.sh  intro.md	  testing.md
-    examples		 iteration.md  testing.md
-    extras			 iteration.md	  types.md
-    files.md		 modules.md	  types.md
-    files.md		 modules.md
-    functions.md		 README.md
+    hello
 
 
 There are a couple of important things to note about this way of using the Spyder console. First of all, don't confuse Python commands with commands for the operating system. The operating system does not recognize Python commands, so if you accidentally prefix Python commands with `!`, you will see an error message (the exact content of which will depend on your operating system).
@@ -124,16 +133,16 @@ There are also a few commands that are special to IPython itself, and are not pa
 %ls
 ```
 
-    command_line.md        functions.md     sequences_mappings.md
-    command_line.md           html/            sequences_mappings.md
-    conditions.md          images/          standard_library.md
-    conditions.md             intro.md      standard_library.md
-    convert_page_formats.sh*  intro.md         testing.md
-    examples/                 iteration.md  testing.md
-    extras/                   iteration.md     types.md
-    files.md               modules.md    types.md
-    files.md                  modules.md
-    functions.md           README.md
+    command_line.md        functions.md     README.md
+    command_line.md           github.md     sequences_mappings.md
+    conditions.md          html/            sequences_mappings.md
+    conditions.md             images/          standard_library.md
+    convert_page_formats.sh*  intro.md      standard_library.md
+    examples/                 intro.md         testing.md
+    extras/                   iteration.md  testing.md
+    files.md               iteration.md     types.md
+    files.md                  modules.md    types.md
+    functions.md           modules.md
 
 
 You can also use `%ls` together with the name of a subdirectory to see its contents.
@@ -166,6 +175,6 @@ You can also use `%ls` together with the name of a subdirectory to see its conte
     Once deleted, variables cannot be recovered. Proceed (y/[n])? y
 
 
-Again: Remember that these special commands are only for use in the Spyder console. Don't write them into an actual Python program. They won't work there.
+Again: Remember that these special commands are only for use in the Spyder console. Don't write them into an actual Python program. They won't work there. Note also that in contrast to operating system commands (prefaced with `! `), magic commands (prefaced with `%`) are available on any operating system.
 
-That's all we need to know about the command line for now. In some of the lessons that follow, we will occasionally use the command line to accomplish tasks outside of Python. You can recognize these cases because they will be prefixed with an exclamation mark.
+That's all we need to know about the command line for now. In some of the lessons that follow, we will occasionally use the command line to accomplish tasks outside of Python. Watch out for the exclamation mark before an example command; this indicates that we are no longer working with Python.

@@ -58,7 +58,7 @@ A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in 
 
 ## bug
 
-A bug is an aspect of a program that does not function as desired. For example, a [function](#function) might give the wrong [return value](#return), or part of the program might unexpectedly raise an [exception](#exception).
+A bug is an aspect of a program that does not work as desired. For example, a [function](#function) might give the wrong [return value](#return), or part of the program might unexpectedly raise an [exception](#exception).
 
 ## builtin
 
@@ -299,7 +299,7 @@ A keyword (sometimes also referred to as 'reserved word') is a word that has a s
 
 ## list
 
-A tuple is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
+A list is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
 
 ```python
 shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
@@ -522,6 +522,10 @@ Tuples are very similar to [lists](#list), another kind of sequence. The differe
 
 Computer programs can handle information in different forms. For example, some pieces of information may be in the form of text, some may be numbers, and some may be more complex things such as a link to a file on the computer's disk, or a connection to a website. When we create or refer to information in our Python programs, Python needs to be able to know what type of information it is. Python has various [syntactical](#syntax) rules for determining what type a new variable is when we create one in our program. For example, quote marks `''` indicate a [string](#string) (i.e. text).
 
+## URL
+
+A 'Uniform Resource Locator' is a piece of text that indicates how a 'resource' (e.g. some data or computing service on the internet) can be accessed. More commonly we refer to a URL as a 'web address'. An example URL is `https://en.wikipedia.org/wiki/Python_(programming_language)`.
+
 ## value
 
 The contents stored in a [variable](#variable) are often called its 'value'. For example, `name` might be a [string](#string) variable whose value is `'Mildred'`, and `height` might be a [float](#float) variable whose value is `1.96`.
@@ -534,6 +538,10 @@ A variable is a name that stores some information for the duration of our progra
 x = 2
 print(x ** 0.5)
 ```
+
+## versioning
+
+'Versioning', or more often 'version control' is the process of tracking the changes we make in successive versions of a computer program. This is important because we may sometimes need to check whether we and our colleagues are working on the same version of a program, or we may need to go back to an earlier version when we discover that our latest fabulous improvements have in fact completely broken everything.
 
 ## whitespace
 
