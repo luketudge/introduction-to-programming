@@ -19,7 +19,9 @@ for FILENAME in *.ipynb; do
   sed --in-place "s/\.ipynb/.md/g" $NEWFILENAME
 
   # Remove non-printable escape sequences.
-  sed --in-place "s/\[^m]*m//g" $NEWFILENAME
+  for TERMINATOR in m K; do
+    sed --in-place "s/\[^$TERMINATOR]*$TERMINATOR//g" $NEWFILENAME
+  done
 
 done
 

@@ -94,7 +94,7 @@ Now look for the button marked 'Clone or download'. It looks like this:
 
 You can use this button to just download all the project files as a *zip* archive file in the normal way. But don't do this. If we just do this, we will get the files, but git won't recognize them as something to track. Instead, copy the URL that is shown inside a text box when you click on the button. It will look like this:
 
-> `https://github.com/luketudge/example.git`
+`https://github.com/luketudge/example_repo.git`
 
 Note that it has the file extension '*.git*'. This indicates that we are downloading something that git will recognize and will track changes to.
 
@@ -106,10 +106,10 @@ Use this URL with git's `clone` command to clone the repository to your computer
 ```
 
     Cloning into 'example_repo'...
-    remote: Enumerating objects: 10, done.[K
-    remote: Counting objects: 100% (10/10), done.[K
-    remote: Compressing objects: 100% (8/8), done.[K
-    remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0[K
+    remote: Enumerating objects: 10, done.
+    remote: Counting objects: 100% (10/10), done.
+    remote: Compressing objects: 100% (8/8), done.
+    remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
     Unpacking objects: 100% (10/10), done.
 
 
@@ -160,10 +160,10 @@ Sometimes you may wish to clone a repository into a directory with a different n
 ```
 
     Cloning into 'my_fabulous_repo'...
-    remote: Enumerating objects: 10, done.[K
-    remote: Counting objects: 100% (10/10), done.[K
-    remote: Compressing objects: 100% (8/8), done.[K
-    remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0[K
+    remote: Enumerating objects: 10, done.
+    remote: Counting objects: 100% (10/10), done.
+    remote: Compressing objects: 100% (8/8), done.
+    remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
     Unpacking objects: 100% (10/10), done.
 
 

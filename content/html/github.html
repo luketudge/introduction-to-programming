@@ -126,17 +126,15 @@ user.email=luketudge@gmail.com</code></pre>
 
 </div>
 <p>You can use this button to just download all the project files as a <em>zip</em> archive file in the normal way. But don't do this. If we just do this, we will get the files, but git won't recognize them as something to track. Instead, copy the URL that is shown inside a text box when you click on the button. It will look like this:</p>
-<blockquote>
-<p><code>https://github.com/luketudge/example.git</code></p>
-</blockquote>
+<p><code>https://github.com/luketudge/example_repo.git</code></p>
 <p>Note that it has the file extension '<em>.git</em>'. This indicates that we are downloading something that git will recognize and will track changes to.</p>
 <p>Use this URL with git's <code>clone</code> command to clone the repository to your computer:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span> git clone https:<span class="op">//</span>github.com<span class="op">/</span>luketudge<span class="op">/</span>example_repo.git</code></pre></div>
 <pre><code>Cloning into 'example_repo'...
-remote: Enumerating objects: 10, done.[K
-remote: Counting objects: 100% (10/10), done.[K
-remote: Compressing objects: 100% (8/8), done.[K
-remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0[K
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (10/10), done.</code></pre>
 <p>If you go to your file explorer, you should now see a new directory called 'example_repo' inside whatever working directory you were in when you ran the command above. (If you are not sure what directory you are in, remember that you can use Spyder's <code>%pwd</code> command to check.)</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">%</span>pwd</code></pre></div>
@@ -156,10 +154,10 @@ os.listdir(<span class="st">'example_repo'</span>)</code></pre></div>
 <p>Sometimes you may wish to clone a repository into a directory with a different name, for example if its name conflicts with the name of an existing directory on your computer or if you just don't like its name. You can add the name of the directory to clone <em>into</em> at the end of the <code>git clone</code> command:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span> git clone https:<span class="op">//</span>github.com<span class="op">/</span>luketudge<span class="op">/</span>example_repo.git my_fabulous_repo</code></pre></div>
 <pre><code>Cloning into 'my_fabulous_repo'...
-remote: Enumerating objects: 10, done.[K
-remote: Counting objects: 100% (10/10), done.[K
-remote: Compressing objects: 100% (8/8), done.[K
-remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0[K
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (10/10), done.</code></pre>
 <p>Once we have cloned a repository to our computer, git is aware of it, and will track changes that we make to the files. We can also use git to update our copies of the files if the online repository changes.</p>
 <p>We will learn how to do these things in a moment, but for now you can delete the directories that you have just created if you tried out the example <code>git clone</code> commands above. A directory containing a git project can safely be deleted in the normal way. Just go to your file explorer and delete them. git then forgets about them.</p>
