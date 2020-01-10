@@ -36,7 +36,7 @@ So to follow along with the examples in this lesson, you will need both an onlin
 Various data science or software development-related tools make use of git. So it is possible that you have already indirectly installed git on your computer in the process of installing some other program. To check, try `git` as a command line command at the Spyder console (don't forget the `!`). For example, you can ask git what version it is:
 
 
-```python
+```
 ! git --version
 ```
 
@@ -68,7 +68,7 @@ Make sure that the username and email that you enter are the same ones you used 
 You can check that these commands have taken effect correctly using the `--list` option for `git config` to list your full global configuration:
 
 
-```python
+```
 ! git config --global --list
 ```
 
@@ -101,7 +101,7 @@ Note that it has the file extension '*.git*'. This indicates that we are downloa
 Use this URL with git's `clone` command to clone the repository to your computer:
 
 
-```python
+```
 ! git clone https://github.com/luketudge/example_repo.git
 ```
 
@@ -116,7 +116,7 @@ Use this URL with git's `clone` command to clone the repository to your computer
 If you go to your file explorer, you should now see a new directory called 'example_repo' inside whatever working directory you were in when you ran the command above. (If you are not sure what directory you are in, remember that you can use Spyder's `%pwd` command to check.)
 
 
-```python
+```
 %pwd
 ```
 
@@ -155,7 +155,7 @@ Alternatively, if you would like to be able to see hidden files in general on yo
 Sometimes you may wish to clone a repository into a directory with a different name, for example if its name conflicts with the name of an existing directory on your computer or if you just don't like its name. You can add the name of the directory to clone *into* at the end of the `git clone` command:
 
 
-```python
+```
 ! git clone https://github.com/luketudge/example_repo.git my_fabulous_repo
 ```
 

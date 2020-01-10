@@ -170,7 +170,7 @@ The shortcut *Ctrl* + *l* will clear away any output that is currently in the co
 Likewise, you can also erase the console's 'memory' of previous commands. This is a more useful feature. For example, if you would like to test out something completely new, you do not want to accidentally refer to variables that you have defined in previous commands while you were testing out something else. To 'reset' the console type in the command `%reset`. You will be prompted to confirm that you really want to delete all the variables you have defined so far:
 
 
-```python
+```
 %reset
 ```
 
