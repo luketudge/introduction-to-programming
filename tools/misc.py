@@ -16,7 +16,7 @@ def strip_extension(filename):
     return filename.rsplit('.', 1)[0]
 
 
-def zip_all(destination, path='.', patterns=('**',)):
+def zip_all(destination, path='.', patterns=['**']):
     """Put multiple files into a zip archive.
 
     Arguments:

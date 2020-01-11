@@ -105,7 +105,7 @@ def ipynb_to_markdown(filename_in, filename_out=None):
     write(content, filename_out)
 
 
-def ipynb_to_html(filename_in, filename_out=None):
+def ipynb_to_html(filename_in, filename_out=None, image_paths=['.']):
     """Convert ipynb file to html file.
     """
 
@@ -121,5 +121,6 @@ def ipynb_to_html(filename_in, filename_out=None):
     content = html.make_soup(content)
     content = html.replace_ipynb(content)
     content = html.flatten_links(content)
+    content = html.embed_images(content, paths=image_paths)
 
     write(str(content), filename_out)
