@@ -90,6 +90,8 @@ def embed_images(soup, paths=['.']):
             except FileNotFoundError:
                 pass
         
-        link['src'] = 'data:image/{};base64,{}'.format(fileformat, base64.b64encode(data))
+        embedded_image = base64.b64encode(data).decode()
+        
+        link['src'] = 'data:image/{};base64,{}'.format(fileformat, embedded_image)
 
     return soup
