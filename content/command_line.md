@@ -74,7 +74,7 @@ The Spyder console provides a means of sending commands to the operating system.
 In the Spyder console, if you place an exclamation mark character (`!`) at the beginning of a command, Spyder will send that command to the operating system's command line, and not to Python. Here is an example:
 
 
-```python
+```
 ! echo hello
 ```
 
@@ -84,7 +84,7 @@ In the Spyder console, if you place an exclamation mark character (`!`) at the b
 There are a couple of important things to note about this way of using the Spyder console. First of all, don't confuse Python commands with commands for the operating system. The operating system does not recognize Python commands, so if you accidentally prefix Python commands with `!`, you will see an error message (the exact content of which will depend on your operating system).
 
 
-```python
+```
 ! print('Hello.')
 ```
 
@@ -115,7 +115,7 @@ There are also a few commands that are special to IPython itself, and are not pa
 * `%pwd` (an abbreviation of **p**rint **w**orking **d**irectory) will tell you what [directory](extras/glossary.md#directory) you are currently working in.
 
 
-```python
+```
 %pwd
 ```
 
@@ -129,26 +129,26 @@ There are also a few commands that are special to IPython itself, and are not pa
 * `%ls` (an abbreviation of 'list') lists the contents of your current working directory. You can use this to check that you really have the files you want in there.
 
 
-```python
+```
 %ls
 ```
 
-    command_line.md        functions.md     README.md
-    command_line.md           github.md     sequences_mappings.md
-    conditions.md          html/            sequences_mappings.md
-    conditions.md             images/          standard_library.md
-    convert_page_formats.sh*  intro.md      standard_library.md
-    examples/                 intro.md         testing.md
-    extras/                   iteration.md  testing.md
-    files.md               iteration.md     types.md
-    files.md                  modules.md    types.md
-    functions.md           modules.md
+    command_line.ipynb  github.ipynb     README.md
+    command_line.md     github.md        sequences_mappings.ipynb
+    conditions.ipynb    html/            sequences_mappings.md
+    conditions.md       images/          standard_library.ipynb
+    examples/           intro.ipynb      standard_library.md
+    extras/             intro.md         testing.ipynb
+    files.ipynb         iteration.ipynb  testing.md
+    files.md            iteration.md     types.ipynb
+    functions.ipynb     modules.ipynb    types.md
+    functions.md        modules.md
 
 
 You can also use `%ls` together with the name of a subdirectory to see its contents.
 
 
-```python
+```
 %ls examples
 ```
 
@@ -162,13 +162,13 @@ You can also use `%ls` together with the name of a subdirectory to see its conte
     guess_the_animal.py*   spoonerisms.py
     hoff.py                test_math_is_working_as_normal.py
     ids.py                 test_spoonerisms.py
-    initials.py            zip_all.sh*
+    initials.py
 
 
 * `%reset` deletes any variables that you have created in the console so far (first asking you to confirm that you want to do this).
 
 
-```python
+```
 %reset
 ```
 

@@ -8,6 +8,7 @@ nltk
 numpy
 pandas
 pytest
+regex
 requests
 selenium
 sklearn

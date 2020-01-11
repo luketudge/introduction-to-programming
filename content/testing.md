@@ -236,7 +236,7 @@ pytest is typically run from the operating system's [command line](command_line.
 For example:
 
 
-```python
+```
 ! pytest test_spoonerisms.py
 ```
 
@@ -275,7 +275,7 @@ pytest can even be used to run tests from more than one test file. If we do not 
 Here for demonstration purposes I have just included a second test file [test_math_is_working_as_normal.py](examples/test_math_is_working_as_normal.py) containing some spurious tests:
 
 
-```python
+```
 ! pytest
 ```
 
@@ -335,7 +335,7 @@ If you would like to see even more information about the tests, you can run pyte
 The option for running pytest in verbose mode is `--verbose`, or in abbreviated form `-v` (look back at [the previous lesson](command_line.md#options) if you need to remind yourself about command line options). The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:
 
 
-```python
+```
 ! pytest --verbose
 ```
 
@@ -369,7 +369,7 @@ The option for running pytest in verbose mode is `--verbose`, or in abbreviated 
     E         ?  +
     
     test_spoonerisms.py:43: AssertionError
-    ========================= 1 failed, 7 passed in 0.05s ==========================
+    ========================= 1 failed, 7 passed in 0.04s ==========================
 
 
 #### Testing exceptions

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo '#### Tests ####'
-pytest -v tests
+pytest --verbose tests
 
 echo '#### Style checks ####'
-flake8 content tests
+flake8 content tests tools

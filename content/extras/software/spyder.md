@@ -1,3 +1,6 @@
+<h1>Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Running-programs" data-toc-modified-id="Running-programs-1">Running programs</a></span></li><li><span><a href="#Default-working-directory" data-toc-modified-id="Default-working-directory-2">Default working directory</a></span></li><li><span><a href="#Variable-explorer" data-toc-modified-id="Variable-explorer-3">Variable explorer</a></span></li></ul></div>
+
 # Spyder configuration
 
 In order to avoid some common difficulties, you should change a few important options within Spyder. Start up Spyder. Go to the **Tools** menu and select **Preferences**. You should change a few of the preferences.

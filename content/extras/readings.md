@@ -1,3 +1,6 @@
+<h1>Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Complete-beginner" data-toc-modified-id="Complete-beginner-1">Complete beginner</a></span></li><li><span><a href="#Beginner" data-toc-modified-id="Beginner-2">Beginner</a></span></li><li><span><a href="#Career-specific" data-toc-modified-id="Career-specific-3">Career-specific</a></span><ul class="toc-item"><li><span><a href="#Data-science" data-toc-modified-id="Data-science-3.1">Data science</a></span></li><li><span><a href="#App-development" data-toc-modified-id="App-development-3.2">App development</a></span></li><li><span><a href="#Linguistics" data-toc-modified-id="Linguistics-3.3">Linguistics</a></span></li><li><span><a href="#Psychology" data-toc-modified-id="Psychology-3.4">Psychology</a></span></li></ul></li></ul></div>
+
 # Readings
 
 Python is a very popular programming language, and there are many, *many* books covering its use for all sorts of things. Here are a few texts that I have found the most useful for teaching.
