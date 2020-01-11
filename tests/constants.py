@@ -11,14 +11,16 @@ TEMP_FILENAME = os.path.join(BASE_PATH, 'temp.zip')
 
 LOCAL_URL = 'file://' + os.path.join(os.path.dirname(BASE_PATH), 'content', 'html', 'index.html')
 
-REMOTE_URL = 'https://github.com/luketudge/introduction-to-programming/'
+REMOTE_URL = 'https://github.com/luketudge/introduction-to-programming/blob/{}/content/'
+
+MAIN_PAGE = 'index.md'
 
 BRANCHES = ['master', 'in-progress']
 
 
 # %% Versions
 
-VERSIONS = [REMOTE_URL + 'tree/' + b + '/content' for b in BRANCHES] + [LOCAL_URL]
+VERSIONS = [REMOTE_URL.format(b) + MAIN_PAGE for b in BRANCHES] + [LOCAL_URL]
 VERSION_IDS = BRANCHES + ['local']
 
 
