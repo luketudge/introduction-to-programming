@@ -72,26 +72,26 @@ def flatten_links(soup):
 
 def embed_images(soup, paths=['.']):
     """Embed linked images.
-    
+
     Arguments:
         soup: bs4.BeautifulSoup of html
         paths: iterable of paths on which to search for image files
     """
-    
+
     for link in soup.find_all('img', src=PATH_TO_IMAGE):
-        
+
         match = PATH_TO_IMAGE.search(link['src'])
         filename = match.group('filename')
         fileformat = match.group('format')
-        
+
         for p in paths:
             try:
                 data = open(os.path.join(p, filename), mode='rb').read()
             except FileNotFoundError:
                 pass
-        
+
         embedded_image = base64.b64encode(data).decode()
-        
+
         link['src'] = 'data:image/{};base64,{}'.format(fileformat, embedded_image)
 
     return soup
