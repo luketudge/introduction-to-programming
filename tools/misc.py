@@ -12,7 +12,7 @@ import zipfile
 def strip_extension(filename):
     """Strip the file extension from a filename.
     """
-    
+
     return filename.rsplit('.', 1)[0]
 
 
