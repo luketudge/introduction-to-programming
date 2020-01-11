@@ -369,7 +369,7 @@ The option for running pytest in verbose mode is `--verbose`, or in abbreviated 
     E         ?  +
     
     test_spoonerisms.py:43: AssertionError
-    ========================= 1 failed, 7 passed in 0.05s ==========================
+    ========================= 1 failed, 7 passed in 0.04s ==========================
 
 
 #### Testing exceptions

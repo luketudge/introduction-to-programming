@@ -10,12 +10,16 @@ Like any other specialists, computer programmers use a lot of arcane vocabulary.
 
 An argument is the input to a [function](#function). When we use a function, we place any arguments that we want to give it in the parentheses following the function name. A function can have no arguments, or just one, or many. In the case of more than one argument, the arguments are separated by commas. For example the `print()` function can have multiple arguments:
 
+
 ```python
 name = 'Mildred'
 middle_initial = 'L'
 surname = 'Bonk'
 print(name, middle_initial, surname)
 ```
+
+    Mildred L Bonk
+
 
 ## assertion
 
@@ -25,6 +29,7 @@ Assertions can be used to make sure that a program is running as expected at a c
 
 There are a few different ways to write assertions in Python, but the simplest is using the `assert` [keyword](#keyword) together with the statement to be checked. For example:
 
+
 ```python
 assert 2 + 2 == 4
 ```
@@ -33,22 +38,9 @@ assert 2 + 2 == 4
 
 If one part of our program generates a piece of information, we may want to store that information and use it in some later part of our program. In this case, we can 'assign' the information into a [variable](#variable). This just means storing something under that variable name. In Python, assignment is done with the equals `=` symbol. Whatever results from the right-hand side is assigned into the variable name on the left-hand side.
 
-For example if we have asked for the user's name using the `input()` function, we can assign the result into a variable called `name`:
-
-```python
-name = input('What is your name? ')
-```
-
 ## attribute
 
-An attribute is like a variable that is 'attached' to another variable, providing some additional information or functionality. For example, file objects have an attribute called `closed`, which stores a [boolean](#boolean) value stating whether the file is closed or not. We can access attributes using a `.`, like this:
-
-```python
-f = open('example.txt', mode='w')
-f.closed
-```
-
-This is the same [syntax](#syntax) as for accessing a [method](#method). Indeed, methods are a kind of attribute.
+An attribute is like a variable that is 'attached' to another variable, providing some additional information or functionality. We can access attributes using a `.`. This is the same [syntax](#syntax) as for accessing a [method](#method). Indeed, methods are a kind of attribute.
 
 ## boolean
 
@@ -84,10 +76,18 @@ A comprehension is a technique for creating multiple values by writing a 'formul
 
 A 'list comprehension' creates the items in a new [list](#list). For example, the formula might apply some Python command `for` every entry `in` some other existing list, and store the result in a new list:
 
+
 ```python
 shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
-shopping_initials = [item[0] for item in shopping]
+[item[0] for item in shopping]
 ```
+
+
+
+
+    ['e', 'b', 'b', 's']
+
+
 
 There are also comprehensions for creating [dictionaries](#dictionary).
 
@@ -99,12 +99,16 @@ In computing, to 'concatenate' means to stick together one after the other. So t
 
 A condition is a [control statement](#control) that ensures that part of our program will run only if a certain statement is true, and optionally what should be run if that statement is false. A condition begins with the [keyword](#keyword) `if`. For example:
 
+
 ```python
 if 2 + 2 == 4:
     print('Math is currently working correctly in this universe.')
 else:
     print('Nothing is forbidden, everything is permitted.')
 ```
+
+    Math is currently working correctly in this universe.
+
 
 ## control
 
@@ -139,15 +143,24 @@ A dictionary (often abbreviated to 'dict') is a [data type](#type) that can stor
 
 The [syntax](#syntax) for creating a dictionary is to place pairs of keys and values inside the 'curly braces' `{}`, separating each key from its associated value with a colon `:` and separating each pair from the next with a comma:
 
+
 ```python
 info = {'name':'Mildred', 'age':22, 'location':'USA'}
 ```
 
 The keys of the dictionary can then be used as [indices](#index) to retrieve the values. For example:
 
+
 ```python
 info['age']
 ```
+
+
+
+
+    22
+
+
 
 ## directory
 
@@ -221,12 +234,16 @@ Python distinguishes among various different kinds of exception. Some of the mos
 
 We can handle exceptions with a [control statement](#control) that instructs Python to 'try' one action, but to carry out a different action if the first action raises an exception. For example:
 
+
 ```python
 try:
     open('melville-moby_dick.txt')
 except FileNotFoundError:
     print('The file is not there.')
 ```
+
+    The file is not there.
+
 
 If an exception is raised and we have not specified in our program what to do about it, then the result is an [error](#error) and our program stops.
 
@@ -240,9 +257,14 @@ A function is a sequence of commands that performs a particular action (or multi
 
 In the example below, we call the `len()` function with the argument `'floccinaucinihilipilification'`, and it returns the value `29` (which we then assign into the variable `word_length`).
 
+
 ```python
 word_length = len('floccinaucinihilipilification')
+print(word_length)
 ```
+
+    29
+
 
 ## IDE
 
@@ -264,10 +286,14 @@ This use of indentation is fairly specific to Python. In most other programming 
 
 An 'index' is the position of a particular item in a [sequence](#sequence), such as in a [list](#list) or a [tuple](#tuple). Python's indexing system begins at 0. So the index of the first item in a sequence is 0, the index of the second item is 1, and so on. We can use indices to refer to an item that is stored in a sequence. The Python [syntax](#syntax) for using an index is to place it in square parentheses `[]` after the name of the variable that stores the sequence. So to print out the third item in a list we can type:
 
+
 ```python
 shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 print(shopping[2])
 ```
+
+    black pudding
+
 
 ## integer
 
@@ -301,6 +327,7 @@ A keyword (sometimes also referred to as 'reserved word') is a word that has a s
 
 A list is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a list is to enclose the values in the sequence inside square parentheses `[]` and separate the values with commas. For example:
 
+
 ```python
 shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 ```
@@ -319,19 +346,21 @@ A loop is a [control statement](#control) that repeats certain lines of a progra
 
 Loops can use the `for` and `in` [keywords](#keyword) to repeat the given actions for every item in an [iterable](#iterable). For example:
 
+
 ```python
 shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
+
 for item in shopping:
     print(item)
 ```
 
-Or they can use the `while` [keyword](#keyword) to repeat the given actions until a particular condition is no longer fulfilled. For example:
+    eggs
+    bacon
+    black pudding
+    sausages
 
-```python
-answer = 'yes'
-while answer == 'yes':
-    answer = input("Do you want to keep typing 'yes'? ")
-```
+
+Or they can use the `while` [keyword](#keyword) to repeat the given actions until a particular condition is no longer fulfilled.
 
 ## mapping
 
@@ -341,10 +370,18 @@ See [dictionary](#dictionary).
 
 A method is a [function](#function) that is defined specially for variables of one data [type](#type). For example, there is a [string](#string) method called `upper()`, which [returns](#return) an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The [syntax](#syntax) for using a method is to access it via the variable that we want to apply it to, by placing a `.` after the name of the variable. For example to get an uppercase version of a string variable using the `upper()` method:
 
+
 ```python
 name = 'Mildred'
-shouty_name = name.upper()
+name.upper()
 ```
+
+
+
+
+    'MILDRED'
+
+
 
 ## module
 
@@ -360,26 +397,56 @@ If a [type](#type) is 'mutable', this means that a [variable](#variable) of that
 
 The list in the following example is changed in-place by the `.reverse()` method:
 
+
 ```python
 shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
 shopping.reverse()
+
+shopping
 ```
+
+
+
+
+    ['sausages', 'black pudding', 'bacon', 'eggs']
+
+
 
 The opposite of 'mutable' is 'immutable'. [Strings](#string), [integers](#integer), [floats](#float), and [tuples](#tuple), for example, are all immutable, since their contents can never be changed unless we overwrite them in a new assignment using `=`.
 
 The string in the following example is not changed by calling its `.upper()` method:
 
+
 ```python
 name = 'Mildred'
 name.upper()
+
+name
 ```
 
+
+
+
+    'Mildred'
+
+
+
 Only here is it changed, because of the re-assignment with `=`:
+
 
 ```python
 name = 'Mildred'
 name = name.upper()
+
+name
 ```
+
+
+
+
+    'MILDRED'
+
+
 
 ('Mutable' [means 'changeable'](https://www.etymonline.com/word/mutable), and has the same origin as 'mutant', as in the *Teenage Mutant Ninja Turtles*.)
 
@@ -443,9 +510,22 @@ When an [exception](#exception) occurs during the running of a program, we say t
 
 We can also deliberately instruct our program to raise an exception, using the `raise` [keyword](#keyword). For example:
 
+
 ```python
 raise ValueError('That is an invalid value.')
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-16-72fb548a5442> in <module>
+    ----> 1 raise ValueError('That is an invalid value.')
+    
+
+    ValueError: That is an invalid value.
+
 
 ## refactor
 
@@ -491,10 +571,19 @@ A slice is a subsection of a [sequence](#sequence). We can get a slice out of a 
 
 For example to get a slice of a list containing entries `1` and `2` (i.e. 'from `1` up to but not including `3`'):
 
+
 ```python
 shopping = ['eggs', 'bacon', 'black pudding', 'sausages']
+
 shopping[1:3]
 ```
+
+
+
+
+    ['bacon', 'black pudding']
+
+
 
 ## string
 
@@ -511,6 +600,7 @@ TDD stands for 'Test-Driven Development', an approach to software development in
 ## tuple
 
 A tuple is a kind of [sequence](#sequence); it can store multiple [values](#value) arranged in order. The [syntax](#syntax) for creating a tuple is simply to separate the values in the sequence using commas (and for clarity, we can and should also place a pair of parentheses around the whole sequence, though this is not always absolutely necessary). For example:
+
 
 ```python
 grades = (5.0, 4.0, 3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7, 1.3, 1.0, 0.9)
@@ -534,10 +624,14 @@ The contents stored in a [variable](#variable) are often called its 'value'. For
 
 A variable is a name that stores some information for the duration of our program. We choose the name ourselves, and [assign](#assignment) into that name whatever information we wish to store. We can then use the variable in subsequent steps of the program. For example:
 
+
 ```python
 x = 2
 print(x ** 0.5)
 ```
+
+    1.4142135623730951
+
 
 ## versioning
 

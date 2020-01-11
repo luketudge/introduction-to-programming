@@ -133,16 +133,16 @@ There are also a few commands that are special to IPython itself, and are not pa
 %ls
 ```
 
-    command_line.ipynb        functions.md     README.md
-    command_line.md           github.ipynb     sequences_mappings.ipynb
-    conditions.ipynb          html/            sequences_mappings.md
-    conditions.md             images/          standard_library.ipynb
-    convert_page_formats.sh*  intro.ipynb      standard_library.md
-    examples/                 intro.md         testing.ipynb
-    extras/                   iteration.ipynb  testing.md
-    files.ipynb               iteration.md     types.ipynb
-    files.md                  modules.ipynb    types.md
-    functions.ipynb           modules.md
+    command_line.ipynb  github.ipynb     README.md
+    command_line.md     github.md        sequences_mappings.ipynb
+    conditions.ipynb    html/            sequences_mappings.md
+    conditions.md       images/          standard_library.ipynb
+    examples/           intro.ipynb      standard_library.md
+    extras/             intro.md         testing.ipynb
+    files.ipynb         iteration.ipynb  testing.md
+    files.md            iteration.md     types.ipynb
+    functions.ipynb     modules.ipynb    types.md
+    functions.md        modules.md
 
 
 You can also use `%ls` together with the name of a subdirectory to see its contents.
@@ -162,7 +162,7 @@ You can also use `%ls` together with the name of a subdirectory to see its conte
     guess_the_animal.py*   spoonerisms.py
     hoff.py                test_math_is_working_as_normal.py
     ids.py                 test_spoonerisms.py
-    initials.py            zip_all.sh*
+    initials.py
 
 
 * `%reset` deletes any variables that you have created in the console so far (first asking you to confirm that you want to do this).
