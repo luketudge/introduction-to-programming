@@ -20,6 +20,12 @@ extras_path = os.path.join(content_path, 'extras')
 examples_path = os.path.join(content_path, 'examples')
 html_path = os.path.join(content_path, 'html')
 
+image_paths = [
+    os.path.join(content_path, 'images'),
+    os.path.join(extras_path, 'images'),
+    os.path.join(extras_path, 'software', 'images'),
+]
+
 print('building from', content_path)
 
 
@@ -50,18 +56,16 @@ ipynb_filenames = (glob.glob(os.path.join(content_path, '*.ipynb')) +
 
 for filename in ipynb_filenames:
 
-    print('converting', filename)
-
     convert.ipynb_to_markdown(filename)
 
-    print('markdown')
+    print('to markdown', filename)
 
     filename_out = misc.strip_extension(os.path.basename(filename)) + '.html'
     filename_out = os.path.join(html_path, filename_out)
 
-    convert.ipynb_to_html(filename, filename_out)
+    convert.ipynb_to_html(filename, filename_out, image_paths=image_paths)
 
-    print('html')
+    print('to html', filename)
 
 
 # %% Create zip file of html pages

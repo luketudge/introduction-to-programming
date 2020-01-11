@@ -3,6 +3,9 @@
 Process html.
 """
 
+import base64
+import os
+
 import bs4
 import regex
 
@@ -25,6 +28,15 @@ IPYNB_FILE_EXTENSION = regex.compile(r'(?<=\.)ipynb',
 # '.html'
 PATH_TO_HTML_FILE = regex.compile(r'^\w[\w\/]*\/(?=\w+\.html)',
                                   flags=regex.V1)
+
+# word character
+# one or more word characters or '/'
+# '/'
+# one or more word characters (file name)
+# '.'
+# one or more word characters (file format)
+PATH_TO_IMAGE = regex.compile(r'^\w[\w\/]*\/(?P<filename>\w+\.(?P<format>\w+))',
+                              flags=regex.V1)
 
 
 # %% Helper functions
@@ -54,5 +66,32 @@ def flatten_links(soup):
 
     for link in soup.find_all(href=PATH_TO_HTML_FILE):
         link['href'] = PATH_TO_HTML_FILE.sub('', link['href'])
+
+    return soup
+
+
+def embed_images(soup, paths=['.']):
+    """Embed linked images.
+
+    Arguments:
+        soup: bs4.BeautifulSoup of html
+        paths: iterable of paths on which to search for image files
+    """
+
+    for link in soup.find_all('img', src=PATH_TO_IMAGE):
+
+        match = PATH_TO_IMAGE.search(link['src'])
+        filename = match.group('filename')
+        fileformat = match.group('format')
+
+        for p in paths:
+            try:
+                data = open(os.path.join(p, filename), mode='rb').read()
+            except FileNotFoundError:
+                pass
+
+        embedded_image = base64.b64encode(data).decode()
+
+        link['src'] = 'data:image/{};base64,{}'.format(fileformat, embedded_image)
 
     return soup
