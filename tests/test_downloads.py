@@ -41,7 +41,7 @@ def get_zip_contents(url):
 @pytest.mark.parametrize('branch', constants.BRANCHES)
 def test_download_examples(branch):
 
-    url = constants.REMOTE_URL.format(branch) + 'examples/intro_prog_examples.zip'
+    url = constants.REMOTE_URL.format(branch) + 'content/examples/intro_prog_examples.zip'
     contents = get_zip_contents(url)
 
     assert set(contents) == set(constants.EXAMPLE_FILES + constants.DATA_FILES)

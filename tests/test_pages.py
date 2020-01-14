@@ -6,7 +6,7 @@ from . import constants
 
 
 @pytest.mark.parametrize('page', constants.TOPIC_PAGES)
-@pytest.mark.parametrize('version', constants.VERSIONS, ids=constants.VERSION_IDS)
+@pytest.mark.parametrize('version', constants.TOPICS_VERSIONS, ids=constants.VERSION_IDS)
 def test_topic_pages(browser, version, page):
 
     # Load the main page.

@@ -9,18 +9,20 @@ BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 TEMP_FILENAME = os.path.join(BASE_PATH, 'temp.zip')
 
-LOCAL_URL = 'file://' + os.path.join(os.path.dirname(BASE_PATH), 'content', 'html', 'index.html')
+LOCAL_URL = 'file://' + os.path.join(os.path.dirname(BASE_PATH), 'content', 'html')
 
-REMOTE_URL = 'https://github.com/luketudge/introduction-to-programming/blob/{}/content/'
+REMOTE_URL = 'https://github.com/luketudge/introduction-to-programming/blob/{}/'
 
-MAIN_PAGE = 'index.md'
+TOPICS_PAGE = 'content/index.md'
 
 BRANCHES = ['master', 'in-progress']
 
 
 # %% Versions
 
-VERSIONS = [REMOTE_URL.format(b) + MAIN_PAGE for b in BRANCHES] + [LOCAL_URL]
+TOPICS_VERSIONS = ([REMOTE_URL.format(b) + TOPICS_PAGE for b in BRANCHES] +
+                   [os.path.join(LOCAL_URL, 'index.html')])
+
 VERSION_IDS = BRANCHES + ['local']
 
 
@@ -38,7 +40,6 @@ TOPIC_PAGES = [
     'Files',
     'The command line',
     'Testing',
-    'GitHub',
 ]
 
 

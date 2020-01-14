@@ -13139,6 +13139,7 @@ div#notebook {
 <li>short explanations of how parts of the program work (where this is not otherwise obvious)</li>
 <li>reminders to ourselves and collaborators of problems or parts of the program that need attention</li>
 </ul>
+<h2 id="commit">commit<a class="anchor-link" href="#commit">¶</a></h2><p>In <a href="#versioning">version control</a>, 'committing' changes to a project means confirming those changes as the next new part of the project. Used as a noun, a 'commit' refers to all the changes that were made when committing.</p>
 <h2 id="comprehension">comprehension<a class="anchor-link" href="#comprehension">¶</a></h2><p>A comprehension is a technique for creating multiple values by writing a 'formula' that generates those values, instead of writing them all out one by one. The <a href="#syntax">syntax</a> for a comprehension uses the <a href="#keyword">keywords</a> <code>for</code> and <code>in</code>.</p>
 <p>A 'list comprehension' creates the items in a new <a href="#list">list</a>. For example, the formula might apply some Python command <code>for</code> every entry <code>in</code> some other existing list, and store the result in a new list:</p>
 </div>
@@ -13260,6 +13261,7 @@ Sherlock,39,GB</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="diff">diff<a class="anchor-link" href="#diff">¶</a></h2><p>'diff' is just an abbreviation of 'difference', but in the terminology of <a href="#versioning">version control</a>, i refers to the difference between one version of a file and the next version. When working on a programming project and making changes, it is a good idea to review the 'diffs' that our changes have produced before we <a href="#commit">commit</a> those changes to the version history of the project.</p>
 <h2 id="directory">directory<a class="anchor-link" href="#directory">¶</a></h2><p>Another term for a folder in a computer's file system.</p>
 <h2 id="docstring">docstring<a class="anchor-link" href="#docstring">¶</a></h2><p>A docstring is a <a href="#string">string</a> (i.e. a piece of text) that provides some human-readable information about the workings of our program. We can write docstrings into our programs o help the users of our programs understand what the program does and how they should use it. We indicate a docstring in our program by enclosing it in 'triple quotes' (<code>""" """</code>). A docstring at the top of a <em>.py</em> file provides information about the whole file, and a docstring underneath the definition of a <a href="#function">function</a> provides information about that function.</p>
 <h2 id="DRY">DRY<a class="anchor-link" href="#DRY">¶</a></h2><p>'Don't Repeat Yourself' is a principle that can help with developing flexible programs that can more easily be extended, or can more easily be fixed when mistakes are discovered. A feature of a program that is repeated in many places will need to be found and changed in many places if you decide it must be changed. This opens up a lot of scope for mistakes.</p>
@@ -13359,6 +13361,7 @@ SyntaxError: invalid syntax</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="html">html<a class="anchor-link" href="#html">¶</a></h2><p>Hypertext markup language is the main <a href="#markup">markup language</a> in which web pages are written. html works by enclosing text inside 'tags' that instruct the web browser to display that text in a particular way, for example by coloring it, turning it into a clickable link, etc.</p>
 <h2 id="IDE">IDE<a class="anchor-link" href="#IDE">¶</a></h2><p>An Integrated Development Environment (or IDE) is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for running the program, checking its contents for mistakes, searching for help, etc. <a href="https://www.spyder-ide.org/">Spyder</a> is the Python IDE that we use in this class.</p>
 <h2 id="import">import<a class="anchor-link" href="#import">¶</a></h2><p>The contents of a <a href="#module">module</a> contained in one file can be 'brought in' to the current program file using the Python <a href="#keyword">keyword</a> <code>import</code>. This is known as 'importing' the module, in the same sense as importing foreign goods into a country.</p>
 <p>Once imported, the contents of a module are available under the module's <a href="#namespace">namespace</a>.</p>
@@ -13460,6 +13463,7 @@ sausages
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Or they can use the <code>while</code> <a href="#keyword">keyword</a> to repeat the given actions until a particular condition is no longer fulfilled.</p>
 <h2 id="mapping">mapping<a class="anchor-link" href="#mapping">¶</a></h2><p>See <a href="#dictionary">dictionary</a>.</p>
+<h2 id="markup">markup<a class="anchor-link" href="#markup">¶</a></h2><p>A 'markup language' is a programming language that adds extra combinations of symbols to normal text, in order to instruct a computer program to display that text in a certain way. For example, the markup language <a href="#html">html</a> tells a web browser how to display the text of a webpage.</p>
 <h2 id="method">method<a class="anchor-link" href="#method">¶</a></h2><p>A method is a <a href="#function">function</a> that is defined specially for variables of one data <a href="#type">type</a>. For example, there is a <a href="#string">string</a> method called <code>upper()</code>, which <a href="#return">returns</a> an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The <a href="#syntax">syntax</a> for using a method is to access it via the variable that we want to apply it to, by placing a <code>.</code> after the name of the variable. For example to get an uppercase version of a string variable using the <code>upper()</code> method:</p>
 </div>
 </div>
@@ -13606,6 +13610,7 @@ sausages
 <p>Windows uses the backslash <code>\</code> as the separator and starts with a letter identifying the drive on which the file is located. For example:</p>
 <pre><code>C:\Users\Mildred\Documents\my_program.py</code></pre>
 <p>Paths can be 'absolute', which means that they describe the full path to a file starting all the way back from the base of the directory system (sometimes called the 'root' directory). Or they can be 'relative', which means that they describe the path to a file starting from some other directory than the root directory, usually the directory that we are currently working in.</p>
+<h2 id="push">push<a class="anchor-link" href="#push">¶</a></h2><p>In <a href="#versioning">version control</a>, sending changes from your computer's copy of a <a href="#repository">repository</a> to another copy (for example one stored online) is termed 'pushing' the changes to the other repository.</p>
 <h2 id="raise">raise<a class="anchor-link" href="#raise">¶</a></h2><p>When an <a href="#exception">exception</a> occurs during the running of a program, we say that the program has 'raised an exception'. (See the entry on <a href="#exception">exceptions</a> for more details.) This is similar to the use of the word 'raise' in English in phrases like 'to raise an issue'.</p>
 <p>We can also deliberately instruct our program to raise an exception, using the <code>raise</code> <a href="#keyword">keyword</a>. For example:</p>
 </div>
@@ -13641,6 +13646,7 @@ sausages
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="readme">readme<a class="anchor-link" href="#readme">¶</a></h2><p>A 'readme' file is a file containing some explanatory text about how to use a program, how it works, etc. This file is the starting point for someone who is looking at the files of a program and wondering what to do with them.</p>
 <h2 id="refactor">refactor<a class="anchor-link" href="#refactor">¶</a></h2><p>Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Reorganizing a program without changing any of its behavior is termed 'refactoring' the program.</p>
 <h2 id="regression">regression<a class="anchor-link" href="#regression">¶</a></h2><p>A situation in which a change to one part of a program unexpectedly breaks other aspects of the program.</p>
 <h2 id="repository">repository<a class="anchor-link" href="#repository">¶</a></h2><p>A repository (sometimes abbreviated to 'repo') is a place where the various files constituting a computer program are stored, usually online. People who want to install a program can fetch the current version of the program from its repository.</p>

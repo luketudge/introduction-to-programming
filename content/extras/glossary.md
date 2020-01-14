@@ -70,6 +70,10 @@ A comment is a human-language piece of text that we insert into our Python progr
 * short explanations of how parts of the program work (where this is not otherwise obvious)
 * reminders to ourselves and collaborators of problems or parts of the program that need attention
 
+## commit
+
+In [version control](#versioning), 'committing' changes to a project means confirming those changes as the next new part of the project. Used as a noun, a 'commit' refers to all the changes that were made when committing.
+
 ## comprehension
 
 A comprehension is a technique for creating multiple values by writing a 'formula' that generates those values, instead of writing them all out one by one. The [syntax](#syntax) for a comprehension uses the [keywords](#keyword) `for` and `in`.
@@ -161,6 +165,10 @@ info['age']
     22
 
 
+
+## diff
+
+'diff' is just an abbreviation of 'difference', but in the terminology of [version control](#versioning), i refers to the difference between one version of a file and the next version. When working on a programming project and making changes, it is a good idea to review the 'diffs' that our changes have produced before we [commit](#commit) those changes to the version history of the project.
 
 ## directory
 
@@ -266,6 +274,10 @@ print(word_length)
     29
 
 
+## html
+
+Hypertext markup language is the main [markup language](#markup) in which web pages are written. html works by enclosing text inside 'tags' that instruct the web browser to display that text in a particular way, for example by coloring it, turning it into a clickable link, etc.
+
 ## IDE
 
 An Integrated Development Environment (or IDE) is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for running the program, checking its contents for mistakes, searching for help, etc. [Spyder](https://www.spyder-ide.org/) is the Python IDE that we use in this class.
@@ -365,6 +377,10 @@ Or they can use the `while` [keyword](#keyword) to repeat the given actions unti
 ## mapping
 
 See [dictionary](#dictionary).
+
+## markup
+
+A 'markup language' is a programming language that adds extra combinations of symbols to normal text, in order to instruct a computer program to display that text in a certain way. For example, the markup language [html](#html) tells a web browser how to display the text of a webpage.
 
 ## method
 
@@ -504,6 +520,10 @@ C:\Users\Mildred\Documents\my_program.py
 
 Paths can be 'absolute', which means that they describe the full path to a file starting all the way back from the base of the directory system (sometimes called the 'root' directory). Or they can be 'relative', which means that they describe the path to a file starting from some other directory than the root directory, usually the directory that we are currently working in.
 
+## push
+
+In [version control](#versioning), sending changes from your computer's copy of a [repository](#repository) to another copy (for example one stored online) is termed 'pushing' the changes to the other repository.
+
 ## raise
 
 When an [exception](#exception) occurs during the running of a program, we say that the program has 'raised an exception'. (See the entry on [exceptions](#exception) for more details.) This is similar to the use of the word 'raise' in English in phrases like 'to raise an issue'.
@@ -526,6 +546,10 @@ raise ValueError('That is an invalid value.')
 
     ValueError: That is an invalid value.
 
+
+## readme
+
+A 'readme' file is a file containing some explanatory text about how to use a program, how it works, etc. This file is the starting point for someone who is looking at the files of a program and wondering what to do with them.
 
 ## refactor
 
