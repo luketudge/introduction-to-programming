@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Essentials" data-toc-modified-id="Essentials-1">Essentials</a></span><ul class="toc-item"><li><span><a href="#Python-3" data-toc-modified-id="Python-3-1.1">Python 3</a></span></li><li><span><a href="#Spyder" data-toc-modified-id="Spyder-1.2">Spyder</a></span></li></ul></li><li><span><a href="#Alternatives" data-toc-modified-id="Alternatives-2">Alternatives</a></span></li><li><span><a href="#Extras" data-toc-modified-id="Extras-3">Extras</a></span><ul class="toc-item"><li><span><a href="#GitHub" data-toc-modified-id="GitHub-3.1">GitHub</a></span><ul class="toc-item"><li><span><a href="#git" data-toc-modified-id="git-3.1.1">git</a></span><ul class="toc-item"><li><span><a href="#Windows" data-toc-modified-id="Windows-3.1.1.1">Windows</a></span></li><li><span><a href="#macOS" data-toc-modified-id="macOS-3.1.1.2">macOS</a></span></li><li><span><a href="#Linux" data-toc-modified-id="Linux-3.1.1.3">Linux</a></span></li></ul></li><li><span><a href="#Atom" data-toc-modified-id="Atom-3.1.2">Atom</a></span></li></ul></li><li><span><a href="#Database-browser" data-toc-modified-id="Database-browser-3.2">Database browser</a></span></li><li><span><a href="#Psychopy" data-toc-modified-id="Psychopy-3.3">Psychopy</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Essentials" data-toc-modified-id="Essentials-1">Essentials</a></span><ul class="toc-item"><li><span><a href="#Python-3" data-toc-modified-id="Python-3-1.1">Python 3</a></span></li><li><span><a href="#Spyder" data-toc-modified-id="Spyder-1.2">Spyder</a></span></li></ul></li><li><span><a href="#Alternatives" data-toc-modified-id="Alternatives-2">Alternatives</a></span></li><li><span><a href="#Extras" data-toc-modified-id="Extras-3">Extras</a></span><ul class="toc-item"><li><span><a href="#GitHub" data-toc-modified-id="GitHub-3.1">GitHub</a></span><ul class="toc-item"><li><span><a href="#Atom" data-toc-modified-id="Atom-3.1.1">Atom</a></span></li><li><span><a href="#git" data-toc-modified-id="git-3.1.2">git</a></span><ul class="toc-item"><li><span><a href="#Windows" data-toc-modified-id="Windows-3.1.2.1">Windows</a></span></li><li><span><a href="#macOS" data-toc-modified-id="macOS-3.1.2.2">macOS</a></span></li><li><span><a href="#Linux" data-toc-modified-id="Linux-3.1.2.3">Linux</a></span></li></ul></li></ul></li><li><span><a href="#Database-browser" data-toc-modified-id="Database-browser-3.2">Database browser</a></span></li><li><span><a href="#Psychopy" data-toc-modified-id="Psychopy-3.3">Psychopy</a></span></li></ul></li></ul></div>
 
 # Software
 
@@ -43,13 +43,17 @@ GitHub is a platform that allows you to store and publish computer programs. It 
 
 You can interact with GitHub directly in your web browser, and this is the simplest option if you would just like to get started and try it out. If you want to go further and follow all the examples, then you should also download some software that allows you to interact with GitHub from your computer.
 
+#### Atom
+
+Atom is a text editor produced by the developers of GitHub. Among many other things, it allows you to edit text files (for example Python programs) and send the changes straight to GitHub. You can download it [here](https://flight-manual.atom.io/getting-started/sections/installing-atom/).
+
 #### git
 
 The program that GitHub works with is called 'git'. To follow all of the examples and to interact with GitHub from your desktop, you will need git. The steps for installation vary slightly depending on your operating system:
 
 ##### Windows
 
-You should first have installed Anaconda as described above. Then search in your start menu for an app called *Anaconda prompt*. This will open a command line for Anaconda where you can type in requests to install additional programs. Enter the following command:
+You should first have installed Anaconda as described above. Then search in your start menu for an app called 'Anaconda prompt'. This will open a command line for Anaconda where you can type in requests to install additional programs. Enter the following command:
 
 `conda install git`
 
@@ -57,7 +61,7 @@ You will be prompted to answer `y` to confirm you want to install git. You may a
 
 ##### macOS
 
-You should first have installed Anaconda as described above. Your Mac might already have git installed. Search for an app called *Anaconda prompt*. This will open a command line for Anaconda. Enter the following command:
+You should first have installed Anaconda as described above. Your Mac might already have git installed. Search for an app called 'Terminal'. This will open a command line. Enter the following command:
 
 `git --version`
 
@@ -76,10 +80,6 @@ sudo apt-get install git
 ```
 
 You will be prompted to enter your user password, and you should then see some printouts about git being downloaded and installed.
-
-#### Atom
-
-Atom is a text editor produced by the developers of GitHub. Among many other things, it allows you to edit text files (for example Python programs) and send the changes straight to GitHub. You can download it [here](https://flight-manual.atom.io/getting-started/sections/installing-atom/).
 
 ### Database browser
 
