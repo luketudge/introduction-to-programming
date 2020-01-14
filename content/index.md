@@ -23,7 +23,7 @@ If you prefer, you can view interactive versions of the topic pages on [Binder](
 
 * [The command line](command_line.md)
 * [Testing](testing.md)
-* [GitHub](github.md)
+* GitHub
 * Documentation
 * Style
 
@@ -36,4 +36,3 @@ If you prefer, you can view interactive versions of the topic pages on [Binder](
 * The internet
 * Relational databases
 * Psychopy
-
