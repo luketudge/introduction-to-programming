@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Windows-or-macOS" data-toc-modified-id="Windows-or-macOS-1">Windows or macOS</a></span></li><li><span><a href="#Linux" data-toc-modified-id="Linux-2">Linux</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#macOS" data-toc-modified-id="macOS-1">macOS</a></span></li><li><span><a href="#Windows" data-toc-modified-id="Windows-2">Windows</a></span></li><li><span><a href="#Linux" data-toc-modified-id="Linux-3">Linux</a></span></li></ul></div>
 
 # Psychopy
 
@@ -9,15 +9,27 @@ Because Psychopy needs to take some control over your computer's hardware, it is
 
 Follow the instructions for your operating system.
 
-## Windows or macOS
+## macOS
 
-You should first have installed Anaconda as described in the [general installation notes](install.md).
+Search for an application called the 'Terminal'. This is a command line where you can type in commands for your computer's operating system.
 
-It is probably also a good idea to close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search instead for an application called 'Anaconda Prompt'. This is a place where you can type in commands for Anaconda and for your computer's operating system in general.
+You will need first a piece of software called 'command line tools' for mac. You might already have it, as it is used by various other programs that you might have installed already. You can check by entering the following command in the terminal:
 
-The steps below involve typing text commands into this Anaconda Prompt. When you type the commands in the instructions below, beware that the command prompt is not particularly forgiving. If something is slightly mistyped, the prompt may tell you that a command is not found, or syntax is not correct. Check things carefully if you encounter error messages. This includes the distinction between lowercase and UPPERCASE and the accidental placement of a space in front of the command if you copy and paste it.
+```
+xcode-select --install
+```
 
-First you need to find out which directory on your computer the Anaconda Prompt is working in. The command prompt that appears should show which directory you are in. For example, you might see something like:
+If you see a message telling you that this is already installed, then you are ready to move on. Otherwise, your computer will offer to install the command line tools. Answer 'yes' or 'ok' to any windows that pop up offering to install software.
+
+Now follow the same instructions as for **Windows** below.
+
+## Windows
+
+It is probably a good idea to first close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search for an application called 'Anaconda Prompt' (or if you are coming here from the macOS instructions above, continue in the 'Terminal' application).
+
+The steps below involve typing text commands into the command prompt. When you type the commands in the instructions below, beware that the command prompt is not particularly forgiving. If something is slightly mistyped, the prompt may tell you that a command is not found, or syntax is not correct. Check things carefully if you encounter error messages. This includes the distinction between lowercase and UPPERCASE and the accidental placement of a space in front of the command if you copy and paste it.
+
+First you need to find out which directory on your computer you are working in. The command prompt should show which directory you are in. For example, you might see something like:
 
 ```
 (base) C:\Users\mildred>
@@ -27,13 +39,13 @@ In this case, `C:\Users\mildred` is the directory that you are in. If you don't 
 
 The makers of Psychopy provide a file that Anaconda can use to create the necessary environment for Psychopy to run in. Download the file (called *psychopy-env.yaml* from [this link](https://raw.githubusercontent.com/psychopy/psychopy/master/conda/psychopy-env.yml) and make sure you download it into the directory that you saw displayed in the Anaconda Prompt above.
 
-Now return to the Anaconda Prompt and enter the following command (as described on the [Psychopy website](https://www.psychopy.org/download.html#anaconda-and-miniconda)):
+Now return to the command prompt and enter the following command (as described on the [Psychopy website](https://www.psychopy.org/download.html#anaconda-and-miniconda)):
 
 ```
 conda env create -n psy -f psychopy-env.yml
 ```
 
-This will create the necessary virtual environment under the name 'psy'. In order to be able to use Spyder to write Python programs in this new environment, you should also install Spyder into the 'psy' environment. Still in the Anaconda Prompt, first enter the following command:
+This will create the necessary virtual environment under the name 'psy'. Now enter the following command:
 
 ```
 conda activate psy
@@ -45,13 +57,13 @@ This 'activates' the new environment, so that any subsequent commands that you e
 (psy) C:\Users\mildred>
 ```
 
-Now you can enter a command to install Spyder, and it will be installed into this environment:
+In order to be able to use Spyder to write Python programs in this new environment, you should also install Spyder into the 'psy' environment. Enter the following command, and it will be installed into this environment:
 
 ```
 conda install spyder
 ```
 
-When the installation has finished, you have finished setting up the environment and you can close the Anaconda Prompt window.
+When the installation has finished, you have finished setting up the environment and you can close the command prompt window.
 
 You will now have two environments in your Anaconda installation. One is called 'base', which is the default environment that was already created when you installed Anaconda. The other is called 'psy', and is the one in which you just installed Psychopy. When you want to write Python programs that use Psychopy, instead of launching Spyder directly, first launch an application called 'Anaconda Navigator'. This is the main graphical interface to Anaconda. In here, you can see a list of your environments under the 'Environments' tab. From the list of environments, click on 'psy' to activate the 'psy' environment. Once you have done so, find Spyder among the applications listed there, and click on 'Launch' to launch Spyder in the 'psy' environment.
 
