@@ -25,7 +25,7 @@ Now follow the same instructions as for **Windows** below.
 
 ## Windows
 
-It is probably a good idea to first close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search for an application called 'Anaconda Prompt' (or if you are coming here from the macOS instructions above, continue in the 'Terminal' application).
+It is probably a good idea to first close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search for an application called 'Anaconda Prompt' (or if you are coming here from the **macOS** instructions above, continue in the 'Terminal' application).
 
 The steps below involve typing text commands into the command prompt. When you type the commands in the instructions below, beware that the command prompt is not particularly forgiving. If something is slightly mistyped, the prompt may tell you that a command is not found, or syntax is not correct. Check things carefully if you encounter error messages. This includes the distinction between lowercase and UPPERCASE and the accidental placement of a space in front of the command if you copy and paste it.
 
@@ -51,7 +51,7 @@ This will create the necessary virtual environment under the name 'psy'. Now ent
 conda activate psy
 ```
 
-This 'activates' the new environment, so that any subsequent commands that you enter will take effect for this environment only. You should see that the prompt in the Anaconda Prompt is now prefaced with the name of the 'psy' environment. Something like this:
+This 'activates' the new environment, so that any subsequent commands that you enter will take effect for this environment only. You should see that the prompt is now prefaced with the name of the 'psy' environment. Something like this:
 
 ```
 (psy) C:\Users\mildred>

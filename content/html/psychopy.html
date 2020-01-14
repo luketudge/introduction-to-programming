@@ -13083,7 +13083,7 @@ div#notebook {
 <pre><code>xcode-select --install</code></pre>
 <p>If you see a message telling you that this is already installed, then you are ready to move on. Otherwise, your computer will offer to install the command line tools. Answer 'yes' or 'ok' to any windows that pop up offering to install software.</p>
 <p>Now follow the same instructions as for <strong>Windows</strong> below.</p>
-<h2 id="Windows">Windows<a class="anchor-link" href="#Windows">¶</a></h2><p>It is probably a good idea to first close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search for an application called 'Anaconda Prompt' (or if you are coming here from the macOS instructions above, continue in the 'Terminal' application).</p>
+<h2 id="Windows">Windows<a class="anchor-link" href="#Windows">¶</a></h2><p>It is probably a good idea to first close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search for an application called 'Anaconda Prompt' (or if you are coming here from the <strong>macOS</strong> instructions above, continue in the 'Terminal' application).</p>
 <p>The steps below involve typing text commands into the command prompt. When you type the commands in the instructions below, beware that the command prompt is not particularly forgiving. If something is slightly mistyped, the prompt may tell you that a command is not found, or syntax is not correct. Check things carefully if you encounter error messages. This includes the distinction between lowercase and UPPERCASE and the accidental placement of a space in front of the command if you copy and paste it.</p>
 <p>First you need to find out which directory on your computer you are working in. The command prompt should show which directory you are in. For example, you might see something like:</p>
 <pre><code>(base) C:\Users\mildred&gt;</code></pre>
@@ -13093,7 +13093,7 @@ div#notebook {
 <pre><code>conda env create -n psy -f psychopy-env.yml</code></pre>
 <p>This will create the necessary virtual environment under the name 'psy'. Now enter the following command:</p>
 <pre><code>conda activate psy</code></pre>
-<p>This 'activates' the new environment, so that any subsequent commands that you enter will take effect for this environment only. You should see that the prompt in the Anaconda Prompt is now prefaced with the name of the 'psy' environment. Something like this:</p>
+<p>This 'activates' the new environment, so that any subsequent commands that you enter will take effect for this environment only. You should see that the prompt is now prefaced with the name of the 'psy' environment. Something like this:</p>
 <pre><code>(psy) C:\Users\mildred&gt;</code></pre>
 <p>In order to be able to use Spyder to write Python programs in this new environment, you should also install Spyder into the 'psy' environment. Enter the following command, and it will be installed into this environment:</p>
 <pre><code>conda install spyder</code></pre>
