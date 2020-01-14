@@ -13068,7 +13068,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p><h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="macOS-1" href="#macOS">macOS</a></span></li><li><span><a data-toc-modified-id="Windows-2" href="#Windows">Windows</a></span></li><li><span><a data-toc-modified-id="Linux-3" href="#Linux">Linux</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="Installation-1" href="#Installation">Installation</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="macOS-1.1" href="#macOS">macOS</a></span></li><li><span><a data-toc-modified-id="Windows-1.2" href="#Windows">Windows</a></span></li><li><span><a data-toc-modified-id="Linux-1.3" href="#Linux">Linux</a></span></li></ul></li><li><span><a data-toc-modified-id="Test-2" href="#Test">Test</a></span></li></ul></div>
 </div>
 </div>
 </div>
@@ -13076,14 +13076,14 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Psychopy">Psychopy<a class="anchor-link" href="#Psychopy">¶</a></h1><p>Psychopy is an additional package for Python that allows you to write programs that control the screen, keyboard, mouse, etc. in order to gather psychophysical data from users/subjects. You can read more about it at the <a href="https://www.psychopy.org">Psychopy website</a>.</p>
-<p>Because Psychopy needs to take some control over your computer's hardware, it is slightly more difficult to install. Because of Psychopy's special requirements, installing it can occasionally mess with the configuration of other installed Python packages. To avoid this problem, you can install Psychopy into its own 'virtual environment'. A virtual environment is a separate Python setup that stores its own configuration and versions of packages. If we install Psychopy into its own environment rather than in the main environment that you use for other Python tasks, we can minimize the risk that it may break other programs.</p>
+<h2 id="Installation">Installation<a class="anchor-link" href="#Installation">¶</a></h2><p>Because Psychopy needs to take some control over your computer's hardware, it is slightly more difficult to install. Because of Psychopy's special requirements, installing it can occasionally mess with the configuration of other installed Python packages. To avoid this problem, you can install Psychopy into its own 'virtual environment'. A virtual environment is a separate Python setup that stores its own configuration and versions of packages. If we install Psychopy into its own environment rather than in the main environment that you use for other Python tasks, we can minimize the risk that it may break other programs.</p>
 <p>Follow the instructions for your operating system.</p>
-<h2 id="macOS">macOS<a class="anchor-link" href="#macOS">¶</a></h2><p>Search for an application called the 'Terminal'. This is a command line where you can type in commands for your computer's operating system.</p>
+<h3 id="macOS">macOS<a class="anchor-link" href="#macOS">¶</a></h3><p>Search for an application called the 'Terminal'. This is a command line where you can type in commands for your computer's operating system.</p>
 <p>You will need first a piece of software called 'command line tools' for mac. You might already have it, as it is used by various other programs that you might have installed already. You can check by entering the following command in the terminal:</p>
 <pre><code>xcode-select --install</code></pre>
 <p>If you see a message telling you that this is already installed, then you are ready to move on. Otherwise, your computer will offer to install the command line tools. Answer 'yes' or 'ok' to any windows that pop up offering to install software.</p>
 <p>Now follow the same instructions as for <strong>Windows</strong> below.</p>
-<h2 id="Windows">Windows<a class="anchor-link" href="#Windows">¶</a></h2><p>It is probably a good idea to first close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search for an application called 'Anaconda Prompt' (or if you are coming here from the <strong>macOS</strong> instructions above, continue in the 'Terminal' application).</p>
+<h3 id="Windows">Windows<a class="anchor-link" href="#Windows">¶</a></h3><p>It is probably a good idea to first close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search for an application called 'Anaconda Prompt' (or if you are coming here from the <strong>macOS</strong> instructions above, continue in the 'Terminal' application).</p>
 <p>The steps below involve typing text commands into the command prompt. When you type the commands in the instructions below, beware that the command prompt is not particularly forgiving. If something is slightly mistyped, the prompt may tell you that a command is not found, or syntax is not correct. Check things carefully if you encounter error messages. This includes the distinction between lowercase and UPPERCASE and the accidental placement of a space in front of the command if you copy and paste it.</p>
 <p>First you need to find out which directory on your computer you are working in. The command prompt should show which directory you are in. For example, you might see something like:</p>
 <pre><code>(base) C:\Users\mildred&gt;</code></pre>
@@ -13098,8 +13098,8 @@ div#notebook {
 <p>In order to be able to use Spyder to write Python programs in this new environment, you should also install Spyder into the 'psy' environment. Enter the following command, and it will be installed into this environment:</p>
 <pre><code>conda install spyder</code></pre>
 <p>When the installation has finished, you have finished setting up the environment and you can close the command prompt window.</p>
-<p>You will now have two environments in your Anaconda installation. One is called 'base', which is the default environment that was already created when you installed Anaconda. The other is called 'psy', and is the one in which you just installed Psychopy. When you want to write Python programs that use Psychopy, instead of launching Spyder directly, first launch an application called 'Anaconda Navigator'. This is the main graphical interface to Anaconda. In here, you can see a list of your environments under the 'Environments' tab. From the list of environments, click on 'psy' to activate the 'psy' environment. Once you have done so, find Spyder among the applications listed there, and click on 'Launch' to launch Spyder in the 'psy' environment.</p>
-<h2 id="Linux">Linux<a class="anchor-link" href="#Linux">¶</a></h2><p>You will need first to install a Python program for creating virtual environments. It is called 'virtualenv' and you can get it via your normal package manager. Make sure that you get the Python 3 version. Assuming you are on Ubuntu, the following command in the terminal will install it:</p>
+<p>You will now have two environments in your Anaconda installation. One is called 'base', which is the default environment that was already created when you installed Anaconda. The other is called 'psy', and is the one in which you just installed Psychopy. When you want to write Python programs that use Psychopy, instead of launching Spyder directly, first launch an application called 'Anaconda Navigator'. This is the main graphical interface to Anaconda. At the top of the 'Home' tab, you should see a drop-down selection menu titled 'Applications on:' This menu allows you to switch between virtual environments. To switch into the new virtual environment, select 'psy' from this drop-down menu. The Anaconda Navigator may take a moment to switch environments. Once it has done so and you see 'psy' selected, find Spyder among the applications listed there, and click on 'Launch' to launch Spyder in the 'psy' environment.</p>
+<h3 id="Linux">Linux<a class="anchor-link" href="#Linux">¶</a></h3><p>You will need first to install a Python program for creating virtual environments. It is called 'virtualenv' and you can get it via your normal package manager. Make sure that you get the Python 3 version. Assuming you are on Ubuntu, the following command in the terminal will install it:</p>
 <div class="highlight"><pre><span></span>sudo apt-get install python3-virtualenv
 </pre></div>
 <p>Once you have installed virtualenv, you can use it as a command in the terminal to create virtual environments. First use <code>cd</code> to navigate into the directory where you would like to store your virtual environment (or just open the terminal there by right-clicking on the directory in the file explorer and selecting 'Open in Terminal'). Then enter the following command to create a virtual environment in which to install Psychopy:</p>
@@ -13123,6 +13123,106 @@ spyder3
 </pre></div>
 <p>The directory 'psy' that contains the files for the virtual environment is a directory like any other. If you ever want to delete your virtual environment, just delete the 'psy' directory. And if you want to move it somewhere else in your file system, just move the 'psy' directory.</p>
 <p>Some more information about virtual environments is provided at the <a href="https://docs.python-guide.org/dev/virtualenvs/#basic-usage">Hitchhiker's Guide to Python</a>.</p>
+<h2 id="Test">Test<a class="anchor-link" href="#Test">¶</a></h2><p>Once you have followed the instructions above for your operating system and you have launched Spyder in the 'psy' environment, you can check whether Psychopy works correctly. Try some Psychopy commands in the Spyder console.</p>
+<p>First try importing its main modules:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">psychopy</span> <span class="kn">import</span> <span class="n">visual</span><span class="p">,</span> <span class="n">core</span><span class="p">,</span> <span class="n">event</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you do not see a <code>ModuleNotFoundError</code>, then Psychopy has at least been installed and can be imported. You might see a few warning messages, the exact content of which will depend on your computer, but these do not necessarily indicate a problem.</p>
+<p>Now you can try to open a new window on your screen using Psychopy. The <code>Window()</code> function from the <code>visual</code> module does this. It is very important to make sure that you assign the result into a variable, as it is via this variable that you will be able to continue doing things with the window. If you open a window but do not assign it into a variable, you have no way of continuing to interact with the window from Python, and you might not even be able to close it.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">win</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You should see a new small blank window appear.</p>
+<p>Finally, you can try drawing some text in the window. Try the following two commands:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">visual</span><span class="o">.</span><span class="n">TextStim</span><span class="p">(</span><span class="n">win</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">win</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>1.4448274319984193</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You will see a number output from the second command. How these two commands work and what this number means will be explained when we come to learn about Psychopy. For now, just try the commands out. You should see some text drawn into the window as a result.</p>
+<p>Finally, to close the window, don't try to close it by clicking its close button as you would for a normal window. This usually won't work. Instead, close it from the Spyder console by calling the <code>close()</code> method.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">win</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.0530 	WARNING 	Monitor specification not found. Creating a temporary one...
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The window should now have disappeared. You might again see a short warning message like the one above. This is not important.</p>
+<p>If all of that worked out, then Psychopy is installed correctly and its most important features are working.</p>
 </div>
 </div>
 </div>

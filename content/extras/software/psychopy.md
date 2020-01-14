@@ -1,15 +1,17 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#macOS" data-toc-modified-id="macOS-1">macOS</a></span></li><li><span><a href="#Windows" data-toc-modified-id="Windows-2">Windows</a></span></li><li><span><a href="#Linux" data-toc-modified-id="Linux-3">Linux</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Installation" data-toc-modified-id="Installation-1">Installation</a></span><ul class="toc-item"><li><span><a href="#macOS" data-toc-modified-id="macOS-1.1">macOS</a></span></li><li><span><a href="#Windows" data-toc-modified-id="Windows-1.2">Windows</a></span></li><li><span><a href="#Linux" data-toc-modified-id="Linux-1.3">Linux</a></span></li></ul></li><li><span><a href="#Test" data-toc-modified-id="Test-2">Test</a></span></li></ul></div>
 
 # Psychopy
 
 Psychopy is an additional package for Python that allows you to write programs that control the screen, keyboard, mouse, etc. in order to gather psychophysical data from users/subjects. You can read more about it at the [Psychopy website](https://www.psychopy.org).
 
+## Installation
+
 Because Psychopy needs to take some control over your computer's hardware, it is slightly more difficult to install. Because of Psychopy's special requirements, installing it can occasionally mess with the configuration of other installed Python packages. To avoid this problem, you can install Psychopy into its own 'virtual environment'. A virtual environment is a separate Python setup that stores its own configuration and versions of packages. If we install Psychopy into its own environment rather than in the main environment that you use for other Python tasks, we can minimize the risk that it may break other programs.
 
 Follow the instructions for your operating system.
 
-## macOS
+### macOS
 
 Search for an application called the 'Terminal'. This is a command line where you can type in commands for your computer's operating system.
 
@@ -23,7 +25,7 @@ If you see a message telling you that this is already installed, then you are re
 
 Now follow the same instructions as for **Windows** below.
 
-## Windows
+### Windows
 
 It is probably a good idea to first close any open instances of the Anaconda Navigator or Spyder. The Anaconda Navigator will probably only recognize the changes you are about to make after it has been closed and then restarted. Now search for an application called 'Anaconda Prompt' (or if you are coming here from the **macOS** instructions above, continue in the 'Terminal' application).
 
@@ -65,9 +67,9 @@ conda install spyder
 
 When the installation has finished, you have finished setting up the environment and you can close the command prompt window.
 
-You will now have two environments in your Anaconda installation. One is called 'base', which is the default environment that was already created when you installed Anaconda. The other is called 'psy', and is the one in which you just installed Psychopy. When you want to write Python programs that use Psychopy, instead of launching Spyder directly, first launch an application called 'Anaconda Navigator'. This is the main graphical interface to Anaconda. In here, you can see a list of your environments under the 'Environments' tab. From the list of environments, click on 'psy' to activate the 'psy' environment. Once you have done so, find Spyder among the applications listed there, and click on 'Launch' to launch Spyder in the 'psy' environment.
+You will now have two environments in your Anaconda installation. One is called 'base', which is the default environment that was already created when you installed Anaconda. The other is called 'psy', and is the one in which you just installed Psychopy. When you want to write Python programs that use Psychopy, instead of launching Spyder directly, first launch an application called 'Anaconda Navigator'. This is the main graphical interface to Anaconda. At the top of the 'Home' tab, you should see a drop-down selection menu titled 'Applications on:' This menu allows you to switch between virtual environments. To switch into the new virtual environment, select 'psy' from this drop-down menu. The Anaconda Navigator may take a moment to switch environments. Once it has done so and you see 'psy' selected, find Spyder among the applications listed there, and click on 'Launch' to launch Spyder in the 'psy' environment.
 
-## Linux
+### Linux
 
 You will need first to install a Python program for creating virtual environments. It is called 'virtualenv' and you can get it via your normal package manager. Make sure that you get the Python 3 version. Assuming you are on Ubuntu, the following command in the terminal will install it:
 
@@ -115,3 +117,56 @@ spyder3
 The directory 'psy' that contains the files for the virtual environment is a directory like any other. If you ever want to delete your virtual environment, just delete the 'psy' directory. And if you want to move it somewhere else in your file system, just move the 'psy' directory.
 
 Some more information about virtual environments is provided at the [Hitchhiker's Guide to Python](https://docs.python-guide.org/dev/virtualenvs/#basic-usage).
+
+## Test
+
+Once you have followed the instructions above for your operating system and you have launched Spyder in the 'psy' environment, you can check whether Psychopy works correctly. Try some Psychopy commands in the Spyder console.
+
+First try importing its main modules:
+
+
+```python
+from psychopy import visual, core, event
+```
+
+If you do not see a `ModuleNotFoundError`, then Psychopy has at least been installed and can be imported. You might see a few warning messages, the exact content of which will depend on your computer, but these do not necessarily indicate a problem.
+
+Now you can try to open a new window on your screen using Psychopy. The `Window()` function from the `visual` module does this. It is very important to make sure that you assign the result into a variable, as it is via this variable that you will be able to continue doing things with the window. If you open a window but do not assign it into a variable, you have no way of continuing to interact with the window from Python, and you might not even be able to close it.
+
+
+```python
+win = visual.Window()
+```
+
+You should see a new small blank window appear.
+
+Finally, you can try drawing some text in the window. Try the following two commands:
+
+
+```python
+visual.TextStim(win).draw()
+win.flip()
+```
+
+
+
+
+    1.4448274319984193
+
+
+
+You will see a number output from the second command. How these two commands work and what this number means will be explained when we come to learn about Psychopy. For now, just try the commands out. You should see some text drawn into the window as a result.
+
+Finally, to close the window, don't try to close it by clicking its close button as you would for a normal window. This usually won't work. Instead, close it from the Spyder console by calling the `close()` method.
+
+
+```python
+win.close()
+```
+
+    1.0530 	WARNING 	Monitor specification not found. Creating a temporary one...
+
+
+The window should now have disappeared. You might again see a short warning message like the one above. This is not important.
+
+If all of that worked out, then Psychopy is installed correctly and its most important features are working.
