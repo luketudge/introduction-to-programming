@@ -39,7 +39,7 @@ First you need to find out which directory on your computer you are working in. 
 
 In this case, `C:\Users\mildred` is the directory that you are in. If you don't see anything like this, or if you are not sure which directory this points to, you can try typing in a command that will display the name of the directory. If you are on **Windows**, type `cd`. If you are on **macOS**, type `pwd`. You should then see the name of a directory printed out. Make a note of it and then go find it in your file explorer.
 
-The makers of Psychopy provide a file that Anaconda can use to create the necessary environment for Psychopy to run in. Download the file (called *psychopy-env.yaml* from [this link](https://raw.githubusercontent.com/psychopy/psychopy/master/conda/psychopy-env.yml) and make sure you download it into the directory that you saw displayed in the Anaconda Prompt above.
+The makers of Psychopy provide a file that Anaconda can use to create the necessary environment for Psychopy to run in. Download the file (called *psychopy-env.yaml*) by right-clicking on [this link](https://raw.githubusercontent.com/psychopy/psychopy/master/conda/psychopy-env.yml) and choosing 'Save Link As' or something similar, and make sure you download it into the directory that you saw displayed in the Anaconda Prompt above.
 
 Now return to the command prompt and enter the following command (as described on the [Psychopy website](https://www.psychopy.org/download.html#anaconda-and-miniconda)):
 
@@ -151,7 +151,7 @@ win.flip()
 
 
 
-    1.4448274319984193
+    2.3026592579999487
 
 
 
@@ -164,7 +164,7 @@ Finally, to close the window, don't try to close it by clicking its close button
 win.close()
 ```
 
-    1.0530 	WARNING 	Monitor specification not found. Creating a temporary one...
+    1.6359 	WARNING 	Monitor specification not found. Creating a temporary one...
 
 
 The window should now have disappeared. You might again see a short warning message like the one above. This is not important.
