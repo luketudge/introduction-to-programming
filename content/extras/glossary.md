@@ -520,6 +520,10 @@ C:\Users\Mildred\Documents\my_program.py
 
 Paths can be 'absolute', which means that they describe the full path to a file starting all the way back from the base of the directory system (sometimes called the 'root' directory). Or they can be 'relative', which means that they describe the path to a file starting from some other directory than the root directory, usually the directory that we are currently working in.
 
+## pull
+
+In [version control](#versioning), updating your copy of a [repository](#repository) to incorporate changes that have been made in another copy of the repository (for example one stored online) is termed 'pulling' the changes from the other repository.
+
 ## push
 
 In [version control](#versioning), sending changes from your computer's copy of a [repository](#repository) to another copy (for example one stored online) is termed 'pushing' the changes to the other repository.
