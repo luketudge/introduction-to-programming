@@ -1008,7 +1008,7 @@ with open(filepath) as f:
     EP19;60,6;30,5;7,0833333
 
 
-The fact that your spreadsheet program opens one or other of these two file formats correctly by default is another example of your [locale](extras/glossary.md#locale) determining the default behavior of programs. If you create or edit delimited text files using your spreadsheet program, or if you need to open a file that someone else has sent you, you should be aware that you may be reading or writing the file in a different format from that used by your colleagues. If in doubt, open the file in a plain text editor first, to see 
+The fact that your spreadsheet program opens one or other of these two file formats correctly by default is another example of your [locale](extras/glossary.md#locale) determining the default behavior of programs. If you create or edit delimited text files using your spreadsheet program, or if you need to open a file that someone else has sent you, you should be aware that you may be reading or writing the file in a different format from that used by your colleagues. If in doubt, open the file in a plain text editor first, to see what the literal text contents look like.
 
 ### pandas
 

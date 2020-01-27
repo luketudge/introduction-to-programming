@@ -13105,6 +13105,67 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="array">array<a class="anchor-link" href="#array">¶</a></h2><p>In computing, a collection of multiple <a href="#value">values</a> that are organized as a sort of 'grid' is called an array. There is no array <a href="#type">type</a> in basic Python, but the <em>numpy</em> <a href="#package">package</a> adds arrays to Python.</p>
+<p>For example, we could use a numpy array to represent the state of a game of tic-tac-toe as an array of <a href="#integer">integers</a> indicating whether each square of the game grid has been marked by player 1 (<code>1</code>), by player 2 (<code>-1</code>), or has not been marked (<code>0</code>):</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">ttt</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">ttt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[2]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[-1,  0,  1],
+       [ 0, -1,  0],
+       [ 1,  0,  1]])</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This array has two dimensions (rows and columns), but arrays may have more or fewer dimensions. To <a href="#index">index</a> one or more values from an array, multiple indices may be needed, one for each dimension. By convention, the first dimension is the rows, the second is the columns (though some other programming languages use the opposite convention). So for example to get the first two values from the second row:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ttt</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0, -1])</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="assertion">assertion<a class="anchor-link" href="#assertion">¶</a></h2><p>An assertion is a statement that 'asserts' that a particular statement is true, in the same sense of the English verb 'to assert'. If the asserted statement is true, nothing happens and the program may continue as normal, but if it is not true, then an <a href="#exception">exception</a> is raised.</p>
 <p>Assertions can be used to make sure that a program is running as expected at a crucial point, because to continue otherwise would be time-consuming or would make the problem more difficult to diagnose later. Assertions are also commonly used in test programs that check the correct functioning of another program.</p>
 <p>There are a few different ways to write assertions in Python, but the simplest is using the <code>assert</code> <a href="#keyword">keyword</a> together with the statement to be checked. For example:</p>
@@ -13113,7 +13174,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
@@ -13127,12 +13188,40 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="assignment">assignment<a class="anchor-link" href="#assignment">¶</a></h2><p>If one part of our program generates a piece of information, we may want to store that information and use it in some later part of our program. In this case, we can 'assign' the information into a <a href="#variable">variable</a>. This just means storing something under that variable name. In Python, assignment is done with the equals <code>=</code> symbol. Whatever results from the right-hand side is assigned into the variable name on the left-hand side.</p>
 <h2 id="attribute">attribute<a class="anchor-link" href="#attribute">¶</a></h2><p>An attribute is like a variable that is 'attached' to another variable, providing some additional information or functionality. We can access attributes using a <code>.</code>. This is the same <a href="#syntax">syntax</a> as for accessing a <a href="#method">method</a>. Indeed, methods are a kind of attribute.</p>
-<h2 id="boolean">boolean<a class="anchor-link" href="#boolean">¶</a></h2><p>A <a href="#variable">variable</a> of boolean data <a href="#type">type</a> (abbreviated to <code>bool</code> in Python) stores either of the two possible <a href="#value">values</a> <code>True</code> or <code>False</code>. Boolean values often result from a Python command that checks a given condition, for example <code>2 &gt; 1</code> <a href="#evaluate">evaluates</a> to <code>True</code> because <code>2</code> is indeed greater than <code>1</code>.</p>
+<h2 id="boolean">boolean<a class="anchor-link" href="#boolean">¶</a></h2><p>A <a href="#variable">variable</a> of boolean data <a href="#type">type</a> (abbreviated to <code>bool</code> in Python) stores either of the two possible <a href="#value">values</a> <code>True</code> or <code>False</code>. Boolean values often result from a Python command that checks a given condition, for example <code>2 &gt; 1</code> <a href="#evaluate">evaluates</a> to <code>True</code> because <code>2</code> is indeed greater than <code>1</code>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>(The term 'boolean' is derived from the name of <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>, who developed various mathematical methods for working with logical True/False values.)</p>
 <h2 id="bug">bug<a class="anchor-link" href="#bug">¶</a></h2><p>A bug is an aspect of a program that does not work as desired. For example, a <a href="#function">function</a> might give the wrong <a href="#return">return value</a>, or part of the program might unexpectedly raise an <a href="#exception">exception</a>.</p>
 <h2 id="builtin">builtin<a class="anchor-link" href="#builtin">¶</a></h2><p>Python provides a few fundamental <a href="#function">functions</a> that are already available from the start. These are termed built-in functions, or 'builtins'. The <code>print()</code> function is one example of a builtin. You can read a full list of them <a href="https://docs.python.org/3/library/functions.html#built-in-functions">here</a>.</p>
 <h2 id="call">call<a class="anchor-link" href="#call">¶</a></h2><p>To 'call' a <a href="#function">function</a> simply means to run that function and make it do its work. The <a href="#syntax">syntax</a> for calling a function is to place parentheses <code>()</code> after the function name, and optionally to place any input <a href="#argument">arguments</a> inside the parentheses.</p>
 <p>(See the entry on <a href="#function">functions</a> for an example of a 'function call'.)</p>
+<h2 id="coercion">coercion<a class="anchor-link" href="#coercion">¶</a></h2><p>Sometimes, a computer program may convert some values of one data <a href="#type">type</a> into another data type in order to be able to perform some calculations or operations with those values, even if the user of the program has not explicitly asked for the data to be converted. In this case, we sometimes say that the data have been 'coerced' to a new type.</p>
 <h2 id="comment">comment<a class="anchor-link" href="#comment">¶</a></h2><p>A comment is a human-language piece of text that we insert into our Python program. We indicate a comment by prepending the hash character <code>#</code>. The Python <a href="#interpreter">interpreter</a> just ignores any line beginning with a hash character, so we can write whatever we like in our comments; they do not have to be valid Python commands. Comments have a few uses:</p>
 <ul>
 <li>'headings' to organize sections of the program</li>
@@ -13147,7 +13236,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">,</span> <span class="s1">'sausages'</span><span class="p">]</span>
@@ -13159,7 +13248,7 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['e', 'b', 'b', 's']</pre>
 </div>
@@ -13178,7 +13267,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
@@ -13221,7 +13310,7 @@ Sherlock,39,GB</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span><span class="s1">'Mildred'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="s1">'location'</span><span class="p">:</span><span class="s1">'USA'</span><span class="p">}</span>
@@ -13239,7 +13328,7 @@ Sherlock,39,GB</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">'age'</span><span class="p">]</span>
@@ -13250,7 +13339,7 @@ Sherlock,39,GB</code></pre>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>22</pre>
 </div>
@@ -13302,7 +13391,7 @@ SyntaxError: invalid syntax</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -13337,7 +13426,7 @@ SyntaxError: invalid syntax</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">word_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="s1">'floccinaucinihilipilification'</span><span class="p">)</span>
@@ -13373,7 +13462,7 @@ SyntaxError: invalid syntax</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">,</span> <span class="s1">'sausages'</span><span class="p">]</span>
@@ -13410,7 +13499,7 @@ SyntaxError: invalid syntax</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">,</span> <span class="s1">'sausages'</span><span class="p">]</span>
@@ -13432,7 +13521,7 @@ SyntaxError: invalid syntax</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">,</span> <span class="s1">'sausages'</span><span class="p">]</span>
@@ -13464,13 +13553,21 @@ sausages
 <p>Or they can use the <code>while</code> <a href="#keyword">keyword</a> to repeat the given actions until a particular condition is no longer fulfilled.</p>
 <h2 id="mapping">mapping<a class="anchor-link" href="#mapping">¶</a></h2><p>See <a href="#dictionary">dictionary</a>.</p>
 <h2 id="markup">markup<a class="anchor-link" href="#markup">¶</a></h2><p>A 'markup language' is a programming language that adds extra combinations of symbols to normal text, in order to instruct a computer program to display that text in a certain way. For example, the markup language <a href="#html">html</a> tells a web browser how to display the text of a webpage.</p>
+<h2 id="matrix">matrix<a class="anchor-link" href="#matrix">¶</a></h2><p>In math, a matrix is a collection of numbers (or occasionally other things) arranged in rows and columns. For example, the following matrix has 2 rows and 8 columns (so is termed a '2 x 8' matrix):</p>
+$$
+\begin{bmatrix}
+0 &amp; 0 &amp; 1 &amp; 2 &amp; 2 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; 6 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 3 &amp; 0 \\
+\end{bmatrix}
+$$<p>Matrices are useful for representing geometric transformations, among other things, and have applications in fields like statistics, engineering, and quantum physics.</p>
+<p>Matrices consisting of only a single row or a single column are often called row or column <a href="#vector">vectors</a>. In computing, matrices can be represented using <a href="#array">arrays</a>.</p>
 <h2 id="method">method<a class="anchor-link" href="#method">¶</a></h2><p>A method is a <a href="#function">function</a> that is defined specially for variables of one data <a href="#type">type</a>. For example, there is a <a href="#string">string</a> method called <code>upper()</code>, which <a href="#return">returns</a> an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The <a href="#syntax">syntax</a> for using a method is to access it via the variable that we want to apply it to, by placing a <code>.</code> after the name of the variable. For example to get an uppercase version of a string variable using the <code>upper()</code> method:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Mildred'</span>
@@ -13482,7 +13579,7 @@ sausages
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'MILDRED'</pre>
 </div>
@@ -13493,9 +13590,8 @@ sausages
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="module">module<a class="anchor-link" href="#module">¶</a></h2><p>A 'module' is simply any text file containing Python commands. However, in practice the term 'module' tends to be reserved for files that do not in themselves run any program that accomplishes a task or produces an output, but instead serve merely to define various <a href="#function">functions</a> or <a href="#variable">variables</a> that can be used in other programs. The contents of a module can be incorporated into another program file by <a href="#import">importing</a> them.</p>
-<p>(Compare the term '<a href="#script">script</a>'.)</p>
-<p>We may write our own modules, or we may make use of pre-made modules that are either built in to Python or are provided as part of additional <a href="#package">packages</a> that we have installed.</p>
+<h2 id="module">module<a class="anchor-link" href="#module">¶</a></h2><p>A 'module' is simply any text file containing Python commands. However, in practice the term 'module' tends to be reserved for files that do not in themselves run any program that accomplishes a task or produces an output, but instead serve merely to define various <a href="#function">functions</a> or <a href="#variable">variables</a> that can be used in other programs. (Compare the term '<a href="#script">script</a>'.)</p>
+<p>The contents of a module can be incorporated into another program file by <a href="#import">importing</a> them. We may write our own modules, or we may make use of pre-made modules that are either built in to Python or are provided as part of additional <a href="#package">packages</a> that we have installed.</p>
 <h2 id="mutability">mutability<a class="anchor-link" href="#mutability">¶</a></h2><p>If a <a href="#type">type</a> is 'mutable', this means that a <a href="#variable">variable</a> of that type can have its contents changed or updated without having to be completely overwritten and <a href="#assignment">re-assigned</a>. For example, <a href="#list">lists</a> are mutable, because applying a list <a href="#method">method</a> can change the contents of the list without us assigning any result back into the list with <code>=</code>. When a mutable variable is changed even though we have not re-assigned it, we sometimes say that it has been changed 'in-place'.</p>
 <p>The list in the following example is changed in-place by the <code>.reverse()</code> method:</p>
 </div>
@@ -13503,7 +13599,7 @@ sausages
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">,</span> <span class="s1">'sausages'</span><span class="p">]</span>
@@ -13517,7 +13613,7 @@ sausages
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['sausages', 'black pudding', 'bacon', 'eggs']</pre>
 </div>
@@ -13535,7 +13631,7 @@ sausages
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Mildred'</span>
@@ -13549,7 +13645,7 @@ sausages
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'Mildred'</pre>
 </div>
@@ -13566,7 +13662,7 @@ sausages
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Mildred'</span>
@@ -13580,7 +13676,7 @@ sausages
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'MILDRED'</pre>
 </div>
@@ -13619,7 +13715,7 @@ sausages
 </div>
 <div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'That is an invalid value.'</span><span class="p">)</span>
@@ -13635,7 +13731,7 @@ sausages
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-16-72fb548a5442&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">&lt;ipython-input-19-72fb548a5442&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'That is an invalid value.'</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">ValueError</span>: That is an invalid value.</pre>
@@ -13653,6 +13749,7 @@ sausages
 <h2 id="repository">repository<a class="anchor-link" href="#repository">¶</a></h2><p>A repository (sometimes abbreviated to 'repo') is a place where the various files constituting a computer program are stored, usually online. People who want to install a program can fetch the current version of the program from its repository.</p>
 <p>There are various internet platforms that host repositories. <a href="https://github.com/">GitHub</a> is one of the most popular. The Python Package Index (<a href="https://pypi.org/">PyPI</a>) is a repository specifically for Python <a href="#package">packages</a>.</p>
 <h2 id="return">return<a class="anchor-link" href="#return">¶</a></h2><p><a href="#function">Functions</a> usually finish by outputting some kind of result. For example, the <code>len()</code> function outputs the length of its argument, and the <code>round()</code> function outputs the result of rounding its argument to the nearest whole number. We say that when a function has finished its work, the function 'returns', and whatever it gives us when it has finished is the function's 'return value'. For example the return value of <code>len('floccinaucinihilipilification')</code> is <code>29</code>, and the return value of <code>round(1.618)</code> is <code>2</code>.</p>
+<h2 id="scalar">scalar<a class="anchor-link" href="#scalar">¶</a></h2><p>A 'scalar' is simply a single number, such as <code>100</code> or <code>1.618</code>. This term is used in order to distinguish single numbers from collections of multiple numbers such as <a href="#vector">vectors</a> or <a href="#matrix">matrices</a>.</p>
 <h2 id="script">script<a class="anchor-link" href="#script">¶</a></h2><p>A script is a text file containing commands that are intended to be run, in order, as a program. The sense of 'script' here is the same as in an actor's script, which tells them what to say and do. Not all text files containing commands are scripts. Some may instead be <a href="#module">modules</a>, which do not of themselves run a specific program, but instead provide extra components that other programs may make use of.</p>
 <h2 id="separator">separator<a class="anchor-link" href="#separator">¶</a></h2><p>A separator is a character that is used to separate different parts of a piece of text. Separators can occur in many different contexts:</p>
 <p><em>Python commands</em>. For example, the comma character is used as the separator for multiple <a href="#argument">arguments</a> to a <a href="#function">function</a> in Python.</p>
@@ -13667,7 +13764,7 @@ sausages
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">,</span> <span class="s1">'sausages'</span><span class="p">]</span>
@@ -13680,7 +13777,7 @@ sausages
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['bacon', 'black pudding']</pre>
 </div>
@@ -13700,7 +13797,7 @@ sausages
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span>
@@ -13722,7 +13819,7 @@ sausages
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [19]:</div>
+<div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
@@ -13746,6 +13843,12 @@ sausages
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="vector">vector<a class="anchor-link" href="#vector">¶</a></h2><p>In math, a vector is a collection of numbers (or occasionally other things) arranged one after the other in a specific order. For example:</p>
+$$
+\begin{bmatrix}
+0 &amp; 6 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 3 &amp; 0 \\
+\end{bmatrix}
+$$<p>A vector is a special case of a <a href="#matrix">matrix</a> that has either only a single row (a 'row vector') or a single column (a 'column vector').</p>
 <h2 id="versioning">versioning<a class="anchor-link" href="#versioning">¶</a></h2><p>'Versioning', or more often 'version control' is the process of tracking the changes we make in successive versions of a computer program. This is important because we may sometimes need to check whether we and our colleagues are working on the same version of a program, or we may need to go back to an earlier version when we discover that our latest fabulous improvements have in fact completely broken everything.</p>
 <h2 id="whitespace">whitespace<a class="anchor-link" href="#whitespace">¶</a></h2><p>Any text characters that appear simply as blank space are termed 'whitespace' characters. The most common whitespace character is of course simply the space, but there are others, such as the <a href="#newline">newline character</a> and the tab.</p>
 <h2 id="wildcard">wildcard<a class="anchor-link" href="#wildcard">¶</a></h2><p>A wildcard is a symbol used in computing to stand for 'everything' or 'anything'. Wildcards are common to many programming languages, not just Python. The most common wildcard symbol is the asterisk (or 'star') <code>*</code>. Wildcards can be used together with other characters to refer to 'all things that match a particular pattern'. For example, when referring to file names, the expression <code>*.txt</code> means 'all files ending in <em>.txt</em>'.</p>

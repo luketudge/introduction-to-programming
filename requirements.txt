@@ -10,6 +10,7 @@ pandas
 pytest
 regex
 requests
+seaborn
 selenium
 sklearn
 spyder

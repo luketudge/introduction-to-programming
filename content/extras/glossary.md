@@ -21,6 +21,42 @@ print(name, middle_initial, surname)
     Mildred L Bonk
 
 
+## array
+
+In computing, a collection of multiple [values](#value) that are organized as a sort of 'grid' is called an array. There is no array [type](#type) in basic Python, but the *numpy* [package](#package) adds arrays to Python.
+
+For example, we could use a numpy array to represent the state of a game of tic-tac-toe as an array of [integers](#integer) indicating whether each square of the game grid has been marked by player 1 (`1`), by player 2 (`-1`), or has not been marked (`0`):
+
+
+```python
+import numpy
+ttt = numpy.array([[-1, 0, 1], [0, -1, 0], [1, 0, 1]])
+ttt
+```
+
+
+
+
+    array([[-1,  0,  1],
+           [ 0, -1,  0],
+           [ 1,  0,  1]])
+
+
+
+This array has two dimensions (rows and columns), but arrays may have more or fewer dimensions. To [index](#index) one or more values from an array, multiple indices may be needed, one for each dimension. By convention, the first dimension is the rows, the second is the columns (though some other programming languages use the opposite convention). So for example to get the first two values from the second row:
+
+
+```python
+ttt[1, :2]
+```
+
+
+
+
+    array([ 0, -1])
+
+
+
 ## assertion
 
 An assertion is a statement that 'asserts' that a particular statement is true, in the same sense of the English verb 'to assert'. If the asserted statement is true, nothing happens and the program may continue as normal, but if it is not true, then an [exception](#exception) is raised.
@@ -44,7 +80,19 @@ An attribute is like a variable that is 'attached' to another variable, providin
 
 ## boolean
 
-A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in Python) stores either of the two possible [values](#value) `True` or `False`. Boolean values often result from a Python command that checks a given condition, for example `2 > 1` [evaluates](#evaluate) to `True` because `2` is indeed greater than `1`.
+A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in Python) stores either of the two possible [values](#value) `True` or `False`. Boolean values often result from a Python command that checks a given condition, for example `2 > 1` [evaluates](#evaluate) to `True` because `2` is indeed greater than `1`:
+
+
+```python
+2 > 1
+```
+
+
+
+
+    True
+
+
 
 (The term 'boolean' is derived from the name of [George Boole](https://en.wikipedia.org/wiki/George_Boole), who developed various mathematical methods for working with logical True/False values.)
 
@@ -61,6 +109,10 @@ Python provides a few fundamental [functions](#function) that are already availa
 To 'call' a [function](#function) simply means to run that function and make it do its work. The [syntax](#syntax) for calling a function is to place parentheses `()` after the function name, and optionally to place any input [arguments](#argument) inside the parentheses.
 
 (See the entry on [functions](#function) for an example of a 'function call'.)
+
+## coercion
+
+Sometimes, a computer program may convert some values of one data [type](#type) into another data type in order to be able to perform some calculations or operations with those values, even if the user of the program has not explicitly asked for the data to be converted. In this case, we sometimes say that the data have been 'coerced' to a new type.
 
 ## comment
 
@@ -382,6 +434,21 @@ See [dictionary](#dictionary).
 
 A 'markup language' is a programming language that adds extra combinations of symbols to normal text, in order to instruct a computer program to display that text in a certain way. For example, the markup language [html](#html) tells a web browser how to display the text of a webpage.
 
+## matrix
+
+In math, a matrix is a collection of numbers (or occasionally other things) arranged in rows and columns. For example, the following matrix has 2 rows and 8 columns (so is termed a '2 x 8' matrix):
+
+$$
+\begin{bmatrix}
+0 & 0 & 1 & 2 & 2 & 1 & 0 & 2 \\
+0 & 6 & 6 & 5 & 4 & 3 & 3 & 0 \\
+\end{bmatrix}
+$$
+
+Matrices are useful for representing geometric transformations, among other things, and have applications in fields like statistics, engineering, and quantum physics.
+
+Matrices consisting of only a single row or a single column are often called row or column [vectors](#vector). In computing, matrices can be represented using [arrays](#array).
+
 ## method
 
 A method is a [function](#function) that is defined specially for variables of one data [type](#type). For example, there is a [string](#string) method called `upper()`, which [returns](#return) an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The [syntax](#syntax) for using a method is to access it via the variable that we want to apply it to, by placing a `.` after the name of the variable. For example to get an uppercase version of a string variable using the `upper()` method:
@@ -401,11 +468,9 @@ name.upper()
 
 ## module
 
-A 'module' is simply any text file containing Python commands. However, in practice the term 'module' tends to be reserved for files that do not in themselves run any program that accomplishes a task or produces an output, but instead serve merely to define various [functions](#function) or [variables](#variable) that can be used in other programs. The contents of a module can be incorporated into another program file by [importing](#import) them.
+A 'module' is simply any text file containing Python commands. However, in practice the term 'module' tends to be reserved for files that do not in themselves run any program that accomplishes a task or produces an output, but instead serve merely to define various [functions](#function) or [variables](#variable) that can be used in other programs. (Compare the term '[script](#script)'.)
 
-(Compare the term '[script](#script)'.)
-
-We may write our own modules, or we may make use of pre-made modules that are either built in to Python or are provided as part of additional [packages](#package) that we have installed.
+The contents of a module can be incorporated into another program file by [importing](#import) them. We may write our own modules, or we may make use of pre-made modules that are either built in to Python or are provided as part of additional [packages](#package) that we have installed.
 
 ## mutability
 
@@ -544,7 +609,7 @@ raise ValueError('That is an invalid value.')
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-16-72fb548a5442> in <module>
+    <ipython-input-19-72fb548a5442> in <module>
     ----> 1 raise ValueError('That is an invalid value.')
     
 
@@ -572,6 +637,10 @@ There are various internet platforms that host repositories. [GitHub](https://gi
 ## return
 
 [Functions](#function) usually finish by outputting some kind of result. For example, the `len()` function outputs the length of its argument, and the `round()` function outputs the result of rounding its argument to the nearest whole number. We say that when a function has finished its work, the function 'returns', and whatever it gives us when it has finished is the function's 'return value'. For example the return value of `len('floccinaucinihilipilification')` is `29`, and the return value of `round(1.618)` is `2`.
+
+## scalar
+
+A 'scalar' is simply a single number, such as `100` or `1.618`. This term is used in order to distinguish single numbers from collections of multiple numbers such as [vectors](#vector) or [matrices](#matrix).
 
 ## script
 
@@ -660,6 +729,18 @@ print(x ** 0.5)
 
     1.4142135623730951
 
+
+## vector
+
+In math, a vector is a collection of numbers (or occasionally other things) arranged one after the other in a specific order. For example:
+
+$$
+\begin{bmatrix}
+0 & 6 & 6 & 5 & 4 & 3 & 3 & 0 \\
+\end{bmatrix}
+$$
+
+A vector is a special case of a [matrix](#matrix) that has either only a single row (a 'row vector') or a single column (a 'column vector').
 
 ## versioning
 
