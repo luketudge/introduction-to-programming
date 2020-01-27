@@ -11,7 +11,7 @@ You should see some information about your version of Python 3, if it is install
 However, we will also use several extra 'packages' for Python, including a program called Spyder, which you will most probably not have by default on Linux. You will have to install these. You can install these via your normal package manager. Assuming that you are using Ubuntu, you can get them by entering the following command in the terminal:
 
 ```shell
-sudo apt-get install python3-bs4 python3-imageio python3-matplotlib python3-nltk python3-numpy python3-pandas python3-pytest python3-requests python3-sklearn spyder3
+sudo apt-get install python3-bs4 python3-imageio python3-matplotlib python3-nltk python3-numpy python3-pandas python3-pytest python3-requests python3-seaborn python3-sklearn spyder3
 ```
 
 You will be prompted to enter your user password, and you should then see some printouts about the packages being downloaded and installed.
