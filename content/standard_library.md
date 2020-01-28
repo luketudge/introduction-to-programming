@@ -254,7 +254,7 @@ os.getcwd()
 
 
 
-`os` also provides a function `os.listdir()` for listing the contents of a directory, by default the current wokring directory. So if you are too lazy to go and open your file explorer you can use this function instead to check whether creating a new directory worked for you.
+`os` also provides a function `os.listdir()` for listing the contents of a directory, by default the current working directory. So if you are too lazy to go and open your file explorer you can use this function instead to check whether creating a new directory worked for you.
 
 
 ```python
@@ -264,38 +264,39 @@ os.listdir()
 
 
 
-    ['my_new_directory',
-     'modules.ipynb',
-     'functions.md',
-     'intro.md',
-     'github.ipynb',
-     'images',
-     'types.md',
-     'github.md',
+    ['intro.ipynb',
+     'my_new_directory',
      'sequences_mappings.md',
+     'standard_library.md',
+     'iteration.md',
+     'arrays.ipynb',
      'standard_library.ipynb',
-     'types.ipynb',
-     'files.ipynb',
-     'intro.ipynb',
-     '.ipynb_checkpoints',
-     'sequences_mappings.ipynb',
-     'testing.md',
-     'testing.ipynb',
      'conditions.ipynb',
-     '.pytest_cache',
-     'files.md',
+     'functions.ipynb',
+     'examples',
+     'conditions.md',
+     'testing.md',
+     'github.ipynb',
+     'github.md',
+     'command_line.md',
+     'types.ipynb',
      'command_line.ipynb',
      'iteration.ipynb',
      'modules.md',
-     'iteration.md',
-     'command_line.md',
-     'README.md',
-     'functions.ipynb',
-     'examples',
+     'intro.md',
+     '.ipynb_checkpoints',
+     'files.ipynb',
+     'testing.ipynb',
+     'types.md',
+     'sequences_mappings.ipynb',
      'extras',
-     'standard_library.md',
+     'index.md',
+     'index.ipynb',
+     'functions.md',
+     'modules.ipynb',
+     'files.md',
      'html',
-     'conditions.md']
+     'images']
 
 
 
@@ -425,18 +426,18 @@ os.listdir(year)
 
 
 
-    ['May',
-     'Aug',
-     'Jun',
-     'Sep',
-     'Nov',
+    ['Jun',
      'Jul',
-     'Oct',
+     'May',
      'Dec',
-     'Jan',
-     'Mar',
      'Feb',
-     'Apr']
+     'Mar',
+     'Jan',
+     'Aug',
+     'Nov',
+     'Oct',
+     'Apr',
+     'Sep']
 
 
 
