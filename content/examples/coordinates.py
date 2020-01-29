@@ -10,7 +10,7 @@ import numpy
 
 
 def rotate(coords, angle):
-    """Rotates an array of x,y coordinates.
+    """Rotates a matrix of x,y coordinates.
 
     Arguments:
         coords: numpy array of coordinates, with n rows and 2 columns (x,y).

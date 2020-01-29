@@ -41,6 +41,7 @@ TOPIC_PAGES = [
     'The command line',
     'Testing',
     'GitHub',
+    'Array computing',
 ]
 
 
@@ -50,6 +51,7 @@ EXAMPLE_FILES = [
     'age_next_year.py',
     'alternative_ending.py',
     'circle.py',
+    'coordinates.py',
     'fun_facts.py',
     'greeting.py',
     'greeting_personal.py',
