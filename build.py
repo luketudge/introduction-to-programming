@@ -22,6 +22,7 @@ html_path = os.path.join(content_path, 'html')
 
 image_paths = [
     os.path.join(content_path, 'images'),
+    os.path.join(examples_path, 'data'),
     os.path.join(extras_path, 'images'),
     os.path.join(extras_path, 'software', 'images'),
 ]
