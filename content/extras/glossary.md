@@ -6,6 +6,15 @@ Like any other specialists, computer programmers use a lot of arcane vocabulary.
 * The answers you find in internet searches will mostly be written using these terms.
 * Once you start working in programming, you will need to talk about the workings of your programs with other programmers.
 
+## alias
+
+This term has more or less the same meaning in programming as it does in everyday English. An alias is an alternative name for something. In Python, aliases occur most commonly when [importing](#import) [modules](#module). A module can be imported under an alias instead of under its normal name, using the `as` [keyword](#keyword). We might do this in order to make it quicker to type the name of the module later, or simply as a matter of convention. For example, numpy is often imported under the alias 'np':
+
+
+```python
+import numpy as np
+```
+
 ## argument
 
 An argument is the input to a [function](#function). When we use a function, we place any arguments that we want to give it in the parentheses following the function name. A function can have no arguments, or just one, or many. In the case of more than one argument, the arguments are separated by commas. For example the `print()` function can have multiple arguments:
@@ -95,6 +104,82 @@ A [variable](#variable) of boolean data [type](#type) (abbreviated to `bool` in 
 
 
 (The term 'boolean' is derived from the name of [George Boole](https://en.wikipedia.org/wiki/George_Boole), who developed various mathematical methods for working with logical True/False values.)
+
+## broadcasting
+
+When working with [arrays](#array), we can apply mathematical operations to two arrays that have the same shape. In this case, the values in the two arrays will be 'matched up' to produce a new array of the same shape whose values are the results of the mathematical operation applied to each pair of values:
+
+
+```python
+import numpy
+a = numpy.array([[1, 2, 3], [4, 5, 6]])
+b = numpy.array([[7, 8, 9], [10, 11, 12]])
+a
+```
+
+
+
+
+    array([[1, 2, 3],
+           [4, 5, 6]])
+
+
+
+
+```python
+b
+```
+
+
+
+
+    array([[ 7,  8,  9],
+           [10, 11, 12]])
+
+
+
+
+```python
+a + b
+```
+
+
+
+
+    array([[ 8, 10, 12],
+           [14, 16, 18]])
+
+
+
+This can work even if one of the arrays is smaller than the other. The smaller array is first repeated (or sometimes we say 'stretched') so that it is equal in shape to the larger array. This is known as 'broadcasting' the smaller array onto the larger one.
+
+For example if we combine an array that is 2 rows by 3 columns with an array that is only 1 row by 3 columns:
+
+
+```python
+c = numpy.array([7, 8, 9])
+c
+```
+
+
+
+
+    array([7, 8, 9])
+
+
+
+
+```python
+a + c
+```
+
+
+
+
+    array([[ 8, 10, 12],
+           [11, 13, 15]])
+
+
 
 ## bug
 
@@ -609,7 +694,7 @@ raise ValueError('That is an invalid value.')
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-19-72fb548a5442> in <module>
+    <ipython-input-25-72fb548a5442> in <module>
     ----> 1 raise ValueError('That is an invalid value.')
     
 
