@@ -71,6 +71,7 @@ EXAMPLE_FILES = [
 DATA_FILES = [
     'austen-sense.txt',
     'guardian_taramasalata.json',
+    'hamburger_emoji.png',
     'melville-moby_dick.txt',
     'penguins.csv',
     'penguins_DE.csv',
