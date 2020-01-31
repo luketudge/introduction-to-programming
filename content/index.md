@@ -30,7 +30,7 @@ If you prefer, you can view interactive versions of the topic pages on [Binder](
 ## Specialist topics
 
 * [Array computing](arrays.md)
-* Images
+* [Images](images.md)
 * Data analysis
 * Natural language processing
 * The internet
