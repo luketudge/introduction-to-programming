@@ -42,6 +42,7 @@ TOPIC_PAGES = [
     'Testing',
     'GitHub',
     'Array computing',
+    'Images',
 ]
 
 
