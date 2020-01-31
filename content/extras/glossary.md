@@ -411,6 +411,10 @@ print(word_length)
     29
 
 
+## grayscale
+
+In image processing, an image without color (i.e. only in shades of gray), is often called a 'grayscale' image.
+
 ## html
 
 Hypertext markup language is the main [markup language](#markup) in which web pages are written. html works by enclosing text inside 'tags' that instruct the web browser to display that text in a particular way, for example by coloring it, turning it into a clickable link, etc.
@@ -722,6 +726,20 @@ There are various internet platforms that host repositories. [GitHub](https://gi
 ## return
 
 [Functions](#function) usually finish by outputting some kind of result. For example, the `len()` function outputs the length of its argument, and the `round()` function outputs the result of rounding its argument to the nearest whole number. We say that when a function has finished its work, the function 'returns', and whatever it gives us when it has finished is the function's 'return value'. For example the return value of `len('floccinaucinihilipilification')` is `29`, and the return value of `round(1.618)` is `2`.
+
+## RGB
+
+In computing, colors are often described as a sequence of three numbers. This sequence represents a color as an additive mixture of three 'base' colors red, green, and blue (RGB), where each of the three numbers represents the 'amount' of each base color in the mixed color. The numbers in an RGB sequence may have different scales, but most commonly they are integers on a scale from 0 to 255.
+
+Some example RGB sequences:
+
+* *(255,0,0)*: pure bright red
+* *(255,0,255)*: purple (mixture of red and blue)
+* *(0,0,0)*: black (no colors)
+* *(127,127,127)*: grey (middling amount of each color)
+* *(255,255,255)*: white (all the colors)
+
+Sometimes an additional number is included at the end of the RGB sequence, representing the degree of transparency that the color should have if it is overlaid on an image.
 
 ## scalar
 
