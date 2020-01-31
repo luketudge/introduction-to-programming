@@ -42,6 +42,7 @@ TOPIC_PAGES = [
     'Testing',
     'GitHub',
     'Array computing',
+    'Images',
 ]
 
 
@@ -70,14 +71,16 @@ EXAMPLE_FILES = [
 
 DATA_FILES = [
     'austen-sense.txt',
-    'melville-moby_dick.txt',
-    'penguins_DE.csv',
-    'top_10_bands.txt',
-    'top_5_bands_UTF8.txt',
     'guardian_taramasalata.json',
+    'hamburger_emoji.png',
+    'melville-moby_dick.txt',
     'penguins.csv',
+    'penguins_DE.csv',
     'README.md',
+    'street_scene.jpg',
+    'top_10_bands.txt',
     'top_5_bands_LATIN1.txt',
+    'top_5_bands_UTF8.txt',
 ]
 
 DATA_FILES = ['data/' + f for f in DATA_FILES]

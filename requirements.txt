@@ -12,6 +12,7 @@ regex
 requests
 seaborn
 selenium
-sklearn
+scikit-image
+scikit-learn
 spyder
 statsmodels
