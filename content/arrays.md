@@ -71,7 +71,7 @@ How does this work? To multiply one matrix (*A*) by another (*B*), follow these 
   * ... and multiply them together.
   * Then sum up all the results of these multiplications and put their sum in the corresponding cell of the new AB matrix.
 
-![](images/Matrix_multiplication_diagram_2.svg)
+![](images/Matrix_multiplication_diagram_2.png)
 
 (Image source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Matrix_multiplication_diagram_2.svg), GNU Free Documentation License)
 
