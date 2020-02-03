@@ -1,8 +1,7 @@
 #### Project-specific ignores ####
 
-content/examples/data/alternative_*
+content/html/*.html
 psy/
-tests/temp.zip
 
 
 #### General Python ignores ####

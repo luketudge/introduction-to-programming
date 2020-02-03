@@ -7,10 +7,10 @@
 
 Materials for the *Introduction to Programming* class.
 
-* [Software](content/extras/software/install.md). Instructions for installing the necessary software on your own computer.
-* [Readings](content/extras/readings.md). Some recommended books.
-* [Topics](content/index.md). Head here to start learning about programming with Python.
+* [Software](content/extras/software/install.ipynb). Instructions for installing the necessary software on your own computer.
+* [Readings](content/extras/readings.ipynb). Some recommended books.
+* [Topics](content/index.ipynb). Head here to start learning about programming with Python.
 * [Example programs](content/examples). View the example programs or download them to your computer.
-* [Glossary](content/extras/glossary.md). A glossary of Python programming terms.
+* [Glossary](content/extras/glossary.ipynb). A glossary of Python programming terms.
 
 [Contribute](contributing.md) to the materials.
