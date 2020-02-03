@@ -16,3 +16,4 @@ scikit-image
 scikit-learn
 spyder
 statsmodels
+xlrd
