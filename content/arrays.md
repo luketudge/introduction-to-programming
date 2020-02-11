@@ -767,7 +767,7 @@ pyplot.show()
 
 ### Customizing plots
 
-Often we will want to specify a few more details about the appearance of our plots. `matplotlib` provides lots and lots of additional function for adding features to a plot, and these functions accept many keyword arguments for changing things like colors, types of dots and lines, etc.
+Often we will want to specify a few more details about the appearance of our plots. `matplotlib` provides lots and lots of additional functions for adding features to a plot, and these functions accept many keyword arguments for changing things like colors, types of dots and lines, etc.
 
 To demonstrate the general idea, we will add just one slight flourish to our plot. It would be nice to have some lines on the plot showing the center of the coordinate space, so that we can verify that the points have been rotated around this center. And it would be nice if these lines were black rather than `matplotlib`'s default blue.
 
