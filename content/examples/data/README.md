@@ -7,4 +7,5 @@
 * [penguins.csv](penguins.csv). Comma-separated table of data from a [research project](https://doi.org/10.1242/jeb.013235) by Meir and Ponganis recording the duration and depth of the dives of some emperor penguins, along with the penguin's heart rate during the dive.
   * [penguins_DE.csv](penguins_DE.csv). The same data in the format that is the default in some non-English-language versions of spreadsheet programs (semicolon column separator, comma decimal separator).
   * [penguins.xlsx](penguins.xlsx). The same data in Microsoft Excel format.
-* [street_scene.jpg](street_scene.jpg). Photo of a street in dowtown Hong Kong.
+  * [penguins.svg](penguins.svg), [penguins.html](penguins.html). Figures produced using the penguins data.
+* [street_scene.jpg](street_scene.jpg). Photo of a street in downtown Hong Kong.

@@ -75,6 +75,8 @@ DATA_FILES = [
     'hamburger_emoji.png',
     'melville-moby_dick.txt',
     'penguins.csv',
+    'penguins.html',
+    'penguins.svg',
     'penguins_DE.csv',
     'README.md',
     'street_scene.jpg',
