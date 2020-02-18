@@ -8,7 +8,6 @@ matplotlib
 nltk
 numpy
 pandas
-plotnine
 pytest
 regex
 requests
