@@ -24,6 +24,7 @@ If you prefer, you can view interactive versions of the topic pages on [Binder](
 * [The command line](command_line.md)
 * [Testing](testing.md)
 * [GitHub](github.md)
+* Virtual environments
 * Documentation
 * Style
 
@@ -31,8 +32,9 @@ If you prefer, you can view interactive versions of the topic pages on [Binder](
 
 * [Array computing](arrays.md)
 * [Images](images.md)
-* Data analysis
+* [Data analysis](data_analysis.md)
 * Natural language processing
+* Machine learning
 * The internet
 * Relational databases
 * Psychopy
