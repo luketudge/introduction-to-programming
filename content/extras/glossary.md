@@ -272,7 +272,7 @@ Sherlock,39,GB
 
 ## dataframe
 
-A structure that stores data in rows and columns is sometimes termed a 'dataframe' in computing. A more everyday term is simply 'table'.
+A structure that stores data in rows and columns is sometimes termed a 'dataframe' in computing. A more everyday term is simply 'table'. Typically, each row of a data frame represents one 'observation', which may be for example a customer, a purchase, a visit to a webpage, etc. Each column represents one piece of information recorded for that observation, such as a date, a time, a price, a rating. etc.
 
 ## delimiter
 
@@ -632,19 +632,78 @@ To access things that are stored in a namespace rather than in the main workspac
 my_module.useful_function()
 ```
 
+## NaN
+
+'Not a Number' (NaN) is an abbreviation often used in computing and data analysis to stand for a piece of information that is missing or undefined, but could in principle have been a number. For example, [logarithm](https://en.wikipedia.org/wiki/Logarithm) functions normally output numbers, but they are undefined for negative inputs, so a computing system might choose to represent the result of asking for a logarithm of a negative number as a 'NaN' (and perhaps also issue a warning message).
+
+There is no NaN value provided in basic Python, but there is one included in the `numpy` [package](#package):
+
+
+```python
+import numpy
+numpy.log(-1)
+```
+
+    /home/lt/GitHub/introduction-to-programming/venv/lib/python3.6/site-packages/ipykernel_launcher.py:2: RuntimeWarning: invalid value encountered in log
+      
+
+
+
+
+
+    nan
+
+
+
 ## newline
 
-When we view a text file that is written over multiple lines, we just see the separate lines of text neatly displayed in our text editor or word processor. But behind the scenes our computer needs some way of storing information about where one line ends and the next begins. This is achieved by the use of a 'newline character' to represent the break between one line and the next. This character is not explicitly shown in a normal text editor, but it is there in the file. In some word processors, such as OpenOffice and Microsoft Word, you can opt to see the newline characters explicitly, and they are typically shown as a '[pilcrow](https://en.wikipedia.org/wiki/Pilcrow)' (¶).
+When we view a text file that is written over multiple lines, we just see the separate lines of text neatly displayed in our text editor or word processor. But behind the scenes our computer does not actually store lines of text in separate 'rows' of its memory. It needs instead some way of storing information about where one line ends and the next begins. This is achieved by the use of a 'newline character' to represent the break between one line and the next. This character is not explicitly shown in a normal text editor, but it is there in the file. In some word processors, such as OpenOffice and Microsoft Word, you can opt to see the newline characters explicitly, and they are typically shown as a '[pilcrow](https://en.wikipedia.org/wiki/Pilcrow)' (¶).
 
-If we want to include a newline character in a [string](#string) in Python, we can represent it with the character combination `'\n'`. These two characters together are interpreted as a single character meaning 'start a new line here'.
+If we want to include a newline character in a [string](#string) in Python, we can represent it with the character combination `'\n'`. These two characters together are interpreted as a single character meaning 'start a new line here':
+
+
+```python
+message = 'Hello,\nworld!'
+print(message)
+```
+
+    Hello,
+    world!
+
 
 ## none
 
-The `None` data [type](#type) in Python is used to indicate something that is undefined or has no particular content.
+The `None` [data type](#type) in Python is used to indicate something that is undefined or has no particular content.
 
 ## operator
 
-An operator is a symbol that produces some result when written in an expression along with some other components. For example, the `+` operator produces the sum of two numbers (for example in the expression `2 + 2`). Some operators may have different effects depending on the [type](#type) of the other components of the expression. For example, if used with [strings](#string) instead of numbers the `+` operator [concatenates](#concatenate) the strings.
+An operator is a symbol that produces some result when written in an expression along with some other components. For example, the `+` operator produces the sum of two numbers:
+
+
+```python
+2 + 2
+```
+
+
+
+
+    4
+
+
+
+Some operators may have different effects depending on the [type](#type) of the other components of the expression. For example, if used with [strings](#string) instead of numbers the `+` operator [concatenates](#concatenate) the strings.
+
+
+```python
+'a' + 'b'
+```
+
+
+
+
+    'ab'
+
+
 
 ## OS
 
@@ -654,7 +713,7 @@ The Operating System (abbreviated to 'OS') for a computer is the 'main program' 
 
 A package is a program that adds to the functionality of an existing program. For example, Python packages add new [modules](#module) to a Python installation.
 
-A 'package manager' is a program that downloads, installs, and updates packages. For example, one of the functions of [Anaconda](https://www.anaconda.com/distribution/) is to act as a package manager for Python and other data science software.
+A 'package manager' is a program that downloads, installs, and updates packages. For example, one of the functions of [Anaconda](https://www.anaconda.com/distribution) is to act as a package manager for Python and other data science software.
 
 ## path
 
@@ -698,7 +757,7 @@ raise ValueError('That is an invalid value.')
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-25-72fb548a5442> in <module>
+    <ipython-input-27-72fb548a5442> in <module>
     ----> 1 raise ValueError('That is an invalid value.')
     
 

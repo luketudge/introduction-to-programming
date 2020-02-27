@@ -43,6 +43,7 @@ TOPIC_PAGES = [
     'GitHub',
     'Array computing',
     'Images',
+    'Data analysis',
 ]
 
 
@@ -58,6 +59,7 @@ EXAMPLE_FILES = [
     'greeting_personal.py',
     'guess_the_animal.py',
     'hoff.py',
+    'horses.py',
     'ids.py',
     'initials.py',
     'make_monthly_directories.py',
@@ -73,6 +75,7 @@ DATA_FILES = [
     'austen-sense.txt',
     'guardian_taramasalata.json',
     'hamburger_emoji.png',
+    'kentucky_derby.csv',
     'melville-moby_dick.txt',
     'penguins.csv',
     'penguins.html',
