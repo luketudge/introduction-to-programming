@@ -60,6 +60,7 @@ EXAMPLE_FILES = [
     'guess_the_animal.py',
     'hoff.py',
     'horses.py',
+    'html_examples.html',
     'ids.py',
     'initials.py',
     'make_monthly_directories.py',
