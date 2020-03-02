@@ -44,6 +44,7 @@ TOPIC_PAGES = [
     'Array computing',
     'Images',
     'Data analysis',
+    'The internet',
 ]
 
 
@@ -57,9 +58,11 @@ EXAMPLE_FILES = [
     'fun_facts.py',
     'greeting.py',
     'greeting_personal.py',
+    'guardian_top_article.py',
     'guess_the_animal.py',
     'hoff.py',
     'horses.py',
+    'html_examples.html',
     'ids.py',
     'initials.py',
     'make_monthly_directories.py',
@@ -81,6 +84,7 @@ DATA_FILES = [
     'penguins.html',
     'penguins.svg',
     'penguins_DE.csv',
+    'penguins.xlsx',
     'README.md',
     'street_scene.jpg',
     'top_10_bands.txt',
