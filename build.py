@@ -42,6 +42,7 @@ html_pattern = '*.html'
 
 examples_patterns = [
     python_pattern,
+    html_pattern,
     os.path.join('data', files_pattern),
 ]
 

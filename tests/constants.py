@@ -44,7 +44,7 @@ TOPIC_PAGES = [
     'Array computing',
     'Images',
     'Data analysis',
-    'The Internet',
+    'The internet',
 ]
 
 
@@ -84,6 +84,7 @@ DATA_FILES = [
     'penguins.html',
     'penguins.svg',
     'penguins_DE.csv',
+    'penguins.xlsx',
     'README.md',
     'street_scene.jpg',
     'top_10_bands.txt',

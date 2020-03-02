@@ -57,8 +57,8 @@ page = get_and_soupify(main_url)
 # with class 'fc-item__link' ...
 # and data-link-name 'article'.
 
-headlines = page.find('section', attrs={'id':'headlines'})
-top_headline = headlines.find('a', attrs={'class':'fc-item__link', 'data-link-name':'article'})
+headlines = page.find('section', attrs={'id': 'headlines'})
+top_headline = headlines.find('a', attrs={'class': 'fc-item__link', 'data-link-name': 'article'})
 article_url = top_headline['href']
 
 
@@ -70,7 +70,7 @@ article_page = get_and_soupify(article_url)
 # Within the first <div> tag with class 'content__article-body' ...
 # all the <p> tags.
 
-main_section = article_page.find('div', attrs={'class':'content__article-body'})
+main_section = article_page.find('div', attrs={'class': 'content__article-body'})
 paragraphs = main_section.find_all('p')
 
 
