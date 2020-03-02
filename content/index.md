@@ -35,6 +35,6 @@ If you prefer, you can view interactive versions of the topic pages on [Binder](
 * [Data analysis](data_analysis.md)
 * Natural language processing
 * Machine learning
-* The internet
+* [The internet](internet.md)
 * Relational databases
 * Psychopy
