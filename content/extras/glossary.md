@@ -15,6 +15,10 @@ This term has more or less the same meaning in programming as it does in everyda
 import numpy as np
 ```
 
+## API
+
+Sometimes the developers of computer programs would like their programs to be able to access information from websites or other programs hosted on the internet. For example, someone who is developing a smartphone app for navigating the Paris metro system needs some way for their app to retrieve information about train times from the metro's own [servers](#server). The administrators of the Paris metro's website may provide a structured method by which other applications can access its data. Such a method is termed an 'Application Programming Interface' (API). The makers of other apps can then use the rules of the API to submit requests for information, and these requests will be answered in a particular format according to the rules of the API.
+
 ## argument
 
 An argument is the input to a [function](#function). When we use a function, we place any arguments that we want to give it in the parentheses following the function name. A function can have no arguments, or just one, or many. In the case of more than one argument, the arguments are separated by commas. For example the `print()` function can have multiple arguments:
@@ -194,6 +198,10 @@ Python provides a few fundamental [functions](#function) that are already availa
 To 'call' a [function](#function) simply means to run that function and make it do its work. The [syntax](#syntax) for calling a function is to place parentheses `()` after the function name, and optionally to place any input [arguments](#argument) inside the parentheses.
 
 (See the entry on [functions](#function) for an example of a 'function call'.)
+
+## client
+
+A computer, or a program on a computer, that sends out a request over the internet for some information, is called a 'client'. The computer at the other end of the internet connection that supplies the requested information is called the '[server](#server)'. The most common client application on a personal computer is a web browser like Firefox or Chrome.
 
 ## coercion
 
@@ -415,9 +423,9 @@ print(word_length)
 
 In image processing, an image without color (i.e. only in shades of gray), is often called a 'grayscale' image.
 
-## html
+## HTML
 
-Hypertext markup language is the main [markup language](#markup) in which web pages are written. html works by enclosing text inside 'tags' that instruct the web browser to display that text in a particular way, for example by coloring it, turning it into a clickable link, etc.
+HyperText Markup Language is the main [markup language](#markup) in which web pages are written. HTML works by enclosing text inside 'tags' that instruct the web browser to display that text in a particular way, for example by coloring it, turning it into a clickable link, etc.
 
 ## IDE
 
@@ -466,7 +474,7 @@ A [data type](#type) is 'iterable' if it contains multiple values, and it is pos
 
 ## JSON
 
-JavaScript Object Notation (JSON) is a text file format for storing data. It stores data as a group of nested [lists](#list) and [dictionaries](#dictionary) that contain [strings](#string) and numbers, using the same [syntax](#syntax) as Python. As the name suggests, JSON was inspired by the JavScript programming language, but the syntax of this language was itself inspired by Python and by other similar programming languages. The JSON format is commonly used for transferring data between programs written in different languages, or for transferring data over the internet.
+JavaScript Object Notation (JSON) is a text file format for storing data. It stores data as a group of nested [lists](#list) and [dictionaries](#dictionary) that contain [strings](#string) and numbers, using the same [syntax](#syntax) as Python. As the name suggests, JSON was inspired by the JavaScript programming language, but the syntax of this language was itself inspired by Python and by other similar programming languages. The JSON format is commonly used for transferring data between programs written in different languages, or for transferring data over the internet.
 
 ## key
 
@@ -521,7 +529,7 @@ See [dictionary](#dictionary).
 
 ## markup
 
-A 'markup language' is a programming language that adds extra combinations of symbols to normal text, in order to instruct a computer program to display that text in a certain way. For example, the markup language [html](#html) tells a web browser how to display the text of a webpage.
+A 'markup language' is a programming language that adds extra combinations of symbols to normal text, in order to instruct a computer program to display that text in a certain way. For example, the markup language [HTML](#html) tells a web browser how to display the text of a webpage.
 
 ## matrix
 
@@ -715,6 +723,10 @@ A package is a program that adds to the functionality of an existing program. Fo
 
 A 'package manager' is a program that downloads, installs, and updates packages. For example, one of the functions of [Anaconda](https://www.anaconda.com/distribution) is to act as a package manager for Python and other data science software.
 
+## parse
+
+The process of interpreting structured text (for example [HTML](#html), [JSON](#json), or a Python file itself) and dividing it up into meaningful functional units is known as 'parsing' the text. This is the same sense in which linguists use the term when they talk about 'parsing' natural human language.
+
 ## path
 
 The location of a file within the directory system of a computer is known as that file's 'path'. This is the same sense of 'path' as in the English phrase 'a path through the woods'; a file's path describes a series of turnings to take in the file system in order to get to that file.
@@ -757,7 +769,7 @@ raise ValueError('That is an invalid value.')
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-27-72fb548a5442> in <module>
+    <ipython-input-29-72fb548a5442> in <module>
     ----> 1 raise ValueError('That is an invalid value.')
     
 
@@ -804,6 +816,10 @@ Sometimes an additional number is included at the end of the RGB sequence, repre
 
 A 'scalar' is simply a single number, such as `100` or `1.618`. This term is used in order to distinguish single numbers from collections of multiple numbers such as [vectors](#vector) or [matrices](#matrix).
 
+## scraping
+
+The process of automatically fetching pages from the internet and extracting information from them is often known as 'scraping' the internet.
+
 ## script
 
 A script is a text file containing commands that are intended to be run, in order, as a program. The sense of 'script' here is the same as in an actor's script, which tells them what to say and do. Not all text files containing commands are scripts. Some may instead be [modules](#module), which do not of themselves run a specific program, but instead provide extra components that other programs may make use of.
@@ -819,6 +835,10 @@ A separator is a character that is used to separate different parts of a piece o
 *Spreadsheet files*. A separator is used in some text file formats to separate the columns of a spreadsheet. For example, in the [csv](#csv) file format, a comma separates the columns.
 
 You may occasionally also encounter the term 'delimiter' used with essentially the same meaning as 'separator'. Technically, a delimiter character marks the limits of some entity (i.e. its beginning and its end). For example, the quote marks `''` mark the beginning and end of a [string](#string). But since delimiting an entity can in a certain sense also be thought of as separating it from its surroundings, the two terms are often effectively synonyms and the distinction is one that only matters to the sort of person whose mission in life is to make sure nobody is wrong on the internet.
+
+## server
+
+A server is a computer on the internet that provides information, such as web pages, to other computers. The other computers using this service, called [clients](#client), send a request to the server for a particular piece of information, and the server sends a response either delivering that information or explaining why it could not be delivered.
 
 ## sequence
 

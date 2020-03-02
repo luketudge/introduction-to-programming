@@ -44,6 +44,7 @@ TOPIC_PAGES = [
     'Array computing',
     'Images',
     'Data analysis',
+    'The Internet',
 ]
 
 
@@ -57,6 +58,7 @@ EXAMPLE_FILES = [
     'fun_facts.py',
     'greeting.py',
     'greeting_personal.py',
+    'guardian_top_article.py',
     'guess_the_animal.py',
     'hoff.py',
     'horses.py',
