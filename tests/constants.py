@@ -45,6 +45,7 @@ TOPIC_PAGES = [
     'Images',
     'Data analysis',
     'The internet',
+    'Relational databases',
 ]
 
 
@@ -69,6 +70,7 @@ EXAMPLE_FILES = [
     'my_program.py',
     'name_trivia.py',
     'slim_shady.py',
+    'songs_tables.sql',
     'spoonerisms.py',
     'test_math_is_working_as_normal.py',
     'test_spoonerisms.py',
@@ -86,6 +88,9 @@ DATA_FILES = [
     'penguins_DE.csv',
     'penguins.xlsx',
     'README.md',
+    'songs.csv',
+    'songs.db',
+    'songs.xlsx',
     'street_scene.jpg',
     'top_10_bands.txt',
     'top_5_bands_LATIN1.txt',

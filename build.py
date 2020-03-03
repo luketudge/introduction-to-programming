@@ -39,10 +39,12 @@ files_pattern = '*.*'
 python_pattern = '*.*py*'
 
 html_pattern = '*.html'
+sql_pattern = '*.sql'
 
 examples_patterns = [
     python_pattern,
     html_pattern,
+    sql_pattern,
     os.path.join('data', files_pattern),
 ]
 
