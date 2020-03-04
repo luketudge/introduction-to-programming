@@ -1,8 +1,8 @@
--- SQL commands for creating the tables in the 'songs.db' database.
+-- SQL script for creating the tables in the 'songs.db' database.
 
 -- artists:
 -- no duplicate artist names
-CREATE TABLE artists
+CREATE TABLE IF NOT EXISTS artists
 (id INTEGER PRIMARY KEY,
 artist TEXT UNIQUE,
 country TEXT);
@@ -10,7 +10,7 @@ country TEXT);
 -- albums:
 -- no duplicate album names for the same artist
 -- album artist must exist in the artists table
-CREATE TABLE albums
+CREATE TABLE IF NOT EXISTS albums
 (id INTEGER PRIMARY KEY,
 album TEXT,
 year INTEGER,
@@ -22,7 +22,7 @@ FOREIGN KEY(artist_id) REFERENCES artists(id));
 -- no duplicate song names for the same album
 -- no duplicate song numbers for the same album
 -- song album must exist in the albums table
-CREATE TABLE songs
+CREATE TABLE IF NOT EXISTS songs
 (id INTEGER PRIMARY KEY,
 song TEXT,
 number INTEGER,

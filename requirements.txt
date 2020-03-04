@@ -15,6 +15,5 @@ seaborn
 selenium
 scikit-image
 scikit-learn
-sqlalchemy
 statsmodels
 xlrd
