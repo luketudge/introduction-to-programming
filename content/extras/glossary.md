@@ -219,6 +219,8 @@ A comment is a human-language piece of text that we insert into our Python progr
 
 In [version control](#versioning), 'committing' changes to a project means confirming those changes as the next new part of the project. Used as a noun, a 'commit' refers to all the changes that were made when committing.
 
+When working with a database, 'committing' also refers to writing any current changes to the database.
+
 ## comprehension
 
 A comprehension is a technique for creating multiple values by writing a 'formula' that generates those values, instead of writing them all out one by one. The [syntax](#syntax) for a comprehension uses the [keywords](#keyword) `for` and `in`.
@@ -242,7 +244,7 @@ There are also comprehensions for creating [dictionaries](#dictionary).
 
 ## concatenate
 
-In computing, to 'concatenate' means to stick together one after the other. So the result of concatenating `'Hello '` and `'world!'` is `'Hello world!'`.
+In computing, to 'concatenate' means to stick together one after the other. So for example the result of concatenating the [strings](#string) `'Hello '` and `'world!'` is `'Hello world!'`.
 
 ## condition
 
@@ -288,7 +290,7 @@ See [separator](#separator).
 
 ## dictionary
 
-A dictionary (often abbreviated to 'dict') is a [data type](#type) that can store multiple values. It does so by storing the values under labels, termed '[keys](#key)'.
+A dictionary (abbreviated to 'dict' in Python) is a [data type](#type) that can store multiple values. It does so by storing the values under labels, termed '[keys](#key)'.
 
 The [syntax](#syntax) for creating a dictionary is to place pairs of keys and values inside the 'curly braces' `{}`, separating each key from its associated value with a colon `:` and separating each pair from the next with a comma:
 
@@ -458,7 +460,7 @@ print(shopping[2])
 
 ## integer
 
-An integer is a whole number. So 2 is an integer, but 1.618 is not. 'Integer', abbreviated to `int`, is one of the basic data [types](#type) that Python can represent. A non-whole number is instead called a '[float](#float)'.
+An integer is a whole number. So 2 is an integer, but 1.618 is not. 'Integer' (abbreviated to `int` in Python) is one of the basic data [types](#type) that Python can represent. A non-whole number is instead called a '[float](#float)'.
 
 ## interpreter
 
@@ -863,6 +865,14 @@ shopping[1:3]
     ['bacon', 'black pudding']
 
 
+
+## SQL
+
+Structured Query Language (SQL) is a programming language that is very widely used for managing databases. SQL provides commands that are broadly of three different types:
+
+* Define the relations and constraints that give a database its structure (sometimes called the 'schema' of the database).
+* Modify the data in the database, for example by inserting, deleting, or changing information.
+* Fetch different combinations of information from the database (usually called 'querying' the database).
 
 ## string
 
