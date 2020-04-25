@@ -1012,9 +1012,9 @@ The fact that your spreadsheet program opens one or other of these two file form
 
 ### pandas
 
-We could process comma-separated tables using basic Python string methods, but this would be tedious. There are instead additional [packages](extras/glossary.md#packages) for Python that provide functions for reading delimited text files as tables of data. The most popular of these is a package called [`pandas`](https://pandas.pydata.org/). `pandas` is not part of the Python [standard library](standard_library.md), but it is very widely used, and it is provided as part of the Anaconda Python installation, so you probably already have it installed.
+We could process comma-separated tables using basic Python string methods, but this would be tedious. There are instead additional [packages](extras/glossary.md#packages) for Python that provide functions for reading delimited text files as tables of data. The most popular of these is a package called [`pandas`](https://pandas.pydata.org/). `pandas` is a third-party package; it is not part of the Python [standard library](standard_library.md). But it is very widely used, and it is provided as part of the Anaconda Python installation, so if you installed Anaconda then you already have `pandas`.
 
-The `pandas` function `read_csv()` reads a comma-separated file, but instead of just reading it as plain text it interprets the structure of the file to produce a table of data (`pandas` refers to an object storing table-format data as a [dataframe](extras/glossary.md#dataframe)).
+The `pandas` function `read_csv()` reads a comma-separated file, but instead of just reading it as plain text it interprets the structure of the file to produce a table of data (`pandas` calls a table of data a '[dataframe](extras/glossary.md#dataframe)').
 
 
 ```python

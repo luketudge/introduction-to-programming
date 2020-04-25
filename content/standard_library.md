@@ -264,39 +264,49 @@ os.listdir()
 
 
 
-    ['intro.ipynb',
-     'my_new_directory',
-     'sequences_mappings.md',
-     'standard_library.md',
-     'iteration.md',
-     'arrays.ipynb',
-     'standard_library.ipynb',
+    ['data_analysis.ipynb',
      'conditions.ipynb',
-     'functions.ipynb',
+     'images',
+     'testing.md',
      'examples',
      'conditions.md',
-     'testing.md',
+     'functions.md',
      'github.ipynb',
-     'github.md',
-     'command_line.md',
-     'types.ipynb',
+     'standard_library.md',
+     'arrays.ipynb',
      'command_line.ipynb',
+     'arrays.md',
+     'github.md',
+     'index.md',
+     'databases.md',
+     'files.md',
      'iteration.ipynb',
-     'modules.md',
-     'intro.md',
+     'testing.ipynb',
+     'html',
+     'databases.ipynb',
+     'my_new_directory',
+     'intro.ipynb',
+     'sequences_mappings.md',
+     'internet.md',
+     'data_analysis.md',
+     'internet.ipynb',
      '.ipynb_checkpoints',
      'files.ipynb',
-     'testing.ipynb',
-     'types.md',
-     'sequences_mappings.ipynb',
-     'extras',
-     'index.md',
+     'standard_library.ipynb',
+     'command_line.md',
+     'modules.md',
      'index.ipynb',
-     'functions.md',
+     'types.md',
+     'virtual_environments.ipynb',
      'modules.ipynb',
-     'files.md',
-     'html',
-     'images']
+     'types.ipynb',
+     'extras',
+     'images.md',
+     'functions.ipynb',
+     'images.ipynb',
+     'intro.md',
+     'iteration.md',
+     'sequences_mappings.ipynb']
 
 
 
@@ -426,18 +436,18 @@ os.listdir(year)
 
 
 
-    ['Jun',
-     'Jul',
-     'May',
-     'Dec',
-     'Feb',
-     'Mar',
-     'Jan',
+    ['Jul',
      'Aug',
-     'Nov',
+     'May',
      'Oct',
-     'Apr',
-     'Sep']
+     'Dec',
+     'Jun',
+     'Feb',
+     'Nov',
+     'Jan',
+     'Sep',
+     'Mar',
+     'Apr']
 
 
 
@@ -640,12 +650,10 @@ It is important to note some caveats when it comes to third-party packages. That
 
 For this reason, it is a good idea to stick to the standard library when you can. But if you perform specialized tasks in programming, you will often be unable to avoid relying on third-party packages. Here are a couple of things to check when deciding whether to use one, and which one to choose if more than one is available for what you want to do:
 
-* Do many other people use this package? If lots of people are using a package, that probably means that it at least works. And the fact that lots of people are using it usually means that bugs won't go unnoticed and may even be quickly fixed by one of the other users.
+* Do many other people use this package? If lots of people are using a package, that probably means that it at least works. And the fact that lots of people are using it usually means that [bugs](extras/glossary.md#bug) won't go unnoticed and may even be quickly fixed by one of the other users.
 * Is the package still being 'maintained' (i.e. are the developers of the package currently still fixing bugs and responding to questions)? If a package hasn't been updated for a long time, it might no longer work in the current version of Python, or you might have nobody to turn to if you have problems.
 
-For some of the specialist topics later on we will need to [import](extras/glossary.md#import) modules from third-party packages. When we do, I will note whether an `import` is from the standard library or whether it is from a third-party package, and I will provide instructions for installing it if necessary.
-
-(However, if you have installed Python via Anaconda, then almost all of the third-party packages that we need for this class will already have been installed by default. You can read a list of all the additional packages that Anaconda installs for you [here](https://docs.anaconda.com/anaconda/packages/pkg-docs/)).
+For some of the specialist topics later on we will need to [import](extras/glossary.md#import) modules from third-party packages. When we do, I will note whether an `import` is from the standard library or whether it is from a third-party package, and I will provide instructions for installing it if necessary. However, if you have installed Python via Anaconda, then almost all of the third-party packages that we need for this class will already have been installed by default. You can read a list of all the additional packages that Anaconda installs for you at the [Anaconda package listings](https://docs.anaconda.com/anaconda/packages/pkg-docs/).
 
 ## Exercises
 
