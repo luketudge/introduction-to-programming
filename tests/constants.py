@@ -41,7 +41,6 @@ TOPIC_PAGES = [
     'The command line',
     'Testing',
     'GitHub',
-    'Virtual environments',
     'Array computing',
     'Images',
     'Data analysis',
