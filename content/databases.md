@@ -1,5 +1,5 @@
 <h1>Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-1">Objective</a></span></li><li><span><a href="#Long-format" data-toc-modified-id="Long-format-2">Long format</a></span></li><li><span><a href="#Relational-databases" data-toc-modified-id="Relational-databases-3">Relational databases</a></span><ul class="toc-item"><li><span><a href="#Joining" data-toc-modified-id="Joining-3.1">Joining</a></span></li></ul></li><li><span><a href="#Constraints" data-toc-modified-id="Constraints-4">Constraints</a></span></li><li><span><a href="#SQL" data-toc-modified-id="SQL-5">SQL</a></span><ul class="toc-item"><li><span><a href="#DB-Browser" data-toc-modified-id="DB-Browser-5.1">DB Browser</a></span></li><li><span><a href="#sqlite3" data-toc-modified-id="sqlite3-5.2">sqlite3</a></span></li><li><span><a href="#Queries" data-toc-modified-id="Queries-5.3">Queries</a></span><ul class="toc-item"><li><span><a href="#SELECT" data-toc-modified-id="SELECT-5.3.1">SELECT</a></span></li><li><span><a href="#ORDER-BY" data-toc-modified-id="ORDER-BY-5.3.2">ORDER BY</a></span></li><li><span><a href="#WHERE" data-toc-modified-id="WHERE-5.3.3">WHERE</a></span></li><li><span><a href="#JOIN" data-toc-modified-id="JOIN-5.3.4">JOIN</a></span></li></ul></li><li><span><a href="#Miscellaneous-SQL-syntax" data-toc-modified-id="Miscellaneous-SQL-syntax-5.4">Miscellaneous SQL syntax</a></span><ul class="toc-item"><li><span><a href="#Complex-commands" data-toc-modified-id="Complex-commands-5.4.1">Complex commands</a></span></li><li><span><a href="#Case" data-toc-modified-id="Case-5.4.2">Case</a></span></li><li><span><a href="#Comments" data-toc-modified-id="Comments-5.4.3">Comments</a></span></li></ul></li><li><span><a href="#Creating-tables" data-toc-modified-id="Creating-tables-5.5">Creating tables</a></span></li><li><span><a href="#Adding-data" data-toc-modified-id="Adding-data-5.6">Adding data</a></span><ul class="toc-item"><li><span><a href="#INSERT" data-toc-modified-id="INSERT-5.6.1">INSERT</a></span></li><li><span><a href="#Constraints-again" data-toc-modified-id="Constraints-again-5.6.2">Constraints again</a></span></li><li><span><a href="#Python-variables" data-toc-modified-id="Python-variables-5.6.3">Python variables</a></span></li><li><span><a href="#Foreign-keys" data-toc-modified-id="Foreign-keys-5.6.4">Foreign keys</a></span></li></ul></li><li><span><a href="#SQL-scripts" data-toc-modified-id="SQL-scripts-5.7">SQL scripts</a></span></li><li><span><a href="#SQL-injection" data-toc-modified-id="SQL-injection-5.8">SQL injection</a></span></li></ul></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-6">Exercise</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Objective" data-toc-modified-id="Objective-1">Objective</a></span></li><li><span><a href="#Long-format" data-toc-modified-id="Long-format-2">Long format</a></span></li><li><span><a href="#Relational-databases" data-toc-modified-id="Relational-databases-3">Relational databases</a></span><ul class="toc-item"><li><span><a href="#Joining" data-toc-modified-id="Joining-3.1">Joining</a></span></li></ul></li><li><span><a href="#Constraints" data-toc-modified-id="Constraints-4">Constraints</a></span></li><li><span><a href="#SQL" data-toc-modified-id="SQL-5">SQL</a></span><ul class="toc-item"><li><span><a href="#Pronunciation" data-toc-modified-id="Pronunciation-5.1">Pronunciation</a></span></li><li><span><a href="#DB-Browser" data-toc-modified-id="DB-Browser-5.2">DB Browser</a></span></li><li><span><a href="#sqlite3" data-toc-modified-id="sqlite3-5.3">sqlite3</a></span></li><li><span><a href="#Queries" data-toc-modified-id="Queries-5.4">Queries</a></span><ul class="toc-item"><li><span><a href="#SELECT" data-toc-modified-id="SELECT-5.4.1">SELECT</a></span></li><li><span><a href="#ORDER-BY" data-toc-modified-id="ORDER-BY-5.4.2">ORDER BY</a></span></li><li><span><a href="#WHERE" data-toc-modified-id="WHERE-5.4.3">WHERE</a></span></li><li><span><a href="#JOIN" data-toc-modified-id="JOIN-5.4.4">JOIN</a></span></li></ul></li><li><span><a href="#Miscellaneous-SQL-syntax" data-toc-modified-id="Miscellaneous-SQL-syntax-5.5">Miscellaneous SQL syntax</a></span><ul class="toc-item"><li><span><a href="#Complex-commands" data-toc-modified-id="Complex-commands-5.5.1">Complex commands</a></span></li><li><span><a href="#Case" data-toc-modified-id="Case-5.5.2">Case</a></span></li><li><span><a href="#Comments" data-toc-modified-id="Comments-5.5.3">Comments</a></span></li></ul></li><li><span><a href="#Creating-tables" data-toc-modified-id="Creating-tables-5.6">Creating tables</a></span></li><li><span><a href="#Adding-data" data-toc-modified-id="Adding-data-5.7">Adding data</a></span><ul class="toc-item"><li><span><a href="#INSERT" data-toc-modified-id="INSERT-5.7.1">INSERT</a></span></li><li><span><a href="#Constraints-again" data-toc-modified-id="Constraints-again-5.7.2">Constraints again</a></span></li><li><span><a href="#Python-variables" data-toc-modified-id="Python-variables-5.7.3">Python variables</a></span></li><li><span><a href="#Foreign-keys" data-toc-modified-id="Foreign-keys-5.7.4">Foreign keys</a></span></li></ul></li><li><span><a href="#SQL-scripts" data-toc-modified-id="SQL-scripts-5.8">SQL scripts</a></span></li><li><span><a href="#SQL-injection" data-toc-modified-id="SQL-injection-5.9">SQL injection</a></span></li></ul></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-6">Exercise</a></span></li></ul></div>
 
 # Relational databases
 
@@ -988,7 +988,7 @@ albums_artists[albums_artists['Country']=='GB']
 
 ## Constraints
 
-So a relational database is somewhat like a spreadsheet containing multiple related tables. But please don't tell anyone that I said this. Most programmers who work with relational databases would be horrified at the suggestion of using a Microsoft Excel file as a database. Justifiably so, as there is one more very desirable feature of a database that neither an Excel spreadsheet nor the collection of [dataframes](extras/glossary.md#dataframe) stored in it fulfills.
+So a relational database is somewhat like a spreadsheet containing multiple related tables. But please don't tell anyone that I said this. Most programmers who work with relational databases would be horrified at the suggestion of using a Microsoft Excel file as a database. Justifiably so. Microsoft Excel is a spectacularly awful program in lots of very creative ways. There is also one more very desirable feature of a database that neither an Excel spreadsheet nor the collection of [dataframes](extras/glossary.md#dataframe) stored in it fulfills.
 
 To see what this feature is and why it is desirable, let's try adding a new artist to our table of artists. But let's make a deliberate mistake in doing so, and add an artist that is in fact already present. (You can imagine that this sort of mistake is bound to occur eventually in a big database that might be used by more than one member of a team).
 
@@ -1229,7 +1229,7 @@ albums
 
 Our table doesn't care about this kind of illogic either.
 
-Of course, we could just try to make sure that we and our colleagues don't make this kind of mistake when working with the database. But we are human beings; merely trying hard not to make mistakes doesn't usually work out too well for us.
+Of course, we could just try to make sure that we and our colleagues don't make this kind of mistake when working with the database. But we are human beings; trying hard not to make mistakes doesn't usually work out too well for us.
 
 What we would really like from a good database is for it to be a little more than just an inert place of storage. As well as storing our data, it should also store and enforce a set of logical rules that describe how our data are organized. We can then rely on the database to alert us when we accidentally break one of our own rules. Rules about what constitutes a valid entry for a database are often termed 'constraints'.
 
@@ -1251,6 +1251,8 @@ SQL provides commands that are broadly of three different types:
 * Define the relations and constraints that give a database its structure.
 * Modify the data in a database, for example by inserting, deleting, or changing information.
 * Fetch different combinations of information from a database (usually called 'querying' the database).
+
+### Pronunciation
 
 Some people like to pronounce 'SQL' as 'sequel'. But other less imaginative people, like me, have always just pronounced it by spelling out the letters, 'es queue ell'. Say it however you like and don't let cool people snub you for not saying 'sequel'.
 
@@ -1286,7 +1288,7 @@ Like this:
 
 ![](images/db_browser_select.png)
 
-For the remaining SQL examples, I will abandon the DB browser and instead show how to run SQL commands from within a Python program. If you prefer, you can try some of them out in the DB browser 'Execute SQL' tab instead. However, the database file does not appreciate being open both in Python and in the DB Browser, since this could lead to conflicting edits, so you will need to use only one or the other at any one time.
+For the remaining SQL examples, I will abandon the DB browser and instead show how to run SQL commands from within a Python program. You can follow along in Python or if you prefer, you can try some of the SQL commands out in the DB browser 'Execute SQL' tab instead. However, the database file does not appreciate being open both in Python and in the DB Browser, since this could lead to conflicting edits, so you will need to use only one or the other at any one time.
 
 ### sqlite3
 
@@ -1638,7 +1640,7 @@ for row in conn.execute('SELECT * FROM albums;'):
     (18, 'Storm Force Ten', 1977, 4)
 
 
-But it is best to reserve use of `*` for just exploring the database and seeing what columns it contains. When actually working with the data it is best to explicitly select the columns we want, so that we can be sure of what we are getting.
+But it is best to reserve use of `*` for just exploring the database and seeing what columns it contains. When actually working with the data we should explicitly select the columns we want, so that we can be sure of what we are getting.
 
 #### ORDER BY
 
@@ -1786,11 +1788,11 @@ for row in conn.execute('SELECT album, artist, country FROM albums JOIN artists 
     ('The Young Ones', 'Cliff Richard', 'GB')
 
 
-Nice. Joining is my favorite bit of SQL. I like to imagine a robot saying 'yes, master' in a computery voice and then flying around among the shelves of a medieval library.
+Nice. Joining is my favorite bit of SQL. I like to imagine a robot saying 'yes, master' in a computery voice and then flying around among the shelves of a medieval library joining up all the requested pages of magical books.
 
 ### Miscellaneous SQL syntax
 
-We now know the basics of the 'querying' part of SQL: getting combinations of rows and columns from one or tables in the database. Before we move on to creating our own new database, let's note a few odds and ends about the structure of SQL.
+We now know the basics of the 'Q' part of SQL: querying the database for combinations of rows and columns from one or more tables. Before we move on to creating our own new database, let's note a few odds and ends about the structure of SQL.
 
 #### Complex commands
 
@@ -1853,7 +1855,9 @@ for row in conn.execute(command):
     ('Awake Awake', 'Steeleye Span', 'Storm Force Ten')
 
 
-In multi-line SQL commands like this one we can see the importance of the semicolon rule to indicate that the whole command is finished. (In fact, Python's `sqlite3` lets you get away with omitting the semicolon, since it assumes that the end of the command [string](extras/glossary.md#string) must be the end of the command. But this is special to `sqlite3`. If you use SQL in other contexts, you must end commands with the semicolon, so you might as well get used to it in Python as well.)
+In multi-line SQL commands like this one we can see the importance of the semicolon rule to indicate that the whole command is finished. In SQL, each new keyword in the command just adds on one more refinement to our query, so the computer needs some way of knowing when we are done adding refinements.
+
+(In fact, Python's `sqlite3` module lets you get away with omitting the semicolon, since it assumes that the end of the command [string](extras/glossary.md#string) must be the end of the command. But this is special to `sqlite3`. If you use SQL in other contexts, you must end commands with the semicolon, so you might as well get used to it in Python as well.)
 
 #### Case
 
@@ -1886,11 +1890,11 @@ for row in conn.execute('select album, year from albums;'):
     ('Storm Force Ten', 1977)
 
 
-However, it is a widespread convention to write SQL keywords in UPPERCASE. This helps to visually distinguish them from the names of tables and columns. I personally like this style convention, because SQL does not have so many other syntactical features to mark out the components of its commands, but not everybody agrees so be prepared for the occasional angry pedant to explain *at length* why it is not necessary (maybe while also chanting 'sequel, sequel, sequel' at you).
+However, it is a widespread convention to write SQL keywords in UPPERCASE. This helps to visually distinguish them from the names of tables and columns. I personally like this style convention, because SQL does not have so many other syntactical features to mark out the components of its commands, but not everybody agrees so be prepared for the occasional angry pedant to explain to you *at great length* why it is not necessary to write SQL keywords in uppercase (they will probably also be chanting 'sequel, sequel, sequel' at you).
 
 #### Comments
 
-Finally, [comments](extras/glossary.md#comment) are possible in SQL as they are in Python, but SQL comments are preceded by two dashes (`--`) rather than the Python hash symbol (`#`). If you are just writing SQL commands in a Python program, you won't really need SQL comments, since you can just put any necessary comments in your Python program instead. But you can also put SQL commands in their own text files, and in this case you might want to add some explanatory comments for yourself or for your collaborators.
+Finally, [comments](extras/glossary.md#comment) are possible in SQL, as they are in Python. SQL comments are preceded by two dashes (`--`) rather than the Python hash symbol (`#`). If you are just writing SQL commands in a Python program, you won't really need comments within your SQL, since you can just put them in your Python program instead. But you can also put SQL commands in their own text files, and in this case you might want to add some explanatory comments for yourself or for your collaborators.
 
 Let's close the example database since we have finished with it for now:
 
@@ -2384,7 +2388,7 @@ print(command)
     INSERT INTO artists (artist, country) VALUES('foo', 'foo'); DROP TABLE artists; CREATE TABLE artists (name TEXT); INSERT INTO artists (name) VALUES ('Kanye West'), ('Kanye West'), ('Kanye West'), ('Kanye West'), ('Kanye West'); --');
 
 
-This naughty user has made use of a few features of SQL syntax to put some new commands into our string of SQL. They have used the semicolon to prematurely end our intended SQL command before appending several of their own. Then they have used the [comment](extras/glossary.md#comment) characters `--` to prevent the remainder of our SQL from being run.
+This naughty user made use of a few features of SQL syntax to insert some new commands into our string of SQL. First, they used the semicolon to prematurely end our intended SQL command. As we have seen, the semicolon marks the end of a command in SQL. Then at the end of their input, the naughty user placed the [comment](extras/glossary.md#comment) characters `--` to prevent the remainder of our SQL from being run. In between these two things, the user inserted some of their own SQL commands.
 
 This method of hacking someone else's database is known as 'SQL injection'. In this particular case, the attacker has deleted our artists table, created one of their own, and filled it with 'Kanye West':
 
@@ -2403,7 +2407,7 @@ for row in conn.execute('SELECT * FROM artists;'):
 
 But in more serious cases, attackers could fetch private data such as passwords or billing information, erase particular data, or change the constraints set on the database so as to allow other malicious activity. You can see a humorous example of SQL injection in [this famous xkccd comic](https://xkcd.com/327).
 
-Behind the scenes, a decent SQL package like `sqlite3` has its own checks for SQL injection. Whenever possible, we should use whatever method the package documentation recommends for inserting values from Python variables, rather than try to do it directly by formatting or [concatenating](extras/glossary.md#concatenate) strings.
+Behind the scenes, a decent SQL package like `sqlite3` has its own checks for SQL injection. Whenever possible, we should use whatever method the package documentation recommends for inserting values from Python variables, rather than try to do it directly by formatting or [concatenating](extras/glossary.md#concatenate) strings into SQL commands.
 
 On that note, we are done with SQL. Try an exercise.
 

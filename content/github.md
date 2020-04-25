@@ -145,7 +145,7 @@ Then the README display on the front page of your repository should look somethi
 
 ### gitignore
 
-In a moment you will copy your new repository to your computer, where you can start adding new files, making changes, and so on. Each time you make changes you can send your files back to the GitHub website to store them there. But you might not always want to upload all of the files that are in your the folder on your computer.
+In a moment you will copy your new repository to your computer, where you can start adding new files, making changes, and so on. Each time you make changes you can send your files back to the GitHub website to store them there. But you might not always want to upload all of the files that are in the repository folder on your computer.
 
 In particular, there are certain temporary files that get created automatically when you run Python programs. You might already have noticed these appearing in your working folder after you have been doing some Python work. For example, Python creates a directory called *\_\_pycache\_\_* to store the results of [modules](extras/glossary.md#module) that have already been [imported](extras/glossary.md#import) so that it does not have to run them again if you import them a second time. The contents of \_\_pycache\_\_ directories and other temporary files are not really part of a programming project, so you don't want to accidentally publish them to your GitHub repository when they get created on your computer.
 
@@ -167,7 +167,7 @@ Most of what you see when you start up Atom will look familiar. Like any other e
 
 #### Cloning
 
-Copying an existing repository onto your computer is known as 'cloning' the repository. Let's see how it is done. Go to the main page of your new repository and look for the button marked 'Clone or download'. It looks like this:
+Copying an existing repository onto your computer is known as 'cloning' the repository. Let's see how it is done. Go to the main page of your new repository on GitHub and look for the button marked 'Clone or download'. It looks like this:
 
 ![](images/clone.png)
 
@@ -187,9 +187,9 @@ You should now see a few panels displayed side-by-side. At the left is a panel s
 
 #### Making changes
 
-Leave Atom for a moment and find the newly-cloned repository folder in your file explorer. It works entirely like a normal folder. You can copy or save files into it, create new subdirectories, delete files, etc. If you would like to remove the repository, you can just delete the folder like you would any other. git will then forget it.
+Leave Atom for a moment and find the newly-cloned repository folder in your file explorer. It works entirely like a normal folder. You can copy or save files into it, create new subdirectories, delete files, etc. If you would like to remove the repository, you can just delete the folder like you would any other. git will then forget it. You should see in the repository folder the same three text files that you just saw on the GitHub website ('README', 'LICENSE', and '.gitignore').
 
-You should see in the repository folder the same three text files that you just saw on the GitHub website ('README', 'LICENSE', and '.gitignore'). If you don't see '.gitignore', this is probably because it has a name beginning with a dot, which on most file systems indicates a file that is intended to be 'hidden' (i.e. not shown by default). If you would like to be able to see hidden files in general in your file explorer, then you can configure it to do so. Follow the instructions for your operating system:
+If you don't see '.gitignore', this is probably because it has a name beginning with a dot, which on most file systems indicates a file that is intended to be 'hidden' (i.e. not shown by default). If you would like to be able to see hidden files in general in your file explorer, then you can configure it to do so. Follow the instructions for your operating system:
 
 * [Windows](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files)
 * [macOS](http://osxdaily.com/2018/02/12/show-hidden-files-mac-keyboard-shortcut/)
@@ -217,11 +217,11 @@ You should then see that your new file is displayed in the git panel:
 
 ![](images/atom_git_panel.png)
 
-When git tracks changes to our project, it distinguishes between temporary and confirmed changes. All the changes that we make as part of our normal work will initially be treated as temporary changes, and can be easily undone if we wish. Atom allows us to undo changes to one or more files from the git panel. Just right click on any file that is listed under **Unstaged changes** and choose **Discard Changes**. This is a simple way of resetting your project to its previous state if you decide that you don't want to keep your current work. But don't do this just now for your new file, or you will have to copy it back into the repository folder again.
+When git tracks changes to our project, it distinguishes between temporary and confirmed changes. All the changes that we make as part of our normal work will initially be treated as temporary changes, and can be easily undone if we wish. Atom allows us to undo changes to one or more files from the git panel. Just right click on any file that is listed under **Unstaged Changes** and choose **Discard Changes**. This is a simple way of resetting your project to its previous state if you decide that you don't want to keep your current work. But don't do this just now for your new file, or you will have to copy it back into the repository folder again.
 
-Instead, let's confirm the addition of this new file as part of the project. In the terminology of version control, confirming that we would like to keep some changes is known as '[committing](extras/glossary.md#commit)' the changes. When we commit changes, git puts them into the version history of our project, so we have a record of the state of the project before the commit, and after. In the Atom git panel, you can click on the button marked **Stage all** to prepare all the current changes to be committed. If you have made changes to multiple files and you would like to commit only some of them, then you can instead right click on the files for which you wish to commit changes, and select **Stage**. So far we anyway only have one changed file, so you can do either of these two things.
+Instead, let's confirm the addition of this new file as part of the project. In the terminology of version control, confirming that we would like to keep some changes is known as '[committing](extras/glossary.md#commit)' the changes. When we commit changes, git puts them into the version history of our project, so we have a record of the state of the project before the commit, and after. In the Atom git panel, you can click on the button marked **Stage All** to prepare all the current changes to be committed. If you have made changes to multiple files and you would like to commit only some of them, then you can instead right click on the files for which you wish to commit changes, and select **Stage**. So far we anyway only have one changed file, so you can do either of these two things.
 
-The new file to be committed should now appear in the **Staged chnages** area. The last step is to add a message to this 'commit'. We should use this message to describe what changes we made. Later on, this message helps us and others to see easily what it was that differed in each new version of the project. Type in a message as shown below, and then click on the **Commit to master** button at the bottom.
+The new file to be committed should now appear in the **Staged Changes** area. The last step is to add a message to this 'commit'. We should use this message to describe what changes we made. Later on, this message helps us and others to see easily what it was that differed in each new version of the project. Type in a message as shown below, and then click on the **Commit to master** button at the bottom.
 
 ![](images/atom_commit.png)
 
@@ -235,11 +235,11 @@ Let's see one other variation on making changes. This time, let's change an exis
 
 When files change rather than being created, git allows us to review the differences between the old file and the new one. The various changes that have been made to one or more files since the last [commit](extras/glossary.md#commit) are known as the 'diff' (a somewhat excessive abbreviation of the word 'difference'). It is a good idea to always look at the diff before committing changes. In a complex project, it is very easy to introduce unwanted changes by mistake, and looking only at the differences rather than the whole file can make it clearer whether we have made a mistake.
 
-In the Atom git panel, click on the name of the changed file in the **Unstaged Changes** area. This will display the changes to the file, showing old lines in red in new lines in green, like this:
+In the Atom git panel, click on the name of the changed file in the **Unstaged Changes** area. This will display the changes to the file, showing old lines in red and new lines in green, like this:
 
 ![](images/atom_diff.png)
 
-(A common confusion at this point is to mix up the files panel on the left and the git panel on the right. If you click on files in the files panel, they will open up for editing in the normal way. If you click on files in the git panel, you will see changes to those files, you won't open them for editing.)
+(A common confusion at this point is to mix up the files panel on the left and the git panel on the right. If you click on files in the files panel, they will open up for editing in the normal way. If you click on files in the git panel, you will see *changes* to those files, you won't open them for editing.)
 
 When you have reviewed your changes, you can stage them, add a commit message, and then commit, as we did above.
 
@@ -295,7 +295,7 @@ If there have been changes to the online repository, then you will see the **Fet
 
 As you have probably guessed, whereas [pushing](extras/glossary.md#push) refers to sending changes from your repository to another one, [pulling](extras/glossary.md#pull) refers to getting changes from another repository and adding them to yours.
 
-Be careful about making changes directly on the GitHub website. If you make changes to the online repository and you have also made changes to your local copy without first [pulling](extras/glossary.md#pull) the online changes (or vice versa), then the two repositories may become incompatible with one another. With git it is possible to mix and match two separate sets of changes (this is known as 'merging' the changes), but this can quickly get messy and it is easy to get wrong. My advice is to use the GitHub site's editor only for setting up a new repository (for example for writing the initial content of the README file and perhaps for uploading a few starting files). After that, clone the GitHub repository to your computer and stick to making changes there.
+But be careful about making changes directly on the GitHub website. If you make changes to the online repository and you have also made changes to your local copy without first [pulling](extras/glossary.md#pull) the online changes (or vice versa), then the two repositories may become incompatible with one another. With git it is possible to mix and match two separate sets of changes (this is known as 'merging' the changes), but this can quickly get messy and it is easy to get wrong. My advice is to use the GitHub site's editor only for setting up a new repository (for example for writing the initial content of the README file and perhaps for uploading a few starting files). After that, clone the GitHub repository to your computer and stick to making changes there.
 
 That covers the most important steps for creating and working with a GitHub [repository](extras/glossary.md#repository), and the examples above should be enough to guide you with basic use, especially if you are working on a project alone.
 
@@ -309,7 +309,7 @@ There are a few more basic features of git and GitHub that can be especially use
 
 As a project becomes more complex, it will eventually become necessary not just to keep a record of successive versions but also to work on more than one version simultaneously. For example, if people have already started using your program, you might want to keep a 'stable' current version available, to which you only make superficial changes or fix urgent problems, while also working on a new version in which you are developing and testing improvements to the program.
 
-git allows you to switch between two or more separate versions of your project at the click of a button. These separate versions are termed 'branches', like the branches of a tree that split off from the trunk and from each other.
+git allows you to switch between two or more separate versions of your project. These separate versions are termed 'branches', like the branches of a tree that split off from the trunk and from each other.
 
 You may have noticed when you view the main page of a repository on the GitHub site that you see a button like this:
 
@@ -378,7 +378,7 @@ There is plenty more that can be done with git and GitHub, but that covers the m
 
 ## Exercise
 
-The topic pages for this course are stored at a GitHub repository. If you have been viewing the pages online, then you have been reading them on GitHub. While reading, or while exploring the example programs, you may have noticed some mistakes that I have made, such as typing errors, a link that doesn't lead to right place or lead anywhere, or simply something that is unclear or needs extra explanation. After all, I'm only human (in fact, I am *very* human).
+The topic pages for this class are stored at a GitHub repository. If you have been viewing the pages online, then you have been reading them on GitHub. While reading, or while exploring the example programs, you may have noticed some mistakes that I have made, such as typing errors, a link that doesn't lead to right place or lead anywhere, or simply something that is unclear or needs extra explanation. After all, I'm only human (in fact, I am *very* human).
 
 If you have found a mistake or something you think needs improving, open an issue at the [main page of the GitHub site](https://github.com/luketudge/introduction-to-programming). Here are some tips for submitting a helpful issue:
 

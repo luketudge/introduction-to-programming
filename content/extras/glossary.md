@@ -280,6 +280,15 @@ Ishmael,19,USA
 Sherlock,39,GB
 ```
 
+In some cases, the separator may be the semicolon character instead:
+
+```
+Name;Age;Location
+Mildred;22;USA
+Ishmael;19;USA
+Sherlock;39;GB
+```
+
 ## dataframe
 
 A structure that stores data in rows and columns is sometimes termed a 'dataframe' in computing. A more everyday term is simply 'table'. Typically, each row of a data frame represents one 'observation', which may be for example a customer, a purchase, a visit to a webpage, etc. Each column represents one piece of information recorded for that observation, such as a date, a time, a price, a rating. etc.
@@ -287,6 +296,10 @@ A structure that stores data in rows and columns is sometimes termed a 'datafram
 ## delimiter
 
 See [separator](#separator).
+
+## dependency
+
+If program A needs to use program B, then anyone who uses program A also needs to have program B installed on their computer. In such a case, we say that program A 'depends' on program B (and conversely, that program B is a 'dependency' of program A). For example, if we write a Python program that [imports](#import) the `pandas` [package](#package), then `pandas` is a dependency of our program; users of our program will need to have installed `pandas`.
 
 ## dictionary
 
@@ -501,7 +514,7 @@ Lists are very similar to [tuples](#tuple), another kind of sequence. The differ
 
 Computer users want to be able to interact with their computer in way that takes into account certain pieces of information about the user's language and location. For example, the user may want dates and currency amounts displayed in a certain format, or they may want to see the time displayed in their time zone. A computer's [operating system](#os) may store this user-specific information and make it available to all programs so that they can use it to customize the user's experience. This bundle of information is often termed a 'locale'.
 
-Among other things, the locale may contain information on the user's preferred [encoding](#encoding) for new text files.
+Among other things, the locale may contain information on the user's preferred [encoding](#encoding) for reading and writing text files, or their preferred decimal point character (in some lamguages it is a dot, in others it is a comma).
 
 ## loop
 

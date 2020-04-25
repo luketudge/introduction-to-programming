@@ -488,7 +488,7 @@ If you are now thoroughly confused, you are in good company. Enter a question or
 
 I have perhaps been a little harsh on `pandas`. Its somewhat messy methods for row indexing are not such a big deal if we bear in mind that selecting rows by position is not actually such a common thing to want to do in data analysis. After all, the rows of a data frame are often arranged in an arbitrary order; it is the values stored in the rows that gives them meaning, not their position in the data frame.
 
-A much more common task in data analysis is to select rows based on some condition concerning their values. For example, in the penguins data we might want to work with all the rows that represent dives deeper than 150 meters. We would need to get all the rows that have a value greater than `150` in the 'Depth' column, and the position of those rows is irrelevant.
+A much more common task in data analysis is to select rows based on some condition concerning their values. For example, in the penguins data we might want to work with all the rows that represent dives deeper than 150 meters. We would need to get all the rows that have a value greater than `150` in the 'Depth' column. The position of those rows is irrelevant.
 
 In the [lesson on conditions](conditions.md#logic), we learned how to write logical statements to ask whether a certain condition holds. We can use a column of a `pandas.DataFrame` in the same kind of statement. The result is a sequence of [boolean](extras/glossary.md#boolean) values (i.e. `True` or `False`), one for each row in the data frame, stating whether the condition holds for that row.
 

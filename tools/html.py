@@ -10,11 +10,6 @@ import bs4
 import regex
 
 
-# %% Constants
-
-PARSER = 'lxml'
-
-
 # %% Regular expressions
 
 # '.ipynb'
@@ -45,7 +40,7 @@ def make_soup(html):
     """Convert html notebook to BeautifulSoup.
     """
 
-    return bs4.BeautifulSoup(html, PARSER)
+    return bs4.BeautifulSoup(html)
 
 
 # %% Postprocessing
