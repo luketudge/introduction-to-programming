@@ -120,7 +120,6 @@ def ipynb_to_html(filename_in, filename_out=None, image_paths=['.']):
     content = convert(notebook, 'html')
     content = html.make_soup(content)
     content = html.replace_ipynb(content)
-    content = html.flatten_links(content)
     content = html.embed_images(content, paths=image_paths)
 
     write(str(content), filename_out)

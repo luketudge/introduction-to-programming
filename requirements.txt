@@ -1,0 +1,16 @@
+bokeh
+bs4
+flake8
+imageio
+jupyter
+matplotlib
+numpy
+pandas
+pytest
+regex
+requests
+seaborn
+selenium
+scikit-image
+statsmodels
+xlrd
