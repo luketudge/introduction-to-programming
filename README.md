@@ -1,7 +1,5 @@
 # Introduction to Programming
 
-[![](https://img.shields.io/lgtm/alerts/g/luketudge/introduction-to-programming.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/luketudge/introduction-to-programming/alerts/) [![](https://img.shields.io/lgtm/grade/python/g/luketudge/introduction-to-programming.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/luketudge/introduction-to-programming/context:python)
-
 Materials for the *Introduction to Programming* class.
 
 ## Reading the notes
