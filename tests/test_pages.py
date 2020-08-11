@@ -26,8 +26,9 @@ def test_topic_pages(browser, version, page):
 
     for item in browser.find_elements_by_class_name('toc-item'):
 
-        item.find_element_by_tag_name('a').click()
+        link = item.find_element_by_tag_name('a')
+        link.click()
         new_screenshot = browser.get_screenshot_as_base64()
         new_screenshot = new_screenshot[:constants.IMAGE_BYTES]
 
-        assert new_screenshot != top_screenshot
+        assert new_screenshot != top_screenshot, 'TOC failed: {}'.format(link.text)
