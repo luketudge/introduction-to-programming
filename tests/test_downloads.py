@@ -3,7 +3,6 @@
 import os
 import zipfile
 
-import pytest
 import requests
 
 from . import constants
@@ -38,10 +37,8 @@ def get_zip_contents(url):
 
 # %% Test functions
 
-@pytest.mark.parametrize('branch', constants.BRANCHES)
-def test_download_examples(branch):
+def test_download_examples():
 
-    url = constants.REMOTE_URL.format(branch) + 'content/examples/intro_prog_examples.zip'
-    contents = get_zip_contents(url)
+    contents = get_zip_contents(constants.REMOTE_URL_EXAMPLES)
 
     assert set(contents) == set(constants.EXAMPLE_FILES + constants.DATA_FILES)

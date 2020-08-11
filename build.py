@@ -62,17 +62,6 @@ for filename in ipynb_filenames:
     print('to html', filename)
 
 
-# %% Create zip file of html pages
-
-destination = os.path.join(content_path, 'intro_prog_html.zip')
-
-misc.zip_all(destination,
-             path=content_path,
-             patterns=[html_pattern])
-
-print('zipped', destination)
-
-
 # %% Create zip file of example programs
 
 destination = os.path.join(examples_path, 'intro_prog_examples.zip')

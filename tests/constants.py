@@ -6,24 +6,11 @@ import os
 # %% Paths & URLs
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-
 TEMP_FILENAME = os.path.join(BASE_PATH, 'temp.zip')
 
-LOCAL_URL = 'file://' + os.path.join(os.path.dirname(BASE_PATH), 'content', 'html')
-
-REMOTE_URL = 'https://github.com/luketudge/introduction-to-programming/blob/{}/'
-
-TOPICS_PAGE = 'content/index.md'
-
-BRANCHES = ['master', 'in-progress']
-
-
-# %% Versions
-
-TOPICS_VERSIONS = ([REMOTE_URL.format(b) + TOPICS_PAGE for b in BRANCHES] +
-                   [os.path.join(LOCAL_URL, 'index.html')])
-
-VERSION_IDS = BRANCHES + ['local']
+LOCAL_URL = 'file://' + os.path.join(os.path.dirname(BASE_PATH), 'content', 'index.html')
+REMOTE_URL = 'https://luketudge.github.io/introduction-to-programming/content'
+REMOTE_URL_EXAMPLES = REMOTE_URL + '/examples/intro_prog_examples.zip'
 
 
 # %% Pages
