@@ -6,7 +6,6 @@ import os
 # %% Paths & URLs
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-TEMP_FILENAME = os.path.join(BASE_PATH, 'temp.zip')
 
 LOCAL_URL = 'file://' + os.path.join(os.path.dirname(BASE_PATH), 'content', 'index.html')
 REMOTE_URL = 'https://luketudge.github.io/introduction-to-programming/content'
@@ -85,3 +84,9 @@ DATA_FILES = [
 ]
 
 DATA_FILES = ['data/' + f for f in DATA_FILES]
+
+
+# %% Misc
+
+PAGE_WAIT = 1.0
+IMAGE_BYTES = 15000
