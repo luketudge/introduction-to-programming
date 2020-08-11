@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
-
+<html>
+<head><meta charset="utf-8"/>
 <title>Notebook</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -13016,8 +13012,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13043,15 +13037,13 @@ div#notebook {
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link href="custom.css" rel="stylesheet"/>
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13068,15 +13060,14 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-    <div class="container" id="notebook-container">
-
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Contents<span class="tocSkip"></span></h1><p></p>
+<p></p><h1>Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="Objective-1" href="#Objective">Objective</a></span></li><li><span><a data-toc-modified-id="Booleans-2" href="#Booleans">Booleans</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Logic-2.1" href="#Logic">Logic</a></span></li><li><span><a data-toc-modified-id="Conversion-to-boolean-2.2" href="#Conversion-to-boolean">Conversion to boolean</a></span></li></ul></li><li><span><a data-toc-modified-id="if-3" href="#if">if</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Indentation-3.1" href="#Indentation">Indentation</a></span></li><li><span><a data-toc-modified-id="Debugging-3.2" href="#Debugging">Debugging</a></span></li></ul></li><li><span><a data-toc-modified-id="if-elif-else-4" href="#if-elif-else">if elif else</a></span></li><li><span><a data-toc-modified-id="Nested-conditions-5" href="#Nested-conditions">Nested conditions</a></span></li><li><span><a data-toc-modified-id="More-debugging-6" href="#More-debugging">More debugging</a></span></li><li><span><a data-toc-modified-id="in-7" href="#in">in</a></span></li><li><span><a data-toc-modified-id="Handling-errors-8" href="#Handling-errors">Handling errors</a></span></li><li><span><a data-toc-modified-id="Exercises-9" href="#Exercises">Exercises</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="1-9.1" href="#1">1</a></span></li><li><span><a data-toc-modified-id="2-9.2" href="#2">2</a></span></li></ul></li></ul></div>
 </div>
 </div>
@@ -13118,7 +13109,6 @@ div#notebook {
 <li><code>&lt;=</code> 'is less than or equal to'</li>
 </ul>
 <p>Python allows us to combine such symbols with variables and with literal numbers in much the same way as in math:</p>
-
 </div>
 </div>
 </div>
@@ -13126,110 +13116,73 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">z</span> <span class="o">=</span> <span class="mi">7</span>
 
 <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[1]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[2]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">z</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[3]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What if we want to check whether two things are exactly equal? Here there is a small syntactical problem, because the equals symbol <code>=</code> is already in use for <a href="glossary.html#assignment">assigning</a> to a variable. Python therefore uses a double equals symbol <code>==</code> to mean 'is equal to' in the mathematical sense.</p>
-
 </div>
 </div>
 </div>
@@ -13237,73 +13190,48 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[4]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="mi">2</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[5]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>==</code> is also applicable to strings. As you might expect, it checks whether the contents of the two strings are exactly the same.</p>
-
 </div>
 </div>
 </div>
@@ -13311,43 +13239,30 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name1</span> <span class="o">=</span> <span class="s1">'David Hasselhoff'</span>
 <span class="n">name2</span> <span class="o">=</span> <span class="s1">'David Hasselhoff'</span>
 
 <span class="n">name1</span> <span class="o">==</span> <span class="n">name2</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[6]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Remember that lowercase and uppercase letters are not considered to be the same character, and that a space counts as a character.</p>
-
 </div>
 </div>
 </div>
@@ -13355,73 +13270,48 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name1</span> <span class="o">==</span> <span class="s1">'david hasselhoff'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[7]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name1</span> <span class="o">==</span> <span class="s1">'David Hasselhoff '</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[8]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Finally, we may combine or negate logical statements using the Python <a href="glossary.html#keyword">keywords</a> <code>and</code>, <code>or</code>, and <code>not</code>.</p>
-
 </div>
 </div>
 </div>
@@ -13429,106 +13319,69 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">or</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[9]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[10]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="ow">not</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[11]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As in math, parentheses are not always necessary, but they can help make our program clearer to read.</p>
-
 </div>
 </div>
 </div>
@@ -13536,73 +13389,48 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[12]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="ow">not</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[13]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Python provides an abbreviation for <code>not</code> together with <code>==</code>. The symbols <code>!=</code> stand for 'is not equal to'.</p>
-
 </div>
 </div>
 </div>
@@ -13610,34 +13438,22 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">4</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[14]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13646,7 +13462,6 @@ div#notebook {
 <p>We have learned that some data types can be converted into others, using <a href="glossary.html#builtin">built-in</a> functions that have the same names as the type we wish to convert to (for example <code>int()</code> for converting to integer, and <code>str()</code> for converting to string). Initially, it may seem strange to allow converting other types into booleans, since booleans are always just <code>True</code> or <code>False</code>. Is the integer <code>42</code> on its own a 'true' number or a 'false' number? What about a string like <code>'JavaScript is a terrible programming language.'</code>? (Of course, some strings may contain true statements, but Python can't be expected to work this out.)</p>
 <p>Nonetheless, Python does allow us to convert other data types to boolean. How does it decide whether numbers or strings are 'true' or not? If you feel like a challenge, you might like to head to the Spyder console now and try converting a few strings and numbers to boolean (the type conversion function is <code>bool()</code>) to see whether you can discover the pattern.</p>
 <p>The answer follows after this block of text:</p>
-
 </div>
 </div>
 </div>
@@ -13654,38 +13469,28 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'SPOILER ALERT '</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT 
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's try a string first:</p>
-
 </div>
 </div>
 </div>
@@ -13693,40 +13498,27 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">'JavaScript is a terrible programming language.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That seems like a sensible answer. But what about other strings?</p>
-
 </div>
 </div>
 </div>
@@ -13734,41 +13526,28 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">'JavaScript is an excellent programming language.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[17]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>No! That's not right.</p>
 <p>In fact, Python treats any string as <code>True</code>, with just one exception: an empty string with no characters in it at all:</p>
-
 </div>
 </div>
 </div>
@@ -13776,40 +13555,27 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[18]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[18]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This principle generalizes to the other data types. 'Empty' things are <code>False</code>, and all other things are <code>True</code>. An empty list <code>[]</code>, for example, is treated as <code>False</code>, but a list that has any contents at all is treated as <code>True</code>.</p>
-
 </div>
 </div>
 </div>
@@ -13817,73 +13583,48 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">([])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[19]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">([</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[20]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For numbers, <code>0</code> is the only 'empty number', and all others are treated as <code>True</code>.</p>
-
 </div>
 </div>
 </div>
@@ -13891,100 +13632,64 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[21]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[22]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[22]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[23]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13992,7 +13697,6 @@ div#notebook {
 <p>This may seem slightly weird. But this convention of treating non-empty things as being somehow 'true' is common to many programming languages. As we will see later, it is important to be aware of this behavior.</p>
 <h2 id="if">if<a class="anchor-link" href="#if">¶</a></h2><p>Now that we know how to express conditions in Python, we just need to know how to apply them to certain commands, so that those commands are only carried out if the condition is true. The <a href="glossary.html#keyword">keyword</a> that we need for this is <code>if</code>, which has essentially the same meaning in Python as in English.</p>
 <p>This is how it is used, applied to the very first condition in our target program:</p>
-
 </div>
 </div>
 </div>
@@ -14000,43 +13704,33 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Are you THE Hoff?'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name and surname? David Hasselhoff
 Are you THE Hoff?
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Because the user entered the exact string <code>'David Hasselhoff'</code>, the condition following the <code>if</code> keyword <a href="glossary.html#evaluate">evaluated</a> to <code>True</code> and so the <code>print()</code> command just below it was executed.</p>
 <p>We should always test our conditions with both the positive and negative case to check that we have got them right. So let's try it again, this time entering a name that should not trigger the <code>print()</code> command:</p>
-
 </div>
 </div>
 </div>
@@ -14044,35 +13738,26 @@ Are you THE Hoff?
 <div class="input">
 <div class="prompt input_prompt">In [25]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Are you THE Hoff?'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name and surname? Mildred Bonk
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14092,7 +13777,6 @@ Are you THE Hoff?
 </li>
 </ul>
 <h3 id="Indentation">Indentation<a class="anchor-link" href="#Indentation">¶</a></h3><p>That last rule is important. It is the indentation in our example above that marks the <code>print()</code> line as 'belonging to' the <code>if</code> statement. Let's see what happens if we forget the indentation:</p>
-
 </div>
 </div>
 </div>
@@ -14100,38 +13784,30 @@ Are you THE Hoff?
 <div class="input">
 <div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Are you THE Hoff?'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;ipython-input-26-fdc1d519ea77&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">4</span>
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;ipython-input-26-fdc1d519ea77&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">4</span>
 <span class="ansi-red-fg">    print('Are you THE Hoff?')</span>
     ^
 <span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> expected an indented block
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14139,7 +13815,6 @@ Are you THE Hoff?
 <p>The content of this error message is fairly clear: Python was expecting some indentation after the <code>if</code> statement.</p>
 <p>This use of indentation to mark lines of a program as belonging to a <a href="glossary.html#control">control statement</a> is specific to Python, and is not a feature of most other programming languages. It is one of Python's most controversial features, and also one of the more challenging things for beginners to get used to.</p>
 <p>So let's look at a few more variants of the <code>if</code> statement above, to check your understanding of the role of indentation. First of all, an example with more than one indented line after the <code>if</code>:</p>
-
 </div>
 </div>
 </div>
@@ -14147,27 +13822,20 @@ Are you THE Hoff?
 <div class="input">
 <div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Are you THE Hoff?'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'The really real Hoff?'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name and surname? David Hasselhoff
 Are you THE Hoff?
@@ -14175,17 +13843,14 @@ The really real Hoff?
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Because both of these lines are indented, they both belong to the <code>if</code> statement, and so both of them will be run if the condition is true.</p>
 <p>Where we have multiple indented lines that all belong together, they must all be indented to the same extent. Varying indentation doesn't just look untidy, it also prevents Python from interpreting our program correctly:</p>
-
 </div>
 </div>
 </div>
@@ -14193,46 +13858,37 @@ The really real Hoff?
 <div class="input">
 <div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Are you THE Hoff?'</span><span class="p">)</span>
    <span class="nb">print</span><span class="p">(</span><span class="s1">'The really real Hoff?'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;tokenize&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">5</span>
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;tokenize&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">5</span>
 <span class="ansi-red-fg">    print('The really real Hoff?')</span>
     ^
 <span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> unindent does not match any outer indentation level
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If you have written an <code>if</code> statement followed by multiple indented lines, you may find it helpful to hold up a ruler to your computer screen to check that the indentation is consistent throughout. This is a technique that even expert Python programmers have to resort to at some point.</p>
 <p>Now consider what happens in the variation below:</p>
-
 </div>
 </div>
 </div>
@@ -14240,37 +13896,28 @@ The really real Hoff?
 <div class="input">
 <div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Are you THE Hoff?'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'The really real Hoff?'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name and surname? Mildred Bonk
 The really real Hoff?
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14289,7 +13936,6 @@ The really real Hoff?
 <p>Python abbreviates 'else if' to <code>elif</code>. The <code>elif</code> keyword checks a new condition, but only if none of the preceding conditions was true.</p>
 <p>'Else' is the same in Python as it is in English. The <code>else</code> keyword does not require any condition, since it merely specifies what to do if none of the preceding conditions was true. But like all <a href="glossary.html#control">control statements</a> it does still require a colon.</p>
 <p>Let's see an <code>if</code> ... <code>elif</code> ... <code>else</code> structure in action, using a simplified version of our target program:</p>
-
 </div>
 </div>
 </div>
@@ -14297,7 +13943,7 @@ The really real Hoff?
 <div class="input">
 <div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="c1"># Get the separate names and initials.</span>
@@ -14315,30 +13961,21 @@ The really real Hoff?
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Never mind, I suppose you could change it to something more interesting, like 'David Hasselhoff'."</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name and surname? Davinia Hasselhoff
 Any relation to David Hasselhoff?
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14349,7 +13986,6 @@ Any relation to David Hasselhoff?
 <h2 id="Nested-conditions">Nested conditions<a class="anchor-link" href="#Nested-conditions">¶</a></h2><p>We need one more major insight into Python's <a href="glossary.html#syntax">syntax</a> for conditionals before we are ready to write a complete version of our target program. For the first two conditions in our program (whether the full name is 'David Hasselhoff' or the surname is 'Hasselhoff'), we need to ask a follow up question and then apply another condition to the answer to that follow-up question. We can almost achieve this already using the techniquess we have just learned, if we add a little leap of imagination.</p>
 <p>Remember that Python uses <a href="glossary.html#indentation">indentation</a> to mark lines of a program as belonging to a preceding control statement. If we have one control statement inside another (for example one condition that only needs to be checked once another has been found to be true), then the lines that belong to the 'inner' control statement must be indented yet further, to indicate that they belong to that inner control statement and not to the 'outer' one.</p>
 <p>This is easiest to understand by just looking at an example. So here is the first condition of our program, with the additional follow-up question added:</p>
-
 </div>
 </div>
 </div>
@@ -14357,7 +13993,7 @@ Any relation to David Hasselhoff?
 <div class="input">
 <div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
@@ -14366,37 +14002,27 @@ Any relation to David Hasselhoff?
         <span class="nb">print</span><span class="p">(</span><span class="s1">'Wow!'</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"That's amazing!"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name and surname? David Hasselhoff
 Are you THE Hoff? No, I changed my name to match his.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The user answered 'no' to the second question we posed, so the 'inner' <code>if</code> statement was not triggered, and the indented lines that followed it were not run.</p>
 <p>And note that if the first <code>if</code> statement is not triggered, none of the rest is run:</p>
-
 </div>
 </div>
 </div>
@@ -14404,7 +14030,7 @@ Are you THE Hoff? No, I changed my name to match his.
 <div class="input">
 <div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
@@ -14413,35 +14039,25 @@ Are you THE Hoff? No, I changed my name to match his.
         <span class="nb">print</span><span class="p">(</span><span class="s1">'Wow!'</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"That's amazing!"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name and surname? Dilbert Hoffelhass
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Again, to really firm up our understanding of the role of indentation, let's consider a variation that behaves differently:</p>
-
 </div>
 </div>
 </div>
@@ -14449,7 +14065,7 @@ Are you THE Hoff? No, I changed my name to match his.
 <div class="input">
 <div class="prompt input_prompt">In [34]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name and surname? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">'David Hasselhoff'</span><span class="p">:</span>
@@ -14458,20 +14074,13 @@ Are you THE Hoff? No, I changed my name to match his.
         <span class="nb">print</span><span class="p">(</span><span class="s1">'Wow!'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"That's amazing!"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name and surname? David Hasselhoff
 Are you THE Hoff? Sadly not.
@@ -14479,10 +14088,8 @@ That's amazing!
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14503,7 +14110,6 @@ That's amazing!
 </ul>
 <h2 id="More-debugging">More debugging<a class="anchor-link" href="#More-debugging">¶</a></h2><p>We haven't yet attempted the last condition in our target program, which checks whether the user's first name is one of a few variants of 'David'. Let's give it a try. We will for now skip the preceding conditions, and also ask only for the user's first name, just to keep the example clear and simple.</p>
 <p>We learned earlier that we can combine conditions using the <code>or</code> <a href="glossary.html#keyword">keyword</a>, and that this keyword seems to have more or less the same meaning as it does in English. So how about this:</p>
-
 </div>
 </div>
 </div>
@@ -14511,42 +14117,32 @@ That's amazing!
 <div class="input">
 <div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Dave'</span> <span class="ow">or</span> <span class="s1">'Dafydd'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Your name is a bit like 'David', as in 'David Hasselhoff'."</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name? Dave
 Your name is a bit like 'David', as in 'David Hasselhoff'.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That looks right. But we should always test our conditions with both the positive and the negative case:</p>
-
 </div>
 </div>
 </div>
@@ -14554,43 +14150,33 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [36]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Dave'</span> <span class="ow">or</span> <span class="s1">'Dafydd'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Your name is a bit like 'David', as in 'David Hasselhoff'."</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name? Mildred
 Your name is a bit like 'David', as in 'David Hasselhoff'.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What just happened? The user entered a name that shouldn't trigger the <code>if</code> statement. But it did. Our program did not work as expected. We did not get an <a href="glossary.html#error">error</a>, it is just that the program's behavior is wrong. This can be the hardest kind of problem to diagnose.</p>
 <p>Let's check a few things step by step. First of all, did the <code>input()</code> function really correctly store what the user entered?</p>
-
 </div>
 </div>
 </div>
@@ -14598,38 +14184,28 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [37]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">user_firstname</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Mildred
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ok. Does the first bit of the <code>if</code> condition somehow not work properly?</p>
-
 </div>
 </div>
 </div>
@@ -14637,41 +14213,31 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [38]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Dave'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'triggered'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'not triggered'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>not triggered
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That still seems right. So is it the full condition that is the problem?</p>
-
 </div>
 </div>
 </div>
@@ -14679,41 +14245,31 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [39]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Dave'</span> <span class="ow">or</span> <span class="s1">'Dafydd'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'triggered'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'not triggered'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>triggered
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Aha! So it seems to be the inclusion of <code>or</code> that is the problem. Let's confirm with another example, using some other string than the user's name:</p>
-
 </div>
 </div>
 </div>
@@ -14721,35 +14277,26 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [40]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="s1">'Ishmael'</span> <span class="o">==</span> <span class="s1">'Dave'</span> <span class="ow">or</span> <span class="s1">'Dafydd'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'triggered'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'not triggered'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>triggered
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14762,7 +14309,6 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <li>If at least one of the two statements is true, the whole statement is true.</li>
 </ul>
 <p>So <code>or</code> expects to find a fully-formed logical statement on either side of itself. This was the case in our earlier example of <code>or</code>, in which either side of the <code>or</code> was a complete statement on its own:</p>
-
 </div>
 </div>
 </div>
@@ -14770,100 +14316,64 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [41]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[41]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[41]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [42]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[42]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[42]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [43]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[43]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[43]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14871,7 +14381,6 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <p>If <code>or</code> expects to find a fully-formed logical statement on either side of itself, why did our condition for the user's name not simply result in an error? After all, <code>'Dafydd'</code> is not a fully-formed logical statement on his own.</p>
 <p>Remember the slightly weird convention that all non-empty things are <code>True</code> when converted to <a href="glossary.html#boolean">boolean</a>. So for the purposes of logical conditions, <code>'Dafydd'</code> is <code>True</code>, as is any non-empty string. This means that the statement <code>user_firstname == 'Dave' or 'Dafydd'</code> is always <code>True</code>, regardless of what the contents of the <code>user_firstname</code> variable are, because at least one of the two things either side of the <code>or</code> is <code>True</code>.</p>
 <p>So here is the correct way to use <code>or</code> in our example. Each side of the <code>or</code> must be a statement involving the <code>user_firstname</code> variable:</p>
-
 </div>
 </div>
 </div>
@@ -14879,41 +14388,31 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [44]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Dave'</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Dafydd'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Your name is a bit like 'David', as in 'David Hasselhoff'."</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name? Mildred
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="in">in<a class="anchor-link" href="#in">¶</a></h2><p>Using <code>or</code> to join up multiple statements that all check the same variable quickly gets tedious and difficult to read. For example if we want to check three variants of 'David' rather than just two, the condition would be:</p>
-
 </div>
 </div>
 </div>
@@ -14921,41 +14420,28 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [45]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Dave'</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Davy'</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">'Dafydd'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[45]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[45]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There is a better option in such cases. If we want to check whether a variable has one of several possible values, we can ask whether that variable's value is 'in' a <a href="glossary.html#list">list</a> of possibilities, using the <code>in</code> <a href="glossary.html#keyword">keyword</a>.</p>
 <p>For example:</p>
-
 </div>
 </div>
 </div>
@@ -14963,34 +14449,22 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [46]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_firstname</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Dave'</span><span class="p">,</span> <span class="s1">'Davy'</span><span class="p">,</span> <span class="s1">'Dafydd'</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[46]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[46]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14999,7 +14473,6 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <p>That concludes the techniques necessary to write a basic version of our target program. You can take a look at the finished version <a href="examples/hoff.py">hoff.py</a>. This program looks quite complex, but it is made of the building blocks we wrote above, with some very small refinements. Some extra blank lines have been added to clearly separate the multiple conditions that are checked.</p>
 <h2 id="Handling-errors">Handling errors<a class="anchor-link" href="#Handling-errors">¶</a></h2><p>Let's conclude by learning about another kind of control statement. To keep things simple, we won't incorporate it into <strong>hoff.py</strong>, though it could be useful there too.</p>
 <p>We have met <a href="glossary.html#error">errors</a> before. Some errors are just fatal for our program, and will always stop it from running. For example, there is nothing that Python can do about a <code>SyntaxError</code>; if we have written something that it just does not understand, then Python has to give up:</p>
-
 </div>
 </div>
 </div>
@@ -15007,42 +14480,33 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [47]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">Python</span><span class="p">,</span> <span class="n">please</span> <span class="n">do</span> <span class="n">some</span> <span class="n">amazing</span> <span class="n">machine</span> <span class="n">learning</span><span class="o">.</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;ipython-input-47-925621985029&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;ipython-input-47-925621985029&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
 <span class="ansi-red-fg">    Python, please do some amazing machine learning.</span>
                    ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Other errors, however, are not necessarily fatal for our program.</p>
 <p>Consider an abbreviated version of one of our earlier programs, <a href="examples/age_next_year.py">age_next_year.py</a>, and see what happens if the user misunderstands what is required of them, and enters some input that our program cannot handle:</p>
-
 </div>
 </div>
 </div>
@@ -15050,39 +14514,29 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [48]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'How old are you? '</span><span class="p">)</span>
 
 <span class="n">age_next_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>How old are you? fifty-two
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-48-3266fdc533a9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> age <span class="ansi-blue-fg">=</span> input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'How old are you? '</span><span class="ansi-blue-fg">)</span>
@@ -15093,10 +14547,8 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: 'fifty-two'</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -15106,7 +14558,6 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <p>Problems like this one can be dealt with without stopping our program, because they don't make it impossible for Python to understand what we want. A non-fatal error (i.e. one that does not completely flummox Python) is termed an '<a href="glossary.html#exception">exception</a>'. When an exception occurs, we have the option of dealing with it in some way, and it is only if we do not deal with it that it becomes an <a href="glossary.html#error">error</a> and stops the program. (Though in practice you will hear many people use the terms 'exception' and 'error' as synonyms.)</p>
 <p>If we wish, we can instruct Python to 'try' to do something, but then to do something else if doing the first thing results in an exception. This concept is very similar to an <code>if</code> condition, but the condition is 'if the following actions result in an exception'. To apply this, we need to specify two things. We need to say what actions we want to 'try', and what actions we want to carry out if an exception occurs while trying those actions. There are new <a href="glossary.html#keyword">keywords</a> <code>try</code> and <code>except</code> for each of these, respectively.</p>
 <p>Let's see an example:</p>
-
 </div>
 </div>
 </div>
@@ -15114,7 +14565,7 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <div class="input">
 <div class="prompt input_prompt">In [49]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'How old are you? '</span><span class="p">)</span>
 
 <span class="k">try</span><span class="p">:</span>
@@ -15123,30 +14574,21 @@ Your name is a bit like 'David', as in 'David Hasselhoff'.
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'That is not a valid age.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>How old are you? fifty-two
 That is not a valid age.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -15168,7 +14610,6 @@ That is not a valid age.
 </ul>
 <p>There are some similarities with the syntax for the <code>if</code> ... <code>else</code> statement, namely the colon and the indentation. Both of these things are part of the general syntax for all <a href="glossary.html#control">control statements</a>, and we will encounter them again in later lessons.</p>
 <p>Let's see another example, this time to handle the possibility that the user asks for a list item that is beyond the length of the list:</p>
-
 </div>
 </div>
 </div>
@@ -15176,7 +14617,7 @@ That is not a valid age.
 <div class="input">
 <div class="prompt input_prompt">In [50]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">]</span>
 
 <span class="n">item_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What item of shopping would you like to see? '</span><span class="p">)</span>
@@ -15187,36 +14628,26 @@ That is not a valid age.
 <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"There aren't that many items of shopping."</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What item of shopping would you like to see? 9000
 There aren't that many items of shopping.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>How did I know that the exception to watch out for was <code>IndexError</code>? In a long career filled with silly programming mistakes I have seen a lot of error messages, and so I just know what a lot of the common exceptions will be. But if you are building a program and you want to write a <code>try</code> ... <code>except</code> to deal with an expected problem, then the first thing you should do is to go to the console and deliberately provoke that expected problem to see what type of exception it is. The type of exception is printed at the bottom of the error message.</p>
-
 </div>
 </div>
 </div>
@@ -15224,25 +14655,19 @@ There aren't that many items of shopping.
 <div class="input">
 <div class="prompt input_prompt">In [51]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">9000</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-51-4a4ff19f7982&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>shopping_list<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">9000</span><span class="ansi-blue-fg">]</span>
@@ -15250,10 +14675,8 @@ There aren't that many items of shopping.
 <span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -15276,16 +14699,10 @@ There aren't that many items of shopping.
 <li>They cannot be taller than 2 meters.</li>
 <li>If they are younger than 14 years old, they must have their parents' permission.</li>
 </ul>
-
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-
- 
-
-
-
-</body></html>
+</div>
+</div>
+</body>
+</html>

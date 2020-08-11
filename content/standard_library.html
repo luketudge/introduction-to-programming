@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
-
+<html>
+<head><meta charset="utf-8"/>
 <title>Notebook</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -13016,8 +13012,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13043,15 +13037,13 @@ div#notebook {
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link href="custom.css" rel="stylesheet"/>
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13068,15 +13060,14 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-    <div class="container" id="notebook-container">
-
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Contents<span class="tocSkip"></span></h1><p></p>
+<p></p><h1>Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="math-1" href="#math">math</a></span></li><li><span><a data-toc-modified-id="os-2" href="#os">os</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Working-directory-2.1" href="#Working-directory">Working directory</a></span></li><li><span><a data-toc-modified-id="Paths-2.2" href="#Paths">Paths</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Absolute-paths-2.2.1" href="#Absolute-paths">Absolute paths</a></span></li><li><span><a data-toc-modified-id="Relative-paths-2.2.2" href="#Relative-paths">Relative paths</a></span></li></ul></li></ul></li><li><span><a data-toc-modified-id="Third-party-packages-3" href="#Third-party-packages">Third-party packages</a></span></li><li><span><a data-toc-modified-id="Exercises-4" href="#Exercises">Exercises</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="1-4.1" href="#1">1</a></span></li><li><span><a data-toc-modified-id="2-4.2" href="#2">2</a></span></li></ul></li></ul></div>
 </div>
 </div>
@@ -13105,7 +13096,6 @@ $$$$
 A = \pi r^2
 $$<p>Both of these involve the mathematical constant <a href="https://en.wikipedia.org/wiki/Pi"><em>pi</em></a> ($\pi$). How do we build it into our module?</p>
 <p>We could of course go ahead and define a suitable approximation to <em>pi</em> ourselves:</p>
-
 </div>
 </div>
 </div>
@@ -13113,14 +13103,12 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265359</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13129,7 +13117,6 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <p>If you ever find yourself muttering at your computer "There has <em>got</em> to be a better way of doing this," this is usually a sign that there is a ready-made solution out there somewhere, either in Python's standard library, or in some other module that somebody else has already written. If you head to Google and search for 'Python pi' you will find that the first few results mention the <code>math</code> module. <code>math</code> is a module in Python's standard library that provides some additional mathematical functions, as well as constants like <em>pi</em> or <em><a href="https://en.wikipedia.org/wiki/E_(mathematical_constant">e</a>)</em>.</p>
 <p>We can <a href="glossary.html#import">import</a> a module from the standard library in just the same way as importing a module that we wrote ourselves. The only difference is that we don't need to make sure that we have the module file ready in the same directory as our main program; modules from the standard library can be imported from anywhere regardless of which directory we are working in.</p>
 <p>So let's begin by importing the <code>math</code> module:</p>
-
 </div>
 </div>
 </div>
@@ -13137,20 +13124,17 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we have seen before, if we encounter a new module, we can use the <code>dir()</code> function in the console to see its contents.</p>
-
 </div>
 </div>
 </div>
@@ -13158,21 +13142,18 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The names of many of its contents may be familiar to you from math class. We see that <code>pi</code> is in there.</p>
 <p>Let's remind ourselves of the <a href="glossary.html#syntax">syntax</a> for using something from an imported module. We need the name of the module, then <code>.</code>, then the name of whatever it is we want to use from it:</p>
-
 </div>
 </div>
 </div>
@@ -13180,20 +13161,17 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note that <code>math.pi</code> is a variable, not a function, so we don't place any parentheses after it. We have so far just been getting functions from modules, and often most of the contents of a module will be functions, but there is no reason that modules cannot also store variables. The output of <code>dir()</code> doesn't tell us which of the contents of a module are functions and which are variables, but if we are unsure about any of them we can check their <a href="glossary.html#type">type</a>:</p>
-
 </div>
 </div>
 </div>
@@ -13201,53 +13179,38 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[7]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>builtin_function_or_method</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we can use <code>math.pi</code> like any other variable. For example:</p>
-
 </div>
 </div>
 </div>
@@ -13255,43 +13218,33 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">radius</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="n">circumference</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">circumference</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>62.83185307179586
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That's it. Now that we know how to import the <code>math</code> module and use its contents in calculations, we know everything we need in order to write our target program. Go ahead and try to write the 'circle' module yourself, then take a look at it in the example file <a href="examples/circle.py">circle.py</a>. If you need to remind yourself about writing modules, take a look back at the <a href="modules.html">lesson on modules</a>.</p>
 <p>Here is our module in action:</p>
-
 </div>
 </div>
 </div>
@@ -13299,69 +13252,45 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">circle</span>
 
 <span class="n">circle</span><span class="o">.</span><span class="n">circumference</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[9]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>62.83185307179586</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">circle</span><span class="o">.</span><span class="n">area</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[10]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>314.1592653589793</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13373,9 +13302,8 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <li>Inside each of those year folders, we would like a separate folder for each month.</li>
 </ul>
 <p>How do we even make new folders in Python? We don't know. But we head over to Google and search for 'Python make new folder' and see that the first few results all mention the <code>os</code> module.</p>
-<p><code>os</code> is another module from Python's standard library. The letters 'OS' stand for <a href="glossary.html#os">Operating System</a>, and the <code>os</code> module handles various tasks that involve interacting with the operating system of a computer, primarily with its system of files and folders. <code>os</code> is probably the most commonly-used module from the standard library. Once we go beyond the simplest programs, we will almost always need to use the computer's file system to locate or create files.</p>
+<p><code>os</code> is another module from Python's standard library. The letters 'OS' stand for <a href="glossary.html#OS">Operating System</a>, and the <code>os</code> module handles various tasks that involve interacting with the operating system of a computer, primarily with its system of files and folders. <code>os</code> is probably the most commonly-used module from the standard library. Once we go beyond the simplest programs, we will almost always need to use the computer's file system to locate or create files.</p>
 <p>Let's import it.</p>
-
 </div>
 </div>
 </div>
@@ -13383,14 +13311,12 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13398,7 +13324,6 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <p>We won't <code>dir()</code> the <code>os</code> module here, simply because it contains <em>a lot</em> of things. But if you like you can go to the console in Spyder and type in <code>dir(os)</code> to see the full list of contents (make sure you have first typed in <code>import os</code> so that you too have imported the <code>os</code> module).</p>
 <p>The functions from <code>os</code> that are relevant for our task are <code>os.mkdir()</code> and <code>os.makedirs()</code>. As their (somewhat abbreviated) names suggest, these functions are for making new directories (and <a href="glossary.html#directory">directory</a> is just a more technical-sounding term for a 'folder' in a computer's file system).</p>
 <p>Let's use <code>os.mkdir()</code>, which creates a single new directory, to make an example new directory, just to test it out:</p>
-
 </div>
 </div>
 </div>
@@ -13406,21 +13331,18 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">'my_new_directory'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If you enter this command in your Spyder console, you should then be able to go to your file explorer, find whatever directory you are working in in Spyder, and see that a new directory called 'my_new_directory' has been created there.</p>
 <p>And in case you are not even sure what directory you are working in, <code>os</code> provides a function <code>os.getcwd()</code> for finding out (the 'cwd' part stands for 'current working directory'). Just type it into the Spyder console to see. For me it is:</p>
-
 </div>
 </div>
 </div>
@@ -13428,40 +13350,27 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[13]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'/home/lt/GitHub/introduction-to-programming/content'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>os</code> also provides a function <code>os.listdir()</code> for listing the contents of a directory, by default the current working directory. So if you are too lazy to go and open your file explorer you can use this function instead to check whether creating a new directory worked for you.</p>
-
 </div>
 </div>
 </div>
@@ -13469,25 +13378,16 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[14]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['files.ipynb',
  'github.ipynb',
@@ -13518,19 +13418,15 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
  '.guardian_api_key.txt',
  'glossary.ipynb']</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The contents of your current directory may of course differ from mine, but you should see that 'my_new_directory' is in there.</p>
 <p>Since this first new directory was just an example to test out the workings of <code>os.mkdir()</code>, let's tidy up and delete the example directory. <code>os</code> provides a function for this too, <code>os.rmdir()</code> (in programming, 'rm' is often used as an abbreviation for 'remove'):</p>
-
 </div>
 </div>
 </div>
@@ -13538,20 +13434,17 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">'my_new_directory'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And just to show off, let's also combine our new <code>os</code> skills with our existing knowledge to write a logical statement that checks whether removing the example directory has really worked:</p>
-
 </div>
 </div>
 </div>
@@ -13559,40 +13452,27 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="s1">'my_new_directory'</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note that many of the <code>os</code> functions that create or remove directories will <a href="glossary.html#exception">raise an exception</a> if we try to create a directory that already exists or if we try to remove a directory that does not exist:</p>
-
 </div>
 </div>
 </div>
@@ -13600,25 +13480,19 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">'nonexistent_directory'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-17-17b14c181fc8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>os<span class="ansi-blue-fg">.</span>rmdir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'nonexistent_directory'</span><span class="ansi-blue-fg">)</span>
@@ -13626,16 +13500,13 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: 'nonexistent_directory'</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It is a fairly common situation that we would like to create a directory only if it does not already exist, or remove a directory only if it does exist. We can use a <code>try</code> and <code>except</code> <a href="glossary.html#control">control statement</a> to deal with this:</p>
-
 </div>
 </div>
 </div>
@@ -13643,35 +13514,26 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">'nonexistent_directory'</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Didn't remove the directory because it doesn't exist, but that's ok."</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Didn't remove the directory because it doesn't exist, but that's ok.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13681,7 +13543,6 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <h3 id="Working-directory">Working directory<a class="anchor-link" href="#Working-directory">¶</a></h3><p>The initial problem we have is that the function <code>os.mkdir()</code> creates the requested new directory inside our current working directory. We saw this behavior above. This is fine for the first step of our target program, creating the per-year folders. But we then want the per-month folders to be inside each of the per-year folders. So how do we tell <code>os</code> to put a new directory not in our current working directory but somewhere else?</p>
 <p>There is one relatively simple solution that we will not use. But let's look at it anyway, to see why it isn't so great. This solution involves changing the current working directory to be one of the newly-created per-year folders, then using <code>os.mkdir()</code> to create the per-month folders there, then switching back to our current working directory, and then repeating the process for another per-year folder.</p>
 <p>The function <code>os.chdir()</code> changes the current working directory. It is rather like the Python programming equivalent of going into a folder in your file explorer by clicking on it. Here is how we could use it for the first few steps of this solution:</p>
-
 </div>
 </div>
 </div>
@@ -13689,7 +13550,7 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="s1">'2015'</span>
 <span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Jan'</span><span class="p">,</span> <span class="s1">'Feb'</span><span class="p">,</span> <span class="s1">'Mar'</span><span class="p">,</span> <span class="s1">'Apr'</span><span class="p">,</span> <span class="s1">'May'</span><span class="p">,</span> <span class="s1">'Jun'</span><span class="p">,</span> <span class="s1">'Jul'</span><span class="p">,</span> <span class="s1">'Aug'</span><span class="p">,</span> <span class="s1">'Sep'</span><span class="p">,</span> <span class="s1">'Oct'</span><span class="p">,</span> <span class="s1">'Nov'</span><span class="p">,</span> <span class="s1">'Dec'</span><span class="p">]</span>
 
@@ -13699,17 +13560,14 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">months</span><span class="p">:</span>
     <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we need to switch back to our original working directory to create a directory for the next year. How do we do that? If we know the name of our original working directory, we can use that. But that would be a very fragile solution; if we later choose to run our program in a different directory or send it to someone else for them to use, then the specific name of our original working directory will no longer be valid. Fortunately, file systems provide a shortcut for this sort of situation. In a file system, two dots (<code>..</code>) stand for 'the directory that contains the current one' (sometimes termed the 'parent' directory). So we can instruct <code>os.chdir()</code> to go to <code>'..'</code>:</p>
-
 </div>
 </div>
 </div>
@@ -13717,14 +13575,12 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">'..'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13733,7 +13589,6 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <ul>
 <li>Are we back in our original working directory?</li>
 </ul>
-
 </div>
 </div>
 </div>
@@ -13741,34 +13596,22 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[21]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'/home/lt/GitHub/introduction-to-programming/content'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13776,7 +13619,6 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <ul>
 <li>Is there a new directory in there called '2015'?</li>
 </ul>
-
 </div>
 </div>
 </div>
@@ -13784,34 +13626,22 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">year</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[22]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[22]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13819,7 +13649,6 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <ul>
 <li>And are all the per-month directories now in the '2015' directory?</li>
 </ul>
-
 </div>
 </div>
 </div>
@@ -13827,25 +13656,16 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[23]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['Sep',
  'Mar',
@@ -13860,12 +13680,9 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
  'Aug',
  'Jul']</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13873,7 +13690,6 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <p>Great, it worked. But we aren't going to use this solution. Why not?</p>
 <p>For a short and simple task like this one, it is totally fine. But as we have seen on a few occasions already, there are some good habits that we can get into now that will serve us well when we come to write more complex programs. The 'good habit' that is relevant here is a fairly specific one: We should try to avoid changing directory within a program; we should instead try to let a program run from just one directory. Why does this matter? After all, in our example above, we switch back into the original working directory using <code>os.chdir('..')</code>, so the change is only a temporary one and by the time our program has finished, the working directory has been set back to what it was at the start.</p>
 <p>But imagine instead that we are writing a slightly more complex program, one that might encounter an <a href="glossary.html#exception">exception</a> or be terminated at some point in between changing the working directory and changing it back again. For example:</p>
-
 </div>
 </div>
 </div>
@@ -13881,7 +13697,7 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">'my_new_directory'</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">'my_new_directory'</span><span class="p">)</span>
 
@@ -13893,33 +13709,23 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">'..'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>How many new folders would you like to create? five please
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-24-43edc0bffdc9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> 
@@ -13931,16 +13737,13 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: 'five please'</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this example, the error halted our program before it could run the command switching back the working directory. So our program now leaves us in a different directory from the one we started in.</p>
-
 </div>
 </div>
 </div>
@@ -13948,40 +13751,27 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [25]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[25]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[25]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'/home/lt/GitHub/introduction-to-programming/content/my_new_directory'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So in order to return to our original working directory, we need to switch back manually. Let's do that now, just so things are fixed for the rest of this lesson.</p>
-
 </div>
 </div>
 </div>
@@ -13989,35 +13779,23 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">'..'</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[26]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[26]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'/home/lt/GitHub/introduction-to-programming/content'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14025,9 +13803,8 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <p>Even this is on its own not such a big deal, more of a minor annoyance. The real problems arise if our program is part of a larger program that may continue running after our program exits. As a result of the error in our program, this other program might now be working in a directory other than the one it expects, and so may end up doing some things wrong, such as putting files in the wrong place or not finding other files that it needs.</p>
 <h3 id="Paths">Paths<a class="anchor-link" href="#Paths">¶</a></h3><p>The slightly more robust solution that we will use in our program is to always stay in the current working directory, and when we have an action that should take place in another directory, specify the 'path' that leads to that directory from the current one.</p>
 <p>The <a href="glossary.html#path">path</a> to a file or directory is a description of its location within the file system of the computer. The path describes a series of turnings to take in the file system in order to get to a particular location. A particular character, known as a <a href="glossary.html#separator">separator</a> (or occasionally as a 'delimiter') marks out each new directory along the path.</p>
-<p>The result of <code>os.getcwd()</code> that you see above is an example of a path. It gives the path to the directory in which the files for these lessons are located on my computer. So this path tells us to start in the 'home' directory, then go into the 'lt' directory, and so on. Because the <a href="glossary.html#os">operating system</a> on my computer is Linux, the separator for the directories along the path is the forward slash '/'. If you are working on a Windows computer, you will see a different separator in the path that you get from <code>os.getcwd()</code>.</p>
+<p>The result of <code>os.getcwd()</code> that you see above is an example of a path. It gives the path to the directory in which the files for these lessons are located on my computer. So this path tells us to start in the 'home' directory, then go into the 'lt' directory, and so on. Because the <a href="glossary.html#OS">operating system</a> on my computer is Linux, the separator for the directories along the path is the forward slash '/'. If you are working on a Windows computer, you will see a different separator in the path that you get from <code>os.getcwd()</code>.</p>
 <p>The <code>os</code> module contains an entire submodule, called <code>path</code>, for dealing with paths. The <code>os.path</code> submodule provides a variable (note: not a function, so no parentheses needed) that stores the path separator for the operating system that you are using:</p>
-
 </div>
 </div>
 </div>
@@ -14035,40 +13812,27 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">sep</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[27]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[27]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'/'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It also provides a function for joining together the names of directories using the appropriate separator for the current operating system. This is useful to make sure that your program is compatible with Windows and other operating systems. For example:</p>
-
 </div>
 </div>
 </div>
@@ -14076,41 +13840,28 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [28]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">'folder'</span><span class="p">,</span> <span class="s1">'subfolder'</span><span class="p">,</span> <span class="s1">'subsubfolder'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[28]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[28]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'folder/subfolder/subsubfolder'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Absolute-paths">Absolute paths<a class="anchor-link" href="#Absolute-paths">¶</a></h4><p>The 'absolute' path to a file or directory is the full path starting from the top directory on the whole computer, sometimes termed the 'root' directory. On Linux or macOS, the root directory is just named '/'. On Windows, it is a letter denoting the drive on which the files are stored, usually 'C:'.</p>
 <p>Occasionally we might need to know the absolute path to a file or directory. The <code>abspath()</code> function from the <code>os.path</code> module gives us the absolute path to an existing directory within the current working directory. For example:</p>
-
 </div>
 </div>
 </div>
@@ -14118,41 +13869,28 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">'examples'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[29]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[29]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'/home/lt/GitHub/introduction-to-programming/content/examples'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Relative-paths">Relative paths<a class="anchor-link" href="#Relative-paths">¶</a></h4><p>Our target program does not require absolute paths, so we will set them aside for now. Instead, it only needs to know the locations of the new directories we want to create 'relative' to the current working directory. Paths that specify a location relative to some other location are known as 'relative paths'. We can recognize relative paths because they do not begin with the root directory ('/' on macOS and Linux, 'C:' or some other drive letter on Windows). Python will interpret such paths as starting in the current working directory.</p>
 <p>So to specify the relative path to one of the per-month directories within one of the per-year directories in our target program, we can write something like <code>'2015/Jan'</code>. Or better, in order to make our program compatible across different operating systems, we can insert the appropriate path separator by using <code>os.path.join()</code>. Like this:</p>
-
 </div>
 </div>
 </div>
@@ -14160,40 +13898,27 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">'2015'</span><span class="p">,</span> <span class="s1">'Jan'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[30]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[30]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'2015/Jan'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So let's try putting this together with some of the other ingredients of our target program to create the next per-year directory and the next per-month directory inside it:</p>
-
 </div>
 </div>
 </div>
@@ -14201,27 +13926,21 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">dirname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">'2016'</span><span class="p">,</span> <span class="s1">'Jan'</span><span class="p">)</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-31-00f059584001&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> dirname <span class="ansi-blue-fg">=</span> os<span class="ansi-blue-fg">.</span>path<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'2016'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'Jan'</span><span class="ansi-blue-fg">)</span>
@@ -14231,17 +13950,14 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: '2016/Jan'</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Unfortunately, this fails. The reason is that <code>os.mkdir()</code> is strictly for creating a single new directory. Here we would like to create a new directory and a new subdirectory at the same time. Since <code>os.mkdir()</code> doesn't find the '2016' directory in which to create the 'Jan' subdirectory, it <a href="glossary.html#raise">raises an exception</a>.</p>
 <p>Fortunately, there is an alternative function for creating directories containing directories. <code>os.makedirs()</code> makes a new directory, along with any intermediate directories along the specified <a href="glossary.html#path">path</a> to that new directory. (In <code>makedirs()</code> 'make' is inexplicably not abbreviated to 'mk' despite the fact that the name of the function is longer than that of <code>mkdir()</code>.)</p>
-
 </div>
 </div>
 </div>
@@ -14249,36 +13965,24 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <div class="input">
 <div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">'2016'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[32]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[32]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['Jan']</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14297,21 +14001,14 @@ $$<p>Both of these involve the mathematical constant <a href="https://en.wikiped
 <p>For some of the specialist topics later on we will need to <a href="glossary.html#import">import</a> modules from third-party packages. When we do, I will note whether an <code>import</code> is from the standard library or whether it is from a third-party package, and I will provide instructions for installing it if necessary. However, if you have installed Python via Anaconda, then almost all of the third-party packages that we need for this class will already have been installed by default. You can read a list of all the additional packages that Anaconda installs for you at the <a href="https://docs.anaconda.com/anaconda/packages/pkg-docs/">Anaconda package listings</a>.</p>
 <h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a></h2><h3 id="1">1<a class="anchor-link" href="#1">¶</a></h3><p>The <code>string</code> module provides some additional variables that can be useful for working with strings. Among them is the <code>punctuation</code> variable, which contains punctuation characters. Use this variable to create a function called <code>standardized_words()</code>. This function returns a list of the words in a text, but in a 'standardized' form. Your function should take a string input argument containing some text, remove all the punctuation, make the contents lowercase, and then return a list of the words in the text.</p>
 <p>Here is an example of the function in action:</p>
-
 <pre><code>&gt;&gt;&gt; standardized_words('She said: "Hello, world!"')
 ['she', 'said', 'hello', 'world']</code></pre>
 <h3 id="2">2<a class="anchor-link" href="#2">¶</a></h3><p>A '<a href="https://en.wikipedia.org/wiki/Magic_8-Ball">Magic 8-Ball</a>' is a popular toy that when shaken gives a random answer to a question. Write a program that simulates the behavior of a Magic 8-Ball. When you run the program it prints out one of a number of possible answers, at random. You can find a list of the 20 possible answers from the original Magic 8-Ball <a href="https://en.wikipedia.org/wiki/Magic_8-Ball#Possible_answers">here</a>, or you can define your own shorter list of answers if you don't fancy typing all those into your program.</p>
 <p>(Hint: There is a module in the standard library for working with randomness.)</p>
-
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-
- 
-
-
-
-</body></html>
+</div>
+</div>
+</body>
+</html>

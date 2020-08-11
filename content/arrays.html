@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
-
+<html>
+<head><meta charset="utf-8"/>
 <title>Notebook</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -13016,8 +13012,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13043,15 +13037,13 @@ div#notebook {
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link href="custom.css" rel="stylesheet"/>
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13068,15 +13060,14 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-    <div class="container" id="notebook-container">
-
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Contents<span class="tocSkip"></span></h1><p></p>
+<p></p><h1>Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="Vectors-1" href="#Vectors">Vectors</a></span></li><li><span><a data-toc-modified-id="Matrices-2" href="#Matrices">Matrices</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Matrix-multiplication-2.1" href="#Matrix-multiplication">Matrix multiplication</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Rotation-2.1.1" href="#Rotation">Rotation</a></span></li></ul></li></ul></li><li><span><a data-toc-modified-id="Objective-3" href="#Objective">Objective</a></span></li><li><span><a data-toc-modified-id="Arrays-4" href="#Arrays">Arrays</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="numpy-arrays-4.1" href="#numpy-arrays">numpy arrays</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Data-types-4.1.1" href="#Data-types">Data types</a></span></li><li><span><a data-toc-modified-id="Indexing-4.1.2" href="#Indexing">Indexing</a></span></li><li><span><a data-toc-modified-id="Broadcasting-4.1.3" href="#Broadcasting">Broadcasting</a></span></li><li><span><a data-toc-modified-id="Matrix-multiplication-with-numpy-4.1.4" href="#Matrix-multiplication-with-numpy">Matrix multiplication with numpy</a></span></li></ul></li></ul></li><li><span><a data-toc-modified-id="matplotlib-5" href="#matplotlib">matplotlib</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Customizing-plots-5.1" href="#Customizing-plots">Customizing plots</a></span></li></ul></li><li><span><a data-toc-modified-id="Aliases-6" href="#Aliases">Aliases</a></span></li><li><span><a data-toc-modified-id="Exercise-7" href="#Exercise">Exercise</a></span></li></ul></div>
 </div>
 </div>
@@ -13189,7 +13180,6 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <h2 id="Arrays">Arrays<a class="anchor-link" href="#Arrays">¶</a></h2><p>As we have done sometimes before, we will build up to our target function step by step. The first thing we need to know is how to represent a matrix in Python.</p>
 <p>Basic Python does not provide a 'matrix' <a href="glossary.html#type">data type</a>. But we have already met some Python types that could be used to do the job. Matrices contain multiple values, so we need a data type that can store multiple values. A <a href="glossary.html#list">list</a> is an obvious first choice. For example, we could represent a matrix as a list in which each entry in the list represents one row, where each of those entries contains a further list, whose entries represent the values in that row.</p>
 <p>So we would represent our example matrix of coordinates from above like this:</p>
-
 </div>
 </div>
 </div>
@@ -13197,20 +13187,17 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="glossary.html#index">Indexing</a> our list of lists would then give us one row (i.e. one <em>x,y</em> point):</p>
-
 </div>
 </div>
 </div>
@@ -13218,40 +13205,27 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[3]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>[9.0, 4.0]</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>But a list of lists isn't great for this purpose, for a few reasons. First of all, it makes it quite complicated to apply some mathematical operation to one <em>column</em> of the matrix, such as adding some number to the <em>x</em> values so as to move the points along the <em>x</em> axis. For this, we would have to <a href="glossary.html#loop">loop</a> through every 'row' in the list and apply the same operation to one of the coordinate values in that row. For example to add <code>1</code> to each <em>x</em> value:</p>
-
 </div>
 </div>
 </div>
@@ -13259,44 +13233,31 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coords_list</span><span class="p">:</span>
     <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
     
 <span class="n">coords_list</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[4]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>[[2.0, 2.0], [6.0, 3.0], [10.0, 4.0], [14.0, 5.0]]</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It would be nicer to have a data type that allows us to index rows and columns in such a way that we can write matrix mathematical expressions like 'add 1 to all the values in the first column' more concisely.</p>
 <p>Second and more importantly, nothing about the list representation constrains each row to have the same number of columns, as a good matrix should. If we accidentally increase the length of one of the rows, our matrix becomes misshapen and Python does nothing to warn us:</p>
-
 </div>
 </div>
 </div>
@@ -13304,43 +13265,30 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
 
 <span class="n">coords_list</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[5]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>[[2.0, 2.0, 3.0], [6.0, 3.0], [10.0, 4.0], [14.0, 5.0]]</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And finally, it would also be nice if our matrix were strict about the <a href="glossary.html#type">type</a> of the values that it contains. Although it may occasionally make sense for matrices to contain things other than numbers, one thing that almost never makes sense is for a matrix to mix various different types together.</p>
 <p>Lists, however, will happily mix data of all sorts of different types. For example:</p>
-
 </div>
 </div>
 </div>
@@ -13348,14 +13296,12 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">crazy_matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">2.4</span><span class="p">,</span> <span class="s1">'Hi! My name is Mildred.'</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span><span class="s1">'2.4'</span><span class="p">,</span> <span class="o">-</span><span class="mi">9000</span><span class="p">]]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13363,7 +13309,6 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <p>For cases where we want to represent data of a homogeneous <a href="glossary.html#type">type</a> in rows and columns and we want to be able to carry out mathematical operations on subsets of those rows and columns with simple commands, we need a new data type. In computing, such a data type is often called an <a href="glossary.html#array">array</a>. Arrays store homogeneous values in rows and columns (or more generally in 'grids' that may have more than just two dimensions).</p>
 <h3 id="numpy-arrays">numpy arrays<a class="anchor-link" href="#numpy-arrays">¶</a></h3><p>The very popular <code>numpy</code> <a href="glossary.html#package">package</a> (short for 'numerical Python') adds an array data type. <code>numpy</code> is installed by default as part of Anaconda, so if you installed Python via Anaconda you do not need to do anything to install <code>numpy</code>.</p>
 <p>All that we need to do in order to create an array is to <a href="glossary.html#import">import</a> <code>numpy</code>, then use its <code>array()</code> function.</p>
-
 </div>
 </div>
 </div>
@@ -13371,23 +13316,20 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
 
 <span class="n">coords</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you can see from the example above, the input <a href="glossary.html#argument">argument</a> to <code>numpy.array()</code> is a list. If we want to create a 2-dimensional array (i.e. a matrix), then the input list should be a list of lists, just like the one we created above.</p>
 <p>But unlike a simple list of lists, a <code>numpy</code> array 'knows' that its entries represent rows and that the entries within each row represent columns. We get a first hint that this is the case if we print the array. The <code>print()</code> representation of a <code>numpy</code> array helpfully arranges its values visually as rows and columns, allowing us to more easily check the shape of the array:</p>
-
 </div>
 </div>
 </div>
@@ -13395,23 +13337,16 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[ 1.  2.]
  [ 5.  3.]
@@ -13420,16 +13355,13 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>numpy</code> arrays have some <a href="glossary.html#attribute">attributes</a> that store information about their content. The <code>shape</code> attribute tells us the number of rows and columns in the array.</p>
-
 </div>
 </div>
 </div>
@@ -13437,41 +13369,28 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[9]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>(4, 2)</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the <code>shape</code> attribute, and in many other contexts, rows come first, then columns. This is an arbitrary convention that Python and many other similar programming languages follow. Some programming languages follow the opposite convention: columns first, then rows.</p>
 <p>Note that we are not limited to working with 2-dimensional arrays (i.e. <a href="glossary.html#matrix">matrices</a>). If we instead give a simple list of values to <code>numpy.array()</code> then we get an array with only one dimension (i.e. a <a href="glossary.html#vector">vector</a>:</p>
-
 </div>
 </div>
 </div>
@@ -13479,42 +13398,29 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">my_vector</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">42</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">45</span><span class="p">])</span>
 
 <span class="n">my_vector</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[10]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>(4,)</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Likewise, if we instead give a list of lists <em>of lists</em>, we get a 3-dimensional array. In this case, <code>shape</code> tells us the number of rows, columns, and then 'layers' (or however we care to think of the third dimension), in that order:</p>
-
 </div>
 </div>
 </div>
@@ -13522,43 +13428,30 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">my_3d_thing</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">]]])</span>
 
 <span class="n">my_3d_thing</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[11]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>(3, 2, 3)</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We may even go beyond three dimensions if we wish. But for me, three is already slightly higher than the maximum number of dimensions I can easily think about without hurting myself, so we will stick to vectors and matrices for now.</p>
 <h4 id="Data-types">Data types<a class="anchor-link" href="#Data-types">¶</a></h4><p>Apart from <code>shape</code>, the other <a href="glossary.html#attribute">attribute</a> of a <code>numpy</code> array that we will most commonly want to check is <code>dtype</code>, which tells us what <a href="glossary.html#type">data type</a> the values in the array are.</p>
-
 </div>
 </div>
 </div>
@@ -13566,40 +13459,27 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[12]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>dtype('float64')</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>numpy</code> has its own data types, with names slightly different from those in basic Python, but we don't need to worry about these in simple applications. 'float64' basically means <a href="glossary.html#float">float</a>, and likewise, 'int64' means <a href="glossary.html#integer">int</a>:</p>
-
 </div>
 </div>
 </div>
@@ -13607,42 +13487,29 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">some_integers</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 
 <span class="n">some_integers</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[13]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>dtype('int64')</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>numpy.array()</code> takes note of the types that we give it. If we mix values of different types, then <code>numpy</code> will convert some of those values implicitly (this implicit type conversion is sometimes called <a href="glossary.html#coercion">coercing</a> the values to a new type). For example, integers in an array that also contains floats will be 'coerced' to float:</p>
-
 </div>
 </div>
 </div>
@@ -13650,76 +13517,51 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">some_numbers</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 
 <span class="n">some_numbers</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[14]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>dtype('float64')</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">some_numbers</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[15]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([1., 2., 3.])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So when creating <code>numpy</code> arrays it is a good idea to be explicit and consistent about the data types that we are entering into the array.</p>
 <p>Note that we should not confuse <code>dtype</code> with the type of <em>the array itself</em>. numpy arrays are of course of type 'numpy array'.</p>
-
 </div>
 </div>
 </div>
@@ -13727,34 +13569,22 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">some_numbers</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>numpy.ndarray</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13763,7 +13593,6 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <h4 id="Indexing">Indexing<a class="anchor-link" href="#Indexing">¶</a></h4><p>Among the desiderata for an array data type that we listed above was the possibility of getting hold of various subsets of the rows and columns of the array with a simple short expression rather than having to use a <a href="glossary.html#loop">loop</a> as we did for the list of lists. <code>numpy</code> arrays deliver this desideratum. It's one of their most salient features.</p>
 <p>To refer to one or more rows or columns (or further dimensions) of a <code>numpy</code> array, we can use the familiar square parentheses that we have already been using to <a href="glossary.html#index">index</a> other Python types. The only difference is that instead of a single index, we can put multiple indices into the square parentheses. These indices are separated by commas. In accordance with the convention we noted above, the first index refers to rows, and the second to columns.</p>
 <p>Let's take a look at our matrix of coordinates again:</p>
-
 </div>
 </div>
 </div>
@@ -13771,43 +13600,30 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[17]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 1.,  2.],
        [ 5.,  3.],
        [ 9.,  4.],
        [13.,  5.]])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To get the value in the second column of the fourth row (remembering as always Python's zero-based indexing system), we do:</p>
-
 </div>
 </div>
 </div>
@@ -13815,41 +13631,28 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[18]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[18]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>5.0</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>All of the various extra tricks that we learned about earlier for <a href="sequences_mappings.html#Indexing">indexing and slicing sequences</a> also apply to <code>numpy</code> arrays. We can use negative indices to 'count back from the end' (i.e. from the bottom row or from the rightmost column), and we can use the colon character (<code>:</code>) to ask for a range, or '<a href="glossary.html#slice">slice</a>', of entries.</p>
 <p>For example to get the values in the final column and the last two rows we can do:</p>
-
 </div>
 </div>
 </div>
@@ -13857,34 +13660,22 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[19]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([4., 5.])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13892,7 +13683,6 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <p>Often we will want to ask simply for a subset of rows, or a subset of columns. In such cases we only want to give a row index or a column index, but not both. For example if we want to get the entire first column, then we need to supply the index for that column (<code>0</code>), but we don't want to have to supply any index for the rows; we want instead to be able to say 'don't leave out any rows, just give me them all'.</p>
 <p>In the context of indices, the colon character written on its own without any numbers means 'all'. This is a logical extrapolation of its role in specifying <a href="glossary.html#slice">slices</a>. We have seen that if we omit the number before the colon then the slice will start at the start, and if we omit the number after the colon, the slice will go all the way to the end. It follows that if we omit both the number before and after the colon (i.e. we simply write a colon on its own), then the slice starts at the start and ends at the end, which of course gives us all values.</p>
 <p>So the entire first column is rows <code>:</code> and column <code>0</code>:</p>
-
 </div>
 </div>
 </div>
@@ -13900,41 +13690,28 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[20]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([ 1.,  5.,  9., 13.])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can use these indexing tricks together with an <code>=</code> <a href="glossary.html#assignment">assignment</a> to selectively change some parts of an array.</p>
 <p>For example to add <code>1</code> to every <em>x</em> value in our example matrix of <em>x,y</em> coordinates we can ask for 'all the rows and the first column', add 1, then assign the result back into 'all the rows and the first column':</p>
-
 </div>
 </div>
 </div>
@@ -13942,45 +13719,32 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="n">coords</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[21]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 2.,  2.],
        [ 6.,  3.],
        [10.,  4.],
        [14.,  5.]])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note that this kind of 'row, column' indexing is not possible with a list of lists like the one that we defined above. Lists do not accept multiple indices:</p>
-
 </div>
 </div>
 </div>
@@ -13988,25 +13752,19 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords_list</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-22-1e454cc0dc4b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>coords_list<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span>
@@ -14014,10 +13772,8 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <span class="ansi-red-fg">TypeError</span>: list indices must be integers or slices, not tuple</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14026,7 +13782,6 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <p>We could of course do this in two separate steps, one for each column. This would be fine for this simple example. But <code>numpy</code> provides a more general way of making structured changes to multiple values.</p>
 <p>Consider that the instruction 'add 1 to all the values in the first column, and add 2 to all the values in the second column' can also be rephrased as 'add the <a href="glossary.html#vector">vector</a> <code>[1, 2]</code> to every row'. We can take a vector that has the same number of values as the number of columns in our matrix, and 'pair up' the values in this vector with the corresponding values in each row.</p>
 <p><code>numpy</code> does this automatically if we add a vector to an array. Like this:</p>
-
 </div>
 </div>
 </div>
@@ -14034,76 +13789,54 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">row_vector</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">row_vector</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1. 2.]
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span> <span class="o">+</span> <span class="n">row_vector</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[24]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 3.,  4.],
        [ 7.,  5.],
        [11.,  6.],
        [15.,  7.]])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>(Remember that as usual, the original <a href="glossary.html#variable">variable</a> is not changed by a mathematical expression unless we <a href="glossary.html#assignment">assign</a> the result back into the variable. This is the same for <code>numpy</code> arrays as for other Python variables):</p>
-
 </div>
 </div>
 </div>
@@ -14111,23 +13844,16 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [25]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[ 2.  2.]
  [ 6.  3.]
@@ -14136,34 +13862,25 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span> <span class="o">=</span> <span class="n">coords</span> <span class="o">+</span> <span class="n">row_vector</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[ 3.  4.]
  [ 7.  5.]
@@ -14172,17 +13889,14 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We are not limited to combining a vector with every row of an array. We can also combine a <a href="glossary.html#vector">column vector</a> with every column. However, in this case the vector must indeed be a column vector, so that its shape matches up properly to the dimensions of our array.</p>
 <p>Remember that the entries in the input list represent rows, and each of these is a list of values. So to get a column vector we need to input a list of lists in which each 'inner' list contains just one value. For example:</p>
-
 </div>
 </div>
 </div>
@@ -14190,25 +13904,18 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">column_vector</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">]])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">column_vector</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[1.]
  [2.]
@@ -14217,52 +13924,37 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [28]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span> <span class="o">+</span> <span class="n">column_vector</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[28]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[28]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 4.,  5.],
        [ 9.,  7.],
        [14.,  9.],
        [19., 11.]])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And we are also not limited to addition. We can apply other mathematical operations between arrays. For example multiplication:</p>
-
 </div>
 </div>
 </div>
@@ -14270,37 +13962,25 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span> <span class="o">*</span> <span class="n">column_vector</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[29]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[29]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 3.,  4.],
        [14., 10.],
        [33., 18.],
        [60., 28.]])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14308,7 +13988,6 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <p>When we combine arrays like this, the shapes of the arrays are matched up if possible, and then the smaller array is 'repeated' so as to cover all the rows or all the columns of the larger array. This is an example of what is known in array computing as <a href="glossary.html#broadcasting">broadcasting</a> one array onto another.</p>
 <p>The <a href="https://numpy.org/devdocs/user/theory.broadcasting.html">braodcasting page</a> from the documentation for the <code>numpy</code> package has some diagrams giving further explanations, and an interesting example use case.</p>
 <p>Of course not all arrays are of compatible shapes. If we attempt to combine arrays whose shapes do not match up, then we get an error message saying that no broadcasting was possible:</p>
-
 </div>
 </div>
 </div>
@@ -14316,25 +13995,19 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <div class="input">
 <div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">coords</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-30-186e551a999f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>coords <span class="ansi-blue-fg">+</span> numpy<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1.0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2.0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">3.0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
@@ -14342,10 +14015,8 @@ $$<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h
 <span class="ansi-red-fg">ValueError</span>: operands could not be broadcast together with shapes (4,2) (3,) </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14371,7 +14042,6 @@ $$
 28 &amp; 46 \\
 \end{bmatrix}
 $$<p>First we create our two arrays:</p>
-
 </div>
 </div>
 </div>
@@ -14379,21 +14049,18 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It is a good idea to check them visually first to make sure we got this step right:</p>
-
 </div>
 </div>
 </div>
@@ -14401,23 +14068,16 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[ 1.  2.]
  [ 5.  3.]
@@ -14426,48 +14086,36 @@ $$<p>First we create our two arrays:</p>
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[1. 2.]
  [3. 4.]]
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And then <code>numpy</code>'s matrix multiplication function, <code>matmul()</code>:</p>
-
 </div>
 </div>
 </div>
@@ -14475,37 +14123,25 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [34]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[34]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[34]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 7., 10.],
        [14., 22.],
        [21., 34.],
        [28., 46.]])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14517,7 +14153,6 @@ $$<p>First we create our two arrays:</p>
 </ul>
 <p>But these are all straightforward, and we can take them from the <code>math</code> module in Python's [standard library].</p>
 <p>You can see the code for the finished function in the example module <a href="examples/coordinates.py">coordinates.py</a>. Here it is in action:</p>
-
 </div>
 </div>
 </div>
@@ -14525,41 +14160,29 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">coordinates</span>
 
 <span class="n">coords</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]])</span>
 
 <span class="n">coordinates</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[35]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[35]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[-0.70710678,  2.12132034],
        [ 1.41421356,  5.65685425],
        [ 3.53553391,  9.19238816],
        [ 5.65685425, 12.72792206]])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14567,7 +14190,6 @@ $$<p>First we create our two arrays:</p>
 <h2 id="matplotlib">matplotlib<a class="anchor-link" href="#matplotlib">¶</a></h2><p>If you are the sort of person who can see the positions of coordinates in your mind's eye, you may see already that our <code>rotate()</code> function is working correctly. But if you are anything like me, you will want to see a picture to be sure. So let's learn how to plot points in Python.</p>
 <p>Python's <a href="standard_library.html">standard library</a> does not contain any modules for displaying plots, but the popular <code>matplotlib</code> <a href="glossary.html#package">package</a> does. This package is the basis for producing any graphs or technical drawings in Python programs. Like <code>numpy</code>, <code>matplotlib</code> is included by default in the standard Anaconda installation, so if you have installed Anaconda you already have it.</p>
 <p>Since <code>matplotlib</code> is a fairly large package containing several submodules, it is a common practice to avoid importing all of it, and to save a bit of typing time later, by fetching just the relevant part using a selective import (which we learned about in the <a href="modules.html">lesson on modules</a>). The module that we need is called <code>pyplot</code>:</p>
-
 </div>
 </div>
 </div>
@@ -14575,14 +14197,12 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [36]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14590,7 +14210,6 @@ $$<p>First we create our two arrays:</p>
 <p>And the <code>pyplot</code> module contains a <code>scatter()</code> function that allows us to plot points as dots on a figure.</p>
 <p>The first <a href="glossary.html#argument">argument</a> is a <a href="glossary.html#vector">vector</a> of <em>x</em> coordinates, and the second argument is a vector of corresponding <em>y</em> coordinates. So in our case we can get these two input arguments from the two columns of our array.</p>
 <p>When we have finished drawing, the <code>show()</code> function will show the final plot.</p>
-
 </div>
 </div>
 </div>
@@ -14598,44 +14217,31 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [37]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
 
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea">
 <img src="data:image/png;base64,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
 "/>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can overlay multiple sets of points on a figure by just using the plotting function multiple times before <code>show()</code>. <code>matplotlib</code> even helpfully draws each set of points in a different color.</p>
 <p>For our example, we can use this to overlay our rotated coordinates on the original ones, to see whether the angle of rotation looks right:</p>
-
 </div>
 </div>
 </div>
@@ -14643,7 +14249,7 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [38]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rotated_coords</span> <span class="o">=</span> <span class="n">coordinates</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
 
 <span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
@@ -14651,39 +14257,26 @@ $$<p>First we create our two arrays:</p>
 
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea">
 <img src="data:image/png;base64,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
 "/>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Customizing-plots">Customizing plots<a class="anchor-link" href="#Customizing-plots">¶</a></h3><p>Often we will want to specify a few more details about the appearance of our plots. <code>matplotlib</code> provides lots and lots of additional functions for adding features to a plot, and these functions accept many keyword arguments for changing things like colors, types of dots and lines, etc.</p>
 <p>To demonstrate the general idea, we will add just one slight flourish to our plot. It would be nice to have some lines on the plot showing the center of the coordinate space, so that we can verify that the points have been rotated around this center. And it would be nice if these lines were black rather than <code>matplotlib</code>'s default blue.</p>
-
 </div>
 </div>
 </div>
@@ -14691,7 +14284,7 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [39]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rotated_coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">rotated_coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
@@ -14699,32 +14292,20 @@ $$<p>First we create our two arrays:</p>
 
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea">
 <img src="data:image/png;base64,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
 "/>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14733,7 +14314,6 @@ $$<p>First we create our two arrays:</p>
 <p>We will learn more about other plotting packages later.</p>
 <h2 id="Aliases">Aliases<a class="anchor-link" href="#Aliases">¶</a></h2><p>Once you are released into the wild and start reading more Python examples online, you will notice that some programs seem to refer to <code>numpy</code> as 'np' instead, and to <code>matplotlib.pyplot</code> as 'plt'. These programs begin by importing <code>numpy</code>, or <code>matplotlib</code> (or some other module) under an alternative name, sometimes called an <a href="glossary.html#alias">alias</a>.</p>
 <p>Such programs begin with <a href="glossary.html#import">import</a> statements that additionally use the <code>as</code> <a href="glossary.html#keyword">keyword</a> to import a module under a different name. Like this:</p>
-
 </div>
 </div>
 </div>
@@ -14741,21 +14321,18 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [40]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In almost all cases, this slight difference from the standard method of importing is purely cosmetic. All it achieves is to allow the rest of the program to refer to the imported module by its alias. For example:</p>
-
 </div>
 </div>
 </div>
@@ -14763,34 +14340,22 @@ $$<p>First we create our two arrays:</p>
 <div class="input">
 <div class="prompt input_prompt">In [41]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[41]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[41]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([1, 2, 3])</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14806,16 +14371,10 @@ $$<p>First we create our two arrays:</p>
 <h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2><p>In geometry, to <a href="https://en.wikipedia.org/wiki/Translation_(geometry">translate</a>) some coordinates simply means to move them by a certain distance in a certain direction within the coordinate space. One way of representing this transformation is as the addition of a vector to the coordinates, as we learned above. For example, to move a pair of <em>(x,y)</em> coordinates 3 units rightward along the <em>x</em> axis and 2 units downward along the <em>y</em> axis we would add the vector <em>(3,-2)</em>.</p>
 <p>Add a new function to the <a href="examples/coordinates.py">coordinates.py</a> module, called <code>translate()</code>. Like <code>rotate()</code>, <code>translate()</code> should take as its first <a href="glossary.html#argument">argument</a> a 2-column <code>numpy</code> array representing some coordinates, and it should <a href="glossary.html#return">return</a> a transformed version of the coordinates. The second argument should be a <a href="glossary.html#list">list</a> (or a <a href="glossary.html#tuple">tuple</a>, it doesn't matter) whose two entries give the distances by which to shift the coordinates along the <em>x</em> and <em>y</em> axes, respectively. So for the example of shifting the coordinates 3 units rightwards along the <em>x</em> axis and 2 units downward along the <em>y</em> axis, this argument would be <code>[3, -2]</code>.</p>
 <p>It will probably help to test your function visually using <code>matplotlib</code> as you go along, to confirm that it works as expected.</p>
-
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-
- 
-
-
-
-</body></html>
+</div>
+</div>
+</body>
+</html>

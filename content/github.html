@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
-
+<html>
+<head><meta charset="utf-8"/>
 <title>Notebook</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -13016,8 +13012,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13043,15 +13037,13 @@ div#notebook {
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link href="custom.css" rel="stylesheet"/>
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13068,15 +13060,14 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-    <div class="container" id="notebook-container">
-
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Contents<span class="tocSkip"></span></h1><p></p>
+<p></p><h1>Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="Version-control-1" href="#Version-control">Version control</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="git-1.1" href="#git">git</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Configuration-1.1.1" href="#Configuration">Configuration</a></span></li></ul></li></ul></li><li><span><a data-toc-modified-id="Creating-a-repository-2" href="#Creating-a-repository">Creating a repository</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="README-2.1" href="#README">README</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Markdown-2.1.1" href="#Markdown">Markdown</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Headings-2.1.1.1" href="#Headings">Headings</a></span></li><li><span><a data-toc-modified-id="Links-2.1.1.2" href="#Links">Links</a></span></li></ul></li></ul></li><li><span><a data-toc-modified-id="gitignore-2.2" href="#gitignore">gitignore</a></span></li></ul></li><li><span><a data-toc-modified-id="Working-locally-3" href="#Working-locally">Working locally</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Atom-3.1" href="#Atom">Atom</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Cloning-3.1.1" href="#Cloning">Cloning</a></span></li><li><span><a data-toc-modified-id="Making-changes-3.1.2" href="#Making-changes">Making changes</a></span></li><li><span><a data-toc-modified-id="commits-3.1.3" href="#commits">commits</a></span></li><li><span><a data-toc-modified-id="diffs-3.1.4" href="#diffs">diffs</a></span></li><li><span><a data-toc-modified-id="push-3.1.5" href="#push">push</a></span></li><li><span><a data-toc-modified-id="pull-3.1.6" href="#pull">pull</a></span></li></ul></li></ul></li><li><span><a data-toc-modified-id="Collaboration-4" href="#Collaboration">Collaboration</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Branches-4.1" href="#Branches">Branches</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Branches-in-Atom-4.1.1" href="#Branches-in-Atom">Branches in Atom</a></span></li></ul></li><li><span><a data-toc-modified-id="Pull-requests-4.2" href="#Pull-requests">Pull requests</a></span></li><li><span><a data-toc-modified-id="Issues-4.3" href="#Issues">Issues</a></span></li></ul></li><li><span><a data-toc-modified-id="Exercise-5" href="#Exercise">Exercise</a></span></li></ul></div>
 </div>
 </div>
@@ -13101,7 +13092,6 @@ div#notebook {
 <p>So to follow along with the examples in this lesson, you will need both an online account at the GitHub site (it's free and you can sign up <a href="https://github.com/join">here</a>) and you will need to have git installed on your computer.</p>
 <p>(And in case you are wondering why git is called the way it is, there are a few speculations <a href="https://en.wikipedia.org/wiki/Git#Naming">on Wikipedia</a>.)</p>
 <h4 id="Configuration">Configuration<a class="anchor-link" href="#Configuration">¶</a></h4><p>First check whether git is installed on your computer. To check, try <code>git</code> as a command line command at the Spyder console (don't forget the <code>!</code>). For example, you can ask git what version it is:</p>
-
 </div>
 </div>
 </div>
@@ -13109,32 +13099,23 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> git --version
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>git version 2.25.1
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13142,7 +13123,6 @@ div#notebook {
 <p>If you see a response like the one above (don't worry if you get a slightly different version number), then git is installed. If instead the response is something like 'not found' or 'not recognized', then you will need to install git if you want to follow along with all of the examples in this lesson. Take a look back at the <a href="setup.html#git">instructions for installing software for the class</a>.</p>
 <p>In order to synchronize programming projects on your own computer with your online storage at the GitHub website, git needs to know who you are on GitHub. To achieve this, you can configure git so that it knows your GitHub username and email. The command <code>git config</code>, together with the <code>--global</code> option, sets the global configuration for git on your computer ('global' in the sense that it applies across all of the git projects that you work on, and is not special to just one project).</p>
 <p>Use it to set the <code>user.name</code> and <code>user.email</code> options. Like this:</p>
-
 </div>
 </div>
 </div>
@@ -13150,22 +13130,19 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> git config --global user.name <span class="s1">'luketudge'</span>
 <span class="o">!</span> git config --global user.email <span class="s1">'luketudge@gmail.com'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Make sure that the username and email that you enter are the same ones you used when you signed up for a GitHub account.</p>
 <p>You can check that these commands have taken effect correctly using the <code>--list</code> option for <code>git config</code> to list your full global configuration:</p>
-
 </div>
 </div>
 </div>
@@ -13173,33 +13150,24 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> git config --global --list
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>user.name=luketudge
 user.email=luketudge@gmail.com
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13363,16 +13331,10 @@ user.email=luketudge@gmail.com
 <li>First switch into the 'in-progress' branch of the GitHub repository and check that the issue hasn't already been resolved there. I use the 'in-progress' branch to store and check the next version of the site before merging it into the master branch.</li>
 <li>You can use markdown in the text of your issue. This can be especially useful for including a link to the page (or even the section on the page) that is relevant for the issue. There is a preview view that you can use to check whether you have got the markdown right before you submit your issue.</li>
 </ul>
-
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-
- 
-
-
-
-</body></html>
+</div>
+</div>
+</body>
+</html>

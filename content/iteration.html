@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
-
+<html>
+<head><meta charset="utf-8"/>
 <title>Notebook</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -13016,8 +13012,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13043,15 +13037,13 @@ div#notebook {
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link href="custom.css" rel="stylesheet"/>
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13068,15 +13060,14 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-    <div class="container" id="notebook-container">
-
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Contents<span class="tocSkip"></span></h1><p></p>
+<p></p><h1>Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="Objective-1" href="#Objective">Objective</a></span></li><li><span><a data-toc-modified-id="Loops-2" href="#Loops">Loops</a></span></li><li><span><a data-toc-modified-id="Iterables-3" href="#Iterables">Iterables</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Range-3.1" href="#Range">Range</a></span></li><li><span><a data-toc-modified-id="Dictionaries-3.2" href="#Dictionaries">Dictionaries</a></span></li><li><span><a data-toc-modified-id="enumerate-3.3" href="#enumerate">enumerate</a></span></li></ul></li><li><span><a data-toc-modified-id="Indentation-again-4" href="#Indentation-again">Indentation again</a></span></li><li><span><a data-toc-modified-id="while-loops-5" href="#while-loops">while loops</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Debugging-5.1" href="#Debugging">Debugging</a></span></li></ul></li><li><span><a data-toc-modified-id="Exercises-6" href="#Exercises">Exercises</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="1-6.1" href="#1">1</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="a)-6.1.1" href="#a)">a)</a></span></li><li><span><a data-toc-modified-id="b)-6.1.2" href="#b)">b)</a></span></li><li><span><a data-toc-modified-id="c)-6.1.3" href="#c)">c)</a></span></li></ul></li><li><span><a data-toc-modified-id="2-6.2" href="#2">2</a></span></li></ul></li></ul></div>
 </div>
 </div>
@@ -13108,7 +13099,6 @@ div#notebook {
 <p>In programming, we should try to avoid repeating ourselves. This principle is so fundamental that there is a commonly-used acronym <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a> (<strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself) that people use to remind each other of it. The opposite of a 'DRY' programming style is sometimes pejoratively termed a 'WET' programming style (variously either '<strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice' or '<strong>W</strong>e <strong>E</strong>njoy <strong>T</strong>yping').</p>
 <h2 id="Loops">Loops<a class="anchor-link" href="#Loops">¶</a></h2><p>One way of achieving repetition is to use a <a href="glossary.html#sequence">sequence</a>. Remember that sequences are <a href="glossary.html#type">data types</a> that store multiple values in order, such as <a href="glossary.html#sequence">tuples</a> and <a href="glossary.html#list">lists</a>. We have in fact already seen one way of performing an action repeatedly for each item in a sequence. Remember that list <a href="glossary.html#comprehension">comprehensions</a> create a new list by systematically applying the same action to all the items in another list, in order.</p>
 <p>Here again is one of the example comprehensions that we saw in the <a href="sequences_mappings.html#Comprehensions">lesson on sequences</a>:</p>
-
 </div>
 </div>
 </div>
@@ -13116,44 +13106,31 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eggs'</span><span class="p">,</span> <span class="s1">'bacon'</span><span class="p">,</span> <span class="s1">'black pudding'</span><span class="p">]</span>
 
 <span class="n">shopping_notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">]</span>
 
 <span class="n">shopping_notes</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[1]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['EG', 'BA', 'BL']</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Comprehensions are great for applying single short commands to every item in a sequence. But in our target program we would like to go through the sequence of animal clues and do not just one but lots of things for each hint, including printing it out, getting user input, applying conditions, and even asking the user repeatedly for input if they fail to enter something. For such cases, we need to group all the repeated actions together under a <a href="glossary.html#control">control statement</a> that instructs Python to repeat all of them. This pattern is known as a <a href="glossary.html#loop">loop</a>. Here is a short example:</p>
-
 </div>
 </div>
 </div>
@@ -13161,26 +13138,19 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Next item of shopping:'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Finished.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Next item of shopping:
 eggs
@@ -13192,16 +13162,13 @@ Finished.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>By now the general syntax for control statements should be familiar. We end the control statement with a colon <code>:</code>, and we indent the lines that belong to the control statement. Make sure again that you have understood the role of <a href="glossary.html#indentation">indentation</a> in Python. Consider for example what happens if we also indent the final line in the example above:</p>
-
 </div>
 </div>
 </div>
@@ -13209,26 +13176,19 @@ Finished.
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Next item of shopping:'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Finished.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Next item of shopping:
 eggs
@@ -13242,10 +13202,8 @@ Finished.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13253,7 +13211,6 @@ Finished.
 <p>If the final <code>print()</code> line is indented, Python considers it to be part of the loop, and so it will be repeated along with the other lines.</p>
 <p>Perhaps the only truly novel and potentially confusing aspect of the syntax for a loop is the role of the new variable that is defined after the <code>for</code> keyword (in this case <code>item</code>). This variable stands for each item in whatever list follows the <code>in</code> keyword (in this case <code>shopping_list</code>). As was the case for <a href="glossary.html#compehension">comprehensions</a>, the variable that we define after <code>for</code> can have any valid variable name that we like. It does not have to be <code>item</code>. It matters only that we be consistent in referring to this same variable name wherever we mean 'the current item in the list'.</p>
 <p>So for example we could define it as something arbitrary like <code>x</code>, and the effect would be the same so long as we also refer to <code>x</code> among the commands that are indented after the <code>for</code> statement:</p>
-
 </div>
 </div>
 </div>
@@ -13261,25 +13218,18 @@ Finished.
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Next item of shopping:'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Next item of shopping:
 eggs
@@ -13290,17 +13240,14 @@ black pudding
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Iterables">Iterables<a class="anchor-link" href="#Iterables">¶</a></h2><p>A <a href="glossary.html#type">data type</a> containing items that can be 'worked through' one by one is called an '<a href="glossary.html#iterable">iterable</a>' type. <a href="glossary.html#list">Lists</a> are iterable, as are <a href="glossary.html#tuple">tuples</a>.</p>
 <p><a href="glossary.html#string">Strings</a>, too, are iterable. If we put a string variable in a <code>for</code> statement, the resulting loop will iterate through each character in the string. For example:</p>
-
 </div>
 </div>
 </div>
@@ -13308,27 +13255,20 @@ black pudding
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Mildred'</span>
 
 <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Next letter in this name:'</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Next letter in this name:
 M
@@ -13347,16 +13287,13 @@ d
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Some <a href="glossary.html#type">types</a> are obviously not iterable. We can't iterate with a single number, as there are no multiple values to go through. The resulting <a href="glossary.html#error">error message</a> is pretty clear.</p>
-
 </div>
 </div>
 </div>
@@ -13364,26 +13301,20 @@ d
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="mi">42</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-6-3bceb7bd5fef&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> <span class="ansi-cyan-fg">42</span><span class="ansi-blue-fg">:</span>
@@ -13392,17 +13323,14 @@ d
 <span class="ansi-red-fg">TypeError</span>: 'int' object is not iterable</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Range">Range<a class="anchor-link" href="#Range">¶</a></h3><p>The curious range type that we <a href="sequences_mappings.html#Range">learned about in the lesson on sequences</a> is iterable. Iteration with <code>range()</code> iterates through the integers in the specified range (remember, up to <em>but not including</em> the specified end of the range). So to go through the numbers 1 to 10 inclusive, use <code>range(1, 11)</code>.</p>
 <p>For example, to print out the squares of all these numbers we would write:</p>
-
 </div>
 </div>
 </div>
@@ -13410,24 +13338,17 @@ d
 <div class="input">
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">'squared is'</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1 squared is 1
 2 squared is 4
@@ -13442,16 +13363,13 @@ d
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">¶</a></h3><p>And <a href="glossary.html#dictionary">dictionaries</a> are iterable as well. By default, a loop through a dictionary iterates through the <a href="glossary.html#key">keys</a> in the dictionary, not the values stored under those keys:</p>
-
 </div>
 </div>
 </div>
@@ -13459,26 +13377,19 @@ d
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span><span class="s1">'Mildred Bonk'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="s1">'location'</span><span class="p">:</span><span class="s1">'USA'</span><span class="p">}</span>
 
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>name
 age
@@ -13486,16 +13397,13 @@ location
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If we want instead to iterate through the values, then we can use the dictionary <a href="glossary.html#method">method</a> <code>values()</code>, which gets only the values from the dictionary (remember the '<code>.</code>' syntax for using methods):</p>
-
 </div>
 </div>
 </div>
@@ -13503,24 +13411,17 @@ location
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">info</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Mildred Bonk
 22
@@ -13528,16 +13429,13 @@ USA
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>More often, if we use a dictionary in a loop we would like to go through both the keys and the values. The dictionary method <code>items()</code> gives us each entire <em>item</em> in the dictionary, and each of these items is a pair consisting of a key together with the value associated with that key. To make use of more than one variable in our loop, we must separate the two with a comma:</p>
-
 </div>
 </div>
 </div>
@@ -13545,24 +13443,17 @@ USA
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">':'</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>name : Mildred Bonk
 age : 22
@@ -13570,17 +13461,14 @@ location : USA
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="enumerate">enumerate<a class="anchor-link" href="#enumerate">¶</a></h3><p>The syntax here starts to look a bit more complex. So let's consider another example in which we have more than one variable following the <code>for</code>.</p>
 <p>The Python <a href="glossary.html#builtin">built-in</a> function <code>enumerate()</code> is like an equivalent of <code>items()</code> but for lists (or other <a href="glossary.html#iterable">iterables</a>) instead of just for dictionaries. If we iterate with <code>enumerate()</code>, then the pairs that we get consist of the integer index in the list (i.e. the numbers <code>0</code>, <code>1</code>, <code>2</code>, and so on) together with the corresponding item in the list:</p>
-
 </div>
 </div>
 </div>
@@ -13588,24 +13476,17 @@ location : USA
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">':'</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1 : eggs
 2 : bacon
@@ -13613,17 +13494,14 @@ location : USA
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Indentation-again">Indentation again<a class="anchor-link" href="#Indentation-again">¶</a></h2><p>To once again test our understanding of the role of <a href="glossary.html#indentation">indentation</a> in Python <a href="glossary.html#syntax">syntax</a>, let's look at an example of a <em>loop within a loop</em>. This is similar in structure to the example program <a href="examples/hoff.py">hoff.py</a> from the <a href="conditions.html">previous lesson</a>, in which we saw some conditions 'nested' inside other conditions.</p>
 <p>Here it is:</p>
-
 </div>
 </div>
 </div>
@@ -13631,7 +13509,7 @@ location : USA
 <div class="input">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">spelling_bee</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Mississippi'</span><span class="p">,</span> <span class="s1">'isosceles'</span><span class="p">,</span> <span class="s1">'cosecant'</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">spelling_bee</span><span class="p">:</span>
@@ -13642,20 +13520,13 @@ location : USA
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'End of the spelling bee.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The letters in 'Mississippi' are:
 1 : M
@@ -13695,17 +13566,14 @@ End of the spelling bee.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The outer loop goes through all the items in the list <code>spelling_bee</code>. The lines that are indented to mark them as belonging to the outer loop include one line that itself begins a new loop, going through each letter in the string <code>word</code>. The single line that is associated with this inner loop (line 6) is indented yet further, to indicate that it should be repeated for every single letter, not just for every single item. The <code>print()</code> statement on line 7 (which serves simply to introduce a blank line in the output, for the sake of neatness) is back at the outer loop's level of indentation, so it is repeated only for each word. Were line 7 to be indented as far as line 6, there would be a blank line in the output after every single letter.</p>
 <p>So, armed with this knowledge, we are ready to have a first stab at writing a basic version of our target program. We begin by defining the name of the secret animal and the list of hints (we won't write all six hints yet, to keep the example short). Then we use a loop to go through the hints, ask for a guess after each one, then check the guess and print out an appropriate message depending on whether it was correct or not.</p>
-
 </div>
 </div>
 </div>
@@ -13713,7 +13581,7 @@ End of the spelling bee.
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">correct_answer</span> <span class="o">=</span> <span class="s1">'african swallow'</span>
 
 <span class="n">hints</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'weighs five ounces'</span><span class="p">,</span>
@@ -13734,20 +13602,13 @@ End of the spelling bee.
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'The end.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>I'm thinking of an animal.
 Hint: It weighs five ounces.
@@ -13763,10 +13624,8 @@ The end.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13774,7 +13633,6 @@ The end.
 <p>This initial version of our target program doesn't work quite as we want, as we can see from the example run above. Here, the user guessed the animal correctly already after the second hint. Nonetheless, our program continued iterating through the remaining hints. This is only to be expected. There is no instruction in our program that says 'stop' if the user guesses correctly, so Python obligingly finishes the loop that we asked for.</p>
 <p>The <code>break</code> <a href="glossary.html#keyword">keyword</a> 'breaks out' of the current loop, even if not all of the requested items have yet been processed.</p>
 <p>So to fix this bug, we just need to add a <code>break</code> in the right place in our program (line 10 below):</p>
-
 </div>
 </div>
 </div>
@@ -13782,7 +13640,7 @@ The end.
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"I'm thinking of an animal."</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hints</span><span class="p">:</span>
@@ -13798,20 +13656,13 @@ The end.
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'The end.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>I'm thinking of an animal.
 Hint: It weighs five ounces.
@@ -13821,10 +13672,8 @@ The end.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13833,7 +13682,6 @@ The end.
 <p>You might already be able to see how we can use <code>if</code> and <code>break</code> in much the same way to implement the 'quit' option that we wanted to include in the program. If you would like to test your understanding, open yourself a new text file in the Spyder editor, copy in the program so far from the sections above, and then see whether you can add in the quit option. Remember to test your attempt carefully by running it a few times and entering different user input when prompted in the console.</p>
 <h2 id="while-loops">while loops<a class="anchor-link" href="#while-loops">¶</a></h2><p>There is one major ingredient still missing from our program so far. We said that if the user fails to type anything at all (i.e. they just press 'return' in the console), then we want to keep asking them for a guess until they at least type something.</p>
 <p>First of all, let's check for ourselves what even happens to the <code>guess</code> variable if the user enters nothing at all after the <code>input()</code> prompt:</p>
-
 </div>
 </div>
 </div>
@@ -13841,104 +13689,70 @@ The end.
 <div class="input">
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is it? '</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is it? 
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">guess</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>''</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[17]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>str</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We see that the <a href="glossary.html#return">return value</a> of <code>input()</code> is still a <a href="glossary.html#string">string</a>, even if the user does not enter any characters. It is just an 'empty' string: <code>''</code>. So the condition that we need to check in order to decide to ask the user again is whether their guess is an empty string:</p>
-
 </div>
 </div>
 </div>
@@ -13946,40 +13760,27 @@ The end.
 <div class="input">
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">guess</span> <span class="o">==</span> <span class="s1">''</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[18]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[18]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are in fact a few functionally equivalent ways in which we could check this. For example, we could also ask whether the length of the <code>guess</code> string is <code>0</code>:</p>
-
 </div>
 </div>
 </div>
@@ -13987,40 +13788,27 @@ The end.
 <div class="input">
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[19]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Or if you were paying attention when we learned about the conventions by which other <a href="glossary.html#type">types</a> are converted to <a href="glossary.html#boolean">boolean</a> <code>True</code> and <code>False</code> values, you may remember that empty strings are treated as being 'false'. So in fact we can just apply logical negation to the <code>guess</code> string itself to find out if it is empty:</p>
-
 </div>
 </div>
 </div>
@@ -14028,41 +13816,28 @@ The end.
 <div class="input">
 <div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="ow">not</span> <span class="n">guess</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[20]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That last way of doing it is a bit unintuitive though. And <code>len(guess) == 0</code> doesn't make it absolutely clear that we are dealing with an empty <em>string</em>. All else being equal, it is better to be explicit about our intentions and expectations when we write a program. If we want to check whether the user's input was an empty string, then let's check explicitly for exactly that.</p>
 <p>So here is a snippet of our program to test out just the part where we re-ask the user for a guess if they didn't enter one:</p>
-
 </div>
 </div>
 </div>
@@ -14070,7 +13845,7 @@ The end.
 <div class="input">
 <div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is it? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">''</span><span class="p">:</span>
@@ -14078,49 +13853,32 @@ The end.
 
 <span class="n">guess</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is it? 
 Enter the name of an animal: european swallow
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[21]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'european swallow'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That works out ok. But the problem we have is that a standard <code>if</code> statement only checks the condition <em>once</em>. If the user has fallen asleep with excitement and is resting their forehead against the return key on their keyboard, then the program will still accept their second empty guess:</p>
-
 </div>
 </div>
 </div>
@@ -14128,7 +13886,7 @@ Enter the name of an animal: european swallow
 <div class="input">
 <div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is it? '</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">''</span><span class="p">:</span>
@@ -14136,50 +13894,33 @@ Enter the name of an animal: european swallow
 
 <span class="n">guess</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is it? 
 Enter the name of an animal: 
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[22]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[22]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>''</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This bug can be fixed with yet another new <a href="glossary.html#keyword">keyword</a>. The <code>while</code> keyword creates a new kind of <a href="glossary.html#loop">loop</a> a bit like the <code>for</code> loop that we learned about above. But instead of repeating the indented lines once for every item in a list (or other <a href="glossary.html#iterable">iterable</a>, a <code>while</code> loop repeats the lines for as long as a given condition is true. In this sense, a <code>while</code> loop is a combination of a loop and an <code>if</code> statement. The syntax is exactly the same as for an <code>if</code> statement, only with <code>while</code> in place of <code>if</code>.</p>
 <p>Let's see this applied to our snippet:</p>
-
 </div>
 </div>
 </div>
@@ -14187,7 +13928,7 @@ Enter the name of an animal:
 <div class="input">
 <div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is it? '</span><span class="p">)</span>
 
 <span class="k">while</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">''</span><span class="p">:</span>
@@ -14195,20 +13936,13 @@ Enter the name of an animal:
 
 <span class="n">guess</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is it? 
 Enter the name of an animal: 
@@ -14216,23 +13950,14 @@ Enter the name of an animal: european swallow
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[23]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'european swallow'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14243,24 +13968,20 @@ Enter the name of an animal: european swallow
 <p>If you want to add some extra hints about African swallows, you can find some facts about them <a href="http://montypython.50webs.com/scripts/Holy_Grail/Scene1.htm">here</a>.</p>
 <h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a></h2><h3 id="1">1<a class="anchor-link" href="#1">¶</a></h3><p>Open up our example program <a href="examples/guess_the_animal.py">guess_the_animal.py</a> in the Spyder editor. Or, if you already wrote your own version of the program and you have made it work correctly, open that. Modify the program to add the following new features:</p>
 <h4 id="a)">a)<a class="anchor-link" href="#a)">¶</a></h4><p>Before each hint is printed, print a heading that announces which round of the game the user is currently on. So for example the printout for the first round should look like:</p>
-
 <pre><code>Round 1 ...
 Hint: It weighs five ounces.
 
 What is it (or type 'q' to quit)?</code></pre>
 <h4 id="b)">b)<a class="anchor-link" href="#b)">¶</a></h4><p>After each guess, tell the user how many hints remain. So for example after the first guess the printout should look like:</p>
-
 <pre><code>What is it (or type 'q' to quit)? gerbil
 No, that's not it.
 4 hints remaining.</code></pre>
 <h4 id="c)">c)<a class="anchor-link" href="#c)">¶</a></h4><p>At the end of the game, tell the user how many guesses they needed before getting the correct answer. Omit this if the user did not guess correctly at all. So for example if they got it right already on the second round, the printout at the end should look like:</p>
-
 <pre><code>Correct! You got it after 2 guesses.
 It was the african swallow.</code></pre>
 <p>For all of these modifications, the program should continue to work correctly if you later add more hints to the <code>hints</code> list at the top of the file.</p>
 <h3 id="2">2<a class="anchor-link" href="#2">¶</a></h3><p>Write a new program. The program helps the user to remember their multiplication tables. Ask the user to enter a number. Then print out for them a helpful text telling them all the multiples of that number, from 1 up to and including 12.</p>
 <p>So for example the program might look like this when run in the console:</p>
-
 <pre><code>Enter a number to revise your multiplication tables: 7
 
 1 times 7 is: 7
@@ -14275,16 +13996,10 @@ It was the african swallow.</code></pre>
 10 times 7 is: 70
 11 times 7 is: 77
 12 times 7 is: 84</code></pre>
-
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-
- 
-
-
-
-</body></html>
+</div>
+</div>
+</body>
+</html>

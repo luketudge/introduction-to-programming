@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
-
+<html>
+<head><meta charset="utf-8"/>
 <title>Notebook</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -13016,8 +13012,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13043,15 +13037,13 @@ div#notebook {
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link href="custom.css" rel="stylesheet"/>
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13068,15 +13060,14 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-    <div class="container" id="notebook-container">
-
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Contents<span class="tocSkip"></span></h1><p></p>
+<p></p><h1>Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="Example-program-1" href="#Example-program">Example program</a></span></li><li><span><a data-toc-modified-id="Built-in-tests-2" href="#Built-in-tests">Built-in tests</a></span></li><li><span><a data-toc-modified-id="Test-functions-3" href="#Test-functions">Test functions</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Assertions-3.1" href="#Assertions">Assertions</a></span></li><li><span><a data-toc-modified-id="Failing-tests-3.2" href="#Failing-tests">Failing tests</a></span></li></ul></li><li><span><a data-toc-modified-id="Test-runners-4" href="#Test-runners">Test runners</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="pytest-4.1" href="#pytest">pytest</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Command-line-usage-4.1.1" href="#Command-line-usage">Command line usage</a></span></li><li><span><a data-toc-modified-id="Output-4.1.2" href="#Output">Output</a></span></li><li><span><a data-toc-modified-id="Verbosity-4.1.3" href="#Verbosity">Verbosity</a></span></li><li><span><a data-toc-modified-id="Testing-exceptions-4.1.4" href="#Testing-exceptions">Testing exceptions</a></span></li></ul></li></ul></li><li><span><a data-toc-modified-id="Test-driven-development-5" href="#Test-driven-development">Test-driven development</a></span></li><li><span><a data-toc-modified-id="Exercises-6" href="#Exercises">Exercises</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="1-6.1" href="#1">1</a></span></li><li><span><a data-toc-modified-id="2-6.2" href="#2">2</a></span></li></ul></li></ul></div>
 </div>
 </div>
@@ -13094,7 +13085,6 @@ div#notebook {
 <li>wasted term → tasted werm</li>
 </ul>
 <p>Since this lesson is about testing, we will look at the finished example program already. Our task will be to write some tests for the program. Let's import the program as <a href="glossary.html#module">module</a> and make some informal tests first. (If you need to refresh your understanding of modules and imports, take a look back at the <a href="modules.html">lesson on modules</a>.)</p>
-
 </div>
 </div>
 </div>
@@ -13102,27 +13092,18 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">spoonerisms</span>
 
 <span class="nb">dir</span><span class="p">(</span><span class="n">spoonerisms</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[2]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['VOWELS',
  '__builtins__',
@@ -13136,18 +13117,14 @@ div#notebook {
  'find_first_vowel',
  'spoonerize']</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The main function is <code>spoonerize()</code>. We can look at its <a href="glossary.html#docstring">docstring</a> using the <code>help()</code> function:</p>
-
 </div>
 </div>
 </div>
@@ -13155,23 +13132,16 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Help on function spoonerize in module spoonerisms:
 
@@ -13196,16 +13166,13 @@ spoonerize(wordpair)
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's test the example input given in the docstring:</p>
-
 </div>
 </div>
 </div>
@@ -13213,40 +13180,27 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">(</span><span class="s1">'smart fella'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[4]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'fart smella'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This module is very slightly more complex than those we have encountered so far. In addition to the main function, it includes an additional 'helper function' that is <a href="glossary.html#call">called</a> from within the main function, and whose purpose is to find the location of the first vowel in a word (according to Python's zero-based <a href="glossary.html#index">indexing</a>). For example:</p>
-
 </div>
 </div>
 </div>
@@ -13254,34 +13208,22 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">spoonerisms</span><span class="o">.</span><span class="n">find_first_vowel</span><span class="p">(</span><span class="s1">'smart'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[5]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>2</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13293,7 +13235,6 @@ spoonerize(wordpair)
 <p>Test functions look a little different from the functions we have written so far. They do not have any <a href="glossary.html#return">return value</a>, and in most cases they have no input <a href="glossary.html#argument">arguments</a> either. In place of a return value, most test functions instead make an <a href="glossary.html#assertion">assertion</a>.</p>
 <h3 id="Assertions">Assertions<a class="anchor-link" href="#Assertions">¶</a></h3><p>What is an assertion? An assertion is yet another kind of <a href="glossary.html#control">control statement</a>. You can think of it as a special kind of <a href="glossary.html#condition">condition</a>, like in an <code>if</code> statement. Similar to an <code>if</code> statement, an assertion checks whether a particular condition is true or false, for example checking whether two things are equal using <code>==</code>. But unlike an <code>if</code> statement, we do not specify what happens when the condition is true and what happens when it is false. Instead, an assertion has fixed consequences: If the condition is true, nothing happens and the program continues as normal; if the condition is not true, an <a href="glossary.html#exception">exception</a> is raised.</p>
 <p>An assertion begins with the <a href="glossary.html#keyword">keyword</a> <code>assert</code>. Here is an example of an assertion that is true:</p>
-
 </div>
 </div>
 </div>
@@ -13301,21 +13242,18 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you can see, nothing happens when Python runs this line. A true assertion just 'passes' and the Python interpreter moves on to the next line of the program.</p>
 <p>Compare this with what happens when an assertion is untrue. We get an <code>AssertionError</code>:</p>
-
 </div>
 </div>
 </div>
@@ -13323,25 +13261,19 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-7-71c257695901&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">assert</span> <span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">5</span>
@@ -13349,16 +13281,13 @@ spoonerize(wordpair)
 <span class="ansi-red-fg">AssertionError</span>: </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can therefore use an assertion to check whether the <a href="glossary.html#return">return value</a> of a function is as expected. For example for the <code>spoonerize()</code> function from our example module:</p>
-
 </div>
 </div>
 </div>
@@ -13366,23 +13295,20 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">(</span><span class="s1">'smart fella'</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">'fart smella'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The simplest test functions are just functions that contain one assertion. No input arguments or return value are needed; the function's only purpose is to alert us by raising an exception if things are not working as expected. Like test files, the names of test functions should be prefixed with <code>test_</code>, and then state what is being tested. Here is an example for our <code>spoonerize()</code> function, turning the assertion above into a test function.</p>
 <p>(If you need first to remind yourself of the syntax for functions, take a look back at the <a href="functions.html#Defining-functions">lesson on functions</a>.)</p>
-
 </div>
 </div>
 </div>
@@ -13390,22 +13316,19 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_spoonerize</span><span class="p">():</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">(</span><span class="s1">'smart fella'</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">'fart smella'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>When we <a href="glossary.html#call">call</a> our test function, no exception is raised, confirming that the assertion was true.</p>
-
 </div>
 </div>
 </div>
@@ -13413,21 +13336,18 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">test_spoonerize</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Take a look at the finished test file for our example module, <a href="examples/test_spoonerisms.py">test_spoonerisms.py</a>. You will see that it first imports the <em>spoonerisms</em> module, then defines several test functions like the one above. Each of these tests one aspect of the workings of the <em>spoonerisms</em> module. (There is one slightly different test function at the very end of the file. Ignore this for now; we will come to it in a moment.)</p>
 <p>If we would like to test any aspect of the <em>spoonerisms</em> module, we can import the test module and run its functions, confirming that no exceptions occur:</p>
-
 </div>
 </div>
 </div>
@@ -13435,23 +13355,20 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">test_spoonerisms</span>
 
 <span class="n">test_spoonerisms</span><span class="o">.</span><span class="n">test_find_first_vowel</span><span class="p">()</span>
 <span class="n">test_spoonerisms</span><span class="o">.</span><span class="n">test_spoonerize</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Failing-tests">Failing tests<a class="anchor-link" href="#Failing-tests">¶</a></h3><p>For demonstration purposes, the test module includes one test that checks a feature of the <em>spoonerisms</em> module that has not yet been implemented (treating the character combination 'qu' as a consonant), so that you can see what happens when a test fails:</p>
-
 </div>
 </div>
 </div>
@@ -13459,25 +13376,19 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">test_spoonerisms</span><span class="o">.</span><span class="n">test_spoonerize_with_qu</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-12-21a514241976&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>test_spoonerisms<span class="ansi-blue-fg">.</span>test_spoonerize_with_qu<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
@@ -13492,10 +13403,8 @@ spoonerize(wordpair)
 <span class="ansi-red-fg">AssertionError</span>: </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13503,7 +13412,6 @@ spoonerize(wordpair)
 <h2 id="Test-runners">Test runners<a class="anchor-link" href="#Test-runners">¶</a></h2><p>Our solution so far isn't entirely satisfactory. We wanted to have an <em>automated</em> test of our module, so that we can, for example, quickly run the tests each time we make changes, and make sure that our changes haven't broken anything. Importing the test module and then running each of its tests individually is very laborious. Because automated testing is such a common task in programming, most programming languages provide time-saving tools for running multiple tests with a single command. These tools are sometimes termed 'test runners'.</p>
 <h3 id="pytest">pytest<a class="anchor-link" href="#pytest">¶</a></h3><p>Python's built-in test runner is provided in a module called <code>unittest</code> in the <a href="standard_library.html">standard library</a>. However, there are also a few excellent <a href="standard_library.html#Third-party-packages">third-party packages</a> that provide test runners with additional features. We will look at one of these instead, called <em>pytest</em>. pytest is a very popular third-party test runner package for Python. Since it is provided as part of the default installation of Anaconda, you should not need to install it before trying out the examples below.</p>
 <p>If you want to check whether pytest is installed and available for you, you can try <a href="glossary.html#import">importing</a> it. Check that you do not see a <code>ModuleNotFoundError</code> when you try the following command:</p>
-
 </div>
 </div>
 </div>
@@ -13511,21 +13419,18 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Command-line-usage">Command line usage<a class="anchor-link" href="#Command-line-usage">¶</a></h4><p>pytest is typically run from the operating system's <a href="command_line.html">command line</a>. The command <code>pytest</code>, followed by the name of the test file that we would like to run, will run all of the functions within that file whose names begin with <code>test_</code>.</p>
 <p>For example:</p>
-
 </div>
 </div>
 </div>
@@ -13533,23 +13438,16 @@ spoonerize(wordpair)
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> pytest test_spoonerisms.py
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre><span class="ansi-bold">============================= test session starts ==============================</span>
 platform linux -- Python 3.8.2, pytest-6.0.1, py-1.9.0, pluggy-0.13.1
@@ -13579,10 +13477,8 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13594,7 +13490,6 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 </ul>
 <p>pytest can even be used to run tests from more than one test file. If we do not specify the name of a test file, then pytest will search for all files in the current working directory whose names begin with <em>test_</em>, and run all the functions within those files whose names begin with <code>test_</code>. This feature becomes very useful once we have a more complex program spread over multiple files. A typical pattern of organization is to create separate test files for each major component of the program to be tested.</p>
 <p>Here for demonstration purposes I have just included a second test file <a href="examples/test_math_is_working_as_normal.py">test_math_is_working_as_normal.py</a> containing some spurious tests:</p>
-
 </div>
 </div>
 </div>
@@ -13602,23 +13497,16 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="input">
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> pytest
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre><span class="ansi-bold">============================= test session starts ==============================</span>
 platform linux -- Python 3.8.2, pytest-6.0.1, py-1.9.0, pluggy-0.13.1
@@ -13649,10 +13537,8 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13673,8 +13559,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 </blockquote>
 <p>Here we see what the result of the <code>spoonerize()</code> function really was, compared to what our test expected it to be.</p>
 <h4 id="Verbosity">Verbosity<a class="anchor-link" href="#Verbosity">¶</a></h4><p>If you would like to see even more information about the tests, you can run pytest in '<a href="glossary.html#verbose">verbose</a>' mode. In computing, the term 'verbose' has approximately the same meaning as in everyday English, but in reference to the output of a computer program rather than a human being's use of language. A program that is run in verbose mode will 'talk more', i.e. give more detailed printed output.</p>
-<p>The option for running pytest in verbose mode is <code>--verbose</code>, or in abbreviated form <code>-v</code> (look back at <a href="command_line.html#options">the previous lesson</a> if you need to remind yourself about command line options). The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:</p>
-
+<p>The option for running pytest in verbose mode is <code>--verbose</code>, or in abbreviated form <code>-v</code> (look back at <a href="command_line.html#Options">the previous lesson</a> if you need to remind yourself about command line options). The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:</p>
 </div>
 </div>
 </div>
@@ -13682,23 +13567,16 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="input">
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> pytest --verbose
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre><span class="ansi-bold">============================= test session starts ==============================</span>
 platform linux -- Python 3.8.2, pytest-6.0.1, py-1.9.0, pluggy-0.13.1 -- /home/lt/GitHub/introduction-to-programming/.venv/bin/python
@@ -13736,10 +13614,8 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13747,7 +13623,6 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <h4 id="Testing-exceptions">Testing exceptions<a class="anchor-link" href="#Testing-exceptions">¶</a></h4><p>The <a href="glossary.html#docstring">docstring</a> for our <code>spoonerize()</code> function mentions an <a href="glossary.html#exception">exception</a> (see <a href="examples/spoonerisms.py#L44">here</a>). If we have promised our users that certain situations will result in an exception, then we should also test this. But testing the occurrence of an exception presents a slight problem. We would like our test to continue as normal if the expected exception is raised, but we would like it to raise an exception otherwise, which is the opposite of what exceptions normally do.</p>
 <p>pytest provides a function called <code>raises()</code> to handle this kind of test. This function works together with the Python <code>with</code> <a href="glossary.html#keyword">keyword</a> to create a context in which to test for the occurrence of an exception. Our program will not be interrupted if the expected exception is raised within the <code>raises()</code> context, but an exception will be raised if we reach the end of the context and the expected exception has <em>not</em> been raised.</p>
 <p>If this sounds a little abstract, it may be clearer with an example (and if you need to remind yourself about the <code>with</code> keyword, look back at the <a href="files.html#Context-managers">lesson on files</a>, where we first encountered it):</p>
-
 </div>
 </div>
 </div>
@@ -13755,21 +13630,18 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="input">
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
     <span class="nb">int</span><span class="p">(</span><span class="s1">'fifty-two'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Nothing happens here, because the indented line <code>int('fifty-two')</code> does indeed raise a <code>ValueError</code>. Compare what happens with a line that does not raise a <code>ValueError</code>. The final line of the error message is nicely informative:</p>
-
 </div>
 </div>
 </div>
@@ -13777,26 +13649,20 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="input">
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
     <span class="nb">int</span><span class="p">(</span><span class="s1">'52'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">Failed</span>                                    Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-18-8e4b5f8643d9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">with</span> pytest<span class="ansi-blue-fg">.</span>raises<span class="ansi-blue-fg">(</span>ValueError<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
@@ -13807,16 +13673,13 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <span class="ansi-red-fg">Failed</span>: DID NOT RAISE &lt;class 'ValueError'&gt;</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>pytest's <code>raises()</code> function even allows us to test for specific content in the exception's error message. The additional <code>match</code> <a href="glossary.html#argument">argument</a> specifies a string pattern to search for in the error message. If the pattern is not found, the final line of the error message again describes the failure in detail:</p>
-
 </div>
 </div>
 </div>
@@ -13824,26 +13687,20 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="input">
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">'OMG that is not valid. You have broken your computer FOR EVER.'</span><span class="p">):</span>
     <span class="nb">int</span><span class="p">(</span><span class="s1">'fifty-two'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-19-a8e5f8cbc3a4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">with</span> pytest<span class="ansi-blue-fg">.</span>raises<span class="ansi-blue-fg">(</span>ValueError<span class="ansi-blue-fg">,</span> match<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'OMG that is not valid. You have broken your computer FOR EVER.'</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
@@ -13863,10 +13720,8 @@ During handling of the above exception, another exception occurred:
 <span class="ansi-red-fg">AssertionError</span>: Regex pattern 'OMG that is not valid. You have broken your computer FOR EVER.' does not match "invalid literal for int() with base 10: 'fifty-two'".</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13874,7 +13729,7 @@ During handling of the above exception, another exception occurred:
 <p>The final test in our example test file uses the <code>raises()</code> function to test that the exception that we wrote into the <code>spoonerize()</code> function is working properly. Take a look at it <a href="examples/test_spoonerisms.py#L46">here</a> and check that you understand how it works.</p>
 <p>There is a <em>lot</em> more that pytest can do, but that covers our basic needs at this level. If you would like to explore some more useful pytest features, you can read the guides at the <a href="https://docs.pytest.org/en/latest/">pytest documentation site</a>.</p>
 <h2 id="Test-driven-development">Test-driven development<a class="anchor-link" href="#Test-driven-development">¶</a></h2><p>In the example above, I presented a completed example program, and we learned about the process of writing tests for the program. In reality, many software developers follow the opposite pattern: They first write a test for a new feature that they would like their main program to have, and only then do they write that part of the main program.</p>
-<p>This approach to software development is broadly termed 'test-driven development' (or <a href="glossary.html#tdd">TDD</a>), because it uses tests to guide the development of the program. The general working pattern in test-driven development is as follows:</p>
+<p>This approach to software development is broadly termed 'test-driven development' (or <a href="glossary.html#TDD">TDD</a>), because it uses tests to guide the development of the program. The general working pattern in test-driven development is as follows:</p>
 <ul>
 <li>First write a test.</li>
 </ul>
@@ -13910,16 +13765,10 @@ During handling of the above exception, another exception occurred:
 <p>Modify the <a href="examples/spoonerisms.py">spoonerisms module</a> to take this new rule into account. But do so according to the test-driven development pattern as described above. Write a new test function in the <a href="examples/test_spoonerisms.py">test_spoonerisms.py</a> test file first, and verify that you get the expected failure. Only then may you write your planned improvement.</p>
 <p>You might want to write more than one test function to make sure that you have covered all the relevant possibilities.</p>
 <p>When you have made your changes to <em>spoonerisms.py</em>, use pytest to run all of the test functions in the test file. Check that your new test function passes and that your changes have not caused any of the other tests to fail.</p>
-
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-
- 
-
-
-
-</body></html>
+</div>
+</div>
+</body>
+</html>

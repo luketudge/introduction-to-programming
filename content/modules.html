@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
-
+<html>
+<head><meta charset="utf-8"/>
 <title>Notebook</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -13016,8 +13012,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13043,15 +13037,13 @@ div#notebook {
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link href="custom.css" rel="stylesheet"/>
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13068,15 +13060,14 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-    <div class="container" id="notebook-container">
-
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Contents<span class="tocSkip"></span></h1><p></p>
+<p></p><h1>Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="Imports-1" href="#Imports">Imports</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Debugging-1.1" href="#Debugging">Debugging</a></span></li><li><span><a data-toc-modified-id="Namespaces-1.2" href="#Namespaces">Namespaces</a></span></li><li><span><a data-toc-modified-id="Star-imports-1.3" href="#Star-imports">Star imports</a></span></li><li><span><a data-toc-modified-id="Selective-imports-1.4" href="#Selective-imports">Selective imports</a></span></li></ul></li><li><span><a data-toc-modified-id="Methods-revisited-2" href="#Methods-revisited">Methods revisited</a></span></li><li><span><a data-toc-modified-id="Special-names-3" href="#Special-names">Special names</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Special-variables-3.1" href="#Special-variables">Special variables</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="__name__-3.1.1" href="#__name__"><code>__name__</code></a></span></li></ul></li><li><span><a data-toc-modified-id="Special-methods-3.2" href="#Special-methods">Special methods</a></span></li></ul></li><li><span><a data-toc-modified-id="Exercises-4" href="#Exercises">Exercises</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="1-4.1" href="#1">1</a></span></li><li><span><a data-toc-modified-id="2-4.2" href="#2">2</a></span></li></ul></li></ul></div>
 </div>
 </div>
@@ -13096,7 +13087,6 @@ div#notebook {
 <h2 id="Imports">Imports<a class="anchor-link" href="#Imports">¶</a></h2><p>We can almost already create a multi-file program given what we have learned so far, and there is very little in <em>ids.py</em> that is unfamiliar. We know how to use functions, and we know how to use additional <a href="glossary.html#control">control statements</a> to determine what actions are taken when, how often, and so on.</p>
 <p>The only new ingredient is how to 'get' the contents of one file into another. This is fairly easy. The <a href="glossary.html#keyword">keyword</a> <code>import</code> runs another Python file and then makes its contents (i.e. any functions or variables that were created in the course of running it) available in the current program. The <a href="glossary.html#syntax">syntax</a> for importing the contents of a file is simply to write <code>import</code> followed by the name of the file, without the <em>.py</em> file extension.</p>
 <p>So this is how we can import the contents of <em>initials.py</em> into another Python program:</p>
-
 </div>
 </div>
 </div>
@@ -13104,14 +13094,12 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">initials</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13119,7 +13107,6 @@ div#notebook {
 <p>We can see this command on <a href="examples/ids.py#L12">line 12</a> of <em>ids.py</em>.</p>
 <h3 id="Debugging">Debugging<a class="anchor-link" href="#Debugging">¶</a></h3><p>Note that in order for an <code>import</code> statement to work, the file that we are importing must be located in the directory that we are working in. This is the directory in which our main program file is saved. So if you are writing your own example program in the Spyder editor to test the example commands as we go along, make sure that your copy of <em>initials.py</em> is located in the same directory in which you have saved your example program.</p>
 <p>If we try to import a module file that does not exist or is not in the current directory, we get an error:</p>
-
 </div>
 </div>
 </div>
@@ -13127,20 +13114,17 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nonexistent_module</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note also that module filenames should not contain any spaces. Otherwise when we try to import them, Python sees something that looks like two or more separate names, and this is not valid Python <a href="glossary.html#syntax">syntax</a>:</p>
-
 </div>
 </div>
 </div>
@@ -13148,20 +13132,17 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">badly</span> <span class="n">named</span> <span class="n">module</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Namespaces">Namespaces<a class="anchor-link" href="#Namespaces">¶</a></h3><p>I promised that after <a href="glossary.html#import">importing</a> our <em>initials.py</em> file, the function that it defines would be available for us to use. This doesn't seem to be the case. <em>initials.py</em> contains a function called <code>get_initials()</code>, but this function still doesn't seem to be available:</p>
-
 </div>
 </div>
 </div>
@@ -13169,20 +13150,17 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">'Mildred Bonk'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There is just one more missing ingredient (I really promise this time, only one more). Instead of just taking everything from the imported file and putting it all into individual variables that we can use in the normal way, Python's <code>import</code> puts all the imported contents into their own '<a href="glossary.html#namespace">namespace</a>'. A namespace is a bit like a folder for variables. It stores multiple variables all under the same name, for neatness of organization. We can access individual variables within a namespace by writing first the name of the namespace (which here is simply the name of the imported module), followed by a dot <code>.</code>, like this:</p>
-
 </div>
 </div>
 </div>
@@ -13190,14 +13168,12 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">initials</span><span class="o">.</span><span class="n">get_initials</span><span class="p">(</span><span class="s1">'Mildred Bonk'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13207,7 +13183,6 @@ div#notebook {
 <p>Imagine that you have a very long program containing a lot of variables. And then you decide that you want to import into this program a very useful but also very long <a href="glossary.html#module">module</a> that provides some great functions that you need. If <code>import</code> simply dumped everything from both files together in the same workspace, then you would need to first check carefully and make sure that none of the names of variables or functions in one file were the same as those in the other, because if they were, the names would 'clash' and one would overwrite the other. By keeping imported things in a separate namespace, such accidental overwrites are avoided. It is entirely possible to import a module (for example called <em>my_module.py</em>) containing a function or variable called <code>x</code> and also to have something called <code>x</code> in your main program. The former will be available as <code>my_module.x</code> whereas the latter will be available simply as <code>x</code>.</p>
 <p>Likewise, imagine that you need to import the contents of more than one module. Again, if these modules unfortunately happen to contain things with the same name, they would overwrite each other if simply dumped into the main workspace. But thanks to namespaces, clashing names are totally fine; for example one function can be available as <code>module_a.useful_function()</code> and the other as <code>module_b.useful_function()</code>.</p>
 <h3 id="Star-imports">Star imports<a class="anchor-link" href="#Star-imports">¶</a></h3><p>If we really want to, it is possible to bypass <code>import</code>'s creation of separate namespaces for imported modules. The <a href="glossary.html#keyword">keyword</a> <code>from</code>, together with the <code>*</code> symbol, imports everything from a module into the main workspace of the current program:</p>
-
 </div>
 </div>
 </div>
@@ -13215,20 +13190,17 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">initials</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And now the contents of <em>initials.py</em> are available in the normal way without prepending <code>initials.</code>:</p>
-
 </div>
 </div>
 </div>
@@ -13236,34 +13208,22 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">'Mildred Bonk'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[8]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'mb'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13272,7 +13232,6 @@ div#notebook {
 <p>The star import shortcut is there if you really need it, but the general consensus among Python users is that it is not a good idea. It erases all the benefits that namespaces bring for the robustness and clarity of our program. My advice is to reserve it only for very short programs that only import one module, and whose purpose is simply to demonstrate the use of that one module.</p>
 <p>You will sometimes see star imports used in online examples or demonstrations, to help keep a demonstration short (<a href="https://plotnine.readthedocs.io/en/stable/generated/plotnine.geoms.geom_bar.html#examples">here</a> is one example). This is fine for a quick demo, but don't copy it into your own programs.</p>
 <h3 id="Selective-imports">Selective imports<a class="anchor-link" href="#Selective-imports">¶</a></h3><p>A better use of the <code>from</code> keyword is to select just one thing that we would like to import from a module. For example, we can import just the <code>get_initials()</code> function from <em>initials.py</em> (though this is somewhat redundant here, since <code>get_initials()</code> is the only thing in <em>initials.py</em> anyway):</p>
-
 </div>
 </div>
 </div>
@@ -13280,20 +13239,17 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">initials</span> <span class="kn">import</span> <span class="n">get_initials</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A 'selective import' like this also makes the individual function <code>get_initials()</code> available directly without having to use a namespace.</p>
-
 </div>
 </div>
 </div>
@@ -13301,34 +13257,22 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">'Mildred Bonk'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[10]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'mb'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13336,7 +13280,6 @@ div#notebook {
 <p>But note that there is a big difference in clarity when compared to the star import. A selective <code>import</code> statement at least says explicitly <em>what</em> we are importing from the module. So if we begin our main program with <code>from initials import get_initials</code>, we and our collaborators can at least be sure when reading the remainder of the program that <code>get_initials()</code> refers to something that we have imported from <em>initials.py</em> (and that we haven't imported anything else from there). By contrast, with the star import no part of our program explicitly states which functions or variables are coming from where.</p>
 <h2 id="Methods-revisited">Methods revisited<a class="anchor-link" href="#Methods-revisited">¶</a></h2><p>We have in fact already met <a href="glossary.html#namespace">namespaces</a> in a slightly different guise. In the <a href="types.html#Methods">lesson on types</a> we learned about <a href="glossary.html#method">methods</a>: functions that are 'attached' to only one <a href="glossary.html#type">type</a> of variable. We focused mainly on <a href="glossary.html#string">string</a> methods, because strings have lots of methods available to them.</p>
 <p>Recall how the syntax for methods works:</p>
-
 </div>
 </div>
 </div>
@@ -13344,43 +13287,30 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="s1">'Mildred Bonk'</span>
 
 <span class="n">user_name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[11]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'MILDRED BONK'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This is the same 'dot' notation that we just used for getting something from an imported module's namespace, because the underlying mechanism is essentially the same. Each variable in Python has its own namespace, and in that namespace are stored links to the methods available for variables of that type.</p>
 <p>Likewise, just as we used the <code>dir()</code> function to find out what methods a variable has available to it, we can also use <code>dir()</code> to find out the contents of an imported module's namespace (and again, we can ignore for now the 'special' contents surrounded by double underscores <code>__ __</code>):</p>
-
 </div>
 </div>
 </div>
@@ -13388,25 +13318,16 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">initials</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[12]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['__builtins__',
  '__cached__',
@@ -13418,12 +13339,9 @@ div#notebook {
  '__spec__',
  'get_initials']</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13433,7 +13351,6 @@ div#notebook {
 <p>Python uses the 'double underscore' (you may sometimes see this called a '<a href="glossary.html#dunder">dunder</a>') to mark something as being involved in the 'behind the scenes' inner workings of a Python program. These things are not normally intended to be used directly, which is why I have so far instructed you on pain of benevolent chastisement to ignore them. However, we are now ready to learn a little bit more about these 'special' names.</p>
 <h3 id="Special-variables">Special variables<a class="anchor-link" href="#Special-variables">¶</a></h3><p>Take a look at the list of the contents of the <code>initials</code> namespace above, and compare it with the actual contents of <a href="examples/initials.py">initials.py</a>. You will notice that the things that appear enclosed in double underscores in the list above are not variables that are <a href="glossary.html#assignment">assigned</a> explicitly anywhere in the <em>initials.py</em> file.</p>
 <p>Python has added these special variables automatically, and does so for every Python file that we run or <a href="glossary.html#import">import</a>. They contain various pieces of information that track the role of that file in our overall program. For example, the automatically-created <code>__file__</code> variable stores the full <a href="glossary.html#path">path</a> to the file that the contents of a namespace came from.</p>
-
 </div>
 </div>
 </div>
@@ -13441,40 +13358,27 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">initials</span><span class="o">.</span><span class="vm">__file__</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[13]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'/home/lt/GitHub/introduction-to-programming/content/examples/initials.py'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And <code>__doc__</code> stores the <a href="glossary.html#docstring">docstring</a> that we wrote for the file (if we were diligent and did so):</p>
-
 </div>
 </div>
 </div>
@@ -13482,40 +13386,31 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">initials</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>A module providing a single function for getting the intials from a name.
+<pre>
+A module providing a single function for getting the intials from a name.
 
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="__name__"><code>__name__</code><a class="anchor-link" href="#__name__">¶</a></h4><p>It is rare that we will want to refer to these special variables in a simple program. But there is one common exception to this. Take a look at <a href="examples/initials.py#L43">line 43</a> of <em>initials.py</em>. This line refers to a special variable, called <code>__name__</code>.</p>
 <p>To understand how this special variable is being used here, let's first look at its contents:</p>
-
 </div>
 </div>
 </div>
@@ -13523,34 +13418,22 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">initials</span><span class="o">.</span><span class="vm">__name__</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[15]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'initials'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13558,7 +13441,6 @@ div#notebook {
 <p>The somewhat underwhelming answer is that the <code>__name__</code> special variable stores the name of an imported module's namespace, which in the case of the <em>initials</em> module is... wait for it... <code>'initials'</code>!</p>
 <p>This seems at first a completely useless thing to know. To even access the <code>__name__</code> variable in a namespace, we need to already know the namespace's name, because this is what we must write before the dot.</p>
 <p>The usefulness of the <code>__name__</code> variable only becomes apparent when we see what value it takes on when it does not find itself inside the namespace of an imported module, but instead finds itself in Python's 'main' overall namespace. The main namespace is just the place that Python puts anything that we define while using the console or running a program. We can see the contents of the main namespace using the <code>dir()</code> function again, but with no input <a href="glossary.html#argument">argument</a>. By default, the <code>dir()</code> function lists the contents of the main namespace. If we have been messing around for a while in the console creating a few variables or if we have run a program, there may be quite a few things in there:</p>
-
 </div>
 </div>
 </div>
@@ -13566,25 +13448,16 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['In',
  'Out',
@@ -13636,12 +13509,9 @@ div#notebook {
  'sys',
  'user_name']</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13650,7 +13520,6 @@ div#notebook {
 <p>First of all, among the 'non-underscored' things at the end of the list is the <code>user_name</code> string variable that we created earlier in the lesson. Python puts all the variables that we create into the main namespace.</p>
 <p>Likewise, the imported module <code>initials</code> is in there. As we saw above, <code>initials</code> is a subsidiary namespace that gathers everything that gets defined as a result of running <em>initials.py</em>. It itself is located in the main namespace, in conceptually the same way that a subfolder with its own file contents may be located in our 'home folder' on a computer.</p>
 <p>But most importantly, among the double-underscored special variables, there appears the <code>__name__</code> variable that we just learned about. The main namespace has a <code>__name__</code> too. What is its <code>__name__</code>?</p>
-
 </div>
 </div>
 </div>
@@ -13658,34 +13527,22 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="vm">__name__</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[17]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'__main__'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13693,7 +13550,6 @@ div#notebook {
 <p>The main namespace (i.e. the place where everything goes that wasn't imported from elsewhere) is called <code>'__main__'</code>.</p>
 <p>We can make use of this fact within our programs to find out whether our program has been imported into another program (in which case it will have its own <code>__name__</code>, such as <code>'initials'</code> or <code>'my_module'</code> or whatever) or whether it is being run directly on its own (in which case its <code>__name__</code> will be <code>'__main__'</code>).</p>
 <p>The short educational program <a href="examples/slim_shady.py">slim_shady.py</a> demonstrates this difference in action. Let's see first of all what happens if we import <em>slim_shady.py</em> as a module:</p>
-
 </div>
 </div>
 </div>
@@ -13701,23 +13557,16 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">slim_shady</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hi!
 My __name__ is ... What?
@@ -13726,10 +13575,8 @@ My __name__ is ... slim_shady
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13742,7 +13589,6 @@ My __name__ is ... slim_shady
 <p>This concept of building in tests to our programs and checking their behavior as we go along is an important one, and we will come back to it later.</p>
 <h3 id="Special-methods">Special methods<a class="anchor-link" href="#Special-methods">¶</a></h3><p>We are done with the most important concepts for this lesson: <a href="glossary.html#module">modules</a> and <a href="glossary.html#namespace">namespaces</a>. For the sake of completeness, we will now also look briefly at the double-underscored <a href="glossary.html#method">methods</a> that appear when we <code>dir()</code> a variable. But consider this bonus material; it provides a peek behind the scenes in Python and is included just to satisfy your curiosity.</p>
 <p>Let's take a look at these special string methods again, using a new <a href="glossary.html#string">string</a> variable:</p>
-
 </div>
 </div>
 </div>
@@ -13750,27 +13596,20 @@ My __name__ is ... slim_shady
 <div class="input">
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">'Hello'</span>
 
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'__'</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>__add__
 __class__
@@ -13808,16 +13647,13 @@ __subclasshook__
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>These special methods govern the behavior of a variable in different circumstances. For example, when we 'add to' a variable using the <code>+</code> <a href="glossary.html#operator">operator</a>, behind the scenes the special method <code>__add__()</code> is <a href="glossary.html#call">called</a>. So the following two statements achieve the same thing:</p>
-
 </div>
 </div>
 </div>
@@ -13825,73 +13661,48 @@ __subclasshook__
 <div class="input">
 <div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">word</span> <span class="o">+</span> <span class="s1">' world!'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[20]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'Hello world!'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">word</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="s1">' world!'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[21]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'Hello world!'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Likewise, the <code>__eq__()</code> special method is called when we ask whether a variable is equal to something with <code>==</code>:</p>
-
 </div>
 </div>
 </div>
@@ -13899,73 +13710,48 @@ __subclasshook__
 <div class="input">
 <div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">word</span> <span class="o">==</span> <span class="s1">'Hello'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[22]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[22]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">word</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[23]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And <code>__getitem__()</code> is called when we <a href="glossary.html#index">index</a> a variable using the square parentheses <code>[]</code>:</p>
-
 </div>
 </div>
 </div>
@@ -13973,67 +13759,43 @@ __subclasshook__
 <div class="input">
 <div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[24]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'H'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [25]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">word</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[25]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[25]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'H'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14057,16 +13819,10 @@ Don't be silly chumps<br/>
 Just purse your lips and whistle, that's the thing</p>
 </blockquote>
 <p>(Or you can use another short song if you prefer.)</p>
-
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-
- 
-
-
-
-</body></html>
+</div>
+</div>
+</body>
+</html>

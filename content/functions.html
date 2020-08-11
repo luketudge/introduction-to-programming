@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
-
+<html>
+<head><meta charset="utf-8"/>
 <title>Notebook</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -13016,8 +13012,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
@@ -13043,15 +13037,13 @@ div#notebook {
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link href="custom.css" rel="stylesheet"/>
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13068,15 +13060,14 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-    <div class="container" id="notebook-container">
-
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Contents<span class="tocSkip"></span></h1><p></p>
+<p></p><h1>Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a data-toc-modified-id="Calling-functions-1" href="#Calling-functions">Calling functions</a></span></li><li><span><a data-toc-modified-id="Arguments-2" href="#Arguments">Arguments</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Keyword-arguments-2.1" href="#Keyword-arguments">Keyword arguments</a></span></li></ul></li><li><span><a data-toc-modified-id="Return-values-3" href="#Return-values">Return values</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Side-effects-3.1" href="#Side-effects">Side effects</a></span></li></ul></li><li><span><a data-toc-modified-id="Defining-functions-4" href="#Defining-functions">Defining functions</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="Objective-4.1" href="#Objective">Objective</a></span></li><li><span><a data-toc-modified-id="Default-values-4.2" href="#Default-values">Default values</a></span></li><li><span><a data-toc-modified-id="Raising-exceptions-4.3" href="#Raising-exceptions">Raising exceptions</a></span></li></ul></li><li><span><a data-toc-modified-id="Docstrings-5" href="#Docstrings">Docstrings</a></span></li><li><span><a data-toc-modified-id="Building-functions-6" href="#Building-functions">Building functions</a></span></li><li><span><a data-toc-modified-id="Function-or-loop?-7" href="#Function-or-loop?">Function or loop?</a></span></li><li><span><a data-toc-modified-id="Exercises-8" href="#Exercises">Exercises</a></span><ul class="toc-item"><li><span><a data-toc-modified-id="1-8.1" href="#1">1</a></span></li><li><span><a data-toc-modified-id="2-8.2" href="#2">2</a></span></li></ul></li></ul></div>
 </div>
 </div>
@@ -13085,7 +13076,6 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Functions">Functions<a class="anchor-link" href="#Functions">¶</a></h1><p>We have been working with <a href="glossary.html#function">functions</a> since the very first lesson. For example, we have often used the <code>input()</code> function to allow users of our program to type something in, and the <code>print()</code> function to display messages for the user.</p>
-
 </div>
 </div>
 </div>
@@ -13093,41 +13083,31 @@ div#notebook {
 <div class="input">
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'What is your name? '</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>What is your name? Mildred
 Hello Mildred
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In addition, we have learned about a few other miscellaneous functions, such as <code>len()</code> for counting the number of items in a <a href="glossary.html#sequence">sequence</a> (or the number of characters in a <a href="glossary.html#string">string</a>).</p>
-
 </div>
 </div>
 </div>
@@ -13135,40 +13115,27 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[2]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>7</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And we have learned about a special kind of function, called <a href="glossary.html#method">methods</a>, that are 'attached' to just one <a href="glossary.html#type">data type</a>. For example the <a href="glossary.html#string">string</a> method <code>upper()</code>:</p>
-
 </div>
 </div>
 </div>
@@ -13176,34 +13143,22 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[3]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'MILDRED'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13227,7 +13182,6 @@ Hello Mildred
 <li><strong>Return value</strong>. The output of the function is known as its '<a href="glossary.html#return">return value</a>'. When the function has finished doing its work and reports back to us with the result, we say that the function has 'returned' that result.</li>
 </ul>
 <p>We can see some of these terms in action in a few <a href="glossary.html#error">error messages</a> that we encounter if we use a function incorrectly. For example if we try to <a href="glossary.html#call">call</a> something that is not a function:</p>
-
 </div>
 </div>
 </div>
@@ -13235,27 +13189,21 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">some_number</span> <span class="o">=</span> <span class="mi">42</span>
 
 <span class="n">some_number</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-4-40e574c91384&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> some_number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">42</span>
@@ -13265,16 +13213,13 @@ Hello Mildred
 <span class="ansi-red-fg">TypeError</span>: 'int' object is not callable</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Or if we supply the wrong number of <a href="glossary.html#argument">arguments</a>:</p>
-
 </div>
 </div>
 </div>
@@ -13282,25 +13227,19 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-5-adf3103c7c3e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>len<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
@@ -13308,34 +13247,26 @@ Hello Mildred
 <span class="ansi-red-fg">TypeError</span>: len() takes exactly one argument (0 given)</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s1">'Mildred'</span><span class="p">,</span> <span class="s1">'Bonk'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-6-e6b31188cf9e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>len<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'Mildred'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'Bonk'</span><span class="ansi-blue-fg">)</span>
@@ -13343,16 +13274,13 @@ Hello Mildred
 <span class="ansi-red-fg">TypeError</span>: len() takes exactly one argument (2 given)</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Arguments">Arguments<a class="anchor-link" href="#Arguments">¶</a></h2><p>Some functions are flexible in the number of arguments they take. For example, <code>print()</code> can take an indefinite number of arguments, and just prints them all out one after the other:</p>
-
 </div>
 </div>
 </div>
@@ -13360,38 +13288,28 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'world'</span><span class="p">,</span> <span class="s1">'!'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello world !
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>print()</code> can even take no arguments at all. In this case, it prints a <a href="glossary.html#newline">newline</a> (a blank line):</p>
-
 </div>
 </div>
 </div>
@@ -13399,37 +13317,28 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre></pre>
+<pre>
+</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Notice that even if there are no input arguments, the parentheses are still required. The presence of the parentheses is what lets Python know that we actually want to <a href="glossary.html#call">call</a> the function. If we omit them, the function is not called. Instead, Python simply confirms: "yes, that is a function".</p>
-
 </div>
 </div>
 </div>
@@ -13437,41 +13346,28 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[9]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;function print&gt;</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Keyword-arguments">Keyword arguments<a class="anchor-link" href="#Keyword-arguments">¶</a></h3><p>Some functions are a little more complex. As well as taking one or more arguments in the standard way that we have seen so far, some functions can take some additional special arguments that modify the behavior of the function in some way. These arguments have specific names, and we can assign values into those specific names (with <code>=</code>) in order to make them work.</p>
 <p>If this sounds a little abstract, it will become much clearer with an example. The <code>print()</code> function can also take some additional named arguments called <code>sep</code> and <code>end</code>. <code>sep</code> (an abbreviation of 'separator') specifies characters to print in between all the other arguments, and <code>end</code> specifies some characters to print at the end:</p>
-
 </div>
 </div>
 </div>
@@ -13479,38 +13375,28 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'my name is'</span><span class="p">,</span> <span class="s1">'Mildred'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'...'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">'!'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello...my name is...Mildred!</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>These special named arguments are known as 'keyword arguments' (and sometimes you may see them referred to by the abbreviation <code>kwargs</code>). Keyword arguments have fixed names. Unlike when we <a href="glossary.html#assignment">assign</a> a variable, we cannot just give them any name we like. Otherwise, the function would have no way of knowing which particular part of its behavior we intend each keyword argument to modify.</p>
 <p>If we try to assign the keyword arguments to just any old name, the result is an error. And now that we know the relevant vocabulary, the text of the error message is pretty clear about what we did wrong:</p>
-
 </div>
 </div>
 </div>
@@ -13518,25 +13404,19 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'my name is'</span><span class="p">,</span> <span class="s1">'Mildred'</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'...'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'!'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-11-abafff96c1e1&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'Hello'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'my name is'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'Mildred'</span><span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'...'</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'!'</span><span class="ansi-blue-fg">)</span>
@@ -13544,16 +13424,13 @@ Hello Mildred
 <span class="ansi-red-fg">TypeError</span>: 'x' is an invalid keyword argument for print()</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>But up until now we have been using <code>print()</code> without specifying any values for the keyword arguments <code>sep</code> and <code>end</code>. So how did <code>print()</code> know what to do? Keyword arguments have 'default values', which are used if no keyword arguments are given. If you look at the standard behavior of <code>print()</code> you may be able to guess what the default values for <code>sep</code> and <code>end</code> are:</p>
-
 </div>
 </div>
 </div>
@@ -13561,38 +13438,28 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'my name is'</span><span class="p">,</span> <span class="s1">'Mildred'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello my name is Mildred
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That's right, the default for <code>sep</code> is a space (i.e. <code>sep=' '</code>). It is a little harder to see what the default for <code>end</code> is, because it is somewhat invisible, but it is a <a href="glossary.html#newline">newline character</a>, starting a new line. If we ask <code>end</code> to be nothing (i.e. an empty string <code>''</code>), then anything that is printed next will continue printing on the same line, instead of on a new one:</p>
-
 </div>
 </div>
 </div>
@@ -13600,40 +13467,30 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'my name is'</span><span class="p">,</span> <span class="s1">'Mildred'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'and I am very excited to be using your computer program.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello my name is Mildredand I am very excited to be using your computer program.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>When you look at the official Python <a href="https://docs.python.org/3/library/functions.html#print">documentation for the <code>print()</code> function</a>, you will see the possible input arguments written out in the header, and you will see the default values for the keyword arguments. For example, inside the parentheses you will see <code>end='\n'</code>, giving the default value for the <code>end</code> keyword argument (the character combination <code>'\n'</code> is used to represent the <a href="glossary.html#newline">newline character</a>). When you first encounter a function that you would like to use, it is a good idea to seek out the documentation and look for this header, to see what the input arguments are, and whether any of them set default behavior that you might want to change.</p>
 <h2 id="Return-values">Return values<a class="anchor-link" href="#Return-values">¶</a></h2><p>The output of a function is called its <a href="glossary.html#return">return value</a>. Usually, when we use a function, we <a href="glossary.html#assignment">assign</a> the return value into a variable by placing <code>=</code> in front of the <a href="glossary.html#call">function call</a>. For example, the return value of the <code>input()</code> function is a <a href="glossary.html#string">string</a> containing whatever characters the user typed in, and the return value of the <code>len()</code> function is an integer containing the number of items in a sequence or number of characters in a string. We can assign return values into variables to make use of them in the rest of our program:</p>
-
 </div>
 </div>
 </div>
@@ -13641,44 +13498,34 @@ Hello Mildred
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Name: '</span><span class="p">)</span>
 
 <span class="n">n_letters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Your name has'</span><span class="p">,</span> <span class="n">n_letters</span><span class="p">,</span> <span class="s1">'letters.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Name: Mildred
 Your name has 7 letters.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Side-effects">Side effects<a class="anchor-link" href="#Side-effects">¶</a></h3><p>Does the <code>print()</code> function have a <a href="glossary.html#return">return value</a>? At first, it may seem as though it does. Doesn't it return the printed text?</p>
 <p>Let's see what happens if we try to <a href="glossary.html#assignment">assign</a> the return value of <code>print()</code> into a variable:</p>
-
 </div>
 </div>
 </div>
@@ -13686,38 +13533,28 @@ Your name has 7 letters.
 <div class="input">
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What is the <a href="glossary.html#type">type</a> of this variable? If <code>print()</code> returns the printed text, then we should expect that this variable is a <a href="glossary.html#string">string</a>. But it is not:</p>
-
 </div>
 </div>
 </div>
@@ -13725,39 +13562,27 @@ Your name has 7 letters.
 <div class="input">
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>NoneType</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see here, <code>print()</code> returns <a href="glossary.html#none"><code>None</code></a>. The <code>None</code> value in Python stands for something that has not been defined, so if we get <code>None</code> as the return value of a function, this essentially means that the function has no return value.</p>
+<p>As we can see here, <code>print()</code> returns <a href="glossary.html#None"><code>None</code></a>. The <code>None</code> value in Python stands for something that has not been defined, so if we get <code>None</code> as the return value of a function, this essentially means that the function has no return value.</p>
 <p>It is important to distinguish between what a function <em>does</em> and what it <em>returns</em>. Sometimes, a function simply 'does things' but does not produce a return value that we can <a href="glossary.html#assignment">assign</a> into a variable. The <em>effect</em> of the <code>print()</code> function is to display text, but the text is not its return value. Any effects of a function that are not reflected in its return value are termed 'side effects' of the function. Displaying text is a 'side effect' of the <code>print()</code> function, though that may sound like a strange way of talking about it.</p>
 <p>We have encountered this phenomenon before in a slightly different guise when we learned about list methods. Remember that list methods just go ahead and change the list, and they don't return the changed list, they return <code>None</code>. Changing the contents of the list is a 'side effect' of list methods.</p>
 <p>Most functions, however, have no side effects; everything they do is reflected in their return value. For example, <code>len()</code> returns the length of something, and this is all that it does.</p>
@@ -13765,7 +13590,6 @@ Your name has 7 letters.
 <p>We are not limited to using the built-in functions. We can also define our own functions. We can then use these functions, either in the same program in which they are defined, or in another program, or we can even publish them online for other people to download and use in their own programs.</p>
 <p>This is what we will learn about now.</p>
 <h3 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h3><p>Let's again set ourselves a task to structure our learning. Imagine that we have a program that gathers user names. In this simple example program we will omit using <code>input()</code> to get the user names, because it gets tedious to keep testing the program by typing input at the console. Let's just define some names manually so we have a few to work with:</p>
-
 </div>
 </div>
 </div>
@@ -13773,23 +13597,20 @@ Your name has 7 letters.
 <div class="input">
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="s1">'Mildred Bonk'</span>
 <span class="n">aunts_name</span> <span class="o">=</span> <span class="s1">'Jennifer Boolean'</span>
 <span class="n">uncles_name</span> <span class="o">=</span> <span class="s1">'Julian Boolean'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now imagine that we want to create for each user an abbreviated ID consisting of their initials (i.e. the first letters of their first and surnames).</p>
 <p>We can do this using the string <a href="glossary.html#method">method</a> <code>split()</code> and some <a href="glossary.html#index">indexing</a>, both of which we have learned about before:</p>
-
 </div>
 </div>
 </div>
@@ -13797,7 +13618,7 @@ Your name has 7 letters.
 <div class="input">
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">user_name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -13805,35 +13626,25 @@ Your name has 7 letters.
 
 <span class="nb">print</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>MB
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now that we have confirmed that it works, let's do it for the other two users as well:</p>
-
 </div>
 </div>
 </div>
@@ -13841,7 +13652,7 @@ Your name has 7 letters.
 <div class="input">
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">aunts_name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -13855,30 +13666,21 @@ Your name has 7 letters.
 <span class="nb">print</span><span class="p">(</span><span class="n">aunts_id</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">uncles_id</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>JB
 JB
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13886,7 +13688,6 @@ JB
 <p>We notice that the next two users have the same ID. So now we decide that a better way to allocate IDs would be to use the first <em>two</em> letters of each user's first and surname. We have not picked a great way of approaching this task. Because we have copied and pasted almost the same lines three times to accomplish the same task, we now have to change things in several places whenever we decide that we want to change something about the way that that task is accomplished. We are fallible human beings and we are likely to miss one of the places in which the change is necessary, thus introducing mistakes into our program. <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>.</p>
 <p>It would be nice if there were just a function that could take a user name as its <a href="glossary.html#argument">argument</a> and <a href="glossary.html#return">return</a> the user's initials. Then we could use it in our program. Even better would be if we could modify this function's behavior, and for the modified behavior to take effect wherever the function is used. This would allow us to make changes in just one place that take effect for the whole program.</p>
 <p>Maybe there is a built-in function that suits our needs?</p>
-
 </div>
 </div>
 </div>
@@ -13894,25 +13695,19 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_id</span> <span class="o">=</span> <span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-20-05f0e1156bc4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>user_id <span class="ansi-blue-fg">=</span> get_initials<span class="ansi-blue-fg">(</span>user_name<span class="ansi-blue-fg">)</span>
@@ -13920,10 +13715,8 @@ JB
 <span class="ansi-red-fg">NameError</span>: name 'get_initials' is not defined</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13971,7 +13764,6 @@ JB
 <li>write what the function should return</li>
 </ul>
 <p>Let's see this syntax in action for a simple first attempt at our target function (though note that this first attempt contains a deliberate mistake for didactic purposes):</p>
-
 </div>
 </div>
 </div>
@@ -13979,24 +13771,21 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
     <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">initials</span> <span class="o">=</span> <span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's now <a href="glossary.html#call">call</a> our function, with an example name as the input argument:</p>
-
 </div>
 </div>
 </div>
@@ -14004,20 +13793,17 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We don't seem to get any answer. Maybe the <code>initials</code> variable that is created inside the function is the place to look?</p>
-
 </div>
 </div>
 </div>
@@ -14025,25 +13811,19 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">initials</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-23-af522d26ad22&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>initials<span class="ansi-blue-fg">)</span>
@@ -14051,17 +13831,14 @@ JB
 <span class="ansi-red-fg">NameError</span>: name 'initials' is not defined</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>No luck there either. Any variables that we create inside the body of a function are only for the function's own internal use. They are discarded once the function has done its work.</p>
 <p>The deliberate mistake in our first attempt at defining our function is that we have forgotten to use the <code>return</code> keyword on the last line. Like this:</p>
-
 </div>
 </div>
 </div>
@@ -14069,18 +13846,16 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
     <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14088,7 +13863,6 @@ JB
 <p>Whatever we write just after <code>return</code> is the <a href="glossary.html#return">return value</a>, the thing that the function will output. This is the only thing we can get from the function when we <a href="glossary.html#call">call</a> it. Any other variables created inside the function are just temporary intermediate steps on the way to the return value.</p>
 <p>Note that <code>def</code> (an abbreviation of 'define') and <code>return</code> are <a href="glossary.html#keyword">keywords</a>; their roles are fixed. But <code>get_initials</code> is our chosen name for the function. This could be different. Likewise <code>name</code> is the name we have given to the input argument. This too could be different if we wish. But just as in a <a href="glossary.html#loop">loop</a> or a <a href="glossary.html#comprehension">comprehension</a>, we must be consistent in using this same name in the body of the function wherever we mean 'whatever input is given to the function'. So if we were to use something arbitrary like <code>x</code> for the name of the input argument, we would have to also use <code>x</code> on line 2 above and say <code>x.split()</code> instead of <code>name.split()</code>.</p>
 <p>Now let's test the correct version of the function by calling it and <a href="glossary.html#assignment">assigning</a> the return value into a variable:</p>
-
 </div>
 </div>
 </div>
@@ -14096,34 +13870,25 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [25]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_initials</span> <span class="o">=</span> <span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">user_initials</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>MB
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14132,7 +13897,6 @@ JB
 <p>If you do not experience a brief twinge of transcendental joy when you have written a working function then there really is no hope for you. But our function isn't complete yet. Let's start adding the additional features that we want our function to have.</p>
 <h3 id="Default-values">Default values<a class="anchor-link" href="#Default-values">¶</a></h3><p>We said that we wanted to add two keyword arguments, and that these should have specific default values. How do we specify default values for arguments? If you look again at the <a href="https://docs.python.org/3/library/functions.html#print">documentation for the <code>print()</code> function</a>, you will see an example of the syntax for default values. When we define our function, we just have to assign the default values using <code>=</code>. When we (or someone else) later <a href="glossary.html#call">calls</a> the function, if they do not enter these arguments, the default values will be used, but if they do enter them, then whatever values they enter will be used instead.</p>
 <p>Let's create an updated version of our function, with the default values for the arguments <code>n</code> and <code>uppercase</code>. We should also incorporate these arguments into the body of the function. To make use of <code>n</code>, we should use it as a <a href="glossary.html#slice">slice</a> index to get the first <code>n</code> characters from each name (line 5 below). And to make use of <code>uppercase</code> we should put it in an <code>if</code> condition that applies the string <a href="glossary.html#method">method</a> <code>upper()</code> if the <code>uppercase</code> argument is <code>True</code> (line 6 below).</p>
-
 </div>
 </div>
 </div>
@@ -14140,7 +13904,7 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">uppercase</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
     <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -14151,18 +13915,15 @@ JB
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">initials</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>(In case you are wondering: No, we do not need to write <code>if uppercase == True</code> as our condition. In everyday English, it would be redundant to say something like "If the statement 'it is raining' is true, take your umbrella." We can just say "If it is raining, take your umbrella." So too in Python. We do not have to ask <code>if x == True</code> when <code>x</code> is a <a href="glossary.html#boolean">boolean</a> variable that is already either <code>True</code> or <code>False</code>. We can just ask <code>if x</code>.)</p>
 <p>And now let's test the new version of our function. We should check carefully that it works correctly both when we do not specify the keyword arguments, and when we do.</p>
-
 </div>
 </div>
 </div>
@@ -14170,100 +13931,64 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[27]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[27]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'mb'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [28]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[28]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[28]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'mibo'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">uppercase</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[29]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[29]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'MB'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14279,7 +14004,6 @@ JB
 <li>close parentheses <code>)</code></li>
 </ul>
 <p>Let's raise an exception just for fun, to see how this works:</p>
-
 </div>
 </div>
 </div>
@@ -14287,25 +14011,19 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'OMG that is not valid. You have broken your computer FOR EVER.'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-30-b55543e1f431&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'OMG that is not valid. You have broken your computer FOR EVER.'</span><span class="ansi-blue-fg">)</span>
@@ -14313,17 +14031,14 @@ JB
 <span class="ansi-red-fg">ValueError</span>: OMG that is not valid. You have broken your computer FOR EVER.</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The <code>ValueError</code> is the most common <a href="glossary.html#exception">exception</a> that we will want to raise ourselves in our functions. For other programmers using our functions, a <code>ValueError</code> exception lets them know that they have tried to use the function with an input that it cannot handle.</p>
 <p>Below is our function, updated to include checking the first input <a href="glossary.html#argument">argument</a> and raising an exception if it does not contain exactly two names. In order to produce an informative <a href="glossary.html#error">error message</a>, we make use of the <a href="glossary.html#string">string</a> <a href="glossary.html#method">method</a> <code>format()</code>.</p>
-
 </div>
 </div>
 </div>
@@ -14331,7 +14046,7 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">uppercase</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
     <span class="n">n_names</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
@@ -14346,17 +14061,14 @@ JB
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">initials</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Our function is starting to get quite complex. So let's first check that the changes we just made have not disrupted the normal workings of the function:</p>
-
 </div>
 </div>
 </div>
@@ -14364,40 +14076,27 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[32]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[32]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'mb'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And now let's check that we get an appropriate <a href="glossary.html#error">error message</a> if we input a string that does not contain the expected number of names:</p>
-
 </div>
 </div>
 </div>
@@ -14405,25 +14104,19 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">'Mildred T. Bonk'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-33-d78bf5992a4b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_initials<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'Mildred T. Bonk'</span><span class="ansi-blue-fg">)</span>
@@ -14438,17 +14131,14 @@ JB
 <span class="ansi-red-fg">ValueError</span>: 'Mildred T. Bonk' contains 3 names but should contain 2.</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Yes! The transcendental joy that results from successfully raising an exception almost trumps that of writing a working function.</p>
 <p>Our function is now complete. We can apply it again and again with many different input arguments in different parts of our program:</p>
-
 </div>
 </div>
 </div>
@@ -14456,133 +14146,85 @@ JB
 <div class="input">
 <div class="prompt input_prompt">In [34]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[34]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[34]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'mb'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">aunts_name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[35]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[35]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'jebo'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [36]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">uncles_name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[36]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[36]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'jubo'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [37]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">'David Hasselhoff'</span><span class="p">,</span> <span class="n">uppercase</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[37]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[37]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'DH'</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14610,7 +14252,6 @@ JB
 $$
 z = (x^2 + y^2)^\frac{1}{2}
 $$<p>Start by writing out the header line of the function using <code>def</code>, but turn this line into a comment using <code>#</code> so that Python won't run it yet. Then define some temporary variables to provide example inputs for the function, using the same names that you have given them in the function header. Choose some inputs for which you know the correct answer (for example, <code>x=3, y=4</code> should give a return value of <code>5</code>):</p>
-
 </div>
 </div>
 </div>
@@ -14618,22 +14259,19 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 <div class="input">
 <div class="prompt input_prompt">In [38]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#def hypotenuse(x, y):</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now add in the first step in the function body, for example getting the squares of the two given side lengths, and print it out to check it looks right:</p>
-
 </div>
 </div>
 </div>
@@ -14641,7 +14279,7 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 <div class="input">
 <div class="prompt input_prompt">In [39]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#def hypotenuse(x, y):</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
@@ -14651,35 +14289,25 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x_sq</span><span class="p">,</span> <span class="n">y_sq</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>9 16
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Keep adding steps and checking as you go along. For example:</p>
-
 </div>
 </div>
 </div>
@@ -14687,7 +14315,7 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 <div class="input">
 <div class="prompt input_prompt">In [40]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#def hypotenuse(x, y):</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
@@ -14696,35 +14324,26 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">sum_sq</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>25
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [41]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#def hypotenuse(x, y):</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
@@ -14734,29 +14353,20 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>5.0
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14768,7 +14378,6 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 <li>Indent the other lines so that they become part of the function.</li>
 <li>Turn the final <code>print()</code> statement into a <code>return</code> statement instead.</li>
 </ul>
-
 </div>
 </div>
 </div>
@@ -14776,7 +14385,7 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 <div class="input">
 <div class="prompt input_prompt">In [42]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hypotenuse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
 
     <span class="n">sum_sq</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
@@ -14784,17 +14393,14 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 
     <span class="k">return</span> <span class="n">z</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Don't forget to test your finished function with the same input arguments you used while building it:</p>
-
 </div>
 </div>
 </div>
@@ -14802,41 +14408,28 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 <div class="input">
 <div class="prompt input_prompt">In [43]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hypotenuse</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[43]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[43]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>5.0</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Function-or-loop?">Function or loop?<a class="anchor-link" href="#Function-or-loop?">¶</a></h2><p>In the <a href="iteration.html">previous lesson</a> we saw that <a href="glossary.html#loop">loops</a> are a good way of avoiding having to write out the same lines multiple times. And we began the current lesson with a similar sort of situation; we wanted to apply the same few Python commands repeatedly in order to create abbreviated user IDs for multiple users. So couldn't we just have done this in a loop?</p>
 <p>Yes, we could. And for this simple example, a loop might have been ok. We can loop through the items in a list of user names, process each one in the loop, and append the result to a new list with the list <a href="glossary.html#method">method</a> <code>append()</code>. It would look something like this:</p>
-
 </div>
 </div>
 </div>
@@ -14844,7 +14437,7 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 <div class="input">
 <div class="prompt input_prompt">In [44]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Mildred Bonk'</span><span class="p">,</span> <span class="s1">'Jennifer Boolean'</span><span class="p">,</span> <span class="s1">'Julian Boolean'</span><span class="p">]</span>
 <span class="n">user_ids</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -14857,37 +14450,24 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 
 <span class="n">user_ids</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[44]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[44]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['MIBO', 'JEBO', 'JUBO']</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>But there are some important differences between loops and functions. The most important one is that a loop runs immediately in only one place in our program, whereas a function can be re-used in multiple places. Imagine that our program needed to collect and process some of the user names early on, and collect more user names after having carried out some intermediate actions. We could not achieve this with a loop, as the loop requires us to have a complete sequence of inputs ready to loop through. A function allows us to run some lines, then do something else, then go back and run the same lines again:</p>
-
 </div>
 </div>
 </div>
@@ -14895,7 +14475,7 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 <div class="input">
 <div class="prompt input_prompt">In [45]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">user_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Mildred Bonk'</span><span class="p">,</span> <span class="s1">'Jennifer Boolean'</span><span class="p">,</span> <span class="s1">'Julian Boolean'</span><span class="p">]</span>
 <span class="n">user_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">user_names</span><span class="p">]</span>
 
@@ -14904,30 +14484,21 @@ $$<p>Start by writing out the header line of the function using <code>def</code>
 
 <span class="n">admin_id</span> <span class="o">=</span> <span class="n">get_initials</span><span class="p">(</span><span class="s1">'David Hasselhoff'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Carrying out some intermediate actions...
 Now adding the ID of the admin user...
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14947,31 +14518,20 @@ Now adding the ID of the admin user...
 <li>Include an appropriate docstring for the function.</li>
 </ul>
 <p>Here are some examples of the function's desired behavior:</p>
-
 <pre><code>&gt;&gt;&gt; first_n_words('Hello my name is Mildred.')
 ['Hello']</code></pre>
-
 <pre><code>&gt;&gt;&gt; first_n_words('Hello my name is Mildred.', n=4)
 ['Hello', 'my', 'name', 'is']</code></pre>
-
 <pre><code>&gt;&gt;&gt; first_n_words('Hello my name is Mildred.', n=9000)
 ['Hello', 'my', 'name', 'is', 'Mildred.']</code></pre>
-
 <pre><code>&gt;&gt;&gt; first_n_words('Hello my name is Mildred.', n=0)
 []</code></pre>
-
 <pre><code>&gt;&gt;&gt; first_n_words('Hello my name is Mildred.', n=-1)
 ValueError: Cannot get a negative number of words.</code></pre>
-
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-
- 
-
-
-
-</body></html>
+</div>
+</div>
+</body>
+</html>
