@@ -17,6 +17,3 @@ def test_topic_pages(browser, version, page):
 
     # Did we get it?
     assert page in browser.page_source
-
-    # Does it have a table of contents?
-    assert 'Contents' in browser.page_source
