@@ -1,8 +1,6 @@
 #### Project-specific ignores ####
 
 content/.guardian_api_key.txt
-content/html/*.html
-notepad.txt
 
 
 #### General Python ignores ####
