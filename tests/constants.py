@@ -86,7 +86,10 @@ DATA_FILES = [
 DATA_FILES = ['data/' + f for f in DATA_FILES]
 
 
-# %% Misc
+# %% Selenium parameters
 
+# Explicit wait (mainly for image loading).
 PAGE_WAIT = 1.0
+
+# For comparing screenshots, simplify by comparing only the first n bytes.
 IMAGE_BYTES = 15000

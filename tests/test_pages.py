@@ -19,6 +19,9 @@ def test_topic_pages(browser, version, page):
     assert page in browser.page_source
 
     # Do the links in the table of contents actually take us to page sections?
+    # (This turns out to be fairly difficult to test.
+    # The hack here is to take a screenshot, click the link,
+    # then take another and check whether it is different.)
 
     time.sleep(constants.PAGE_WAIT)
     top_screenshot = browser.get_screenshot_as_base64()
