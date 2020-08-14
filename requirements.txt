@@ -5,6 +5,7 @@ imageio
 jupyter
 jupyter-contrib-nbextensions
 matplotlib
+nltk
 numpy
 pandas
 pytest
