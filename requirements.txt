@@ -2,8 +2,8 @@ bokeh
 bs4
 flake8
 imageio
-jupyter
-jupyter-contrib-nbextensions
+jupyterlab
+lxml
 matplotlib
 nltk
 numpy
@@ -14,5 +14,6 @@ requests
 seaborn
 selenium
 scikit-image
+spyder
 statsmodels
 xlrd

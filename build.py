@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Run all the build steps.
@@ -53,13 +52,13 @@ ipynb_filenames = glob.glob(os.path.join(content_path, '*.ipynb'))
 # %% Convert ipynb files
 
 for filename in ipynb_filenames:
+    
+    print('ipynb -> html', filename)
 
     filename_out = misc.strip_extension(os.path.basename(filename)) + '.html'
     filename_out = os.path.join(content_path, filename_out)
 
     convert.ipynb_to_html(filename, filename_out, image_paths=image_paths)
-
-    print('to html', filename)
 
 
 # %% Create zip file of example programs

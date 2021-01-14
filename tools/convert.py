@@ -15,6 +15,7 @@ from . import misc
 
 NOTEBOOK_VERSION = 4
 OUTPUT_ENCODING = 'utf-8'
+TOC_DEPTH = 3
 
 
 # %% Exporters
@@ -54,6 +55,8 @@ def remove_cells(notebook, tag='remove-cell'):
 
     notebook.cells = [cell for cell in notebook.cells if not has_tag(cell, tag)]
 
+    return notebook
+
 
 def remove_output(notebook, tag='remove-output'):
     """Remove output from all cells with a given tag.
@@ -62,6 +65,8 @@ def remove_output(notebook, tag='remove-output'):
     for cell in notebook.cells:
         if has_tag(cell, tag) and 'outputs' in cell:
             cell['outputs'] = []
+
+    return notebook
 
 
 # %% Convert
@@ -94,8 +99,8 @@ def ipynb_to_markdown(filename_in, filename_out=None):
 
     notebook = read(filename_in)
 
-    remove_cells(notebook)
-    remove_output(notebook)
+    notebook = remove_cells(notebook)
+    notebook = remove_output(notebook)
 
     content = convert(notebook, 'md')
     content = markdown.replace_ipynb(content)
@@ -114,11 +119,12 @@ def ipynb_to_html(filename_in, filename_out=None, image_paths=['.']):
 
     notebook = read(filename_in)
 
-    remove_cells(notebook)
-    remove_output(notebook)
+    notebook = remove_cells(notebook)
+    notebook = remove_output(notebook)
 
     content = convert(notebook, 'html')
     content = html.make_soup(content)
+    content = html.add_toc(content, depth=TOC_DEPTH)
     content = html.replace_ipynb(content)
     content = html.embed_images(content, paths=image_paths)
 

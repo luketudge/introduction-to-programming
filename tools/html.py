@@ -32,10 +32,39 @@ def make_soup(html):
     """Convert html notebook to BeautifulSoup.
     """
 
-    return bs4.BeautifulSoup(html)
+    return bs4.BeautifulSoup(html, features='lxml')
 
 
 # %% Postprocessing
+
+def add_toc(soup, depth):
+    """Add a table of contents.
+    
+    Arguments:
+        depth: int, deepest html header (e.g. h1, h2, h3) to include
+    """
+
+    h_tags = ['h' + str(i) for i in range(2, depth + 1)]
+    toc = soup.new_tag('ul')
+
+    for h in soup.find_all(h_tags):
+
+        text = h.get_text().strip(' ¶')
+        anchor = h.find('a', attrs={'class': 'anchor-link'})
+        item = soup.new_tag('li')
+        link = soup.new_tag('a', href=anchor['href'])
+        link.append(text)
+        item.append(link)
+        toc.append(item)
+
+    body = soup.find('div', attrs={'class': 'jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput'})
+    body.insert(0, toc)
+    contents = soup.new_tag('h2')
+    contents.append('Contents')
+    body.insert(0, contents)
+    
+    return soup
+
 
 def replace_ipynb(soup, new='html'):
     """Change all links to ipynb files.
