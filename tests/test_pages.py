@@ -13,7 +13,9 @@ def test_topic_pages(browser, version, page):
     browser.get(version)
 
     # Visit one of the topic pages.
-    browser.find_element_by_link_text(page).click()
+    link = browser.find_element_by_link_text(page)
+    link.location_once_scrolled_into_view
+    link.click()
 
     # Did we get it?
     assert page in browser.page_source
