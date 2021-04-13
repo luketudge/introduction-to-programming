@@ -8,6 +8,7 @@ from selenium import webdriver
 def browser():
 
     fb = webdriver.Firefox()
+    fb.maximize_window()
 
     yield fb
 

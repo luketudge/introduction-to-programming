@@ -12,10 +12,13 @@ from . import constants
 def test_topic_pages(browser, version, page):
 
     browser.get(version)
-    browser.find_element_by_link_text(page).click()
 
-    # Did we get the page?
+    # Visit one of the topic pages.
+    link = browser.find_element_by_link_text(page)
+    link.location_once_scrolled_into_view
+    link.click()
 
+    # Did we get it?
     assert page in browser.page_source
 
     # Do the links in the table of contents actually take us to page sections?

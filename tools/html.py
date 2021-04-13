@@ -39,7 +39,7 @@ def make_soup(html):
 
 def add_toc(soup, depth):
     """Add a table of contents.
-    
+
     Arguments:
         depth: int, deepest html header (e.g. h1, h2, h3) to include
     """
@@ -62,7 +62,7 @@ def add_toc(soup, depth):
     contents = soup.new_tag('h2')
     contents.append('Contents')
     body.insert(0, contents)
-    
+
     return soup
 
 
