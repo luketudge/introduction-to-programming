@@ -32,7 +32,6 @@ TOPIC_PAGES = [
     'Data analysis',
     'The internet',
     'Relational databases',
-    'Natural language processing',
 ]
 
 
