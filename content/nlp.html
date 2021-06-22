@@ -14244,7 +14244,7 @@ a.anchor-link {
 <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown"><h2>Contents</h2><ul><li><a href="#Objective">Objective</a></li><li><a href="#String-methods-again">String methods again</a></li><li><a href="#Regular-expressions">Regular expressions</a></li><li><a href="#nltk">nltk</a></li><li><a href="#Tokenization">Tokenization</a></li></ul>
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown"><h2>Contents</h2><ul><li><a href="#Objective">Objective</a></li><li><a href="#String-methods-again">String methods again</a></li><li><a href="#Regular-expressions">Regular expressions</a></li><li><a href="#nltk">nltk</a></li><li><a href="#Tokenization">Tokenization</a></li><li><a href="#POS-tagging">POS tagging</a></li><li><a href="#Sentences">Sentences</a></li><li><a href="#spacy">spacy</a></li><li><a href="#Exercise">Exercise</a></li></ul>
 <h1 id="Natural-language-processing">Natural language processing<a class="anchor-link" href="#Natural-language-processing">¶</a></h1><p>We have learned how to work with data organized as an <a href="arrays.html">array</a> of numbers, using the <code>numpy</code> package, or more generally as a <a href="data_analysis.html">table</a> of numeric and text columns, using <code>pandas</code>. We have also learned a bit about <a href="images.html">working with image files</a>. The other major data format that you are likely to encounter in many computer programming tasks is natural, human-language text.</p>
 <p>In computing, people often refer to the languages that human beings use for everyday communication, such as English or Pirahá, as 'natural' languages. This distinguishes them from programming languages like Python, and helps avoid confusion, for example when asking a computer person 'What language do you use at work?' Using computers to analyze natural language is often called 'Natural Language Processing' (NLP).</p>
 <p>Computers still have huge difficulty responding to natural language appropriately. Here we will introduce a few tools and techniques that can help if we need to write a computer program that takes natural language text as its input. These techniques are useful in many common programming tasks:</p>
@@ -14418,17 +14418,214 @@ somehow mildly reminded him of his mortality.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Regular-expressions">Regular expressions<a class="anchor-link" href="#Regular-expressions">¶</a></h2>
+<h2 id="Regular-expressions">Regular expressions<a class="anchor-link" href="#Regular-expressions">¶</a></h2><p>Some of the difficulties of working with natural language text can be handled using a particular programming language whose sole purpose is to specify patterns of text characters to search for. Pieces of code written in this language are known as <a href="glossary.html#regex">regular expressions</a>, sometimes abbreviated to 'regex'.</p>
+<p>There is a third-party Python <a href="glossary.html#package">package</a> for working with regular expressions. Let's import it so that we can see a few examples of regular expressions in action.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">regex</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="nltk">nltk<a class="anchor-link" href="#nltk">¶</a></h2><p>We have a similar problem with our list of prepositions. It is far from complete.</p>
+<p>(Note that there is also a package in Python's <a href="standard_library.html">standard library</a> called <code>re</code>, which provides the same functions as <code>regex</code>. But <code>re</code> has several limitations, so I recommend working with <code>regex</code> instead.)</p>
+<p>The <code>regex</code> package provides various functions, but the one that we will use here is <code>findall()</code>, which takes two <a href="glossary.html#argument">arguments</a>, a regular expression giving a pattern of text, and a <a href="glossary.html#string">string</a> in which to search for that pattern. The function <a href="glossary.html#return">returns</a> a list of all the matches.</p>
+<p>Regular expressions are a programming language all of their own. We won't cover here all of the rules of regular expressions. But the basic idea is that a regular expression contains normal text plus certain special characters that have particular meanings. Normal text characters simply specify that exact piece of text. So for example the regular expression <code>cat</code> will match all the occurrences of that exact sequence of characters.</p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">'That big fat cat on the flat mat is my cat Pat.'</span>
+
+<span class="n">regex</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">'cat'</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>['cat', 'cat']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>There are lots of special characters or combinations of characters that can be used in regular expressions to specify more abstract matches. For example, what if we want any word that ends in 'at'? A range of alphabetic characters enclosed in square parentheses <code>[]</code> means 'any one of these characters'. So a first stab at finding all the words ending in 'at' might be:</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">regex</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">'[a-z]at'</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>['hat', 'fat', 'cat', 'lat', 'mat', 'cat']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>This gets us all the cases of exactly one letter followed by 'at', but this results in some 'chopped off' words. The special character <code>+</code> means 'one or more occurrences of the preceding pattern', so we can add this in to also make sure we get the full words with more than one letter before the 'at'.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">regex</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">'[a-z]+at'</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>['hat', 'fat', 'cat', 'flat', 'mat', 'cat']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Regular expressions draw a distinction between upper and lower case letters. So to get the words with initial uppercase letters as well, we need to add the range of uppercase letters to our <code>[]</code> sequence.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">regex</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">'[a-zA-Z]+at'</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>['That', 'fat', 'cat', 'flat', 'mat', 'cat', 'Pat']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Regular expressions may also contain certain character sequences that represent a whole 'class' of characters. These special sequences always begin with the backslash <code>\</code>. For example, the special sequence <code>\w</code> matches 'word' characters, which covers all letters plus the underscore <code>_</code>. This is commonly useful for breaking a text into words while leaving out punctuation.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">regex</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">'\w+'</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>['That',
+ 'big',
+ 'fat',
+ 'cat',
+ 'on',
+ 'the',
+ 'flat',
+ 'mat',
+ 'is',
+ 'my',
+ 'cat',
+ 'Pat']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>There is lots lots more that can be done with regular expressions. You can read about the full set of special regex characters on the <a href="https://docs.python.org/3/library/re.html">Python documentation page for regular expressions</a>.</p>
+<p>There is also an interactive regex testing site, where you can enter a regular expression plus some example text and check whether your regeular expression has any matches in the text. <a href="https://regex101.com/">Try it out</a>.</p>
+<p>For now, let's apply the little that we have learned about regular expressions to improve our <code>endswith_preposition()</code> function.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">endswith_preposition</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">regex</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">'\w+'</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
+    <span class="n">final_word</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">final_word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">prepositions</span>
+
+<span class="n">endswith_preposition</span><span class="p">(</span><span class="s1">'I said "This is the sort of mindless pedantry I just cannot put up with!"'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>True</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="nltk">nltk<a class="anchor-link" href="#nltk">¶</a></h2><p>But we still have a problem with our list of prepositions. It is far from complete.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">endswith_preposition</span><span class="p">(</span><span class="s2">"Now that's the kind of pedantry I can get behind!"</span><span class="p">)</span>
@@ -14440,7 +14637,7 @@ somehow mildly reminded him of his mortality.
 <div class="jp-Cell-outputWrapper">
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>False</pre>
 </div>
@@ -14450,7 +14647,7 @@ somehow mildly reminded him of his mortality.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Regular expressions aren't going to be of much help fixing this second limitation of our function. We could just include more prepositions in our list. But there are <a href="https://en.wikipedia.org/wiki/List_of_English_prepositions">a lot of prepositions</a> that we would need to take into account.</p>
+<p>Regular expressions aren't going to be of much help fixing this second limitation of our function. We could of course just include more prepositions in our list. But there are <a href="https://en.wikipedia.org/wiki/List_of_English_prepositions">a lot of prepositions</a> that we would need to take into account.</p>
 <p>As we have seen a few times before, when we encounter what seems like a difficult but common problem, there may be some tools already out there that can help save us from re-inventing the wheel. There are lots of Python <a href="glossary.html#package">packages</a> for NLP, which apply various techniques ranging from simple string processing like in our example function above, to something more like artificial intelligence.</p>
 <p>We will look at just one NLP package, called <code>nltk</code>, which stands for 'natural language tool kit'. The tools provided by <code>nltk</code> are a bit more complex than our example function, but still simple enough to be suitable for an introduction to NLP. Indeed, <code>nltk</code> was originally created to teach linguists how to do computing with Python, and it accompanies a book about Python and NLP, which is <a href="http://www.nltk.org/book">free to read online</a>.</p>
 <p><code>nltk</code> is included in the default Anaconda installation, so if you have Anaconda then you will have it already. Let's import it.</p>
@@ -14458,7 +14655,7 @@ somehow mildly reminded him of his mortality.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
@@ -14470,31 +14667,15 @@ somehow mildly reminded him of his mortality.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Tokenization">Tokenization<a class="anchor-link" href="#Tokenization">¶</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_raises-exception">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s1">'This is the sort of mindless pedantry I just cannot put up with!'</span>
-
-<span class="n">words</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>Dealing with natural language often requires quite a lot of extra data. For example, we might need pre-compiled lists of word types, a database of grammatical rules, and so on. <code>nltk</code> includes various extra data files of this kind, but it does not install them all by default, in order to save space for users who do not need all of it. So the first time you use <code>nltk</code> you may find that you need to download extra components. For simplicity, I will simply download them all here so that we definitely have everything that we need.</p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'punkt'</span><span class="p">)</span>
-<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'averaged_perceptron_tagger'</span><span class="p">)</span>
-<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'universal_tagset'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'all'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -14505,35 +14686,315 @@ somehow mildly reminded him of his mortality.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[nltk_data] Downloading package punkt to /home/lt/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
-[nltk_data] Downloading package averaged_perceptron_tagger to
-[nltk_data]     /home/lt/nltk_data...
-[nltk_data]   Package averaged_perceptron_tagger is already up-to-
-[nltk_data]       date!
-[nltk_data] Downloading package universal_tagset to
-[nltk_data]     /home/lt/nltk_data...
-[nltk_data]   Package universal_tagset is already up-to-date!
+<pre>[nltk_data] Downloading collection 'all'
+[nltk_data]    | 
+[nltk_data]    | Downloading package abc to /home/lt/nltk_data...
+[nltk_data]    |   Package abc is already up-to-date!
+[nltk_data]    | Downloading package alpino to /home/lt/nltk_data...
+[nltk_data]    |   Package alpino is already up-to-date!
+[nltk_data]    | Downloading package biocreative_ppi to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package biocreative_ppi is already up-to-date!
+[nltk_data]    | Downloading package brown to /home/lt/nltk_data...
+[nltk_data]    |   Package brown is already up-to-date!
+[nltk_data]    | Downloading package brown_tei to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package brown_tei is already up-to-date!
+[nltk_data]    | Downloading package cess_cat to /home/lt/nltk_data...
+[nltk_data]    |   Package cess_cat is already up-to-date!
+[nltk_data]    | Downloading package cess_esp to /home/lt/nltk_data...
+[nltk_data]    |   Package cess_esp is already up-to-date!
+[nltk_data]    | Downloading package chat80 to /home/lt/nltk_data...
+[nltk_data]    |   Package chat80 is already up-to-date!
+[nltk_data]    | Downloading package city_database to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package city_database is already up-to-date!
+[nltk_data]    | Downloading package cmudict to /home/lt/nltk_data...
+[nltk_data]    |   Package cmudict is already up-to-date!
+[nltk_data]    | Downloading package comparative_sentences to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package comparative_sentences is already up-to-
+[nltk_data]    |       date!
+[nltk_data]    | Downloading package comtrans to /home/lt/nltk_data...
+[nltk_data]    |   Package comtrans is already up-to-date!
+[nltk_data]    | Downloading package conll2000 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package conll2000 is already up-to-date!
+[nltk_data]    | Downloading package conll2002 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package conll2002 is already up-to-date!
+[nltk_data]    | Downloading package conll2007 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package conll2007 is already up-to-date!
+[nltk_data]    | Downloading package crubadan to /home/lt/nltk_data...
+[nltk_data]    |   Package crubadan is already up-to-date!
+[nltk_data]    | Downloading package dependency_treebank to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package dependency_treebank is already up-to-date!
+[nltk_data]    | Downloading package dolch to /home/lt/nltk_data...
+[nltk_data]    |   Package dolch is already up-to-date!
+[nltk_data]    | Downloading package europarl_raw to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package europarl_raw is already up-to-date!
+[nltk_data]    | Downloading package floresta to /home/lt/nltk_data...
+[nltk_data]    |   Package floresta is already up-to-date!
+[nltk_data]    | Downloading package framenet_v15 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package framenet_v15 is already up-to-date!
+[nltk_data]    | Downloading package framenet_v17 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package framenet_v17 is already up-to-date!
+[nltk_data]    | Downloading package gazetteers to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package gazetteers is already up-to-date!
+[nltk_data]    | Downloading package genesis to /home/lt/nltk_data...
+[nltk_data]    |   Package genesis is already up-to-date!
+[nltk_data]    | Downloading package gutenberg to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package gutenberg is already up-to-date!
+[nltk_data]    | Downloading package ieer to /home/lt/nltk_data...
+[nltk_data]    |   Package ieer is already up-to-date!
+[nltk_data]    | Downloading package inaugural to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package inaugural is already up-to-date!
+[nltk_data]    | Downloading package indian to /home/lt/nltk_data...
+[nltk_data]    |   Package indian is already up-to-date!
+[nltk_data]    | Downloading package jeita to /home/lt/nltk_data...
+[nltk_data]    |   Package jeita is already up-to-date!
+[nltk_data]    | Downloading package kimmo to /home/lt/nltk_data...
+[nltk_data]    |   Package kimmo is already up-to-date!
+[nltk_data]    | Downloading package knbc to /home/lt/nltk_data...
+[nltk_data]    |   Package knbc is already up-to-date!
+[nltk_data]    | Downloading package lin_thesaurus to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package lin_thesaurus is already up-to-date!
+[nltk_data]    | Downloading package mac_morpho to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package mac_morpho is already up-to-date!
+[nltk_data]    | Downloading package machado to /home/lt/nltk_data...
+[nltk_data]    |   Package machado is already up-to-date!
+[nltk_data]    | Downloading package masc_tagged to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package masc_tagged is already up-to-date!
+[nltk_data]    | Downloading package moses_sample to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package moses_sample is already up-to-date!
+[nltk_data]    | Downloading package movie_reviews to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package movie_reviews is already up-to-date!
+[nltk_data]    | Downloading package names to /home/lt/nltk_data...
+[nltk_data]    |   Package names is already up-to-date!
+[nltk_data]    | Downloading package nombank.1.0 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package nombank.1.0 is already up-to-date!
+[nltk_data]    | Downloading package nps_chat to /home/lt/nltk_data...
+[nltk_data]    |   Package nps_chat is already up-to-date!
+[nltk_data]    | Downloading package omw to /home/lt/nltk_data...
+[nltk_data]    |   Package omw is already up-to-date!
+[nltk_data]    | Downloading package opinion_lexicon to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package opinion_lexicon is already up-to-date!
+[nltk_data]    | Downloading package paradigms to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package paradigms is already up-to-date!
+[nltk_data]    | Downloading package pil to /home/lt/nltk_data...
+[nltk_data]    |   Package pil is already up-to-date!
+[nltk_data]    | Downloading package pl196x to /home/lt/nltk_data...
+[nltk_data]    |   Package pl196x is already up-to-date!
+[nltk_data]    | Downloading package ppattach to /home/lt/nltk_data...
+[nltk_data]    |   Package ppattach is already up-to-date!
+[nltk_data]    | Downloading package problem_reports to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package problem_reports is already up-to-date!
+[nltk_data]    | Downloading package propbank to /home/lt/nltk_data...
+[nltk_data]    |   Package propbank is already up-to-date!
+[nltk_data]    | Downloading package ptb to /home/lt/nltk_data...
+[nltk_data]    |   Package ptb is already up-to-date!
+[nltk_data]    | Downloading package product_reviews_1 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package product_reviews_1 is already up-to-date!
+[nltk_data]    | Downloading package product_reviews_2 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package product_reviews_2 is already up-to-date!
+[nltk_data]    | Downloading package pros_cons to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package pros_cons is already up-to-date!
+[nltk_data]    | Downloading package qc to /home/lt/nltk_data...
+[nltk_data]    |   Package qc is already up-to-date!
+[nltk_data]    | Downloading package reuters to /home/lt/nltk_data...
+[nltk_data]    |   Package reuters is already up-to-date!
+[nltk_data]    | Downloading package rte to /home/lt/nltk_data...
+[nltk_data]    |   Package rte is already up-to-date!
+[nltk_data]    | Downloading package semcor to /home/lt/nltk_data...
+[nltk_data]    |   Package semcor is already up-to-date!
+[nltk_data]    | Downloading package senseval to /home/lt/nltk_data...
+[nltk_data]    |   Package senseval is already up-to-date!
+[nltk_data]    | Downloading package sentiwordnet to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package sentiwordnet is already up-to-date!
+[nltk_data]    | Downloading package sentence_polarity to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package sentence_polarity is already up-to-date!
+[nltk_data]    | Downloading package shakespeare to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package shakespeare is already up-to-date!
+[nltk_data]    | Downloading package sinica_treebank to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package sinica_treebank is already up-to-date!
+[nltk_data]    | Downloading package smultron to /home/lt/nltk_data...
+[nltk_data]    |   Package smultron is already up-to-date!
+[nltk_data]    | Downloading package state_union to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package state_union is already up-to-date!
+[nltk_data]    | Downloading package stopwords to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package stopwords is already up-to-date!
+[nltk_data]    | Downloading package subjectivity to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package subjectivity is already up-to-date!
+[nltk_data]    | Downloading package swadesh to /home/lt/nltk_data...
+[nltk_data]    |   Package swadesh is already up-to-date!
+[nltk_data]    | Downloading package switchboard to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package switchboard is already up-to-date!
+[nltk_data]    | Downloading package timit to /home/lt/nltk_data...
+[nltk_data]    |   Package timit is already up-to-date!
+[nltk_data]    | Downloading package toolbox to /home/lt/nltk_data...
+[nltk_data]    |   Package toolbox is already up-to-date!
+[nltk_data]    | Downloading package treebank to /home/lt/nltk_data...
+[nltk_data]    |   Package treebank is already up-to-date!
+[nltk_data]    | Downloading package twitter_samples to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package twitter_samples is already up-to-date!
+[nltk_data]    | Downloading package udhr to /home/lt/nltk_data...
+[nltk_data]    |   Package udhr is already up-to-date!
+[nltk_data]    | Downloading package udhr2 to /home/lt/nltk_data...
+[nltk_data]    |   Package udhr2 is already up-to-date!
+[nltk_data]    | Downloading package unicode_samples to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package unicode_samples is already up-to-date!
+[nltk_data]    | Downloading package universal_treebanks_v20 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package universal_treebanks_v20 is already up-to-
+[nltk_data]    |       date!
+[nltk_data]    | Downloading package verbnet to /home/lt/nltk_data...
+[nltk_data]    |   Package verbnet is already up-to-date!
+[nltk_data]    | Downloading package verbnet3 to /home/lt/nltk_data...
+[nltk_data]    |   Package verbnet3 is already up-to-date!
+[nltk_data]    | Downloading package webtext to /home/lt/nltk_data...
+[nltk_data]    |   Package webtext is already up-to-date!
+[nltk_data]    | Downloading package wordnet to /home/lt/nltk_data...
+[nltk_data]    |   Package wordnet is already up-to-date!
+[nltk_data]    | Downloading package wordnet_ic to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package wordnet_ic is already up-to-date!
+[nltk_data]    | Downloading package words to /home/lt/nltk_data...
+[nltk_data]    |   Package words is already up-to-date!
+[nltk_data]    | Downloading package ycoe to /home/lt/nltk_data...
+[nltk_data]    |   Package ycoe is already up-to-date!
+[nltk_data]    | Downloading package rslp to /home/lt/nltk_data...
+[nltk_data]    |   Package rslp is already up-to-date!
+[nltk_data]    | Downloading package maxent_treebank_pos_tagger to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package maxent_treebank_pos_tagger is already up-
+[nltk_data]    |       to-date!
+[nltk_data]    | Downloading package universal_tagset to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package universal_tagset is already up-to-date!
+[nltk_data]    | Downloading package maxent_ne_chunker to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package maxent_ne_chunker is already up-to-date!
+[nltk_data]    | Downloading package punkt to /home/lt/nltk_data...
+[nltk_data]    |   Package punkt is already up-to-date!
+[nltk_data]    | Downloading package book_grammars to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package book_grammars is already up-to-date!
+[nltk_data]    | Downloading package sample_grammars to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package sample_grammars is already up-to-date!
+[nltk_data]    | Downloading package spanish_grammars to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package spanish_grammars is already up-to-date!
+[nltk_data]    | Downloading package basque_grammars to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package basque_grammars is already up-to-date!
+[nltk_data]    | Downloading package large_grammars to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package large_grammars is already up-to-date!
+[nltk_data]    | Downloading package tagsets to /home/lt/nltk_data...
+[nltk_data]    |   Package tagsets is already up-to-date!
+[nltk_data]    | Downloading package snowball_data to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package snowball_data is already up-to-date!
+[nltk_data]    | Downloading package bllip_wsj_no_aux to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package bllip_wsj_no_aux is already up-to-date!
+[nltk_data]    | Downloading package word2vec_sample to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package word2vec_sample is already up-to-date!
+[nltk_data]    | Downloading package panlex_swadesh to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package panlex_swadesh is already up-to-date!
+[nltk_data]    | Downloading package mte_teip5 to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package mte_teip5 is already up-to-date!
+[nltk_data]    | Downloading package averaged_perceptron_tagger to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package averaged_perceptron_tagger is already up-
+[nltk_data]    |       to-date!
+[nltk_data]    | Downloading package averaged_perceptron_tagger_ru to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package averaged_perceptron_tagger_ru is already
+[nltk_data]    |       up-to-date!
+[nltk_data]    | Downloading package perluniprops to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package perluniprops is already up-to-date!
+[nltk_data]    | Downloading package nonbreaking_prefixes to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package nonbreaking_prefixes is already up-to-date!
+[nltk_data]    | Downloading package vader_lexicon to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package vader_lexicon is already up-to-date!
+[nltk_data]    | Downloading package porter_test to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package porter_test is already up-to-date!
+[nltk_data]    | Downloading package wmt15_eval to
+[nltk_data]    |     /home/lt/nltk_data...
+[nltk_data]    |   Package wmt15_eval is already up-to-date!
+[nltk_data]    | Downloading package mwa_ppdb to /home/lt/nltk_data...
+[nltk_data]    |   Package mwa_ppdb is already up-to-date!
+[nltk_data]    | 
+[nltk_data]  Done downloading collection all
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>True</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>As you can see, there are a lot of extra data files in the full package. If you prefer to pick and choose which extra components of <code>nltk</code> to download, call the downloader function with no arguments:</p>
+<p><code>nltk.download()</code></p>
+<p>Now we are ready to make use of <code>nltk</code>'s pre-compiled knowledge of word types in order to label words as prepositions.</p>
+<h3 id="Tokenization">Tokenization<a class="anchor-link" href="#Tokenization">¶</a></h3><p>The first step is to split our text into words. We already managed this above using the basic Python string <a href="glossary.html#method">method</a> <code>split()</code>. But to see how this can be achieved with <code>nltk</code>, let's use <code>nltk</code>'s own function for this, <code>word_tokenize()</code>.</p>
+<p>In NLP, the term 'token' refers to an instance of some meaningful unit of language. Most tokens are words, but not all. Sometimes, we might wish to consider punctuation as meaningful, in which case a punctuation character is a token. And sometimes we might consider a word to be meaningful only as part of group of words but not on its own, in which case that group of words is a token (one example of this latter case is names of people or places, such as 'Los Angeles', in everyday English 'Los' is not really a token).</p>
+<p>The process of splitting a text into tokens is called 'tokenization'. We can see some of the differences between this process and simple splitting by comparing the two.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell celltag_raises-exception">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">"I'm ready!Let's go"</span>
 
-<span class="n">words</span>
+<span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -14542,34 +15003,93 @@ somehow mildly reminded him of his mortality.
 <div class="jp-Cell-outputWrapper">
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>['This',
- 'is',
+<pre>["I'm", "ready!Let's", 'go']</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>['I', "'m", 'ready', '!', 'Let', "'s", 'go']</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We see that <code>word_tokenize()</code> handles contractions like <em>I'm</em> as two tokens, and also deals correctly with typing errors such as missing spaces after punctuation.</p>
+<p>Now let's tokenize one of our example sentences from above.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">"Now that's the kind of pedantry I can get behind!"</span>
+
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+
+<span class="n">tokens</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>['Now',
+ 'that',
+ "'s",
  'the',
- 'sort',
+ 'kind',
  'of',
- 'mindless',
  'pedantry',
  'I',
- 'just',
  'can',
- 'not',
- 'put',
- 'up',
- 'with',
+ 'get',
+ 'behind',
  '!']</pre>
 </div>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="POS-tagging">POS tagging<a class="anchor-link" href="#POS-tagging">¶</a></h3><p>Once we have our tokens, the next step is to 'tag' the tokens as belonging to linguistic categories like 'noun', 'verb', 'preposition', etc. These categories are often called 'parts of speech' (abbreviated to POS). The <code>nltk</code> function for assigning parts of speech to tokens is <code>pos_tag()</code>.</p>
+<p>There are many different conventions concerning how to name and abbreviate the different possible parts of speech. These different conventions are known as 'tagsets'. An additional <a href="glossary.html#argument">argument</a> can be used to specify the tagset to use. We will use a simplified 'universal' tagset here.</p>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">tagset</span><span class="o">=</span><span class="s1">'universal'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pos</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span> <span class="n">tagset</span><span class="o">=</span><span class="s1">'universal'</span><span class="p">)</span>
+
+<span class="n">pos</span>
 </pre></div>
 </div>
 </div>
@@ -14578,38 +15098,180 @@ somehow mildly reminded him of his mortality.
 <div class="jp-Cell-outputWrapper">
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[('This', 'DET'),
- ('is', 'VERB'),
+<pre>[('Now', 'ADV'),
+ ('that', 'DET'),
+ ("'s", 'VERB'),
  ('the', 'DET'),
- ('sort', 'NOUN'),
+ ('kind', 'NOUN'),
  ('of', 'ADP'),
- ('mindless', 'ADJ'),
  ('pedantry', 'NOUN'),
  ('I', 'PRON'),
- ('just', 'ADV'),
  ('can', 'VERB'),
- ('not', 'ADV'),
- ('put', 'VERB'),
- ('up', 'PRT'),
- ('with', 'ADP'),
+ ('get', 'VERB'),
+ ('behind', 'ADP'),
  ('!', '.')]</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We get a list of <a href="glossary.html#tuple">tuples</a>, in each of which the token is the first entry and its POS tag is the second entry.</p>
+<p>If you are wondering what the tags mean, you can see a table of them on the <a href="http://www.nltk.org/book/ch05.html#tab-universal-tagset">nltk website</a>. Here are the ones that we are interested in for our task:</p>
+<ul>
+<li><strong>ADP</strong>: adposition (which to a linguistics blockhead like me is basically the same thing as a preposition)</li>
+<li><em>.</em>: punctuation</li>
+</ul>
+<p>We need to remove any punctuation tokens, in order to make sure that the last item in our list is the last actual word and not any final punctuation mark. Then we need to check whether the final item has been tagged 'ADP'.</p>
+<p>So here is our updated function, which includes a little extra trick to reverse the list of tokens and then go through them to find the first non-punctuation token.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">endswith_preposition</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span> <span class="n">tagset</span><span class="o">=</span><span class="s1">'universal'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'.'</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'ADP'</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="n">endswith_preposition</span><span class="p">(</span><span class="s2">"Now that's the kind of pedantry I can get behind!"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>True</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Success!</p>
+<h3 id="Sentences">Sentences<a class="anchor-link" href="#Sentences">¶</a></h3><p>Now we are ready to apply our function to the text of <em>Moby Dick</em>. There is an <code>nltk</code> function for splitting a text into sentences. We need to apply this function, then go through the sentences and check them with our own <code>endswith_preposition()</code> function. To keep the output brief, we will only print the first few matches.</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">md</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">endswith_preposition</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">counter</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>"No, Sir, 'tis a Right Whale," answered Tom; "I saw his sprout; he
+threw up a pair of as pretty rainbows as a Christian would wish to
+look at. 
+
+so near! 
+
+They must get just as nigh
+the water as they possibly can without falling in. 
+
+Tell me that. 
+
+Again, I always go to sea as a sailor, because they make a point of
+paying me for my trouble, whereas they never pay passengers a single
+penny that I ever heard of. 
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Our solution to the task works, more or less. But we can see here already some of the difficulties of using computers to process natural language. For example, the 'that' in 'Tell me that' is not really being used as a preposition.</p>
+<p>To see some more NLP in action, take a look at the example program <a href="examples/pedantry.py">pedantry.py</a>, which implements functions for checking the three prescriptive grammar rules from our example task, as well as an overall function for searching a text for any violations of the rules.</p>
+<h2 id="spacy">spacy<a class="anchor-link" href="#spacy">¶</a></h2><p>As we have seen, even a fairly simple NLP task like finding sentences that match a certain grammatical pattern can be very tricky. In natural language, context matters a great deal. A word may have different meanings or grammatical roles depending on the surrounding words. Simple techniques like regular expressions, and the basic NLP tools provided by <code>nltk</code>, will usually not be enough for real-world NLP problems. For many such problems, the current cutting-edge solutions rely on various machine learning techniques, which involve first 'training' a fairly complex program at the task. This is the topic of the next lesson.</p>
+<p>One of the most popular Python packages for applying machine learning specifically to NLP is called <code>spacy</code>. The <code>spacy</code> package provides pre-trained computer 'models' of language, which can then be applied to piece apart the structure of a natural language text. This package is too big and too complex for our introduction here, but if you would like to learn more you can see examples and tutorials on the <a href="https://spacy.io/">spacy website</a>.</p>
+<h2 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h2><p>English often contains some compound adjectives or adverbs in which two or more words are joined by a hyphen, and the final word is a verb in the past tense. For example:</p>
+<ul>
+<li>old-fashioned</li>
+<li>absent-minded</li>
+<li>grey-headed</li>
+<li>open-mouthed</li>
+<li>so-called</li>
+<li>good-natured</li>
+<li>one-armed</li>
+</ul>
+<p>Write a program that finds occurrences of these compound phrases in a text. Apply it to the text of <em>Moby Dick</em> and print out any compound phrases that occur three or more times in the text. You should find that it prints the seven example phrases above.</p>
+<p>The documentation for <code>nltk</code> is not always so easy to navigate, so here is a hint:</p>
+<p>Earlier on, we used the 'universal' tagset for tagging words with parts of speech. This tagset is useful for simple distinctions betweens verbs, nouns, adjectives, and so on. The default tagset for <code>pos_tag()</code> provides more detailed tags that distinguish between verbs in the past and present tense. If you use <code>pos_tag()</code> without the <code>tagset</code> argument, you will get these more detailed tags.</p>
+<p>For example:</p>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">phrase</span> <span class="o">=</span> <span class="s1">'The cat sat on the mat. The cat sits on the mat.'</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[('The', 'DT'),
+ ('cat', 'NN'),
+ ('sat', 'VBD'),
+ ('on', 'IN'),
+ ('the', 'DT'),
+ ('mat', 'NN'),
+ ('.', '.'),
+ ('The', 'DT'),
+ ('cat', 'NN'),
+ ('sits', 'VBZ'),
+ ('on', 'IN'),
+ ('the', 'DT'),
+ ('mat', 'NN'),
+ ('.', '.')]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The 'VBD' tag represents a verb in the past tense, as you can see for the word 'sat' here, so this is the tag you will need to look for to identify hyphenated phrases that end in a past-tense verb.</p>
 </div>
 </div>
 </body>
