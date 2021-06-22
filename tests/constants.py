@@ -30,6 +30,7 @@ TOPIC_PAGES = [
     'Array computing',
     'Images',
     'Data analysis',
+    'Natural language processing',
     'The internet',
     'Relational databases',
 ]
@@ -55,6 +56,7 @@ EXAMPLE_FILES = [
     'make_monthly_directories.py',
     'my_program.py',
     'name_trivia.py',
+    'pedantry.py',
     'slim_shady.py',
     'songs_tables.sql',
     'spoonerisms.py',
