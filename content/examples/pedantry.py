@@ -6,24 +6,24 @@ Search texts for violations of prescriptive grammar rules.
 import nltk
 
 
-## A helper function used by all the checking functions.
+# A helper function used by all the checking functions.
 
 def tokenize_tag(sentence):
     """Tokenize a sentence and tag with POS tags.
-    
+
     Arguments:
         sentence: A string
 
     Returns:
         List of (token, tag) tuples.
     """
-    
+
     tokens = nltk.word_tokenize(sentence)
-    
+
     return nltk.pos_tag(tokens, tagset='universal')
 
 
-## The checking functions.
+# The checking functions.
 
 def endswith_preposition(sentence):
     """Check whether a sentence ends with a preposition.
@@ -33,20 +33,20 @@ def endswith_preposition(sentence):
         True
         >>> endswith_preposition('With whom did you go?')
         False
-    
+
     Arguments:
         sentence: A string
 
     Returns:
         Boolean.
     """
-    
+
     pos = tokenize_tag(sentence)
-    
+
     for x in reversed(pos):
         if x[1] != '.':
             return x[1] == 'ADP'
-        
+
     return False
 
 
@@ -58,14 +58,14 @@ def split_infinitive(sentence):
         True
         >>> split_infinitive('To go boldly.')
         True
-    
+
     Arguments:
         sentence: A string
 
     Returns:
         Boolean.
     """
-    
+
     pos = tokenize_tag(sentence)
 
     for i in range(len(pos) - 2):
@@ -73,7 +73,7 @@ def split_infinitive(sentence):
             if pos[i+1][1] == 'ADV':
                 if pos[i+2][1] == 'VERB':
                     return True
-    
+
     return False
 
 
@@ -85,24 +85,24 @@ def startswith_conjunction(sentence):
         True
         >>> startswith_conjunction('It was all a dream.')
         False
-    
+
     Arguments:
         sentence: A string
 
     Returns:
         Boolean.
     """
-    
+
     pos = tokenize_tag(sentence)
-    
+
     for x in pos:
         if x[1] != '.':
             return x[1] == 'CONJ'
-        
+
     return False
 
 
-## An overall function that applies all the checking functions.
+# An overall function that applies all the checking functions.
 
 VIOLATION_LABELS = {
     'final preposition': endswith_preposition,
@@ -113,7 +113,7 @@ VIOLATION_LABELS = {
 
 def check_text(text):
     """Check a text for sentences that violate one of the three rules.
-    
+
     Example:
         >>> check_text('And who would you like to boldly go with?')
         ('And who would you like to boldly go with?',
@@ -125,17 +125,17 @@ def check_text(text):
     Returns:
         Iterator of tuples of (sentence, [violations]).
     """
-    
+
     for s in nltk.sent_tokenize(text):
-        violations = [l for l, f in VIOLATION_LABELS.items() if f(s)]
+        violations = [label for label, f in VIOLATION_LABELS.items() if f(s)]
         if violations:
             yield (s, violations)
 
 
-## A demo showing violations of the rules in an example dialogue.
+# A demo showing violations of the rules in an example dialogue.
 
 if __name__ == '__main__':
-    
+
     text = """
     Hello, have you boldly been anywhere lately?
     Why would I want to boldly go anywhere?
@@ -149,6 +149,6 @@ if __name__ == '__main__':
     And who would you like to boldly go with?
     Captain Kirk, he's a total dreamboat.
     """
-    
+
     for s, violations in check_text(text):
         print(s, violations, '\n')
