@@ -14675,7 +14675,7 @@ somehow mildly reminded him of his mortality.
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'all'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'all'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -14979,7 +14979,7 @@ somehow mildly reminded him of his mortality.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>As you can see, there are a lot of extra data files in the full package. If you prefer to pick and choose which extra components of <code>nltk</code> to download, call the downloader function with no arguments:</p>
+<p>There are a lot of extra data files in the full package. If you prefer to pick and choose which extra components of <code>nltk</code> to download, call the downloader function with no arguments, and a window will pop up allowing you to browse components:</p>
 <p><code>nltk.download()</code></p>
 <p>Now we are ready to make use of <code>nltk</code>'s pre-compiled knowledge of word types in order to label words as prepositions.</p>
 <h3 id="Tokenization">Tokenization<a class="anchor-link" href="#Tokenization">¶</a></h3><p>The first step is to split our text into words. We already managed this above using the basic Python string <a href="glossary.html#method">method</a> <code>split()</code>. But to see how this can be achieved with <code>nltk</code>, let's use <code>nltk</code>'s own function for this, <code>word_tokenize()</code>.</p>
