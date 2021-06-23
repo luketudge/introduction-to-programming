@@ -1,0 +1,1861 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glossary &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variables and data types" href="types.html" />
+    <link rel="prev" title="Readings" href="readings.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/glossary.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fglossary.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/glossary.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/glossary.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alias">
+   alias
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api">
+   API
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#argument">
+   argument
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array">
+   array
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assertion">
+   assertion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assignment">
+   assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attribute">
+   attribute
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean">
+   boolean
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#broadcasting">
+   broadcasting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bug">
+   bug
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#builtin">
+   builtin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#call">
+   call
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#client">
+   client
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coercion">
+   coercion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comment">
+   comment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commit">
+   commit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comprehension">
+   comprehension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concatenate">
+   concatenate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condition">
+   condition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control">
+   control
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#csv">
+   csv
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe">
+   dataframe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delimiter">
+   delimiter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dependency">
+   dependency
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary">
+   dictionary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diff">
+   diff
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#directory">
+   directory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docstring">
+   docstring
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dry">
+   DRY
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dunder">
+   dunder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encoding">
+   encoding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#error">
+   error
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluate">
+   evaluate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exception">
+   exception
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#float">
+   float
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#function">
+   function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grayscale">
+   grayscale
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#html">
+   HTML
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ide">
+   IDE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import">
+   import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indentation">
+   indentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#index">
+   index
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integer">
+   integer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreter">
+   interpreter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#io">
+   IO
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterable">
+   iterable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#json">
+   JSON
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key">
+   key
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keyword">
+   keyword
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list">
+   list
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#locale">
+   locale
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loop">
+   loop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mapping">
+   mapping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markup">
+   markup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix">
+   matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method">
+   method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module">
+   module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mutability">
+   mutability
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespace">
+   namespace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nan">
+   NaN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#newline">
+   newline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#none">
+   None
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator">
+   operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#os">
+   OS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#package">
+   package
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parse">
+   parse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#path">
+   path
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pull">
+   pull
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#push">
+   push
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#raise">
+   raise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readme">
+   readme
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#refactor">
+   refactor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regex">
+   regex
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression">
+   regression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repository">
+   repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#return">
+   return
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rgb">
+   RGB
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scalar">
+   scalar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scraping">
+   scraping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#script">
+   script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#separator">
+   separator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#server">
+   server
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequence">
+   sequence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slice">
+   slice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sql">
+   SQL
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#string">
+   string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tdd">
+   TDD
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tuple">
+   tuple
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#type">
+   type
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#url">
+   URL
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#value">
+   value
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variable">
+   variable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vector">
+   vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verbose">
+   verbose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#versioning">
+   versioning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#whitespace">
+   whitespace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wildcard">
+   wildcard
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<p>Like any other specialists, computer programmers use a lot of arcane vocabulary. Although some of this vocabulary could be simplified to everyday words that mean almost the same things, it is worth knowing the following basic technical terms, for a few reasons:</p>
+<ul class="simple">
+<li><p>You are more likely to find the answers to your programming questions in internet searches if you formulate your search using the right terms.</p></li>
+<li><p>The answers you find in internet searches will mostly be written using these terms.</p></li>
+<li><p>Once you start working in programming, you will need to talk about the workings of your programs with other programmers.</p></li>
+</ul>
+<div class="section" id="alias">
+<h2>alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h2>
+<p>This term has more or less the same meaning in programming as it does in everyday English. An alias is an alternative name for something. In Python, aliases occur most commonly when <a class="reference internal" href="#import"><span class="std std-doc">importing</span></a> <a class="reference internal" href="#module"><span class="std std-doc">modules</span></a>. A module can be imported under an alias instead of under its normal name, using the <code class="docutils literal notranslate"><span class="pre">as</span></code> <a class="reference internal" href="#keyword"><span class="std std-doc">keyword</span></a>. We might do this in order to make it quicker to type the name of the module later, or simply as a matter of convention. For example, numpy is often imported under the alias ‘np’:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes the developers of computer programs would like their programs to be able to access information from websites or other programs hosted on the internet. For example, someone who is developing a smartphone app for navigating the Paris metro system needs some way for their app to retrieve information about train times from the metro’s own <a class="reference internal" href="#server"><span class="std std-doc">servers</span></a>. The administrators of the Paris metro’s website may provide a structured method by which other applications can access its data. Such a method is termed an ‘Application Programming Interface’ (API). The makers of other apps can then use the rules of the API to submit requests for information, and these requests will be answered in a particular format according to the rules of the API.</p>
+</div>
+<div class="section" id="argument">
+<h2>argument<a class="headerlink" href="#argument" title="Permalink to this headline">¶</a></h2>
+<p>An argument is the input to a <a class="reference internal" href="#function"><span class="std std-doc">function</span></a>. When we use a function, we place any arguments that we want to give it in the parentheses following the function name. A function can have no arguments, or just one, or many. In the case of more than one argument, the arguments are separated by commas. For example the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function can have multiple arguments:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred&#39;</span>
+<span class="n">middle_initial</span> <span class="o">=</span> <span class="s1">&#39;L&#39;</span>
+<span class="n">surname</span> <span class="o">=</span> <span class="s1">&#39;Bonk&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">middle_initial</span><span class="p">,</span> <span class="n">surname</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mildred L Bonk
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="array">
+<h2>array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h2>
+<p>In computing, a collection of multiple <a class="reference internal" href="#value"><span class="std std-doc">values</span></a> that are organized as a sort of ‘grid’ is called an array. There is no array <a class="reference internal" href="#type"><span class="std std-doc">type</span></a> in basic Python, but the <em>numpy</em> <a class="reference internal" href="#package"><span class="std std-doc">package</span></a> adds arrays to Python.</p>
+<p>For example, we could use a numpy array to represent the state of a game of tic-tac-toe as an array of <a class="reference internal" href="#integer"><span class="std std-doc">integers</span></a> indicating whether each square of the game grid has been marked by player 1 (<code class="docutils literal notranslate"><span class="pre">1</span></code>), by player 2 (<code class="docutils literal notranslate"><span class="pre">-1</span></code>), or has not been marked (<code class="docutils literal notranslate"><span class="pre">0</span></code>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">ttt</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">ttt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-1,  0,  1],
+       [ 0, -1,  0],
+       [ 1,  0,  1]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>This array has two dimensions (rows and columns), but arrays may have more or fewer dimensions. To <a class="reference internal" href="#index"><span class="std std-doc">index</span></a> one or more values from an array, multiple indices may be needed, one for each dimension. By convention, the first dimension is the rows, the second is the columns (though some other programming languages use the opposite convention). So for example to get the first two values from the second row:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ttt</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0, -1])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="assertion">
+<h2>assertion<a class="headerlink" href="#assertion" title="Permalink to this headline">¶</a></h2>
+<p>An assertion is a statement that ‘asserts’ that a particular statement is true, in the same sense of the English verb ‘to assert’. If the asserted statement is true, nothing happens and the program may continue as normal, but if it is not true, then an <a class="reference internal" href="#exception"><span class="std std-doc">exception</span></a> is raised.</p>
+<p>Assertions can be used to make sure that a program is running as expected at a crucial point, because to continue otherwise would be time-consuming or would make the problem more difficult to diagnose later. Assertions are also commonly used in test programs that check the correct functioning of another program.</p>
+<p>There are a few different ways to write assertions in Python, but the simplest is using the <code class="docutils literal notranslate"><span class="pre">assert</span></code> <a class="reference internal" href="#keyword"><span class="std std-doc">keyword</span></a> together with the statement to be checked. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="assignment">
+<h2>assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h2>
+<p>If one part of our program generates a piece of information, we may want to store that information and use it in some later part of our program. In this case, we can ‘assign’ the information into a <a class="reference internal" href="#variable"><span class="std std-doc">variable</span></a>. This just means storing something under that variable name. In Python, assignment is done with the equals <code class="docutils literal notranslate"><span class="pre">=</span></code> symbol. Whatever results from the right-hand side is assigned into the variable name on the left-hand side.</p>
+</div>
+<div class="section" id="attribute">
+<h2>attribute<a class="headerlink" href="#attribute" title="Permalink to this headline">¶</a></h2>
+<p>An attribute is like a variable that is ‘attached’ to another variable, providing some additional information or functionality. We can access attributes using a <code class="docutils literal notranslate"><span class="pre">.</span></code>. This is the same <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> as for accessing a <a class="reference internal" href="#method"><span class="std std-doc">method</span></a>. Indeed, methods are a kind of attribute.</p>
+</div>
+<div class="section" id="boolean">
+<h2>boolean<a class="headerlink" href="#boolean" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="#variable"><span class="std std-doc">variable</span></a> of boolean data <a class="reference internal" href="#type"><span class="std std-doc">type</span></a> (abbreviated to <code class="docutils literal notranslate"><span class="pre">bool</span></code> in Python) stores either of the two possible <a class="reference internal" href="#value"><span class="std std-doc">values</span></a> <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Boolean values often result from a Python command that checks a given condition, for example <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">1</span></code> <a class="reference internal" href="#evaluate"><span class="std std-doc">evaluates</span></a> to <code class="docutils literal notranslate"><span class="pre">True</span></code> because <code class="docutils literal notranslate"><span class="pre">2</span></code> is indeed greater than <code class="docutils literal notranslate"><span class="pre">1</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>(The term ‘boolean’ is derived from the name of <a class="reference external" href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>, who developed various mathematical methods for working with logical True/False values.)</p>
+</div>
+<div class="section" id="broadcasting">
+<h2>broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this headline">¶</a></h2>
+<p>When working with <a class="reference internal" href="#array"><span class="std std-doc">arrays</span></a>, we can apply mathematical operations to two arrays that have the same shape. In this case, the values in the two arrays will be ‘matched up’ to produce a new array of the same shape whose values are the results of the mathematical operation applied to each pair of values:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 7,  8,  9],
+       [10, 11, 12]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 8, 10, 12],
+       [14, 16, 18]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can work even if one of the arrays is smaller than the other. The smaller array is first repeated (or sometimes we say ‘stretched’) so that it is equal in shape to the larger array. This is known as ‘broadcasting’ the smaller array onto the larger one.</p>
+<p>For example if we combine an array that is 2 rows by 3 columns with an array that is only 1 row by 3 columns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([7, 8, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 8, 10, 12],
+       [11, 13, 15]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bug">
+<h2>bug<a class="headerlink" href="#bug" title="Permalink to this headline">¶</a></h2>
+<p>A bug is an aspect of a program that does not work as desired. For example, a <a class="reference internal" href="#function"><span class="std std-doc">function</span></a> might give the wrong <a class="reference internal" href="#return"><span class="std std-doc">return value</span></a>, or part of the program might unexpectedly raise an <a class="reference internal" href="#exception"><span class="std std-doc">exception</span></a>.</p>
+</div>
+<div class="section" id="builtin">
+<h2>builtin<a class="headerlink" href="#builtin" title="Permalink to this headline">¶</a></h2>
+<p>Python provides a few fundamental <a class="reference internal" href="#function"><span class="std std-doc">functions</span></a> that are already available from the start. These are termed built-in functions, or ‘builtins’. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is one example of a builtin. You can read a full list of them <a class="reference external" href="https://docs.python.org/3/library/functions.html#built-in-functions">here</a>.</p>
+</div>
+<div class="section" id="call">
+<h2>call<a class="headerlink" href="#call" title="Permalink to this headline">¶</a></h2>
+<p>To ‘call’ a <a class="reference internal" href="#function"><span class="std std-doc">function</span></a> simply means to run that function and make it do its work. The <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> for calling a function is to place parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> after the function name, and optionally to place any input <a class="reference internal" href="#argument"><span class="std std-doc">arguments</span></a> inside the parentheses.</p>
+<p>(See the entry on <a class="reference internal" href="#function"><span class="std std-doc">functions</span></a> for an example of a ‘function call’.)</p>
+</div>
+<div class="section" id="client">
+<h2>client<a class="headerlink" href="#client" title="Permalink to this headline">¶</a></h2>
+<p>A computer, or a program on a computer, that sends out a request over the internet for some information, is called a ‘client’. The computer at the other end of the internet connection that supplies the requested information is called the ‘<a class="reference internal" href="#server"><span class="std std-doc">server</span></a>’. The most common client application on a personal computer is a web browser like Firefox or Chrome.</p>
+</div>
+<div class="section" id="coercion">
+<h2>coercion<a class="headerlink" href="#coercion" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes, a computer program may convert some values of one data <a class="reference internal" href="#type"><span class="std std-doc">type</span></a> into another data type in order to be able to perform some calculations or operations with those values, even if the user of the program has not explicitly asked for the data to be converted. In this case, we sometimes say that the data have been ‘coerced’ to a new type.</p>
+</div>
+<div class="section" id="comment">
+<h2>comment<a class="headerlink" href="#comment" title="Permalink to this headline">¶</a></h2>
+<p>A comment is a human-language piece of text that we insert into our Python program. We indicate a comment by prepending the hash character <code class="docutils literal notranslate"><span class="pre">#</span></code>. The Python <a class="reference internal" href="#interpreter"><span class="std std-doc">interpreter</span></a> just ignores any line beginning with a hash character, so we can write whatever we like in our comments; they do not have to be valid Python commands. Comments have a few uses:</p>
+<ul class="simple">
+<li><p>‘headings’ to organize sections of the program</p></li>
+<li><p>short explanations of how parts of the program work (where this is not otherwise obvious)</p></li>
+<li><p>reminders to ourselves and collaborators of problems or parts of the program that need attention</p></li>
+</ul>
+</div>
+<div class="section" id="commit">
+<h2>commit<a class="headerlink" href="#commit" title="Permalink to this headline">¶</a></h2>
+<p>In <a class="reference internal" href="#versioning"><span class="std std-doc">version control</span></a>, ‘committing’ changes to a project means confirming those changes as the next new part of the project. Used as a noun, a ‘commit’ refers to all the changes that were made when committing.</p>
+<p>When working with a database, ‘committing’ also refers to writing any current changes to the database.</p>
+</div>
+<div class="section" id="comprehension">
+<h2>comprehension<a class="headerlink" href="#comprehension" title="Permalink to this headline">¶</a></h2>
+<p>A comprehension is a technique for creating multiple values by writing a ‘formula’ that generates those values, instead of writing them all out one by one. The <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> for a comprehension uses the <a class="reference internal" href="#keyword"><span class="std std-doc">keywords</span></a> <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
+<p>A ‘list comprehension’ creates the items in a new <a class="reference internal" href="#list"><span class="std std-doc">list</span></a>. For example, the formula might apply some Python command <code class="docutils literal notranslate"><span class="pre">for</span></code> every entry <code class="docutils literal notranslate"><span class="pre">in</span></code> some other existing list, and store the result in a new list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;e&#39;, &#39;b&#39;, &#39;b&#39;, &#39;s&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are also comprehensions for creating <a class="reference internal" href="#dictionary"><span class="std std-doc">dictionaries</span></a>.</p>
+</div>
+<div class="section" id="concatenate">
+<h2>concatenate<a class="headerlink" href="#concatenate" title="Permalink to this headline">¶</a></h2>
+<p>In computing, to ‘concatenate’ means to stick together one after the other. So for example the result of concatenating the <a class="reference internal" href="#string"><span class="std std-doc">strings</span></a> <code class="docutils literal notranslate"><span class="pre">'Hello</span> <span class="pre">'</span></code> and <code class="docutils literal notranslate"><span class="pre">'world!'</span></code> is <code class="docutils literal notranslate"><span class="pre">'Hello</span> <span class="pre">world!'</span></code>.</p>
+</div>
+<div class="section" id="condition">
+<h2>condition<a class="headerlink" href="#condition" title="Permalink to this headline">¶</a></h2>
+<p>A condition is a <a class="reference internal" href="#control"><span class="std std-doc">control statement</span></a> that ensures that part of our program will run only if a certain statement is true, and optionally what should be run if that statement is false. A condition begins with the <a class="reference internal" href="#keyword"><span class="std std-doc">keyword</span></a> <code class="docutils literal notranslate"><span class="pre">if</span></code>. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Math is currently working correctly in this universe.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nothing is forbidden, everything is permitted.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Math is currently working correctly in this universe.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="control">
+<h2>control<a class="headerlink" href="#control" title="Permalink to this headline">¶</a></h2>
+<p>‘Control’ (or sometimes ‘flow control’) refers to controlling which parts of our program are run under which circumstances. A ‘control statement’ is a command that determines when a particular part of our program is run. <a class="reference internal" href="#indentation"><span class="std std-doc">Indentation</span></a> is used to mark which lines of the program are controlled by the control statement.</p>
+<p>Examples of control statements include <a class="reference internal" href="#condition"><span class="std std-doc">conditions</span></a>, <a class="reference internal" href="#loop"><span class="std std-doc">loops</span></a>, and statements for handling <a class="reference internal" href="#exception"><span class="std std-doc">exceptions</span></a>.</p>
+</div>
+<div class="section" id="csv">
+<h2>csv<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h2>
+<p>‘CSV’ stands for ‘Comma Separated Values’ and refers to a text file format for storing spreadsheet data. In a CSV file, the comma character is used as a <a class="reference internal" href="#separator"><span class="std std-doc">separator</span></a> between the columns of the spreadsheet.</p>
+<p>For example, the contents of a simple CSV file might look like this when viewed in a text editor:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span><span class="p">,</span><span class="n">Age</span><span class="p">,</span><span class="n">Location</span>
+<span class="n">Mildred</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="n">USA</span>
+<span class="n">Ishmael</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="n">USA</span>
+<span class="n">Sherlock</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="n">GB</span>
+</pre></div>
+</div>
+<p>In some cases, the separator may be the semicolon character instead:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span><span class="p">;</span><span class="n">Age</span><span class="p">;</span><span class="n">Location</span>
+<span class="n">Mildred</span><span class="p">;</span><span class="mi">22</span><span class="p">;</span><span class="n">USA</span>
+<span class="n">Ishmael</span><span class="p">;</span><span class="mi">19</span><span class="p">;</span><span class="n">USA</span>
+<span class="n">Sherlock</span><span class="p">;</span><span class="mi">39</span><span class="p">;</span><span class="n">GB</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dataframe">
+<h2>dataframe<a class="headerlink" href="#dataframe" title="Permalink to this headline">¶</a></h2>
+<p>A structure that stores data in rows and columns is sometimes termed a ‘dataframe’ in computing. A more everyday term is simply ‘table’. Typically, each row of a data frame represents one ‘observation’, which may be for example a customer, a purchase, a visit to a webpage, etc. Each column represents one piece of information recorded for that observation, such as a date, a time, a price, a rating. etc.</p>
+</div>
+<div class="section" id="delimiter">
+<h2>delimiter<a class="headerlink" href="#delimiter" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="#separator"><span class="std std-doc">separator</span></a>.</p>
+</div>
+<div class="section" id="dependency">
+<h2>dependency<a class="headerlink" href="#dependency" title="Permalink to this headline">¶</a></h2>
+<p>If program A needs to use program B, then anyone who uses program A also needs to have program B installed on their computer. In such a case, we say that program A ‘depends’ on program B (and conversely, that program B is a ‘dependency’ of program A). For example, if we write a Python program that <a class="reference internal" href="#import"><span class="std std-doc">imports</span></a> the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <a class="reference internal" href="#package"><span class="std std-doc">package</span></a>, then <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a dependency of our program; users of our program will need to have installed <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+</div>
+<div class="section" id="dictionary">
+<h2>dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">¶</a></h2>
+<p>A dictionary (abbreviated to ‘dict’ in Python) is a <a class="reference internal" href="#type"><span class="std std-doc">data type</span></a> that can store multiple values. It does so by storing the values under labels, termed ‘<a class="reference internal" href="#key"><span class="std std-doc">keys</span></a>’.</p>
+<p>The <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> for creating a dictionary is to place pairs of keys and values inside the ‘curly braces’ <code class="docutils literal notranslate"><span class="pre">{}</span></code>, separating each key from its associated value with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> and separating each pair from the next with a comma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span><span class="s1">&#39;USA&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The keys of the dictionary can then be used as <a class="reference internal" href="#index"><span class="std std-doc">indices</span></a> to retrieve the values. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="diff">
+<h2>diff<a class="headerlink" href="#diff" title="Permalink to this headline">¶</a></h2>
+<p>‘diff’ is just an abbreviation of ‘difference’, but in the terminology of <a class="reference internal" href="#versioning"><span class="std std-doc">version control</span></a>, i refers to the difference between one version of a file and the next version. When working on a programming project and making changes, it is a good idea to review the ‘diffs’ that our changes have produced before we <a class="reference internal" href="#commit"><span class="std std-doc">commit</span></a> those changes to the version history of the project.</p>
+</div>
+<div class="section" id="directory">
+<h2>directory<a class="headerlink" href="#directory" title="Permalink to this headline">¶</a></h2>
+<p>Another term for a folder in a computer’s file system.</p>
+</div>
+<div class="section" id="docstring">
+<h2>docstring<a class="headerlink" href="#docstring" title="Permalink to this headline">¶</a></h2>
+<p>A docstring is a <a class="reference internal" href="#string"><span class="std std-doc">string</span></a> (i.e. a piece of text) that provides some human-readable information about the workings of our program. We can write docstrings into our programs o help the users of our programs understand what the program does and how they should use it. We indicate a docstring in our program by enclosing it in ‘triple quotes’ (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">&quot;&quot;&quot;</span></code>). A docstring at the top of a <em>.py</em> file provides information about the whole file, and a docstring underneath the definition of a <a class="reference internal" href="#function"><span class="std std-doc">function</span></a> provides information about that function.</p>
+</div>
+<div class="section" id="dry">
+<h2>DRY<a class="headerlink" href="#dry" title="Permalink to this headline">¶</a></h2>
+<p>‘Don’t Repeat Yourself’ is a principle that can help with developing flexible programs that can more easily be extended, or can more easily be fixed when mistakes are discovered. A feature of a program that is repeated in many places will need to be found and changed in many places if you decide it must be changed. This opens up a lot of scope for mistakes.</p>
+</div>
+<div class="section" id="dunder">
+<h2>dunder<a class="headerlink" href="#dunder" title="Permalink to this headline">¶</a></h2>
+<p>The ‘double underscore’ <code class="docutils literal notranslate"><span class="pre">__</span> <span class="pre">__</span></code> is sometimes abbreviated to ‘dunder’, because people who have to say ‘double underscore’ a lot are usually very busy people and need to save every second they can. Python uses double underscores surrounding a name to indicate that that name is involved in the ‘behind the scenes’ workings of Python and is not usually intended to be used directly.</p>
+<p>If a <a class="reference internal" href="#method"><span class="std std-doc">method</span></a> is enclosed in double underscores, that method determines something about the behavior of a particular <a class="reference internal" href="#type"><span class="std std-doc">data type</span></a> in different circumstances. For example, the <code class="docutils literal notranslate"><span class="pre">__add__()</span></code> method determines what happens when a variable of that type is used in conjunction with the <code class="docutils literal notranslate"><span class="pre">+</span></code> <a class="reference internal" href="#operator"><span class="std std-doc">operator</span></a>. So:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>is what happens behind the scenes when we write:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>If a <a class="reference internal" href="#variable"><span class="std std-doc">variable</span></a> is enclosed in double underscores, that variable determines something about the organization of a program. For example, the <code class="docutils literal notranslate"><span class="pre">__file__</span></code> variable stores the <a class="reference internal" href="#path"><span class="std std-doc">path</span></a> to the file that the current program is in.</p>
+</div>
+<div class="section" id="encoding">
+<h2>encoding<a class="headerlink" href="#encoding" title="Permalink to this headline">¶</a></h2>
+<p>Computers store information in the form of numbers. If we want to store text in a computer, we need some way of allocating each text character a unique number, so that when we read the text data, we turn the stored numbers back into the correct characters. A system for allocating a unique number to each character is known as a ‘text encoding’. If we need to transfer text data from one computer to another, we need to make sure that the computer reading the data uses the same encoding for reading as the computer that wrote the data used for writing it.</p>
+<p>There are many different text encodings, but the two most important ones to be aware of are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>. This system is universally agreed upon and standard across all normal computers, but it only covers the English alphabet. We cannot use ASCII for non-English characters such as <code class="docutils literal notranslate"><span class="pre">'à'</span></code> or for Devanagari, Sinhalese, emojis, etc.</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>. This system includes many symbols in many writing systems and is by far the most widely-used on the internet. It is also usually the default encoding on Linux <a class="reference internal" href="#os"><span class="std std-doc">operating systems</span></a>. For characters that are defined in the ASCII encoding, UTF-8 uses the same system as ASCII, so for these characters the two encodings are equivalent.</p></li>
+</ul>
+<p>Some <a class="reference internal" href="#os"><span class="std std-doc">operating systems</span></a>, most notably Windows and macOS, do not always use UTF-8 by default to encode non-ASCII characters. They may instead use a variety of other encodings with names like ‘Latin-1’, ‘ISO-8859’, or ‘Windows-1252’. Some of these are equivalent for certain subsets of characters, and only become incompatible for a few obscure characters, such as special kinds of quote mark. And to add yet more to the confusion, these various non-UTF-8 encodings are frequently given the wrong name, even in official places such as the documentation for Windows.</p>
+</div>
+<div class="section" id="error">
+<h2>error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes our program fails and cannot be completed, either because we have not written the program according to the allowed <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> or because an <a class="reference internal" href="#exception"><span class="std std-doc">exception</span></a> occurs that our program cannot handle. In this case, our program will stop running and Python will display a message with some information about the ‘error’ that occurred. Any parts of the program that follow the occurrence of the error will not be carried out.</p>
+<p>An example error message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;my_first_program.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span>
+    <span class="n">Python</span><span class="p">,</span> <span class="n">please</span> <span class="n">do</span> <span class="n">some</span> <span class="n">amazing</span> <span class="n">machine</span> <span class="n">learning</span><span class="o">.</span>
+                    <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="evaluate">
+<h2>evaluate<a class="headerlink" href="#evaluate" title="Permalink to this headline">¶</a></h2>
+<p>To evaluate a command or expression means to ‘work out’ its result. So the result of evaluating the Python expression <code class="docutils literal notranslate"><span class="pre">round(1.618</span> <span class="pre">*</span> <span class="pre">2)</span></code> is <code class="docutils literal notranslate"><span class="pre">3</span></code>. The Python interpreter first evaluates <code class="docutils literal notranslate"><span class="pre">1.618</span> <span class="pre">*</span> <span class="pre">2</span></code> and gets <code class="docutils literal notranslate"><span class="pre">3.236</span></code>, then evaluates <code class="docutils literal notranslate"><span class="pre">round(3.236)</span></code> and gets <code class="docutils literal notranslate"><span class="pre">3</span></code>. We sometimes say that a certain expression ‘evaluates to’ its result. So for example <code class="docutils literal notranslate"><span class="pre">round(1.618</span> <span class="pre">*</span> <span class="pre">2)</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">3</span></code>, and <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">5</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</div>
+<div class="section" id="exception">
+<h2>exception<a class="headerlink" href="#exception" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes something ‘exceptional’ happens during the running of our program. These things are not necessarily fatal for our program, but need to be dealt with in order for our program to continue running as normal. Example exceptions include unexpected input from the user (such as entering a word when our program expects a number), or trying to open a file that has been moved or deleted. When an exception occurs, we say that our program has ‘<a class="reference internal" href="#raise"><span class="std std-doc">raised</span></a>’ an exception.</p>
+<p>Python distinguishes among various different kinds of exception. Some of the most common ones that we are likely to encounter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NameError</span></code>: We have tried to use a <a class="reference internal" href="#variable"><span class="std std-doc">variable</span></a>, but no variable with that name has been <a class="reference internal" href="#assignment"><span class="std std-doc">assigned</span></a> yet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IndexError</span></code>: We have used an <a class="reference internal" href="#index"><span class="std std-doc">index</span></a> that goes beyond the length of whatever we are trying to apply the index to (e.g. a <a class="reference internal" href="#list"><span class="std std-doc">list</span></a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ValueError</span></code>: We have supplied an invalid input <a class="reference internal" href="#value"><span class="std std-doc">value</span></a> to a <a class="reference internal" href="#function"><span class="std std-doc">function</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TypeError</span></code>: We have tried to do something with a particular <a class="reference internal" href="#type"><span class="std std-doc">data type</span></a>, but that thing only works for a different data type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FileNotFoundError</span></code>: We have tried to open a file that does not exist.</p></li>
+</ul>
+<p>We can handle exceptions with a <a class="reference internal" href="#control"><span class="std std-doc">control statement</span></a> that instructs Python to ‘try’ one action, but to carry out a different action if the first action raises an exception. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;melville-moby_dick.txt&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The file is not there.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The file is not there.
+</pre></div>
+</div>
+</div>
+</div>
+<p>If an exception is raised and we have not specified in our program what to do about it, then the result is an <a class="reference internal" href="#error"><span class="std std-doc">error</span></a> and our program stops.</p>
+</div>
+<div class="section" id="float">
+<h2>float<a class="headerlink" href="#float" title="Permalink to this headline">¶</a></h2>
+<p>In Python, and in computing in general, ‘float’ is a term for a non-whole number, such as 1.618. This is one of the basic data <a class="reference internal" href="#type"><span class="std std-doc">types</span></a> that Python can represent. It is distinguished from whole numbers (or <a class="reference internal" href="#integer"><span class="std std-doc">integers</span></a>) such as 1, 2, 3, etc. Strictly speaking, the term ‘float’ does not refer to non-whole numbers in general but rather to a specific method for storing non-whole numbers in computers, called ‘<a class="reference external" href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">floating-point arithmetic</a>’. But for basic purposes we can take the term ‘float’ to mean simply ‘non-whole number’.</p>
+</div>
+<div class="section" id="function">
+<h2>function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h2>
+<p>A function is a sequence of commands that performs a particular action (or multiple actions), and can be used in programs again and again. <code class="docutils literal notranslate"><span class="pre">print()</span></code> is an example of a function, and the action it performs is to display text for the user. Functions can come from many places. Some, such as <code class="docutils literal notranslate"><span class="pre">print()</span></code>, are already <a class="reference internal" href="#builtin"><span class="std std-doc">built in</span></a> to Python, but we can also create our own functions, or <a class="reference internal" href="#import"><span class="std std-doc">import</span></a> them from a program somebody else has written. When we run a function, we say that we <a class="reference internal" href="#call"><span class="std std-doc">call</span></a> the function. A function can have input <a class="reference internal" href="#argument"><span class="std std-doc">arguments</span></a>. It may also have a <a class="reference internal" href="#return"><span class="std std-doc">return value</span></a>, which we can <a class="reference internal" href="#assignment"><span class="std std-doc">assign</span></a> into a variable.</p>
+<p>In the example below, we call the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function with the argument <code class="docutils literal notranslate"><span class="pre">'floccinaucinihilipilification'</span></code>, and it returns the value <code class="docutils literal notranslate"><span class="pre">29</span></code> (which we then assign into the variable <code class="docutils literal notranslate"><span class="pre">word_length</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="s1">&#39;floccinaucinihilipilification&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="grayscale">
+<h2>grayscale<a class="headerlink" href="#grayscale" title="Permalink to this headline">¶</a></h2>
+<p>In image processing, an image without color (i.e. only in shades of gray), is often called a ‘grayscale’ image.</p>
+</div>
+<div class="section" id="html">
+<h2>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h2>
+<p>HyperText Markup Language is the main <a class="reference internal" href="#markup"><span class="std std-doc">markup language</span></a> in which web pages are written. HTML works by enclosing text inside ‘tags’ that instruct the web browser to display that text in a particular way, for example by coloring it, turning it into a clickable link, etc.</p>
+</div>
+<div class="section" id="ide">
+<h2>IDE<a class="headerlink" href="#ide" title="Permalink to this headline">¶</a></h2>
+<p>An Integrated Development Environment (or IDE) is a computer application that makes the process of programming easier. A typical IDE provides a text editor for writing the actual program, along with various tools for running the program, checking its contents for mistakes, searching for help, etc. <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> is the Python IDE that we use in this class.</p>
+</div>
+<div class="section" id="import">
+<h2>import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>The contents of a <a class="reference internal" href="#module"><span class="std std-doc">module</span></a> contained in one file can be ‘brought in’ to the current program file using the Python <a class="reference internal" href="#keyword"><span class="std std-doc">keyword</span></a> <code class="docutils literal notranslate"><span class="pre">import</span></code>. This is known as ‘importing’ the module, in the same sense as importing foreign goods into a country.</p>
+<p>Once imported, the contents of a module are available under the module’s <a class="reference internal" href="#namespace"><span class="std std-doc">namespace</span></a>.</p>
+</div>
+<div class="section" id="indentation">
+<h2>indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
+<p>Python uses indentation (spaces at the beginning of a line) to mark some lines of a program as ‘belonging to’ a preceding <a class="reference internal" href="#control"><span class="std std-doc">control statement</span></a> that determines when or how often those lines should be run.</p>
+<p>This use of indentation is fairly specific to Python. In most other programming languages indentation is optional, and is used only for visual clarity; parentheses or other characters are used to control the structure of the program instead.</p>
+</div>
+<div class="section" id="index">
+<h2>index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
+<p>An ‘index’ is the position of a particular item in a <a class="reference internal" href="#sequence"><span class="std std-doc">sequence</span></a>, such as in a <a class="reference internal" href="#list"><span class="std std-doc">list</span></a> or a <a class="reference internal" href="#tuple"><span class="std std-doc">tuple</span></a>. Python’s indexing system begins at 0. So the index of the first item in a sequence is 0, the index of the second item is 1, and so on. We can use indices to refer to an item that is stored in a sequence. The Python <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> for using an index is to place it in square parentheses <code class="docutils literal notranslate"><span class="pre">[]</span></code> after the name of the variable that stores the sequence. So to print out the third item in a list we can type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>black pudding
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="integer">
+<h2>integer<a class="headerlink" href="#integer" title="Permalink to this headline">¶</a></h2>
+<p>An integer is a whole number. So 2 is an integer, but 1.618 is not. ‘Integer’ (abbreviated to <code class="docutils literal notranslate"><span class="pre">int</span></code> in Python) is one of the basic data <a class="reference internal" href="#type"><span class="std std-doc">types</span></a> that Python can represent. A non-whole number is instead called a ‘<a class="reference internal" href="#float"><span class="std std-doc">float</span></a>’.</p>
+</div>
+<div class="section" id="interpreter">
+<h2>interpreter<a class="headerlink" href="#interpreter" title="Permalink to this headline">¶</a></h2>
+<p>A Python interpreter is a computer program that takes our text files of Python commands and turns them into machine code instructions that our computer can understand. We do not especially need to know about or get involved in this process ourselves. Instead, we write our programs as text files of Python commands, and the interpreter takes care of getting our computer to understand them. Strictly, the term ‘Python’ itself refers to the Python programming language, i.e. a specific set of <a class="reference internal" href="#syntax"><span class="std std-doc">syntactical rules</span></a> that converts text commands into computer actions, but in practice many people use ‘Python’ to refer also to a Python interpreter program.</p>
+</div>
+<div class="section" id="io">
+<h2>IO<a class="headerlink" href="#io" title="Permalink to this headline">¶</a></h2>
+<p>In computing, ‘IO’ is an abbreviation of ‘Input/Output’, and refers to anything to do with getting information into and out of a computer program or system. For example, a program may get input from a human being typing at the keyboard or by reading from a text file, and it may send output to the screen or write it into a text file.</p>
+</div>
+<div class="section" id="iterable">
+<h2>iterable<a class="headerlink" href="#iterable" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="#type"><span class="std std-doc">data type</span></a> is ‘iterable’ if it contains multiple values, and it is possible to ‘go through’ those values one by one. ‘Going through’ the values in an iterable is called ‘iterating’. <a class="reference internal" href="#string"><span class="std std-doc">Strings</span></a> are iterable (we can iterate through their characters), and so are <a class="reference internal" href="#list"><span class="std std-doc">lists</span></a> and <a class="reference internal" href="#tuple"><span class="std std-doc">tuples</span></a> (we can iterate through their items). The most common way of iterating is to use a <a class="reference internal" href="#loop"><span class="std std-doc">loop</span></a>.</p>
+</div>
+<div class="section" id="json">
+<h2>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
+<p>JavaScript Object Notation (JSON) is a text file format for storing data. It stores data as a group of nested <a class="reference internal" href="#list"><span class="std std-doc">lists</span></a> and <a class="reference internal" href="#dictionary"><span class="std std-doc">dictionaries</span></a> that contain <a class="reference internal" href="#string"><span class="std std-doc">strings</span></a> and numbers, using the same <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> as Python. As the name suggests, JSON was inspired by the JavaScript programming language, but the syntax of this language was itself inspired by Python and by other similar programming languages. The JSON format is commonly used for transferring data between programs written in different languages, or for transferring data over the internet.</p>
+</div>
+<div class="section" id="key">
+<h2>key<a class="headerlink" href="#key" title="Permalink to this headline">¶</a></h2>
+<p>The ‘keys’ of a dictionary are the labels under which the values in the dictionary are stored. See the entry on <a class="reference internal" href="#dictionary"><span class="std std-doc">dictionaries</span></a> for a more detailed explanation of this term.</p>
+</div>
+<div class="section" id="keyword">
+<h2>keyword<a class="headerlink" href="#keyword" title="Permalink to this headline">¶</a></h2>
+<p>A keyword (sometimes also referred to as ‘reserved word’) is a word that has a special fixed meaning for Python. For example, the keyword <code class="docutils literal notranslate"><span class="pre">del</span></code> deletes something from Python’s memory. We cannot use keywords as the names of <a class="reference internal" href="#variable"><span class="std std-doc">variables</span></a> (hence the term ‘reserved word’). For a full list of all the keywords in Python, see <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">here</a>.</p>
+</div>
+<div class="section" id="list">
+<h2>list<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>A list is a kind of <a class="reference internal" href="#sequence"><span class="std std-doc">sequence</span></a>; it can store multiple <a class="reference internal" href="#value"><span class="std std-doc">values</span></a> arranged in order. The <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> for creating a list is to enclose the values in the sequence inside square parentheses <code class="docutils literal notranslate"><span class="pre">[]</span></code> and separate the values with commas. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lists are very similar to <a class="reference internal" href="#tuple"><span class="std std-doc">tuples</span></a>, another kind of sequence. The difference is that tuples are <a class="reference internal" href="#mutability"><span class="std std-doc">immutable</span></a>, whereas lists are <a class="reference internal" href="#list"><span class="std std-doc">mutable</span></a>.</p>
+</div>
+<div class="section" id="locale">
+<h2>locale<a class="headerlink" href="#locale" title="Permalink to this headline">¶</a></h2>
+<p>Computer users want to be able to interact with their computer in way that takes into account certain pieces of information about the user’s language and location. For example, the user may want dates and currency amounts displayed in a certain format, or they may want to see the time displayed in their time zone. A computer’s <a class="reference internal" href="#os"><span class="std std-doc">operating system</span></a> may store this user-specific information and make it available to all programs so that they can use it to customize the user’s experience. This bundle of information is often termed a ‘locale’.</p>
+<p>Among other things, the locale may contain information on the user’s preferred <a class="reference internal" href="#encoding"><span class="std std-doc">encoding</span></a> for reading and writing text files, or their preferred decimal point character (in some lamguages it is a dot, in others it is a comma).</p>
+</div>
+<div class="section" id="loop">
+<h2>loop<a class="headerlink" href="#loop" title="Permalink to this headline">¶</a></h2>
+<p>A loop is a <a class="reference internal" href="#control"><span class="std std-doc">control statement</span></a> that repeats certain lines of a program multiple times.</p>
+<p>Loops can use the <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span></code> <a class="reference internal" href="#keyword"><span class="std std-doc">keywords</span></a> to repeat the given actions for every item in an <a class="reference internal" href="#iterable"><span class="std std-doc">iterable</span></a>. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eggs
+bacon
+black pudding
+sausages
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or they can use the <code class="docutils literal notranslate"><span class="pre">while</span></code> <a class="reference internal" href="#keyword"><span class="std std-doc">keyword</span></a> to repeat the given actions until a particular condition is no longer fulfilled.</p>
+</div>
+<div class="section" id="mapping">
+<h2>mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="#dictionary"><span class="std std-doc">dictionary</span></a>.</p>
+</div>
+<div class="section" id="markup">
+<h2>markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<p>A ‘markup language’ is a programming language that adds extra combinations of symbols to normal text, in order to instruct a computer program to display that text in a certain way. For example, the markup language <a class="reference internal" href="#html"><span class="std std-doc">HTML</span></a> tells a web browser how to display the text of a webpage.</p>
+</div>
+<div class="section" id="matrix">
+<h2>matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h2>
+<p>In math, a matrix is a collection of numbers (or occasionally other things) arranged in rows and columns. For example, the following matrix has 2 rows and 8 columns (so is termed a ‘2 x 8’ matrix):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; 0 &amp; 1 &amp; 2 &amp; 2 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; 6 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 3 &amp; 0 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>Matrices are useful for representing geometric transformations, among other things, and have applications in fields like statistics, engineering, and quantum physics.</p>
+<p>Matrices consisting of only a single row or a single column are often called row or column <a class="reference internal" href="#vector"><span class="std std-doc">vectors</span></a>. In computing, matrices can be represented using <a class="reference internal" href="#array"><span class="std std-doc">arrays</span></a>.</p>
+</div>
+<div class="section" id="method">
+<h2>method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h2>
+<p>A method is a <a class="reference internal" href="#function"><span class="std std-doc">function</span></a> that is defined specially for variables of one data <a class="reference internal" href="#type"><span class="std std-doc">type</span></a>. For example, there is a <a class="reference internal" href="#string"><span class="std std-doc">string</span></a> method called <code class="docutils literal notranslate"><span class="pre">upper()</span></code>, which <a class="reference internal" href="#return"><span class="std std-doc">returns</span></a> an all UPPERCASE version of the string. This function is not defined for other data types such as numbers. The <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> for using a method is to access it via the variable that we want to apply it to, by placing a <code class="docutils literal notranslate"><span class="pre">.</span></code> after the name of the variable. For example to get an uppercase version of a string variable using the <code class="docutils literal notranslate"><span class="pre">upper()</span></code> method:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred&#39;</span>
+<span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MILDRED&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="module">
+<h2>module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h2>
+<p>A ‘module’ is simply any text file containing Python commands. However, in practice the term ‘module’ tends to be reserved for files that do not in themselves run any program that accomplishes a task or produces an output, but instead serve merely to define various <a class="reference internal" href="#function"><span class="std std-doc">functions</span></a> or <a class="reference internal" href="#variable"><span class="std std-doc">variables</span></a> that can be used in other programs. (Compare the term ‘<a class="reference internal" href="#script"><span class="std std-doc">script</span></a>’.)</p>
+<p>The contents of a module can be incorporated into another program file by <a class="reference internal" href="#import"><span class="std std-doc">importing</span></a> them. We may write our own modules, or we may make use of pre-made modules that are either built in to Python or are provided as part of additional <a class="reference internal" href="#package"><span class="std std-doc">packages</span></a> that we have installed.</p>
+</div>
+<div class="section" id="mutability">
+<h2>mutability<a class="headerlink" href="#mutability" title="Permalink to this headline">¶</a></h2>
+<p>If a <a class="reference internal" href="#type"><span class="std std-doc">type</span></a> is ‘mutable’, this means that a <a class="reference internal" href="#variable"><span class="std std-doc">variable</span></a> of that type can have its contents changed or updated without having to be completely overwritten and <a class="reference internal" href="#assignment"><span class="std std-doc">re-assigned</span></a>. For example, <a class="reference internal" href="#list"><span class="std std-doc">lists</span></a> are mutable, because applying a list <a class="reference internal" href="#method"><span class="std std-doc">method</span></a> can change the contents of the list without us assigning any result back into the list with <code class="docutils literal notranslate"><span class="pre">=</span></code>. When a mutable variable is changed even though we have not re-assigned it, we sometimes say that it has been changed ‘in-place’.</p>
+<p>The list in the following example is changed in-place by the <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> method:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">]</span>
+<span class="n">shopping</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="n">shopping</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;sausages&#39;, &#39;black pudding&#39;, &#39;bacon&#39;, &#39;eggs&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The opposite of ‘mutable’ is ‘immutable’. <a class="reference internal" href="#string"><span class="std std-doc">Strings</span></a>, <a class="reference internal" href="#integer"><span class="std std-doc">integers</span></a>, <a class="reference internal" href="#float"><span class="std std-doc">floats</span></a>, and <a class="reference internal" href="#tuple"><span class="std std-doc">tuples</span></a>, for example, are all immutable, since their contents can never be changed unless we overwrite them in a new assignment using <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<p>The string in the following example is not changed by calling its <code class="docutils literal notranslate"><span class="pre">.upper()</span></code> method:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred&#39;</span>
+<span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mildred&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Only here is it changed, because of the re-assignment with <code class="docutils literal notranslate"><span class="pre">=</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MILDRED&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>(‘Mutable’ <a class="reference external" href="https://www.etymonline.com/word/mutable">means ‘changeable’</a>, and has the same origin as ‘mutant’, as in the <em>Teenage Mutant Ninja Turtles</em>.)</p>
+</div>
+<div class="section" id="namespace">
+<h2>namespace<a class="headerlink" href="#namespace" title="Permalink to this headline">¶</a></h2>
+<p>We can think of our current Python program as creating a sort of ‘workspace’ in our computer’s temporary memory, where all the <a class="reference internal" href="#variable"><span class="std std-doc">variables</span></a>, <a class="reference internal" href="#function"><span class="std std-doc">functions</span></a>, etc. created in the program are stored and held ready for use as the program runs. Within this main workspace we may have separate ‘subspaces’ that store some of these things together under a common name, for example because they have a common origin or because they all need to refer to one another in order to function properly. Such a subspace is known as a ‘namespace’.</p>
+<p>When we <a class="reference internal" href="#import"><span class="std std-doc">import</span></a> a <a class="reference internal" href="#module"><span class="std std-doc">module</span></a>, its contents are available under a namespace that by default has the same name as the file containing the module.</p>
+<p>To access things that are stored in a namespace rather than in the main workspace of our program, we simply prepend the name of the namespace, followed by a dot. So for example to use a function called <code class="docutils literal notranslate"><span class="pre">useful_function()</span></code> from a namespace called <code class="docutils literal notranslate"><span class="pre">my_module</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_module</span><span class="o">.</span><span class="n">useful_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nan">
+<h2>NaN<a class="headerlink" href="#nan" title="Permalink to this headline">¶</a></h2>
+<p>‘Not a Number’ (NaN) is an abbreviation often used in computing and data analysis to stand for a piece of information that is missing or undefined, but could in principle have been a number. For example, <a class="reference external" href="https://en.wikipedia.org/wiki/Logarithm">logarithm</a> functions normally output numbers, but they are undefined for negative inputs, so a computing system might choose to represent the result of asking for a logarithm of a negative number as a ‘NaN’ (and perhaps also issue a warning message).</p>
+<p>There is no NaN value provided in basic Python, but there is one included in the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> <a class="reference internal" href="#package"><span class="std std-doc">package</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-25-140ad276ba39&gt;:2: RuntimeWarning: invalid value encountered in log
+  numpy.log(-1)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nan
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="newline">
+<h2>newline<a class="headerlink" href="#newline" title="Permalink to this headline">¶</a></h2>
+<p>When we view a text file that is written over multiple lines, we just see the separate lines of text neatly displayed in our text editor or word processor. But behind the scenes our computer does not actually store lines of text in separate ‘rows’ of its memory. It needs instead some way of storing information about where one line ends and the next begins. This is achieved by the use of a ‘newline character’ to represent the break between one line and the next. This character is not explicitly shown in a normal text editor, but it is there in the file. In some word processors, such as OpenOffice and Microsoft Word, you can opt to see the newline characters explicitly, and they are typically shown as a ‘<a class="reference external" href="https://en.wikipedia.org/wiki/Pilcrow">pilcrow</a>’ (¶).</p>
+<p>If we want to include a newline character in a <a class="reference internal" href="#string"><span class="std std-doc">string</span></a> in Python, we can represent it with the character combination <code class="docutils literal notranslate"><span class="pre">'\n'</span></code>. These two characters together are interpreted as a single character meaning ‘start a new line here’:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Hello,</span><span class="se">\n</span><span class="s1">world!&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello,
+world!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="none">
+<h2>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">None</span></code> <a class="reference internal" href="#type"><span class="std std-doc">data type</span></a> in Python is used to indicate something that is undefined or has no particular content.</p>
+</div>
+<div class="section" id="operator">
+<h2>operator<a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h2>
+<p>An operator is a symbol that produces some result when written in an expression along with some other components. For example, the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator produces the sum of two numbers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Some operators may have different effects depending on the <a class="reference internal" href="#type"><span class="std std-doc">type</span></a> of the other components of the expression. For example, if used with <a class="reference internal" href="#string"><span class="std std-doc">strings</span></a> instead of numbers the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator <a class="reference internal" href="#concatenate"><span class="std std-doc">concatenates</span></a> the strings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;a&#39;</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ab&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="os">
+<h2>OS<a class="headerlink" href="#os" title="Permalink to this headline">¶</a></h2>
+<p>The Operating System (abbreviated to ‘OS’) for a computer is the ‘main program’ that runs on that computer when it starts, and within which all other programs run. The operating system handles the tasks that are common to all programs, such as locating files, connecting to external devices, and so on. The most popular types of operating system are Microsoft Windows, macOS, and Linux.</p>
+</div>
+<div class="section" id="package">
+<h2>package<a class="headerlink" href="#package" title="Permalink to this headline">¶</a></h2>
+<p>A package is a program that adds to the functionality of an existing program. For example, Python packages add new <a class="reference internal" href="#module"><span class="std std-doc">modules</span></a> to a Python installation.</p>
+<p>A ‘package manager’ is a program that downloads, installs, and updates packages. For example, one of the functions of <a class="reference external" href="https://www.anaconda.com/distribution">Anaconda</a> is to act as a package manager for Python and other data science software.</p>
+</div>
+<div class="section" id="parse">
+<h2>parse<a class="headerlink" href="#parse" title="Permalink to this headline">¶</a></h2>
+<p>The process of interpreting structured text (for example <a class="reference internal" href="#html"><span class="std std-doc">HTML</span></a>, <a class="reference internal" href="#json"><span class="std std-doc">JSON</span></a>, or a Python file itself) and dividing it up into meaningful functional units is known as ‘parsing’ the text. This is the same sense in which linguists use the term when they talk about ‘parsing’ natural human language.</p>
+</div>
+<div class="section" id="path">
+<h2>path<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h2>
+<p>The location of a file within the directory system of a computer is known as that file’s ‘path’. This is the same sense of ‘path’ as in the English phrase ‘a path through the woods’; a file’s path describes a series of turnings to take in the file system in order to get to that file.</p>
+<p>Different <a class="reference internal" href="#os"><span class="std std-doc">operating systems</span></a> describe paths in different ways. Linux uses the forward slash character <code class="docutils literal notranslate"><span class="pre">/</span></code> as a <a class="reference internal" href="#separator"><span class="std std-doc">separator</span></a> between each branch in the path. So an example path looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mildred</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">my_program</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Windows uses the backslash <code class="docutils literal notranslate"><span class="pre">\</span></code> as the separator and starts with a letter identifying the drive on which the file is located. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Mildred</span>\<span class="n">Documents</span>\<span class="n">my_program</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Paths can be ‘absolute’, which means that they describe the full path to a file starting all the way back from the base of the directory system (sometimes called the ‘root’ directory). Or they can be ‘relative’, which means that they describe the path to a file starting from some other directory than the root directory, usually the directory that we are currently working in.</p>
+</div>
+<div class="section" id="pull">
+<h2>pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h2>
+<p>In <a class="reference internal" href="#versioning"><span class="std std-doc">version control</span></a>, updating your copy of a <a class="reference internal" href="#repository"><span class="std std-doc">repository</span></a> to incorporate changes that have been made in another copy of the repository (for example one stored online) is termed ‘pulling’ the changes from the other repository.</p>
+</div>
+<div class="section" id="push">
+<h2>push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
+<p>In <a class="reference internal" href="#versioning"><span class="std std-doc">version control</span></a>, sending changes from your computer’s copy of a <a class="reference internal" href="#repository"><span class="std std-doc">repository</span></a> to another copy (for example one stored online) is termed ‘pushing’ the changes to the other repository.</p>
+</div>
+<div class="section" id="raise">
+<h2>raise<a class="headerlink" href="#raise" title="Permalink to this headline">¶</a></h2>
+<p>When an <a class="reference internal" href="#exception"><span class="std std-doc">exception</span></a> occurs during the running of a program, we say that the program has ‘raised an exception’. (See the entry on <a class="reference internal" href="#exception"><span class="std std-doc">exceptions</span></a> for more details.) This is similar to the use of the word ‘raise’ in English in phrases like ‘to raise an issue’.</p>
+<p>We can also deliberately instruct our program to raise an exception, using the <code class="docutils literal notranslate"><span class="pre">raise</span></code> <a class="reference internal" href="#keyword"><span class="std std-doc">keyword</span></a>. For example:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;That is an invalid value.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">29</span><span class="o">-</span><span class="mi">72</span><span class="n">fb548a5442</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;That is an invalid value.&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: That is an invalid value.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="readme">
+<h2>readme<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h2>
+<p>A ‘readme’ file is a file containing some explanatory text about how to use a program, how it works, etc. This file is the starting point for someone who is looking at the files of a program and wondering what to do with them.</p>
+</div>
+<div class="section" id="refactor">
+<h2>refactor<a class="headerlink" href="#refactor" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes we may want to change the structure of a program, but without actually changing its behavior. For example, we may want our program to be more clearly readable, or to be easier to modify. Reorganizing a program without changing any of its behavior is termed ‘refactoring’ the program.</p>
+</div>
+<div class="section" id="regex">
+<h2>regex<a class="headerlink" href="#regex" title="Permalink to this headline">¶</a></h2>
+<p>A ‘regular expression’ (often abbreviated to ‘regex’) is a code that describes a pattern of characters to search for in a piece of text. Regular expressions are a sort of programming language all of their own, but a programming language with just one very specific application: searching text. As with any other programming language, there are rules governing what the components of a regular expression mean. Regular expressions are a mixture of normal characters that simply represent that character, and certain special characters or sequences of characters that have a particular meaning. For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">[A-Za-z]</span></code> stands for ‘any character’
+<code class="docutils literal notranslate"><span class="pre">+</span></code> stands for ‘one or more occurrences of the preceding pattern’</p>
+<p>Therefore, the regular expression <code class="docutils literal notranslate"><span class="pre">[A-Za-z]+at</span></code> stands for ‘any sequence of one or more letters followed by <em>at</em>’, and could be used to search for words that rhyme with ‘cat’.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">regex</span></code> <a class="reference internal" href="#package"><span class="std std-doc">package</span></a> in Python provides functions for working with regular expressions. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rhyme_pattern</span> <span class="o">=</span> <span class="s1">&#39;[A-Za-z]+at&#39;</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Pat the fat cat sat on the mat wearing a hat.&#39;</span>
+<span class="kn">import</span> <span class="nn">regex</span>
+<span class="n">regex</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">rhyme_pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Pat&#39;, &#39;fat&#39;, &#39;cat&#39;, &#39;sat&#39;, &#39;mat&#39;, &#39;hat&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can learn more about regular expressions at the <a class="reference external" href="https://regex101.com/">online regex tester</a>.</p>
+</div>
+<div class="section" id="regression">
+<h2>regression<a class="headerlink" href="#regression" title="Permalink to this headline">¶</a></h2>
+<p>A situation in which a change to one part of a program unexpectedly breaks other aspects of the program.</p>
+</div>
+<div class="section" id="repository">
+<h2>repository<a class="headerlink" href="#repository" title="Permalink to this headline">¶</a></h2>
+<p>A repository (sometimes abbreviated to ‘repo’) is a place where the various files constituting a computer program are stored, usually online. People who want to install a program can fetch the current version of the program from its repository.</p>
+<p>There are various internet platforms that host repositories. <a class="reference external" href="https://github.com/">GitHub</a> is one of the most popular. The Python Package Index (<a class="reference external" href="https://pypi.org/">PyPI</a>) is a repository specifically for Python <a class="reference internal" href="#package"><span class="std std-doc">packages</span></a>.</p>
+</div>
+<div class="section" id="return">
+<h2>return<a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="#function"><span class="std std-doc">Functions</span></a> usually finish by outputting some kind of result. For example, the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function outputs the length of its argument, and the <code class="docutils literal notranslate"><span class="pre">round()</span></code> function outputs the result of rounding its argument to the nearest whole number. We say that when a function has finished its work, the function ‘returns’, and whatever it gives us when it has finished is the function’s ‘return value’. For example the return value of <code class="docutils literal notranslate"><span class="pre">len('floccinaucinihilipilification')</span></code> is <code class="docutils literal notranslate"><span class="pre">29</span></code>, and the return value of <code class="docutils literal notranslate"><span class="pre">round(1.618)</span></code> is <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+</div>
+<div class="section" id="rgb">
+<h2>RGB<a class="headerlink" href="#rgb" title="Permalink to this headline">¶</a></h2>
+<p>In computing, colors are often described as a sequence of three numbers. This sequence represents a color as an additive mixture of three ‘base’ colors red, green, and blue (RGB), where each of the three numbers represents the ‘amount’ of each base color in the mixed color. The numbers in an RGB sequence may have different scales, but most commonly they are integers on a scale from 0 to 255.</p>
+<p>Some example RGB sequences:</p>
+<ul class="simple">
+<li><p><em>(255,0,0)</em>: pure bright red</p></li>
+<li><p><em>(255,0,255)</em>: purple (mixture of red and blue)</p></li>
+<li><p><em>(0,0,0)</em>: black (no colors)</p></li>
+<li><p><em>(127,127,127)</em>: grey (middling amount of each color)</p></li>
+<li><p><em>(255,255,255)</em>: white (all the colors)</p></li>
+</ul>
+<p>Sometimes an additional number is included at the end of the RGB sequence, representing the degree of transparency that the color should have if it is overlaid on another image.</p>
+</div>
+<div class="section" id="scalar">
+<h2>scalar<a class="headerlink" href="#scalar" title="Permalink to this headline">¶</a></h2>
+<p>A ‘scalar’ is simply a single number, such as <code class="docutils literal notranslate"><span class="pre">100</span></code> or <code class="docutils literal notranslate"><span class="pre">1.618</span></code>. This term is used in order to distinguish single numbers from collections of multiple numbers such as <a class="reference internal" href="#vector"><span class="std std-doc">vectors</span></a> or <a class="reference internal" href="#matrix"><span class="std std-doc">matrices</span></a>.</p>
+</div>
+<div class="section" id="scraping">
+<h2>scraping<a class="headerlink" href="#scraping" title="Permalink to this headline">¶</a></h2>
+<p>The process of automatically fetching pages from the internet and extracting information from them is often known as ‘scraping’ the internet.</p>
+</div>
+<div class="section" id="script">
+<h2>script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h2>
+<p>A script is a text file containing commands that are intended to be run, in order, as a program. The sense of ‘script’ here is the same as in an actor’s script, which tells them what to say and do. Not all text files containing commands are scripts. Some may instead be <a class="reference internal" href="#module"><span class="std std-doc">modules</span></a>, which do not of themselves run a specific program, but instead provide extra components that other programs may make use of.</p>
+</div>
+<div class="section" id="separator">
+<h2>separator<a class="headerlink" href="#separator" title="Permalink to this headline">¶</a></h2>
+<p>A separator is a character that is used to separate different parts of a piece of text. Separators can occur in many different contexts:</p>
+<p><em>Python commands</em>. For example, the comma character is used as the separator for multiple <a class="reference internal" href="#argument"><span class="std std-doc">arguments</span></a> to a <a class="reference internal" href="#function"><span class="std std-doc">function</span></a> in Python.</p>
+<p><em>File paths</em>. A separator character is used to divide the various directories that lead to the location of a file in a file <a class="reference internal" href="#path"><span class="std std-doc">path</span></a>.</p>
+<p><em>Spreadsheet files</em>. A separator is used in some text file formats to separate the columns of a spreadsheet. For example, in the <a class="reference internal" href="#csv"><span class="std std-doc">csv</span></a> file format, a comma separates the columns.</p>
+<p>You may occasionally also encounter the term ‘delimiter’ used with essentially the same meaning as ‘separator’. Technically, a delimiter character marks the limits of some entity (i.e. its beginning and its end). For example, the quote marks <code class="docutils literal notranslate"><span class="pre">''</span></code> mark the beginning and end of a <a class="reference internal" href="#string"><span class="std std-doc">string</span></a>. But since delimiting an entity can in a certain sense also be thought of as separating it from its surroundings, the two terms are often effectively synonyms and the distinction is one that only matters to the sort of person whose mission in life is to make sure nobody is wrong on the internet.</p>
+</div>
+<div class="section" id="server">
+<h2>server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h2>
+<p>A server is a computer on the internet that provides information, such as web pages, to other computers. The other computers using this service, called <a class="reference internal" href="#client"><span class="std std-doc">clients</span></a>, send a request to the server for a particular piece of information, and the server sends a response either delivering that information or explaining why it could not be delivered.</p>
+</div>
+<div class="section" id="sequence">
+<h2>sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h2>
+<p>Sequences are data <a class="reference internal" href="#type"><span class="std std-doc">types</span></a> that can store more than one <a class="reference internal" href="#value"><span class="std std-doc">value</span></a>, and arrange those values in a given order. <a class="reference internal" href="#tuple"><span class="std std-doc">Tuples</span></a> and <a class="reference internal" href="#list"><span class="std std-doc">lists</span></a> are examples of sequences.</p>
+</div>
+<div class="section" id="slice">
+<h2>slice<a class="headerlink" href="#slice" title="Permalink to this headline">¶</a></h2>
+<p>A slice is a subsection of a <a class="reference internal" href="#sequence"><span class="std std-doc">sequence</span></a>. We can get a slice out of a sequence by giving a range of numbers as the <a class="reference internal" href="#index"><span class="std std-doc">index</span></a>. The <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> for this is to separate the beginning and end of the range with the colon character <code class="docutils literal notranslate"><span class="pre">:</span></code>. The end of a slice is interpreted as meaning ‘up-to-but-not-including’.</p>
+<p>For example to get a slice of a list containing entries <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code> (i.e. ‘from <code class="docutils literal notranslate"><span class="pre">1</span></code> up to but not including <code class="docutils literal notranslate"><span class="pre">3</span></code>’):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">]</span>
+
+<span class="n">shopping</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;bacon&#39;, &#39;black pudding&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sql">
+<h2>SQL<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h2>
+<p>Structured Query Language (SQL) is a programming language that is very widely used for managing databases. SQL provides commands that are broadly of three different types:</p>
+<ul class="simple">
+<li><p>Define the relations and constraints that give a database its structure (sometimes called the ‘schema’ of the database).</p></li>
+<li><p>Modify the data in the database, for example by inserting, deleting, or changing information.</p></li>
+<li><p>Fetch different combinations of information from the database (usually called ‘querying’ the database).</p></li>
+</ul>
+</div>
+<div class="section" id="string">
+<h2>string<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h2>
+<p>In computing ‘string’ essentially means a piece of text (because a piece of text is a ‘string’ of characters). The string is one of the basic data <a class="reference internal" href="#type"><span class="std std-doc">types</span></a> in Python. We indicate that we want Python to treat something as a string by enclosing it in quote marks <code class="docutils literal notranslate"><span class="pre">''</span></code> (or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>). The term ‘string’ is abbreviated to <code class="docutils literal notranslate"><span class="pre">str</span></code> in Python.</p>
+</div>
+<div class="section" id="syntax">
+<h2>syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>Syntax refers to the rules governing what constitutes a valid command in a programming language. If we write a program that violates Python’s syntax, then the Python interpreter will not be able to understand it, and instead will complain of a ‘syntax <a class="reference internal" href="#error"><span class="std std-doc">error</span></a>’.</p>
+</div>
+<div class="section" id="tdd">
+<h2>TDD<a class="headerlink" href="#tdd" title="Permalink to this headline">¶</a></h2>
+<p>TDD stands for ‘Test-Driven Development’, an approach to software development in which the developer first writes a test that will check that their change to the main program works as desired, and only then moves on to writing that change to the main program.</p>
+</div>
+<div class="section" id="tuple">
+<h2>tuple<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h2>
+<p>A tuple is a kind of <a class="reference internal" href="#sequence"><span class="std std-doc">sequence</span></a>; it can store multiple <a class="reference internal" href="#value"><span class="std std-doc">values</span></a> arranged in order. The <a class="reference internal" href="#syntax"><span class="std std-doc">syntax</span></a> for creating a tuple is simply to separate the values in the sequence using commas (and for clarity, we can and should also place a pair of parentheses around the whole sequence, though this is not always absolutely necessary). For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tuples are very similar to <a class="reference internal" href="#list"><span class="std std-doc">lists</span></a>, another kind of sequence. The difference is that tuples are <a class="reference internal" href="#mutability"><span class="std std-doc">immutable</span></a>, whereas lists are <a class="reference internal" href="#list"><span class="std std-doc">mutable</span></a>.</p>
+</div>
+<div class="section" id="type">
+<h2>type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h2>
+<p>Computer programs can handle information in different forms. For example, some pieces of information may be in the form of text, some may be numbers, and some may be more complex things such as a link to a file on the computer’s disk, or a connection to a website. When we create or refer to information in our Python programs, Python needs to be able to know what type of information it is. Python has various <a class="reference internal" href="#syntax"><span class="std std-doc">syntactical</span></a> rules for determining what type a new variable is when we create one in our program. For example, quote marks <code class="docutils literal notranslate"><span class="pre">''</span></code> indicate a <a class="reference internal" href="#string"><span class="std std-doc">string</span></a> (i.e. text).</p>
+</div>
+<div class="section" id="url">
+<h2>URL<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h2>
+<p>A ‘Uniform Resource Locator’ is a piece of text that indicates how a ‘resource’ (e.g. some data or computing service on the internet) can be accessed. More commonly we refer to a URL as a ‘web address’. An example URL is <code class="docutils literal notranslate"><span class="pre">https://en.wikipedia.org/wiki/Python_(programming_language)</span></code>.</p>
+</div>
+<div class="section" id="value">
+<h2>value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h2>
+<p>The contents stored in a <a class="reference internal" href="#variable"><span class="std std-doc">variable</span></a> are often called its ‘value’. For example, <code class="docutils literal notranslate"><span class="pre">name</span></code> might be a <a class="reference internal" href="#string"><span class="std std-doc">string</span></a> variable whose value is <code class="docutils literal notranslate"><span class="pre">'Mildred'</span></code>, and <code class="docutils literal notranslate"><span class="pre">height</span></code> might be a <a class="reference internal" href="#float"><span class="std std-doc">float</span></a> variable whose value is <code class="docutils literal notranslate"><span class="pre">1.96</span></code>.</p>
+</div>
+<div class="section" id="variable">
+<h2>variable<a class="headerlink" href="#variable" title="Permalink to this headline">¶</a></h2>
+<p>A variable is a name that stores some information for the duration of our program. We choose the name ourselves, and <a class="reference internal" href="#assignment"><span class="std std-doc">assign</span></a> into that name whatever information we wish to store. We can then use the variable in subsequent steps of the program. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.4142135623730951
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vector">
+<h2>vector<a class="headerlink" href="#vector" title="Permalink to this headline">¶</a></h2>
+<p>In math, a vector is a collection of numbers (or occasionally other things) arranged one after the other in a specific order. For example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; 6 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 3 &amp; 0 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>A vector is a special case of a <a class="reference internal" href="#matrix"><span class="std std-doc">matrix</span></a> that has either only a single row (a ‘row vector’) or a single column (a ‘column vector’).</p>
+</div>
+<div class="section" id="verbose">
+<h2>verbose<a class="headerlink" href="#verbose" title="Permalink to this headline">¶</a></h2>
+<p>A program that is run in verbose mode will ‘talk more’, i.e. give more detailed printed output.</p>
+</div>
+<div class="section" id="versioning">
+<h2>versioning<a class="headerlink" href="#versioning" title="Permalink to this headline">¶</a></h2>
+<p>‘Versioning’, or more often ‘version control’ is the process of tracking the changes we make in successive versions of a computer program. This is important because we may sometimes need to check whether we and our colleagues are working on the same version of a program, or we may need to go back to an earlier version when we discover that our latest fabulous improvements have in fact completely broken everything.</p>
+</div>
+<div class="section" id="whitespace">
+<h2>whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
+<p>Any text characters that appear simply as blank space are termed ‘whitespace’ characters. The most common whitespace character is of course simply the space, but there are others, such as the <a class="reference internal" href="#newline"><span class="std std-doc">newline character</span></a> and the tab.</p>
+</div>
+<div class="section" id="wildcard">
+<h2>wildcard<a class="headerlink" href="#wildcard" title="Permalink to this headline">¶</a></h2>
+<p>A wildcard is a symbol used in computing to stand for ‘everything’ or ‘anything’. Wildcards are common to many programming languages, not just Python. The most common wildcard symbol is the asterisk (or ‘star’) <code class="docutils literal notranslate"><span class="pre">*</span></code>. Wildcards can be used together with other characters to refer to ‘all things that match a particular pattern’. For example, when referring to file names, the expression <code class="docutils literal notranslate"><span class="pre">*.txt</span></code> means ‘all files ending in <em>.txt</em>’.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="readings.html" title="previous page">Readings</a>
+    <a class='right-next' id="next-link" href="types.html" title="next page">Variables and data types</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

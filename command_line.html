@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The command line &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Testing" href="testing.html" />
+    <link rel="prev" title="Files" href="files.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/command_line.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fcommand_line.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/command_line.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/command_line.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-commands">
+   Basic commands
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cd">
+     cd
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ls">
+     ls
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#echo">
+     echo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#options">
+     Options
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spyder">
+   Spyder
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ipython">
+     IPython
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#magic">
+       Magic
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-command-line">
+<h1>The command line<a class="headerlink" href="#the-command-line" title="Permalink to this headline">¶</a></h1>
+<p>We have now covered all the basics of working with Python: the use of <a class="reference internal" href="glossary.html#variable"><span class="std std-doc">variables</span></a>, different <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data types</span></a>, various <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a>, <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exceptions</span></a>, <a class="reference internal" href="glossary.html#function"><span class="std std-doc">functions</span></a>, and the organization of programs as <a class="reference internal" href="glossary.html#module"><span class="std std-doc">modules</span></a>. There are still a great many important features of Python to learn, but with what we have covered so far it is already possible to write useful programs. Over the next few lessons we will mostly take a break from Python itself to focus on a few important aspects of software development: the process of building a working computer program.</p>
+<p>While learning about software development, we will on a few occasions need to step outside Python and give commands to our computer’s operating system more directly. All the major <a class="reference internal" href="glossary.html#os"><span class="std std-ref">operating systems</span></a> provide a means to accomplish basic tasks by typing in commands instead of clicking on icons or menu options. This is the way that operating systems used to work before they evolved graphical interfaces. The place where we can type in commands for the operating system is variously called the ‘command line’, ‘command prompt’, ‘console’, or ‘terminal’ (though for die-hard pedants some of these terms refer to subtly different aspects of interaction with the operating system).</p>
+<p>The steps needed to find the command line differ slightly across different operating systems. On Linux and macOS, an application called the ‘Terminal’ provides a command line. It looks like this:</p>
+<p><img alt="" src="_images/terminal.png" /></p>
+<p>On Windows, a similar-looking application called the ‘Command prompt’ serves the same function. Alternatively, if you have installed Anaconda as recommended for the class, you can access the command line via an app called ‘Anaconda Prompt’. The <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-anaconda-prompt">online documentation</a> for Anaconda provides a few more details about this app.</p>
+<p>Unfortunately, different operating systems understand different commands. Windows in particular differs from the others. So in order to ensure that the demonstrations work for all of us, we will limit our use of the command line just to what is necessary for the techniques we need to learn. In the few cases that different commands are needed on different operating systems, I will let you know.</p>
+<div class="section" id="basic-commands">
+<h2>Basic commands<a class="headerlink" href="#basic-commands" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take a look at a very few of the most basic commands that we can use in the command line. Unless otherwise stated, all of these are compatible with the major operating systems. If you would like to try them out, open up your command line app as described above.</p>
+<div class="section" id="cd">
+<h3>cd<a class="headerlink" href="#cd" title="Permalink to this headline">¶</a></h3>
+<p>To interact with Python files from the command line, we will need to make sure that we are working in the <a class="reference internal" href="glossary.html#directory"><span class="std std-doc">directory</span></a> that contains those files. This is the same principle that we encountered when <a class="reference internal" href="standard_library.html#working-directory"><span class="std std-doc">working with files and folders</span></a> in a Python program.</p>
+<p>Usually, the command line itself will display the <a class="reference internal" href="glossary.html#path"><span class="std std-doc">path</span></a> to whatever directory you are currently working in. For example, in the screenshot above, the relative path from my home folder to the current directory is shown as <code class="docutils literal notranslate"><span class="pre">/GitHub/introduction-to-programming</span></code> (with the forward slash <code class="docutils literal notranslate"><span class="pre">/</span></code> as the path <a class="reference internal" href="glossary.html#separator"><span class="std std-doc">separator</span></a>).</p>
+<p>To switch to a subdirectory of the current one, enter the command <code class="docutils literal notranslate"><span class="pre">cd</span></code> (which stands for <strong>c</strong>hange <strong>d</strong>irectory), followed by the name of the directory you want to switch into. For example:</p>
+<p><img alt="" src="_images/cd.png" /></p>
+<p>To move ‘up’ one directory in your computer’s file system, use <code class="docutils literal notranslate"><span class="pre">cd</span></code> followed by <code class="docutils literal notranslate"><span class="pre">..</span></code> (in file systems, <code class="docutils literal notranslate"><span class="pre">..</span></code> stands for ‘the directory that contains the current one’). For example:</p>
+<p><img alt="" src="_images/cd_dot_dot.png" /></p>
+</div>
+<div class="section" id="ls">
+<h3>ls<a class="headerlink" href="#ls" title="Permalink to this headline">¶</a></h3>
+<p>To see the contents of the current directory, use the command <code class="docutils literal notranslate"><span class="pre">ls</span></code> (an abbreviation of ‘list’).</p>
+<p><img alt="" src="_images/ls.png" /></p>
+<p><strong>Windows</strong>: Only Linux and macOS recognize the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command. On Windows, you will need to use <code class="docutils literal notranslate"><span class="pre">dir</span></code> instead.</p>
+</div>
+<div class="section" id="echo">
+<h3>echo<a class="headerlink" href="#echo" title="Permalink to this headline">¶</a></h3>
+<p>The command line’s equivalent of Python’s <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is called <code class="docutils literal notranslate"><span class="pre">echo</span></code>. The command line will ‘echo back’ to us anything that we enter after the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command:</p>
+<p><img alt="" src="_images/echo.png" /></p>
+</div>
+<div class="section" id="python">
+<h3>python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>If Python is installed on your operating system, you can run Python programs from the command line as well as from Spyder. To do this, simply type <code class="docutils literal notranslate"><span class="pre">python</span></code>, followed by the name of the Python program that you want to run. For example:</p>
+<p><img alt="" src="_images/command_line.png" /></p>
+<p>Remember that you first need to make sure that you are working inside the directory that contains the Python file that you would like to run.</p>
+<p>Beware that if you just type <code class="docutils literal notranslate"><span class="pre">python</span></code>, without specifying a file to run, then you will open a Python console. You can then type in Python commands and see them run immediately, much the same as in the Spyder console. But this is a rather laborious way of interacting with Python, and we won’t use it. If you start up Python this way by accident and need to return to the normal command line, use the Python <code class="docutils literal notranslate"><span class="pre">exit()</span></code> function. Like this:</p>
+<p><img alt="" src="_images/exit.png" /></p>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<p>Just as Python functions may accept certain optional <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a> that vary their behavior, so too do many programs that are run from the command line. In the context of the command line, these are sometimes called ‘options’ or ‘flags’. In command line <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a>, options are preceded by a double dash <code class="docutils literal notranslate"><span class="pre">--</span></code> (or sometimes a single dash <code class="docutils literal notranslate"><span class="pre">-</span></code> for abbreviated, single letter options), and follow the main command, separated by a space.</p>
+<p>For example, if we want to ask our Python <a class="reference internal" href="glossary.html#interpreter"><span class="std std-doc">interpreter</span></a> program what version of Python it is, we can run it with the <code class="docutils literal notranslate"><span class="pre">--version</span></code> option. This prints out our Python version rather than launching Python:</p>
+<p><img alt="" src="_images/options.png" /></p>
+</div>
+</div>
+<div class="section" id="spyder">
+<h2>Spyder<a class="headerlink" href="#spyder" title="Permalink to this headline">¶</a></h2>
+<p>The Spyder console provides a means of sending commands to the operating system. This is quicker and simpler than finding your command line app and then using <code class="docutils literal notranslate"><span class="pre">cd</span></code> to navigate to the directory that you want to work in. If you can make the following example work from Spyder, I recommend using this method of interacting with the command line, as it will save you switching between two different windows.</p>
+<p>In the Spyder console, if you place an exclamation mark character (<code class="docutils literal notranslate"><span class="pre">!</span></code>) at the beginning of a command, Spyder will send that command to the operating system’s command line, and not to Python. Here is an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> <span class="nb">echo</span> hello
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are a couple of important things to note about this way of using the Spyder console. First of all, don’t confuse Python commands with commands for the operating system. The operating system does not recognize Python commands, so if you accidentally prefix Python commands with <code class="docutils literal notranslate"><span class="pre">!</span></code>, you will see an error message (the exact content of which will depend on your operating system).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> print<span class="o">(</span><span class="s1">&#39;Hello.&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/bin/bash: -c: line 0: syntax error near unexpected token `&#39;Hello.&#39;&#39;
+/bin/bash: -c: line 0: ` print(&#39;Hello.&#39;)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Second, don’t use ‘<code class="docutils literal notranslate"><span class="pre">!</span></code>’ commands inside a Python <em>program</em>. This feature is special to the Spyder console and is not a general aspect of Python. An exclamation mark at the beginning of a line is not valid Python <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a>. So when writing a full Python program rather than just testing things out in the console, don’t use this feature.</p>
+<div class="section" id="ipython">
+<h3>IPython<a class="headerlink" href="#ipython" title="Permalink to this headline">¶</a></h3>
+<p>Why does the Spyder console allow us to type both Python commands and operating system commands? The reason is that the Spyder console in fact makes use of a Python <a class="reference internal" href="glossary.html#interpreter"><span class="std std-doc">interpreter</span></a> that is very slightly different from the standard one.</p>
+<p>Each time you have launched Spyder, you may have noticed some information displayed in the console after startup, like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">3.6.9</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Nov</span>  <span class="mi">7</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">02</span><span class="p">)</span> 
+<span class="n">Type</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+
+<span class="n">IPython</span> <span class="mf">7.11.1</span> <span class="o">--</span> <span class="n">An</span> <span class="n">enhanced</span> <span class="n">Interactive</span> <span class="n">Python</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>As well as displaying some information about the version of Python that Spyder is using (in my case 3.6.9), this introductory text also mentions something called <em>IPython</em>. IPython is an alternative Python interpreter. For all the basic Python commands, such as those we have been using so far, IPython simply passes those commands on to the standard Python interpreter. But IPython also recognizes a few additional commands that are not part of standard Python. The use of the exclamation mark to pass commands on to the operating system is one of these.</p>
+<div class="section" id="magic">
+<h4>Magic<a class="headerlink" href="#magic" title="Permalink to this headline">¶</a></h4>
+<p>There are also a few commands that are special to IPython itself, and are not passed on to either Python or the operating system. These commands all begin with the percent character <code class="docutils literal notranslate"><span class="pre">%</span></code>. The documentation for IPython fancifully refers to these as ‘magic’ commands. We do not really need to use these magic commands often, or ever, but one or two of them can occasionally be useful as a shortcut when testing things out in the console:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">%pwd</span></code> (an abbreviation of <strong>p</strong>rint <strong>w</strong>orking <strong>d</strong>irectory) will tell you what <a class="reference internal" href="glossary.html#directory"><span class="std std-doc">directory</span></a> you are currently working in.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/lt/GitHub/introduction-to-programming/content&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">%ls</span></code> (an abbreviation of ‘list’) lists the contents of your current working directory. You can use this to check that you really have the files you want in there.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">ls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>arrays.ipynb         <span class=" -Color -Color-Bold -Color-Bold-Blue">examples</span>/        index.ipynb      sequences_mappings.ipynb
+<span class=" -Color -Color-Bold -Color-Bold-Blue">_build</span>/              files.ipynb      internet.ipynb   setup.ipynb
+command_line.ipynb   functions.ipynb  intro.ipynb      spyder.ipynb
+conditions.ipynb     github.ipynb     iteration.ipynb  standard_library.ipynb
+_config.yml          glossary.ipynb   modules.ipynb    testing.ipynb
+data_analysis.ipynb  <span class=" -Color -Color-Bold -Color-Bold-Blue">images</span>/          nlp.ipynb        _toc.yml
+databases.ipynb      images.ipynb     readings.ipynb   types.ipynb
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">%ls</span></code> together with the name of a subdirectory to see its contents.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">ls</span> examples
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age_next_year.py         initials.py
+alternative_ending.py    <span class=" -Color -Color-Bold -Color-Bold-Red">intro_prog_examples.zip</span>
+circle.py                make_monthly_directories.py
+coordinates.py           my_program.py
+<span class=" -Color -Color-Bold -Color-Bold-Blue">data</span>/                    name_trivia.py
+fun_facts.py             pedantry.py
+greeting_personal.py     <span class=" -Color -Color-Bold -Color-Bold-Blue">__pycache__</span>/
+greeting.py              README.md
+guardian_top_article.py  slim_shady.py
+<span class=" -Color -Color-Bold -Color-Bold-Green">guess_the_animal.py</span>*     songs_tables.sql
+hoff.py                  spoonerisms.py
+<span class=" -Color -Color-Bold -Color-Bold-Green">horses.py</span>*               test_math_is_working_as_normal.py
+ids.py                   test_spoonerisms.py
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">%reset</span></code> deletes any variables that you have created in the console so far (first asking you to confirm that you want to do this).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Once deleted, variables cannot be recovered. Proceed (y/[n])?  y
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again: Remember that these special commands are only for use in the Spyder console. Don’t write them into an actual Python program. They won’t work there. Note also that in contrast to operating system commands (prefaced with <code class="docutils literal notranslate"><span class="pre">!</span> </code>), magic commands (prefaced with <code class="docutils literal notranslate"><span class="pre">%</span></code>) are available on any operating system.</p>
+<p>That’s all we need to know about the command line for now. In some of the lessons that follow, we will occasionally use the command line to accomplish tasks outside of Python. Watch out for the exclamation mark before an example command; this indicates that we are no longer working with Python.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="files.html" title="previous page">Files</a>
+    <a class='right-next' id="next-link" href="testing.html" title="next page">Testing</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iteration &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Functions" href="functions.html" />
+    <link rel="prev" title="Conditions" href="conditions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/iteration.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fiteration.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/iteration.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/iteration.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective">
+   Objective
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loops">
+   Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterables">
+   Iterables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#range">
+     Range
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enumerate">
+     enumerate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indentation-again">
+   Indentation again
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops">
+   while loops
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#debugging">
+     Debugging
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a">
+       a)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#b">
+       b)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#c">
+       c)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="iteration">
+<h1>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h1>
+<p>In the <a class="reference internal" href="conditions.html"><span class="doc std std-doc">previous lesson</span></a> we learned about <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a>: lines of our program that do not themselves accomplish any action, but instead control something about when other lines of our program are run. That is, they determine the ‘flow’ of the program. We focused on ‘conditional’ control statements, which set a condition according to which further lines of the program are either run or not.</p>
+<p>There are other ways in which we might want to control the flow of our program. For example, we might want to run a certain line more than once, maybe many times, or even indefinitely until a certain goal is achieved. Repeating lines of our program is sometimes termed ‘<a class="reference internal" href="glossary.html#iterable"><span class="std std-doc">iteration</span></a>’. This is what we will learn about now.</p>
+<div class="section" id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+<p>As before, let’s structure our learning by working towards a simple toy program.</p>
+<p><strong>guess_the_animal.py</strong></p>
+<ul class="simple">
+<li><p>Make the computer ‘think’ of an animal (i.e. store the name of an animal in a variable).</p></li>
+<li><p>Present the user with a series of six hints about the animal’s identity.</p></li>
+<li><p>For each hint, print it out and then ask the user to guess the animal.</p>
+<ul>
+<li><p>Allow them to give up by typing ‘q’.</p></li>
+<li><p>If they just enter nothing, ask them again.</p></li>
+<li><p>If they get the answer right, stop the game and congratulate them</p></li>
+<li><p>If they get the answer wrong, continue to the next hint.</p></li>
+</ul>
+</li>
+</ul>
+<p>There is some branching in this program too, so we will need to use the techniques from the previous lesson. The novel aspect is the fact that there is some repetition; we need to get and process user input at least six times. Of course, for just six repetitions, we could achieve this by just copying and pasting the same lines into our program six times over. But achieving repetition by literally writing the same lines over an over is a bad idea, for a few reasons:</p>
+<ul class="simple">
+<li><p><strong>Clarity</strong>. It makes our program unnecessarily long and difficult for others to read.</p></li>
+<li><p><strong>Robustness</strong>. We can easily make small mistakes while copying, pasting, and modifying the repeated lines. This may break our program.</p></li>
+<li><p><strong>Flexibility</strong>. If we later decide that we would like to change some aspect of the repeated actions, we must change it in multiple places in our program. This is laborious, and may again introduce mistakes if we forget to make the change in one of the repetitions.</p></li>
+</ul>
+<p>In programming, we should try to avoid repeating ourselves. This principle is so fundamental that there is a commonly-used acronym <a class="reference external" href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> (<strong>D</strong>on’t <strong>R</strong>epeat <strong>Y</strong>ourself) that people use to remind each other of it. The opposite of a ‘DRY’ programming style is sometimes pejoratively termed a ‘WET’ programming style (variously either ‘<strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice’ or ‘<strong>W</strong>e <strong>E</strong>njoy <strong>T</strong>yping’).</p>
+</div>
+<div class="section" id="loops">
+<h2>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
+<p>One way of achieving repetition is to use a <a class="reference internal" href="glossary.html#sequence"><span class="std std-doc">sequence</span></a>. Remember that sequences are <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data types</span></a> that store multiple values in order, such as <a class="reference internal" href="glossary.html#sequence"><span class="std std-doc">tuples</span></a> and <a class="reference internal" href="glossary.html#list"><span class="std std-doc">lists</span></a>. We have in fact already seen one way of performing an action repeatedly for each item in a sequence. Remember that list <a class="reference internal" href="glossary.html#comprehension"><span class="std std-doc">comprehensions</span></a> create a new list by systematically applying the same action to all the items in another list, in order.</p>
+<p>Here again is one of the example comprehensions that we saw in the <a class="reference internal" href="sequences_mappings.html#comprehensions"><span class="std std-doc">lesson on sequences</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">]</span>
+
+<span class="n">shopping_notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">]</span>
+
+<span class="n">shopping_notes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;EG&#39;, &#39;BA&#39;, &#39;BL&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comprehensions are great for applying single short commands to every item in a sequence. But in our target program we would like to go through the sequence of animal clues and do not just one but lots of things for each hint, including printing it out, getting user input, applying conditions, and even asking the user repeatedly for input if they fail to enter something. For such cases, we need to group all the repeated actions together under a <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statement</span></a> that instructs Python to repeat all of them. This pattern is known as a <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a>. Here is a short example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Next item of shopping:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Next item of shopping:
+eggs
+Next item of shopping:
+bacon
+Next item of shopping:
+black pudding
+Finished.
+</pre></div>
+</div>
+</div>
+</div>
+<p>By now the general syntax for control statements should be familiar. We end the control statement with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>, and we indent the lines that belong to the control statement. Make sure again that you have understood the role of <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indentation</span></a> in Python. Consider for example what happens if we also indent the final line in the example above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Next item of shopping:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Next item of shopping:
+eggs
+Finished.
+Next item of shopping:
+bacon
+Finished.
+Next item of shopping:
+black pudding
+Finished.
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the final <code class="docutils literal notranslate"><span class="pre">print()</span></code> line is indented, Python considers it to be part of the loop, and so it will be repeated along with the other lines.</p>
+<p>Perhaps the only truly novel and potentially confusing aspect of the syntax for a loop is the role of the new variable that is defined after the <code class="docutils literal notranslate"><span class="pre">for</span></code> keyword (in this case <code class="docutils literal notranslate"><span class="pre">item</span></code>). This variable stands for each item in whatever list follows the <code class="docutils literal notranslate"><span class="pre">in</span></code> keyword (in this case <code class="docutils literal notranslate"><span class="pre">shopping_list</span></code>). As was the case for <a class="reference internal" href="glossary.html#comprehension"><span class="std std-doc">comprehensions</span></a>, the variable that we define after <code class="docutils literal notranslate"><span class="pre">for</span></code> can have any valid variable name that we like. It does not have to be <code class="docutils literal notranslate"><span class="pre">item</span></code>. It matters only that we be consistent in referring to this same variable name wherever we mean ‘the current item in the list’.</p>
+<p>So for example we could define it as something arbitrary like <code class="docutils literal notranslate"><span class="pre">x</span></code>, and the effect would be the same so long as we also refer to <code class="docutils literal notranslate"><span class="pre">x</span></code> among the commands that are indented after the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Next item of shopping:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Next item of shopping:
+eggs
+Next item of shopping:
+bacon
+Next item of shopping:
+black pudding
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iterables">
+<h2>Iterables<a class="headerlink" href="#iterables" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data type</span></a> containing items that can be ‘worked through’ one by one is called an ‘<a class="reference internal" href="glossary.html#iterable"><span class="std std-doc">iterable</span></a>’ type. <a class="reference internal" href="glossary.html#list"><span class="std std-doc">Lists</span></a> are iterable, as are <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuples</span></a>.</p>
+<p><a class="reference internal" href="glossary.html#string"><span class="std std-doc">Strings</span></a>, too, are iterable. If we put a string variable in a <code class="docutils literal notranslate"><span class="pre">for</span></code> statement, the resulting loop will iterate through each character in the string. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred&#39;</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Next letter in this name:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Next letter in this name:
+M
+Next letter in this name:
+i
+Next letter in this name:
+l
+Next letter in this name:
+d
+Next letter in this name:
+r
+Next letter in this name:
+e
+Next letter in this name:
+d
+</pre></div>
+</div>
+</div>
+</div>
+<p>Some <a class="reference internal" href="glossary.html#type"><span class="std std-doc">types</span></a> are obviously not iterable. We can’t iterate with a single number, as there are no multiple values to go through. The resulting <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error message</span></a> is pretty clear.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="mi">42</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">3</span><span class="n">bceb7bd5fef</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="mi">42</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: &#39;int&#39; object is not iterable
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="range">
+<h3>Range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h3>
+<p>The curious range type that we <a class="reference internal" href="sequences_mappings.html#range"><span class="std std-ref">learned about in the lesson on sequences</span></a> is iterable. Iteration with <code class="docutils literal notranslate"><span class="pre">range()</span></code> iterates through the integers in the specified range (remember, up to <em>but not including</em> the specified end of the range). So to go through the numbers 1 to 10 inclusive, use <code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">11)</span></code>.</p>
+<p>For example, to print out the squares of all these numbers we would write:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;squared is&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 squared is 1
+2 squared is 4
+3 squared is 9
+4 squared is 16
+5 squared is 25
+6 squared is 36
+7 squared is 49
+8 squared is 64
+9 squared is 81
+10 squared is 100
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<p>And <a class="reference internal" href="glossary.html#dictionary"><span class="std std-doc">dictionaries</span></a> are iterable as well. By default, a loop through a dictionary iterates through the <a class="reference internal" href="glossary.html#key"><span class="std std-doc">keys</span></a> in the dictionary, not the values stored under those keys:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span><span class="s1">&#39;USA&#39;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name
+age
+location
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want instead to iterate through the values, then we can use the dictionary <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> <code class="docutils literal notranslate"><span class="pre">values()</span></code>, which gets only the values from the dictionary (remember the ‘<code class="docutils literal notranslate"><span class="pre">.</span></code>’ syntax for using methods):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">info</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mildred Bonk
+22
+USA
+</pre></div>
+</div>
+</div>
+</div>
+<p>More often, if we use a dictionary in a loop we would like to go through both the keys and the values. The dictionary method <code class="docutils literal notranslate"><span class="pre">items()</span></code> gives us each entire <em>item</em> in the dictionary, and each of these items is a pair consisting of a key together with the value associated with that key. To make use of more than one variable in our loop, we must separate the two with a comma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name : Mildred Bonk
+age : 22
+location : USA
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="enumerate">
+<h3>enumerate<a class="headerlink" href="#enumerate" title="Permalink to this headline">¶</a></h3>
+<p>The syntax here starts to look a bit more complex. So let’s consider another example in which we have more than one variable following the <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>The Python <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in</span></a> function <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> is like an equivalent of <code class="docutils literal notranslate"><span class="pre">items()</span></code> but for lists (or other <a class="reference internal" href="glossary.html#iterable"><span class="std std-doc">iterables</span></a>) instead of just for dictionaries. If we iterate with <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code>, then the pairs that we get consist of the integer index in the list (i.e. the numbers <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, and so on) together with the corresponding item in the list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 : eggs
+2 : bacon
+3 : black pudding
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indentation-again">
+<h2>Indentation again<a class="headerlink" href="#indentation-again" title="Permalink to this headline">¶</a></h2>
+<p>To once again test our understanding of the role of <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indentation</span></a> in Python <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a>, let’s look at an example of a <em>loop within a loop</em>. This is similar in structure to the example program <span class="xref myst">hoff.py</span> from the <a class="reference internal" href="conditions.html"><span class="doc std std-doc">previous lesson</span></a>, in which we saw some conditions ‘nested’ inside other conditions.</p>
+<p>Here it is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spelling_bee</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mississippi&#39;</span><span class="p">,</span> <span class="s1">&#39;isosceles&#39;</span><span class="p">,</span> <span class="s1">&#39;cosecant&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">spelling_bee</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The letters in &#39;</span><span class="si">{}</span><span class="s2">&#39; are:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">letter</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;End of the spelling bee.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The letters in &#39;Mississippi&#39; are:
+1 : M
+2 : i
+3 : s
+4 : s
+5 : i
+6 : s
+7 : s
+8 : i
+9 : p
+10 : p
+11 : i
+
+The letters in &#39;isosceles&#39; are:
+1 : i
+2 : s
+3 : o
+4 : s
+5 : c
+6 : e
+7 : l
+8 : e
+9 : s
+
+The letters in &#39;cosecant&#39; are:
+1 : c
+2 : o
+3 : s
+4 : e
+5 : c
+6 : a
+7 : n
+8 : t
+
+End of the spelling bee.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The outer loop goes through all the items in the list <code class="docutils literal notranslate"><span class="pre">spelling_bee</span></code>. The lines that are indented to mark them as belonging to the outer loop include one line that itself begins a new loop, going through each letter in the string <code class="docutils literal notranslate"><span class="pre">word</span></code>. The single line that is associated with this inner loop (line 6) is indented yet further, to indicate that it should be repeated for every single letter, not just for every single item. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement on line 7 (which serves simply to introduce a blank line in the output, for the sake of neatness) is back at the outer loop’s level of indentation, so it is repeated only for each word. Were line 7 to be indented as far as line 6, there would be a blank line in the output after every single letter.</p>
+<p>So, armed with this knowledge, we are ready to have a first stab at writing a basic version of our target program. We begin by defining the name of the secret animal and the list of hints (we won’t write all six hints yet, to keep the example short). Then we use a loop to go through the hints, ask for a guess after each one, then check the guess and print out an appropriate message depending on whether it was correct or not.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correct_answer</span> <span class="o">=</span> <span class="s1">&#39;african swallow&#39;</span>
+
+<span class="n">hints</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;weighs five ounces&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;beats its wings 43 times per second&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;is not migratory&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m thinking of an animal.&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hints</span><span class="p">:</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hint: It </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is it? &#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">correct_answer</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No, that&#39;s not it.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The end.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I&#39;m thinking of an animal.
+Hint: It weighs five ounces.
+What is it? european swallow
+No, that&#39;s not it.
+Hint: It beats its wings 43 times per second.
+What is it? african swallow
+Correct!
+Hint: It is not migratory.
+What is it? But I got it right already!
+No, that&#39;s not it.
+The end.
+</pre></div>
+</div>
+</div>
+</div>
+<p>This initial version of our target program doesn’t work quite as we want, as we can see from the example run above. Here, the user guessed the animal correctly already after the second hint. Nonetheless, our program continued iterating through the remaining hints. This is only to be expected. There is no instruction in our program that says ‘stop’ if the user guesses correctly, so Python obligingly finishes the loop that we asked for.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">break</span></code> <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> ‘breaks out’ of the current loop, even if not all of the requested items have yet been processed.</p>
+<p>So to fix this bug, we just need to add a <code class="docutils literal notranslate"><span class="pre">break</span></code> in the right place in our program (line 10 below):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m thinking of an animal.&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hints</span><span class="p">:</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hint: It </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is it? &#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">correct_answer</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No, that&#39;s not it.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The end.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I&#39;m thinking of an animal.
+Hint: It weighs five ounces.
+What is it? african swallow
+Correct!
+The end.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great!</p>
+<p>You might already be able to see how we can use <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">break</span></code> in much the same way to implement the ‘quit’ option that we wanted to include in the program. If you would like to test your understanding, open yourself a new text file in the Spyder editor, copy in the program so far from the sections above, and then see whether you can add in the quit option. Remember to test your attempt carefully by running it a few times and entering different user input when prompted in the console.</p>
+</div>
+<div class="section" id="while-loops">
+<h2>while loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
+<p>There is one major ingredient still missing from our program so far. We said that if the user fails to type anything at all (i.e. they just press ‘return’ in the console), then we want to keep asking them for a guess until they at least type something.</p>
+<p>First of all, let’s check for ourselves what even happens to the <code class="docutils literal notranslate"><span class="pre">guess</span></code> variable if the user enters nothing at all after the <code class="docutils literal notranslate"><span class="pre">input()</span></code> prompt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is it? &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is it? 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guess</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see that the <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a> of <code class="docutils literal notranslate"><span class="pre">input()</span></code> is still a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a>, even if the user does not enter any characters. It is just an ‘empty’ string: <code class="docutils literal notranslate"><span class="pre">''</span></code>. So the condition that we need to check in order to decide to ask the user again is whether their guess is an empty string:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guess</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are in fact a few functionally equivalent ways in which we could check this. For example, we could also ask whether the length of the <code class="docutils literal notranslate"><span class="pre">guess</span></code> string is <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or if you were paying attention when we learned about the conventions by which other <a class="reference internal" href="glossary.html#type"><span class="std std-doc">types</span></a> are converted to <a class="reference internal" href="glossary.html#boolean"><span class="std std-doc">boolean</span></a> <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> values, you may remember that empty strings are treated as being ‘false’. So in fact we can just apply logical negation to the <code class="docutils literal notranslate"><span class="pre">guess</span></code> string itself to find out if it is empty:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="n">guess</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>That last way of doing it is a bit unintuitive though. And <code class="docutils literal notranslate"><span class="pre">len(guess)</span> <span class="pre">==</span> <span class="pre">0</span></code> doesn’t make it absolutely clear that we are dealing with an empty <em>string</em>. All else being equal, it is better to be explicit about our intentions and expectations when we write a program. If we want to check whether the user’s input was an empty string, then let’s check explicitly for exactly that.</p>
+<p>So here is a snippet of our program to test out just the part where we re-ask the user for a guess if they didn’t enter one:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is it? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the name of an animal: &#39;</span><span class="p">)</span>
+
+<span class="n">guess</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is it? 
+Enter the name of an animal: european swallow
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;european swallow&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>That works out ok. But the problem we have is that a standard <code class="docutils literal notranslate"><span class="pre">if</span></code> statement only checks the condition <em>once</em>. If the user has fallen asleep with excitement and is resting their forehead against the return key on their keyboard, then the program will still accept their second empty guess:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is it? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the name of an animal: &#39;</span><span class="p">)</span>
+
+<span class="n">guess</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is it? 
+Enter the name of an animal: 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This bug can be fixed with yet another new <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a>. The <code class="docutils literal notranslate"><span class="pre">while</span></code> keyword creates a new kind of <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a> a bit like the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop that we learned about above. But instead of repeating the indented lines once for every item in a list (or other <a class="reference internal" href="glossary.html#iterable"><span class="std std-doc">iterable</span></a>, a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop repeats the lines for as long as a given condition is true. In this sense, a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is a combination of a loop and an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. The syntax is exactly the same as for an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, only with <code class="docutils literal notranslate"><span class="pre">while</span></code> in place of <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
+<p>Let’s see this applied to our snippet:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is it? &#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the name of an animal: &#39;</span><span class="p">)</span>
+
+<span class="n">guess</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is it? 
+Enter the name of an animal: 
+Enter the name of an animal: european swallow
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;european swallow&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>Be careful with <code class="docutils literal notranslate"><span class="pre">while</span></code>. Because it repeats certain lines of our program indefinitely, we can get stuck running those lines <em>forever</em> if we forget to put something into the indented text of the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop that could stop it. When you write a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, check that among the indented lines below it there is something that can stop the loop, either a <code class="docutils literal notranslate"><span class="pre">break</span></code>, or a command that can make the condition in the <code class="docutils literal notranslate"><span class="pre">while</span></code> control statement false.</p>
+<p>If you run your program and you discover that you have made a mistake and it wants to run until the end of the universe, remember that you can stop a running program either by clicking the red stop square at the top of the console, or by pressing the key combination <em>ctrl</em> + <em>c</em>.</p>
+<p>That’s it, we now know everything we need to know in order to write our target program. At least in principle. If you feel like a challenge, you might like to have a go at finishing off the program yourself before you take a look at the finished example, <span class="xref myst">guess_the_animal.py</span>.</p>
+<p>If you want to add some extra hints about African swallows, you can find some facts about them <a class="reference external" href="http://montypython.50webs.com/scripts/Holy_Grail/Scene1.htm">here</a>.</p>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Open up our example program <span class="xref myst">guess_the_animal.py</span> in the Spyder editor. Or, if you already wrote your own version of the program and you have made it work correctly, open that. Modify the program to add the following new features:</p>
+<div class="section" id="a">
+<h4>a)<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h4>
+<p>Before each hint is printed, print a heading that announces which round of the game the user is currently on. So for example the printout for the first round should look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Round 1 ...
+Hint: It weighs five ounces.
+
+What is it (or type &#39;q&#39; to quit)?
+</pre></div>
+</div>
+</div>
+<div class="section" id="b">
+<h4>b)<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h4>
+<p>After each guess, tell the user how many hints remain. So for example after the first guess the printout should look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>What is it (or type &#39;q&#39; to quit)? gerbil
+No, that&#39;s not it.
+4 hints remaining.
+</pre></div>
+</div>
+</div>
+<div class="section" id="c">
+<h4>c)<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<p>At the end of the game, tell the user how many guesses they needed before getting the correct answer. Omit this if the user did not guess correctly at all. So for example if they got it right already on the second round, the printout at the end should look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Correct! You got it after 2 guesses.
+It was the african swallow.
+</pre></div>
+</div>
+<p>For all of these modifications, the program should continue to work correctly if you later add more hints to the <code class="docutils literal notranslate"><span class="pre">hints</span></code> list at the top of the file.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Write a new program. The program helps the user to remember their multiplication tables. Ask the user to enter a number. Then print out for them a helpful text telling them all the multiples of that number, from 1 up to and including 12.</p>
+<p>So for example the program might look like this when run in the console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">number</span> <span class="n">to</span> <span class="n">revise</span> <span class="n">your</span> <span class="n">multiplication</span> <span class="n">tables</span><span class="p">:</span> <span class="mi">7</span>
+
+<span class="mi">1</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">7</span>
+<span class="mi">2</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">14</span>
+<span class="mi">3</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">21</span>
+<span class="mi">4</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">28</span>
+<span class="mi">5</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">35</span>
+<span class="mi">6</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">42</span>
+<span class="mi">7</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">49</span>
+<span class="mi">8</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">56</span>
+<span class="mi">9</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">63</span>
+<span class="mi">10</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">70</span>
+<span class="mi">11</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">77</span>
+<span class="mi">12</span> <span class="n">times</span> <span class="mi">7</span> <span class="ow">is</span><span class="p">:</span> <span class="mi">84</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="conditions.html" title="previous page">Conditions</a>
+    <a class='right-next' id="next-link" href="functions.html" title="next page">Functions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

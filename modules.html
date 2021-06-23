@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The standard library" href="standard_library.html" />
+    <link rel="prev" title="Functions" href="functions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/modules.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fmodules.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/modules.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/modules.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#debugging">
+     Debugging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#namespaces">
+     Namespaces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#star-imports">
+     Star imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selective-imports">
+     Selective imports
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods-revisited">
+   Methods revisited
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#special-names">
+   Special names
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-variables">
+     Special variables
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#name">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         __name__
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-methods">
+     Special methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<p>In the <a class="reference internal" href="functions.html"><span class="doc std std-doc">previous lesson</span></a> we learned how to define our own <a class="reference internal" href="glossary.html#function"><span class="std std-doc">functions</span></a>. I mentioned the possibility of re-using functions in a different file from the file in which the functions are defined. This is the main thing that we will learn about in this lesson.</p>
+<p>You may reasonably ask why we would want to do this. If we are writing a program that requires one or more custom-defined functions, why not just define them in the same file that contains the program in which they are used? After all, this simpler one-file structure is the way that the <span class="xref myst">fun_facts.py</span> example program is organized, and that program was written by a well-respected expert programmer.</p>
+<p>For a simple program like <em>fun_facts.py</em>, a single file is fine, and is even a good idea. Multiple files are unnecessary for simple, short programs. But for more complex programs, separating functions off from the rest of the program has some advantages:</p>
+<ul class="simple">
+<li><p><strong>Clarity</strong>. The functions file shows the algorithmic workings of each component of the program, but the main program file shows how those components are combined to create the overall program structure. We know which file to go to if we want to change either the overall structure or the details of the program.</p></li>
+<li><p><strong>Portability</strong>. A file that contains only functions can be re-used by a different program. The alternative, copying and pasting the function definition into every new program that needs it, is prone to mistakes and makes our programs inflexible (‘<a class="reference external" href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>’).</p></li>
+</ul>
+<p>A Python file that contains an actual program that will ‘do something’ when run is often termed a <a class="reference internal" href="glossary.html#script"><span class="std std-doc">script</span></a>, because it is providing the Python <a class="reference internal" href="glossary.html#interpreter"><span class="std std-doc">interpreter</span></a> with line-by-line instructions telling it what to do, like the script for an actor. A file that instead contains only function definitions (and possibly also some variables) intended to be used elsewhere is often termed a <a class="reference internal" href="glossary.html#module"><span class="std std-doc">module</span></a>. A basic structure for a simple multi-file Python program is to have one module file providing some functions, along with a script file (the ‘main’ file) that gets those functions and actually does something with them.</p>
+<p>Let’s see how this works, using the <span class="xref myst">initials.py</span> file that we saw in the previous lesson. Take a look at the example program <span class="xref myst">ids.py</span>. This program makes use of the <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> function that is defined in <em><a class="reference external" href="http://initials.py">initials.py</a></em>.</p>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<p>We can almost already create a multi-file program given what we have learned so far, and there is very little in <em><a class="reference external" href="http://ids.py">ids.py</a></em> that is unfamiliar. We know how to use functions, and we know how to use additional <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a> to determine what actions are taken when, how often, and so on.</p>
+<p>The only new ingredient is how to ‘get’ the contents of one file into another. This is fairly easy. The <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> <code class="docutils literal notranslate"><span class="pre">import</span></code> runs another Python file and then makes its contents (i.e. any functions or variables that were created in the course of running it) available in the current program. The <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for importing the contents of a file is simply to write <code class="docutils literal notranslate"><span class="pre">import</span></code> followed by the name of the file, without the <em>.py</em> file extension.</p>
+<p>So this is how we can import the contents of <em><a class="reference external" href="http://initials.py">initials.py</a></em> into another Python program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">initials</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see this command on <span class="xref myst">line 12</span> of <em><a class="reference external" href="http://ids.py">ids.py</a></em>.</p>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>Note that in order for an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to work, the file that we are importing must be located in the directory that we are working in. This is the directory in which our main program file is saved. So if you are writing your own example program in the Spyder editor to test the example commands as we go along, make sure that your copy of <em><a class="reference external" href="http://initials.py">initials.py</a></em> is located in the same directory in which you have saved your example program.</p>
+<p>If we try to import a module file that does not exist or is not in the current directory, we get an error:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nonexistent_module</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">696</span><span class="n">f280e00ee</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">nonexistent_module</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;nonexistent_module&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note also that module filenames should not contain any spaces. Otherwise when we try to import them, Python sees something that looks like two or more separate names, and this is not valid Python <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a>:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">badly</span> <span class="n">named</span> <span class="n">module</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-4-5524f6874f05&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="kn">import</span> <span class="nn">badly</span> <span class="n">named</span> <span class="n">module</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h3>
+<p>I promised that after <a class="reference internal" href="glossary.html#import"><span class="std std-doc">importing</span></a> our <em><a class="reference external" href="http://initials.py">initials.py</a></em> file, the function that it defines would be available for us to use. This doesn’t seem to be the case. <em><a class="reference external" href="http://initials.py">initials.py</a></em> contains a function called <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code>, but this function still doesn’t seem to be available:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">c5a44f04dc80</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;get_initials&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is just one more missing ingredient (I really promise this time, only one more). Instead of just taking everything from the imported file and putting it all into individual variables that we can use in the normal way, Python’s <code class="docutils literal notranslate"><span class="pre">import</span></code> puts all the imported contents into their own ‘<a class="reference internal" href="glossary.html#namespace"><span class="std std-doc">namespace</span></a>’. A namespace is a bit like a folder for variables. It stores multiple variables all under the same name, for neatness of organization. We can access individual variables within a namespace by writing first the name of the namespace (which here is simply the name of the imported module), followed by a dot <code class="docutils literal notranslate"><span class="pre">.</span></code>, like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">initials</span><span class="o">.</span><span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;mb&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is what we see on <span class="xref myst">lines 20 and 21</span> of <em><a class="reference external" href="http://ids.py">ids.py</a></em>, where the <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> function from <em><a class="reference external" href="http://initials.py">initials.py</a></em> is first used.</p>
+<p>Isn’t this just an annoying extra complexity, another chance to get something wrong when we write our programs? Like many such things, Python’s use of namespaces appears an annoyance at first but is really a blessing in disguise once we start writing more complex programs.</p>
+<p>Imagine that you have a very long program containing a lot of variables. And then you decide that you want to import into this program a very useful but also very long <a class="reference internal" href="glossary.html#module"><span class="std std-doc">module</span></a> that provides some great functions that you need. If <code class="docutils literal notranslate"><span class="pre">import</span></code> simply dumped everything from both files together in the same workspace, then you would need to first check carefully and make sure that none of the names of variables or functions in one file were the same as those in the other, because if they were, the names would ‘clash’ and one would overwrite the other. By keeping imported things in a separate namespace, such accidental overwrites are avoided. It is entirely possible to import a module (for example called <em>my_module.py</em>) containing a function or variable called <code class="docutils literal notranslate"><span class="pre">x</span></code> and also to have something called <code class="docutils literal notranslate"><span class="pre">x</span></code> in your main program. The former will be available as <code class="docutils literal notranslate"><span class="pre">my_module.x</span></code> whereas the latter will be available simply as <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Likewise, imagine that you need to import the contents of more than one module. Again, if these modules unfortunately happen to contain things with the same name, they would overwrite each other if simply dumped into the main workspace. But thanks to namespaces, clashing names are totally fine; for example one function can be available as <code class="docutils literal notranslate"><span class="pre">module_a.useful_function()</span></code> and the other as <code class="docutils literal notranslate"><span class="pre">module_b.useful_function()</span></code>.</p>
+</div>
+<div class="section" id="star-imports">
+<h3>Star imports<a class="headerlink" href="#star-imports" title="Permalink to this headline">¶</a></h3>
+<p>If we really want to, it is possible to bypass <code class="docutils literal notranslate"><span class="pre">import</span></code>’s creation of separate namespaces for imported modules. The <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> <code class="docutils literal notranslate"><span class="pre">from</span></code>, together with the <code class="docutils literal notranslate"><span class="pre">*</span></code> symbol, imports everything from a module into the main workspace of the current program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">initials</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And now the contents of <em><a class="reference external" href="http://initials.py">initials.py</a></em> are available in the normal way without prepending <code class="docutils literal notranslate"><span class="pre">initials.</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;mb&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is sometimes termed a ‘star import’, because of the use of the ‘star’ symbol <code class="docutils literal notranslate"><span class="pre">*</span></code> (you may also see it called a ‘<a class="reference internal" href="glossary.html#wildcard"><span class="std std-doc">wildcard</span></a>’). In many contexts in programming, the <code class="docutils literal notranslate"><span class="pre">*</span></code> symbol stands for ‘everything’ or ‘anything’. So the command above says ‘import everything from <em><a class="reference external" href="http://initials.py">initials.py</a></em> (and dump it all into the main workspace)’.</p>
+<p>The star import shortcut is there if you really need it, but the general consensus among Python users is that it is not a good idea. It erases all the benefits that namespaces bring for the robustness and clarity of our program. My advice is to reserve it only for very short programs that only import one module, and whose purpose is simply to demonstrate the use of that one module.</p>
+<p>You will sometimes see star imports used in online examples or demonstrations, to help keep a demonstration short (<a class="reference external" href="https://plotnine.readthedocs.io/en/stable/generated/plotnine.geoms.geom_bar.html#examples">here</a> is one example). This is fine for a quick demo, but don’t copy it into your own programs.</p>
+</div>
+<div class="section" id="selective-imports">
+<h3>Selective imports<a class="headerlink" href="#selective-imports" title="Permalink to this headline">¶</a></h3>
+<p>A better use of the <code class="docutils literal notranslate"><span class="pre">from</span></code> keyword is to select just one thing that we would like to import from a module. For example, we can import just the <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> function from <em><a class="reference external" href="http://initials.py">initials.py</a></em> (though this is somewhat redundant here, since <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> is the only thing in <em><a class="reference external" href="http://initials.py">initials.py</a></em> anyway):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">initials</span> <span class="kn">import</span> <span class="n">get_initials</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A ‘selective import’ like this also makes the individual function <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> available directly without having to use a namespace.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;mb&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>But note that there is a big difference in clarity when compared to the star import. A selective <code class="docutils literal notranslate"><span class="pre">import</span></code> statement at least says explicitly <em>what</em> we are importing from the module. So if we begin our main program with <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">initials</span> <span class="pre">import</span> <span class="pre">get_initials</span></code>, we and our collaborators can at least be sure when reading the remainder of the program that <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> refers to something that we have imported from <em><a class="reference external" href="http://initials.py">initials.py</a></em> (and that we haven’t imported anything else from there). By contrast, with the star import no part of our program explicitly states which functions or variables are coming from where.</p>
+</div>
+</div>
+<div class="section" id="methods-revisited">
+<h2>Methods revisited<a class="headerlink" href="#methods-revisited" title="Permalink to this headline">¶</a></h2>
+<p>We have in fact already met <a class="reference internal" href="glossary.html#namespace"><span class="std std-doc">namespaces</span></a> in a slightly different guise. In the <a class="reference internal" href="types.html#methods"><span class="std std-ref">lesson on types</span></a> we learned about <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a>: functions that are ‘attached’ to only one <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> of variable. We focused mainly on <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> methods, because strings have lots of methods available to them.</p>
+<p>Recall how the syntax for methods works:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="s1">&#39;Mildred Bonk&#39;</span>
+
+<span class="n">user_name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MILDRED BONK&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is the same ‘dot’ notation that we just used for getting something from an imported module’s namespace, because the underlying mechanism is essentially the same. Each variable in Python has its own namespace, and in that namespace are stored links to the methods available for variables of that type.</p>
+<p>Likewise, just as we used the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function to find out what methods a variable has available to it, we can also use <code class="docutils literal notranslate"><span class="pre">dir()</span></code> to find out the contents of an imported module’s namespace (and again, we can ignore for now the ‘special’ contents surrounded by double underscores <code class="docutils literal notranslate"><span class="pre">__</span> <span class="pre">__</span></code>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">initials</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__builtins__&#39;,
+ &#39;__cached__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__file__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;get_initials&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we have imported a new module, it is a good idea to go to the console and use <code class="docutils literal notranslate"><span class="pre">dir()</span></code> to see what things it has made available to us.</p>
+</div>
+<div class="section" id="special-names">
+<h2>Special names<a class="headerlink" href="#special-names" title="Permalink to this headline">¶</a></h2>
+<p>By now you will of course be burning with curiosity about those things that keep appearing surrounded by double underscores <code class="docutils literal notranslate"><span class="pre">__</span> <span class="pre">__</span></code>. What are those? We have encountered them twice: once when we used <code class="docutils literal notranslate"><span class="pre">dir()</span></code> to see a list of <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a> available for a variable, and once again just now when we used <code class="docutils literal notranslate"><span class="pre">dir()</span></code> to see a list of the contents of the <a class="reference internal" href="glossary.html#namespace"><span class="std std-doc">namespace</span></a> of an imported <a class="reference internal" href="glossary.html#module"><span class="std std-doc">module</span></a>.</p>
+<p>Python uses the ‘double underscore’ (you may sometimes see this called a ‘<a class="reference internal" href="glossary.html#dunder"><span class="std std-doc">dunder</span></a>’) to mark something as being involved in the ‘behind the scenes’ inner workings of a Python program. These things are not normally intended to be used directly, which is why I have so far instructed you on pain of benevolent chastisement to ignore them. However, we are now ready to learn a little bit more about these ‘special’ names.</p>
+<div class="section" id="special-variables">
+<h3>Special variables<a class="headerlink" href="#special-variables" title="Permalink to this headline">¶</a></h3>
+<p>Take a look at the list of the contents of the <code class="docutils literal notranslate"><span class="pre">initials</span></code> namespace above, and compare it with the actual contents of <span class="xref myst">initials.py</span>. You will notice that the things that appear enclosed in double underscores in the list above are not variables that are <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assigned</span></a> explicitly anywhere in the <em><a class="reference external" href="http://initials.py">initials.py</a></em> file.</p>
+<p>Python has added these special variables automatically, and does so for every Python file that we run or <a class="reference internal" href="glossary.html#import"><span class="std std-doc">import</span></a>. They contain various pieces of information that track the role of that file in our overall program. For example, the automatically-created <code class="docutils literal notranslate"><span class="pre">__file__</span></code> variable stores the full <a class="reference internal" href="glossary.html#path"><span class="std std-doc">path</span></a> to the file that the contents of a namespace came from.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">initials</span><span class="o">.</span><span class="vm">__file__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/lt/GitHub/introduction-to-programming/content/examples/initials.py&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>And <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> stores the <a class="reference internal" href="glossary.html#docstring"><span class="std std-doc">docstring</span></a> that we wrote for the file (if we were diligent and did so):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">initials</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module providing a single function for getting the intials from a name.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="name">
+<h4><code class="docutils literal notranslate"><span class="pre">__name__</span></code><a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h4>
+<p>It is rare that we will want to refer to these special variables in a simple program. But there is one common exception to this. Take a look at <span class="xref myst">line 43</span> of <em><a class="reference external" href="http://initials.py">initials.py</a></em>. This line refers to a special variable, called <code class="docutils literal notranslate"><span class="pre">__name__</span></code>.</p>
+<p>To understand how this special variable is being used here, let’s first look at its contents:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">initials</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;initials&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The somewhat underwhelming answer is that the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> special variable stores the name of an imported module’s namespace, which in the case of the <em>initials</em> module is… wait for it… <code class="docutils literal notranslate"><span class="pre">'initials'</span></code>!</p>
+<p>This seems at first a completely useless thing to know. To even access the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> variable in a namespace, we need to already know the namespace’s name, because this is what we must write before the dot.</p>
+<p>The usefulness of the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> variable only becomes apparent when we see what value it takes on when it does not find itself inside the namespace of an imported module, but instead finds itself in Python’s ‘main’ overall namespace. The main namespace is just the place that Python puts anything that we define while using the console or running a program. We can see the contents of the main namespace using the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function again, but with no input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a>. By default, the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function lists the contents of the main namespace. If we have been messing around for a while in the console creating a few variables or if we have run a program, there may be quite a few things in there:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
+ &#39;Out&#39;,
+ &#39;_&#39;,
+ &#39;_10&#39;,
+ &#39;_11&#39;,
+ &#39;_12&#39;,
+ &#39;_13&#39;,
+ &#39;_15&#39;,
+ &#39;_6&#39;,
+ &#39;_8&#39;,
+ &#39;__&#39;,
+ &#39;___&#39;,
+ &#39;__builtin__&#39;,
+ &#39;__builtins__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;_dh&#39;,
+ &#39;_i&#39;,
+ &#39;_i1&#39;,
+ &#39;_i10&#39;,
+ &#39;_i11&#39;,
+ &#39;_i12&#39;,
+ &#39;_i13&#39;,
+ &#39;_i14&#39;,
+ &#39;_i15&#39;,
+ &#39;_i16&#39;,
+ &#39;_i2&#39;,
+ &#39;_i3&#39;,
+ &#39;_i4&#39;,
+ &#39;_i5&#39;,
+ &#39;_i6&#39;,
+ &#39;_i7&#39;,
+ &#39;_i8&#39;,
+ &#39;_i9&#39;,
+ &#39;_ih&#39;,
+ &#39;_ii&#39;,
+ &#39;_iii&#39;,
+ &#39;_oh&#39;,
+ &#39;exit&#39;,
+ &#39;get_initials&#39;,
+ &#39;get_ipython&#39;,
+ &#39;initials&#39;,
+ &#39;os&#39;,
+ &#39;quit&#39;,
+ &#39;sys&#39;,
+ &#39;user_name&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ignore the various other weird things that Python has put in there for us and just note a few things that we recognize.</p>
+<p>First of all, among the ‘non-underscored’ things at the end of the list is the <code class="docutils literal notranslate"><span class="pre">user_name</span></code> string variable that we created earlier in the lesson. Python puts all the variables that we create into the main namespace.</p>
+<p>Likewise, the imported module <code class="docutils literal notranslate"><span class="pre">initials</span></code> is in there. As we saw above, <code class="docutils literal notranslate"><span class="pre">initials</span></code> is a subsidiary namespace that gathers everything that gets defined as a result of running <em><a class="reference external" href="http://initials.py">initials.py</a></em>. It itself is located in the main namespace, in conceptually the same way that a subfolder with its own file contents may be located in our ‘home folder’ on a computer.</p>
+<p>But most importantly, among the double-underscored special variables, there appears the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> variable that we just learned about. The main namespace has a <code class="docutils literal notranslate"><span class="pre">__name__</span></code> too. What is its <code class="docutils literal notranslate"><span class="pre">__name__</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="vm">__name__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;__main__&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The main namespace (i.e. the place where everything goes that wasn’t imported from elsewhere) is called <code class="docutils literal notranslate"><span class="pre">'__main__'</span></code>.</p>
+<p>We can make use of this fact within our programs to find out whether our program has been imported into another program (in which case it will have its own <code class="docutils literal notranslate"><span class="pre">__name__</span></code>, such as <code class="docutils literal notranslate"><span class="pre">'initials'</span></code> or <code class="docutils literal notranslate"><span class="pre">'my_module'</span></code> or whatever) or whether it is being run directly on its own (in which case its <code class="docutils literal notranslate"><span class="pre">__name__</span></code> will be <code class="docutils literal notranslate"><span class="pre">'__main__'</span></code>).</p>
+<p>The short educational program <span class="xref myst">slim_shady.py</span> demonstrates this difference in action. Let’s see first of all what happens if we import <em>slim_shady.py</em> as a module:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">slim_shady</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi!
+My __name__ is ... What?
+My __name__ is ... Who?
+My __name__ is ... slim_shady
+</pre></div>
+</div>
+</div>
+</div>
+<p>The file is run. And since it contains some <code class="docutils literal notranslate"><span class="pre">print()</span></code> statements and a reference to the automatically-created <code class="docutils literal notranslate"><span class="pre">__name__</span></code> variable, it prints for us the value that Python has assigned into <code class="docutils literal notranslate"><span class="pre">__name__</span></code>.</p>
+<p>Now open up <em>slim_shady.py</em> in the Spyder editor and instead of importing it, just run it on its own, in the same way that we have been running all our programs up until now, by clicking the ‘Run’ button. When <em>slim_shady.py</em> is run as its own program, its <code class="docutils literal notranslate"><span class="pre">__name__</span></code> becomes <code class="docutils literal notranslate"><span class="pre">'__main__'</span></code>.</p>
+<p>You may now be asking yourself a question that has become quite familiar: This is amazing fun, but what use is it?</p>
+<p>Take a look at <span class="xref myst">line 44</span> of the <em><a class="reference external" href="http://initials.py">initials.py</a></em> module. This line applies a <a class="reference internal" href="glossary.html#condition"><span class="std std-doc">condition</span></a>, which is something that we are already familiar with. The condition checks whether the value of <code class="docutils literal notranslate"><span class="pre">__name__</span></code> is <code class="docutils literal notranslate"><span class="pre">'__main__'</span></code>, and so is effectively asking: ‘Am I being run as the main program (or am I just being imported into another program)?’ This means that the indented lines following the condition will only be run if we have run the file as its own program, not if we import the file into another program. Try it out. Open <em><a class="reference external" href="http://initials.py">initials.py</a></em> in the Spyder editor and run it as a stand-alone program by just clicking ‘run’. You will see the results of the final two <code class="docutils literal notranslate"><span class="pre">print()</span></code> statements displayed in the console. Note that we did not see these when we <a class="reference internal" href="glossary.html#import"><span class="std std-doc">imported</span></a> <em><a class="reference external" href="http://initials.py">initials.py</a></em> earlier.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__':</span></code> condition can be useful for us as programmers while developing and testing a <a class="reference internal" href="glossary.html#module"><span class="std std-doc">module</span></a>. If we place a few quick checks of our module’s behavior beneath this condition, we can keep checking that our module still works as desired each time we make improvements or additions, by just running the module as a <a class="reference internal" href="glossary.html#script"><span class="std std-doc">script</span></a>. But our tests won’t disturb us or our collaborators when we come to actually use the module by importing it into another program.</p>
+<p>This concept of building in tests to our programs and checking their behavior as we go along is an important one, and we will come back to it later.</p>
+</div>
+</div>
+<div class="section" id="special-methods">
+<h3>Special methods<a class="headerlink" href="#special-methods" title="Permalink to this headline">¶</a></h3>
+<p>We are done with the most important concepts for this lesson: <a class="reference internal" href="glossary.html#module"><span class="std std-doc">modules</span></a> and <a class="reference internal" href="glossary.html#namespace"><span class="std std-doc">namespaces</span></a>. For the sake of completeness, we will now also look briefly at the double-underscored <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a> that appear when we <code class="docutils literal notranslate"><span class="pre">dir()</span></code> a variable. But consider this bonus material; it provides a peek behind the scenes in Python and is included just to satisfy your curiosity.</p>
+<p>Let’s take a look at these special string methods again, using a new <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>__add__
+__class__
+__contains__
+__delattr__
+__dir__
+__doc__
+__eq__
+__format__
+__ge__
+__getattribute__
+__getitem__
+__getnewargs__
+__gt__
+__hash__
+__init__
+__init_subclass__
+__iter__
+__le__
+__len__
+__lt__
+__mod__
+__mul__
+__ne__
+__new__
+__reduce__
+__reduce_ex__
+__repr__
+__rmod__
+__rmul__
+__setattr__
+__sizeof__
+__str__
+__subclasshook__
+</pre></div>
+</div>
+</div>
+</div>
+<p>These special methods govern the behavior of a variable in different circumstances. For example, when we ‘add to’ a variable using the <code class="docutils literal notranslate"><span class="pre">+</span></code> <a class="reference internal" href="glossary.html#operator"><span class="std std-doc">operator</span></a>, behind the scenes the special method <code class="docutils literal notranslate"><span class="pre">__add__()</span></code> is <a class="reference internal" href="glossary.html#call"><span class="std std-doc">called</span></a>. So the following two statements achieve the same thing:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">+</span> <span class="s1">&#39; world!&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello world!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="s1">&#39; world!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello world!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Likewise, the <code class="docutils literal notranslate"><span class="pre">__eq__()</span></code> special method is called when we ask whether a variable is equal to something with <code class="docutils literal notranslate"><span class="pre">==</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">==</span> <span class="s1">&#39;Hello&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>And <code class="docutils literal notranslate"><span class="pre">__getitem__()</span></code> is called when we <a class="reference internal" href="glossary.html#index"><span class="std std-doc">index</span></a> a variable using the square parentheses <code class="docutils literal notranslate"><span class="pre">[]</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;H&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;H&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>You get the general idea.</p>
+<p>But please don’t understand from this that you should actually use these double-underscored methods in your programs. You should not. They are not intended to be used directly. We will only encounter them again much later on in our programming careers, when we come to define our own new <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data types</span></a>. Then we will need to define some of these special methods so that Python knows what to do with variables of our new type when we combine them with <code class="docutils literal notranslate"><span class="pre">+</span></code> or index them with <code class="docutils literal notranslate"><span class="pre">[]</span></code>. For now, forget about special methods.</p>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Revisit the <em><a class="reference external" href="http://words.py">words.py</a></em> program that you created in <a class="reference internal" href="functions.html#exercises"><span class="std std-doc">exercise 2 of the previous lesson</span></a> (or go and complete that exercise first if you haven’t yet).</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> special variable as we learned above to add a ‘test section’ to the end of the program. Use this section to generate a printout that confirms the correct behavior of the <code class="docutils literal notranslate"><span class="pre">first_n_words()</span></code> function using the test phrase <code class="docutils literal notranslate"><span class="pre">'Hello</span> <span class="pre">my</span> <span class="pre">name</span> <span class="pre">is</span> <span class="pre">Mildred.'</span></code> and each of the three values <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, and <code class="docutils literal notranslate"><span class="pre">9000</span></code> for the <code class="docutils literal notranslate"><span class="pre">n</span></code> argument.</p>
+<p>Check that this printout is generated only when you open <em><a class="reference external" href="http://words.py">words.py</a></em> and run it as its own program, and not when you <code class="docutils literal notranslate"><span class="pre">import</span></code> it.</p>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Write a new program. Your program should:</p>
+<ul class="simple">
+<li><p>Import the <em><a class="reference external" href="http://words.py">words.py</a></em> module that you created in <a class="reference internal" href="functions.html#exercises"><span class="std std-doc">exercise 2 of the previous lesson</span></a>.</p></li>
+<li><p>Ask the user to type in a number <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">first_n_words()</span></code> function from <em><a class="reference external" href="http://words.py">words.py</a></em> to print for the user the first <code class="docutils literal notranslate"><span class="pre">n</span></code> words of the first verse of <em>Always Look on the Bright Side of Life</em> by Monty Python:</p></li>
+</ul>
+<blockquote>
+<div><p>If life seems jolly rotten<br />
+There’s something you’ve forgotten<br />
+And that’s to laugh and smile and dance and sing<br />
+When you’re feeling in the dumps<br />
+Don’t be silly chumps<br />
+Just purse your lips and whistle, that’s the thing</p>
+</div></blockquote>
+<p>(Or you can use another short song if you prefer.)</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="functions.html" title="previous page">Functions</a>
+    <a class='right-next' id="next-link" href="standard_library.html" title="next page">The standard library</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

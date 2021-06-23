@@ -1,0 +1,1449 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sequences and mappings &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Conditions" href="conditions.html" />
+    <link rel="prev" title="Variables and data types" href="types.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/sequences_mappings.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fsequences_mappings.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/sequences_mappings.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/sequences_mappings.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequences">
+   Sequences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing">
+     Indexing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slicing">
+     Slicing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#degenerate-indices">
+       Degenerate indices
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comprehensions">
+     Comprehensions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#range">
+     Range
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#python-2">
+       Python 2
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mappings">
+   Mappings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     Dictionaries
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mutability-again">
+       Mutability again
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dictionary-methods">
+       Dictionary methods
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choosing-a-data-representation">
+   Choosing a data representation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuple-or-list">
+     Tuple or list?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-or-dictionary">
+     List or dictionary?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-data-representations">
+   Nested data representations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a">
+       a)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#b">
+       b)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#c">
+       c)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="sequences-and-mappings">
+<h1>Sequences and mappings<a class="headerlink" href="#sequences-and-mappings" title="Permalink to this headline">¶</a></h1>
+<p>In the <a class="reference internal" href="types.html"><span class="doc std std-doc">previous lesson</span></a>, we learned about some of the different data <a class="reference internal" href="glossary.html#type"><span class="std std-doc">types</span></a> that Python recognizes, and we saw that Python treats each of them differently. In this lesson we will continue learning about types, but we will focus on a few particular types that are especially useful for many programming tasks, and whose behavior it is worth considering in more detail.</p>
+<div class="section" id="sequences">
+<h2>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h2>
+<p>We have already met both <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuples</span></a> and <a class="reference internal" href="glossary.html#list"><span class="std std-doc">lists</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">,</span> <span class="s1">&#39;bread&#39;</span><span class="p">,</span> <span class="s1">&#39;Mazola&#39;</span><span class="p">,</span> <span class="s1">&#39;gravy mix&#39;</span><span class="p">]</span>
+<span class="n">shopping_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">,</span> <span class="s1">&#39;bread&#39;</span><span class="p">,</span> <span class="s1">&#39;Mazola&#39;</span><span class="p">,</span> <span class="s1">&#39;gravy mix&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tuples and lists are both <a class="reference internal" href="glossary.html#sequence"><span class="std std-doc">sequences</span></a>. That is, they can contain more than one value, and the values are arranged in order. It is the order of the values that allows us to pick them out individually, using positions in the tuple or list as <a class="reference internal" href="glossary.html#index"><span class="std std-doc">indices</span></a>. (Don’t forget Python’s zero-based indexing system.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;eggs&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
+<p>Let’s begin by looking at a few more ways of using indices to get items from a sequence. We will take a list as our example, but bear in mind that the examples work for tuples as well (you can create yourself a tuple in the Spyder console and check if you like).</p>
+<p>As well as literal numbers, we can use <a class="reference internal" href="glossary.html#variable"><span class="std std-doc">variables</span></a> as indices. In this case, the value of the variable is used as the index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_num</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">shopping_list</span><span class="p">[</span><span class="n">item_num</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;bacon&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Indices must be <a class="reference internal" href="glossary.html#integer"><span class="std std-doc">integers</span></a>. This makes sense; it is unclear what contents would be stored in ‘entry two-and-a-half’.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_num</span> <span class="o">=</span> <span class="mf">2.5</span>
+
+<span class="n">shopping_list</span><span class="p">[</span><span class="n">item_num</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">0</span><span class="n">f7724690886</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">item_num</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">shopping_list</span><span class="p">[</span><span class="n">item_num</span><span class="p">]</span>
+
+<span class="ne">TypeError</span>: list indices must be integers or slices, not float
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note the content of the error message above. Python does not accept <a class="reference internal" href="glossary.html#float"><span class="std std-doc">float</span></a> values as indices. This is the case even if the float represents a whole number.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_num</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="n">shopping_list</span><span class="p">[</span><span class="n">item_num</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">47</span><span class="n">a72c75adcf</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">item_num</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">shopping_list</span><span class="p">[</span><span class="n">item_num</span><span class="p">]</span>
+
+<span class="ne">TypeError</span>: list indices must be integers or slices, not float
+</pre></div>
+</div>
+</div>
+</div>
+<p>We saw in the last lesson that for basic arithmetic it often doesn’t matter whether we represent numbers as integers or as floats; Python will convert them as necessary. But indexing is a situation in which we definitely need integers.</p>
+<p>So if for some reason we end up with a float variable, but we want to use it as an index, we must first convert it to an integer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_num</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">item_num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">item_num</span><span class="p">)</span>
+
+<span class="n">shopping_list</span><span class="p">[</span><span class="n">item_num</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;black pudding&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>When might we end up with a float value while working with indices? One semi-common case in which this can occur is if we want to get entries that are part way through the sequence, for example half way. In order to find the halfway point, we can divide the length of the sequence by two. But this will result in a non-whole number if the sequence has an odd number of items (and in fact, as we have seen, the result of division is always a float even if the result is a whole number).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_items</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+<span class="n">halfway</span> <span class="o">=</span> <span class="n">n_items</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">halfway</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">halfway</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.5
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we must convert the result back into an integer in order to use it as an index. This also ‘rounds down’ the number to its whole part.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">halfway</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">halfway</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">halfway</span><span class="p">)</span>
+
+<span class="n">shopping_list</span><span class="p">[</span><span class="n">halfway</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;sausages&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using negative numbers, we can get entries counting from the end of a sequence rather than from the beginning. So entry <code class="docutils literal notranslate"><span class="pre">-1</span></code> is the last entry, <code class="docutils literal notranslate"><span class="pre">-2</span></code> is the second from last entry, and so on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;gravy mix&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>What if we use an index that goes beyond the length of the sequence? As with many such questions, the best response is to try it out and see. Then we will know what to look out for if we suspect we have made this mistake in one of our programs. The content of the error message is pretty clear:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">9000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">4</span><span class="n">a4ff19f7982</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list</span><span class="p">[</span><span class="mi">9000</span><span class="p">]</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="slicing">
+<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h3>
+<p>We can also get multiple entries from a sequence. This is known as taking a ‘<a class="reference internal" href="glossary.html#slice"><span class="std std-doc">slice</span></a>’ of the sequence. We use the same square parentheses we always use for indexing, but this time they contain a range of indices, where the beginning and end of the range are separated by the colon character <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
+<p>So to get entries <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code> (in the zero-based numbering system):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;bacon&#39;, &#39;black pudding&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wait a moment! You might have been expecting <code class="docutils literal notranslate"><span class="pre">[1:3]</span></code> to give you entries <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">3</span></code>, inclusive. If so, you are a normal, healthy person and your worldview is entirely valid. However, Python understands the end of a slice as meaning ‘up-to-but-not-including’. So <code class="docutils literal notranslate"><span class="pre">[1:3]</span></code> means ‘starting from <code class="docutils literal notranslate"><span class="pre">1</span></code> up to (but not including) <code class="docutils literal notranslate"><span class="pre">3</span></code>’.</p>
+<p>If you are still reeling from the shock of the zero-based numbering system, this new quirk may seem like a slap in the face with a wet kipper. However, there is a logic to it that you may eventually come to love, and that can be explained with the help of the fancy infographic below.</p>
+<p><img alt="" src="_images/slicing.png" /></p>
+<p>The indices in Python’s indexing system can be understood as referring to the ‘dividing’ tick marks on a ruler. Indices refer not to the items in a sequence themselves but to the ‘boundaries’ between the items. So when we ask for slice <code class="docutils literal notranslate"><span class="pre">[1:3]</span></code> we get the items between tick mark <code class="docutils literal notranslate"><span class="pre">1</span></code> and tick mark <code class="docutils literal notranslate"><span class="pre">3</span></code> on the ruler. As you can see in the image above, this gets us the second and third items.</p>
+<p>Single indices can be understood in a similar way. When we ask for item <code class="docutils literal notranslate"><span class="pre">0</span></code> in a sequence, we get the item that immediately <em>follows</em> that tick mark on the ruler, which is the first item. The second item comes after tick mark <code class="docutils literal notranslate"><span class="pre">1</span></code>, and so on. This is similar to the way that the floors of a building are numbered (at least in most countries). A floor is the part of the building immediately <em>above</em> the actual physical platform that divides the building into vertical sections. So the ‘1st floor’ is the space above the first dividing platform. Below that is the ‘ground floor’, so called because it is located immediately above the ground. (We could also call the ground floor the ‘<a class="reference external" href="https://en.wikipedia.org/wiki/0th">zeroth</a>’ floor).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">floors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ground&#39;</span><span class="p">,</span> <span class="s1">&#39;1st&#39;</span><span class="p">,</span> <span class="s1">&#39;2nd&#39;</span><span class="p">,</span> <span class="s1">&#39;3rd&#39;</span><span class="p">]</span>
+
+<span class="n">floors</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ground&#39;, &#39;1st&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the beginning of our desired slice is the beginning of the whole sequence, we can omit the beginning index before the colon. So <code class="docutils literal notranslate"><span class="pre">[:3]</span></code> means simply ‘up to but not including <code class="docutils literal notranslate"><span class="pre">3</span></code>’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;eggs&#39;, &#39;bacon&#39;, &#39;black pudding&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>And similarly if the end of our desired slice is the end of the sequence.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;sausages&#39;, &#39;bread&#39;, &#39;Mazola&#39;, &#39;gravy mix&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that in the two last examples above, we were able to use the same index (<code class="docutils literal notranslate"><span class="pre">3</span></code>) both to end one slice and to begin another one, without the two slices ‘overlapping’ (i.e. both containing item <code class="docutils literal notranslate"><span class="pre">3</span></code>). This is one of the subtle advantages of Python’s interpretation of indices as ‘dividing lines’.</p>
+<div class="section" id="degenerate-indices">
+<h4>Degenerate indices<a class="headerlink" href="#degenerate-indices" title="Permalink to this headline">¶</a></h4>
+<p>Python is somewhat forgiving about slices. If we ask for a slice that goes beyond the length of the sequence, instead of an <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error</span></a>, we just get as much of the sequence as is possible.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">9000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;sausages&#39;, &#39;bread&#39;, &#39;Mazola&#39;, &#39;gravy mix&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>An <a class="reference internal" href="glossary.html#index"><span class="std std-doc">index</span></a> that goes beyond the length of a sequence is occasionally termed, in rather colorful language, a ‘degenerate index’.</p>
+<p>Note that this is different from asking for a <em>single item</em> that is beyond the length of the sequence. If we try this, there is no such item for Python to give us, so we do get an error, as we saw above.</p>
+</div>
+</div>
+<div class="section" id="comprehensions">
+<h3>Comprehensions<a class="headerlink" href="#comprehensions" title="Permalink to this headline">¶</a></h3>
+<p>We have seen that the square parentheses can be used to create a list. The items in the list are separated by commas. Often, we will want to create a list without having to write out every individual item explicitly. If there is some regular pattern to the items in our desired list, we can generate them based on that pattern. For example, the pattern might be that the items in our desired list are all related to the items in another list in some consistent way.</p>
+<p>We might want to know the length of each item in our shopping list, and to store those lengths in a new list. One way to do this would be to apply the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function to each item separately:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])]</span> <span class="c1"># ... and so on</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>But this quickly gets tedious (as you can see I couldn’t even be bothered to finish the full example above). We are also liable to make small mistakes such as missing out one item or putting them in the wrong order. Python provides an alternative. Take a look at the command below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">]</span>
+
+<span class="n">item_lengths</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 5, 13, 8, 5, 6, 9]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This way of constructing a list is known as a ‘list <a class="reference internal" href="glossary.html#comprehension"><span class="std std-doc">comprehension</span></a>’. Instead of writing out each item explicitly, we give a sort of ‘formula’ for creating the items. The basic <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for a list comprehension is as follows:</p>
+<ul class="simple">
+<li><p>pick a variable name, any variable name (for example <code class="docutils literal notranslate"><span class="pre">x</span></code>)</p></li>
+<li><p>write:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
+<li><p>then your chosen variable name</p></li>
+<li><p>then <code class="docutils literal notranslate"><span class="pre">in</span></code></p></li>
+<li><p>then the name of the existing list that your new list is based on (for example our <code class="docutils literal notranslate"><span class="pre">shopping_list</span></code>)</p></li>
+</ul>
+</li>
+<li><p>to the left of this, write your chosen variable name again</p></li>
+<li><p>do to this variable whatever it is that creates an item in your new list (for example apply the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function)</p></li>
+<li><p>enclose the whole thing in square parentheses</p></li>
+</ul>
+<p>This sort of formula is almost human-readable, if you are a particular kind of human. Our example above says: ‘For every item in the shopping list, give me the length of that item (and put all these lengths in a new list)’. We can (and should) make our programs a bit more human-readable by picking more descriptive variable names than <code class="docutils literal notranslate"><span class="pre">x</span></code>. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">]</span>
+
+<span class="n">item_lengths</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 5, 13, 8, 5, 6, 9]
+</pre></div>
+</div>
+</div>
+</div>
+<p>List comprehensions can be an extremely useful tool for manipulating data. So here is another example for you to check your comprehension of comprehensions:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_initials</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">]</span>
+
+<span class="n">item_initials</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;e&#39;, &#39;b&#39;, &#39;b&#39;, &#39;s&#39;, &#39;b&#39;, &#39;M&#39;, &#39;g&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Though we may choose the name of the variable in a list comprehension (for example <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">item</span></code>), the roles of the words <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span></code> are fixed. These are <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keywords</span></a> for Python; each has a particular effect on the workings of our program, and we must use that specific word if we want that effect. We will learn more about keywords in later lessons.</p>
+</div>
+<div class="section" id="range">
+<h3>Range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h3>
+<p>Before we leave sequences behind, let’s consider one more data type, a new one this time. Python provides a <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in</span></a> function <code class="docutils literal notranslate"><span class="pre">range()</span></code> that generates a sequence of integers over a given range. The two <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a> to <code class="docutils literal notranslate"><span class="pre">range()</span></code> are the start and end of the desired sequence of integers.</p>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ten_numbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Intuitively, we might expect the <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a> of <code class="docutils literal notranslate"><span class="pre">range()</span></code> to be a tuple or list containing the requested integers. Unfortunately, it is instead yet another new <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data type</span></a>, the <code class="docutils literal notranslate"><span class="pre">range</span></code> type.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">ten_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range
+</pre></div>
+</div>
+</div>
+</div>
+<p>We don’t need to worry too much about this. Behind the scenes in the bowels of our computer, the <code class="docutils literal notranslate"><span class="pre">range</span></code> data type ‘prepares’ the requested integers for use, but it doesn’t actually put them into a list or give us any of them until we ask it to do so.</p>
+<p>We can see this if we try to print out the range variable. We aren’t shown all the integers. Instead, we just see that we have a ‘range’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ten_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range(0, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We only get the integers once we request a specific one:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ten_numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Understanding the reason for this behavior takes us into some of the details of how computers work. When we create a list (or a tuple), it takes up some space in our computer’s memory. Although a decent modern computer usually has squigabytes upon squigabytes of memory, the amount is still limited, and not all of that memory will be accessible for Python, as it will be in use by other programs (or by the many viruses that have infected your computer). So if we are working with an extremely large sequence of numbers, for example in a big data analysis, we might prefer to generate each of those numbers one by one, process them, then discard them, rather than first storing them all in memory.</p>
+<p>However, for small sequences, the behavior of <code class="docutils literal notranslate"><span class="pre">range()</span></code> can be a bit of an annoyance. We can demand the full list of integers by just converting a range into a list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ten_numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ten_numbers</span><span class="p">)</span>
+
+<span class="n">ten_numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that the end of a range is interpreted in the same way as the end index of a <a class="reference internal" href="glossary.html#slice"><span class="std std-doc">slice</span></a>, which we learned about above. <code class="docutils literal notranslate"><span class="pre">range(5,</span> <span class="pre">10)</span></code> means ‘the integers from <code class="docutils literal notranslate"><span class="pre">5</span></code> up to <em>but not including</em> <code class="docutils literal notranslate"><span class="pre">10</span></code>. Also like slices, we can omit the starting number if we want to start from <code class="docutils literal notranslate"><span class="pre">0</span></code>. So <code class="docutils literal notranslate"><span class="pre">range(10)</span></code> is a shorthand for <code class="docutils literal notranslate"><span class="pre">range(0,</span> <span class="pre">10)</span></code>.</p>
+<p>Ranges are often useful for creating a new list that contains some mathematical sequence. For example we can get a list of square numbers by requesting ‘<code class="docutils literal notranslate"><span class="pre">x</span></code> squared’ for every <code class="docutils literal notranslate"><span class="pre">x</span></code> in a range:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+
+<span class="n">squares</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="python-2">
+<h4>Python 2<a class="headerlink" href="#python-2" title="Permalink to this headline">¶</a></h4>
+<p>Back in Python 2, the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function did the more intuitive thing and just returned a full list of the requested integers. This was good for the simplicity and clarity of Python programs, but bad for efficient use of the computer’s memory, so it was changed in Python 3.</p>
+</div>
+</div>
+</div>
+<div class="section" id="mappings">
+<h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h2>
+<p>Consider the list below. It contains someone’s name, age, and location.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A list isn’t such a great way of storing this information, for a few reasons.</p>
+<ul class="simple">
+<li><p>This list mixes data types (strings and integers). Python allows a list to store items of different types, but it usually isn’t a good idea. We can make our programs clearer and less error-prone by storing only one type of data in each list we create.</p></li>
+<li><p>The order of the items is somewhat arbitrary. It makes some sense to begin with the name, but there is no particular reason to have age before location or the other way around.</p></li>
+<li><p>There is nothing in the list that tells us what each of the items refers to in the real world. We just have to remember that <code class="docutils literal notranslate"><span class="pre">info[0]</span></code> is the name, <code class="docutils literal notranslate"><span class="pre">info[1]</span></code> the age, and so on. For another programmer reading our work, <code class="docutils literal notranslate"><span class="pre">info[1]</span></code> could well be Mildred’s shoe size instead.</p></li>
+</ul>
+<p>If we find ourselves wanting to gather together data of different <a class="reference internal" href="glossary.html#type"><span class="std std-doc">types</span></a>, and we would like each piece of data to have an informative name, then we need to move on from sequences. We need a ‘mapping’ instead.</p>
+<p>A ‘mapping’ stores multiple values, just as a sequence does, but instead of storing the values in order and accessing them by their position, it stores them under labels and accesses them by those labels. You may be wondering why this way of storing data is called a ‘mapping’. This is because we say that the labels are ‘mapped’ to the values that they represent. Just as the symbols on an everyday map can be converted into features of the real world, so the labels in a mapping can be converted into the values that they store.</p>
+<div class="section" id="dictionaries">
+<h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<p>As it turns out, there is really only one commonly-used mapping data type in Python. So from here on we will discard the pedantic technical computing term ‘mapping’ and talk about just this data type. It is called a <a class="reference internal" href="glossary.html#dictionary"><span class="std std-doc">dictionary</span></a>.</p>
+<p>Let’s learn the <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for creating a dictionary. Then we can create one and see how it works. To create a dictionary, we use a new set of parentheses <code class="docutils literal notranslate"><span class="pre">{}</span></code>, often called ‘curly braces’. Just as for a list, we place the individual items of the dictionary inside these parentheses, separated by commas. However, each item in a dictionary needs both a label and a value, so things get slightly more complex. For each item, we write its label first, then its value, and separate the two with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
+<p>So here is how we would create a dictionary for our data above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span><span class="s1">&#39;USA&#39;</span><span class="p">}</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see that Python abbreviates the term ‘dictionary’ to ‘dict’. We should learn one other important piece of Python vocabulary for dictionaries. Python calls the labels under which a dictionary’s values are stored the dictionary’s <a class="reference internal" href="glossary.html#key"><span class="std std-doc">keys</span></a>.</p>
+<p>We can retrieve the values in the dictionary by using the keys as <a class="reference internal" href="glossary.html#index"><span class="std std-doc">indices</span></a>. This works using the same square parentheses as for indexing items in a list or tuple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we ask for a key that is not in the dictionary, the result is an error message mentioning a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;shoe size&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">29</span><span class="o">-</span><span class="mi">4</span><span class="n">f6f7f8b880a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;shoe size&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;shoe size&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the roles of keys and values are distinct. We use the key to get the value. We cannot use the values to get the keys:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;USA&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="n">bf82e9f85f00</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;USA&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;USA&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note also that the items in a dictionary do not have a defined order as they do in a list or tuple. We cannot use integers as indices in order to ask for e.g. the first or second item:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="n">cfc788aff63d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: 0
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, a dictionary does have a length, which as we would expect is just the number of items in the dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>(If you were expecting to see <code class="docutils literal notranslate"><span class="pre">6</span></code> for the length of our dictionary, remember that each <em>item</em> consists of a key and value pair; the keys and values are not separate items.)</p>
+<div class="section" id="mutability-again">
+<h4>Mutability again<a class="headerlink" href="#mutability-again" title="Permalink to this headline">¶</a></h4>
+<p>Earlier, we learned that most basic data types, such as <a class="reference internal" href="glossary.html#string"><span class="std std-doc">strings</span></a>, are <a class="reference internal" href="glossary.html#mutability"><span class="std std-doc">immutable</span></a>; they cannot be changed unless we overwrite them completely with a new <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assignment</span></a>. And we learned that lists, on the other hand, are mutable. We can change single values in a list, and list <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a> change the list without our having to re-<a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> the result back into the list variable.</p>
+<p>Are dictionaries mutable? If a question like this occurs to you while learning about programming, the best thing to do is to ask yourself: What can I try in order to find out? If you are feeling adventurous, you can head to the Spyder console now and try to find out. Create for yourself a short dictionary (for example by copying and pasting the command above that created our <code class="docutils literal notranslate"><span class="pre">info</span></code> dictionary), then see if you can enter some more commands that will test for you whether dictionaries are mutable or immutable.</p>
+<p>(I have helpfully generated a block of filler text just below to prevent your eye from wandering down to the answer before you have tried it out.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SPOILER ALERT &#39;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT 
+</pre></div>
+</div>
+</div>
+</div>
+<p>You might have found various ways of checking whether dictionaries are mutable. But here is one simple one. Remember that one of the features that illustrated the mutability of lists compared to the immutability of tuples was the possibility of changing just one item in the list without re-assigning the whole list:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;organic vegan bacon&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">34</span><span class="o">-</span><span class="mi">49481</span><span class="n">c46064b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;organic vegan bacon&#39;</span>
+
+<span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;organic vegan bacon&#39;</span>
+
+<span class="n">shopping_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;eggs&#39;,
+ &#39;organic vegan bacon&#39;,
+ &#39;black pudding&#39;,
+ &#39;sausages&#39;,
+ &#39;bread&#39;,
+ &#39;Mazola&#39;,
+ &#39;gravy mix&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>So can we change just one item in our dictionary without having to re-assign the whole thing?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Canada&#39;</span>
+
+<span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Mildred Bonk&#39;, &#39;age&#39;: 22, &#39;location&#39;: &#39;Canada&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yes! Dictionaries are mutable.</p>
+</div>
+<div class="section" id="dictionary-methods">
+<h4>Dictionary methods<a class="headerlink" href="#dictionary-methods" title="Permalink to this headline">¶</a></h4>
+<p>Another question we might ask when we encounter a new data type is: What <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a> are available for variables of this data type? Remember that we can find this out using the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__class__&#39;,
+ &#39;__contains__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__delitem__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getitem__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__len__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__reversed__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__setitem__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;clear&#39;,
+ &#39;copy&#39;,
+ &#39;fromkeys&#39;,
+ &#39;get&#39;,
+ &#39;items&#39;,
+ &#39;keys&#39;,
+ &#39;pop&#39;,
+ &#39;popitem&#39;,
+ &#39;setdefault&#39;,
+ &#39;update&#39;,
+ &#39;values&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are not so many methods available for dictionaries (ignore the methods enclosed in double underscores <code class="docutils literal notranslate"><span class="pre">__</span> <span class="pre">__</span></code>). There is a method for finding out what keys a dictionary contains, and one for finding out what values it contains (remember the syntax for using a variable’s methods):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;location&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([&#39;Mildred Bonk&#39;, 22, &#39;Canada&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<p>And the <code class="docutils literal notranslate"><span class="pre">update()</span></code> method updates a dictionary’s contents with the contents of another dictionary:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;height&#39;</span><span class="p">:</span><span class="mf">1.96</span><span class="p">,</span> <span class="s1">&#39;political affiliation&#39;</span><span class="p">:</span><span class="s1">&#39;unknown&#39;</span><span class="p">}</span>
+
+<span class="n">info</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">new_info</span><span class="p">)</span>
+
+<span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Mildred Bonk&#39;,
+ &#39;age&#39;: 22,
+ &#39;location&#39;: &#39;Canada&#39;,
+ &#39;height&#39;: 1.96,
+ &#39;political affiliation&#39;: &#39;unknown&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The example just above with <code class="docutils literal notranslate"><span class="pre">update()</span></code> demonstrates again the mutability of dictionaries. We used a dictionary method, and this was enough to change the contents of the dictionary. We did not have to write <code class="docutils literal notranslate"><span class="pre">info</span> <span class="pre">=</span> <span class="pre">info.update(new_info)</span></code>.</p>
+<p>We will see dictionaries in several example programs later on. That is enough about them for now.</p>
+</div>
+</div>
+</div>
+<div class="section" id="choosing-a-data-representation">
+<h2>Choosing a data representation<a class="headerlink" href="#choosing-a-data-representation" title="Permalink to this headline">¶</a></h2>
+<p>Now that we know about sequences and dictionaries, we have quite a few options when it comes to deciding how to represent data in our programs. For example, if we have some data about customers, we could hold them in a tuple, in a list, in a dictionary that maps customer IDs to their information, or in some combination of these types, such as a list containing multiple dictionaries, or vice versa.</p>
+<p>Let’s look at some basic guidelines when choosing how to represent data.</p>
+<div class="section" id="tuple-or-list">
+<h3>Tuple or list?<a class="headerlink" href="#tuple-or-list" title="Permalink to this headline">¶</a></h3>
+<p>Lists are <a class="reference internal" href="glossary.html#mutability"><span class="std std-doc">mutable</span></a>, whereas tuples are not. For basic purposes, this is really the only important consideration when choosing between these two types. If we want to represent a sequence of values that is defined only once in our program and is then set in stone, then we should choose a tuple. If the values will need to be changed, reordered, or added to, then we should choose a list.</p>
+<p>You might wonder why we should ever bother with tuples at all. If a list is like a tuple but can be changed more easily, why not just keep our options open and always choose lists over tuples? Never underestimate your own (and your collaborators’) capacity to make small mistakes. If you need to define a sequence of values in your program and you know that those values should not change during one run of your program, then you can play it safe and store them in a tuple. This makes it less likely that some command that you put into your program inadvertently changes the tuple without your being aware of it. It also signals to other people reading your program that these values are not intended to change during the program’s execution.</p>
+<p>Examples of such ‘fixed parameters’ might include:</p>
+<ul class="simple">
+<li><p>The (<em>x</em>, <em>y</em>) dimensions of a static image or dialog window.</p></li>
+<li><p>A small collection of known valid words.</p></li>
+<li><p>The (<em>width</em>, <em>height</em>, <em>depth</em>) of items of mahogany furniture.</p></li>
+</ul>
+</div>
+<div class="section" id="list-or-dictionary">
+<h3>List or dictionary?<a class="headerlink" href="#list-or-dictionary" title="Permalink to this headline">¶</a></h3>
+<p>We saw above that a dictionary has <a class="reference internal" href="glossary.html#key"><span class="std std-doc">keys</span></a>, which allow us to retrieve the stored values using a name instead of a position. So we should choose a dictionary to represent a collection of items of information each of which has a meaning or label. For example, demographic information about a single user. On the other hand, we should choose a list if all the items in a collection represent instances of the same thing without unique labels. For example multiple user names.</p>
+<p>There are also differences in how fast a computer can carry out certain operations on a list or a dictionary. This may become an important consideration in big programs that have to process a lot of data quickly. But this is a topic for later.</p>
+</div>
+</div>
+<div class="section" id="nested-data-representations">
+<h2>Nested data representations<a class="headerlink" href="#nested-data-representations" title="Permalink to this headline">¶</a></h2>
+<p>So far, all our examples of tuples, lists, and dictionaries have contained strings or numbers. But they can also contain other tuples, lists, and dictionaries. For example, we might have a dictionary of lists, in which each <a class="reference internal" href="glossary.html#key"><span class="std std-doc">key</span></a> is a description of a piece of information about customers, and each value is a list storing that piece of information for all customers in the same order.</p>
+<p>(Note that for a long statement like this one, Python allows breaking it up into separate lines if the line breaks come after the commas):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">customers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:[</span><span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="s1">&#39;Ishmael&#39;</span><span class="p">,</span> <span class="s1">&#39;Sherlock&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;age&#39;</span><span class="p">:[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">39</span><span class="p">],</span>
+             <span class="s1">&#39;location&#39;</span><span class="p">:[</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;GB&#39;</span><span class="p">]}</span>
+
+<span class="n">customers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: [&#39;Mildred&#39;, &#39;Ishmael&#39;, &#39;Sherlock&#39;],
+ &#39;age&#39;: [22, 19, 39],
+ &#39;location&#39;: [&#39;USA&#39;, &#39;USA&#39;, &#39;GB&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can then get a single item from one of the lists by first writing the <a class="reference internal" href="glossary.html#index"><span class="std std-doc">index</span></a> for the ‘outer’ dictionary (its <a class="reference internal" href="glossary.html#key"><span class="std std-doc">key</span></a>), then writing the index for the ‘inner’ list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">customers</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
+</pre></div>
+</div>
+</div>
+</div>
+<p>Is a dictionary of lists a good choice of data representation for the example above?</p>
+<p>Not really. The crucial problem is that we intend the values in each list to ‘match up’, so that e.g. the first value in the <code class="docutils literal notranslate"><span class="pre">'name'</span></code> list is from the same customer as the first value in the <code class="docutils literal notranslate"><span class="pre">'age'</span></code> list, and so on. The dictionary has no way of ‘knowing’ that this is what we intend, and once we start adding to or sorting the lists, it will not keep this constraint in force.</p>
+<p>For example if we change the order of one of the lists, Python does not read our mind and obligingly change the others so that they match up:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">customers</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="n">customers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: [&#39;Sherlock&#39;, &#39;Ishmael&#39;, &#39;Mildred&#39;],
+ &#39;age&#39;: [22, 19, 39],
+ &#39;location&#39;: [&#39;USA&#39;, &#39;USA&#39;, &#39;GB&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>A list of dictionaries would be better for this example. Each dictionary keeps one customer’s various pieces of information together. We can then sort or add to the ‘outer’ list without worrying that different customers’ information is getting mixed up.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">customers</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span><span class="s1">&#39;USA&#39;</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Ishmael&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span><span class="s1">&#39;USA&#39;</span><span class="p">},</span>
+             <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Sherlock&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">39</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span><span class="s1">&#39;GB&#39;</span><span class="p">}]</span>
+
+<span class="n">customers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;name&#39;: &#39;Mildred&#39;, &#39;age&#39;: 22, &#39;location&#39;: &#39;USA&#39;},
+ {&#39;name&#39;: &#39;Ishmael&#39;, &#39;age&#39;: 19, &#39;location&#39;: &#39;USA&#39;},
+ {&#39;name&#39;: &#39;Sherlock&#39;, &#39;age&#39;: 39, &#39;location&#39;: &#39;GB&#39;}]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">customers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="n">customers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;name&#39;: &#39;Sherlock&#39;, &#39;age&#39;: 39, &#39;location&#39;: &#39;GB&#39;},
+ {&#39;name&#39;: &#39;Ishmael&#39;, &#39;age&#39;: 19, &#39;location&#39;: &#39;USA&#39;},
+ {&#39;name&#39;: &#39;Mildred&#39;, &#39;age&#39;: 22, &#39;location&#39;: &#39;USA&#39;}]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dictionaries of lists still have their uses when the items in different lists are not linked to each other, and so can be manipulated independently. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">todos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;shopping&#39;</span><span class="p">:[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">],</span>
+         <span class="s1">&#39;chores&#39;</span><span class="p">:[</span><span class="s1">&#39;washing up&#39;</span><span class="p">,</span> <span class="s1">&#39;polish silver&#39;</span><span class="p">],</span>
+         <span class="s1">&#39;reading&#39;</span><span class="p">:[</span><span class="s1">&#39;Moby Dick&#39;</span><span class="p">,</span> <span class="s1">&#39;The Hound of the Baskervilles&#39;</span><span class="p">,</span> <span class="s1">&#39;Python for Everybody&#39;</span><span class="p">]}</span>
+
+<span class="n">todos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;shopping&#39;: [&#39;eggs&#39;, &#39;bacon&#39;, &#39;black pudding&#39;],
+ &#39;chores&#39;: [&#39;washing up&#39;, &#39;polish silver&#39;],
+ &#39;reading&#39;: [&#39;Moby Dick&#39;,
+  &#39;The Hound of the Baskervilles&#39;,
+  &#39;Python for Everybody&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">todos</span><span class="p">[</span><span class="s1">&#39;reading&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="n">todos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;shopping&#39;: [&#39;eggs&#39;, &#39;bacon&#39;, &#39;black pudding&#39;],
+ &#39;chores&#39;: [&#39;washing up&#39;, &#39;polish silver&#39;],
+ &#39;reading&#39;: [&#39;Python for Everybody&#39;,
+  &#39;The Hound of the Baskervilles&#39;,
+  &#39;Moby Dick&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a general helpful guideline: Choose a data representation that makes it hard to do the things that you don’t want to happen.</p>
+<p>That’s all for now. Try some exercises.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>What is the result of the following short Python programs? Try to reason it out first, and then check your answer by typing the commands into the Spyder console.</p>
+<div class="section" id="a">
+<h4>a)<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">]</span>
+<span class="n">shopping_notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">shopping_list</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_notes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="b">
+<h4>b)<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;eggs&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span>
+<span class="n">item</span> <span class="o">=</span> <span class="s1">&#39;eggs&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_dict</span><span class="p">[</span><span class="n">item</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="c">
+<h4>c)<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;eggs&#39;</span><span class="p">:</span><span class="s1">&#39;free-range&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">:</span><span class="s1">&#39;danish&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">:</span><span class="s1">&#39;organic&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_dict</span><span class="p">[</span><span class="s1">&#39;bacon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The Python command below defines a list that contains the top 5 bestselling non-fiction books in the US at the time of writing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">books</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&#39;Inside Out&#39; by Demi Moore&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;&#39;The United States of Trump&#39; by Bill O&#39;Reilly&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;&#39;Talking to Strangers&#39; by Malcolm Gladwell&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;&#39;Over the Top&#39; by Jonathan Van Ness&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;&#39;Know My Name&#39; by Chanel Miller&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Copy this command into a new program and then write the rest of the program so that it accomplishes the following:</p>
+<ul class="simple">
+<li><p>Tell the user that you have stored a list of the top 5 bestselling books.</p></li>
+<li><p>Ask the user how many of the top 5 they would like to see.</p></li>
+<li><p>Print for them those top books.</p></li>
+</ul>
+<p>So for example, the user could choose to view only the top 2 books. Then the program would look like this when run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>I have a list of the top 5 bestselling non-fiction books.
+How many of the top books would you like to see? 2
+The top 2 are:
+&#39;Inside Out&#39; by Demi Moore
+&#39;The United States of Trump&#39; by Bill O&#39;Reilly
+</pre></div>
+</div>
+<p>Make sure that your program fulfills one additional requirement. It should still work correctly if you later come back and add more books to the list. You shouldn’t need to change the rest of the program if you change the list of books.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="types.html" title="previous page">Variables and data types</a>
+    <a class='right-next' id="next-link" href="conditions.html" title="next page">Conditions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

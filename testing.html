@@ -1,0 +1,1014 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GitHub" href="github.html" />
+    <link rel="prev" title="The command line" href="command_line.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/testing.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Ftesting.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/testing.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/testing.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-program">
+   Example program
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#built-in-tests">
+   Built-in tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-functions">
+   Test functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assertions">
+     Assertions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#failing-tests">
+     Failing tests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-runners">
+   Test runners
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pytest">
+     pytest
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#command-line-usage">
+       Command line usage
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#output">
+       Output
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#verbosity">
+       Verbosity
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#testing-exceptions">
+       Testing exceptions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-driven-development">
+   Test-driven development
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
+<p>As you have probably noticed by now, it is easy to make mistakes when writing a computer program. Computers cannot easily guess what it is that we want of them, nor do they have any idea of what sort of things it is reasonable to want to do. So we must give a computer precise, <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntactically correct</span></a> instructions that represent exactly what we want to do, and if we get this wrong, the computer will either be unable to do as we asked, in which case our program will break off with an <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error</span></a>, or it will happily carry out the instructions we gave it, even when these are not actually the instructions that we wanted to give, and even if we have mistakenly instructed it to do something stupid or malicious such as emailing the contents of our downloads folder to our boss. It is therefore important to check our programs carefully for mistakes.</p>
+<p>Up until now, we have been able to check a program fairly easily by simply running it, if it is just a <a class="reference internal" href="glossary.html#script"><span class="std std-doc">script</span></a>, or importing it and then using its functions in the console if it is a <a class="reference internal" href="glossary.html#module"><span class="std std-doc">module</span></a>. But this sort of informal testing can only take us so far. Once we start writing programs that may take multiple different actions depending on user input, subtle mistakes may be difficult to detect in a quick informal test, because they only arise for some inputs and not others. For these reasons, most software developers test their programs systematically as they go along. Instead of testing a program manually, they write a second program whose only purpose is to test the main program. This test program tries out the main program with different inputs, and verifies that its behavior is as expected. In other words, a test program automates the process of testing the main program.</p>
+<p>Writing test programs can be tedious. As if we didn’t already have enough work to do writing the main program, we now have to write another one that won’t even be part of the finished product. It is tempting to dispense with testing, especially if a project is small. But we should not. Good tests act as a reasonable guarantee that our program functions correctly. And as the saying goes: Most customers prefer a product that actually works.</p>
+<div class="section" id="example-program">
+<h2>Example program<a class="headerlink" href="#example-program" title="Permalink to this headline">¶</a></h2>
+<p>In the spirit of the class so far, we won’t actually be developing a product that any healthy customer would want to download. Instead, we have a program for producing <a class="reference external" href="https://en.wikipedia.org/wiki/Spoonerism">spoonerisms</a>. A spoonerism is a play on words in which the initial consonants (or groups of consonants) of two words are swapped. For example:</p>
+<ul class="simple">
+<li><p>crushing blow → blushing crow</p></li>
+<li><p>cosy nook → nosy cook</p></li>
+<li><p>wasted term → tasted werm</p></li>
+</ul>
+<p>Since this lesson is about testing, we will look at the finished example program already. Our task will be to write some tests for the program. Let’s import the program as <a class="reference internal" href="glossary.html#module"><span class="std std-doc">module</span></a> and make some informal tests first. (If you need to refresh your understanding of modules and imports, take a look back at the <a class="reference internal" href="modules.html"><span class="doc std std-doc">lesson on modules</span></a>.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spoonerisms</span>
+
+<span class="nb">dir</span><span class="p">(</span><span class="n">spoonerisms</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;VOWELS&#39;,
+ &#39;__builtins__&#39;,
+ &#39;__cached__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__file__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;find_first_vowel&#39;,
+ &#39;spoonerize&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The main function is <code class="docutils literal notranslate"><span class="pre">spoonerize()</span></code>. We can look at its <a class="reference internal" href="glossary.html#docstring"><span class="std std-doc">docstring</span></a> using the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function spoonerize in module spoonerisms:
+
+spoonerize(wordpair)
+    Spoonerize a word pair.
+    
+    A spoonerism switches the initial consonant clusters of words.
+    
+    Example:
+        &gt;&gt;&gt; spoonerize(&#39;smart fella&#39;)
+        &#39;fart smella&#39;
+    
+    Argument:
+        wordpair: A string containing exactly two words.
+    
+    Returns:
+        A string containing the spoonerized phrase.
+    
+    Raises ValueError:
+        If wordpair does not contain exactly two words.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s test the example input given in the docstring:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">(</span><span class="s1">&#39;smart fella&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;fart smella&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This module is very slightly more complex than those we have encountered so far. In addition to the main function, it includes an additional ‘helper function’ that is <a class="reference internal" href="glossary.html#call"><span class="std std-doc">called</span></a> from within the main function, and whose purpose is to find the location of the first vowel in a word (according to Python’s zero-based <a class="reference internal" href="glossary.html#index"><span class="std std-doc">indexing</span></a>). For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spoonerisms</span><span class="o">.</span><span class="n">find_first_vowel</span><span class="p">(</span><span class="s1">&#39;smart&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>This helper function in turn depends on a variable called <code class="docutils literal notranslate"><span class="pre">VOWELS</span></code>, a string containing the characters considered to be vowels. These could just have been defined within the <code class="docutils literal notranslate"><span class="pre">find_first_vowel()</span></code> function, but including them as a variable allows us later to add more vowels easily if we want to extend the module’s capabilities.</p>
+<p>This is a good point to start writing tests; our program has gone beyond just a single function, and we might want to add to its capabilities in the future. Before we begin writing the tests, you might want to take a look at the module file <span class="xref myst">spoonerisms.py</span> and quickly assure yourself that you understand how it works.</p>
+</div>
+<div class="section" id="built-in-tests">
+<h2>Built-in tests<a class="headerlink" href="#built-in-tests" title="Permalink to this headline">¶</a></h2>
+<p>The module in fact already incorporates one short test of its workings. It uses the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> special variable to print out a result when the module is run as the main program. This is something that we learned about in the <a class="reference internal" href="modules.html#special-variables"><span class="std std-doc">lesson on modules</span></a>. This sort of ‘built-in test’ can take us quite far, and is especially helpful early on in the development of a program. We will learn about a few ways in which a separate test program can be more convenient as development goes on. But first we need to cover the basics of test programs.</p>
+</div>
+<div class="section" id="test-functions">
+<h2>Test functions<a class="headerlink" href="#test-functions" title="Permalink to this headline">¶</a></h2>
+<p>A test program goes in a separate file. This file usually has the same name as the file that it tests, but prefixed with <em>test_</em>. So in our case our test file will be called <em>test_spoonerisms.py</em>. Among the first things that the test program should do is import the module to be tested, since it will need to <a class="reference internal" href="glossary.html#call"><span class="std std-doc">call</span></a> that module’s functions and check their results. After importing the module to be tested, the test program defines functions, each of which tests one aspect of the module.</p>
+<p>Test functions look a little different from the functions we have written so far. They do not have any <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a>, and in most cases they have no input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a> either. In place of a return value, most test functions instead make an <a class="reference internal" href="glossary.html#assertion"><span class="std std-doc">assertion</span></a>.</p>
+<div class="section" id="assertions">
+<h3>Assertions<a class="headerlink" href="#assertions" title="Permalink to this headline">¶</a></h3>
+<p>What is an assertion? An assertion is yet another kind of <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statement</span></a>. You can think of it as a special kind of <a class="reference internal" href="glossary.html#condition"><span class="std std-doc">condition</span></a>, like in an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. Similar to an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, an assertion checks whether a particular condition is true or false, for example checking whether two things are equal using <code class="docutils literal notranslate"><span class="pre">==</span></code>. But unlike an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, we do not specify what happens when the condition is true and what happens when it is false. Instead, an assertion has fixed consequences: If the condition is true, nothing happens and the program continues as normal; if the condition is not true, an <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exception</span></a> is raised.</p>
+<p>An assertion begins with the <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> <code class="docutils literal notranslate"><span class="pre">assert</span></code>. Here is an example of an assertion that is true:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, nothing happens when Python runs this line. A true assertion just ‘passes’ and the Python interpreter moves on to the next line of the program.</p>
+<p>Compare this with what happens when an assertion is untrue. We get an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">71</span><span class="n">c257695901</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span>
+
+<span class="ne">AssertionError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can therefore use an assertion to check whether the <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a> of a function is as expected. For example for the <code class="docutils literal notranslate"><span class="pre">spoonerize()</span></code> function from our example module:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">(</span><span class="s1">&#39;smart fella&#39;</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;fart smella&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The simplest test functions are just functions that contain one assertion. No input arguments or return value are needed; the function’s only purpose is to alert us by raising an exception if things are not working as expected. Like test files, the names of test functions should be prefixed with <code class="docutils literal notranslate"><span class="pre">test_</span></code>, and then state what is being tested. Here is an example for our <code class="docutils literal notranslate"><span class="pre">spoonerize()</span></code> function, turning the assertion above into a test function.</p>
+<p>(If you need first to remind yourself of the syntax for functions, take a look back at the <a class="reference internal" href="functions.html#defining-functions"><span class="std std-ref">lesson on functions</span></a>.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_spoonerize</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">(</span><span class="s1">&#39;smart fella&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;fart smella&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we <a class="reference internal" href="glossary.html#call"><span class="std std-doc">call</span></a> our test function, no exception is raised, confirming that the assertion was true.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_spoonerize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Take a look at the finished test file for our example module, <span class="xref myst">test_spoonerisms.py</span>. You will see that it first imports the <em>spoonerisms</em> module, then defines several test functions like the one above. Each of these tests one aspect of the workings of the <em>spoonerisms</em> module. (There is one slightly different test function at the very end of the file. Ignore this for now; we will come to it in a moment.)</p>
+<p>If we would like to test any aspect of the <em>spoonerisms</em> module, we can import the test module and run its functions, confirming that no exceptions occur:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">test_spoonerisms</span>
+
+<span class="n">test_spoonerisms</span><span class="o">.</span><span class="n">test_find_first_vowel</span><span class="p">()</span>
+<span class="n">test_spoonerisms</span><span class="o">.</span><span class="n">test_spoonerize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="failing-tests">
+<h3>Failing tests<a class="headerlink" href="#failing-tests" title="Permalink to this headline">¶</a></h3>
+<p>For demonstration purposes, the test module includes one test that checks a feature of the <em>spoonerisms</em> module that has not yet been implemented (treating the character combination ‘qu’ as a consonant), so that you can see what happens when a test fails:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_spoonerisms</span><span class="o">.</span><span class="n">test_spoonerize_with_qu</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">21</span><span class="n">a514241976</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">test_spoonerisms</span><span class="o">.</span><span class="n">test_spoonerize_with_qu</span><span class="p">()</span>
+
+<span class="nn">~/GitHub/introduction-to-programming/content/examples/test_spoonerisms.py</span> in <span class="ni">test_spoonerize_with_qu</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">spoonerisms</span><span class="o">.</span><span class="n">spoonerize</span><span class="p">(</span><span class="s1">&#39;faint quartz&#39;</span><span class="p">)</span>  <span class="c1"># tenuous, I know</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> 
+<span class="ne">---&gt; </span><span class="mi">43</span>     <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;quaint fartz&#39;</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span> 
+<span class="g g-Whitespace">     </span><span class="mi">45</span> 
+
+<span class="ne">AssertionError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="test-runners">
+<h2>Test runners<a class="headerlink" href="#test-runners" title="Permalink to this headline">¶</a></h2>
+<p>Our solution so far isn’t entirely satisfactory. We wanted to have an <em>automated</em> test of our module, so that we can, for example, quickly run the tests each time we make changes, and make sure that our changes haven’t broken anything. Importing the test module and then running each of its tests individually is very laborious. Because automated testing is such a common task in programming, most programming languages provide time-saving tools for running multiple tests with a single command. These tools are sometimes termed ‘test runners’.</p>
+<div class="section" id="pytest">
+<h3>pytest<a class="headerlink" href="#pytest" title="Permalink to this headline">¶</a></h3>
+<p>Python’s built-in test runner is provided in a module called <code class="docutils literal notranslate"><span class="pre">unittest</span></code> in the <a class="reference internal" href="standard_library.html"><span class="doc std std-doc">standard library</span></a>. However, there are also a few excellent <a class="reference internal" href="standard_library.html#third-party-packages"><span class="std std-ref">third-party packages</span></a> that provide test runners with additional features. We will look at one of these instead, called <em>pytest</em>. pytest is a very popular third-party test runner package for Python. Since it is provided as part of the default installation of Anaconda, you should not need to install it before trying out the examples below.</p>
+<p>If you want to check whether pytest is installed and available for you, you can try <a class="reference internal" href="glossary.html#import"><span class="std std-doc">importing</span></a> it. Check that you do not see a <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code> when you try the following command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="command-line-usage">
+<h4>Command line usage<a class="headerlink" href="#command-line-usage" title="Permalink to this headline">¶</a></h4>
+<p>pytest is typically run from the operating system’s <a class="reference internal" href="command_line.html"><span class="doc std std-doc">command line</span></a>. The command <code class="docutils literal notranslate"><span class="pre">pytest</span></code>, followed by the name of the test file that we would like to run, will run all of the functions within that file whose names begin with <code class="docutils literal notranslate"><span class="pre">test_</span></code>.</p>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pytest test_spoonerisms.py
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.8.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
+plugins: anyio-3.2.0
+<span class=" -Color -Color-Bold">collecting ... </span>
+<span class=" -Color -Color-Bold">collected 6 items                                                              </span>
+
+test_spoonerisms.py <span class=" -Color -Color-Green">....</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
+
+=================================== FAILURES ===================================
+<span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
+
+    def test_spoonerize_with_qu():
+    
+        result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
+    
+&gt;       assert result == <span class=" -Color -Color-Yellow">&#39;quaint fartz&#39;</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E       AssertionError: assert &#39;qaint fuartz&#39; == &#39;quaint fartz&#39;</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         - quaint fartz</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         ?  -</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         + qaint fuartz</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         ?        +</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
+=========================== short test summary info ============================
+FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">5 passed</span><span class=" -Color -Color-Red"> in 0.06s ==========================</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember a couple of important things from the previous lesson on the <a class="reference internal" href="command_line.html"><span class="doc std std-doc">command line</span></a>:</p>
+<ul class="simple">
+<li><p>For this command to work, the test file <em>test_spoonerisms.py</em> and the module to be tested <em><a class="reference external" href="http://spoonerisms.py">spoonerisms.py</a></em> need to be located in your current working directory.</p></li>
+<li><p>Commands beginning with <code class="docutils literal notranslate"><span class="pre">!</span></code> are not standard Python commands, they are commands for the operating system’s command line. They only work in the Spyder console, not in a Python program.</p></li>
+</ul>
+<p>pytest can even be used to run tests from more than one test file. If we do not specify the name of a test file, then pytest will search for all files in the current working directory whose names begin with <em>test_</em>, and run all the functions within those files whose names begin with <code class="docutils literal notranslate"><span class="pre">test_</span></code>. This feature becomes very useful once we have a more complex program spread over multiple files. A typical pattern of organization is to create separate test files for each major component of the program to be tested.</p>
+<p>Here for demonstration purposes I have just included a second test file <span class="xref myst">test_math_is_working_as_normal.py</span> containing some spurious tests:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pytest
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.8.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
+plugins: anyio-3.2.0
+<span class=" -Color -Color-Bold">collecting ... </span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<span class=" -Color -Color-Bold">collected 8 items                                                              </span>
+
+test_math_is_working_as_normal.py <span class=" -Color -Color-Green">..                                     [ 25%]</span>
+test_spoonerisms.py <span class=" -Color -Color-Green">....</span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
+
+=================================== FAILURES ===================================
+<span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
+
+    def test_spoonerize_with_qu():
+    
+        result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
+    
+&gt;       assert result == <span class=" -Color -Color-Yellow">&#39;quaint fartz&#39;</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E       AssertionError: assert &#39;qaint fuartz&#39; == &#39;quaint fartz&#39;</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         - quaint fartz</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         ?  -</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         + qaint fuartz</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         ?        +</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=========================== short test summary info ============================
+FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.06s ==========================</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="output">
+<h4>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h4>
+<p>pytest provides a lot of additional useful information that we did not get when just running the test functions manually. Let’s go through the output from the pytest session we ran above and see what it all means.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">rootdir:</span> <span class="pre">/home/lt/GitHub/introduction-to-programming/content/examples</span></code></p>
+</div></blockquote>
+<p>This is a confirmation of the working directory that we ran pytest from. The pytest session will have included test files from this directory and its subdirectories.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">collected</span> <span class="pre">8</span> <span class="pre">items</span></code></p>
+</div></blockquote>
+<p>We can read here how many test functions pytest found in our test files.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">test_math_is_working_as_normal.py</span> <span class="pre">..</span></code>
+<code class="docutils literal notranslate"><span class="pre">test_spoonerisms.py</span> <span class="pre">....F.</span></code></p>
+</div></blockquote>
+<p>Here we see each test file listed individually. After the name of the file, each dot represents a test that passed, and each ‘F’ represents a test that failed.</p>
+<p>The <em>FAILURES</em> section then provides details of each failed test. As well as just the standard <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, pytest tells us some more about the specific nature of the failure. In complex cases, this output can be very detailed indeed, for example listing all the variables that were available at the time of the failure, what their values were, and so on. In this fairly simple case the crucial line is this one:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">E</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">AssertionError:</span> <span class="pre">assert</span> <span class="pre">'qaint</span> <span class="pre">fuartz'</span> <span class="pre">==</span> <span class="pre">'quaint</span> <span class="pre">fartz'</span></code></p>
+</div></blockquote>
+<p>Here we see what the result of the <code class="docutils literal notranslate"><span class="pre">spoonerize()</span></code> function really was, compared to what our test expected it to be.</p>
+</div>
+<div class="section" id="verbosity">
+<h4>Verbosity<a class="headerlink" href="#verbosity" title="Permalink to this headline">¶</a></h4>
+<p>If you would like to see even more information about the tests, you can run pytest in ‘<a class="reference internal" href="glossary.html#verbose"><span class="std std-doc">verbose</span></a>’ mode. In computing, the term ‘verbose’ has approximately the same meaning as in everyday English, but in reference to the output of a computer program rather than a human being’s use of language. A program that is run in verbose mode will ‘talk more’, i.e. give more detailed printed output.</p>
+<p>The option for running pytest in verbose mode is <code class="docutils literal notranslate"><span class="pre">--verbose</span></code>, or in abbreviated form <code class="docutils literal notranslate"><span class="pre">-v</span></code> (look back at <a class="reference internal" href="command_line.html#options"><span class="std std-doc">the previous lesson</span></a> if you need to remind yourself about command line options). The main difference in a simple case like ours is that we see the names of the individual test functions alongside their passed/failed status:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pytest --verbose
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.8.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- /home/lt/GitHub/introduction-to-programming/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
+plugins: anyio-3.2.0
+<span class=" -Color -Color-Bold">collecting ... </span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<span class=" -Color -Color-Bold">collected 8 items                                                              </span>
+
+test_math_is_working_as_normal.py::test_two_plus_two_equals_four <span class=" -Color -Color-Green">PASSED  [ 12%]</span>
+test_math_is_working_as_normal.py::test_division_by_zero_is_undefined <span class=" -Color -Color-Green">PASSED [ 25%]</span>
+test_spoonerisms.py::test_find_first_vowel <span class=" -Color -Color-Green">PASSED                        [ 37%]</span>
+test_spoonerisms.py::test_spoonerize <span class=" -Color -Color-Green">PASSED                              [ 50%]</span>
+test_spoonerisms.py::test_spoonerize_with_multiple_consonants <span class=" -Color -Color-Green">PASSED     [ 62%]</span>
+test_spoonerisms.py::test_spoonerize_with_initial_vowel <span class=" -Color -Color-Green">PASSED           [ 75%]</span>
+test_spoonerisms.py::test_spoonerize_with_qu <span class=" -Color -Color-Red">FAILED                      [ 87%]</span>
+test_spoonerisms.py::test_spoonerize_exception <span class=" -Color -Color-Green">PASSED</span><span class=" -Color -Color-Red">                    [100%]</span>
+
+=================================== FAILURES ===================================
+<span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    def test_spoonerize_with_qu():
+    
+        result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
+    
+&gt;       assert result == <span class=" -Color -Color-Yellow">&#39;quaint fartz&#39;</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E       AssertionError: assert &#39;qaint fuartz&#39; == &#39;quaint fartz&#39;</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         - quaint fartz</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         ?  -</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         + qaint fuartz</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E         ?        +</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
+=========================== short test summary info ============================
+FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.07s ==========================</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="testing-exceptions">
+<h4>Testing exceptions<a class="headerlink" href="#testing-exceptions" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference internal" href="glossary.html#docstring"><span class="std std-doc">docstring</span></a> for our <code class="docutils literal notranslate"><span class="pre">spoonerize()</span></code> function mentions an <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exception</span></a> (see <span class="xref myst">here</span>). If we have promised our users that certain situations will result in an exception, then we should also test this. But testing the occurrence of an exception presents a slight problem. We would like our test to continue as normal if the expected exception is raised, but we would like it to raise an exception otherwise, which is the opposite of what exceptions normally do.</p>
+<p>pytest provides a function called <code class="docutils literal notranslate"><span class="pre">raises()</span></code> to handle this kind of test. This function works together with the Python <code class="docutils literal notranslate"><span class="pre">with</span></code> <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> to create a context in which to test for the occurrence of an exception. Our program will not be interrupted if the expected exception is raised within the <code class="docutils literal notranslate"><span class="pre">raises()</span></code> context, but an exception will be raised if we reach the end of the context and the expected exception has <em>not</em> been raised.</p>
+<p>If this sounds a little abstract, it may be clearer with an example (and if you need to remind yourself about the <code class="docutils literal notranslate"><span class="pre">with</span></code> keyword, look back at the <a class="reference internal" href="files.html#context-managers"><span class="std std-doc">lesson on files</span></a>, where we first encountered it):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;fifty-two&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nothing happens here, because the indented line <code class="docutils literal notranslate"><span class="pre">int('fifty-two')</span></code> does indeed raise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>. Compare what happens with a line that does not raise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>. The final line of the error message is nicely informative:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;52&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">Failed</span><span class="g g-Whitespace">                                    </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="mf">8e4</span><span class="n">b5f8643d9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;52&#39;</span><span class="p">)</span>
+
+    <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">1</span> <span class="n">frame</span><span class="p">]</span>
+
+<span class="nn">~/GitHub/introduction-to-programming/.venv/lib/python3.8/site-packages/_pytest/outcomes.py</span> in <span class="ni">fail</span><span class="nt">(msg, pytrace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span><span class="s2">     __tracebackhide__ = True</span>
+<span class="ne">--&gt; </span><span class="mi">153</span><span class="s2">     raise Failed(msg=msg, pytrace=pytrace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="s2"> </span>
+
+<span class="ne">Failed</span>: DID NOT RAISE &lt;class &#39;ValueError&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>pytest’s <code class="docutils literal notranslate"><span class="pre">raises()</span></code> function even allows us to test for specific content in the exception’s error message. The additional <code class="docutils literal notranslate"><span class="pre">match</span></code> <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> specifies a string pattern to search for in the error message. If the pattern is not found, the final line of the error message again describes the failure in detail:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;OMG that is not valid. You have broken your computer FOR EVER.&#39;</span><span class="p">):</span>
+    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;fifty-two&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="n">a8e5f8cbc3a4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;OMG that is not valid. You have broken your computer FOR EVER.&#39;</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;fifty-two&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;fifty-two&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="n">a8e5f8cbc3a4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;OMG that is not valid. You have broken your computer FOR EVER.&#39;</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;fifty-two&#39;</span><span class="p">)</span>
+
+    <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">1</span> <span class="n">frame</span><span class="p">]</span>
+
+<span class="nn">~/GitHub/introduction-to-programming/.venv/lib/python3.8/site-packages/_pytest/_code/code.py</span> in <span class="ni">match</span><span class="nt">(self, regexp)</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span>         <span class="k">if</span> <span class="n">regexp</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span>             <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot; Did you mean to `re.escape()` the regex?&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">660</span>         <span class="k">assert</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">regexp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)),</span> <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">regexp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">661</span>         <span class="c1"># Return True to allow for &quot;assert excinfo.match()&quot;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">662</span>         <span class="k">return</span> <span class="kc">True</span>
+
+<span class="ne">AssertionError</span>: Regex pattern &#39;OMG that is not valid. You have broken your computer FOR EVER.&#39; does not match &quot;invalid literal for int() with base 10: &#39;fifty-two&#39;&quot;.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The final test in our example test file uses the <code class="docutils literal notranslate"><span class="pre">raises()</span></code> function to test that the exception that we wrote into the <code class="docutils literal notranslate"><span class="pre">spoonerize()</span></code> function is working properly. Take a look at it <span class="xref myst">here</span> and check that you understand how it works.</p>
+<p>There is a <em>lot</em> more that pytest can do, but that covers our basic needs at this level. If you would like to explore some more useful pytest features, you can read the guides at the <a class="reference external" href="https://docs.pytest.org/en/latest/">pytest documentation site</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="test-driven-development">
+<h2>Test-driven development<a class="headerlink" href="#test-driven-development" title="Permalink to this headline">¶</a></h2>
+<p>In the example above, I presented a completed example program, and we learned about the process of writing tests for the program. In reality, many software developers follow the opposite pattern: They first write a test for a new feature that they would like their main program to have, and only then do they write that part of the main program.</p>
+<p>This approach to software development is broadly termed ‘test-driven development’ (or <a class="reference internal" href="glossary.html#tdd"><span class="std std-ref">TDD</span></a>), because it uses tests to guide the development of the program. The general working pattern in test-driven development is as follows:</p>
+<ul class="simple">
+<li><p>First write a test.</p></li>
+</ul>
+<p>This might be a test that checks for a new feature of the main program that hasn’t yet been written. Or it might be a test that tests a mistake or <a class="reference internal" href="glossary.html#bug"><span class="std std-doc">bug</span></a> that somebody has reported in our program.</p>
+<ul class="simple">
+<li><p>Run the test and check that it fails.</p></li>
+</ul>
+<p>Importantly, we should not only check that the test fails, but also check that it fails <em>for the reason we expected</em>. For example, our test should not fail because we have made some mistake in the test itself, such as naming a variable incorrectly. Instead, the test should fail by encountering exactly the problem or omission that we wrote the test to identify. A test that fails for the reason that we expect it to fail is known as an ‘expected failure’. Expected failures are important for first assuring ourselves that we have written the test itself correctly before we continue.</p>
+<ul class="simple">
+<li><p>Now write part of the main program so that it passes the test.</p></li>
+</ul>
+<p>This is the ‘normal’ part of test-driven development, in which we write a part of our program.</p>
+<ul class="simple">
+<li><p>Run <em>all</em> your tests.</p></li>
+</ul>
+<p>When we think we have got the main program right, we should run not just the new test that we just wrote but all of the tests that we have written so far. This ensures that not only have we got the new part of our program right, but we have also not inadvertently broken any of the existing parts of our program in the process. A situation in which a change to one part of a program unexpectedly breaks other aspects of the program is termed a ‘<a class="reference internal" href="glossary.html#regression"><span class="std std-doc">regression</span></a>’, and becomes more likely as our program becomes more complex. One of the purposes of testing in general is to help spot regressions as soon as they occur.</p>
+<ul class="simple">
+<li><p>Once the test passes, write the next test.</p></li>
+</ul>
+<p>There is rather more to test-driven development, and to testing in general, than what we have covered here, but these are the basic starting points. Try some exercises.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The test function <code class="docutils literal notranslate"><span class="pre">test_spoonerize_with_qu()</span></code> in our test file <span class="xref myst">test_spoonerisms.py</span> fails. Improve the main <span class="xref myst">spoonerisms module</span> so that this test passes. When you think that you have got it right, run all the tests in the test file using pytest. Check that <code class="docutils literal notranslate"><span class="pre">test_spoonerize_with_qu()</span></code> now passes, and make sure that your changes have not introduced any <a class="reference internal" href="glossary.html#regression"><span class="std std-doc">regressions</span></a> that cause the other tests to fail.</p>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The letter <em>y</em> presents some problems for spoonerisms in English. Sometimes it is a vowel and sometimes it is a consonant. Assume the following simple rule which will work in most cases:</p>
+<blockquote>
+<div><p>At the beginning of a word, <em>y</em> is a consonant. Otherwise it is a vowel.</p>
+</div></blockquote>
+<p>According to this rule, a spoonerism should treat an initial <em>y</em> as the ‘head’ of a word and should swap it with the head of the other word in the spoonerism as normal. For example:</p>
+<ul class="simple">
+<li><p>four years → your fears</p></li>
+</ul>
+<p>But a <em>y</em> elsewhere should be treated as a vowel and not included in the ‘head’ of the word. For example:</p>
+<ul class="simple">
+<li><p>sly drinkies → dry slinkies</p></li>
+</ul>
+<p>Modify the <span class="xref myst">spoonerisms module</span> to take this new rule into account. But do so according to the test-driven development pattern as described above. Write a new test function in the <span class="xref myst">test_spoonerisms.py</span> test file first, and verify that you get the expected failure. Only then may you write your planned improvement.</p>
+<p>You might want to write more than one test function to make sure that you have covered all the relevant possibilities.</p>
+<p>When you have made your changes to <em><a class="reference external" href="http://spoonerisms.py">spoonerisms.py</a></em>, use pytest to run all of the test functions in the test file. Check that your new test function passes and that your changes have not caused any of the other tests to fail.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="command_line.html" title="previous page">The command line</a>
+    <a class='right-next' id="next-link" href="github.html" title="next page">GitHub</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

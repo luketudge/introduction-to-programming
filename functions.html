@@ -1,0 +1,1390 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Iteration" href="iteration.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Ffunctions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/functions.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calling-functions">
+   Calling functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arguments">
+   Arguments
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keyword-arguments">
+     Keyword arguments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#return-values">
+   Return values
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#side-effects">
+     Side effects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-functions">
+   Defining functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objective">
+     Objective
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#default-values">
+     Default values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#raising-exceptions">
+     Raising exceptions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docstrings">
+   Docstrings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-functions">
+   Building functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#function-or-loop">
+   Function or loop?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<p>We have been working with <a class="reference internal" href="glossary.html#function"><span class="std std-doc">functions</span></a> since the very first lesson. For example, we have often used the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function to allow users of our program to type something in, and the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to display messages for the user.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name? Mildred
+Hello Mildred
+</pre></div>
+</div>
+</div>
+</div>
+<p>In addition, we have learned about a few other miscellaneous functions, such as <code class="docutils literal notranslate"><span class="pre">len()</span></code> for counting the number of items in a <a class="reference internal" href="glossary.html#sequence"><span class="std std-doc">sequence</span></a> (or the number of characters in a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>And we have learned about a special kind of function, called <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a>, that are ‘attached’ to just one <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data type</span></a>. For example the <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> method <code class="docutils literal notranslate"><span class="pre">upper()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MILDRED&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for using methods is slightly different from that for functions. We will set aside methods for now and focus on functions in general.</p>
+<div class="section" id="calling-functions">
+<h2>Calling functions<a class="headerlink" href="#calling-functions" title="Permalink to this headline">¶</a></h2>
+<p>The standard syntax for using a function is:</p>
+<ul class="simple">
+<li><p>write the name of the function</p></li>
+<li><p>open parentheses <code class="docutils literal notranslate"><span class="pre">(</span></code></p></li>
+<li><p>(optionally) write any inputs to the function</p>
+<ul>
+<li><p>multiple inputs must be separated by commas</p></li>
+</ul>
+</li>
+<li><p>close parentheses <code class="docutils literal notranslate"><span class="pre">)</span></code></p></li>
+</ul>
+<p>The function will then output some result (although a few functions have no output).</p>
+<p>There are a few important pieces of computing vocabulary associated with functions:</p>
+<ul class="simple">
+<li><p><strong>Call</strong>. Running a function is known as ‘<a class="reference internal" href="glossary.html#call"><span class="std std-doc">calling</span></a>’ the function. When we run a function, this is sometimes termed a ‘function call’. It is as if the function is playing outside in the garden, and then we call it in because we want it to do something for us.</p></li>
+<li><p><strong>Argument</strong>. The inputs to a function, which go inside the parentheses, are known as the function’s ‘<a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a>’. This is very different from the everyday use of the word ‘argument’, but is probably distantly related to the sense of ‘argument’ as meaning ‘valid or confirmatory information’. According to <em><a class="reference external" href="https://muse.jhu.edu/book/26769">The Origins of Mathematical Words</a></em>, astronomers used to compile tables of numbers about the positions of celestial bodies, and then input these numbers into further calculations. These validated input numbers were known as ‘arguments’ in the sense of ‘supporting information’.</p></li>
+<li><p><strong>Return value</strong>. The output of the function is known as its ‘<a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a>’. When the function has finished doing its work and reports back to us with the result, we say that the function has ‘returned’ that result.</p></li>
+</ul>
+<p>We can see some of these terms in action in a few <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error messages</span></a> that we encounter if we use a function incorrectly. For example if we try to <a class="reference internal" href="glossary.html#call"><span class="std std-doc">call</span></a> something that is not a function:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_number</span> <span class="o">=</span> <span class="mi">42</span>
+
+<span class="n">some_number</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mf">40e574</span><span class="n">c91384</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">some_number</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">some_number</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: &#39;int&#39; object is not callable
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or if we supply the wrong number of <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a>:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">adf3103c7c3e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">len</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: len() takes exactly one argument (0 given)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="s1">&#39;Bonk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">e6b31188cf9e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="s1">&#39;Bonk&#39;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: len() takes exactly one argument (2 given)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<p>Some functions are flexible in the number of arguments they take. For example, <code class="docutils literal notranslate"><span class="pre">print()</span></code> can take an indefinite number of arguments, and just prints them all out one after the other:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world !
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> can even take no arguments at all. In this case, it prints a <a class="reference internal" href="glossary.html#newline"><span class="std std-doc">newline</span></a> (a blank line):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that even if there are no input arguments, the parentheses are still required. The presence of the parentheses is what lets Python know that we actually want to <a class="reference internal" href="glossary.html#call"><span class="std std-doc">call</span></a> the function. If we omit them, the function is not called. Instead, Python simply confirms: “yes, that is a function”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function print&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="keyword-arguments">
+<h3>Keyword arguments<a class="headerlink" href="#keyword-arguments" title="Permalink to this headline">¶</a></h3>
+<p>Some functions are a little more complex. As well as taking one or more arguments in the standard way that we have seen so far, some functions can take some additional special arguments that modify the behavior of the function in some way. These arguments have specific names, and we can assign values into those specific names (with <code class="docutils literal notranslate"><span class="pre">=</span></code>) in order to make them work.</p>
+<p>If this sounds a little abstract, it will become much clearer with an example. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function can also take some additional named arguments called <code class="docutils literal notranslate"><span class="pre">sep</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code>. <code class="docutils literal notranslate"><span class="pre">sep</span></code> (an abbreviation of ‘separator’) specifies characters to print in between all the other arguments, and <code class="docutils literal notranslate"><span class="pre">end</span></code> specifies some characters to print at the end:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;my name is&#39;</span><span class="p">,</span> <span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello...my name is...Mildred!
+</pre></div>
+</div>
+</div>
+</div>
+<p>These special named arguments are known as ‘keyword arguments’ (and sometimes you may see them referred to by the abbreviation <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>). Keyword arguments have fixed names. Unlike when we <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> a variable, we cannot just give them any name we like. Otherwise, the function would have no way of knowing which particular part of its behavior we intend each keyword argument to modify.</p>
+<p>If we try to assign the keyword arguments to just any old name, the result is an error. And now that we know the relevant vocabulary, the text of the error message is pretty clear about what we did wrong:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;my name is&#39;</span><span class="p">,</span> <span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">abafff96c1e1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;my name is&#39;</span><span class="p">,</span> <span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: &#39;x&#39; is an invalid keyword argument for print()
+</pre></div>
+</div>
+</div>
+</div>
+<p>But up until now we have been using <code class="docutils literal notranslate"><span class="pre">print()</span></code> without specifying any values for the keyword arguments <code class="docutils literal notranslate"><span class="pre">sep</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code>. So how did <code class="docutils literal notranslate"><span class="pre">print()</span></code> know what to do? Keyword arguments have ‘default values’, which are used if no keyword arguments are given. If you look at the standard behavior of <code class="docutils literal notranslate"><span class="pre">print()</span></code> you may be able to guess what the default values for <code class="docutils literal notranslate"><span class="pre">sep</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;my name is&#39;</span><span class="p">,</span> <span class="s1">&#39;Mildred&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello my name is Mildred
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s right, the default for <code class="docutils literal notranslate"><span class="pre">sep</span></code> is a space (i.e. <code class="docutils literal notranslate"><span class="pre">sep='</span> <span class="pre">'</span></code>). It is a little harder to see what the default for <code class="docutils literal notranslate"><span class="pre">end</span></code> is, because it is somewhat invisible, but it is a <a class="reference internal" href="glossary.html#newline"><span class="std std-doc">newline character</span></a>, starting a new line. If we ask <code class="docutils literal notranslate"><span class="pre">end</span></code> to be nothing (i.e. an empty string <code class="docutils literal notranslate"><span class="pre">''</span></code>), then anything that is printed next will continue printing on the same line, instead of on a new one:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;my name is&#39;</span><span class="p">,</span> <span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;and I am very excited to be using your computer program.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello my name is Mildredand I am very excited to be using your computer program.
+</pre></div>
+</div>
+</div>
+</div>
+<p>When you look at the official Python <a class="reference external" href="https://docs.python.org/3/library/functions.html#print">documentation for the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function</a>, you will see the possible input arguments written out in the header, and you will see the default values for the keyword arguments. For example, inside the parentheses you will see <code class="docutils literal notranslate"><span class="pre">end='\n'</span></code>, giving the default value for the <code class="docutils literal notranslate"><span class="pre">end</span></code> keyword argument (the character combination <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> is used to represent the <a class="reference internal" href="glossary.html#newline"><span class="std std-doc">newline character</span></a>). When you first encounter a function that you would like to use, it is a good idea to seek out the documentation and look for this header, to see what the input arguments are, and whether any of them set default behavior that you might want to change.</p>
+</div>
+</div>
+<div class="section" id="return-values">
+<h2>Return values<a class="headerlink" href="#return-values" title="Permalink to this headline">¶</a></h2>
+<p>The output of a function is called its <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a>. Usually, when we use a function, we <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> the return value into a variable by placing <code class="docutils literal notranslate"><span class="pre">=</span></code> in front of the <a class="reference internal" href="glossary.html#call"><span class="std std-doc">function call</span></a>. For example, the return value of the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function is a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> containing whatever characters the user typed in, and the return value of the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function is an integer containing the number of items in a sequence or number of characters in a string. We can assign return values into variables to make use of them in the rest of our program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Name: &#39;</span><span class="p">)</span>
+
+<span class="n">n_letters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your name has&#39;</span><span class="p">,</span> <span class="n">n_letters</span><span class="p">,</span> <span class="s1">&#39;letters.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name: Mildred
+Your name has 7 letters.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="side-effects">
+<h3>Side effects<a class="headerlink" href="#side-effects" title="Permalink to this headline">¶</a></h3>
+<p>Does the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function have a <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a>? At first, it may seem as though it does. Doesn’t it return the printed text?</p>
+<p>Let’s see what happens if we try to <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> the return value of <code class="docutils literal notranslate"><span class="pre">print()</span></code> into a variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello.
+</pre></div>
+</div>
+</div>
+</div>
+<p>What is the <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> of this variable? If <code class="docutils literal notranslate"><span class="pre">print()</span></code> returns the printed text, then we should expect that this variable is a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a>. But it is not:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NoneType
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we can see here, <code class="docutils literal notranslate"><span class="pre">print()</span></code> returns <a class="reference internal" href="glossary.html#none"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">None</span></code></span></a>. The <code class="docutils literal notranslate"><span class="pre">None</span></code> value in Python stands for something that has not been defined, so if we get <code class="docutils literal notranslate"><span class="pre">None</span></code> as the return value of a function, this essentially means that the function has no return value.</p>
+<p>It is important to distinguish between what a function <em>does</em> and what it <em>returns</em>. Sometimes, a function simply ‘does things’ but does not produce a return value that we can <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> into a variable. The <em>effect</em> of the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function is to display text, but the text is not its return value. Any effects of a function that are not reflected in its return value are termed ‘side effects’ of the function. Displaying text is a ‘side effect’ of the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, though that may sound like a strange way of talking about it.</p>
+<p>We have encountered this phenomenon before in a slightly different guise when we learned about list methods. Remember that list methods just go ahead and change the list, and they don’t return the changed list, they return <code class="docutils literal notranslate"><span class="pre">None</span></code>. Changing the contents of the list is a ‘side effect’ of list methods.</p>
+<p>Most functions, however, have no side effects; everything they do is reflected in their return value. For example, <code class="docutils literal notranslate"><span class="pre">len()</span></code> returns the length of something, and this is all that it does.</p>
+</div>
+</div>
+<div class="section" id="defining-functions">
+<h2>Defining functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">¶</a></h2>
+<p>All the functions that we have met so far are ‘<a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">builtins</span></a>’, functions that are already ‘built in’ to Python and are ready for us to use whenever we write a Python program.</p>
+<p>We are not limited to using the built-in functions. We can also define our own functions. We can then use these functions, either in the same program in which they are defined, or in another program, or we can even publish them online for other people to download and use in their own programs.</p>
+<p>This is what we will learn about now.</p>
+<div class="section" id="objective">
+<h3>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h3>
+<p>Let’s again set ourselves a task to structure our learning. Imagine that we have a program that gathers user names. In this simple example program we will omit using <code class="docutils literal notranslate"><span class="pre">input()</span></code> to get the user names, because it gets tedious to keep testing the program by typing input at the console. Let’s just define some names manually so we have a few to work with:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="s1">&#39;Mildred Bonk&#39;</span>
+<span class="n">aunts_name</span> <span class="o">=</span> <span class="s1">&#39;Jennifer Boolean&#39;</span>
+<span class="n">uncles_name</span> <span class="o">=</span> <span class="s1">&#39;Julian Boolean&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now imagine that we want to create for each user an abbreviated ID consisting of their initials (i.e. the first letters of their first and surnames).</p>
+<p>We can do this using the string <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> <code class="docutils literal notranslate"><span class="pre">split()</span></code> and some <a class="reference internal" href="glossary.html#index"><span class="std std-doc">indexing</span></a>, both of which we have learned about before:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">user_name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have confirmed that it works, let’s do it for the other two users as well:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">aunts_name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">aunts_id</span> <span class="o">=</span> <span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">names</span> <span class="o">=</span> <span class="n">uncles_name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">uncles_id</span> <span class="o">=</span> <span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">aunts_id</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uncles_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>JB
+JB
+</pre></div>
+</div>
+</div>
+</div>
+<p>We notice that the next two users have the same ID. So now we decide that a better way to allocate IDs would be to use the first <em>two</em> letters of each user’s first and surname. We have not picked a great way of approaching this task. Because we have copied and pasted almost the same lines three times to accomplish the same task, we now have to change things in several places whenever we decide that we want to change something about the way that that task is accomplished. We are fallible human beings and we are likely to miss one of the places in which the change is necessary, thus introducing mistakes into our program. <a class="reference external" href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>.</p>
+<p>It would be nice if there were just a function that could take a user name as its <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> and <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return</span></a> the user’s initials. Then we could use it in our program. Even better would be if we could modify this function’s behavior, and for the modified behavior to take effect wherever the function is used. This would allow us to make changes in just one place that take effect for the whole program.</p>
+<p>Maybe there is a built-in function that suits our needs?</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_id</span> <span class="o">=</span> <span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">20</span><span class="o">-</span><span class="mi">05</span><span class="n">f0e1156bc4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">user_id</span> <span class="o">=</span> <span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;get_initials&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>No luck. We need to define this function ourselves.</p>
+<p>Here is what we would like our function <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> to do:</p>
+<ul class="simple">
+<li><p>take a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> containing two names</p></li>
+<li><p>return a new string containing the initials of those names (i.e. the first letter of each)</p></li>
+<li><p>take two additional keyword arguments:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code>: an <a class="reference internal" href="glossary.html#integer"><span class="std std-doc">integer</span></a> specifying the number of initial letters to use from each name</p>
+<ul>
+<li><p>this should default to <code class="docutils literal notranslate"><span class="pre">1</span></code> to produce the standard single initials</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uppercase</span></code>: a <a class="reference internal" href="glossary.html#boolean"><span class="std std-doc">boolean</span></a> specifying whether to return the initials in UPPERCASE</p>
+<ul>
+<li><p>this should default to <code class="docutils literal notranslate"><span class="pre">False</span></code> to produce lowercase initials</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>in addition, the function should produce an informative error message if the input argument string does not contain exactly two names (e.g. <code class="docutils literal notranslate"><span class="pre">'Mildred'</span></code> or <code class="docutils literal notranslate"><span class="pre">'Mildred</span> <span class="pre">T.</span> <span class="pre">Bonk'</span></code>)</p></li>
+</ul>
+<p>When we decide to define a new function of our own, we should think about four ingredients:</p>
+<ul class="simple">
+<li><p>the name of the function</p></li>
+<li><p>its input arguments</p></li>
+<li><p>what steps it carries out (the ‘body’ of the function)</p></li>
+<li><p>the return value</p></li>
+</ul>
+<p>Below is the <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for defining a new function. A function definition is a kind of <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statement</span></a>, like a <a class="reference internal" href="glossary.html#condition"><span class="std std-doc">condition</span></a> or a <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a>, and some of the basic syntactical features of control statements, such as a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> and <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indentation</span></a> appear here as well.</p>
+<ul class="simple">
+<li><p>write <code class="docutils literal notranslate"><span class="pre">def</span></code></p></li>
+<li><p>write the name of the function (pick any name, just like for creating a variable)</p></li>
+<li><p>open parentheses <code class="docutils literal notranslate"><span class="pre">(</span></code></p></li>
+<li><p>write the names of any arguments the function should have</p>
+<ul>
+<li><p>these should be separated by commas</p></li>
+</ul>
+</li>
+<li><p>write the steps that the function carries out</p>
+<ul>
+<li><p>these should be indented</p></li>
+<li><p>in these steps, use the names of the input arguments</p></li>
+</ul>
+</li>
+<li><p>write <code class="docutils literal notranslate"><span class="pre">return</span></code></p></li>
+<li><p>write what the function should return</p></li>
+</ul>
+<p>Let’s see this syntax in action for a simple first attempt at our target function (though note that this first attempt contains a deliberate mistake for didactic purposes):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">initials</span> <span class="o">=</span> <span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s now <a class="reference internal" href="glossary.html#call"><span class="std std-doc">call</span></a> our function, with an example name as the input argument:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We don’t seem to get any answer. Maybe the <code class="docutils literal notranslate"><span class="pre">initials</span></code> variable that is created inside the function is the place to look?</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">initials</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="n">af522d26ad22</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">initials</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;initials&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>No luck there either. Any variables that we create inside the body of a function are only for the function’s own internal use. They are discarded once the function has done its work.</p>
+<p>The deliberate mistake in our first attempt at defining our function is that we have forgotten to use the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword on the last line. Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Whatever we write just after <code class="docutils literal notranslate"><span class="pre">return</span></code> is the <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a>, the thing that the function will output. This is the only thing we can get from the function when we <a class="reference internal" href="glossary.html#call"><span class="std std-doc">call</span></a> it. Any other variables created inside the function are just temporary intermediate steps on the way to the return value.</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">def</span></code> (an abbreviation of ‘define’) and <code class="docutils literal notranslate"><span class="pre">return</span></code> are <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keywords</span></a>; their roles are fixed. But <code class="docutils literal notranslate"><span class="pre">get_initials</span></code> is our chosen name for the function. This could be different. Likewise <code class="docutils literal notranslate"><span class="pre">name</span></code> is the name we have given to the input argument. This too could be different if we wish. But just as in a <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a> or a <a class="reference internal" href="glossary.html#comprehension"><span class="std std-doc">comprehension</span></a>, we must be consistent in using this same name in the body of the function wherever we mean ‘whatever input is given to the function’. So if we were to use something arbitrary like <code class="docutils literal notranslate"><span class="pre">x</span></code> for the name of the input argument, we would have to also use <code class="docutils literal notranslate"><span class="pre">x</span></code> on line 2 above and say <code class="docutils literal notranslate"><span class="pre">x.split()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">name.split()</span></code>.</p>
+<p>Now let’s test the correct version of the function by calling it and <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assigning</span></a> the return value into a variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_initials</span> <span class="o">=</span> <span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">user_initials</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>It works! It bloody works!</p>
+<p>If you do not experience a brief twinge of transcendental joy when you have written a working function then there really is no hope for you. But our function isn’t complete yet. Let’s start adding the additional features that we want our function to have.</p>
+</div>
+<div class="section" id="default-values">
+<h3>Default values<a class="headerlink" href="#default-values" title="Permalink to this headline">¶</a></h3>
+<p>We said that we wanted to add two keyword arguments, and that these should have specific default values. How do we specify default values for arguments? If you look again at the <a class="reference external" href="https://docs.python.org/3/library/functions.html#print">documentation for the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function</a>, you will see an example of the syntax for default values. When we define our function, we just have to assign the default values using <code class="docutils literal notranslate"><span class="pre">=</span></code>. When we (or someone else) later <a class="reference internal" href="glossary.html#call"><span class="std std-doc">calls</span></a> the function, if they do not enter these arguments, the default values will be used, but if they do enter them, then whatever values they enter will be used instead.</p>
+<p>Let’s create an updated version of our function, with the default values for the arguments <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">uppercase</span></code>. We should also incorporate these arguments into the body of the function. To make use of <code class="docutils literal notranslate"><span class="pre">n</span></code>, we should use it as a <a class="reference internal" href="glossary.html#slice"><span class="std std-doc">slice</span></a> index to get the first <code class="docutils literal notranslate"><span class="pre">n</span></code> characters from each name (line 5 below). And to make use of <code class="docutils literal notranslate"><span class="pre">uppercase</span></code> we should put it in an <code class="docutils literal notranslate"><span class="pre">if</span></code> condition that applies the string <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> <code class="docutils literal notranslate"><span class="pre">upper()</span></code> if the <code class="docutils literal notranslate"><span class="pre">uppercase</span></code> argument is <code class="docutils literal notranslate"><span class="pre">True</span></code> (line 6 below).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">uppercase</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">initials</span> <span class="o">=</span> <span class="n">firstname</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">uppercase</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">initials</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">initials</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(In case you are wondering: No, we do not need to write <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">uppercase</span> <span class="pre">==</span> <span class="pre">True</span></code> as our condition. In everyday English, it would be redundant to say something like “If the statement ‘it is raining’ is true, take your umbrella.” We can just say “If it is raining, take your umbrella.” So too in Python. We do not have to ask <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">x</span> <span class="pre">==</span> <span class="pre">True</span></code> when <code class="docutils literal notranslate"><span class="pre">x</span></code> is a <a class="reference internal" href="glossary.html#boolean"><span class="std std-doc">boolean</span></a> variable that is already either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. We can just ask <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">x</span></code>.)</p>
+<p>And now let’s test the new version of our function. We should check carefully that it works correctly both when we do not specify the keyword arguments, and when we do.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;mb&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;mibo&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">uppercase</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MB&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great.</p>
+</div>
+<div class="section" id="raising-exceptions">
+<h3>Raising exceptions<a class="headerlink" href="#raising-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>In the <a class="reference internal" href="conditions.html"><span class="doc std std-doc">lesson on conditions</span></a>, we learned about <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exceptions</span></a>. Exceptions are notifications that a program has encountered something that it cannot normally deal with. We would like our function to produce an exception if the <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> that comes in as the first input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> does not contain exactly two names, because this is an input that our function is not intended to deal with.</p>
+<p>Producing an exception is termed ‘<a class="reference internal" href="glossary.html#raise"><span class="std std-doc">raising</span></a>’ an exception, where the verb ‘to raise’ is being used in the same sense as in ‘to raise an issue’ or ‘to raise a question’. The <code class="docutils literal notranslate"><span class="pre">raise</span></code> <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> allows us to raise an exception manually. The <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for raising an exception is:</p>
+<ul class="simple">
+<li><p>write <code class="docutils literal notranslate"><span class="pre">raise</span></code></p></li>
+<li><p>write the name of the kind of exception you want to raise (see the glossary entry on <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exceptions</span></a> for a list of the most common ones)</p></li>
+<li><p>open parentheses <code class="docutils literal notranslate"><span class="pre">(</span></code></p></li>
+<li><p>write an informative error message</p></li>
+<li><p>close parentheses <code class="docutils literal notranslate"><span class="pre">)</span></code></p></li>
+</ul>
+<p>Let’s raise an exception just for fun, to see how this works:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;OMG that is not valid. You have broken your computer FOR EVER.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="n">b55543e1f431</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;OMG that is not valid. You have broken your computer FOR EVER.&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: OMG that is not valid. You have broken your computer FOR EVER.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is the most common <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exception</span></a> that we will want to raise ourselves in our functions. For other programmers using our functions, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> exception lets them know that they have tried to use the function with an input that it cannot handle.</p>
+<p>Below is our function, updated to include checking the first input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> and raising an exception if it does not contain exactly two names. In order to produce an informative <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error message</span></a>, we make use of the <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> <code class="docutils literal notranslate"><span class="pre">format()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">uppercase</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">n_names</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n_names</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">error_message</span> <span class="o">=</span> <span class="s2">&quot;&#39;</span><span class="si">{}</span><span class="s2">&#39; contains </span><span class="si">{}</span><span class="s2"> names but should contain 2.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n_names</span><span class="p">))</span>
+    <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">initials</span> <span class="o">=</span> <span class="n">firstname</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">uppercase</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">initials</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">initials</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our function is starting to get quite complex. So let’s first check that the changes we just made have not disrupted the normal workings of the function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;mb&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>And now let’s check that we get an appropriate <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error message</span></a> if we input a string that does not contain the expected number of names:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;Mildred T. Bonk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">33</span><span class="o">-</span><span class="n">d78bf5992a4b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;Mildred T. Bonk&#39;</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-31-ab9b076cef55&gt;</span> in <span class="ni">get_initials</span><span class="nt">(name, n, uppercase)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">if</span> <span class="n">n_names</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="n">error_message</span> <span class="o">=</span> <span class="s2">&quot;&#39;</span><span class="si">{}</span><span class="s2">&#39; contains </span><span class="si">{}</span><span class="s2"> names but should contain 2.&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n_names</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="ne">ValueError</span>: &#39;Mildred T. Bonk&#39; contains 3 names but should contain 2.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yes! The transcendental joy that results from successfully raising an exception almost trumps that of writing a working function.</p>
+<p>Our function is now complete. We can apply it again and again with many different input arguments in different parts of our program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">user_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;mb&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">aunts_name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;jebo&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="n">uncles_name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;jubo&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">,</span> <span class="n">uppercase</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;DH&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="docstrings">
+<h2>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h2>
+<p>Earlier, I briefly mentioned a few different ways in which we can use a function that we have defined. We can use the function right away within the same program, but we can also re-use a function in other programs or even publish our function online so that other programmers can use it.</p>
+<p>In this last case, we should provide some documentation for our functions. Other programmers will want to know what our function does, how to use it, what sort of input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a> it expects, and what it <a class="reference internal" href="glossary.html#return"><span class="std std-doc">returns</span></a>.</p>
+<p>In the very first lesson, we learned how to provide a human-readable description of our program by enclosing it in triple quotes at the top of the file. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is a program to do some amazing machine learning.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>A triple-quoted string used like this is known as a <a class="reference internal" href="glossary.html#docstring"><span class="std std-doc">docstring</span></a>. Python allows us to provide docstrings for individual functions as well as for our program as a whole. Like the docstring for a program, a function docstring does not have any effect on the workings of the function; it is just for human beings to read. You should get into the habit of writing docstrings for your functions, unless the function is so short as to be trivially understandable. Even if you don’t plan to make your work public, collaborators and colleagues will probably need to look at it at some point, and you yourself will be surprised at how much you have forgotten about the workings of your own program when you return to it weeks later.</p>
+<p>What information should we put in a docstring, and how should we organize it? There are various conventions that different groups of programmers follow. Google provides a Python style guide for its employees, and it makes some good recommendations about docstrings. You can read them <a class="reference external" href="http://google.github.io/styleguide/pyguide.html#383-functions-and-methods">here</a>. In general, we should include the following pieces of information:</p>
+<ul class="simple">
+<li><p>A very brief description of what the function does.</p></li>
+<li><p>An example of its use.</p></li>
+<li><p>A explanation of the input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a>.</p></li>
+<li><p>The <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a>.</p></li>
+<li><p>Whether the function <a class="reference internal" href="glossary.html#raise"><span class="std std-doc">raises</span></a> any exceptions.</p></li>
+</ul>
+<p>You can see an example docstring for our <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> function in the example program <span class="xref myst">initials.py</span>. (In case you are wondering what is going on on line 43 of this file, this will be explained in the next lesson.)</p>
+</div>
+<div class="section" id="building-functions">
+<h2>Building functions<a class="headerlink" href="#building-functions" title="Permalink to this headline">¶</a></h2>
+<p>Writing functions can be a little more difficult than writing other Python control statements. A function is somewhat like a ‘black box’; when we use a function, we put in some input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a> and get out a <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a>, but we don’t have easy access to the steps that go on inside the body of the function. So when we write a function we often don’t know whether it works correctly or not until we have finished writing it and can finally <a class="reference internal" href="glossary.html#call"><span class="std std-doc">call</span></a> it. If we find that it does not work as we wanted, it can be difficult to see what went wrong.</p>
+<p>As a beginner to programming, you should therefore avoid trying to write a function all in one go, unless the function is extremely simple. Instead, start by writing out the steps in the body of the function as normal Python commands without indentation. Test each of these steps as you go along. Then only turn them into a function once you have finished and checked them all.</p>
+<p>For example, imagine we would like to write a function for finding the length of the hypotenuse <span class="math notranslate nohighlight">\(z\)</span> of a right-angled triangle given the lengths of the two other sides <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, according to the formula:</p>
+<div class="math notranslate nohighlight">
+\[
+z = (x^2 + y^2)^\frac{1}{2}
+\]</div>
+<p>Start by writing out the header line of the function using <code class="docutils literal notranslate"><span class="pre">def</span></code>, but turn this line into a comment using <code class="docutils literal notranslate"><span class="pre">#</span></code> so that Python won’t run it yet. Then define some temporary variables to provide example inputs for the function, using the same names that you have given them in the function header. Choose some inputs for which you know the correct answer (for example, <code class="docutils literal notranslate"><span class="pre">x=3,</span> <span class="pre">y=4</span></code> should give a return value of <code class="docutils literal notranslate"><span class="pre">5</span></code>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#def hypotenuse(x, y):</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now add in the first step in the function body, for example getting the squares of the two given side lengths, and print it out to check it looks right:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#def hypotenuse(x, y):</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">x_sq</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">y_sq</span> <span class="o">=</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x_sq</span><span class="p">,</span> <span class="n">y_sq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9 16
+</pre></div>
+</div>
+</div>
+</div>
+<p>Keep adding steps and checking as you go along. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#def hypotenuse(x, y):</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">sum_sq</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_sq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#def hypotenuse(x, y):</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">sum_sq</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">sum_sq</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that you have finished all the steps inside the function and checked them, you can turn them into the finished function with four changes:</p>
+<ul class="simple">
+<li><p>Remove the <code class="docutils literal notranslate"><span class="pre">#</span></code> from the function header.</p></li>
+<li><p>Delete the temporary variables that you used as example inputs.</p></li>
+<li><p>Indent the other lines so that they become part of the function.</p></li>
+<li><p>Turn the final <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement into a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement instead.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hypotenuse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+
+    <span class="n">sum_sq</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">sum_sq</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Don’t forget to test your finished function with the same input arguments you used while building it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hypotenuse</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="function-or-loop">
+<h2>Function or loop?<a class="headerlink" href="#function-or-loop" title="Permalink to this headline">¶</a></h2>
+<p>In the <a class="reference internal" href="iteration.html"><span class="doc std std-doc">previous lesson</span></a> we saw that <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loops</span></a> are a good way of avoiding having to write out the same lines multiple times. And we began the current lesson with a similar sort of situation; we wanted to apply the same few Python commands repeatedly in order to create abbreviated user IDs for multiple users. So couldn’t we just have done this in a loop?</p>
+<p>Yes, we could. And for this simple example, a loop might have been ok. We can loop through the items in a list of user names, process each one in the loop, and append the result to a new list with the list <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> <code class="docutils literal notranslate"><span class="pre">append()</span></code>. It would look something like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">,</span> <span class="s1">&#39;Jennifer Boolean&#39;</span><span class="p">,</span> <span class="s1">&#39;Julian Boolean&#39;</span><span class="p">]</span>
+<span class="n">user_ids</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">user_names</span><span class="p">:</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">firstname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">surname</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">initials</span> <span class="o">=</span> <span class="n">firstname</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">surname</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">user_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">initials</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+
+<span class="n">user_ids</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;MIBO&#39;, &#39;JEBO&#39;, &#39;JUBO&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>But there are some important differences between loops and functions. The most important one is that a loop runs immediately in only one place in our program, whereas a function can be re-used in multiple places. Imagine that our program needed to collect and process some of the user names early on, and collect more user names after having carried out some intermediate actions. We could not achieve this with a loop, as the loop requires us to have a complete sequence of inputs ready to loop through. A function allows us to run some lines, then do something else, then go back and run the same lines again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">,</span> <span class="s1">&#39;Jennifer Boolean&#39;</span><span class="p">,</span> <span class="s1">&#39;Julian Boolean&#39;</span><span class="p">]</span>
+<span class="n">user_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_initials</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">user_names</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Carrying out some intermediate actions...&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Now adding the ID of the admin user...&#39;</span><span class="p">)</span>
+
+<span class="n">admin_id</span> <span class="o">=</span> <span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Carrying out some intermediate actions...
+Now adding the ID of the admin user...
+</pre></div>
+</div>
+</div>
+</div>
+<p>If this seems a little abstract to you, take a look at the second example program for this lesson, <span class="xref myst">fun_facts.py</span>. It demonstrates the re-use of a function (that gets the answer to a ‘yes/no’ question) in multiple places in a program.</p>
+<p>The other important difference between loops and functions is that a function can be re-used in a <em>different</em> program, whereas a loop cannot (at least, not without manually copying and pasting it into the new program). Re-using functions in more than one file is the topic of the next lesson.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Take a look at the <span class="xref myst">fun_facts.py</span> example program. It defines a function <code class="docutils literal notranslate"><span class="pre">yorn()</span></code> for prompting the user to answer a ‘yes/no’ question. Currently, the function only accepts <code class="docutils literal notranslate"><span class="pre">'y'</span></code> or <code class="docutils literal notranslate"><span class="pre">'n'</span></code> as responses. Modify it so that it also allows the user to type in the complete words <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code>. Make sure to run your modified version of the program a few times and type in different responses at the console to check that your changes are correct.</p>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Write a new program, called <em><a class="reference external" href="http://words.py">words.py</a></em>. The program defines a single function, called <code class="docutils literal notranslate"><span class="pre">first_n_words()</span></code>. The function turns a piece of text into a list of the first few words contained in the text. Here are the details of how it should work:</p>
+<ul class="simple">
+<li><p>Take a string argument called <code class="docutils literal notranslate"><span class="pre">text</span></code> and an integer argument called <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p></li>
+<li><p>Return a list containing the first <code class="docutils literal notranslate"><span class="pre">n</span></code> words in <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> has a default value of <code class="docutils literal notranslate"><span class="pre">1</span></code> (i.e. if no <code class="docutils literal notranslate"><span class="pre">n</span></code> is given, return a list containing only the first word in <code class="docutils literal notranslate"><span class="pre">text</span></code>).</p></li>
+<li><p>Consider words as being any groups of characters separated by spaces.</p></li>
+<li><p>If the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> is greater than the number of words in <code class="docutils literal notranslate"><span class="pre">text</span></code>, just return all the words in <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p></li>
+<li><p>If the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> is <code class="docutils literal notranslate"><span class="pre">0</span></code> (or there are no words in <code class="docutils literal notranslate"><span class="pre">text</span></code>), return an empty list.</p></li>
+<li><p>But if the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> is negative, raise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> stating that negative values are not valid.</p></li>
+<li><p>Include an appropriate docstring for the function.</p></li>
+</ul>
+<p>Here are some examples of the function’s desired behavior:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">first_n_words</span><span class="p">(</span><span class="s1">&#39;Hello my name is Mildred.&#39;</span><span class="p">)</span>
+<span class="go">[&#39;Hello&#39;]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">first_n_words</span><span class="p">(</span><span class="s1">&#39;Hello my name is Mildred.&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">[&#39;Hello&#39;, &#39;my&#39;, &#39;name&#39;, &#39;is&#39;]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">first_n_words</span><span class="p">(</span><span class="s1">&#39;Hello my name is Mildred.&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">9000</span><span class="p">)</span>
+<span class="go">[&#39;Hello&#39;, &#39;my&#39;, &#39;name&#39;, &#39;is&#39;, &#39;Mildred.&#39;]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">first_n_words</span><span class="p">(</span><span class="s1">&#39;Hello my name is Mildred.&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">first_n_words</span><span class="p">(</span><span class="s1">&#39;Hello my name is Mildred.&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">ValueError: Cannot get a negative number of words.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="iteration.html" title="previous page">Iteration</a>
+    <a class='right-next' id="next-link" href="modules.html" title="next page">Modules</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

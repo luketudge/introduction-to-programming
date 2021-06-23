@@ -1,0 +1,1519 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables and data types &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sequences and mappings" href="sequences_mappings.html" />
+    <link rel="prev" title="Glossary" href="glossary.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/types.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Ftypes.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/types.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/types.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assignment-and-immutability">
+   Assignment and immutability
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numeric-data">
+   Numeric data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-2">
+     Python 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#type-conversion">
+   Type conversion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#user-input">
+   User input
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-2-again">
+     Python 2 again
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods">
+   Methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#string-formatting">
+     String formatting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-types">
+   Other types
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean">
+     Boolean
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#none">
+     None
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuple">
+     Tuple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list">
+     List
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a">
+       a)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#b">
+       b)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#c">
+       c)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="variables-and-data-types">
+<h1>Variables and data types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h1>
+<p>In the <a class="reference internal" href="intro.html"><span class="doc std std-doc">introductory lesson</span></a>, we learned how to assign some data into a <a class="reference internal" href="glossary.html#variable"><span class="std std-doc">variable</span></a>. Below are a few examples. We will use these variables in the remainder of this lesson.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred T. Bonk&#39;</span>
+<span class="n">street</span> <span class="o">=</span> <span class="s1">&#39;Credibility Street&#39;</span>
+<span class="n">street_number</span> <span class="o">=</span> <span class="s1">&#39;221&#39;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mf">1.96</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<p>We have also learned about the important distinction between variables that store text (termed <a class="reference internal" href="glossary.html#string"><span class="std std-doc">strings</span></a> and abbreviated to <code class="docutils literal notranslate"><span class="pre">str</span></code>) and variables that store numbers. The form of the data stored in a variable (text, number, something else) is called its <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a>.</p>
+<p>In the examples above, the variables <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">street</span></code>, and <code class="docutils literal notranslate"><span class="pre">street_number</span></code> are of type string. We can see this from the way that they are written. The <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for creating a string is simply to enclose the text of the string in quote marks (<code class="docutils literal notranslate"><span class="pre">''</span></code>). Quote marks distinguish strings (i.e. literal text) from other things such as numbers, the names of other variables, or Python commands, all of which are written without quote marks. This is similar to the use of quote marks in everyday English. Think of the lyrics to the song <a class="reference external" href="https://en.wikipedia.org/wiki/Say_My_Name">Say My Name</a> by Destiny’s Child. When Beyoncé issues the instruction <em>say my name</em>, she intends <em>my name</em> to be replaced by her actual name when the instructions are carried out. This is equivalent to the following short Python program, albeit with <code class="docutils literal notranslate"><span class="pre">print()</span></code> in place of <em>say</em>, since Python has no <code class="docutils literal notranslate"><span class="pre">say()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_name</span> <span class="o">=</span> <span class="s1">&#39;Beyoncé&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Beyoncé
+</pre></div>
+</div>
+</div>
+</div>
+<p>What if the lyrics to the song were subtly different and included quote marks around ‘<em>my name</em>’ (i.e. <em>say ‘my name’</em>)? One use of quote marks in English is to clarify that a piece of text is to be interpreted literally, and not replaced with whatever the text refers to. So this version of the song would be equivalent to the following short Python program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_name</span> <span class="o">=</span> <span class="s1">&#39;Beyoncé&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;my_name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>my_name
+</pre></div>
+</div>
+</div>
+</div>
+<p>When it comes to data types, appearances can occasionally be deceptive. For example, the <code class="docutils literal notranslate"><span class="pre">street_number</span></code> variable that we created above is a string that happens to contain digits. These can occur from time to time in programming, in cases where the digits do not really represent a mathematical quantity or might sometimes need to have extra non-number characters added to them (for example, Sherlock Holmes lives at house number 221b, which we can’t represent and manipulate as an actual number).</p>
+<p>If we are unsure what type of data is stored in a variable, we can check at the console using the <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in</span></a> Python function <code class="docutils literal notranslate"><span class="pre">type()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">street_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python is fairly strict about what we can and cannot do with various types. If we try to get Python to <a class="reference internal" href="glossary.html#evaluate"><span class="std std-doc">evaluate</span></a> a mathematical expression that contains a string variable, we will encounter an <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error</span></a>.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">street_number</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">69</span><span class="n">d4580a9089</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">street_number</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, some Python functions and <a class="reference internal" href="glossary.html#operator"><span class="std std-doc">operators</span></a> are somewhat flexible, and may instead do different things depending on the type of the variable that they are applied to. For example, the multiplication operator <code class="docutils literal notranslate"><span class="pre">*</span></code> performs normal math multiplication for variables that store numbers, but for strings it instead repeats their contents.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">height</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.92
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mildred T. BonkMildred T. BonkMildred T. Bonk&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python’s occasional flexibility about data types is a double-edged sword. On the one hand, it allows for some concise intuitive commands, such as using <code class="docutils literal notranslate"><span class="pre">+</span></code> to combine strings or <code class="docutils literal notranslate"><span class="pre">*</span></code> to repeat them. But on the other hand, it means that we can occasionally make some big mistakes in our programs without immediately becoming aware of it. For example, if we found that <code class="docutils literal notranslate"><span class="pre">street_number</span></code> had been entered incorrectly and in fact needed an extra zero adding to it, then we might be tempted to multiply it by 10 in order to achieve this. Python would give no warning and would go ahead with what we asked even though the result is not what we want. In this case, our program might end up sending somebody’s automated delivery a lot further down the street than we intended.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">street_number</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;221221221221221221221221221221&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>A correct way to add an extra 0 to a string would be to add another string containing the <code class="docutils literal notranslate"><span class="pre">'0'</span></code> <em>character</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">street_number</span> <span class="o">+</span> <span class="s1">&#39;0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2210&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="assignment-and-immutability">
+<h2>Assignment and immutability<a class="headerlink" href="#assignment-and-immutability" title="Permalink to this headline">¶</a></h2>
+<p>‘Assignment and immutability’ is of course the title of a novel by Jane Austen. But it also refers to two important concepts in Python programming. We learned about <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assignment</span></a> earlier; when we assign some value to a variable, we store that value under the name of the variable, and can retrieve it using that name.</p>
+<p>To understand immutability, let’s remind ourselves of something. Take a look at the value of the <code class="docutils literal notranslate"><span class="pre">street_number</span></code> variable after everything that we have been doing with it above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">street_number</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;221&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>It hasn’t changed since its original assignment. Although we have been performing various operations with the variable, we have merely been testing out and looking at the results of these operations. The value of the variable has remained unchanged. The value of a string variable will always remain the same unless we overwrite it by assigning it again. If we want to change or update the value of a variable with the result of some calculation, then we must assign that result back into the same variable name.</p>
+<p>For example if we want to add a <code class="docutils literal notranslate"><span class="pre">'b'</span></code> to the <code class="docutils literal notranslate"><span class="pre">street_number</span></code> string (and then print it out to check its new value):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">street_number</span> <span class="o">=</span> <span class="n">street_number</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">street_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>221b
+</pre></div>
+</div>
+</div>
+</div>
+<p>The opposite of immutability is ‘mutability’. As it turns out, there are some data types that are mutable. That is, their contents can change without us having to overwrite them. We will meet one of these at the end of this lesson. But all the simple data types, such as strings and numbers, are immutable; string and numeric variables will only ever change their contents if there is an <code class="docutils literal notranslate"><span class="pre">=</span></code> somewhere in our program that overwrites them.</p>
+<p>Although this behavior can occasionally be a source of frustration, for example if we perform some calculations but forget to store the result in the relevant variable, in general immutability is a good thing. It would be annoying if every time we wanted to calculate something with our variables, this also overwrote their contents. For example, we might want to just print out the result of adding one year to somebody’s age, without actually changing it.</p>
+<p>Of course if we want to keep both the original value of a variable and store an updated one, we can just assign the updated value into a <em>new</em> variable. In such cases it is a good idea to choose an expressive variable name that says something about what the changed value means. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_next_year</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
+23
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="numeric-data">
+<h2>Numeric data<a class="headerlink" href="#numeric-data" title="Permalink to this headline">¶</a></h2>
+<p>So far most of our examples have concerned the behavior of the <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> data type. Let’s now consider how Python manages numbers.</p>
+<p>Python distinguishes between two different ways of representing numbers. Numbers can be stored either as whole numbers (<code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, etc.) or as non-whole numbers (for example <code class="docutils literal notranslate"><span class="pre">1.618</span></code>, <code class="docutils literal notranslate"><span class="pre">2.718</span></code>, or <code class="docutils literal notranslate"><span class="pre">3.142</span></code>). Whole numbers are called <a class="reference internal" href="glossary.html#integer"><span class="std std-doc">integers</span></a> (abbreviated to <code class="docutils literal notranslate"><span class="pre">int</span></code>), and non-whole numbers are called <a class="reference internal" href="glossary.html#float"><span class="std std-doc">floating point numbers</span></a> (abbreviated to <code class="docutils literal notranslate"><span class="pre">float</span></code>). Just as there is a particular <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntactical</span></a> rule for creating a string, namely the use of quote marks, so there are syntactical rules for creating integers and floats. The presence of a decimal point (<code class="docutils literal notranslate"><span class="pre">.</span></code>) indicates a float, and its absence indicates an integer.</p>
+<p>Take a look back at the <code class="docutils literal notranslate"><span class="pre">age</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> variables that we defined above. We can see that Python has stored these as two different types.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that even if the number represented is a whole number, if we include a decimal point its type will still be float.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>For historical reasons, the syntax of programming languages (along with many other conventions in computing in general) is heavily influenced by British and US English. If you come from a part of the world where the comma is used as a decimal separator instead of the point, for example Germany, then beware that Python does not interpret it this way. If you try to create a float using the comma, the result will not be as expected. Surprisingly, however, you will not see an <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error message</span></a> either. Instead, Python interprets commas as separating two different things, and so will store the two numbers together in a new kind of variable (called a <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuple</span></a>) that can contain more than one value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>But more about tuples later.</p>
+<p>How should we decide whether to store a number as integer or float? If we want to store a non-whole number, the decision is easy; it has to be a float. But what about something like somebody’s age? Here, we have to think about what concept the number is supposed to represent in the real world, and consider whether we want to treat the units of that concept as atomic or as divisible into parts. For example, we can think of someone’s age as being a count of the number of whole years that they have survived. But we can also think of it as a continuous measure of how much time they have survived. Children in particular often like to give their age as a continuous quantity like ‘six-and-three-quarters’.</p>
+<p>As it turns out, there are many cases in which the difference between integers and floats does not actually matter for the functioning of our program. Python is quite flexible with number types.</p>
+<p>It allows us to mix integer and float numbers in the same mathematical expression:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">child_age</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">precise_child_age</span> <span class="o">=</span> <span class="n">child_age</span> <span class="o">+</span> <span class="mf">0.75</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">precise_child_age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result of a mathematical expression containing a mixture of integers and floats is always a float, even if the resulting quantity is a whole number:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">answer</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mf">2.0</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>A calculation that involves only integers and that results in a whole number will produce an integer:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">answer</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<p>If a calculation with integers results in a non-whole number then Python does the reasonable thing and nonetheless stores the result as a float instead of rounding it off:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">three_quarters</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">three_quarters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>Indeed, any calculation involving division will result in a float, even if the result is a whole number (you might find this rule a little less intuitive):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_halves</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">two_halves</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we are dividing integers and we would like to insist that the result also be an integer, then we can use a double slash <code class="docutils literal notranslate"><span class="pre">//</span></code> for so-called ‘floor division’. The result is ‘rounded down’:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lego_bricks</span> <span class="o">=</span> <span class="mi">52</span>
+<span class="n">bricks_per_house</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">houses_built</span> <span class="o">=</span> <span class="n">lego_bricks</span> <span class="o">//</span> <span class="n">bricks_per_house</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">houses_built</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="python-2">
+<h3>Python 2<a class="headerlink" href="#python-2" title="Permalink to this headline">¶</a></h3>
+<p>A previous version of Python, Python 2, was slightly less flexible about numeric data types. The result of division with integers in Python 2 was always an integer, with the non-whole part discarded. This could produce some surprises for the unwary, such as the result of <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">/</span> <span class="pre">2</span></code> being <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>We are learning to program with Python 3, and almost all new Python software is written for Python 3, so you do not need to worry about this. Just be aware of it if you see some older Python examples or programs when searching online.</p>
+</div>
+</div>
+<div class="section" id="type-conversion">
+<h2>Type conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h2>
+<p>What if we have data of one type, but we need it to be of another? For example, we have stored the house number of an address as a string because we might need to append letters to it, but now in another part of our program we need to do some math with it, perhaps in order to find out the address of a next-door neighbor.</p>
+<p>Python has functions that convert one data type into another. Each of these functions has the same name as the abbreviated name of the data type that we are converting to. So for example <code class="docutils literal notranslate"><span class="pre">str()</span></code> converts to string, and <code class="docutils literal notranslate"><span class="pre">int()</span></code> to integer.</p>
+<p>We can apply these functions to variables within a calculation that would otherwise result in an error:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_beast</span> <span class="o">=</span> <span class="s1">&#39;666&#39;</span>
+
+<span class="n">neighbor_beast</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">neighbor_beast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>668
+</pre></div>
+</div>
+</div>
+</div>
+<p>And here is a similar example but imagining we had first stored the house number as an integer:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_beast</span> <span class="o">=</span> <span class="mi">666</span>
+
+<span class="n">annexe_beast</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">annexe_beast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>666b
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remind yourself one more time that the values of string and numeric variables are not changed unless we overwrite them with an <code class="docutils literal notranslate"><span class="pre">=</span></code> assignment. Forgetting that this principle also applies to type conversion can lead to a common beginners’ mistake.</p>
+<p>Line 2 in this example has no effect on the type of the <code class="docutils literal notranslate"><span class="pre">number_beast</span></code>variable because it is not assigned anywhere:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_beast</span> <span class="o">=</span> <span class="mi">666</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span>
+
+<span class="n">annexe_beast</span> <span class="o">=</span> <span class="n">number_beast</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">annexe_beast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">25</span><span class="o">-</span><span class="mi">293</span><span class="n">d2fd1f181</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">annexe_beast</span> <span class="o">=</span> <span class="n">number_beast</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">annexe_beast</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here the problem is fixed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_beast</span> <span class="o">=</span> <span class="mi">666</span>
+<span class="n">number_beast</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_beast</span><span class="p">)</span>
+
+<span class="n">annexe_beast</span> <span class="o">=</span> <span class="n">number_beast</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">annexe_beast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>666b
+</pre></div>
+</div>
+</div>
+</div>
+<p>We saw above that Python handles the two numeric data types integer and float fairly flexibly and intuitively if we mix them in mathematical expressions. For this reason it is not so often necessary to convert variables between these two types.</p>
+<p>(The most common case in which we do want to do this is in order to convert float to integer. We will later encounter some situations in which we definitely need integers.)</p>
+</div>
+<div class="section" id="user-input">
+<h2>User input<a class="headerlink" href="#user-input" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take a look at a common situation in which type conversion from string to numeric is necessary. In one of our first example programs, <span class="xref myst">greeting_personal.py</span>, we used the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function in order to prompt the user to type something in at the console.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">input()</span></code> function always <a class="reference internal" href="glossary.html#return"><span class="std std-doc">returns</span></a> a string, even if the user types in a valid number. If we try to do math with the result, we will encounter an error:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
+<span class="n">age_next_year</span> <span class="o">=</span> <span class="n">user_age</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>How old are you? 52
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">27</span><span class="o">-</span><span class="n">e69a11705ffd</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">user_age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">age_next_year</span> <span class="o">=</span> <span class="n">user_age</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python has no way of knowing what type of data we want to get from the user. So in order to ‘play it safe’ and always be consistent, Python makes it a string and leaves it up to us to convert the contents of the string if necessary.</p>
+<p>So if we want to get numbers from the user, we must first convert the result of <code class="docutils literal notranslate"><span class="pre">input()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
+<span class="n">user_age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">user_age</span><span class="p">)</span>
+<span class="n">age_next_year</span> <span class="o">=</span> <span class="n">user_age</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>How old are you? 52
+53
+</pre></div>
+</div>
+</div>
+</div>
+<p>The example program <span class="xref myst">age_next_year.py</span> shows how to use this pattern of Python commands in a simple program. If you would like to explore type conversion a little more, open up the file in Spyder, save a new copy of it, for example under the name <em>age_next_year_v2.py</em>, and try out a few changes:</p>
+<ul class="simple">
+<li><p>Does it matter for the workings of the program if you convert the user input to float instead of integer?</p></li>
+<li><p>Why is it necessary to use the <code class="docutils literal notranslate"><span class="pre">str()</span></code> type conversion function on <span class="xref myst">line 14</span>? What happens if you remove it?</p></li>
+<li><p>What happens if the user enters a non-whole number for their age, such as <code class="docutils literal notranslate"><span class="pre">6.75</span></code>?</p></li>
+</ul>
+<div class="section" id="python-2-again">
+<h3>Python 2 again<a class="headerlink" href="#python-2-again" title="Permalink to this headline">¶</a></h3>
+<p>One of the other most noticeable differences in the previous version of Python was the behavior of the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function. Confusingly, in Python 2 this function treated the user’s input not as a string, nor even as a number, but as a <em>Python command</em>, which Python 2 would then <a class="reference internal" href="glossary.html#evaluate"><span class="std std-doc">evaluate</span></a>. In theory this allowed malicious or just clumsy users to completely mess up the workings of a program by entering their own Python commands at the console while the program was running. So Python 3 takes the much safer option of just treating all user inputs as strings.</p>
+<p>Again, you do not need to worry about this since we will always be working with Python 3. Just be aware of it if you encounter old Python examples on the internet.</p>
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p>As we have seen, Python’s <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> system lays down some (mostly) sensible rules about what we can and cannot do with various types of data. For example, we can perform division with integers and floats but not with strings. How does this work ‘behind the scenes’? It turns out that for any variable we can access a list of the things that it is possible to do with a variable of that type. Along with the actual data stored in a variable, Python stores various links to the operations that it is possible to carry out with that type of data.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function returns this list of possibilities for a certain variable. Let’s try it for our <code class="docutils literal notranslate"><span class="pre">name</span></code> variable. Since this variable is a string, <code class="docutils literal notranslate"><span class="pre">dir()</span></code> tells us what it is possible to do with strings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__add__&#39;,
+ &#39;__class__&#39;,
+ &#39;__contains__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getitem__&#39;,
+ &#39;__getnewargs__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__len__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__mod__&#39;,
+ &#39;__mul__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__rmod__&#39;,
+ &#39;__rmul__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;capitalize&#39;,
+ &#39;casefold&#39;,
+ &#39;center&#39;,
+ &#39;count&#39;,
+ &#39;encode&#39;,
+ &#39;endswith&#39;,
+ &#39;expandtabs&#39;,
+ &#39;find&#39;,
+ &#39;format&#39;,
+ &#39;format_map&#39;,
+ &#39;index&#39;,
+ &#39;isalnum&#39;,
+ &#39;isalpha&#39;,
+ &#39;isascii&#39;,
+ &#39;isdecimal&#39;,
+ &#39;isdigit&#39;,
+ &#39;isidentifier&#39;,
+ &#39;islower&#39;,
+ &#39;isnumeric&#39;,
+ &#39;isprintable&#39;,
+ &#39;isspace&#39;,
+ &#39;istitle&#39;,
+ &#39;isupper&#39;,
+ &#39;join&#39;,
+ &#39;ljust&#39;,
+ &#39;lower&#39;,
+ &#39;lstrip&#39;,
+ &#39;maketrans&#39;,
+ &#39;partition&#39;,
+ &#39;replace&#39;,
+ &#39;rfind&#39;,
+ &#39;rindex&#39;,
+ &#39;rjust&#39;,
+ &#39;rpartition&#39;,
+ &#39;rsplit&#39;,
+ &#39;rstrip&#39;,
+ &#39;split&#39;,
+ &#39;splitlines&#39;,
+ &#39;startswith&#39;,
+ &#39;strip&#39;,
+ &#39;swapcase&#39;,
+ &#39;title&#39;,
+ &#39;translate&#39;,
+ &#39;upper&#39;,
+ &#39;zfill&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>(Note that it is only very rarely that we will need to use the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function in an actual program. It is instead a useful function to enter at the console when we are experimenting and checking Python’s behavior. It can be particularly useful when we encounter a new <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> and want an overview of the sorts of things that it can do.)</p>
+<p>In the output from <code class="docutils literal notranslate"><span class="pre">dir()</span></code> we see various things enclosed in double underscores <code class="docutils literal notranslate"><span class="pre">__</span> <span class="pre">__</span></code>. We do not need to concern ourselves with these for the moment. They define the behavior of strings when they appear in various Python commands. For example, the <code class="docutils literal notranslate"><span class="pre">__add__</span></code> entry refers to the behavior of strings when we combine them with the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
+<p>The entries that interest us for the moment are those without underscores. These are the names of functions that can be applied to strings. Functions that are defined especially for one data type and can be accessed through variables of that type are called ‘<a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a>’ for that data type. For example, the penultimate entry in the list of string methods above is a method called <code class="docutils literal notranslate"><span class="pre">upper</span></code>. This method <a class="reference internal" href="glossary.html#return"><span class="std std-doc">returns</span></a> an all UPPERCASE version of the string. This method is special to strings; it wouldn’t make any sense for other data types.</p>
+<p>The syntax for <a class="reference internal" href="glossary.html#call"><span class="std std-doc">calling</span></a> a method has a lot in common with the syntax for calling any other function:</p>
+<ul class="simple">
+<li><p>place parentheses after the name of the method</p></li>
+<li><p>(optionally) place any input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a> for the method inside the parentheses</p></li>
+</ul>
+<p>But there is an important difference. We first ‘go into’ the variable that we want to apply the method to, and get the method from there. To go into a variable like this in Python, we place a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>) after its name.</p>
+<p>So to call the <code class="docutils literal notranslate"><span class="pre">upper()</span></code> method on our string variable <code class="docutils literal notranslate"><span class="pre">name</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MILDRED T. BONK&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that we do not also need to put the variable inside the parentheses, as we do with functions. Because we have accessed the method by first going into a particular variable, Python already understands that we wish to apply the method to that same variable.</p>
+<p>Indeed, if we make this mistake, we may get an error message telling us that we have given too many <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">input arguments</span></a>:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="n">b59fa512a01b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: upper() takes no arguments (1 given)
+</pre></div>
+</div>
+</div>
+</div>
+<p>And remember once again that strings are <a class="reference internal" href="glossary.html#mutability"><span class="std std-doc">immutable</span></a>. Calling a method of a string variable does not change the string, it merely <a class="reference internal" href="glossary.html#return"><span class="std std-doc">returns</span></a> the result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mildred T. Bonk
+</pre></div>
+</div>
+</div>
+</div>
+<p>Some methods require additional input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a>. For example the string method <code class="docutils literal notranslate"><span class="pre">count()</span></code> counts how many times a particular ‘substring’ appears inside a string variable. The input argument is the substring to count:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">name</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mildred T. Bonk
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that Python strings are ‘case-sensitive’. UPPERCASE characters are not considered the same as their lowercase counterparts:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">street</span><span class="p">)</span>
+<span class="n">street</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Credibility Street
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> allows methods to be applied one after another within the same command. Immediately after calling one method, we can use the <code class="docutils literal notranslate"><span class="pre">.</span></code> syntax again to call another method on the <em>result</em> of calling the first method.</p>
+<p>For example, to first get a lowercase version of a string and then count the occurrences of a particular character in that lowercase version:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">street</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>A common pattern when dealing with user input is to apply a few string methods to the input in order to ‘clean’ it. If we would like to make our program a little more robust to variations in user behavior, we can for example strip away any surrounding spaces that they typed by accident (with the <code class="docutils literal notranslate"><span class="pre">strip()</span></code> method), and then convert the result to lowercase (with the <code class="docutils literal notranslate"><span class="pre">lower()</span></code> method).</p>
+<p>For example to allow the user to type <code class="docutils literal notranslate"><span class="pre">'yes'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Yes'</span></code>, <code class="docutils literal notranslate"><span class="pre">'YES'</span></code>, or even <code class="docutils literal notranslate"><span class="pre">'</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">yEs'</span></code> and make all these inputs equivalent to <code class="docutils literal notranslate"><span class="pre">'yes'</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Would you like a buttered crumpet? &#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">answer</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Would you like a buttered crumpet?       YES
+yes
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now would be a good moment to turn to the console in Spyder and explore some of the other string methods. In the console, create yourself a string variable (for example by entering a command like <code class="docutils literal notranslate"><span class="pre">word</span> <span class="pre">=</span> <span class="pre">'floccinaucinihilipilification'</span></code>), then use the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function to view its available methods, then try to apply some of them to see what they do.</p>
+<p>Some string methods are a bit too complex for us at this stage. Try the following ones:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">capitalize()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endswith()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">find()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code> (Note the subtle difference from <code class="docutils literal notranslate"><span class="pre">find()</span></code>.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lower()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lstrip()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rstrip()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">split()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startswith()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">strip()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">swapcase()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upper()</span></code></p></li>
+</ul>
+<p>If you are feeling adventurous you can just try these out and see whether you can work out what they do. If so, make sure to test them with a variety of different strings to check that you have really understood their behavior. If you would like to check or need some help with examples, you can search online for <em>Python string method x</em> or you can read the official documentation for all of Python’s string methods <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#string-methods">here</a>.</p>
+<p>You might be wondering whether the two numeric data types that we have learned about also have methods. They do. But because we tend to work with numbers primarily using mathematical <a class="reference internal" href="glossary.html#operator"><span class="std std-doc">operators</span></a>, we rarely need to work directly with their methods as we do for strings.</p>
+<div class="section" id="string-formatting">
+<h3>String formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">¶</a></h3>
+<p>We will look now at just one more string method together, because it is a very useful one, but whose use is not completely straightforward. The <code class="docutils literal notranslate"><span class="pre">format()</span></code> method inserts the values of other variables into certain positions in a string. This is particularly useful for preparing neat printouts for the users of our programs.</p>
+<p>To use <code class="docutils literal notranslate"><span class="pre">format()</span></code>, our string must contain the characters <code class="docutils literal notranslate"><span class="pre">{}</span></code> in the positions where we would like to insert something. These positions are termed ‘replacement fields’, and they will be replaced by the values from the variables that we give as <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a> to the <code class="docutils literal notranslate"><span class="pre">format()</span></code> method.</p>
+<p>Let’s see an example using <code class="docutils literal notranslate"><span class="pre">format()</span></code> to print out a few different pieces of information contained in the variables we created at the beginning of this lesson:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;User </span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1"> years old and </span><span class="si">{}</span><span class="s1"> meters tall.&#39;</span>
+
+<span class="n">message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;User Mildred T. Bonk is 22 years old and 1.96 meters tall.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see that if we have multiple <code class="docutils literal notranslate"><span class="pre">{}</span></code> replacement fields, these are replaced with the values of the variables that we give to <code class="docutils literal notranslate"><span class="pre">format()</span></code> in the order that we enter them. Notice also that we did not have to use the <code class="docutils literal notranslate"><span class="pre">str()</span></code> type conversion function to convert the two numeric variables <code class="docutils literal notranslate"><span class="pre">age</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> into strings; <code class="docutils literal notranslate"><span class="pre">format()</span></code> handles variables of different types automatically.</p>
+<p>There is a little bit more to the <code class="docutils literal notranslate"><span class="pre">format()</span></code> method than this. For example, we can also specify how many decimal places of a <a class="reference internal" href="glossary.html#float"><span class="std std-doc">float</span></a> to insert into the string, and other details. But this is enough for now about <code class="docutils literal notranslate"><span class="pre">format()</span></code>, and about string methods in general. If you would like to see an example of a program that makes use of a few string methods, take a look at <span class="xref myst">name_trivia.py</span>.</p>
+</div>
+</div>
+<div class="section" id="other-types">
+<h2>Other types<a class="headerlink" href="#other-types" title="Permalink to this headline">¶</a></h2>
+<p>Are there other data types in Python? Is there anything in the world worth talking about other than words and numbers?</p>
+<p>Yes. In fact there are lots more. We will finish this lesson with a quick overview of a few more types. We will learn about these in more detail in the lessons that follow.</p>
+<div class="section" id="boolean">
+<h3>Boolean<a class="headerlink" href="#boolean" title="Permalink to this headline">¶</a></h3>
+<p>Variables of <a class="reference internal" href="glossary.html#boolean"><span class="std std-doc">boolean</span></a> type are very simple. They store one of only two possible values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Boolean values can be the result of various Python commands whose purpose is to check whether or not something is the case. For example, the string <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> <code class="docutils literal notranslate"><span class="pre">startswith()</span></code> <a class="reference internal" href="glossary.html#return"><span class="std std-doc">returns</span></a> a boolean value, <code class="docutils literal notranslate"><span class="pre">True</span></code> if the string starts with a particular substring, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mildred T. Bonk
+False
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>(If you were expecting <code class="docutils literal notranslate"><span class="pre">True</span></code> above, remember that strings are case-sensitive.)</p>
+</div>
+<div class="section" id="none">
+<h3>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
+<p>Occasionally, the status of some piece of information in our program is neither true nor false nor a string nor a number nor anything, it is instead simply undefined. There is an ‘empty’ type called <a class="reference internal" href="glossary.html#none"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">None</span></code></span></a> for this eventuality. We might occasionally <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> <code class="docutils literal notranslate"><span class="pre">None</span></code> into a variable as a default starting value, anticipating that this value might be changed later on in our program.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">proof_of_Riemann_conjecture</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">proof_of_Riemann_conjecture</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NoneType
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also sometimes get a <code class="docutils literal notranslate"><span class="pre">None</span></code> value if we try to <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> the result of a function that actually does not <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return</span></a> anything. For example, although the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function serves to display output for the user of our program, it does not actually return any value that can be assigned. By default, a function that does not return anything returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi.&#39;</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NoneType
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tuple">
+<h3>Tuple<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h3>
+<p>We briefly encountered the <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuple</span></a> by mistake earlier, when we tried to create a <a class="reference internal" href="glossary.html#float"><span class="std std-doc">float</span></a> using a comma for the decimal separator instead of a point. The comma is not the correct Python <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">syntax</span></a> for the decimal separator, but it turns out that it <em>is</em> the correct syntax for something else: separating multiple values in a sequence. The result is a data type that does exactly that; it stores multiple values in a sequence. Although not an absolutely necessary aspect of the syntax, it is an extremely common convention to also place parentheses around the sequence of values when creating a tuple, as this makes our program clearer.</p>
+<p>Here is an example of creating a tuple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">shopping</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tuple
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can refer to the values in a tuple using their <a class="reference internal" href="glossary.html#index"><span class="std std-doc">indices</span></a>, their numbered positions in the sequence. We place the index in square parentheses <code class="docutils literal notranslate"><span class="pre">[]</span></code> after the name of the tuple variable.</p>
+<p>Beware that Python’s numbering system for sequences begins at zero. So the first value in a tuple has index <code class="docutils literal notranslate"><span class="pre">0</span></code>, the second value has index <code class="docutils literal notranslate"><span class="pre">1</span></code>, and so on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">shopping</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eggs
+bacon
+</pre></div>
+</div>
+</div>
+</div>
+<p>We cannot change individual values in a tuple. Here is what happens if we try:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;organic vegan bacon&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">43</span><span class="o">-</span><span class="mi">21</span><span class="n">c829b36b26</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;organic vegan bacon&#39;</span>
+
+<span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
+</pre></div>
+</div>
+</div>
+</div>
+<p>Like all the data types we have encountered so far, tuples are <a class="reference internal" href="glossary.html#mutability"><span class="std std-doc">immutable</span></a>. If we want to change the contents of a tuple variable, we must overwrite the whole thing by assigning it anew with <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;organic vegan bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list">
+<h3>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<p>Not being able to change individual values in a tuple seems like a very onerous restriction. What if we are working with data that need to be updated or added to as our program runs? <a class="reference internal" href="glossary.html#list"><span class="std std-doc">Lists</span></a>, the final data type that we will learn about in this lesson, provide just this ability. A list is an ordered sequence of values, just like a tuple, but it is <a class="reference internal" href="glossary.html#mutability"><span class="std std-doc">mutable</span></a>; we can change one item in a list without having to re-assign the whole thing.</p>
+<p>The <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for creating a list is the same as for creating a tuple, except with square parentheses in place of round ones:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">]</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python allows us to change individual values in a list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;organic vegan bacon&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;eggs&#39;, &#39;organic vegan bacon&#39;, &#39;black pudding&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are also list <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a>, like the string methods we learned about above. For example, there is a list method called <code class="docutils literal notranslate"><span class="pre">append()</span></code> for adding a new value to the end of the list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sausages&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;eggs&#39;, &#39;organic vegan bacon&#39;, &#39;black pudding&#39;, &#39;sausages&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice what just happened. The <code class="docutils literal notranslate"><span class="pre">append()</span></code> method changed the list without our having to <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> the result back into the list variable with <code class="docutils literal notranslate"><span class="pre">=</span></code>. This is different from the behavior of string methods. As we learned above, string methods always just <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return</span></a> the result of whatever it is that they do with the string, but they do not change the string while doing so. List methods just go ahead and change the list.</p>
+<p>This distinction is important, and forgetting it can lead to some frustrating mistakes. Let’s see what happens if we try to use a list method as if it were a string method, and assign its return value back into the original list variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="n">shopping_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;more sausages&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function suddenly seems to have no effect, and prints nothing. This is because our list has gone. List methods do not do their work by outputting a <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a> as string methods do. Most list methods do not output anything. As we learned a moment ago, the output of a function that does not have any defined output is the <code class="docutils literal notranslate"><span class="pre">None</span></code> value. So our list has become just <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NoneType
+</pre></div>
+</div>
+</div>
+</div>
+<p>So beware. If you want to change a list, it is enough to just use the list method. Don’t assign the result back into the list variable.</p>
+<p>As you did for string methods above, take a moment to go to the console in Spyder and explore the behavior of some of the list methods. Try to discover what the following methods do:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clear()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverse()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort()</span></code></p></li>
+</ul>
+<p>Because list methods just change the contents of the list behind the scenes and do not produce output, you will need to <code class="docutils literal notranslate"><span class="pre">print()</span></code> your list after applying each method to see what change has taken place.</p>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>A good way to strengthen your understanding of how Python works is to test that understanding regularly. When you test out a command in the console, try first to predict what the result will be, and only then type it in to check whether you were right. What is the result of each of the following short programs?</p>
+<div class="section" id="a">
+<h4>a)<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Mildred T. Bonk&#39;</span>
+<span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">m_count</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m_count</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="b">
+<h4>b)<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Mildred T. Bonk&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">1.96</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="c">
+<h4>c)<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mildred&#39;</span><span class="p">,</span> <span class="s1">&#39;T.&#39;</span><span class="p">,</span> <span class="s1">&#39;Bonk&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="o">.</span><span class="n">reverse</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Age_disparity_in_sexual_relationships#The_%22half-your-age-plus-seven%22_rule">‘half-your-age-plus-seven’ rule</a> is a folk rule of thumb used to calculate the minimum socially acceptable age of your dating partners, given your age. The rule asserts that if your age is <span class="math notranslate nohighlight">\(x\)</span>, then the minimum socially acceptable age for your partner is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{x}{2} + 7
+\]</div>
+<p>Write a program that asks the user for their age, and then tells them the result of applying this rule of thumb.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="glossary.html" title="previous page">Glossary</a>
+    <a class='right-next' id="next-link" href="sequences_mappings.html" title="next page">Sequences and mappings</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

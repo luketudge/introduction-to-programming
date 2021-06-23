@@ -1,0 +1,1454 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Iteration" href="iteration.html" />
+    <link rel="prev" title="Sequences and mappings" href="sequences_mappings.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/conditions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fconditions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/conditions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/conditions.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective">
+   Objective
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#booleans">
+   Booleans
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logic">
+     Logic
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-to-boolean">
+     Conversion to boolean
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if">
+   if
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indentation">
+     Indentation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#debugging">
+     Debugging
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-elif-else">
+   if elif else
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-conditions">
+   Nested conditions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-debugging">
+   More debugging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in">
+   in
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#handling-errors">
+   Handling errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="conditions">
+<h1>Conditions<a class="headerlink" href="#conditions" title="Permalink to this headline">¶</a></h1>
+<p>We are already able to write programs that are somewhat interactive; we get the user to type something in and then we process whatever they typed in. The next level of excitement for our users is to interact with a program that does completely <em>different</em> things depending on what they type in.</p>
+<p>So far, the ‘flow’ of our programs has always been linear; they carry out a series of steps in order, with no variations. We would now like to give the flow of our programs a branching structure, such that its behavior will vary depending on the circumstances. This can be achieved with <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a>: lines of our program that do not on their own produce any result, but instead control when (or how often, or in what variations) other lines are run.</p>
+<p>One of the simplest kinds of control statement is a ‘conditional’ control statement. It tells Python to run certain lines of our program only if a certain condition is fulfilled. This is what we will learn about now.</p>
+<div class="section" id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+<p>To give ourselves something to work towards, let’s imagine a fairly simple toy program that we would like to create.</p>
+<p><strong><a class="reference external" href="http://hoff.py">hoff.py</a></strong>:</p>
+<ul class="simple">
+<li><p>Ask the user to enter their name and surname.</p></li>
+<li><p>Find one interesting thing to say about their name:</p>
+<ul>
+<li><p>If they are called ‘David Hasselhoff’, ask “Are you THE David Hasselhoff?”</p>
+<ul>
+<li><p>If they say yes, say “Wow!”</p></li>
+<li><p>If they say no, say “Well that is quite a coincidence that you have the same name.”</p></li>
+</ul>
+</li>
+<li><p>Else if their surname is ‘Hasselhoff’, ask “Any relation to David Hasselhoff?”</p>
+<ul>
+<li><p>If they say yes, say “Wow!”</p></li>
+<li><p>If they say no, say “You never know, you might be.”</p></li>
+</ul>
+</li>
+<li><p>Else if their initials are ‘DH’, say “You have the same initials as David Hasselhoff!”</p></li>
+<li><p>Else if their first name is a variant of ‘David’ such as ‘Dave’, ‘Davy’, ‘Dafydd’, say “Your name is a bit like ‘David’, as in ‘David Hasselhoff’.”</p></li>
+<li><p>Else, as a last resort, say “I suppose you could change your name to something more interesting, like ‘David Hasselhoff’.”</p></li>
+</ul>
+</li>
+</ul>
+<p>The branching structure of our target program is moderately complex. We will build it up step by step, learning about the necessary programming techniques as we go.</p>
+</div>
+<div class="section" id="booleans">
+<h2>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline">¶</a></h2>
+<p>We have already briefly met the <a class="reference internal" href="glossary.html#boolean"><span class="std std-doc">booleans</span></a>. Not Mrs. Boolean and her husband Julian, but the Python <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data type</span></a> that stores one of just two possible values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. In order to be able to build conditions into our programs, we need first to learn a bit more about booleans and the logic that governs them.</p>
+<div class="section" id="logic">
+<h3>Logic<a class="headerlink" href="#logic" title="Permalink to this headline">¶</a></h3>
+<p>Certain statements in Python result in a boolean value. These are all ‘logical’ statements that ask a ‘yes/no’ question. The symbols used in them are mostly similar to mathematical notation:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> ‘is greater than’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> ‘is less than’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> ‘is greater than or equal to’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> ‘is less than or equal to’</p></li>
+</ul>
+<p>Python allows us to combine such symbols with variables and with literal numbers in much the same way as in math:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>What if we want to check whether two things are exactly equal? Here there is a small syntactical problem, because the equals symbol <code class="docutils literal notranslate"><span class="pre">=</span></code> is already in use for <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assigning</span></a> to a variable. Python therefore uses a double equals symbol <code class="docutils literal notranslate"><span class="pre">==</span></code> to mean ‘is equal to’ in the mathematical sense.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">==</span></code> is also applicable to strings. As you might expect, it checks whether the contents of the two strings are exactly the same.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name1</span> <span class="o">=</span> <span class="s1">&#39;David Hasselhoff&#39;</span>
+<span class="n">name2</span> <span class="o">=</span> <span class="s1">&#39;David Hasselhoff&#39;</span>
+
+<span class="n">name1</span> <span class="o">==</span> <span class="n">name2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember that lowercase and uppercase letters are not considered to be the same character, and that a space counts as a character.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name1</span> <span class="o">==</span> <span class="s1">&#39;david hasselhoff&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name1</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff &#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we may combine or negate logical statements using the Python <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keywords</span></a> <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">or</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>As in math, parentheses are not always necessary, but they can help make our program clearer to read.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python provides an abbreviation for <code class="docutils literal notranslate"><span class="pre">not</span></code> together with <code class="docutils literal notranslate"><span class="pre">==</span></code>. The symbols <code class="docutils literal notranslate"><span class="pre">!=</span></code> stand for ‘is not equal to’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conversion-to-boolean">
+<h3>Conversion to boolean<a class="headerlink" href="#conversion-to-boolean" title="Permalink to this headline">¶</a></h3>
+<p>That covers the very basics of logical statements in Python. Before we see how to turn logical statements into conditions for carrying out a part of our program, let’s take a brief detour to consider a slight quirk in the way Python handles the boolean data type.</p>
+<p>We have learned that some data types can be converted into others, using <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in</span></a> functions that have the same names as the type we wish to convert to (for example <code class="docutils literal notranslate"><span class="pre">int()</span></code> for converting to integer, and <code class="docutils literal notranslate"><span class="pre">str()</span></code> for converting to string). Initially, it may seem strange to allow converting other types into booleans, since booleans are always just <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Is the integer <code class="docutils literal notranslate"><span class="pre">42</span></code> on its own a ‘true’ number or a ‘false’ number? What about a string like <code class="docutils literal notranslate"><span class="pre">'JavaScript</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">terrible</span> <span class="pre">programming</span> <span class="pre">language.'</span></code>? (Of course, some strings may contain true statements, but Python can’t be expected to work this out.)</p>
+<p>Nonetheless, Python does allow us to convert other data types to boolean. How does it decide whether numbers or strings are ‘true’ or not? If you feel like a challenge, you might like to head to the Spyder console now and try converting a few strings and numbers to boolean (the type conversion function is <code class="docutils literal notranslate"><span class="pre">bool()</span></code>) to see whether you can discover the pattern.</p>
+<p>The answer follows after this block of text:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SPOILER ALERT &#39;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s try a string first:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;JavaScript is a terrible programming language.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>That seems like a sensible answer. But what about other strings?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;JavaScript is an excellent programming language.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>No! That’s not right.</p>
+<p>In fact, Python treats any string as <code class="docutils literal notranslate"><span class="pre">True</span></code>, with just one exception: an empty string with no characters in it at all:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>This principle generalizes to the other data types. ‘Empty’ things are <code class="docutils literal notranslate"><span class="pre">False</span></code>, and all other things are <code class="docutils literal notranslate"><span class="pre">True</span></code>. An empty list <code class="docutils literal notranslate"><span class="pre">[]</span></code>, for example, is treated as <code class="docutils literal notranslate"><span class="pre">False</span></code>, but a list that has any contents at all is treated as <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">([])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">([</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>For numbers, <code class="docutils literal notranslate"><span class="pre">0</span></code> is the only ‘empty number’, and all others are treated as <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>This may seem slightly weird. But this convention of treating non-empty things as being somehow ‘true’ is common to many programming languages. As we will see later, it is important to be aware of this behavior.</p>
+</div>
+</div>
+<div class="section" id="if">
+<h2>if<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<p>Now that we know how to express conditions in Python, we just need to know how to apply them to certain commands, so that those commands are only carried out if the condition is true. The <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> that we need for this is <code class="docutils literal notranslate"><span class="pre">if</span></code>, which has essentially the same meaning in Python as in English.</p>
+<p>This is how it is used, applied to the very first condition in our target program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name and surname? David Hasselhoff
+Are you THE Hoff?
+</pre></div>
+</div>
+</div>
+</div>
+<p>Because the user entered the exact string <code class="docutils literal notranslate"><span class="pre">'David</span> <span class="pre">Hasselhoff'</span></code>, the condition following the <code class="docutils literal notranslate"><span class="pre">if</span></code> keyword <a class="reference internal" href="glossary.html#evaluate"><span class="std std-doc">evaluated</span></a> to <code class="docutils literal notranslate"><span class="pre">True</span></code> and so the <code class="docutils literal notranslate"><span class="pre">print()</span></code> command just below it was executed.</p>
+<p>We should always test our conditions with both the positive and negative case to check that we have got them right. So let’s try it again, this time entering a name that should not trigger the <code class="docutils literal notranslate"><span class="pre">print()</span></code> command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name and surname? Mildred Bonk
+</pre></div>
+</div>
+</div>
+</div>
+<p>Good. This time we did not see the printed output.</p>
+<p>So here is the general <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement:</p>
+<ul class="simple">
+<li><p>write <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+<li><p>then write your condition</p>
+<ul>
+<li><p>this should be something that results in a boolean <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+</ul>
+</li>
+<li><p>then write a colon <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+<li><p>underneath all this, write the command (or multiple commands) that should be executed if your condition is true</p>
+<ul>
+<li><p>these must be <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indented</span></a> (i.e. they should be preceded by spaces to move them rightwards)</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="indentation">
+<h3>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h3>
+<p>That last rule is important. It is the indentation in our example above that marks the <code class="docutils literal notranslate"><span class="pre">print()</span></code> line as ‘belonging to’ the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. Let’s see what happens if we forget the indentation:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-26-fdc1d519ea77&gt;&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
+</pre></div>
+</div>
+</div>
+</div>
+<p>The content of this error message is fairly clear: Python was expecting some indentation after the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+<p>This use of indentation to mark lines of a program as belonging to a <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statement</span></a> is specific to Python, and is not a feature of most other programming languages. It is one of Python’s most controversial features, and also one of the more challenging things for beginners to get used to.</p>
+<p>So let’s look at a few more variants of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement above, to check your understanding of the role of indentation. First of all, an example with more than one indented line after the <code class="docutils literal notranslate"><span class="pre">if</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The really real Hoff?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name and surname? David Hasselhoff
+Are you THE Hoff?
+The really real Hoff?
+</pre></div>
+</div>
+</div>
+</div>
+<p>Because both of these lines are indented, they both belong to the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, and so both of them will be run if the condition is true.</p>
+<p>Where we have multiple indented lines that all belong together, they must all be indented to the same extent. Varying indentation doesn’t just look untidy, it also prevents Python from interpreting our program correctly:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The really real Hoff?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;tokenize&gt;&quot;</span><span class="gt">, line </span><span class="mi">5</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The really real Hoff?&#39;</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: unindent does not match any outer indentation level
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you have written an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement followed by multiple indented lines, you may find it helpful to hold up a ruler to your computer screen to check that the indentation is consistent throughout. This is a technique that even expert Python programmers have to resort to at some point.</p>
+<p>Now consider what happens in the variation below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The really real Hoff?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name and surname? Mildred Bonk
+The really real Hoff?
+</pre></div>
+</div>
+</div>
+</div>
+<p>This one does not result in an error. It is <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntactically</span></a> valid, but it does something a bit different from what we want.</p>
+<p>Notice that the user typed in a name that did not make the <code class="docutils literal notranslate"><span class="pre">if</span></code> condition true. So the first <code class="docutils literal notranslate"><span class="pre">print()</span></code> line was not run. But the second <code class="docutils literal notranslate"><span class="pre">print()</span></code> line <em>was</em> run. This is because it was not indented. As we learned above, indentation tells Python which lines belong to a control statement. If a line is not indented, it is not influenced by the preceding control statement, and so is always run, just like any normal line of the program. The first ‘unindented’ line after a block of indented lines marks the end of a control statement’s influence, and a return to the normal linear structure of a Python program, where every line is always run.</p>
+<p>For the sake of clarity, it is a good idea to also place blank lines before and after a block of indented lines, to mark them out clearly from the rest of the program.</p>
+</div>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>If you are trying to write an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement and you keep encountering <a class="reference internal" href="glossary.html#error"><span class="std std-doc">errors</span></a>, here are some of the most common mistakes to check for:</p>
+<ul class="simple">
+<li><p>Have you forgotten the colon <code class="docutils literal notranslate"><span class="pre">:</span></code> at the end of the if statement?</p></li>
+<li><p>Have you used <code class="docutils literal notranslate"><span class="pre">=</span></code> where you meant to use <code class="docutils literal notranslate"><span class="pre">==</span></code>?</p></li>
+<li><p>Have you forgotten to indent, or indented inconsistently?</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="if-elif-else">
+<h2>if elif else<a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+<p>We now have the main ingredient of our target program: conditional statements. Most of the rest of what we will learn in this lesson is elaborating on this basic ingredient.</p>
+<p>The English-language description of our target program is structured as a series of conditions. The first begins with ‘if’, subsequent ones begin with ‘else if’, and the last begins simply with ‘else’. That is, we want to keep checking a series of conditions until we find one that is true, and have a final ‘last resort’ condition that only applies if none of the others was true. This is fairly easy to put together, so long as we remember the basic syntax for a conditional statement. We just need to introduce new <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keywords</span></a>.</p>
+<p>Python abbreviates ‘else if’ to <code class="docutils literal notranslate"><span class="pre">elif</span></code>. The <code class="docutils literal notranslate"><span class="pre">elif</span></code> keyword checks a new condition, but only if none of the preceding conditions was true.</p>
+<p>‘Else’ is the same in Python as it is in English. The <code class="docutils literal notranslate"><span class="pre">else</span></code> keyword does not require any condition, since it merely specifies what to do if none of the preceding conditions was true. But like all <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a> it does still require a colon.</p>
+<p>Let’s see an <code class="docutils literal notranslate"><span class="pre">if</span></code> … <code class="docutils literal notranslate"><span class="pre">elif</span></code> … <code class="docutils literal notranslate"><span class="pre">else</span></code> structure in action, using a simplified version of our target program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="c1"># Get the separate names and initials.</span>
+<span class="n">user_names</span> <span class="o">=</span> <span class="n">user_name</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">user_firstname</span> <span class="o">=</span> <span class="n">user_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">user_surname</span> <span class="o">=</span> <span class="n">user_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">user_initials</span> <span class="o">=</span> <span class="n">user_firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">user_surname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff?&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">user_surname</span> <span class="o">==</span> <span class="s1">&#39;Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Any relation to David Hasselhoff?&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">user_initials</span> <span class="o">==</span> <span class="s1">&#39;DH&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You have the same initials as David Hasselhoff!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Never mind, I suppose you could change it to something more interesting, like &#39;David Hasselhoff&#39;.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name and surname? Davinia Hasselhoff
+Any relation to David Hasselhoff?
+</pre></div>
+</div>
+</div>
+</div>
+<p>(If you are wondering about that bit where we extract the user’s two names and initials, go to the Spyder console and explore the string <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> <code class="docutils literal notranslate"><span class="pre">split()</span></code> and also look back at <a class="reference internal" href="glossary.html#index"><span class="std std-doc">indexing</span></a>.)</p>
+<p>The user entered a name that triggered the first <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement above. Notice that the condition for the second <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement is also true, since the initials are also ‘DH’, but this second <code class="docutils literal notranslate"><span class="pre">elif</span></code> was not triggered; an <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement is only applied if none of the preceding conditions was true.</p>
+<p>Notice also the pattern of indentation. The additional <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a> with <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> are not themselves indented, but the <code class="docutils literal notranslate"><span class="pre">print()</span></code> commands that belong to them are.</p>
+</div>
+<div class="section" id="nested-conditions">
+<h2>Nested conditions<a class="headerlink" href="#nested-conditions" title="Permalink to this headline">¶</a></h2>
+<p>We need one more major insight into Python’s <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for conditionals before we are ready to write a complete version of our target program. For the first two conditions in our program (whether the full name is ‘David Hasselhoff’ or the surname is ‘Hasselhoff’), we need to ask a follow up question and then apply another condition to the answer to that follow-up question. We can almost achieve this already using the techniquess we have just learned, if we add a little leap of imagination.</p>
+<p>Remember that Python uses <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indentation</span></a> to mark lines of a program as belonging to a preceding control statement. If we have one control statement inside another (for example one condition that only needs to be checked once another has been found to be true), then the lines that belong to the ‘inner’ control statement must be indented yet further, to indicate that they belong to that inner control statement and not to the ‘outer’ one.</p>
+<p>This is easiest to understand by just looking at an example. So here is the first condition of our program, with the additional follow-up question added:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="n">is_hoff</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff? &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_hoff</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wow!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s amazing!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name and surname? David Hasselhoff
+Are you THE Hoff? No, I changed my name to match his.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The user answered ‘no’ to the second question we posed, so the ‘inner’ <code class="docutils literal notranslate"><span class="pre">if</span></code> statement was not triggered, and the indented lines that followed it were not run.</p>
+<p>And note that if the first <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is not triggered, none of the rest is run:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="n">is_hoff</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff? &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_hoff</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wow!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s amazing!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name and surname? Dilbert Hoffelhass
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again, to really firm up our understanding of the role of indentation, let’s consider a variation that behaves differently:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name and surname? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;David Hasselhoff&#39;</span><span class="p">:</span>
+    <span class="n">is_hoff</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Are you THE Hoff? &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_hoff</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wow!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s amazing!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name and surname? David Hasselhoff
+Are you THE Hoff? Sadly not.
+That&#39;s amazing!
+</pre></div>
+</div>
+</div>
+</div>
+<p>This time, the second <code class="docutils literal notranslate"><span class="pre">print()</span></code> was indented, but only to the same extent as the other lines that follow the ‘outer’ <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. This marks it as belonging to the outer <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, so it is run if the outer <code class="docutils literal notranslate"><span class="pre">if</span></code> condition is true, regardless of whether the ‘inner’ one is also true.</p>
+<p>You can think of the role of indentation in Python as similar to its role in a series of nested bullet points in an ordinary document:</p>
+<ul class="simple">
+<li><p>This is a bullet point.</p>
+<ul>
+<li><p>This is a sub-point related to the first.</p></li>
+<li><p>So is this.</p>
+<ul>
+<li><p>And this is a sub-sub-point related to the one just above.</p></li>
+</ul>
+</li>
+<li><p>But this is back to being a sub-point related to the very first one.</p></li>
+</ul>
+</li>
+<li><p>And this finally is just yet another bullet point in the main list of bullet points.</p></li>
+</ul>
+</div>
+<div class="section" id="more-debugging">
+<h2>More debugging<a class="headerlink" href="#more-debugging" title="Permalink to this headline">¶</a></h2>
+<p>We haven’t yet attempted the last condition in our target program, which checks whether the user’s first name is one of a few variants of ‘David’. Let’s give it a try. We will for now skip the preceding conditions, and also ask only for the user’s first name, just to keep the example clear and simple.</p>
+<p>We learned earlier that we can combine conditions using the <code class="docutils literal notranslate"><span class="pre">or</span></code> <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a>, and that this keyword seems to have more or less the same meaning as it does in English. So how about this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name? Dave
+Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<p>That looks right. But we should always test our conditions with both the positive and the negative case:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name? Mildred
+Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<p>What just happened? The user entered a name that shouldn’t trigger the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. But it did. Our program did not work as expected. We did not get an <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error</span></a>, it is just that the program’s behavior is wrong. This can be the hardest kind of problem to diagnose.</p>
+<p>Let’s check a few things step by step. First of all, did the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function really correctly store what the user entered?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">user_firstname</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mildred
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ok. Does the first bit of the <code class="docutils literal notranslate"><span class="pre">if</span></code> condition somehow not work properly?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;triggered&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;not triggered&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>not triggered
+</pre></div>
+</div>
+</div>
+</div>
+<p>That still seems right. So is it the full condition that is the problem?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;triggered&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;not triggered&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>triggered
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aha! So it seems to be the inclusion of <code class="docutils literal notranslate"><span class="pre">or</span></code> that is the problem. Let’s confirm with another example, using some other string than the user’s name:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;Ishmael&#39;</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;triggered&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;not triggered&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>triggered
+</pre></div>
+</div>
+</div>
+</div>
+<p>So what was going on in the statements above?</p>
+<p>In everyday English, the word ‘or’ can be used to join a set of possible alternatives, as in ‘Dave, or Davy, or Dafydd’. In logic, and in Python, ‘or’ has a more specific meaning. It means:</p>
+<ul class="simple">
+<li><p>Look to the left of the ‘or’, and find out whether the statement written there is true.</p></li>
+<li><p>Independently of whatever is to the left, look to the right of the ‘or’, and find out whether the statement written there is true.</p></li>
+<li><p>If at least one of the two statements is true, the whole statement is true.</p></li>
+</ul>
+<p>So <code class="docutils literal notranslate"><span class="pre">or</span></code> expects to find a fully-formed logical statement on either side of itself. This was the case in our earlier example of <code class="docutils literal notranslate"><span class="pre">or</span></code>, in which either side of the <code class="docutils literal notranslate"><span class="pre">or</span></code> was a complete statement on its own:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">or</span></code> expects to find a fully-formed logical statement on either side of itself, why did our condition for the user’s name not simply result in an error? After all, <code class="docutils literal notranslate"><span class="pre">'Dafydd'</span></code> is not a fully-formed logical statement on his own.</p>
+<p>Remember the slightly weird convention that all non-empty things are <code class="docutils literal notranslate"><span class="pre">True</span></code> when converted to <a class="reference internal" href="glossary.html#boolean"><span class="std std-doc">boolean</span></a>. So for the purposes of logical conditions, <code class="docutils literal notranslate"><span class="pre">'Dafydd'</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, as is any non-empty string. This means that the statement <code class="docutils literal notranslate"><span class="pre">user_firstname</span> <span class="pre">==</span> <span class="pre">'Dave'</span> <span class="pre">or</span> <span class="pre">'Dafydd'</span></code> is always <code class="docutils literal notranslate"><span class="pre">True</span></code>, regardless of what the contents of the <code class="docutils literal notranslate"><span class="pre">user_firstname</span></code> variable are, because at least one of the two things either side of the <code class="docutils literal notranslate"><span class="pre">or</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>So here is the correct way to use <code class="docutils literal notranslate"><span class="pre">or</span></code> in our example. Each side of the <code class="docutils literal notranslate"><span class="pre">or</span></code> must be a statement involving the <code class="docutils literal notranslate"><span class="pre">user_firstname</span></code> variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_firstname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your name? Mildred
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="in">
+<h2>in<a class="headerlink" href="#in" title="Permalink to this headline">¶</a></h2>
+<p>Using <code class="docutils literal notranslate"><span class="pre">or</span></code> to join up multiple statements that all check the same variable quickly gets tedious and difficult to read. For example if we want to check three variants of ‘David’ rather than just two, the condition would be:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dave&#39;</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Davy&#39;</span> <span class="ow">or</span> <span class="n">user_firstname</span> <span class="o">==</span> <span class="s1">&#39;Dafydd&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is a better option in such cases. If we want to check whether a variable has one of several possible values, we can ask whether that variable’s value is ‘in’ a <a class="reference internal" href="glossary.html#list"><span class="std std-doc">list</span></a> of possibilities, using the <code class="docutils literal notranslate"><span class="pre">in</span></code> <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a>.</p>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_firstname</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Dave&#39;</span><span class="p">,</span> <span class="s1">&#39;Davy&#39;</span><span class="p">,</span> <span class="s1">&#39;Dafydd&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>So if you ever find yourself checking multiple possible values of a variable using <code class="docutils literal notranslate"><span class="pre">or</span></code>, consider using <code class="docutils literal notranslate"><span class="pre">in</span></code> instead.</p>
+<p>That concludes the techniques necessary to write a basic version of our target program. You can take a look at the finished version <span class="xref myst">hoff.py</span>. This program looks quite complex, but it is made of the building blocks we wrote above, with some very small refinements. Some extra blank lines have been added to clearly separate the multiple conditions that are checked.</p>
+</div>
+<div class="section" id="handling-errors">
+<h2>Handling errors<a class="headerlink" href="#handling-errors" title="Permalink to this headline">¶</a></h2>
+<p>Let’s conclude by learning about another kind of control statement. To keep things simple, we won’t incorporate it into <strong><a class="reference external" href="http://hoff.py">hoff.py</a></strong>, though it could be useful there too.</p>
+<p>We have met <a class="reference internal" href="glossary.html#error"><span class="std std-doc">errors</span></a> before. Some errors are just fatal for our program, and will always stop it from running. For example, there is nothing that Python can do about a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>; if we have written something that it just does not understand, then Python has to give up:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span><span class="p">,</span> <span class="n">please</span> <span class="n">do</span> <span class="n">some</span> <span class="n">amazing</span> <span class="n">machine</span> <span class="n">learning</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-47-925621985029&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">Python</span><span class="p">,</span> <span class="n">please</span> <span class="n">do</span> <span class="n">some</span> <span class="n">amazing</span> <span class="n">machine</span> <span class="n">learning</span><span class="o">.</span>
+                   <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Other errors, however, are not necessarily fatal for our program.</p>
+<p>Consider an abbreviated version of one of our earlier programs, <span class="xref myst">age_next_year.py</span>, and see what happens if the user misunderstands what is required of them, and enters some input that our program cannot handle:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
+
+<span class="n">age_next_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>How old are you? fifty-two
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">48</span><span class="o">-</span><span class="mi">3266</span><span class="n">fdc533a9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">age_next_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;fifty-two&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is pretty clear what has gone wrong, but in case we aren’t sure, the error message identifies the conversion of the string <code class="docutils literal notranslate"><span class="pre">'fifty-two'</span></code> to integer as the problem.</p>
+<p>This error is not a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>; our program is entirely <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntactically valid</span></a>. Instead, it is a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>. We have asked Python to do something with a variable, and the thing that we have asked for might be totally ok, it is just that the specific <a class="reference internal" href="glossary.html#value"><span class="std std-doc">value</span></a> of the variable turns out not to be suitable for what we asked for. Here, for example, we have asked for conversion from string to integer, but the string variable does not contain a suitable number.</p>
+<p>Problems like this one can be dealt with without stopping our program, because they don’t make it impossible for Python to understand what we want. A non-fatal error (i.e. one that does not completely flummox Python) is termed an ‘<a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exception</span></a>’. When an exception occurs, we have the option of dealing with it in some way, and it is only if we do not deal with it that it becomes an <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error</span></a> and stops the program. (Though in practice you will hear many people use the terms ‘exception’ and ‘error’ as synonyms.)</p>
+<p>If we wish, we can instruct Python to ‘try’ to do something, but then to do something else if doing the first thing results in an exception. This concept is very similar to an <code class="docutils literal notranslate"><span class="pre">if</span></code> condition, but the condition is ‘if the following actions result in an exception’. To apply this, we need to specify two things. We need to say what actions we want to ‘try’, and what actions we want to carry out if an exception occurs while trying those actions. There are new <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keywords</span></a> <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">except</span></code> for each of these, respectively.</p>
+<p>Let’s see an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">age_next_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">age_next_year</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;That is not a valid age.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>How old are you? fifty-two
+That is not a valid age.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The general <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for this kind of statement is:</p>
+<ul class="simple">
+<li><p>write <code class="docutils literal notranslate"><span class="pre">try</span></code>, followed by a colon <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+<li><p>then write the actions you want to try</p>
+<ul>
+<li><p>these should be <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indented</span></a></p></li>
+</ul>
+</li>
+<li><p>write <code class="docutils literal notranslate"><span class="pre">except</span></code></p></li>
+<li><p>then write the name of the type of exception/error that might occur</p></li>
+<li><p>then write a colon <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+<li><p>then write the alternative actions</p>
+<ul>
+<li><p>these too should be indented</p></li>
+</ul>
+</li>
+</ul>
+<p>There are some similarities with the syntax for the <code class="docutils literal notranslate"><span class="pre">if</span></code> … <code class="docutils literal notranslate"><span class="pre">else</span></code> statement, namely the colon and the indentation. Both of these things are part of the general syntax for all <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a>, and we will encounter them again in later lessons.</p>
+<p>Let’s see another example, this time to handle the possibility that the user asks for a list item that is beyond the length of the list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">]</span>
+
+<span class="n">item_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What item of shopping would you like to see? &#39;</span><span class="p">)</span>
+<span class="n">item_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">item_number</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">[</span><span class="n">item_number</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There aren&#39;t that many items of shopping.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What item of shopping would you like to see? 9000
+There aren&#39;t that many items of shopping.
+</pre></div>
+</div>
+</div>
+</div>
+<p>How did I know that the exception to watch out for was <code class="docutils literal notranslate"><span class="pre">IndexError</span></code>? In a long career filled with silly programming mistakes I have seen a lot of error messages, and so I just know what a lot of the common exceptions will be. But if you are building a program and you want to write a <code class="docutils literal notranslate"><span class="pre">try</span></code> … <code class="docutils literal notranslate"><span class="pre">except</span></code> to deal with an expected problem, then the first thing you should do is to go to the console and deliberately provoke that expected problem to see what type of exception it is. The type of exception is printed at the bottom of the error message.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span><span class="p">[</span><span class="mi">9000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">51</span><span class="o">-</span><span class="mi">4</span><span class="n">a4ff19f7982</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list</span><span class="p">[</span><span class="mi">9000</span><span class="p">]</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+<p>The glossary entry on <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exceptions</span></a> lists some of the most common types of exception that you might encounter.</p>
+<p>It is important not to get carried away with <code class="docutils literal notranslate"><span class="pre">try</span></code> … <code class="docutils literal notranslate"><span class="pre">except</span></code> and attempt to cover all possible problems so that your program is ‘foolproof’. If something occurs that your program is just not supposed to deal with, then your program should stop, and this is ok. Error messages can be very informative; if you try to suppress them all, you won’t be warned when your program fails or be told why it failed. Use <code class="docutils literal notranslate"><span class="pre">try</span></code> … <code class="docutils literal notranslate"><span class="pre">except</span></code> to deal with specific, anticipated problems.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Take a look at the finished <span class="xref myst">hoff.py</span> program. One thing that is not so good about this program is that it is not very easily modifiable. If we later changed our minds and wanted to adapt this program so that ‘Barbra Streisand’ is the interesting name instead of ‘David Hasselhoff’, then we would need to change the name in at least 8 different places. And we would need to go quite far down in our program to find the list of names similar to ‘David’ and change that.</p>
+<p>Re-write this program so that the string <code class="docutils literal notranslate"><span class="pre">'David</span> <span class="pre">Hasselhoff'</span></code> only appears once at the very beginning of the program, and the list of variants of ‘David’ also appears once at the beginning of the program. Once you have improved the program in this way, check that it still works as it did before. Then check that you only need to change these two initial lines so that the whole program uses a different interesting name. For example, you can try ‘Barbra Streisand’, with ‘Barbara’, ‘Barb’, and ‘Barbie’ as the variants of ‘Barbra’.</p>
+<p>(Improving a program but without changing its basic functionality is called <a class="reference internal" href="glossary.html#refactor"><span class="std std-doc">refactoring</span></a> the program.)</p>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Write a new program. The program asks the user for the answers to three questions:</p>
+<ul class="simple">
+<li><p>How old are they?</p></li>
+<li><p>How tall are they (in meters)?</p></li>
+<li><p>Do they have their parents’ permission to ride rollercoasters?</p></li>
+</ul>
+<p>Then tell the user whether they are allowed to ride the rollercoaster at the theme park. The rules are:</p>
+<ul class="simple">
+<li><p>They must be at least 10 years old.</p></li>
+<li><p>They must be at least 1 meter and 30 centimeters tall.</p></li>
+<li><p>They cannot be taller than 2 meters.</p></li>
+<li><p>If they are younger than 14 years old, they must have their parents’ permission.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="sequences_mappings.html" title="previous page">Sequences and mappings</a>
+    <a class='right-next' id="next-link" href="iteration.html" title="next page">Iteration</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

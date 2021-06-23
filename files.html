@@ -1,0 +1,1852 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Files &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The command line" href="command_line.html" />
+    <link rel="prev" title="The standard library" href="standard_library.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/files.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Ffiles.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/files.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/files.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plain-text">
+   Plain text
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading">
+     Reading
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing">
+     Writing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#appending">
+     Appending
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#escape-characters">
+     Escape characters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context-managers">
+     Context managers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#special-methods-again">
+       Special methods again
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encodings">
+   Encodings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ascii">
+     ASCII
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utf-8">
+     UTF-8
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#locales">
+     Locales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delimited-text">
+   Delimited text
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#locales-again">
+     Locales again
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas">
+     pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#json">
+   JSON
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Reading
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Writing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="files">
+<h1>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h1>
+<p>Thus far, our programs have interacted with the wider world only via the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function, for getting information from a human being, and via the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, for displaying text results on the screen. By now you will probably be fairly tired of this pattern. Maybe more than once you have run your program, then forgotten that it requires you to type some input into the console, and so spent several minutes idly wondering why nothing is happening. Or you have repeatedly hit the wrong keys on your keyboard by accident and been treated to some infuriating error messages. So you will be glad to hear that we are (mostly) going to leave the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function behind from now on. We have really mainly been using <code class="docutils literal notranslate"><span class="pre">input()</span></code> as a crutch, a simple form of interactivity to get us started with programming. Most real programs don’t use <code class="docutils literal notranslate"><span class="pre">input()</span></code> at all, or only sparingly. Instead, they have other methods for getting hold of external data. The first of these methods that we will learn about is reading in data from a file stored on our computer. We will also learn a bit about how to write the results of our programs into new files.</p>
+<p>There are lots of different file formats, each of which stores information in different ways. For example, Microsoft Word <em>docx</em> files store text along with various additional pieces of information about how that text is to be displayed, <em>jpg</em> image files store information about the colors of the pixels of an image, and some files, such as <em>exe</em> files, store entire programs in a form that it is not feasible for a human being to read and interpret. When working with files, we will need to be aware of the nature of the particular file format we are dealing with, and instruct Python to read or write it appropriately.</p>
+<p>We will consider here files that store data in the form of text, and come to non-text file formats in later lessons when they become relevant.</p>
+<div class="section" id="plain-text">
+<h2>Plain text<a class="headerlink" href="#plain-text" title="Permalink to this headline">¶</a></h2>
+<p>Let’s start with a file format that is fairly easy to deal with: plain text. Plain text files just store text characters (although as we will see, there are some subtleties to consider even here). We can open plain text files and view their contents in a normal text editor.</p>
+<p>If you want to follow along with the examples in this lesson, make sure you have first downloaded the <span class="xref myst">example programs and data files</span> for the class and that you have unzipped this file in your working directory so that ‘data’ is a subdirectory of your working directory. Like this:</p>
+<p><img alt="" src="_images/data_subdirectory.png" /></p>
+<p>Now find the example text file <span class="xref myst">melville-moby_dick.txt</span>. The <em>txt</em> extension indicates that this file should contain plain text. It contains the full text of the novel <em>Moby Dick</em> by Herman Melville.</p>
+<p>(Note that one of the many profoundly stupid default options in Windows is that file extensions such as <em>.py</em>, <em>.txt</em>, etc. are not displayed, so the file may appear only as <em>melville-moby_dick</em> in your file explorer, but its name is still <em>melville-moby_dick.txt</em>, and this is how Python and other programs will want you to refer to it. See <a class="reference external" href="https://fileinfo.com/help/windows_10_show_file_extensions">here</a> for how to change this option if you would prefer to be able to see file extensions.)</p>
+<p>You can open a plain text file in your preferred text editor. Since the editor in Spyder is just a fancy text editor, you can open it there if you like. This might even be the most convenient way to view it, since you will have it open just next to the Spyder console and will be able to see its contents as you try out the example commands below for opening and reading the file.</p>
+<div class="section" id="reading">
+<h3>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h3>
+<p>Let’s now open the file from within a Python program. There is a <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in</span></a> function for this, called simply <code class="docutils literal notranslate"><span class="pre">open()</span></code>. The input argument is a string containing the <a class="reference internal" href="glossary.html#path"><span class="std std-doc">path</span></a> to the file we want to open. If the file is located in the same directory as our program, then the path is simply the name of the file. But in this case, the file is located in a directory called ‘data’, so we need to put this together with the file name to build the full path (Take a look back at the use of <code class="docutils literal notranslate"><span class="pre">os.path</span></code> <a class="reference internal" href="standard_library.html#paths"><span class="std std-doc">in the previous lesson</span></a> if you need to remind yourself how this works).</p>
+<p>We should <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> the result of calling the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function into a new variable, so that we can then work with it in the rest of our program. If we are working with just a single file, <code class="docutils literal notranslate"><span class="pre">f</span></code> is a convenient choice of variable name. We will use that. But note that if we were working with multiple files it would be better for the clarity of our program if we chose a variable name that says something about which particular file we have opened.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;melville-moby_dick.txt&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data/melville-moby_dick.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that if <code class="docutils literal notranslate"><span class="pre">open()</span></code> cannot find the requested file, it <a class="reference internal" href="glossary.html#raise"><span class="std std-doc">raises</span></a> a <code class="docutils literal notranslate"><span class="pre">FileNotFoundError</span></code>, which looks like this:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;nonexistent_file.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">cc7db0881b62</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;nonexistent_file.txt&#39;</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;nonexistent_file.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you see this error message, check the following:</p>
+<ul class="simple">
+<li><p>Did you first follow the steps for downloading the file?</p></li>
+<li><p>Have you got the name of the file right?</p></li>
+<li><p>Is the file in a subdirectory called ‘data’?</p></li>
+<li><p>Is the ‘data’ subdirectory in your current working directory? (Try <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code> at the Spyder console to see the path to your current working directory.)</p></li>
+<li><p>Did you use <code class="docutils literal notranslate"><span class="pre">os.path.join()</span></code> correctly? (Check the output of <code class="docutils literal notranslate"><span class="pre">print(filepath)</span></code> after the <code class="docutils literal notranslate"><span class="pre">os.path.join()</span></code> command above.)</p></li>
+</ul>
+<p>So what <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> does the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return</span></a>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>_io.TextIOWrapper
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you were hoping it would just be a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> containing the contents of the file, you will be disappointed. As is sometimes the case, an intermediate step lies between us and our seemingly simple goal. First we open the file, <em>then</em> we read in its contents.</p>
+<p><code class="docutils literal notranslate"><span class="pre">type()</span></code> tells us that <code class="docutils literal notranslate"><span class="pre">open()</span></code> has <a class="reference internal" href="glossary.html#return"><span class="std std-doc">returned</span></a> a <code class="docutils literal notranslate"><span class="pre">TextIOWrapper</span></code>. The ‘IO’ part stands for <a class="reference internal" href="glossary.html#io"><span class="std std-ref">Input/Output</span></a>. This abbreviation is used quite broadly in computing to refer to any process that involves getting or sending information from or to some resource that is external to the computer program, such as a human being, the internet, or a file. The <code class="docutils literal notranslate"><span class="pre">TextIOWrapper</span></code> is a data type specifically for connecting to text files, then reading from and writing to them.</p>
+<p>This entity (which we have now stored in our <code class="docutils literal notranslate"><span class="pre">f</span></code> variable) is more commonly and more simply referred to as a ‘file object’. A file object has <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a> for reading and writing, as we can see if we apply the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;_CHUNK_SIZE&#39;,
+ &#39;__class__&#39;,
+ &#39;__del__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__enter__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__exit__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__next__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;_checkClosed&#39;,
+ &#39;_checkReadable&#39;,
+ &#39;_checkSeekable&#39;,
+ &#39;_checkWritable&#39;,
+ &#39;_finalizing&#39;,
+ &#39;buffer&#39;,
+ &#39;close&#39;,
+ &#39;closed&#39;,
+ &#39;detach&#39;,
+ &#39;encoding&#39;,
+ &#39;errors&#39;,
+ &#39;fileno&#39;,
+ &#39;flush&#39;,
+ &#39;isatty&#39;,
+ &#39;line_buffering&#39;,
+ &#39;mode&#39;,
+ &#39;name&#39;,
+ &#39;newlines&#39;,
+ &#39;read&#39;,
+ &#39;readable&#39;,
+ &#39;readline&#39;,
+ &#39;readlines&#39;,
+ &#39;reconfigure&#39;,
+ &#39;seek&#39;,
+ &#39;seekable&#39;,
+ &#39;tell&#39;,
+ &#39;truncate&#39;,
+ &#39;writable&#39;,
+ &#39;write&#39;,
+ &#39;write_through&#39;,
+ &#39;writelines&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">read()</span></code> method returns the contents of the text file as a string (remember <a class="reference internal" href="types.html#methods"><span class="std std-ref">how to use methods</span></a>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<p>Famously, the opening line of <em>Moby Dick</em> is ‘Call me Ishmael.’ But as we can see from printing out the first few hundred characters, this isn’t quite true:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[:</span><span class="mi">433</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Moby Dick by Herman Melville 1851]
+
+
+ETYMOLOGY.
+
+(Supplied by a Late Consumptive Usher to a Grammar School)
+
+The pale Usher--threadbare in coat, heart, body, and brain; I see him
+now.  He was ever dusting his old lexicons and grammars, with a queer
+handkerchief, mockingly embellished with all the gay flags of all the
+known nations of the world.  He loved to dust his old grammars; it
+somehow mildly reminded him of his mortality.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Chapter 1 of the novel proper does begin with the famous opener, but it is preceded by a preamble in which two other narrators, the ‘pale Usher’ and the ‘sub-librarian’ discuss the etymology of the word ‘whale’ and various extracts from other books on the subject of whales. This piece of trivia, along with your Python programming skills, is something that you can seriously impress your friends and colleagues with.</p>
+<p>So, now that we have the string text of the novel, we can do all the various things that we know how to do with strings, such as count the number of words, count the occurrences of a particular word, and so on. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_word</span> <span class="o">=</span> <span class="s1">&#39;whale&#39;</span>
+<span class="n">n_occurrences</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">target_word</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">n_occurrences</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1685
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you are unable to rein in your excitement at this point, take a moment to go to the Spyder console and try out lots of fun things with the text of <em>Moby Dick</em> until you have calmed down. Processing and analyzing natural language texts is the topic of a future lesson; for now we will stick to the technical drudgery of handling files.</p>
+<p>The first question we may reasonably ask is: Why did we have to first use a function to open the file and get a ‘file object’, and only then read in the contents of the file? If the only thing we want to do with the file is to read in its entire contents, then this intermediate step is indeed superfluous, and we can simplify our program a little by applying the <code class="docutils literal notranslate"><span class="pre">read()</span></code> method directly to the result of <a class="reference internal" href="glossary.html#call"><span class="std std-doc">calling</span></a> the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function.</p>
+<p>The syntax for this perhaps looks a little strange, but has its logic:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When all we want to do is to read in the entire contents of a text file, we can stick to this one-liner combination of <code class="docutils literal notranslate"><span class="pre">open()</span></code> and <code class="docutils literal notranslate"><span class="pre">read()</span></code>. But when would we not want to read in the entire contents of the file? One such situation is if we want to search in the file until we find something that we are looking for, and then stop. For example, imagine that we want to find the first line in <em>Moby Dick</em> that contains the word ‘whale’.</p>
+<p>One way to do this would be to just read in the entire file and then search in the resulting string. We could for example split the entire string into lines, go through them in a <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a>, then <code class="docutils literal notranslate"><span class="pre">break</span></code> out of the loop when we find a line containing <code class="docutils literal notranslate"><span class="pre">'whale'</span></code>. Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">target_word</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="k">break</span>
+
+<span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The first line containing &#39;</span><span class="si">{}</span><span class="s2">&#39; is: [...] </span><span class="si">{}</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">target_word</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The first line containing &#39;whale&#39; is: [...] name a whale-fish is to be called in our tongue leaving out, through
+</pre></div>
+</div>
+</div>
+</div>
+<p>A different way to do this would be to read in the contents of the file only one line at a time, then stop reading when we find the line we are searching for. File objects are <a class="reference internal" href="glossary.html#iterable"><span class="std std-doc">iterable</span></a>. If we loop through a file object, each run of the loop gives us the next line from the file. (Take a look back at the <a class="reference internal" href="iteration.html#iterables"><span class="std std-ref">lesson on iteration</span></a> if you need to remind yourself about iterable types.)</p>
+<p>So we could also find the first line containing <code class="docutils literal notranslate"><span class="pre">'whale'</span></code> like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">target_word</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="k">break</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">target_word</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The first line containing &#39;whale&#39; is: [...] name a whale-fish is to be called in our tongue leaving out, through
+</pre></div>
+</div>
+</div>
+</div>
+<p>Whether we first read in the entire file and then search in its contents, or whether we read the file line-by-line, the result is the same. The difference behind the scenes is that the former method loads the entire contents of the file into our computer’s temporary memory, whereas the second method only ever holds one line in memory at any one time, and therefore uses less of the computer’s memory. In almost all cases, this difference will not be important, but here are some instances in which it might matter:</p>
+<ul class="simple">
+<li><p>The file we are reading is absolutely colossal (multiple squigabytes) and wouldn’t all fit in our computer’s temporary memory at once. In this case we have no choice but to read it in parts.</p></li>
+<li><p>The file is still very large (a squigabyte or two), so although it can be read in its entirety, the process of doing so slows down our program unacceptably. In this case, reading line-by-line may be faster if the line we are searching for could occur near the beginning of the file.</p></li>
+</ul>
+</div>
+<div class="section" id="writing">
+<h3>Writing<a class="headerlink" href="#writing" title="Permalink to this headline">¶</a></h3>
+<p>Next we might ask: Can we write new text to the file? After all, when we <code class="docutils literal notranslate"><span class="pre">dir()</span></code> the file object, we see a <code class="docutils literal notranslate"><span class="pre">write()</span></code> method.</p>
+<p>Let’s just try it. What’s the worst that could happen (other than accidentally overwriting the entire file and having to download it again)?</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;And then I woke up and it was all a dream.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">UnsupportedOperation</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="n">d3350b3ebd2d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;And then I woke up and it was all a dream.&#39;</span><span class="p">)</span>
+
+<span class="ne">UnsupportedOperation</span>: not writable
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see an error message informing us that our file is not writable. This is in fact fortunate here, as otherwise the result of the <code class="docutils literal notranslate"><span class="pre">write()</span></code> command above would have been to overwrite the entire contents of the file.</p>
+<p>There is an additional <a class="reference internal" href="functions.html#keyword-arguments"><span class="std std-doc">keyword argument</span></a> to <code class="docutils literal notranslate"><span class="pre">open()</span></code> called <code class="docutils literal notranslate"><span class="pre">mode</span></code>, which specifies what ‘mode’ we want to open the file in. You can see a list of the possible modes at the <a class="reference external" href="https://docs.python.org/3/library/functions.html#open">Python documentation page for <code class="docutils literal notranslate"><span class="pre">open()</span></code></a>, and you will also see there what the default value of <code class="docutils literal notranslate"><span class="pre">mode</span></code> is.</p>
+<p>Above, we used <code class="docutils literal notranslate"><span class="pre">open()</span></code> without specifying anything for <code class="docutils literal notranslate"><span class="pre">mode</span></code>, so the default value was applied, and the default value happens to be <code class="docutils literal notranslate"><span class="pre">'r'</span></code>, meaning ‘read only’. If we instead ask for <code class="docutils literal notranslate"><span class="pre">'w'</span></code> mode, we get a writable file object. We won’t do this for the <em>Moby Dick</em> file, since we don’t want to overwrite it. Instead, we will create our own new file and write some text into it. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;my_new_file.txt&#39;</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Writing your first text file is a truly exhilarating experience!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you enter the two commands above into the Spyder console and then you go and look at your working directory, you should see that the new file has appeared there.</p>
+<p>However, if you click on the new file to open it in a text editor, you might not see the text that you wrote with the <code class="docutils literal notranslate"><span class="pre">write()</span></code> method. Depending on some behind-the-scenes details that may occasionally vary, Python does not necessarily write to a file immediately. Writing data to the computer’s permanent memory is by computer standards a slow operation, and can be done more efficiently by waiting until there is plenty to write, then writing everything in one go. So Python waits until we write a lot of data or until we definitely stop writing.</p>
+<p>We can signal that we have finished writing by closing the file with the <code class="docutils literal notranslate"><span class="pre">close()</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now you should be able to open the file in a text editor and see the finished result of any <code class="docutils literal notranslate"><span class="pre">write()</span></code> commands that you have run.</p>
+<p>Or you can also use Python to read in and print the contents of the new file:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing your first text file is a truly exhilarating experience!
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">'w'</span></code> file mode creates a new blank file for fresh writing. If we call <code class="docutils literal notranslate"><span class="pre">open()</span></code> in <code class="docutils literal notranslate"><span class="pre">'w'</span></code> mode again with the same file name, then the existing content is overwritten with whatever we write this time:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Writing your second text file is less exciting.&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that when we read the file again for confirmation, the first piece of text that we wrote above has gone:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing your second text file is less exciting.
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we should be careful with <code class="docutils literal notranslate"><span class="pre">'w'</span></code> mode if there is a possibility that we will overwrite an important file, for example a great work of literature like <em>Moby Dick</em>. There is a safer mode for such cases, <code class="docutils literal notranslate"><span class="pre">'x'</span></code>. This mode is the same as <code class="docutils literal notranslate"><span class="pre">'w'</span></code>, but if the requested file already exists, <code class="docutils literal notranslate"><span class="pre">open()</span></code> <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">raises an exception</span></a> instead of overwriting the existing file:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileExistsError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="mi">6</span><span class="n">b84d940cf48</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="ne">FileExistsError</span>: [Errno 17] File exists: &#39;data/melville-moby_dick.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="appending">
+<h3>Appending<a class="headerlink" href="#appending" title="Permalink to this headline">¶</a></h3>
+<p>Both <code class="docutils literal notranslate"><span class="pre">'w'</span></code> and <code class="docutils literal notranslate"><span class="pre">'x'</span></code> modes create an entirely new file. But what if we want to add to an existing file? There is a file mode for that too. <code class="docutils literal notranslate"><span class="pre">'a'</span></code> mode appends new text to the end of an existing text file.</p>
+<p>Here is an example, appending to the end of the example file we wrote above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;The excitement returns when you discover appending!&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing your second text file is less exciting.The excitement returns when you discover appending!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="escape-characters">
+<h3>Escape characters<a class="headerlink" href="#escape-characters" title="Permalink to this headline">¶</a></h3>
+<p>Oops. Can you spot the small punctuation mistake that our appending introduced into the file? How would you avoid this?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SPOILER ALERT &#39;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT 
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s right; when we write new text to a file, the writing starts immediately after the end of the existing text. No space or line break is added to separate the newly written text from the existing text. If we want a space or if we want the new text to start on a fresh line, then we need to include the space or line break explicitly.</p>
+<p>Let’s append to our file once more, this time using the special <a class="reference internal" href="glossary.html#newline"><span class="std std-doc">newline</span></a> character combination <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> to put the appended text on a new line:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Though the excitement may be dampened if you forget about newlines.&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing your second text file is less exciting.The excitement returns when you discover appending!
+Though the excitement may be dampened if you forget about newlines.
+</pre></div>
+</div>
+</div>
+</div>
+<p>What is the deal with that newline character combination? We have met it on a few occasions so far.</p>
+<p>In Python, and in many other programming languages, the backslash character <code class="docutils literal notranslate"><span class="pre">'\'</span></code> is used to modify the computer’s interpretation of the subsequent characters. This allows programmers to write certain features into a piece of text that might otherwise be difficult to write literally, such as new lines, tab spaces, accented characters, emojis, and so on. A character that is not interpreted literally but instead modifies the interpretation of subsequent characters is sometimes termed an ‘escape character’.</p>
+<p>The character combination <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> in a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> is interpreted as the start of a new line in text. The new line takes effect whenever the string is printed or written to a file. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Line1</span><span class="se">\n</span><span class="s1">Line2</span><span class="se">\n</span><span class="s1">Line3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Line1
+Line2
+Line3
+</pre></div>
+</div>
+</div>
+</div>
+<p>A common pattern in a program is to use a <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a> to write multiple lines to a file. And a common mistake is to forget the newline character when writing:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">,</span> <span class="s1">&#39;sausages&#39;</span><span class="p">]</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">shopping</span><span class="p">):</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">item</span><span class="p">))</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0: eggs1: bacon2: black pudding3: sausages
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is the example above again but with one small change:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">shopping</span><span class="p">):</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">item</span><span class="p">))</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0: eggs
+1: bacon
+2: black pudding
+3: sausages
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are many other special character sequences that Python recognizes, for example the tab space <code class="docutils literal notranslate"><span class="pre">'\t'</span></code> (i.e. what you get when you press the ‘↹’ key in a word processor), but the newline is really the only one that is useful for common tasks.</p>
+<p>Python even provides an option that allows us to avoid using the newline character combination. If we want to create a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> that spans multiple lines, we can write the new lines as explicit line breaks, as long as we enclose the string text in triple quotes (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">&quot;&quot;&quot;</span></code>). The triple quotes indicate to Python that line breaks inside this string are to be interpreted just as text line breaks, and not for example as the start of a new Python command.</p>
+<p>A common use of multi-line strings is to define a format for a neatly printed output:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_msg</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">****** Shopping summary ******</span>
+<span class="s2">items : </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">first item : </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">last item : </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">******************************</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">results_msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">shopping</span><span class="p">),</span> <span class="n">shopping</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">shopping</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>****** Shopping summary ******
+items : 4
+first item : eggs
+last item : sausages
+******************************
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="context-managers">
+<h3>Context managers<a class="headerlink" href="#context-managers" title="Permalink to this headline">¶</a></h3>
+<p>In all of the examples above in which we wrote text to a file, we made sure to close the file using the <code class="docutils literal notranslate"><span class="pre">close()</span></code> <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> once we had finished writing. This is a good idea. Behind the scenes, it makes some difference to our computer whether a connection to a file is open or not. An open file connection takes up some of the computer’s available memory, particularly if we are in the process of writing a large amount of text, and this memory may be sorely needed by viruses and malware. In addition, some <a class="reference internal" href="glossary.html#os"><span class="std std-ref">operating systems</span></a> set a limit to the number of files that may be open at any one time.</p>
+<p>If we are unsure whether the file that a file object represents is closed or not, there is an <a class="reference internal" href="glossary.html#attribute"><span class="std std-doc">attribute</span></a> of the file object, called <code class="docutils literal notranslate"><span class="pre">closed</span></code>, that tells us. We can access this attribute using the same <code class="docutils literal notranslate"><span class="pre">.</span></code> notation as for accessing methods (but note no parentheses because <code class="docutils literal notranslate"><span class="pre">closed</span></code> is not a function, it is just a piece of information):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">close()</span></code> is fine for basic purposes, but let’s look at one subtle problem that might arise once we start writing more complex programs. What if we write a program that opens a file for writing, does some writing, then closes the file, but then when we run the program it happens to encounter an <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error</span></a> in between the opening and closing steps.</p>
+<p>Here is a trivial example, in which our program tries to write something that is not a string:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">variable_that_we_think_is_a_string_but_is_not</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">variable_that_we_think_is_a_string_but_is_not</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">29</span><span class="o">-</span><span class="n">c7cb4e663efb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">variable_that_we_think_is_a_string_but_is_not</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: write() argument must be str, not int
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s check the final status of the file:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember that errors stop a program from continuing. So the occurrence of an error on line 4 above means that Python does not reach line 5, on which the file is closed.</p>
+<p>We have left a file open. This is still not really such a big deal unless our program is part of some other more complex program that needs the resources that our unfinished file is taking up. But as with so many such subtleties, it is a good idea to get into the habit of avoiding this problem if we can.</p>
+<p>How do we avoid leaving a file open if an error occurs before it can be closed? Just when you thought that we had learned all the <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a> that there could possibly be, here is one more. The <code class="docutils literal notranslate"><span class="pre">with</span></code> and <code class="docutils literal notranslate"><span class="pre">as</span></code> <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keywords</span></a> start a control statement that says to Python ‘do the following with this variable under this name, and then clean up once you have finished <em>whether you finish as planned or you finish because you encountered an error</em>’. The English-language instruction is quite a mouthful, but the Python control statement for this is more succinct. Here it is, applied to our example above:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">variable_that_we_think_is_a_string_but_is_not</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="mi">33</span><span class="n">ad52407139</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">variable_that_we_think_is_a_string_but_is_not</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: write() argument must be str, not int
+</pre></div>
+</div>
+</div>
+</div>
+<p>The error occurs as before, but now if we check the status of the file, it has been closed despite the error:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>And note that the file is also closed after the end of the <code class="docutils literal notranslate"><span class="pre">with</span></code> section in the case that the requested actions succeed without producing an error:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello my name is Mildred.&#39;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello my name is Mildred.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Take a look at the example ‘<code class="docutils literal notranslate"><span class="pre">with</span></code> statements’ above. We are by now familiar with the general syntax of control statements. As usual, we have a statement containing keywords and ending in a colon, and there is <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indentation</span></a> to mark which lines belong to the control statement, in this case just the single line applying the <code class="docutils literal notranslate"><span class="pre">write()</span></code> method to the file object.</p>
+<p>The nature of the control statement in this case is to make the indented block of commands into a ‘context’ for a variable. Following the <code class="docutils literal notranslate"><span class="pre">with</span></code> keyword is a <a class="reference internal" href="glossary.html#call"><span class="std std-doc">call</span></a> to the function that creates the variable (in this case the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function). Then the <code class="docutils literal notranslate"><span class="pre">as</span></code> keyword just gives the variable a name (in this case we have chosen <code class="docutils literal notranslate"><span class="pre">f</span></code>). This variable name can then use in the indented block of commands.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">with</span></code> statement then takes care of any ‘cleaning up’ that needs to be done with the variable once we have finished with it. In this case the cleaning up includes closing the file. We indicate that we have finished with the variable in the same way that we indicate the end of other control statements: we stop indenting.</p>
+<div class="section" id="special-methods-again">
+<h4>Special methods again<a class="headerlink" href="#special-methods-again" title="Permalink to this headline">¶</a></h4>
+<p>An astute question to ask at this point is: How does Python know what cleaning up steps need to be carried out? After all, nowhere in the examples above do we write something like ‘And once the <code class="docutils literal notranslate"><span class="pre">with</span></code> part has finished, please run the command <code class="docutils literal notranslate"><span class="pre">f.close()</span></code>’.</p>
+<p>If you were wondering this, then you may congratulate yourself on having asked an astute question.</p>
+<p>The answer is that behind the scenes, the <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> of the variable that is created in the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement determines what cleaning up it does when the statement ends. Python looks at the variable and runs one of its hidden ‘special methods’. Remember what we learned about these special methods back <a class="reference internal" href="modules.html#special-methods"><span class="std std-doc">in the lesson on modules</span></a>. They are <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a> that are not intended to be used directly, but that determine a type’s behavior in different situations.</p>
+<p>Let’s look again at what methods a file object has, this time taking a look at the special methods enclosed in double underscores <code class="docutils literal notranslate"><span class="pre">__</span> <span class="pre">__</span></code>. We can use the <em>Moby Dick</em> file again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<span class="nb">dir</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;_CHUNK_SIZE&#39;,
+ &#39;__class__&#39;,
+ &#39;__del__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__enter__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__exit__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__next__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;_checkClosed&#39;,
+ &#39;_checkReadable&#39;,
+ &#39;_checkSeekable&#39;,
+ &#39;_checkWritable&#39;,
+ &#39;_finalizing&#39;,
+ &#39;buffer&#39;,
+ &#39;close&#39;,
+ &#39;closed&#39;,
+ &#39;detach&#39;,
+ &#39;encoding&#39;,
+ &#39;errors&#39;,
+ &#39;fileno&#39;,
+ &#39;flush&#39;,
+ &#39;isatty&#39;,
+ &#39;line_buffering&#39;,
+ &#39;mode&#39;,
+ &#39;name&#39;,
+ &#39;newlines&#39;,
+ &#39;read&#39;,
+ &#39;readable&#39;,
+ &#39;readline&#39;,
+ &#39;readlines&#39;,
+ &#39;reconfigure&#39;,
+ &#39;seek&#39;,
+ &#39;seekable&#39;,
+ &#39;tell&#39;,
+ &#39;truncate&#39;,
+ &#39;writable&#39;,
+ &#39;write&#39;,
+ &#39;write_through&#39;,
+ &#39;writelines&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The two special methods that determine a type’s behavior in a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement are <code class="docutils literal notranslate"><span class="pre">__enter__()</span></code> and <code class="docutils literal notranslate"><span class="pre">__exit__()</span></code>. Any type that has these two methods can be used in a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement. As you can probably guess, the <code class="docutils literal notranslate"><span class="pre">__enter__()</span></code> method is called when the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement begins (we ‘enter’ the ‘context’), and the <code class="docutils literal notranslate"><span class="pre">__exit__()</span></code> method is called when the block of indented commands following <code class="docutils literal notranslate"><span class="pre">with</span></code> has finished (we ‘exit’ the ‘context’). And as you can probably also guess, the <code class="docutils literal notranslate"><span class="pre">__exit__()</span></code> method for a file object includes a command to close the file.</p>
+<p>Any variable type that has <code class="docutils literal notranslate"><span class="pre">__enter__()</span></code> and <code class="docutils literal notranslate"><span class="pre">__exit__()</span></code> methods can be used in a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement. In the terminology, we say that it can be used as a ‘context manager’.</p>
+<p>So the next astute question that might occur to you is: ‘Apart from file objects, are there any other types that can be used in a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement?’ There are, but they are much less commonly used for general programming tasks.</p>
+<p>For now, if the last few paragraphs seemed a little abstract to you, the take-home message is that it is a good habit to use <code class="docutils literal notranslate"><span class="pre">with</span></code> statements for writing to files. This ensures that the file is closed once you have finished, whatever happens.</p>
+</div>
+</div>
+</div>
+<div class="section" id="encodings">
+<h2>Encodings<a class="headerlink" href="#encodings" title="Permalink to this headline">¶</a></h2>
+<p>We are not done with text files yet. Before we move on to consider a few special kinds of text file, we need to learn about something that is a little tedious but is very important: File encodings. Not knowing about file encodings can be the source of a great deal of frustration when working with text data. To understand what file encodings are, we need to take a very brief aside to consider a tiny bit of the history of computing.</p>
+<p>As you are probably aware, a computer does not actually just store text characters as characters the way they appear on the screen. Computers have no built-in concept of letters or characters and they do not somehow ‘draw’ the letters anywhere in their memory. Instead, computers store everything as numbers. (Even this is something of a simplification; computers store sequences of signals that are either ‘on’ or ‘off’, and intermediate systems can interpret combinations of these signals as numbers. But this is more detail than we need for now.) So in order to store text, a computer needs some way of translating each text character into a unique number. A system for translating text characters into numbers is known as a text <a class="reference internal" href="glossary.html#encoding"><span class="std std-doc">encoding</span></a>, because it turns text into a computer ‘code’.</p>
+<p>Translating text characters back and forth into numbers for our computer each time we write or read text data should be no problem, so long as it is always clear which numbers stand for which characters, in other words, which encoding we should use. When reading a text file, we just need to make sure to read it using the same encoding as was used to write it.</p>
+<div class="section" id="ascii">
+<h3>ASCII<a class="headerlink" href="#ascii" title="Permalink to this headline">¶</a></h3>
+<p>Fortunately, a standard encoding was agreed upon in the early days of computerized data exchange, so that everybody could save their bawdy jokes to a magnetic tape or floppy disk and mail it to their friends, sure in the knowledge that other computers would translate the computer code into text correctly. This standard encoding is commonly known as the American Standard Code for Information Interchange, or <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>.</p>
+<p>However, ASCII only specified a system for the characters that Americans most like to use. These included just the 26 letters of the English version of the Latin alphabet (their lowercase and uppercase versions), along with digits, some punctuation, a few special characters like the <a class="reference internal" href="glossary.html#newline"><span class="std std-doc">newline</span></a> that we learned about above, and the cheeseburger emoji.</p>
+<p>If we are reading or writing text files that we are sure contain only the characters defined in ASCII, then we do not usually need to worry about the file encoding; computers will tend to agree on how to read and write such text files without being given any additional instructions about encoding.</p>
+</div>
+<div class="section" id="utf-8">
+<h3>UTF-8<a class="headerlink" href="#utf-8" title="Permalink to this headline">¶</a></h3>
+<p>ASCII is a bit restrictive when it comes to handling text in general. It doesn’t even include accented characters, and even in an English-language text we might occasionally want to use these, for example if we are being pretentious and slipping in a few French phrases like <em>trompe-l’œil</em> or <em>ouh là là</em>, or writing about someone with a non-English name, like the singer Michael Bublé.</p>
+<p>Unfortunately, there is no universal system agreed upon for encoding the characters that are not covered by ASCII. As computers became more common outside the English-speaking world, each group of users that wanted to exchange text containing non-English characters went ahead and developed their own encodings. The result is that today there are various different ways of storing text on a computer if that text contains non-ASCII characters.</p>
+<p>There has since been some movement towards standardization, but it is incomplete. The in-theory most widely agreed-upon encoding for non-ASCII characters is an encoding called <a class="reference external" href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a> (8-bit Unicode Transformation Format) and this is by far the most commonly used encoding for web pages. However, some of the most popular <a class="reference internal" href="glossary.html#os"><span class="std std-ref">operating systems</span></a>, Windows and macOS, do not use UTF-8 by default when reading or writing text files. Instead, they use a variety of other encodings.</p>
+</div>
+<div class="section" id="locales">
+<h3>Locales<a class="headerlink" href="#locales" title="Permalink to this headline">¶</a></h3>
+<p>How does Python know which encoding to use when we read and write text files? As you may have noticed when we looked at the <a class="reference external" href="https://docs.python.org/3/library/functions.html#open">Python documentation page for <code class="docutils literal notranslate"><span class="pre">open()</span></code></a>, there is an <code class="docutils literal notranslate"><span class="pre">encoding</span></code> <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> to the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function. We can use this to ensure that <code class="docutils literal notranslate"><span class="pre">open()</span></code> uses a particular encoding when reading or writing a file. But in the examples above we didn’t enter anything for the <code class="docutils literal notranslate"><span class="pre">encoding</span></code> argument. So what encoding did <code class="docutils literal notranslate"><span class="pre">open()</span></code> use by default? It uses whatever the computer’s <a class="reference internal" href="glossary.html#os"><span class="std std-ref">operating system</span></a> says is the current user’s preferred encoding.</p>
+<p>You might not be aware that you have a preferred encoding, but your computer will almost certainly have chosen one for you when you set your preferred language. Your computer stores this and other preferences concerning language and location together in a bundle of information often termed your <a class="reference internal" href="glossary.html#locale"><span class="std std-doc">locale</span></a>. Your user locale usually contains information about your time zone, language, and so on, and various programs may make use of the information in your locale to customize your user experience.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">locale</span></code> module from Python’s <a class="reference internal" href="standard_library.html"><span class="doc std std-doc">standard library</span></a> allows you to access this information from within a Python program. The <code class="docutils literal notranslate"><span class="pre">getpreferredencoding()</span></code> function will tell you what encoding your computer thinks you prefer:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">locale</span>
+
+<span class="n">locale</span><span class="o">.</span><span class="n">getpreferredencoding</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;UTF-8&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see from the output above, the locale for my user account includes a preference for UTF-8 encoding. But if you enter the two commands above into your Spyder console, you may get a different answer.</p>
+<p>When I ran the examples for reading and writing text files above, I was implicitly using UTF-8 encoding. If you ran some of the examples yourself on your own computer, Python may have been using a different encoding behind the scenes. This is very unlikely to have made any practical difference. As we noted a moment ago, for the limited set of characters defined in ASCII, all commonly-used encodings agree on how they should be stored. All of the examples above used only ASCII characters (the <em>Moby Dick</em> file also contains only ASCII characters).</p>
+<p>But let’s now see some examples in which encoding is important. We will try to read a text file that contains some French and German accented letters, which are not among those defined in ASCII. This file contains someone’s five favorite bands.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;top_5_bands_LATIN1.txt&#39;</span><span class="p">)</span>
+
+<span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">UnicodeDecodeError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">37</span><span class="o">-</span><span class="mi">2</span><span class="n">db62b47f006</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;top_5_bands_LATIN1.txt&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nn">/usr/lib/python3.8/codecs.py</span> in <span class="ni">decode</span><span class="nt">(self, input, final)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="c1"># decode input (taking the buffer into account)</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span>         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">+</span> <span class="nb">input</span>
+<span class="ne">--&gt; </span><span class="mi">322</span>         <span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">consumed</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer_decode</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">final</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="c1"># keep undecoded input until the next call</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">consumed</span><span class="p">:]</span>
+
+<span class="ne">UnicodeDecodeError</span>: &#39;utf-8&#39; codec can&#39;t decode byte 0xd6 in position 5: invalid continuation byte
+</pre></div>
+</div>
+</div>
+</div>
+<p>I get an error message telling me that the file could not be decoded using UTF-8. Curiously, if you are using a Windows computer you might not see the same error message if you try the above two lines. You might just see the correct contents of the file. This is because this particular file was not written using UTF-8 but using another encoding that is compatible with the default encoding on English-language Windows. The encoding that was used to write this file goes by various names but is often called ‘latin-1’.</p>
+<p>If I want to read this file correctly, then I must specify this encoding:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bands</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">bands</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Blue Öyster Cult
+Die Ärzte
+Héroes del Silencio
+Michael Bublé
+Motörhead
+</pre></div>
+</div>
+</div>
+</div>
+<p>The ‘latin-1’ encoding and others similar to it are widely used in Western Europe and the Americas because they define codes for most of the accented characters that appear in Western European languages. They do not, however, define codes for characters from other alphabets.</p>
+<p>Note that the result of using the wrong encoding is not always an error. If the file contains numbers that mean one thing for one encoding, and are still valid <em>but have a different meaning</em> for another encoding, then some parts of the text will simply be substituted with the wrong characters.</p>
+<p>This happens, for example, if we try to read a UTF-8 encoded version of the <em>top 5 bands</em> file using the ‘latin-1’ encoding:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;top_5_bands_UTF8.txt&#39;</span><span class="p">)</span>
+<span class="n">bands</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">bands</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Blue Ãyster Cult
+Die Ãrzte
+HÃ©roes del Silencio
+Michael BublÃ©
+MotÃ¶rhead
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can see here that relying on the locale to choose the encoding when we read a file is not a good idea, at least if we are reading a file that contains (or might contain) non-ASCII characters. Our program might read a file entirely correctly on our computer, but fail to do so on a colleague’s computer, either giving them an error, or worse, happily reading in the file as gibberish. So if our program includes text data files it is a good idea to explicitly specify the file encoding when we use <code class="docutils literal notranslate"><span class="pre">open()</span></code> to read them. This ensures that our program is reproducible for others.</p>
+<p>What about writing files? For writing, too, Python will use the locale’s preferred encoding. So you should be aware that if you write non-ASCII characters to a text file without specifying an encoding then you may be writing them using an encoding that is different from the one that someone else’s computer will try to use to read that file. If you write any non-ASCII characters then you should specify the encoding when you use <code class="docutils literal notranslate"><span class="pre">open()</span></code> to create the file, so that you can be sure of what you are getting.</p>
+<p>If you are unsure which encoding you should use for writing files, UTF-8 is generally a good choice. It is considered a basic standard for the internet, and it defines codes for characters in more or less every writing system in the world, including for emojis.</p>
+<p>For example, you can use UTF-8 to encode Arabic characters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;اسمي ميلدريد&#39;</span>
+<span class="n">file_encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">file_encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">file_encoding</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;اسمي ميلدريد&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Which you cannot do at all with some other encoding systems:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_encoding</span> <span class="o">=</span> <span class="s1">&#39;latin-1&#39;</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">file_encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">UnicodeEncodeError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">41</span><span class="o">-</span><span class="mi">951</span><span class="n">ff0eca922</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">file_encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="nn">UnicodeEncodeError: &#39;latin-1&#39; codec can&#39;t encode characters in position 0-3: ordinal not</span> in <span class="ni">range</span><span class="nt">(256)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The only important omission from UTF-8’s set of defined characters is the <a class="reference external" href="https://parkerhiggins.net/2013/01/writing-the-prince-symbol-in-unicode/">symbol for the artist formerly known as Prince</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;top_10_bands.txt&#39;</span><span class="p">)</span>
+
+<span class="n">bands</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">bands</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Blue Öyster Cult
+Die Ärzte
+Héroes del Silencio
+Mate Matišić
+Michael Bublé
+Motörhead
+Я́нка
+سيد خليفة
+林憶蓮
+The Artist Formerly Known as Prince
+</pre></div>
+</div>
+</div>
+</div>
+<p>That covers the essentials for working with text files. If you would like to see them in action in an example program, you can take a look at <span class="xref myst">alternative_ending.py</span>.</p>
+<p>To finish, we will look at a couple of special text file formats. These are still just text files, but they store text in a structured way.</p>
+</div>
+</div>
+<div class="section" id="delimited-text">
+<h2>Delimited text<a class="headerlink" href="#delimited-text" title="Permalink to this headline">¶</a></h2>
+<p>A common arrangement for structured data is as a table. A table has rows, each of which represents one ‘observation’, which might be a customer, a purchase, a trial in an experiment, etc., and it has columns, each of which records one piece of information about that observation, such as a name, a price, a physical measurement, etc. The columns typically, but not always, have names that indicate what piece of information is recorded in the column. In everyday office work, we typically work with tables via a spreadsheet program such as Microsoft Excel.</p>
+<p>Because of their simple structure, tables can be represented in plain text. The rows of the table can be written simply as lines in a text file. The only slightly tricky question is how to deal with the columns. A typical solution is to reserve one character as a <a class="reference internal" href="glossary.html#separator"><span class="std std-doc">separator</span></a> to mark the division between columns on each row. An alternative term for ‘separator’ is ‘delimiter’, so such files are sometimes called ‘delimited text’ files.</p>
+<p>What a delimited text file looks like in practice is easiest to see by means of an example. So let’s read one in. The file <em>penguins.csv</em> contains a table in the form of delimited text, recording the heart rates of penguins during dives of varying depth and duration.</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">readline()</span></code> method of the file object to read just the first few lines, since it is a fairly long file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;penguins.csv&#39;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">linenum</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bird,HeartRate,Depth,Duration
+EP19,88.8,5,1.05
+EP19,103.4,9,1.1833333
+EP19,97.4,22,1.9166667
+EP19,85.3,25.5,3.4666667
+EP19,60.6,30.5,7.0833333
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <a class="reference internal" href="glossary.html#separator"><span class="std std-doc">separator</span></a> (or delimiter) character for this file is the comma. It is for this reason that the file extension is <em>csv</em>, which stands for ‘comma separated values’.</p>
+<p>In its raw text form, the table of data is a little difficult to discern. The file has named columns, and the column names are given in the first line, with the comma separator between them. Each subsequent line contains a row of values for each column, also separated by commas. So for example the first row of data records that bird ‘EP19’ had a heart rate of 88.8 beats per minute on a dive that went to 5 meters and lasted 1.05 minutes.</p>
+<p>It is important to note that there is nothing special about this format for Python. When we read in a delimited text file, all that Python sees is text. But other programs may interpret delimited text files as tables. For example, if you try to open <em>penguins.csv</em> in Microsoft Excel or another spreadsheet program on your computer, then you might see the rows and columns neatly arranged in the resulting spreadsheet. Possibly, the spreadsheet program may ask you first to specify what separator is used in the file, like this:</p>
+<p><img alt="" src="_images/csv_import.png" /></p>
+<div class="section" id="locales-again">
+<h3>Locales again<a class="headerlink" href="#locales-again" title="Permalink to this headline">¶</a></h3>
+<p>If the default language on your computer is not English, you might not see the table displayed correctly if you try to open it with your spreadsheet program. This is because some languages use the comma as the decimal separator for non-whole numbers (for example <em>1,618</em> instead of <em>1.618</em>), and therefore need to use some other character as a separator for delimited text files. The alternative column separator in this case is usually the semicolon ( <em>;</em> ).</p>
+<p>If you didn’t see the table displayed correctly when you opened <em>penguins.csv</em> in your spreadsheet program, you can try <em>penguins_DE.csv</em> and see whether that works for you. This file contains the same table, but with a semicolon as the column separator and the comma as the decimal separator:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;penguins_DE.csv&#39;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">linenum</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bird;HeartRate;Depth;Duration
+EP19;88,8;5;1,05
+EP19;103,4;9;1,1833333
+EP19;97,4;22;1,9166667
+EP19;85,3;25,5;3,4666667
+EP19;60,6;30,5;7,0833333
+</pre></div>
+</div>
+</div>
+</div>
+<p>The fact that your spreadsheet program opens one or other of these two file formats correctly by default is another example of your <a class="reference internal" href="glossary.html#locale"><span class="std std-doc">locale</span></a> determining the default behavior of programs. If you create or edit delimited text files using your spreadsheet program, or if you need to open a file that someone else has sent you, you should be aware that you may be reading or writing the file in a different format from that used by your colleagues. If in doubt, open the file in a plain text editor first, to see what the literal text contents look like.</p>
+</div>
+<div class="section" id="pandas">
+<h3>pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h3>
+<p>We could process comma-separated tables using basic Python string methods, but this would be tedious. There are instead additional <a class="reference internal" href="glossary.html#package"><span class="std std-doc">packages</span></a> for Python that provide functions for reading delimited text files as tables of data. The most popular of these is a package called <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a>. <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a third-party package; it is not part of the Python <a class="reference internal" href="standard_library.html"><span class="doc std std-doc">standard library</span></a>. But it is very widely used, and it is provided as part of the Anaconda Python installation, so if you installed Anaconda then you already have <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> function <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> reads a comma-separated file, but instead of just reading it as plain text it interprets the structure of the file to produce a table of data (<code class="docutils literal notranslate"><span class="pre">pandas</span></code> calls a table of data a ‘<a class="reference internal" href="glossary.html#dataframe"><span class="std std-doc">dataframe</span></a>’).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;penguins.csv&#39;</span><span class="p">)</span>
+<span class="n">penguins_data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">penguins_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.frame.DataFrame
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">penguins_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       Bird  HeartRate  Depth   Duration
+0      EP19       88.8    5.0   1.050000
+1      EP19      103.4    9.0   1.183333
+2      EP19       97.4   22.0   1.916667
+3      EP19       85.3   25.5   3.466667
+4      EP19       60.6   30.5   7.083333
+..      ...        ...    ...        ...
+120  EP3901       48.4  170.0  11.533333
+121  EP3901       50.8   37.0   8.216667
+122  EP3901       49.6  160.0  11.300000
+123  EP3901       56.4  180.0  10.283333
+124  EP3901       55.2  170.0  10.366667
+
+[125 rows x 4 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> function has an <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> called <code class="docutils literal notranslate"><span class="pre">sep</span></code>, which allows us to specify what character is used as the <a class="reference internal" href="glossary.html#separator"><span class="std std-doc">separator</span></a>. If we <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">look at the documentation</a> we see that the default value for <code class="docutils literal notranslate"><span class="pre">sep</span></code> is <code class="docutils literal notranslate"><span class="pre">','</span></code>.</p>
+<p>There is also an argument called <code class="docutils literal notranslate"><span class="pre">decimal</span></code>, for specifying the decimal separator. Its default is <code class="docutils literal notranslate"><span class="pre">'.'</span></code>.</p>
+<p>If we want to read a delimited text file with a semicolon separator, we can specify the appropriate characters for these two arguments:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;penguins_DE.csv&#39;</span><span class="p">)</span>
+<span class="n">penguins_data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">decimal</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">penguins_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       Bird  HeartRate  Depth   Duration
+0      EP19       88.8    5.0   1.050000
+1      EP19      103.4    9.0   1.183333
+2      EP19       97.4   22.0   1.916667
+3      EP19       85.3   25.5   3.466667
+4      EP19       60.6   30.5   7.083333
+..      ...        ...    ...        ...
+120  EP3901       48.4  170.0  11.533333
+121  EP3901       50.8   37.0   8.216667
+122  EP3901       49.6  160.0  11.300000
+123  EP3901       56.4  180.0  10.283333
+124  EP3901       55.2  170.0  10.366667
+
+[125 rows x 4 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p>As well as just providing a neater display format, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>’ interpretation of delimited text files as tables allows us to analyze and manipulate the data more easily than as raw text. For example, the <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> has a method <code class="docutils literal notranslate"><span class="pre">describe()</span></code> for producing a statistical summary of the data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">penguins_data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        HeartRate      Depth    Duration
+count  125.000000  125.00000  125.000000
+mean    56.924000   56.79936    7.311231
+std     26.343033   47.75013    4.074564
+min     22.800000    5.00000    1.050000
+25%     36.300000   30.56000    3.299983
+50%     48.400000   40.87000    8.100000
+75%     76.600000   56.15000   10.500000
+max    134.000000  225.00000   18.150000
+</pre></div>
+</div>
+</div>
+</div>
+<p>And it allows us to select columns using a list of column names as an <a class="reference internal" href="glossary.html#index"><span class="std std-doc">index</span></a> (Note the double square parentheses, one set for indexing, and one set to indicate that the indices take the form of a <a class="reference internal" href="glossary.html#list"><span class="std std-doc">list</span></a>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">penguins_data</span><span class="p">[[</span><span class="s1">&#39;Depth&#39;</span><span class="p">,</span> <span class="s1">&#39;Duration&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Depth   Duration
+0      5.0   1.050000
+1      9.0   1.183333
+2     22.0   1.916667
+3     25.5   3.466667
+4     30.5   7.083333
+..     ...        ...
+120  170.0  11.533333
+121   37.0   8.216667
+122  160.0  11.300000
+123  180.0  10.283333
+124  170.0  10.366667
+
+[125 rows x 2 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will set <code class="docutils literal notranslate"><span class="pre">pandas</span></code> aside for now, but we will come back to it in more detail when we learn about using Python for data analysis.</p>
+</div>
+</div>
+<div class="section" id="json">
+<h2>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take a look at a text file that has a very different structure. The file <em>guardian_taramasalata.json</em> contains information on 10 articles published on the <a class="reference external" href="https://www.theguardian.co.uk">Guardian online</a> that mention the Greek dish taramasalata. The first few lines of the data look like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;guardian_taramasalata.json&#39;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">linenum</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">27</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;response&quot;: {
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;userTier&quot;: &quot;developer&quot;,
+    &quot;total&quot;: 140,
+    &quot;startIndex&quot;: 1,
+    &quot;pageSize&quot;: 10,
+    &quot;currentPage&quot;: 1,
+    &quot;pages&quot;: 14,
+    &quot;orderBy&quot;: &quot;relevance&quot;,
+    &quot;results&quot;: [
+      {
+        &quot;id&quot;: &quot;food/2019/nov/30/scallop-roe-alternative-use-taramasalata-recipe-waste-not-tom-hunt&quot;,
+        &quot;type&quot;: &quot;article&quot;,
+        &quot;sectionId&quot;: &quot;food&quot;,
+        &quot;sectionName&quot;: &quot;Food&quot;,
+        &quot;webPublicationDate&quot;: &quot;2019-11-30T06:00:28Z&quot;,
+        &quot;webTitle&quot;: &quot;An alternative use for scallop roe&quot;,
+        &quot;webUrl&quot;: &quot;https://www.theguardian.com/food/2019/nov/30/scallop-roe-alternative-use-taramasalata-recipe-waste-not-tom-hunt&quot;,
+        &quot;apiUrl&quot;: &quot;https://content.guardianapis.com/food/2019/nov/30/scallop-roe-alternative-use-taramasalata-recipe-waste-not-tom-hunt&quot;,
+        &quot;fields&quot;: {
+          &quot;headline&quot;: &quot;An alternative use for scallop roe&quot;,
+          &quot;standfirst&quot;: &quot;&lt;p&gt;Diver-caught scallops are fresher, less environmentally harmful, and include the best bit many fishmongers leave out, the roe&lt;/p&gt;&quot;,
+          &quot;trailText&quot;: &quot;Diver-caught scallops are fresher, less environmentally harmful, and include the best bit many fishmongers leave out, the roe&quot;,
+          &quot;byline&quot;: &quot;Tom Hunt&quot;,
+          &quot;main&quot;: &quot;&lt;figure class=\&quot;element element-image\&quot; data-media-id=\&quot;8cf85b4edc5cb600a3585166df4831306f2e7d33\&quot;&gt; &lt;img src=\&quot;https://media.guim.co.uk/8cf85b4edc5cb600a3585166df4831306f2e7d33/971_0_3648_3648/1000.jpg\&quot; alt=\&quot;Tom Hunt\u2019s scallop roe taramasalata.\&quot; width=\&quot;1000\&quot; height=\&quot;1000\&quot; class=\&quot;gu-image\&quot; /&gt; &lt;figcaption&gt; &lt;span class=\&quot;element-image__caption\&quot;&gt;Tom Hunt\u2019s scallop roe taramasalata.&lt;/span&gt; &lt;span class=\&quot;element-image__credit\&quot;&gt;Photograph: Tom Hunt/The Guardian&lt;/span&gt; &lt;/figcaption&gt; &lt;/figure&gt;&quot;,
+          &quot;body&quot;: &quot;&lt;p&gt;Cream-coloured scallops with their bright coral roes are an exquisite treat to be savoured in their entirety. Some fishmongers sell them shelled and without the roe, but if possible avoid buying these, because not only are they missing the best bit, they\u2019re likely dredged, too, which ploughs up the sea bed. Diver-caught scallops may be pricey, but they are picked selectively by hand, so preserving other oceanic species and avoiding unnecessary waste. They\u2019re usually sold live in the shell, too, so you know they\u2019re fresh. &lt;/p&gt; &lt;p&gt;Ignore daft recipes that call for only the meaty, white flesh and add the roe anyway \u2013 it won\u2019t affect the dish. Even the frill is edible, incidentally, and is delicious minced and fried. If you do, however, find yourself with roes to use up, whip up this smoky tarama.&lt;/p&gt; &lt;h2&gt;Scallop roe taramasalata&lt;/h2&gt; &lt;p&gt;If you like seafood and mayonnaise, this is the recipe for you. Homemade taramasalata is an entirely different beast from the ultra-processed, pink gloop you find in supermarkets. Smoked roes are blended with oil in a similar way to mayonnaise, making a fresh and powerful, umami-flavoured dip. A fishmonger might even sell you roes separately, though I\u2019d recommend using the whole scallop.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;50g scallop roes or whole scallops&lt;/strong&gt; (diver-caught, ideally)&lt;br&gt;&lt;strong&gt;1 tsp fine sea salt&lt;br&gt;1 tsp tea leaves&lt;br&gt;30g slice stale wholemeal bread&lt;/strong&gt;, cut into cubes&lt;br&gt;&lt;strong&gt;1 dash &lt;/strong&gt;&lt;strong&gt;whole milk&lt;br&gt;1 small garlic clove&lt;/strong&gt;, peeled&lt;br&gt;&lt;strong&gt;50-80ml extra-virgin olive oil&lt;br&gt;\u00bc unwaxed lemon&lt;/strong&gt;, zested and juiced&lt;br&gt;&lt;strong&gt;\u00bd tsp smoked paprika&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Salt the scallop roes (or scallops) with a teaspoon of fine sea salt, leave for 15 minutes, then rinse and pat dry. Put the tea leaves in an old saucepan, put a metal sieve on top, pop in the scallop and cover with a lid. Place on a medium heat and, once you see smoke, leave cook for three minutes. Turn off the heat and leave until the smoke stops.&lt;/p&gt; &lt;p&gt;To make the taramasalata, soak the bread in a dash of milk until it softens, squeeze out any excess milk, then put the bread in a small blender with the smoked scallop, garlic, 50ml of the oil and the lemon zest and juice. Blend smooth, then check the consistency; add more oil to make it thicker, if necessary. Serve with toast or crudit\u00e9s, and keep in the fridge for up to five days.&lt;/p&gt;&quot;,
+</pre></div>
+</div>
+</div>
+</div>
+<p>These data too look rather messy when read as raw text. The structure of the text is not as simple as in the delimited text files, but aspects of it may look familiar.</p>
+<p>For example, notice that the text file begins with an opening ‘curly brace’ ( <em>{</em> ), the same as is used in Python for <a class="reference internal" href="sequences_mappings.html#dictionaries"><span class="std std-doc">creating a dictionary</span></a>. The similarity to the dictionary syntax continues, with what look like pairs of <a class="reference internal" href="glossary.html#key"><span class="std std-doc">keys</span></a> and their associated values separated by the colon character ( <em>:</em> ). Further down the file we can also see an opening square parenthesis, as if to <a class="reference internal" href="types.html#list"><span class="std std-doc">create a list</span></a>.</p>
+<p>This file stores information in the form of nested lists and dictionaries that contain strings and numbers, using the same syntax as in a Python program. This format is known as <a class="reference internal" href="glossary.html#json"><span class="std std-ref">JSON</span></a>, which stands for JavaScript Object Notation. As the name suggests, this file format was inspired by the JavaScript programming language, but this language uses a syntax for basic data types that is essentially the same as Python’s, and is similar to that of many other programming languages.</p>
+<div class="section" id="id1">
+<h3>Reading<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Like the delimited text format, there is nothing special for Python about the JSON format when we read it as plain text, but if we instruct Python to read it as JSON instead of just as text, then we can interact with the data that it contains much more easily.</p>
+<p>There is a module in the Python <a class="reference internal" href="standard_library.html"><span class="doc std std-doc">standard library</span></a> for reading JSON files. It provides a <code class="docutils literal notranslate"><span class="pre">load()</span></code> function for loading JSON data. This function requires a file object as its first <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a>, so we must first open the file with <code class="docutils literal notranslate"><span class="pre">open()</span></code> as usual.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">guardian_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">))</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">guardian_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
+</div>
+<p>We get a dictionary. We won’t always get a dictionary from loading a JSON file. The reason we get a dictionary in this case is because, as we saw above, the file begins with an opening curly brace, which is the syntax for creating a dictionary. If a JSON file begins with an opening square parenthesis, then we will get a list instead.</p>
+<p>Now that we have loaded the JSON data, we can interact with it just as with a normal dictionary. For example we can see what <a class="reference internal" href="glossary.html#key"><span class="std std-doc">keys</span></a> it contains:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guardian_data</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;response&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<p>It contains just a single key. Let’s see what value this key contains:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">guardian_data</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;status&#39;, &#39;userTier&#39;, &#39;total&#39;, &#39;startIndex&#39;, &#39;pageSize&#39;, &#39;currentPage&#39;, &#39;pages&#39;, &#39;orderBy&#39;, &#39;results&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<p>It contains yet another dictionary, which contains a key called <code class="docutils literal notranslate"><span class="pre">'results'</span></code>, which sounds promising.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is here that we find the list of the 10 Guardian articles that have been published on the subject of taramasalata. As it turns out, each of these contains a further dictionary with various keys storing information about the article, such as the title, publication date, etc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;id&#39;, &#39;type&#39;, &#39;sectionId&#39;, &#39;sectionName&#39;, &#39;webPublicationDate&#39;, &#39;webTitle&#39;, &#39;webUrl&#39;, &#39;apiUrl&#39;, &#39;fields&#39;, &#39;isHosted&#39;, &#39;pillarId&#39;, &#39;pillarName&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<p>This sort of multiply nested structure is common for data obtained by querying a database via the internet.</p>
+</div>
+<div class="section" id="id2">
+<h3>Writing<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>We can of course also write data from our program to a JSON file. If we have <a class="reference internal" href="sequences_mappings.html#nested-data-representations"><span class="std std-ref">nested data</span></a>, such as a list of dictionaries or dictionary of lists, that cannot easily be represented in a table, then we can save our data to a JSON file.</p>
+<p>Somewhat unintuitively, the function for writing data to a JSON file is not called <code class="docutils literal notranslate"><span class="pre">save()</span></code> or <code class="docutils literal notranslate"><span class="pre">write()</span></code> but <code class="docutils literal notranslate"><span class="pre">dump()</span></code>, as if our program is rather unceremoniously taking a ‘data dump’. The first argument to <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code> is the Python variable that we want to store, and the second is the file object to store it to.</p>
+<p>Here is a simple example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">todos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;shopping&#39;</span><span class="p">:[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;black pudding&#39;</span><span class="p">],</span>
+         <span class="s1">&#39;chores&#39;</span><span class="p">:[</span><span class="s1">&#39;washing up&#39;</span><span class="p">,</span> <span class="s1">&#39;polish silver&#39;</span><span class="p">],</span>
+         <span class="s1">&#39;reading&#39;</span><span class="p">:[</span><span class="s1">&#39;Moby Dick&#39;</span><span class="p">,</span> <span class="s1">&#39;The Hound of the Baskervilles&#39;</span><span class="p">,</span> <span class="s1">&#39;Python for Everybody&#39;</span><span class="p">]}</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;my_new_json_file.json&#39;</span>
+
+<span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">todos</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;shopping&quot;: [&quot;eggs&quot;, &quot;bacon&quot;, &quot;black pudding&quot;], &quot;chores&quot;: [&quot;washing up&quot;, &quot;polish silver&quot;], &quot;reading&quot;: [&quot;Moby Dick&quot;, &quot;The Hound of the Baskervilles&quot;, &quot;Python for Everybody&quot;]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code> writes the data all on one single line. This is the most compact option and will result in the file taking up the least space. But if we want to be able to view the JSON file in a text editor, it is difficult to read one long line. The additional <code class="docutils literal notranslate"><span class="pre">indent</span></code> argument to <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code> can be used to write each item of the lists and dictionaries on a new line indented with a certain number of spaces, so that they are more clearly distinguishable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">todos</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;shopping&quot;: [
+    &quot;eggs&quot;,
+    &quot;bacon&quot;,
+    &quot;black pudding&quot;
+  ],
+  &quot;chores&quot;: [
+    &quot;washing up&quot;,
+    &quot;polish silver&quot;
+  ],
+  &quot;reading&quot;: [
+    &quot;Moby Dick&quot;,
+    &quot;The Hound of the Baskervilles&quot;,
+    &quot;Python for Everybody&quot;
+  ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The extra spaces mean that the file takes up slightly more space, but this is only usually a concern for really huge collections of data.</p>
+<p>That’s it for JSON, and for text files in general. Try some exercises.</p>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Write a short program to convert the latin-1-encoded file <span class="xref myst">top_5_bands_LATIN1.txt</span> into a UTF-8 encoded version. This means that you will need to read the file using one encoding, but then write the contents out to a new file using a different encoding. Write the UTF-8 version to a new file so that you don’t overwrite the original.</p>
+<p>At the bottom of your program file include a short test that checks whether the program has worked. It will need to read in the new file using the UTF-8 encoding and print out the contents as a check that they are displayed correctly.</p>
+</div>
+<div class="section" id="id4">
+<h3>2<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>As is common for data obtained from the internet, the JSON file <span class="xref myst">guardian_taramasalata.json</span> has a fairly complex nested structure. Imagine that we are interested only in the actual text of the 10 Guardian articles contained in the file. Write a program that loads the data from the original file, gets just the <code class="docutils literal notranslate"><span class="pre">'bodyText'</span></code> of each article, puts these texts into a list, and then saves the list to a new JSON file.</p>
+<p>You will need to explore the structure of the original file first, using the dictionary method <code class="docutils literal notranslate"><span class="pre">keys()</span></code> repeatedly to see what is in each part of the file.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="standard_library.html" title="previous page">The standard library</a>
+    <a class='right-next' id="next-link" href="command_line.html" title="next page">The command line</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

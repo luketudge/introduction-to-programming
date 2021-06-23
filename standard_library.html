@@ -1,0 +1,1097 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The standard library &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Files" href="files.html" />
+    <link rel="prev" title="Modules" href="modules.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/standard_library.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fstandard_library.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/standard_library.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/standard_library.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math">
+   math
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#os">
+   os
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-directory">
+     Working directory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#paths">
+     Paths
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#absolute-paths">
+       Absolute paths
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relative-paths">
+       Relative paths
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#third-party-packages">
+   Third-party packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-standard-library">
+<h1>The standard library<a class="headerlink" href="#the-standard-library" title="Permalink to this headline">¶</a></h1>
+<p>In the <a class="reference internal" href="modules.html"><span class="doc std std-doc">previous lesson</span></a>, we saw that Python programs can <a class="reference internal" href="glossary.html#import"><span class="std std-doc">import</span></a> some of their components from other files. Such additional files that are not in themselves programs but instead provide <em>components</em> for programs are known as <a class="reference internal" href="glossary.html#module"><span class="std std-doc">modules</span></a>.</p>
+<p>We started out by writing our own modules, to see how the whole idea works. But we can also import modules that we get from elsewhere. For even moderately complex programs, we will almost always need to import and use some additional components that we did not write ourselves. If we start work on a new task and we find that it cannot easily be accomplished using the basic operations and data types, or if we don’t even know how to begin, then we should ask ourselves: Is this a task that lots of other people will probably have needed to do before? If it is, then we might be able to save ourselves some time by searching first for a pre-made module that provides some of the building blocks that we need.</p>
+<p>We might find that we first need to download and install some of the modules that we decide we want to use. But in many cases this is not necessary. A standard Python installation comes with a large collection of pre-made modules for many common programming tasks. This collection of modules that is already included when we install Python is known as the ‘standard library’. The term ‘library’ is used here to indicate that, like the knowledge stored in a library, the contents of these extra modules are not immediately available to us, but can be accessed by going to the library and ‘reading in’ one of the ‘books’. The Python language is organized so as to provide only the very basics at its core: a few <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in functions</span></a>, mathematical <a class="reference internal" href="glossary.html#operator"><span class="std std-doc">operators</span></a>, the most useful <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data types</span></a>, and some <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a> (there are admittedly a <em>few</em> more things than just these, but we won’t look at many more of them in this class). The core of the language is kept small and simple, and programmers only bring in as much of the extras as they need for a given task.</p>
+<p>So what extra modules are contained in the standard library? You can find a full list of them at the official Python documentation pages <a class="reference external" href="https://docs.python.org/3/library/">here</a>, but this is a little overwhelming to read all at once. Instead of going through them exhaustively, we will just consider some examples of how to use them. In future lessons, we will meet more modules from the standard library that are useful for specific tasks.</p>
+<p>Let’s set ourselves two example tasks, each of which will require a module from the standard library. The first is fairly short and straightforward, the second a bit more complex.</p>
+<div class="section" id="math">
+<h2>math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<p>Here is our first task:</p>
+<ul class="simple">
+<li><p>We want to create a new module for working with circles.</p></li>
+<li><p>The module should provide two functions:</p>
+<ul>
+<li><p>Calculate the circumference of a circle given its radius.</p></li>
+<li><p>Calculate the area of a circle given its radius.</p></li>
+</ul>
+</li>
+</ul>
+<p>The relevant formulas relating a circle’s circumference <span class="math notranslate nohighlight">\(C\)</span> and area <span class="math notranslate nohighlight">\(A\)</span> to its radius are:</p>
+<div class="math notranslate nohighlight">
+\[
+C = 2 \pi r
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+A = \pi r^2
+\]</div>
+<p>Both of these involve the mathematical constant <a class="reference external" href="https://en.wikipedia.org/wiki/Pi"><em>pi</em></a> (<span class="math notranslate nohighlight">\(\pi\)</span>). How do we build it into our module?</p>
+<p>We could of course go ahead and define a suitable approximation to <em>pi</em> ourselves:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265359</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>But the digits of <em>pi</em> go on forever, so we will need to type them out for quite a long time before reaching the closest approximation that our computer can store.</p>
+<p>If you ever find yourself muttering at your computer “There has <em>got</em> to be a better way of doing this,” this is usually a sign that there is a ready-made solution out there somewhere, either in Python’s standard library, or in some other module that somebody else has already written. If you head to Google and search for ‘Python pi’ you will find that the first few results mention the <code class="docutils literal notranslate"><span class="pre">math</span></code> module. <code class="docutils literal notranslate"><span class="pre">math</span></code> is a module in Python’s standard library that provides some additional mathematical functions, as well as constants like <em>pi</em> or <em><a class="reference external" href="https://en.wikipedia.org/wiki/E_(mathematical_constant)">e</a></em>.</p>
+<p>We can <a class="reference internal" href="glossary.html#import"><span class="std std-doc">import</span></a> a module from the standard library in just the same way as importing a module that we wrote ourselves. The only difference is that we don’t need to make sure that we have the module file ready in the same directory as our main program; modules from the standard library can be imported from anywhere regardless of which directory we are working in.</p>
+<p>So let’s begin by importing the <code class="docutils literal notranslate"><span class="pre">math</span></code> module:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we have seen before, if we encounter a new module, we can use the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function in the console to see its contents.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__doc__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;acos&#39;,
+ &#39;acosh&#39;,
+ &#39;asin&#39;,
+ &#39;asinh&#39;,
+ &#39;atan&#39;,
+ &#39;atan2&#39;,
+ &#39;atanh&#39;,
+ &#39;ceil&#39;,
+ &#39;comb&#39;,
+ &#39;copysign&#39;,
+ &#39;cos&#39;,
+ &#39;cosh&#39;,
+ &#39;degrees&#39;,
+ &#39;dist&#39;,
+ &#39;e&#39;,
+ &#39;erf&#39;,
+ &#39;erfc&#39;,
+ &#39;exp&#39;,
+ &#39;expm1&#39;,
+ &#39;fabs&#39;,
+ &#39;factorial&#39;,
+ &#39;floor&#39;,
+ &#39;fmod&#39;,
+ &#39;frexp&#39;,
+ &#39;fsum&#39;,
+ &#39;gamma&#39;,
+ &#39;gcd&#39;,
+ &#39;hypot&#39;,
+ &#39;inf&#39;,
+ &#39;isclose&#39;,
+ &#39;isfinite&#39;,
+ &#39;isinf&#39;,
+ &#39;isnan&#39;,
+ &#39;isqrt&#39;,
+ &#39;ldexp&#39;,
+ &#39;lgamma&#39;,
+ &#39;log&#39;,
+ &#39;log10&#39;,
+ &#39;log1p&#39;,
+ &#39;log2&#39;,
+ &#39;modf&#39;,
+ &#39;nan&#39;,
+ &#39;perm&#39;,
+ &#39;pi&#39;,
+ &#39;pow&#39;,
+ &#39;prod&#39;,
+ &#39;radians&#39;,
+ &#39;remainder&#39;,
+ &#39;sin&#39;,
+ &#39;sinh&#39;,
+ &#39;sqrt&#39;,
+ &#39;tan&#39;,
+ &#39;tanh&#39;,
+ &#39;tau&#39;,
+ &#39;trunc&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The names of many of its contents may be familiar to you from math class. We see that <code class="docutils literal notranslate"><span class="pre">pi</span></code> is in there.</p>
+<p>Let’s remind ourselves of the <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> for using something from an imported module. We need the name of the module, then <code class="docutils literal notranslate"><span class="pre">.</span></code>, then the name of whatever it is we want to use from it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">math.pi</span></code> is a variable, not a function, so we don’t place any parentheses after it. We have so far just been getting functions from modules, and often most of the contents of a module will be functions, but there is no reason that modules cannot also store variables. The output of <code class="docutils literal notranslate"><span class="pre">dir()</span></code> doesn’t tell us which of the contents of a module are functions and which are variables, but if we are unsure about any of them we can check their <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can use <code class="docutils literal notranslate"><span class="pre">math.pi</span></code> like any other variable. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radius</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">circumference</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">circumference</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.83185307179586
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s it. Now that we know how to import the <code class="docutils literal notranslate"><span class="pre">math</span></code> module and use its contents in calculations, we know everything we need in order to write our target program. Go ahead and try to write the ‘circle’ module yourself, then take a look at it in the example file <span class="xref myst">circle.py</span>. If you need to remind yourself about writing modules, take a look back at the <a class="reference internal" href="modules.html"><span class="doc std std-doc">lesson on modules</span></a>.</p>
+<p>Here is our module in action:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">circle</span>
+
+<span class="n">circle</span><span class="o">.</span><span class="n">circumference</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.83185307179586
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circle</span><span class="o">.</span><span class="n">area</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>314.1592653589793
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="os">
+<h2>os<a class="headerlink" href="#os" title="Permalink to this headline">¶</a></h2>
+<p>That was a very short introduction to using the standard library. Our next task is a little more complex. Here it is:</p>
+<ul class="simple">
+<li><p>We are preparing to organize our tax returns for the last five years and would like to generate a folder structure in which to store them.</p></li>
+<li><p>We need one folder for each of the last five years.</p></li>
+<li><p>Inside each of those year folders, we would like a separate folder for each month.</p></li>
+</ul>
+<p>How do we even make new folders in Python? We don’t know. But we head over to Google and search for ‘Python make new folder’ and see that the first few results all mention the <code class="docutils literal notranslate"><span class="pre">os</span></code> module.</p>
+<p><code class="docutils literal notranslate"><span class="pre">os</span></code> is another module from Python’s standard library. The letters ‘OS’ stand for <a class="reference internal" href="glossary.html#os"><span class="std std-ref">Operating System</span></a>, and the <code class="docutils literal notranslate"><span class="pre">os</span></code> module handles various tasks that involve interacting with the operating system of a computer, primarily with its system of files and folders. <code class="docutils literal notranslate"><span class="pre">os</span></code> is probably the most commonly-used module from the standard library. Once we go beyond the simplest programs, we will almost always need to use the computer’s file system to locate or create files.</p>
+<p>Let’s import it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We won’t <code class="docutils literal notranslate"><span class="pre">dir()</span></code> the <code class="docutils literal notranslate"><span class="pre">os</span></code> module here, simply because it contains <em>a lot</em> of things. But if you like you can go to the console in Spyder and type in <code class="docutils literal notranslate"><span class="pre">dir(os)</span></code> to see the full list of contents (make sure you have first typed in <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">os</span></code> so that you too have imported the <code class="docutils literal notranslate"><span class="pre">os</span></code> module).</p>
+<p>The functions from <code class="docutils literal notranslate"><span class="pre">os</span></code> that are relevant for our task are <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code> and <code class="docutils literal notranslate"><span class="pre">os.makedirs()</span></code>. As their (somewhat abbreviated) names suggest, these functions are for making new directories (and <a class="reference internal" href="glossary.html#directory"><span class="std std-doc">directory</span></a> is just a more technical-sounding term for a ‘folder’ in a computer’s file system).</p>
+<p>Let’s use <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code>, which creates a single new directory, to make an example new directory, just to test it out:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;my_new_directory&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you enter this command in your Spyder console, you should then be able to go to your file explorer, find whatever directory you are working in in Spyder, and see that a new directory called ‘my_new_directory’ has been created there.</p>
+<p>And in case you are not even sure what directory you are working in, <code class="docutils literal notranslate"><span class="pre">os</span></code> provides a function <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code> for finding out (the ‘cwd’ part stands for ‘current working directory’). Just type it into the Spyder console to see. For me it is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/lt/GitHub/introduction-to-programming/content&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">os</span></code> also provides a function <code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code> for listing the contents of a directory, by default the current working directory. So if you are too lazy to go and open your file explorer you can use this function instead to check whether creating a new directory worked for you.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;conditions.ipynb&#39;,
+ &#39;data_analysis.ipynb&#39;,
+ &#39;images.ipynb&#39;,
+ &#39;intro.ipynb&#39;,
+ &#39;types.ipynb&#39;,
+ &#39;files.ipynb&#39;,
+ &#39;databases.ipynb&#39;,
+ &#39;_build&#39;,
+ &#39;.guardian_api_key.txt&#39;,
+ &#39;my_new_directory&#39;,
+ &#39;readings.ipynb&#39;,
+ &#39;sequences_mappings.ipynb&#39;,
+ &#39;images&#39;,
+ &#39;standard_library.ipynb&#39;,
+ &#39;nlp.ipynb&#39;,
+ &#39;_toc.yml&#39;,
+ &#39;modules.ipynb&#39;,
+ &#39;arrays.ipynb&#39;,
+ &#39;examples&#39;,
+ &#39;spyder.ipynb&#39;,
+ &#39;iteration.ipynb&#39;,
+ &#39;command_line.ipynb&#39;,
+ &#39;glossary.ipynb&#39;,
+ &#39;testing.ipynb&#39;,
+ &#39;_config.yml&#39;,
+ &#39;.ipynb_checkpoints&#39;,
+ &#39;internet.ipynb&#39;,
+ &#39;functions.ipynb&#39;,
+ &#39;setup.ipynb&#39;,
+ &#39;index.ipynb&#39;,
+ &#39;github.ipynb&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The contents of your current directory may of course differ from mine, but you should see that ‘my_new_directory’ is in there.</p>
+<p>Since this first new directory was just an example to test out the workings of <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code>, let’s tidy up and delete the example directory. <code class="docutils literal notranslate"><span class="pre">os</span></code> provides a function for this too, <code class="docutils literal notranslate"><span class="pre">os.rmdir()</span></code> (in programming, ‘rm’ is often used as an abbreviation for ‘remove’):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;my_new_directory&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And just to show off, let’s also combine our new <code class="docutils literal notranslate"><span class="pre">os</span></code> skills with our existing knowledge to write a logical statement that checks whether removing the example directory has really worked:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;my_new_directory&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that many of the <code class="docutils literal notranslate"><span class="pre">os</span></code> functions that create or remove directories will <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">raise an exception</span></a> if we try to create a directory that already exists or if we try to remove a directory that does not exist:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;nonexistent_directory&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="mi">17</span><span class="n">b14c181fc8</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;nonexistent_directory&#39;</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;nonexistent_directory&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is a fairly common situation that we would like to create a directory only if it does not already exist, or remove a directory only if it does exist. We can use a <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">except</span></code> <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statement</span></a> to deal with this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;nonexistent_directory&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Didn&#39;t remove the directory because it doesn&#39;t exist, but that&#39;s ok.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Didn&#39;t remove the directory because it doesn&#39;t exist, but that&#39;s ok.
+</pre></div>
+</div>
+</div>
+</div>
+<p>(If you need to remind yourself how <code class="docutils literal notranslate"><span class="pre">try</span></code> … <code class="docutils literal notranslate"><span class="pre">except</span></code> works, look back at the section on <a class="reference internal" href="conditions.html#handling-errors"><span class="std std-ref">handling errors</span></a> in the lesson on conditions.)</p>
+<p>We are close to being able to write our target program. But as usual, we need to learn just one more little thing before we are there. We have learned how to use <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code> to create a new directory, but our program also requires creating directories within those new directories. It turns out that this is not completely straightforward, and to arrive at a good solution we need to take a short detour to learn a bit more about directories and file systems.</p>
+<div class="section" id="working-directory">
+<h3>Working directory<a class="headerlink" href="#working-directory" title="Permalink to this headline">¶</a></h3>
+<p>The initial problem we have is that the function <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code> creates the requested new directory inside our current working directory. We saw this behavior above. This is fine for the first step of our target program, creating the per-year folders. But we then want the per-month folders to be inside each of the per-year folders. So how do we tell <code class="docutils literal notranslate"><span class="pre">os</span></code> to put a new directory not in our current working directory but somewhere else?</p>
+<p>There is one relatively simple solution that we will not use. But let’s look at it anyway, to see why it isn’t so great. This solution involves changing the current working directory to be one of the newly-created per-year folders, then using <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code> to create the per-month folders there, then switching back to our current working directory, and then repeating the process for another per-year folder.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">os.chdir()</span></code> changes the current working directory. It is rather like the Python programming equivalent of going into a folder in your file explorer by clicking on it. Here is how we could use it for the first few steps of this solution:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="s1">&#39;2015&#39;</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="s1">&#39;Feb&#39;</span><span class="p">,</span> <span class="s1">&#39;Mar&#39;</span><span class="p">,</span> <span class="s1">&#39;Apr&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;Jun&#39;</span><span class="p">,</span> <span class="s1">&#39;Jul&#39;</span><span class="p">,</span> <span class="s1">&#39;Aug&#39;</span><span class="p">,</span> <span class="s1">&#39;Sep&#39;</span><span class="p">,</span> <span class="s1">&#39;Oct&#39;</span><span class="p">,</span> <span class="s1">&#39;Nov&#39;</span><span class="p">,</span> <span class="s1">&#39;Dec&#39;</span><span class="p">]</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">months</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we need to switch back to our original working directory to create a directory for the next year. How do we do that? If we know the name of our original working directory, we can use that. But that would be a very fragile solution; if we later choose to run our program in a different directory or send it to someone else for them to use, then the specific name of our original working directory will no longer be valid. Fortunately, file systems provide a shortcut for this sort of situation. In a file system, two dots (<code class="docutils literal notranslate"><span class="pre">..</span></code>) stand for ‘the directory that contains the current one’ (sometimes termed the ‘parent’ directory). So we can instruct <code class="docutils literal notranslate"><span class="pre">os.chdir()</span></code> to go to <code class="docutils literal notranslate"><span class="pre">'..'</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s check whether all that worked. We need to check a few things:</p>
+<ul class="simple">
+<li><p>Are we back in our original working directory?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/lt/GitHub/introduction-to-programming/content&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Is there a new directory in there called ‘2015’?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>And are all the per-month directories now in the ‘2015’ directory?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Mar&#39;,
+ &#39;Jul&#39;,
+ &#39;Feb&#39;,
+ &#39;Apr&#39;,
+ &#39;Jan&#39;,
+ &#39;Oct&#39;,
+ &#39;Nov&#39;,
+ &#39;Aug&#39;,
+ &#39;Jun&#39;,
+ &#39;May&#39;,
+ &#39;Sep&#39;,
+ &#39;Dec&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great, it worked. But we aren’t going to use this solution. Why not?</p>
+<p>For a short and simple task like this one, it is totally fine. But as we have seen on a few occasions already, there are some good habits that we can get into now that will serve us well when we come to write more complex programs. The ‘good habit’ that is relevant here is a fairly specific one: We should try to avoid changing directory within a program; we should instead try to let a program run from just one directory. Why does this matter? After all, in our example above, we switch back into the original working directory using <code class="docutils literal notranslate"><span class="pre">os.chdir('..')</span></code>, so the change is only a temporary one and by the time our program has finished, the working directory has been set back to what it was at the start.</p>
+<p>But imagine instead that we are writing a slightly more complex program, one that might encounter an <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exception</span></a> or be terminated at some point in between changing the working directory and changing it back again. For example:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;my_new_directory&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;my_new_directory&#39;</span><span class="p">)</span>
+
+<span class="n">n_dirs</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How many new folders would you like to create? &#39;</span><span class="p">)</span>
+<span class="n">n_dirs</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n_dirs</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_dirs</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="mi">43</span><span class="n">edc0bffdc9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;my_new_directory&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">n_dirs</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How many new folders would you like to create? &#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">n_dirs</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n_dirs</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+
+<span class="nn">~/GitHub/introduction-to-programming/.venv/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">843</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">844</span><span class="s2">         if not self._allow_stdin:</span>
+<span class="ne">--&gt; </span><span class="mi">845</span><span class="s2">             raise StdinNotImplementedError(</span>
+<span class="g g-Whitespace">    </span><span class="mi">846</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">847</span><span class="s2">             )</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example, the error halted our program before it could run the command switching back the working directory. So our program now leaves us in a different directory from the one we started in.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/lt/GitHub/introduction-to-programming/content/my_new_directory&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>So in order to return to our original working directory, we need to switch back manually. Let’s do that now, just so things are fixed for the rest of this lesson.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/lt/GitHub/introduction-to-programming/content&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Even this is on its own not such a big deal, more of a minor annoyance. The real problems arise if our program is part of a larger program that may continue running after our program exits. As a result of the error in our program, this other program might now be working in a directory other than the one it expects, and so may end up doing some things wrong, such as putting files in the wrong place or not finding other files that it needs.</p>
+</div>
+<div class="section" id="paths">
+<h3>Paths<a class="headerlink" href="#paths" title="Permalink to this headline">¶</a></h3>
+<p>The slightly more robust solution that we will use in our program is to always stay in the current working directory, and when we have an action that should take place in another directory, specify the ‘path’ that leads to that directory from the current one.</p>
+<p>The <a class="reference internal" href="glossary.html#path"><span class="std std-doc">path</span></a> to a file or directory is a description of its location within the file system of the computer. The path describes a series of turnings to take in the file system in order to get to a particular location. A particular character, known as a <a class="reference internal" href="glossary.html#separator"><span class="std std-doc">separator</span></a> (or occasionally as a ‘delimiter’) marks out each new directory along the path.</p>
+<p>The result of <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code> that you see above is an example of a path. It gives the path to the directory in which the files for these lessons are located on my computer. So this path tells us to start in the ‘home’ directory, then go into the ‘lt’ directory, and so on. Because the <a class="reference internal" href="glossary.html#os"><span class="std std-ref">operating system</span></a> on my computer is Linux, the separator for the directories along the path is the forward slash ‘/’. If you are working on a Windows computer, you will see a different separator in the path that you get from <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">os</span></code> module contains an entire submodule, called <code class="docutils literal notranslate"><span class="pre">path</span></code>, for dealing with paths. The <code class="docutils literal notranslate"><span class="pre">os.path</span></code> submodule provides a variable (note: not a function, so no parentheses needed) that stores the path separator for the operating system that you are using:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">sep</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>It also provides a function for joining together the names of directories using the appropriate separator for the current operating system. This is useful to make sure that your program is compatible with Windows and other operating systems. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;folder&#39;</span><span class="p">,</span> <span class="s1">&#39;subfolder&#39;</span><span class="p">,</span> <span class="s1">&#39;subsubfolder&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;folder/subfolder/subsubfolder&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="absolute-paths">
+<h4>Absolute paths<a class="headerlink" href="#absolute-paths" title="Permalink to this headline">¶</a></h4>
+<p>The ‘absolute’ path to a file or directory is the full path starting from the top directory on the whole computer, sometimes termed the ‘root’ directory. On Linux or macOS, the root directory is just named ‘/’. On Windows, it is a letter denoting the drive on which the files are stored, usually ‘C:’.</p>
+<p>Occasionally we might need to know the absolute path to a file or directory. The <code class="docutils literal notranslate"><span class="pre">abspath()</span></code> function from the <code class="docutils literal notranslate"><span class="pre">os.path</span></code> module gives us the absolute path to an existing directory within the current working directory. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;examples&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/lt/GitHub/introduction-to-programming/content/examples&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="relative-paths">
+<h4>Relative paths<a class="headerlink" href="#relative-paths" title="Permalink to this headline">¶</a></h4>
+<p>Our target program does not require absolute paths, so we will set them aside for now. Instead, it only needs to know the locations of the new directories we want to create ‘relative’ to the current working directory. Paths that specify a location relative to some other location are known as ‘relative paths’. We can recognize relative paths because they do not begin with the root directory (‘/’ on macOS and Linux, ‘C:’ or some other drive letter on Windows). Python will interpret such paths as starting in the current working directory.</p>
+<p>So to specify the relative path to one of the per-month directories within one of the per-year directories in our target program, we can write something like <code class="docutils literal notranslate"><span class="pre">'2015/Jan'</span></code>. Or better, in order to make our program compatible across different operating systems, we can insert the appropriate path separator by using <code class="docutils literal notranslate"><span class="pre">os.path.join()</span></code>. Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;2015&#39;</span><span class="p">,</span> <span class="s1">&#39;Jan&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2015/Jan&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>So let’s try putting this together with some of the other ingredients of our target program to create the next per-year directory and the next per-month directory inside it:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dirname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;2016&#39;</span><span class="p">,</span> <span class="s1">&#39;Jan&#39;</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="mi">00</span><span class="n">f059584001</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">dirname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;2016&#39;</span><span class="p">,</span> <span class="s1">&#39;Jan&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;2016/Jan&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Unfortunately, this fails. The reason is that <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code> is strictly for creating a single new directory. Here we would like to create a new directory and a new subdirectory at the same time. Since <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code> doesn’t find the ‘2016’ directory in which to create the ‘Jan’ subdirectory, it <a class="reference internal" href="glossary.html#raise"><span class="std std-doc">raises an exception</span></a>.</p>
+<p>Fortunately, there is an alternative function for creating directories containing directories. <code class="docutils literal notranslate"><span class="pre">os.makedirs()</span></code> makes a new directory, along with any intermediate directories along the specified <a class="reference internal" href="glossary.html#path"><span class="std std-doc">path</span></a> to that new directory. (In <code class="docutils literal notranslate"><span class="pre">makedirs()</span></code> ‘make’ is inexplicably not abbreviated to ‘mk’ despite the fact that the name of the function is longer than that of <code class="docutils literal notranslate"><span class="pre">mkdir()</span></code>.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;2016&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Jan&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>It works! That completes the ingredients we need in order to write our target program. It remains to use some <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loops</span></a> to avoid repeating the <code class="docutils literal notranslate"><span class="pre">os.makedirs()</span></code> command manually for every year and month, but this is something we have <a class="reference internal" href="iteration.html#loops"><span class="std std-ref">already learned about</span></a>.</p>
+<p>Try to finish writing the target program yourself, then take a look at it in the example file <span class="xref myst">make_monthly_directories.py</span>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="third-party-packages">
+<h2>Third-party packages<a class="headerlink" href="#third-party-packages" title="Permalink to this headline">¶</a></h2>
+<p>If the standard library is called ‘standard’, is there a ‘non-standard’ library? Yes there is. We mentioned before that it is possible to download and install modules that somebody else has written. If you install such extra modules, they are added to your Python ‘library’ on your computer, and you can import them just like modules from the standard library.</p>
+<p>Installable extra modules that were written by somebody else are often termed ‘third-party’ packages. A <a class="reference internal" href="glossary.html#package"><span class="std std-doc">package</span></a> is a program that adds new capabilities to an existing program. Third-party packages for Python add new modules to your Python installation. The ‘third-party’ in this case is some other programmer that is neither you nor the developers of Python itself (you are presumably the ‘first party’ and the developers of Python are the ‘second party’). Because Python is such a popular programming language, there is a huge variety of third-party packages out there on the internet, all dealing with various specialist tasks. When you come to write real programs, you will often find that you need to make use of one or more third-party packages, which you may first need to install before you start work on your program.</p>
+<p>It is sometimes possible to just download somebody else’s <em>py</em> files containing the components that you want to use. But this is usually not a good idea. If you use manually-downloaded files, you will also need to update them manually if newer versions become available, and you will need to ensure that the files are in the working directory that your main program runs in when it imports them. Instead, you will usually want to install third-party packages so that they are available wherever you are working, and you will want to install them from some central location that you can refer back to if you need to update them. The Python Package Index (<a class="reference external" href="https://pypi.org/">PyPI</a>) is an online <a class="reference internal" href="glossary.html#repository"><span class="std std-doc">repository</span></a> of Python packages. It is the standard place to look for existing third-party packages that might help you with your current programming task.</p>
+<p>It is important to note some caveats when it comes to third-party packages. That a package is stored on PyPI is not of itself any guarantee that the package works correctly or even that it won’t damage your Python installation. More or less anybody can upload their own Python package to PyPI, and many of the packages stored there are out of date, broken, or don’t do correctly what they claim. The standard library is produced by the developers of Python, so it can almost always be relied on to work correctly and efficiently, or to be quickly fixed if it does not.</p>
+<p>For this reason, it is a good idea to stick to the standard library when you can. But if you perform specialized tasks in programming, you will often be unable to avoid relying on third-party packages. Here are a couple of things to check when deciding whether to use one, and which one to choose if more than one is available for what you want to do:</p>
+<ul class="simple">
+<li><p>Do many other people use this package? If lots of people are using a package, that probably means that it at least works. And the fact that lots of people are using it usually means that <a class="reference internal" href="glossary.html#bug"><span class="std std-doc">bugs</span></a> won’t go unnoticed and may even be quickly fixed by one of the other users.</p></li>
+<li><p>Is the package still being ‘maintained’ (i.e. are the developers of the package currently still fixing bugs and responding to questions)? If a package hasn’t been updated for a long time, it might no longer work in the current version of Python, or you might have nobody to turn to if you have problems.</p></li>
+</ul>
+<p>For some of the specialist topics later on we will need to <a class="reference internal" href="glossary.html#import"><span class="std std-doc">import</span></a> modules from third-party packages. When we do, I will note whether an <code class="docutils literal notranslate"><span class="pre">import</span></code> is from the standard library or whether it is from a third-party package, and I will provide instructions for installing it if necessary. However, if you have installed Python via Anaconda, then almost all of the third-party packages that we need for this class will already have been installed by default. You can read a list of all the additional packages that Anaconda installs for you at the <a class="reference external" href="https://docs.anaconda.com/anaconda/packages/pkg-docs/">Anaconda package listings</a>.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">string</span></code> module provides some additional variables that can be useful for working with strings. Among them is the <code class="docutils literal notranslate"><span class="pre">punctuation</span></code> variable, which contains punctuation characters. Use this variable to create a function called <code class="docutils literal notranslate"><span class="pre">standardized_words()</span></code>. This function returns a list of the words in a text, but in a ‘standardized’ form. Your function should take a string input argument containing some text, remove all the punctuation, make the contents lowercase, and then return a list of the words in the text.</p>
+<p>Here is an example of the function in action:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">standardized_words</span><span class="p">(</span><span class="s1">&#39;She said: &quot;Hello, world!&quot;&#39;</span><span class="p">)</span>
+<span class="go">[&#39;she&#39;, &#39;said&#39;, &#39;hello&#39;, &#39;world&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>A ‘<a class="reference external" href="https://en.wikipedia.org/wiki/Magic_8-Ball">Magic 8-Ball</a>’ is a popular toy that when shaken gives a random answer to a question. Write a program that simulates the behavior of a Magic 8-Ball. When you run the program it prints out one of a number of possible answers, at random. You can find a list of the 20 possible answers from the original Magic 8-Ball <a class="reference external" href="https://en.wikipedia.org/wiki/Magic_8-Ball#Possible_answers">here</a>, or you can define your own shorter list of answers if you don’t fancy typing all those into your program.</p>
+<p>(Hint: There is a module in the standard library for working with randomness.)</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="modules.html" title="previous page">Modules</a>
+    <a class='right-next' id="next-link" href="files.html" title="next page">Files</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

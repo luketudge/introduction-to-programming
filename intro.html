@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating a computer program with Python &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Readings" href="readings.html" />
+    <link rel="prev" title="Spyder configuration" href="spyder.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computer-programs">
+   Computer programs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-python-program">
+   A Python program
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-python-programs">
+   More Python programs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#greeting-py">
+     greeting.py
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#greeting-personal-py">
+     greeting_personal.py
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-an-ide">
+   Using an IDE
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-editor">
+     The editor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-console">
+     The console
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-class-notes">
+   Using the class notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="creating-a-computer-program-with-python">
+<h1>Creating a computer program with Python<a class="headerlink" href="#creating-a-computer-program-with-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="computer-programs">
+<h2>Computer programs<a class="headerlink" href="#computer-programs" title="Permalink to this headline">¶</a></h2>
+<p>A computer program is a sequence of instructions for a computer. Ultimately, these instructions take the form of numbers, each of which refers to one action that the computer can take. But in modern computer programming we rarely have to concern ourselves directly with this ‘machine code’. Instead, modern computer programs begin their lives simply as one or more text files. These text files are entirely like any other text file; they contain human-readable characters, and have no special properties in themselves. We can open them in a normal text editor like Notepad.</p>
+<p>An intermediate step is required in order to run these text files as a program. There are different ways in which this intermediate step can be accomplished. Python, the programming language that we will learn, works via an intermediate computer program called the <a class="reference internal" href="glossary.html#interpreter"><span class="std std-doc">interpreter</span></a>. The Python interpreter reads the lines of a text file one by one, turns them into instructions for the computer, and gets the computer to execute those instructions immediately. The interpreter program does its work by applying a particular set of rules to the contents of the text file, rules that convert text commands into computer commands. It is this set of rules that constitutes a particular programming language.</p>
+<p>Most computer programs are organized as a collection of multiple such text files, each containing instructions for one aspect of the program’s capabilities. There may be one or two main files that represent the starting point of the program, and these main files then refer to others. In addition, the program may include non-text files containing data needed by the program, such as images, sounds, database files, and so on.</p>
+<p>Click <a class="reference external" href="https://github.com/metabrainz/picard">here</a> to see an example of a fairly complex computer program organized as a collection of files. This program, called <a class="reference external" href="https://picard.musicbrainz.org/">MusicBrainz Picard</a>, allows a user to tag music files with information about the artist, song name, album, etc. Take a look at just one file in the program, called <a class="reference external" href="https://github.com/metabrainz/picard/blob/master/picard/album.py">album.py</a>. This is a text file containing instructions written in Python. Its contents are not easily understandable at a first glance, even for an experienced programmer, but notice that it does at least contain some instructions that take the form of everyday English words, such as <code class="docutils literal notranslate"><span class="pre">from</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, and <code class="docutils literal notranslate"><span class="pre">if</span></code>. It also contains some preamble detailing the license information for the program, which is completely intelligible to a normal human being (or at least to a lawyer). Further down, the contents become too complex to understand by skim reading, but we may notice some regularities. For example, this file seems to refer to other files in the overall program (note a reference to <a class="reference external" href="https://github.com/metabrainz/picard/blob/master/picard/config.py">config.py</a> on <a class="reference external" href="https://github.com/metabrainz/picard/blob/64c4153801ed418c11033ad73981f7209b9cbf63/picard/album.py#L33">line 33</a>).</p>
+<p>We won’t create any programs that are as complex as Picard, which is the result of several programmers collaborating over a fairly long period of time. However, our programs will have approximately the same structure; they will be collections of text files containing instructions written according to the rules of the Python programming language.</p>
+</div>
+<div class="section" id="a-python-program">
+<h2>A Python program<a class="headerlink" href="#a-python-program" title="Permalink to this headline">¶</a></h2>
+<p>A Python computer program can be as simple as a single file. This is what we will start with. Try opening up Notepad or your favorite text editor, and typing into it the Python command below. Make sure that you use a pure text editor like Notepad and not a word processor like Microsoft Word, because a word processor may not be able to save plain text or may insert additional unwanted content into a text file.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The rules governing what counts as a valid command in a programming language are known as the <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> of that programming language. Programming languages are strict about correct syntax, so make sure that you have put the right number of parentheses and quotation marks in the right places.</p>
+<p>Now save your new text file somewhere on your computer with the file extension <em>.py</em>, for example as <em>my_program.py</em>. Note also that most programming languages do not cope well with files that have spaces in their names (the interpreter may think that a file name with a space refers to two separate files or commands), so avoid spaces in the filename and use the underscore character (<code class="docutils literal notranslate"><span class="pre">_</span></code>) to separate words instead.</p>
+<p>The <em>.py</em> file extension does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions <a class="reference internal" href="setup.html"><span class="doc std std-doc">here</span></a> if you haven’t already.)</p>
+<p>There are various ways to run a <em>.py</em> file with the Python interpreter. For example, we can just run it the old-school way from the command line. However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and <a class="reference internal" href="spyder.html"><span class="doc std std-doc">configured</span></a> Spyder, then start it up. In Spyder, use the <strong>Open</strong> option from the <strong>File</strong> menu (or the ‘open’ icon 📂) to open the text file that you just created.</p>
+<p>The green <strong>Run</strong> arrow (▶) will run the currently open Python file. Click on this arrow, and then look at the <strong>Console</strong> window to see the effects of running your program. Whereas the editor window displays the <em>contents</em> of the text file containing the program, just as any other text editor would, the console window shows the <em>effects</em> of running the program (or of running other Python commands).</p>
+<p><img alt="" src="_images/console.png" /></p>
+<p>You should see the contents of the quoted text in your program (e.g. <code class="docutils literal notranslate"><span class="pre">Hello.</span></code>) printed out in the console window like in the screenshot above. We have now created and run our first Python program.</p>
+<p>What did this program do and how?</p>
+<p>Python is designed to be a more or less human-readable programming language, so in a simple program like this, it is easy to see how the commands in the program are structured:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">print</span></code> is a <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in Python function</span></a>. It instructs Python to display a piece of text in the console window.</p></li>
+<li><p>The parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> following <code class="docutils literal notranslate"><span class="pre">print</span></code> provide the input (often termed the <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a>) to the function. In this case the argument is the text that we want to print out.</p></li>
+<li><p>The quote marks <code class="docutils literal notranslate"><span class="pre">''</span></code> indicate to Python that the text that they enclose should be treated just as plain text (and not for example as a math formula, or a reference to another Python file or some other stored information).</p></li>
+</ul>
+<p>What if we write a program that does not contain valid Python <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a>? For example, what if we forget to enclose the text that we would like to print in quote marks? Try editing your program so as to omit the quote marks, like this:</p>
+<div class="cell tag_raises-exception tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Hello</span><span class="o">.</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you save and run this new version of the program, you will see an <a class="reference internal" href="glossary.html#error"><span class="std std-doc">error message</span></a> appear in the console, like the one below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;my_program.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Hello</span><span class="o">.</span><span class="p">)</span>
+                <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+<p>Error messages that complain of a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> tell us that some part of our program is not a valid Python command, and so the Python interpreter could not finish running the program. The message tells us which line of our program was responsible (in this case line 1, the only line in the program).</p>
+<p>As the class progresses, we will cover more of the rules of Python syntax. Later we will also learn more about understanding and fixing errors in our programs. For now, we will look at a few more example programs to get a general idea of how Python works.</p>
+</div>
+<div class="section" id="more-python-programs">
+<h2>More Python programs<a class="headerlink" href="#more-python-programs" title="Permalink to this headline">¶</a></h2>
+<p>You can find all the example programs <span class="xref myst">here</span>. The compressed file <span class="xref myst">intro_prog_examples.zip</span> contains all the programs. Download this file and unzip it to the directory that you are working in.</p>
+<div class="section" id="greeting-py">
+<h3><a class="reference external" href="http://greeting.py">greeting.py</a><a class="headerlink" href="#greeting-py" title="Permalink to this headline">¶</a></h3>
+<p>Open the example program <span class="xref myst">greeting.py</span> in Spyder.</p>
+<p>This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.</p>
+<p>The first of these is the <a class="reference internal" href="glossary.html#docstring"><span class="std std-doc">docstring</span></a> at the top of the program:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">A program to print out a welcome message.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Text placed in triple quotes at the top of a program (and in some other places, as we will learn later) provides extra information for other developers or users of our program. Use this space to describe briefly what your program does, and for more complex programs some indication of how to use it.</p>
+<p>If you start a new Python text file in Spyder via <strong>New file</strong> in the <strong>File</strong> menu (or via the icon), you will see that Spyder inserts a docstring automatically. Something like this:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Wed Oct  2 10:25:12 2019</span>
+
+<span class="sd">@author: Mildred.Bonk</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The exact contents of this automatic starter text may vary a little depending on how Spyder is configured on your operating system. For now, you may ignore any lines that appear before the docstring (like <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">-*-</span> <span class="pre">coding:</span> <span class="pre">utf-8</span> <span class="pre">-*-</span></code>); just leave these as they are and we will learn about them later.</p>
+<p>The second new feature in <em><a class="reference external" href="http://greeting.py">greeting.py</a></em> is the <a class="reference internal" href="glossary.html#comment"><span class="std std-doc">inline comment</span></a> on <span class="xref myst">line 8</span>. This line is clearly not a Python command. It is instead written in plain English. Python will ignore any text that follows a hash symbol <code class="docutils literal notranslate"><span class="pre">#</span></code>. This allows us to use this symbol to introduce human-readable explanations of the workings of our program. In such a simple program as this, the comment on line 8 is somewhat superfluous; the command on the following line is clear enough on its own. However, as a beginner you should get into the habit of writing comments for most of the Python commands that you put into your program. This helps you to focus and remember how you created your programs, and helps others understand what you did or where you went wrong if your program doesn’t work as you expected. Later when you have more experience you can save explanatory comments just for those sections of your program that are too complex to understand at a first glance.</p>
+<p>Finally, on <span class="xref myst">line 6</span> we see an example of another use of comments: to make a ‘note to self’ of what still needs to be added to the program. It is conventional to mark such comments with the text <code class="docutils literal notranslate"><span class="pre">TODO</span></code>. Here we have noted that we would like to make the greeting personal by asking the user to type in their name. This is what the next example program achieves.</p>
+</div>
+<div class="section" id="greeting-personal-py">
+<h3>greeting_personal.py<a class="headerlink" href="#greeting-personal-py" title="Permalink to this headline">¶</a></h3>
+<p>Open the <span class="xref myst">greeting_personal.py</span> program. Before you run it, read the Python commands that it contains and try to guess what the effect of running the program will be. Then run the program to check your guess.</p>
+<p>This program requires the user to type in some information. As with <em><a class="reference external" href="http://greeting.py">greeting.py</a></em>, all the action occurs over in the console window. After you click on the ‘run’ icon, look to the console window. You should see that the program has displayed a ‘prompt’, i.e. some text telling the user what they are expected to do, and is now waiting for the user to type something in.</p>
+<p><img alt="" src="_images/input.png" /></p>
+<p>Beware that when you run a program that requires user input, the program will wait indefinitely until it has received that input. While your program is still running, you won’t be able to run it again or run any other program. You can tell that a program is currently running in the console if you see that the square ‘stop’ icon (■) above the console is lit red, like in the screenshot above. To finish your program and continue editing it or working on other programs, you must first let your running program finish. In this case, you can achieve this by doing as the program asks and typing in your name at the console where the input prompt is displayed.</p>
+<p>(Alternatively, if you get stuck with a program running and you just want to break off, you can stop it by clicking on the red ‘stop’ icon. You should then see that the ‘stop’ icon is no longer red, and that the console once again displays something like <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[...]:</span></code> ready for the next program to run. Yet another alternative for stopping a running program is to press the key combination <em>ctrl</em> + <em>c</em>.)</p>
+<p>You should have seen that <em>greeting_personal.py</em> responded with a greeting containing whatever name you typed in.</p>
+<p>How does this program work?</p>
+<p>The simplicity of the Python language makes it fairly easy to understand what is going on here. The program begins by using another <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in</span></a> Python function on <span class="xref myst">line 9</span>. Unlike the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function that we saw in the preceding example, the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function <a class="reference internal" href="glossary.html#return"><span class="std std-doc">returns</span></a> some output. The output in this case is whatever piece of text the user types at the console. If we want to use the output of a function in our Python program we must <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> it into a <a class="reference internal" href="glossary.html#variable"><span class="std std-doc">variable</span></a>. The equals symbol <code class="docutils literal notranslate"><span class="pre">=</span></code> takes whatever output is generated on the right hand side and stores it under whatever name we have put on the left hand side. The name is then available for the rest of the program. Wherever we use this name in the remainder of the program, it stands for the contents that we assigned into it.</p>
+<p>There are some important things to note about assigning variables. You can explore why these things are important by making some modifications to <em>greeting_personal.py</em> and checking their effects when you run the modified version of the program.</p>
+<ul class="simple">
+<li><p>Unlike in math, the two sides of an equation with <code class="docutils literal notranslate"><span class="pre">=</span></code> are not interchangeable. Instead, the result of the command on the right is first worked out (or <a class="reference internal" href="glossary.html#evaluate"><span class="std std-doc">evaluated</span></a>) and then assigned into the name on the left. (Try swapping the two sides of the <code class="docutils literal notranslate"><span class="pre">=</span></code> command on <span class="xref myst">line 9</span>).</p></li>
+<li><p>The order of lines in a Python program matters. Python runs each line in turn. So if our program uses a variable, that variable must be assigned <em>above</em> the line on which it is used. (Try placing <span class="xref myst">line 16</span> at the top of the program file instead of at the bottom).</p></li>
+<li><p>We can use almost any name we like for a variable. We need only be consistent in using that same name throughout our program. (Try replacing both occurrences of the variable <code class="docutils literal notranslate"><span class="pre">name</span></code> with something arbitrary like <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">y</span></code>).</p></li>
+<li><p>There are however some limitations on valid variable names in Python. For example, they can contain numbers but cannot begin with a number (try replacing both occurrences of the variable <code class="docutils literal notranslate"><span class="pre">name</span></code> with either <code class="docutils literal notranslate"><span class="pre">name1</span></code> or <code class="docutils literal notranslate"><span class="pre">1name</span></code>), and they cannot contain spaces because Python would interpret this as the names of two separate variables (try replacing <code class="docutils literal notranslate"><span class="pre">name</span></code> with <code class="docutils literal notranslate"><span class="pre">my</span> <span class="pre">name</span></code>).</p></li>
+<li><p>It is possible to use the name of a built-in function (such as <code class="docutils literal notranslate"><span class="pre">print</span></code> or <code class="docutils literal notranslate"><span class="pre">input</span></code>) as a variable name in Python, but this is not a good idea as it will temporarily overwrite the function and prevent us from using it in the remainder of our program. (Try replacing both occurrences of the variable <code class="docutils literal notranslate"><span class="pre">name</span></code> with <code class="docutils literal notranslate"><span class="pre">print</span></code>).</p></li>
+</ul>
+<p>In general, we should avoid choosing abstract variable names like <code class="docutils literal notranslate"><span class="pre">x</span></code> and try always to choose a variable name that describes the intended contents of the variable.</p>
+<p>Now look at <span class="xref myst">line 13</span> of <em>greeting_personal.py</em>. This line also assigns a new variable, called <code class="docutils literal notranslate"><span class="pre">message</span></code>. But in this case what is assigned is not the result of a function but an expression involving an <a class="reference internal" href="glossary.html#operator"><span class="std std-doc">operator</span></a>, the <code class="docutils literal notranslate"><span class="pre">+</span></code> symbol. When used with two pieces of text, the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator just sticks them together as one (<a class="reference internal" href="glossary.html#concatenate"><span class="std std-doc">concatenates</span></a> them). So this line creates a new piece of text with <em>Hello</em> and then whatever name the user typed in at the console.</p>
+<p>Note that the text <code class="docutils literal notranslate"><span class="pre">'Hello</span> <span class="pre">'</span></code>  is enclosed in quote marks, but the variable <code class="docutils literal notranslate"><span class="pre">name</span></code> is not. This is important. <em>Hello</em> is not a variable but simply literal text, so it must be in quote marks. In contrast, <code class="docutils literal notranslate"><span class="pre">name</span></code> <em>is</em> a variable and so it should not be enclosed in quote marks. To check your understanding, try to predict what the program would do if <code class="docutils literal notranslate"><span class="pre">name</span></code> on line 13 were enclosed in quote marks, then make the change and run this new version of the program to check whether you were right.</p>
+<p>Finally, the workings of <span class="xref myst">line 16</span> should be clear if you have understood everything we have covered up to this point.</p>
+</div>
+</div>
+<div class="section" id="using-an-ide">
+<h2>Using an IDE<a class="headerlink" href="#using-an-ide" title="Permalink to this headline">¶</a></h2>
+<p>We have just introduced the basic workings of Python programs using a few simple examples. We have been editing and running these programs in the Spyder <a class="reference internal" href="glossary.html#ide"><span class="std std-ref">IDE</span></a>. Let’s finish by looking at a few tips for working with Spyder.</p>
+<div class="section" id="the-editor">
+<h3>The editor<a class="headerlink" href="#the-editor" title="Permalink to this headline">¶</a></h3>
+<p>The pane where you can edit and run Python programs is the editor. As we have seen, it is essentially just a text editor. But it adds a few useful features.</p>
+<p>You may already have noticed that the Spyder editor performs some basic checks of your program even before you run it. Small icons along the left margin of the editing pane highlight parts of the program that might require our attention. For example in the screenshot below we are being warned about a mistake on line 9 and reminded of a <em>TODO</em> note that we made for ourselves on line 13.</p>
+<p><img alt="" src="_images/editor.png" /></p>
+<p>Spyder also has an autocomplete feature. If you are typing a new part of your program, you can begin typing something, then press the tab key (↹) and the Spyder editor will attempt to autocomplete the word that you are typing. This works if you are typing the name of a Python <a class="reference internal" href="glossary.html#builtin"><span class="std std-doc">built-in function</span></a>, or of a <a class="reference internal" href="glossary.html#variable"><span class="std std-doc">variable</span></a> that you have defined elsewhere in your program. This feature can save you a lot of typing errors once you start working with many different functions or with variables that have long names.</p>
+<p>As well as running your whole program, Spyder allows you to run just parts of it. You can do this by highlighting the lines that you would like to run (or if it is just a single line then placing the cursor on this line is enough) and then selecting <strong>Run selection or current line</strong> from the <strong>Run</strong> menu. There is also a keyboard shortcut for this, which on most systems is <em>F9</em>. This feature is useful if you have written a new part or modified one part of your program and you want to test it in isolation. But don’t be tempted to test your whole program this way, by selecting one section after another and running them in turn. Always test your program by running it as a whole via the ‘run’ icon. This ensures that you are really testing the whole program as a self-contained unit, which is also how your program’s users will run it.</p>
+</div>
+<div class="section" id="the-console">
+<h3>The console<a class="headerlink" href="#the-console" title="Permalink to this headline">¶</a></h3>
+<p>We have already encountered the console as the place where any printouts or interactions with our program occur once it is run. But there is more to the console than this. We can also type single Python commands into the console, and they will be sent to the Python interpreter and run immediately, as if they were part of a program. Try it out: go to the console, and where it is waiting with <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[...]:</span></code> type in a Python command (for example to print something out with <code class="docutils literal notranslate"><span class="pre">print()</span></code>) and press return. You should see the result, and then the <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[...]:</span></code> prompt will return, waiting for the next command.</p>
+<p>It is important to bear in mind this distinction between the editor and the console. Notice that when we type new lines into a text file that is open in the editor, those lines are not run and we do not see their effects anywhere. Nothing that we type into the editor has any effect until we save the changes and run the text file as a Python program. By contrast, whatever we type into the console is run as soon as we finish typing and press return.</p>
+<p>The console also ‘remembers’ what we have typed so far. For example, if you type <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">=</span> <span class="pre">37</span></code> into the console and press return, and then type <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">+</span> <span class="pre">1</span></code>, the console remembers that the first command defined a variable called <code class="docutils literal notranslate"><span class="pre">age</span></code> and will use whatever value we assigned into it if we use this same variable name in subsequent commands. We can therefore use the console to test out and explore Python’s behavior. A common working pattern if you are working on a new task as a Python beginner is to try various commands in the console first and check how they work (or whether they work at all), and then once you have found out what you need to know you switch to the editor and incorporate the new commands into whatever program you are working on.</p>
+<p>There are a few shortcuts for working with the console too. If you want to get back a command that you typed previously, put your cursor in the console and press the up arrow key (⬆). You should see again the last command that you entered. You can edit this command if you wish, and then run it again by pressing return. If you press the up arrow key repeatedly, you can search through all the commands that you have entered so far. These commands are also stored under the <strong>History log</strong> tab in Spyder.</p>
+<p>The shortcut <em>Ctrl</em> + <em>l</em> will clear away any output that is currently in the console. It isn’t especially necessary to do this, but if you are tidy-minded it can help make things clearer if you have lots of printouts left over in the console and you wish to start afresh.</p>
+<p>Likewise, you can also erase the console’s ‘memory’ of previous commands. This is a more useful feature. For example, if you would like to test out something completely new, you do not want to accidentally refer to variables that you have defined in previous commands while you were testing out something else. To ‘reset’ the console type in the command <code class="docutils literal notranslate"><span class="pre">%reset</span></code>. You will be prompted to confirm that you really want to delete all the variables you have defined so far:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Once deleted, variables cannot be recovered. Proceed (y/[n])? y
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">%reset</span></code> command (and others that begin with the percent character <code class="docutils literal notranslate"><span class="pre">%</span></code>) is for use in the console only; it is not a valid Python command that you can put in a Python program.</p>
+<p>(If you have followed the <a class="reference internal" href="spyder.html"><span class="doc std std-doc">recommended configuration instructions</span></a> for Spyder, the console’s memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)</p>
+<p>If you want to check what variables you have currently defined in the console (if any), and see some information about them, you can look in Spyder’s <strong>Variable explorer</strong> tab. It looks like this:</p>
+<p><img alt="" src="_images/variable_explorer.png" /></p>
+</div>
+</div>
+<div class="section" id="using-the-class-notes">
+<h2>Using the class notes<a class="headerlink" href="#using-the-class-notes" title="Permalink to this headline">¶</a></h2>
+<p>In this introductory lesson, you have already seen a few examples of Python commands. These are always presented with a different font and background, like this:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When you encounter such examples, you can type them into your own Spyder console to see their effects. You should explore and try out variations of some of the commands, to check that you understand how they work (remember that you can press the up arrow key in the console to retrieve and edit the last command that you entered).</p>
+<p>For most of the examples of Python commands above, I presented them without showing their effects, so as to encourage you to try them out yourself. From now on, I will always show the example commands together with their expected effects (if any) displayed immediately below. Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wherever you see a link to an example program (for example <span class="xref myst">greeting_personal.py</span>), it will take you to an online page displaying the program. To run and edit the example programs yourself, you should first download them to your computer. You can get all the examples by downloading and unzipping the file <span class="xref myst">intro_prog_examples.zip</span>.</p>
+<p>Most of the other links in the topic pages will take you to the <a class="reference internal" href="glossary.html"><span class="doc std std-doc">glossary</span></a>. Here there are explanations of important Python and general programming terms. You can follow these links to refresh your memory if you have forgotten what a term means.</p>
+<p>That’s it for this topic. Try the exercises below to get some practice.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Open the <span class="xref myst">greeting_personal.py</span> program. Save a new version called <em>greeting_personal_v2.py</em> (or whatever you like), and add the following small improvements:</p>
+<ul class="simple">
+<li><p>Improve the input part of the program so that it looks a little neater for the user when they type in their name. Add a space between the input prompt and the position where the user starts typing, so that when they type they see for example <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?</span> <span class="pre">Mildred</span></code> instead of <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?Mildred</span></code>.</p></li>
+<li><p>Add a dot to the end of the printed output so that it forms a correctly punctuated sentence. So the user sees for example <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">Mildred.</span></code> instead of just <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">Mildred</span></code>.</p></li>
+</ul>
+<p>Make sure to run your improved version to check that your changes work as expected.</p>
+</div>
+<div class="section" id="id2">
+<h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Write a new program. This program should begin by asking the user for their name just as <em>greeting_personal.py</em> does. But then it asks them for their favorite color, and addresses them by their name in the question. Finally, the program prints out confirmation of their name and favorite color. The program should look something like this in action in the console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>What is your name? Mildred
+What is your favorite color Mildred? puce
+Your name is: Mildred
+Your favorite color is: puce
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="spyder.html" title="previous page">Spyder configuration</a>
+    <a class='right-next' id="next-link" href="readings.html" title="next page">Readings</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

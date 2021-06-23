@@ -1,0 +1,1231 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data analysis" href="data_analysis.html" />
+    <link rel="prev" title="Array computing" href="arrays.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/images.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fimages.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/images.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/images.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imageio">
+   imageio
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matplotlib-again">
+   matplotlib again
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#images-as-arrays">
+   Images as arrays
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rgb">
+     RGB
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#manipulating-colors">
+       Manipulating colors
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uint8">
+     uint8
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-images">
+   Writing images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transparency">
+   Transparency
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-processing">
+   Image processing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scikit-image">
+     scikit-image
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#grayscale">
+       Grayscale
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#color-maps">
+         Color maps
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#edge-detection">
+       Edge detection
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transformations">
+       Transformations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="images">
+<h1>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h1>
+<p>In this lesson, we will learn a bit about how computers represent images, and how we can use Python to manipulate image files.</p>
+<p>Before you start reading, it may be an interesting exercise to think about how a computer might store an image. As we learned in the <a class="reference internal" href="files.html#encodings"><span class="std std-ref">lesson on files</span></a>, in order to store information computers require some system for converting that information into numbers. How might an image be converted into numbers?</p>
+<p>As it turns out, there are a few different ways of turning an image into numbers. We will focus on the most common of these. To find out what it is, let’s simply load an image into Python and explore the result. Take a look at the example image file <span class="xref myst">street_scene.jpg</span>. This is the image that it contains:</p>
+<p><img alt="" src="_images/street_scene.jpg" /></p>
+<div class="section" id="imageio">
+<h2>imageio<a class="headerlink" href="#imageio" title="Permalink to this headline">¶</a></h2>
+<p>There are a few ways to load image files into Python, but the <code class="docutils literal notranslate"><span class="pre">imageio</span></code> <a class="reference internal" href="glossary.html#package"><span class="std std-doc">package</span></a> provides the simplest. (The ‘io’ in <code class="docutils literal notranslate"><span class="pre">imageio</span></code> stands for <a class="reference internal" href="glossary.html#io"><span class="std std-ref">input/output</span></a>.)</p>
+<p>Like all the additional Python packages that we have used so far, <code class="docutils literal notranslate"><span class="pre">imageio</span></code> is included in the default Anaconda installation, so if you installed Anaconda then you will already have it.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">imread()</span></code> function reads an image file. The input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> to <code class="docutils literal notranslate"><span class="pre">imread()</span></code> is the <a class="reference internal" href="glossary.html#path"><span class="std std-doc">path</span></a> to the file. As usual, we <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> the result into a variable so that we can work with it in the rest of our program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">imageio</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;street_scene.jpg&#39;</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">imageio</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="matplotlib-again">
+<h2>matplotlib again<a class="headerlink" href="#matplotlib-again" title="Permalink to this headline">¶</a></h2>
+<p>After loading our image, it is a good idea to check that it has been read correctly. We can do this by displaying the image in a figure, using the <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> module from <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, which we learned about in the <a class="reference internal" href="arrays.html#matplotlib"><span class="std std-doc">lesson on arrays</span></a>. The function for displaying an image is <code class="docutils literal notranslate"><span class="pre">imshow()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_4_0.png" src="_images/images_4_0.png" />
+</div>
+</div>
+<p>It looks right. The <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> figure also helpfully adds axis scales, so we can see the dimensions of our image here as well. It appears to be about 3000 pixels wide and 4000 pixels high.</p>
+<p>When we carry out various manipulations of our image, we can keep returning to <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> to check the results.</p>
+</div>
+<div class="section" id="images-as-arrays">
+<h2>Images as arrays<a class="headerlink" href="#images-as-arrays" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s find out what form our image takes in Python. What sort of <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a> did <code class="docutils literal notranslate"><span class="pre">imread()</span></code> give us?</p>
+<p>The first thing we can do to find out is print the image variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[217 208 209]
+  [216 207 208]
+  [215 206 207]
+  ...
+  [ 76  71  75]
+  [ 82  77  81]
+  [ 85  79  83]]
+
+ [[217 208 209]
+  [216 207 208]
+  [216 207 208]
+  ...
+  [ 77  72  76]
+  [ 82  77  81]
+  [ 84  78  82]]
+
+ [[217 209 207]
+  [217 209 207]
+  [218 210 208]
+  ...
+  [ 79  74  78]
+  [ 83  78  82]
+  [ 84  78  82]]
+
+ ...
+
+ [[171 163 117]
+  [168 161 117]
+  [162 155 113]
+  ...
+  [ 69  75  87]
+  [ 72  76  88]
+  [ 75  78  93]]
+
+ [[162 157 115]
+  [159 154 112]
+  [154 149 111]
+  ...
+  [ 69  75  87]
+  [ 71  75  87]
+  [ 75  78  93]]
+
+ [[149 144 104]
+  [148 145 104]
+  [147 143 106]
+  ...
+  [ 68  75  85]
+  [ 72  76  88]
+  [ 76  79  94]]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This looks a lot like an <a class="reference internal" href="glossary.html#array"><span class="std std-doc">array</span></a>. And indeed it is; our image has been turned into an array. Quite a big one (the occurrences of ‘…’ in the printed output indicate that some of the contents have been omitted so that the printout is of a manageable size).</p>
+<p>Let’s check its <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> just to be sure:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>imageio.core.util.Array
+</pre></div>
+</div>
+</div>
+</div>
+<p>We are told that it is an <code class="docutils literal notranslate"><span class="pre">imageio</span></code> array rather than a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array, but this distinction need not concern us. <code class="docutils literal notranslate"><span class="pre">imaegio</span></code>’s array type is a variation on <code class="docutils literal notranslate"><span class="pre">numpy</span></code>’s, and everything that we learned about <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays in the <a class="reference internal" href="arrays.html"><span class="doc std std-doc">lesson on arrays</span></a> also applies to our image array.</p>
+<p>For example, the image array has a <code class="docutils literal notranslate"><span class="pre">shape</span></code> <a class="reference internal" href="glossary.html#attribute"><span class="std std-doc">attribute</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4000, 3000, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>What does the <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute tell us about our image array?</p>
+<p>First of all, we can see from the fact that <code class="docutils literal notranslate"><span class="pre">shape</span></code> contains three numbers that the array has three dimensions. This does not mean that our image is a 3D image; it is a normal ‘flat’ 2D image. Let’s see what each of the dimensions of the array refers to.</p>
+<p>The first two dimensions are easy to understand. We can think of these as rows and columns, just as in a <a class="reference internal" href="glossary.html#matrix"><span class="std std-doc">matrix</span></a>. Remembering Python’s convention for ordering the dimensions of an array, we can see that our image array has 4000 rows and 3000 columns. And looking back at the <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> figure of the image above, we can see that these two numbers match the height and width of the image in pixels. So together the first two dimensions represent the image as a matrix of pixels.</p>
+<p>Array indices count rows downwards from the top and count columns from left to right. So if we ask for the first row and the first column (using array <a class="reference internal" href="glossary.html#index"><span class="std std-doc">indices</span></a> as we learned in <a class="reference internal" href="arrays.html#indexing"><span class="std std-doc">the previous lesson</span></a>), we get the top left pixel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[217 208 209]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rgb">
+<h3>RGB<a class="headerlink" href="#rgb" title="Permalink to this headline">¶</a></h3>
+<p>The three numbers that we see here are the three values along the remaining dimension of the array. For mental visualization, it can help to think of the third dimension as representing ‘layers’, so that the image is composed of three matrices of pixels, stacked one on top of the other.</p>
+<p>Each of these three layers represents one color, and the image is made up of the <a class="reference external" href="https://en.wikipedia.org/wiki/Additive_color">additive mixture</a> of these three color layers. The most common system for representing color mixtures in computing is with the three primary colors red, green, and blue, in that order. These mix together in the same way that you probably learned about at school:</p>
+<ul class="simple">
+<li><p>red + green -&gt; yellow</p></li>
+<li><p>red + blue -&gt; pinkish purple (magenta)</p></li>
+<li><p>green + blue -&gt; greenish blue (cyan)</p></li>
+<li><p>red + green + blue -&gt; white</p></li>
+</ul>
+<p>Here is a fun <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3d/Additive_colors.ogv/Additive_colors.ogv.480p.vp9.webm">home-made video</a> demonstrating additive color mixing.</p>
+<p>A sequence of three numbers representing a color as a mixture of red, green, and blue is known as an <a class="reference internal" href="glossary.html#rgb"><span class="std std-ref">RGB</span></a> value. So the three layers of our image array are a red layer, a green layer, and a blue layer. And the three numbers that we saw in the top left pixel above are the ‘amounts’ of red, green, and blue in the color of this single pixel. What scale are these numbers on? Most commonly, RGB values are integers on a scale from 0 to 255, where larger numbers represent more of a particular color, and therefore a brighter color. Other color scales are possible, but this one is the most common and the one that is used in our image array.</p>
+<p>So what color is the top left pixel of our image? It contains approximately equal amounts of all three colors, which should produce a neutral gray. And those amounts are fairly close to the maximum value of 255, so the gray should be a fairly bright one. Looking back at the image, this matches what we see; the top left of the image contains the facade of a light gray concrete building.</p>
+<p>We can see that the top right of the image contains a rather darker gray, so we should expect lower values here. Let’s check our understanding by fetching this pixel (remember that negative <a class="reference internal" href="glossary.html#index"><span class="std std-doc">indices</span></a> count back from the end):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[85 79 83]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you want to experiment with RGB values to find out what sorts of colors result from different combinations, you can create your own small image arrays using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and then show the result with <code class="docutils literal notranslate"><span class="pre">imshow()</span></code>. The <code class="docutils literal notranslate"><span class="pre">numpy</span></code> function <code class="docutils literal notranslate"><span class="pre">full()</span></code> is useful for creating arrays of a given shape that are full of the same value. The first input argument is the desired shape, and the second if the value to fill the array with.</p>
+<p>For example, we can use <code class="docutils literal notranslate"><span class="pre">full()</span></code> to create a small image array of 10 by 10 pixels in which all pixels are black:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="n">color_test</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">color_test</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_17_0.png" src="_images/images_17_0.png" />
+</div>
+</div>
+<p>And now to try out other colors, we can use <a class="reference internal" href="arrays.html#indexing"><span class="std std-doc">array indexing</span></a> to change the values in one or more of the color layers in our new image array. For example to see what the combination of red and green looks like, we can set the first two color layers (R and G) to the maximum value of <code class="docutils literal notranslate"><span class="pre">255</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">color_test</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">color_test</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_19_0.png" src="_images/images_19_0.png" />
+</div>
+</div>
+<div class="section" id="manipulating-colors">
+<h4>Manipulating colors<a class="headerlink" href="#manipulating-colors" title="Permalink to this headline">¶</a></h4>
+<p>We can use our understanding of RGB values to manipulate the colors of our example image.</p>
+<p>This will involve changing the values in the image array. To avoid having to load the image from the file again every time we want to start afresh, we can begin each new manipulation by making a copy of the image array, so that the original remains unchanged. <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays have a <code class="docutils literal notranslate"><span class="pre">copy()</span></code> <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> for this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img_mod</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can work with the copy. Let’s try first ‘turning off’ the red and green color layers by setting all their values to <code class="docutils literal notranslate"><span class="pre">0</span></code>. This should result in an image that contains only shades of blue:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img_mod</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img_mod</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_23_0.png" src="_images/images_23_0.png" />
+</div>
+</div>
+<p>Turning one color layer up to maximum while leaving the other layers unchanged instead results in a ‘tint’:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img_mod</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">img_mod</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img_mod</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_25_0.png" src="_images/images_25_0.png" />
+</div>
+</div>
+<p>And changing a subset of rows or columns instead of asking for all of them (with <code class="docutils literal notranslate"><span class="pre">:</span></code>) applies the color change to only some of the pixels:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img_mod</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">img_mod</span><span class="p">[</span><span class="o">-</span><span class="mi">2000</span><span class="p">:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img_mod</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_27_0.png" src="_images/images_27_0.png" />
+</div>
+</div>
+<p>You get the general idea. Now is a good moment to head over to the Spyder console, load the image yourself if you haven’t already, and try out some more color manipulations to test your understanding.</p>
+</div>
+</div>
+<div class="section" id="uint8">
+<h3>uint8<a class="headerlink" href="#uint8" title="Permalink to this headline">¶</a></h3>
+<p>Like a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array, an <code class="docutils literal notranslate"><span class="pre">imageio</span></code> array has a <code class="docutils literal notranslate"><span class="pre">dtype</span></code> <a class="reference internal" href="glossary.html#attribute"><span class="std std-doc">attribute</span></a>. If you have been paying attention to the outputs that we printed above, you will have noticed that the values in our image array are integers (note the absence of a decimal point). Let’s check the array’s <code class="docutils literal notranslate"><span class="pre">dtype</span></code> to be sure:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;uint8&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The values in the image array are of <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> ‘uint8’ rather than just ‘int’. They are still integers, but of a special restricted kind. The <code class="docutils literal notranslate"><span class="pre">uint8</span></code> type is a new one that comes from <code class="docutils literal notranslate"><span class="pre">numpy</span></code> rather than from basic Python.</p>
+<p>To illustrate the special behavior of this type, let’s create a small <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array, and specifically request that its <code class="docutils literal notranslate"><span class="pre">dtype</span></code> be <code class="docutils literal notranslate"><span class="pre">uint8</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we print our new array, its values look just like normal integers. And if we do some basic math with them, they also appear to behave normally:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2]
+ [3 4]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 3]
+ [4 5]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 4]
+ [6 8]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, the <code class="docutils literal notranslate"><span class="pre">uint8</span></code> type has two special characteristics that make it different from a standard Python <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<p>First, the ‘u’ in ‘uint8’ stands for ‘unsigned’. A <code class="docutils literal notranslate"><span class="pre">uint8</span></code> number has no sign, i.e. it cannot be negative. If we do something with an array of <code class="docutils literal notranslate"><span class="pre">uint8</span></code> values that would make some of those values negative, the result is not as expected:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[252 253]
+ [254 255]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>To understand why <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">-</span> <span class="pre">5</span></code> appears to result in <code class="docutils literal notranslate"><span class="pre">255</span></code>, consider the second special characteristic of <code class="docutils literal notranslate"><span class="pre">uint8</span></code>. The ‘8’ at the end stands for ‘8-bit’, and refers to the representation of the integers in the computer’s memory as sequences of ‘on/off’ ‘bits’, which is ultimately how all numbers are represented in a computer. The computer stores <code class="docutils literal notranslate"><span class="pre">uint8</span></code> numbers using only 8 such bits for each number. As it turns out, 255 is the largest number that can be represented as a combination of 8 bits. Since each bit has two possible values (either ‘on’ or ‘off’), the number of possible combinations of ons and offs among 8 bits is <span class="math notranslate nohighlight">\(2^8\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">8</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>256
+</pre></div>
+</div>
+</div>
+</div>
+<p>(If you are wondering why the largest possible number is only 255 when the number of possible combinations is 256, remember that the number 0 is among the possible numbers as well.)</p>
+<p>Unsigned 8-bit integers are a decent choice for representing the color values of an image. 8 bits is a small amount of computer memory, so the image can be stored compactly, and 256 possible values for each of the three color layers still results in a large range of possible overall colors:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">256</span> <span class="o">**</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16777216
+</pre></div>
+</div>
+</div>
+</div>
+<p>So <code class="docutils literal notranslate"><span class="pre">uint8</span></code> values cannot become negative and cannot go above 255. If we perform mathematical operations with an array of <code class="docutils literal notranslate"><span class="pre">uint8</span></code> values such that they go beyond this range, they are ‘wrapped around’ to the other end of the range. This is why <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">-</span> <span class="pre">5</span></code> became <code class="docutils literal notranslate"><span class="pre">255</span></code>. Likewise, <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">255</span></code> becomes <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">255</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0 1]
+ [2 3]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>In practical terms, what this means for us is that we should be careful when doing math with image arrays. If a math operation could take the values outside the range 0 to 255, then the results might be unexpected.</p>
+<p>One other common problem arises if we accidentally convert the values in the image array to a different type. As we learned way back in the <a class="reference internal" href="types.html"><span class="doc std std-doc">lesson on types</span></a>, division always results in a <a class="reference internal" href="glossary.html#float"><span class="std std-doc">float</span></a>. So if we try to divide values, for example in an attempt to darken the image by making all color values less bright, the resulting array’s <code class="docutils literal notranslate"><span class="pre">dtype</span></code> will be float:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img2</span> <span class="o">=</span> <span class="n">img</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="n">img2</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;float64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>And <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> by default interprets arrays of floats in an entirely different way to integers, so the resulting image does not look right at all (though we at least get a warning message telling us that there are invalid values in the array):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img2</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+</pre></div>
+</div>
+<img alt="_images/images_47_1.png" src="_images/images_47_1.png" />
+</div>
+</div>
+<p>To darken the image correctly, we can use integer division (<code class="docutils literal notranslate"><span class="pre">//</span></code>) instead:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_49_0.png" src="_images/images_49_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="writing-images">
+<h2>Writing images<a class="headerlink" href="#writing-images" title="Permalink to this headline">¶</a></h2>
+<p>We will of course sometimes want to save our modified image arrays to a new image file. <code class="docutils literal notranslate"><span class="pre">imageio</span></code> makes this easy. All we need is to supply a new file name to the <code class="docutils literal notranslate"><span class="pre">imwrite()</span></code> function, along with an image array.</p>
+<p>Let’s save the dark version of our image as an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imageio</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;street_scene_dark.jpg&#39;</span><span class="p">,</span> <span class="n">img</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can go to your file explorer after trying out the <code class="docutils literal notranslate"><span class="pre">imwrite()</span></code> command with some more modified image arrays and see what the finished images look like.</p>
+</div>
+<div class="section" id="transparency">
+<h2>Transparency<a class="headerlink" href="#transparency" title="Permalink to this headline">¶</a></h2>
+<p>Let’s load another example image, <span class="xref myst">hamburger_emoji.png</span>. This file contains Google’s notorious implementation of the hamburger/cheeseburger emoji for Android phones, in which the cheese slice controversially appears below the meat patty rather than on top of it (though Google has since <a class="reference external" href="https://blog.emojipedia.org/google-fixes-burger-emoji">fixed this</a>). It looks like this:</p>
+<p><img alt="" src="_images/hamburger_emoji.png" /></p>
+<p>Cheeseburger etiquette is not what concerns us here. Instead it is the format of the image file. Our first example image was a <em>jpeg</em>, a very popular image format for photographs. Probably most of the photos in your holiday pics folder will be <em>jpeg</em> files. The hamburger emoji file is instead a <em>png</em> image. <em>png</em> is probably the second most popular image format. It is used mainly for the internet and for the icons, logos, etc in apps. There are various important differences between the two formats, but the one we will look at here is the fact that <em>png</em> files, but not <em>jpeg</em> files, allow parts of an image to be transparent.</p>
+<p>Take a look at the hamburger image above. It appears not to be rectangular like the street scene image, but to have the shape of a hamburger. This is not because the image file actually has this shape; behind the scenes, it still contains information about a rectangular array of pixels. Rather, some of the pixels in the image are ‘transparent’, i.e. they allow whatever is behind the image to show through. If you open up a word processing document and paste the hamburger image file in over the top of some text, you will see that the text shows through the transparent parts of the image around the hamburger. And if you open the image file in your image viewer, you may see something like this, depending on what your default image viewer application is:</p>
+<p><img alt="" src="_images/transparency.png" /></p>
+<p>Many image viewing programs use the gray checkerboard pattern as a means of indicating transparency.</p>
+<p>Now let’s see how transparency is represented in an image array when we load a <em>png</em> file with <code class="docutils literal notranslate"><span class="pre">imageio</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;hamburger_emoji.png&#39;</span><span class="p">)</span>
+<span class="n">burger_img</span> <span class="o">=</span> <span class="n">imageio</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<span class="n">burger_img</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(160, 160, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first two values in the <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute confirm that the hamburger image is still a rectangular array of pixels. It is 160 pixels high and 160 pixels wide. But the third value indicates that the image array has four ‘color layers’, not three.</p>
+<p>The first three color layers still store the <a class="reference internal" href="glossary.html#rgb"><span class="std std-ref">RGB</span></a> values for each pixel, as we learned above. The numbers in the additional layer indicate how transparent each pixel should be. Or more accurately, these values actually indicate how <em>opaque</em> each pixel should be, since lower values make pixels more transparent and higher values make them less transparent. Often this ‘opacity layer’ of an image array is referred to as the image’s ‘<a class="reference external" href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha channel</a>’.</p>
+<p>The data type of the image array is still <code class="docutils literal notranslate"><span class="pre">uint8</span></code>, so the scale of the alpha channel is 0 to 255, the same as for the color values.</p>
+<p>Consider the top left pixel of the hamburger image array, where the image is completely transparent:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">burger_img</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, the color values are zero. But more importantly the fourth number, the alpha channel, is also zero, making the image completely transparent here. (In fact, if this value is zero then the values of the color layers are irrelevant, since a completely transparent pixel is invisible anyway).</p>
+<p>Compare a pixel from the center of the image:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">burger_img</span><span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">80</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[111 171  41 255]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here the alpha channel is at maximum (255), so the image is not transparent at all.</p>
+<p>All of the alpha values in this image array happen to be either <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">255</span></code>. This is fairly common for logos and icons, since we usually want these to be completely opaque except outside the outline of the logo or icon. But intermediate values are also possible, making the background show through more faintly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ghost_burger_img</span> <span class="o">=</span> <span class="n">burger_img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">ghost_burger_img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">ghost_burger_img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">//</span> <span class="mi">2</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ghost_burger_img</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_59_0.png" src="_images/images_59_0.png" />
+</div>
+</div>
+<p>You can try saving a partly transparent image and then copying it into a word processing document over some text. You should see that the text shows through the image faintly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imageio</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;ghost_burger.png&#39;</span><span class="p">,</span> <span class="n">ghost_burger_img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make sure that you ask for a <em>png</em>  file if you are saving an image with transparency, as the <em>jpeg</em> file format does not include any way of encoding transparency:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imageio</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;ghost_burger.jpg&#39;</span><span class="p">,</span> <span class="n">ghost_burger_img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">33</span><span class="o">-</span><span class="mi">8770</span><span class="n">d13477c6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">imageio</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;ghost_burger.jpg&#39;</span><span class="p">,</span> <span class="n">ghost_burger_img</span><span class="p">)</span>
+
+<span class="nn">~/GitHub/introduction-to-programming/.venv/lib/python3.8/site-packages/imageio/core/functions.py</span> in <span class="ni">imwrite</span><span class="nt">(uri, im, format, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">303</span>     <span class="n">writer</span> <span class="o">=</span> <span class="n">get_writer</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="k">with</span> <span class="n">writer</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">305</span>         <span class="n">writer</span><span class="o">.</span><span class="n">append_data</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span> 
+<span class="g g-Whitespace">    </span><span class="mi">307</span>     <span class="c1"># Return a result if there is any</span>
+
+<span class="nn">~/GitHub/introduction-to-programming/.venv/lib/python3.8/site-packages/imageio/core/format.py</span> in <span class="ni">append_data</span><span class="nt">(self, im, meta)</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>             <span class="n">im</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>             <span class="c1"># Call</span>
+<span class="ne">--&gt; </span><span class="mi">502</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_append_data</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">total_meta</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span> 
+<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="k">def</span> <span class="nf">set_meta_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meta</span><span class="p">):</span>
+
+<span class="nn">~/GitHub/introduction-to-programming/.venv/lib/python3.8/site-packages/imageio/plugins/pillow.py</span> in <span class="ni">_append_data</span><span class="nt">(self, im, meta)</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="k">def</span> <span class="nf">_append_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">meta</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>             <span class="k">if</span> <span class="n">im</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">im</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">500</span>                 <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;JPEG does not support alpha channel.&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>             <span class="n">im</span> <span class="o">=</span> <span class="n">image_as_uint</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">bitdepth</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>             <span class="n">PillowFormat</span><span class="o">.</span><span class="n">Writer</span><span class="o">.</span><span class="n">_append_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">meta</span><span class="p">)</span>
+
+<span class="ne">OSError</span>: JPEG does not support alpha channel.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="image-processing">
+<h2>Image processing<a class="headerlink" href="#image-processing" title="Permalink to this headline">¶</a></h2>
+<p>We have covered here the very, very basics of a field of computing known as ‘image processing’ or sometimes ‘digital image processing’. There is lots more to this field, and it has many exciting applications such as automatic recognition of objects in images, detecting whether a photograph has been manipulated with software like photoshop, or automatically blurring out the face of your ex-partner from all your holiday pictures.</p>
+<p>We will finish with a very brief look ahead to what else is possible in image processing with Python.</p>
+<div class="section" id="scikit-image">
+<h3>scikit-image<a class="headerlink" href="#scikit-image" title="Permalink to this headline">¶</a></h3>
+<p>The image manipulations we carried out above involved only very simple array operations, just basic arithmetic with subsets of the image array’s values. The sort of operations necessary for a task like finding the edges of an object or detecting Photoshop effects are considerably more complex. Although it may be a fun exercise to try to re-implement some of these ourselves, it would be very tedious, and we would probably make some mistakes. As with most common tasks in Python, your first question about image processing should be: Is there a <a class="reference internal" href="glossary.html#package"><span class="std std-doc">package</span></a> already out there that does what I need?</p>
+<p>For image processing, the answer is a definite yes. The popular ‘scikit-image’ package, part of the larger ‘scikit’ bundle of packages for scientific applications in Python, provides ready-made functions implementing a lot of useful image processing algorithms. And ‘scikit-image’ is also part of the default Anaconda installation.</p>
+<p>Let’s import it. Since names in Python cannot contain hyphens, within Python scikit-image is actually called <code class="docutils literal notranslate"><span class="pre">skimage</span></code> (which is coincidentally also the name of a new character class in popular alpine version of Dungeons and Dragons). It is a big package, containing several modules. We will look at just two of these:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">color</span></code>: For working with colors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">feature</span></code>: For detecting features in an image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transform</span></code>: Various ways of altering an image, like in Photoshop, only more sciency.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">color</span><span class="p">,</span> <span class="n">feature</span><span class="p">,</span> <span class="n">transform</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="grayscale">
+<h4>Grayscale<a class="headerlink" href="#grayscale" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">color</span></code> module provides functions for working with colors, including for some of the things we did ‘by hand’ above. One of the most useful is conversion from color to <a class="reference internal" href="glossary.html#grayscale"><span class="std std-doc">grayscale</span></a>. Let’s try it out for our street scene image:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img_gray</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">rgb2gray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The resulting array has only two dimensions, because gray pixels do not require separation into three color layers; one number for each pixel is enough to represent the lightness of the gray in that pixel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img_gray</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4000, 3000)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="color-maps">
+<h5>Color maps<a class="headerlink" href="#color-maps" title="Permalink to this headline">¶</a></h5>
+<p>Something looks a bit wrong if we try to display the gray image array with <code class="docutils literal notranslate"><span class="pre">imshow()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img_gray</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_71_0.png" src="_images/images_71_0.png" />
+</div>
+</div>
+<p>This is because of the default behavior of <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>. <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> turns image arrays into figures using the same system that it uses for plotting data in general. When plotting data, it often makes sense to use a color scale that ranges fro one color to another. For example, when plotting brain activity, scientists might show values along a color scale ranging from deep red for low values to bright yellow for high values, like this:</p>
+<p><img alt="" src="_images/salmon.png" /></p>
+<p>(Image source: <a class="reference external" href="https://doi.org/10.1016/S1053-8119(09)71202-9">Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon</a>)</p>
+<p>Turning numbers into colors is sometimes termed ‘mapping’ those number to colors, and a scale that gradually changes color from low to high numbers is called a ‘color map’. <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>’s default color map for single numbers is one that is designed for displaying scientific data like brain activity or air temperature. It maps low values to a dark blue and high values to yellow, which makes them visually easy to distinguish. So when we give <code class="docutils literal notranslate"><span class="pre">pyplot()</span></code> a matrix of single numbers, it ‘thinks’ that these represent scientific data rather than a gray image, and so it applies this blue-to-yellow color map (which is called ‘<a class="reference external" href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html#introduction">viridis</a>’).</p>
+<p>The viridis color map is not really appropriate for our grayscale image. We would rather just have a boring dark-to-light gray color map. The <code class="docutils literal notranslate"><span class="pre">cm</span></code> module in <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> provides various alternative color maps. We want the one called <code class="docutils literal notranslate"><span class="pre">gray</span></code>. We can give this as the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> to <code class="docutils literal notranslate"><span class="pre">imshow()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img_gray</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">pyplot</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_73_0.png" src="_images/images_73_0.png" />
+</div>
+</div>
+<p>Better.</p>
+<p>Converting images to grayscale is useful not just for making your holiday photos look classier. Many image processing algorithms can only operate on grayscale images, and have no straightforward way of dealing with colors. So for some tasks, our first step will be to convert our starting image from color to grayscale.</p>
+</div>
+</div>
+<div class="section" id="edge-detection">
+<h4>Edge detection<a class="headerlink" href="#edge-detection" title="Permalink to this headline">¶</a></h4>
+<p>As an example of using scikit-image, let’s look briefly at a common image processing task: finding the edges of objects in an image. In order to locate specific objects in an image, or to divide an image up into different regions of interest, such as foreground and background, the first step is to find the boundaries between different surfaces in the image. This is known as ‘edge detection’. There are many different ways of carrying out edge detection, but in most cases the very general principle is to find parts of the image containing two adjacent groups of pixels such that the pixels in one group are all similar to each another in one way or another, but different from the other group.</p>
+<p>One of the most successful algorithms for edge detection is the <a class="reference external" href="https://en.wikipedia.org/wiki/Canny_edge_detector">Canny algorithm</a> (so called not in the sense of ‘canny’ meaning ‘clever’, but because its inventor happened to be called ‘Canny’). There is a function for it in scikit-image’s <code class="docutils literal notranslate"><span class="pre">feature</span></code> module.</p>
+<p>Let’s try it out. Since the algorithm is computationally quite intensive and requires some preprocessing for complex images, we will try it just on the simple hamburger image:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">burger_edges</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">canny</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">rgb2gray</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">rgba2rgb</span><span class="p">(</span><span class="n">burger_img</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result is a new version of the image array in which every pixel is a <a class="reference internal" href="glossary.html#boolean"><span class="std std-doc">boolean</span></a> value indicating whether that pixel is at the edge of a region of the image (<code class="docutils literal notranslate"><span class="pre">True</span></code>) or inside a region of the image (<code class="docutils literal notranslate"><span class="pre">False</span></code>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">burger_edges</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;bool&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pyplot</span></code> shows boolean values black for <code class="docutils literal notranslate"><span class="pre">False</span></code> and white for <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">burger_edges</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">pyplot</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_79_0.png" src="_images/images_79_0.png" />
+</div>
+</div>
+<p>Note that we had to first convert the hamburger to grayscale, using two conversion functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rgba2rgb</span></code> gets rid of any transparency (‘alpha’) layer in the image array, so that it has just the three layers ‘red’, ‘green’, and ‘blue’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rgb2gray</span></code> converts a color image to a gray image with only one layer representing the shade of gray.</p></li>
+</ul>
+<p>Like many image processing functions, <code class="docutils literal notranslate"><span class="pre">canny()</span></code> has no default way of handling color image arrays:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature</span><span class="o">.</span><span class="n">canny</span><span class="p">(</span><span class="n">burger_img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">42</span><span class="o">-</span><span class="mi">03</span><span class="n">fb3859f81f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">feature</span><span class="o">.</span><span class="n">canny</span><span class="p">(</span><span class="n">burger_img</span><span class="p">)</span>
+
+<span class="nn">~/GitHub/introduction-to-programming/.venv/lib/python3.8/site-packages/skimage/feature/_canny.py</span> in <span class="ni">canny</span><span class="nt">(image, sigma, low_threshold, high_threshold, mask, use_quantiles)</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>     <span class="c1"># because who knows what lies beyond the edge of the image?</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>     <span class="c1">#</span>
+<span class="ne">--&gt; </span><span class="mi">157</span>     <span class="n">check_nD</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">158</span>     <span class="n">dtype_max</span> <span class="o">=</span> <span class="n">dtype_limits</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">clip_negative</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span> 
+
+<span class="nn">~/GitHub/introduction-to-programming/.venv/lib/python3.8/site-packages/skimage/_shared/utils.py</span> in <span class="ni">check_nD</span><span class="nt">(array, ndim, arg_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg_empty_array</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg_name</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">array</span><span class="o">.</span><span class="n">ndim</span> <span class="ow">in</span> <span class="n">ndim</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">320</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg_incorrect_dim</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg_name</span><span class="p">,</span> <span class="s1">&#39;-or-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ndim</span><span class="p">])))</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span> 
+<span class="g g-Whitespace">    </span><span class="mi">322</span> 
+
+<span class="ne">ValueError</span>: The parameter `image` must be a 2-dimensional array
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="transformations">
+<h4>Transformations<a class="headerlink" href="#transformations" title="Permalink to this headline">¶</a></h4>
+<p>To finish, let’s try out a transformation, just for fun. The <code class="docutils literal notranslate"><span class="pre">swirl()</span></code> function distorts the image by swirling pixels. The <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">arguments</span></a> <code class="docutils literal notranslate"><span class="pre">strength</span></code> and <code class="docutils literal notranslate"><span class="pre">radius</span></code> control how ‘swirly’ the swirl is, and how far across the image it extends (in pixels), respectively:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]:</span>
+    <span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">transform</span><span class="o">.</span><span class="n">swirl</span><span class="p">(</span><span class="n">burger_img</span><span class="p">,</span> <span class="n">strength</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mi">160</span><span class="p">))</span>
+    <span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;swirl strength </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+    <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/images_83_0.png" src="_images/images_83_0.png" />
+<img alt="_images/images_83_1.png" src="_images/images_83_1.png" />
+<img alt="_images/images_83_2.png" src="_images/images_83_2.png" />
+</div>
+</div>
+<p>That’s it for image processing. You can read many more examples at the <a class="reference external" href="https://scikit-image.org/docs/stable/auto_examples">scikit-image examples gallery</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>In colloquial English, to view the world through ‘rose-tinted glasses’ means to interpret everything optimistically. Write a function called <code class="docutils literal notranslate"><span class="pre">rose_tint()</span></code> to help people see the world this way.</p>
+<p>The function should take the name of an image file as its input argument. It then saves a new version of the image, which has been given a pinkish tint to make everything look pretty. The new image file should be called <em>rosy_</em> followed by the name of the original image file.</p>
+<p>Note that this function has no <a class="reference internal" href="glossary.html"><span class="doc std std-doc">return value</span></a>; it writes a new file, but does not return any value that can be assigned into a variable.</p>
+<p>You may need to experiment with <a class="reference internal" href="glossary.html#rgb"><span class="std std-ref">RGB</span></a> values to find a good general way of tinting an image array pink. You can also test your function with an example image to check the result as you work on it.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="arrays.html" title="previous page">Array computing</a>
+    <a class='right-next' id="next-link" href="data_analysis.html" title="next page">Data analysis</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

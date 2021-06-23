@@ -1,0 +1,1292 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array computing &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Images" href="images.html" />
+    <link rel="prev" title="GitHub" href="github.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/arrays.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Farrays.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/arrays.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/arrays.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vectors">
+   Vectors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrices">
+   Matrices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matrix-multiplication">
+     Matrix multiplication
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rotation">
+       Rotation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective">
+   Objective
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arrays">
+   Arrays
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-arrays">
+     numpy arrays
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-types">
+       Data types
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexing">
+       Indexing
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#broadcasting">
+       Broadcasting
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matrix-multiplication-with-numpy">
+       Matrix multiplication with numpy
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matplotlib">
+   matplotlib
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#customizing-plots">
+     Customizing plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aliases">
+   Aliases
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="array-computing">
+<h1>Array computing<a class="headerlink" href="#array-computing" title="Permalink to this headline">¶</a></h1>
+<p>Various tasks in science and mathematics involve manipulating collections of numbers organized in vectors or matrices. You may remember this from high school or college, depending on how far you took math. In this lesson we will learn about how to manipulate vectors and matrices with Python, so let’s start by briefly recapping what these things are.</p>
+<div class="section" id="vectors">
+<h2>Vectors<a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="glossary.html#vector"><span class="std std-doc">vector</span></a> is a collection of multiple numbers arranged in a specific order. Vectors have various uses. They can be used in data analysis to represent multiple observations of the same type. For example, some shoe sizes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+42 &amp; 39 &amp; 72 &amp; 45 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>Vectors are also commonly used to represent points in a multidimensional space. For example, a vector of three numbers could record the <em>height, width, depth</em> coordinates of a point in three-dimensional space:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+2.4 &amp; 1.0 &amp; 3.7 \\
+\end{bmatrix}
+\end{split}\]</div>
+</div>
+<div class="section" id="matrices">
+<h2>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h2>
+<p>As well as being a virtual-reality environment in which our machine overlords keep us entertained while harvesting our energy in defiance of the laws of thermodynamics, a <a class="reference internal" href="glossary.html#matrix"><span class="std std-doc">matrix</span></a> is a collection of multiple numbers arranged in rows and columns. Like vectors, matrices have various purposes in practical applications of math. A matrix might record multiple observations of multiple variables, where each row is an observation and each column is a variable. For example, for four people, their shoe sizes, IQ scores, and whether or not they work as a clown (<code class="docutils literal notranslate"><span class="pre">0</span></code> for ‘no’ and <code class="docutils literal notranslate"><span class="pre">1</span></code> for ‘yes’):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+42 &amp; 150 &amp; 0 \\
+39 &amp; 115 &amp; 0 \\
+72 &amp; 180 &amp; 1 \\
+45 &amp; 85 &amp; 0 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>Or a matrix might record the coordinates of a group of points in some space. For a two-dimensional space, the matrix might have two columns, representing the <em>x</em> and <em>y</em> (or horizontal and vertical) axes of the space, and each row would then represent one point in the space. For example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 \\
+5 &amp; 3 \\
+9 &amp; 4 \\
+13 &amp; 5 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>These two example uses of matrices are not in fact as different as they might appear. They can be considered within the same conceptual framework. Just as <em>x,y</em> coordinates may represent points in an actual 2-dimensional space (or <em>x,y,z</em> coordinates may represent points in a 3-dimensional space), so too can the people represented in the rows of data in our first example be thought of as ‘points’ in an abstract ‘feature space’ whose axes are ‘shoe size’, ‘IQ score’, and ‘clown’. This gives us a more general way of thinking about what matrices typically represent in applied math. The rows often represent the locations of entities in some space (whether a real physical space or an abstract feature space), and the columns represent the dimensions of that space. Many of the calculations and transformations that we apply to data in the process of statistical analysis can also be thought of as geometric operations applied to points in a real physical space, such as rotating them, moving them, squashing them together, etc.</p>
+<p>Vectors, which we learned about above, can be considered special cases of matrices that have either only one row, in which case the vector is termed a ‘row vector’ and might represent a single entity such as a person, or only one column, in which case the vector is termed a ‘column vector’ and might represent the positions of multiple entities along just one scale or dimension.</p>
+<p>In the context of matrix math, an ordinary lone number (such as just <code class="docutils literal notranslate"><span class="pre">2</span></code>) is often called a <a class="reference internal" href="glossary.html#scalar"><span class="std std-doc">scalar</span></a>, to distinguish it from vectors and matrices. Likewise, a scalar can be considered a special case of a matrix with only one row and only one column; so in the terms we have been using above, a single piece of information about a single entity.</p>
+<p>So if you are familiar with ‘normal’ math involving single numbers then like Mr. Jourdain you have in fact already been doing matrix math all this time without knowing it.</p>
+<div class="section" id="matrix-multiplication">
+<h3>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h3>
+<p>As we just noted, matrices can be used to represent geometric transformations. How does this work? For many simple transformations, the calculations are also very simple, and may involve for example adding or subtracting some number from all the values in the matrix. But for some transformations we need new mathematical tools that are special to matrices. One of the most important of these is the notion of matrix multiplication: Multiplying a matrix not by some single number but by <em>another matrix</em>.</p>
+<p>How does this work? To multiply one matrix (<em>A</em>) by another (<em>B</em>), follow these steps:</p>
+<ul class="simple">
+<li><p>The number of <em>columns</em> in matrix A must be the same as the number of <em>rows</em> in matrix B. (If not, multiplication is not defined for the two matrices. This is very different from <a class="reference internal" href="glossary.html#scalar"><span class="std std-doc">scalars</span></a>; any single number may be in principle be multiplied by any other.)</p></li>
+<li><p>Draw the A matrix at the left of your school notebook, and draw the B matrix above and to the right, as in the image below.</p></li>
+<li><p>Draw a new matrix AB in the space between A and B, where each cell of AB aligns with one row of A and one column of B.</p></li>
+<li><p>For each combination of row from A and column from B …</p>
+<ul>
+<li><p>… read left to right along the row of A, …</p></li>
+<li><p>… read down the column of B, …</p></li>
+<li><p>… and as you do so pair up the corresponding two values from A and B …</p></li>
+<li><p>… and multiply them together.</p></li>
+<li><p>Then sum up all the results of these multiplications and put their sum in the corresponding cell of the new AB matrix.</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="_images/Matrix_multiplication_diagram_2.png" /></p>
+<p>(Image source: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Matrix_multiplication_diagram_2.svg">Wikimedia Commons</a>, GNU Free Documentation License)</p>
+<p>So an example matrix multiplication might look like this:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 \\
+5 &amp; 3 \\
+9 &amp; 4 \\
+13 &amp; 5 \\
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 2 \\
+3 &amp; 4 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+7 &amp; 10 \\
+14 &amp; 22 \\
+21 &amp; 34 \\
+28 &amp; 46 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>You can get out your notebook, follow the steps above, and check the result.</p>
+<div class="section" id="rotation">
+<h4>Rotation<a class="headerlink" href="#rotation" title="Permalink to this headline">¶</a></h4>
+<p>Rotation is one example of a geometric transformation that can be represented as a matrix multiplication.</p>
+<p>For a matrix whose rows are the <em>x,y</em> coordinates of some points in a 2-dimensional space, another matrix, a ‘rotation matrix’, can be used to rotate those coordinates by some angle around the center of the space. When the matrix of coordinates is multiplied by this rotation matrix, the result is a new matrix of points whose values represent the rotated <em>x,y</em> coordinates.</p>
+<p>The rotation matrix for counter-clockwise rotation by an angle of <span class="math notranslate nohighlight">\(\theta\)</span> (in <a class="reference external" href="https://en.wikipedia.org/wiki/Radian">radians</a>) is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+\cos \theta &amp; \sin \theta \\
+-\sin \theta &amp; \cos \theta \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>So if we wanted to rotate the <em>x,y</em> coordinates in our example matrix from above by an angle of 0.79 radians, we could represent this as the multiplication of our matrix by the rotation matrix for this angle:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 \\
+5 &amp; 3 \\
+9 &amp; 4 \\
+13 &amp; 5 \\
+\end{bmatrix}
+\begin{bmatrix}
+\cos 0.79 &amp; \sin 0.79 \\
+-\sin 0.79 &amp; \cos 0.79 \\
+\end{bmatrix}
+\end{split}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take rotation of coordinates as an example and see how to implement it in Python. Our goal is to write a function that rotates a matrix of <em>x,y</em> coordinates around some point.</p>
+<ul class="simple">
+<li><p>Arguments:</p>
+<ul>
+<li><p>The matrix of coordinates.</p></li>
+<li><p>An angle of rotation.</p></li>
+<li><p>The point around which to rotate the coordinates, with a default value of <em>0,0</em> (i.e. the ‘center’ of the coordinate space).</p></li>
+</ul>
+</li>
+<li><p>Return value:</p>
+<ul>
+<li><p>A new matrix of rotated coordinates.</p></li>
+</ul>
+</li>
+</ul>
+<p>Let’s also use Python to produce a graph displaying the unrotated and rotated coordinates, so that we can check that our function works correctly.</p>
+</div>
+<div class="section" id="arrays">
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
+<p>As we have done sometimes before, we will build up to our target function step by step. The first thing we need to know is how to represent a matrix in Python.</p>
+<p>Basic Python does not provide a ‘matrix’ <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data type</span></a>. But we have already met some Python types that could be used to do the job. Matrices contain multiple values, so we need a data type that can store multiple values. A <a class="reference internal" href="glossary.html#list"><span class="std std-doc">list</span></a> is an obvious first choice. For example, we could represent a matrix as a list in which each entry in the list represents one row, where each of those entries contains a further list, whose entries represent the values in that row.</p>
+<p>So we would represent our example matrix of coordinates from above like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference internal" href="glossary.html#index"><span class="std std-doc">Indexing</span></a> our list of lists would then give us one row (i.e. one <em>x,y</em> point):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[9.0, 4.0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>But a list of lists isn’t great for this purpose, for a few reasons. First of all, it makes it quite complicated to apply some mathematical operation to one <em>column</em> of the matrix, such as adding some number to the <em>x</em> values so as to move the points along the <em>x</em> axis. For this, we would have to <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a> through every ‘row’ in the list and apply the same operation to one of the coordinate values in that row. For example to add <code class="docutils literal notranslate"><span class="pre">1</span></code> to each <em>x</em> value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coords_list</span><span class="p">:</span>
+    <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+    
+<span class="n">coords_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2.0, 2.0], [6.0, 3.0], [10.0, 4.0], [14.0, 5.0]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>It would be nicer to have a data type that allows us to index rows and columns in such a way that we can write matrix mathematical expressions like ‘add 1 to all the values in the first column’ more concisely.</p>
+<p>Second and more importantly, nothing about the list representation constrains each row to have the same number of columns, as a good matrix should. If we accidentally increase the length of one of the rows, our matrix becomes misshapen and Python does nothing to warn us:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
+
+<span class="n">coords_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2.0, 2.0, 3.0], [6.0, 3.0], [10.0, 4.0], [14.0, 5.0]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>And finally, it would also be nice if our matrix were strict about the <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> of the values that it contains. Although it may occasionally make sense for matrices to contain things other than numbers, one thing that almost never makes sense is for a matrix to mix various different types together.</p>
+<p>Lists, however, will happily mix data of all sorts of different types. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">crazy_matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">2.4</span><span class="p">,</span> <span class="s1">&#39;Hi! My name is Mildred.&#39;</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;2.4&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">9000</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For cases where we want to represent data of a homogeneous <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> in rows and columns and we want to be able to carry out mathematical operations on subsets of those rows and columns with simple commands, we need a new data type. In computing, such a data type is often called an <a class="reference internal" href="glossary.html#array"><span class="std std-doc">array</span></a>. Arrays store homogeneous values in rows and columns (or more generally in ‘grids’ that may have more than just two dimensions).</p>
+<div class="section" id="numpy-arrays">
+<h3>numpy arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<p>The very popular <code class="docutils literal notranslate"><span class="pre">numpy</span></code> <a class="reference internal" href="glossary.html#package"><span class="std std-doc">package</span></a> (short for ‘numerical Python’) adds an array data type. <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is installed by default as part of Anaconda, so if you installed Python via Anaconda you do not need to do anything to install <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<p>All that we need to do in order to create an array is to <a class="reference internal" href="glossary.html#import"><span class="std std-doc">import</span></a> <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, then use its <code class="docutils literal notranslate"><span class="pre">array()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="n">coords</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see from the example above, the input <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> to <code class="docutils literal notranslate"><span class="pre">numpy.array()</span></code> is a list. If we want to create a 2-dimensional array (i.e. a matrix), then the input list should be a list of lists, just like the one we created above.</p>
+<p>But unlike a simple list of lists, a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array ‘knows’ that its entries represent rows and that the entries within each row represent columns. We get a first hint that this is the case if we print the array. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> representation of a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array helpfully arranges its values visually as rows and columns, allowing us to more easily check the shape of the array:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.  2.]
+ [ 5.  3.]
+ [ 9.  4.]
+ [13.  5.]]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays have some <a class="reference internal" href="glossary.html#attribute"><span class="std std-doc">attributes</span></a> that store information about their content. The <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute tells us the number of rows and columns in the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute, and in many other contexts, rows come first, then columns. This is an arbitrary convention that Python and many other similar programming languages follow. Some programming languages follow the opposite convention: columns first, then rows.</p>
+<p>Note that we are not limited to working with 2-dimensional arrays (i.e. <a class="reference internal" href="glossary.html#matrix"><span class="std std-doc">matrices</span></a>). If we instead give a simple list of values to <code class="docutils literal notranslate"><span class="pre">numpy.array()</span></code> then we get an array with only one dimension (i.e. a <a class="reference internal" href="glossary.html#vector"><span class="std std-doc">vector</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_vector</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">42</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">45</span><span class="p">])</span>
+
+<span class="n">my_vector</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4,)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Likewise, if we instead give a list of lists <em>of lists</em>, we get a 3-dimensional array. In this case, <code class="docutils literal notranslate"><span class="pre">shape</span></code> tells us the number of rows, columns, and then ‘layers’ (or however we care to think of the third dimension), in that order:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_3d_thing</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">]]])</span>
+
+<span class="n">my_3d_thing</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We may even go beyond three dimensions if we wish. But for me, three is already slightly higher than the maximum number of dimensions I can easily think about without hurting myself, so we will stick to vectors and matrices for now.</p>
+<div class="section" id="data-types">
+<h4>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h4>
+<p>Apart from <code class="docutils literal notranslate"><span class="pre">shape</span></code>, the other <a class="reference internal" href="glossary.html#attribute"><span class="std std-doc">attribute</span></a> of a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array that we will most commonly want to check is <code class="docutils literal notranslate"><span class="pre">dtype</span></code>, which tells us what <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data type</span></a> the values in the array are.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;float64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> has its own data types, with names slightly different from those in basic Python, but we don’t need to worry about these in simple applications. ‘float64’ basically means <a class="reference internal" href="glossary.html#float"><span class="std std-doc">float</span></a>, and likewise, ‘int64’ means <a class="reference internal" href="glossary.html#integer"><span class="std std-doc">int</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_integers</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">some_integers</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;int64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">numpy.array()</span></code> takes note of the types that we give it. If we mix values of different types, then <code class="docutils literal notranslate"><span class="pre">numpy</span></code> will convert some of those values implicitly (this implicit type conversion is sometimes called <a class="reference internal" href="glossary.html#coercion"><span class="std std-doc">coercing</span></a> the values to a new type). For example, integers in an array that also contains floats will be ‘coerced’ to float:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_numbers</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">some_numbers</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;float64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 2., 3.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>So when creating <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays it is a good idea to be explicit and consistent about the data types that we are entering into the array.</p>
+<p>Note that we should not confuse <code class="docutils literal notranslate"><span class="pre">dtype</span></code> with the type of <em>the array itself</em>. numpy arrays are of course of type ‘numpy array’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">some_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+<p>(<code class="docutils literal notranslate"><span class="pre">numpy</span></code> calls this type ‘ndarray’ rather than just ‘array’. The ‘nd’ stands for ‘n-dimensional’, referring to the fact that arrays may have varying numbers of dimensions: 1 dimension for a vector, 2 dimensions for a matrix, and so on.)</p>
+</div>
+<div class="section" id="indexing">
+<h4>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h4>
+<p>Among the desiderata for an array data type that we listed above was the possibility of getting hold of various subsets of the rows and columns of the array with a simple short expression rather than having to use a <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a> as we did for the list of lists. <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays deliver this desideratum. It’s one of their most salient features.</p>
+<p>To refer to one or more rows or columns (or further dimensions) of a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array, we can use the familiar square parentheses that we have already been using to <a class="reference internal" href="glossary.html#index"><span class="std std-doc">index</span></a> other Python types. The only difference is that instead of a single index, we can put multiple indices into the square parentheses. These indices are separated by commas. In accordance with the convention we noted above, the first index refers to rows, and the second to columns.</p>
+<p>Let’s take a look at our matrix of coordinates again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.,  2.],
+       [ 5.,  3.],
+       [ 9.,  4.],
+       [13.,  5.]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get the value in the second column of the fourth row (remembering as always Python’s zero-based indexing system), we do:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>All of the various extra tricks that we learned about earlier for <a class="reference internal" href="sequences_mappings.html#indexing"><span class="std std-doc">indexing and slicing sequences</span></a> also apply to <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays. We can use negative indices to ‘count back from the end’ (i.e. from the bottom row or from the rightmost column), and we can use the colon character (<code class="docutils literal notranslate"><span class="pre">:</span></code>) to ask for a range, or ‘<a class="reference internal" href="glossary.html#slice"><span class="std std-doc">slice</span></a>’, of entries.</p>
+<p>For example to get the values in the final column and the last two rows we can do:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 5.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Often we will want to ask simply for a subset of rows, or a subset of columns. In such cases we only want to give a row index or a column index, but not both. For example if we want to get the entire first column, then we need to supply the index for that column (<code class="docutils literal notranslate"><span class="pre">0</span></code>), but we don’t want to have to supply any index for the rows; we want instead to be able to say ‘don’t leave out any rows, just give me them all’.</p>
+<p>In the context of indices, the colon character written on its own without any numbers means ‘all’. This is a logical extrapolation of its role in specifying <a class="reference internal" href="glossary.html#slice"><span class="std std-doc">slices</span></a>. We have seen that if we omit the number before the colon then the slice will start at the start, and if we omit the number after the colon, the slice will go all the way to the end. It follows that if we omit both the number before and after the colon (i.e. we simply write a colon on its own), then the slice starts at the start and ends at the end, which of course gives us all values.</p>
+<p>So the entire first column is rows <code class="docutils literal notranslate"><span class="pre">:</span></code> and column <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.,  5.,  9., 13.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use these indexing tricks together with an <code class="docutils literal notranslate"><span class="pre">=</span></code> <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assignment</span></a> to selectively change some parts of an array.</p>
+<p>For example to add <code class="docutils literal notranslate"><span class="pre">1</span></code> to every <em>x</em> value in our example matrix of <em>x,y</em> coordinates we can ask for ‘all the rows and the first column’, add 1, then assign the result back into ‘all the rows and the first column’:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">coords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 2.,  2.],
+       [ 6.,  3.],
+       [10.,  4.],
+       [14.,  5.]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that this kind of ‘row, column’ indexing is not possible with a list of lists like the one that we defined above. Lists do not accept multiple indices:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords_list</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="mf">1e454</span><span class="n">cc0dc4b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">coords_list</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="ne">TypeError</span>: list indices must be integers or slices, not tuple
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="broadcasting">
+<h4>Broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this headline">¶</a></h4>
+<p>We just learned how to change multiple values in a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array. We did this by adding a <a class="reference internal" href="glossary.html#scalar"><span class="std std-doc">scalar</span></a> (i.e. a single number) to each of those values. Let’s consider now a slightly more complex example. Imagine that we want to move the coordinate points in our matrix diagonally upwards in the coordinate space, by shifting the <em>x</em> values 1 unit further along the <em>x</em> axis, and the <em>y</em> values 2 units further up the <em>y</em> axis. In the terms of our matrix, this entails adding 1 to all the values in the first column, and adding 2 to all the values in the second column.</p>
+<p>We could of course do this in two separate steps, one for each column. This would be fine for this simple example. But <code class="docutils literal notranslate"><span class="pre">numpy</span></code> provides a more general way of making structured changes to multiple values.</p>
+<p>Consider that the instruction ‘add 1 to all the values in the first column, and add 2 to all the values in the second column’ can also be rephrased as ‘add the <a class="reference internal" href="glossary.html#vector"><span class="std std-doc">vector</span></a> <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2]</span></code> to every row’. We can take a vector that has the same number of values as the number of columns in our matrix, and ‘pair up’ the values in this vector with the corresponding values in each row.</p>
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> does this automatically if we add a vector to an array. Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">row_vector</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">row_vector</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1. 2.]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span> <span class="o">+</span> <span class="n">row_vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 3.,  4.],
+       [ 7.,  5.],
+       [11.,  6.],
+       [15.,  7.]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>(Remember that as usual, the original <a class="reference internal" href="glossary.html#variable"><span class="std std-doc">variable</span></a> is not changed by a mathematical expression unless we <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> the result back into the variable. This is the same for <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays as for other Python variables):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2.  2.]
+ [ 6.  3.]
+ [10.  4.]
+ [14.  5.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span> <span class="o">=</span> <span class="n">coords</span> <span class="o">+</span> <span class="n">row_vector</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 3.  4.]
+ [ 7.  5.]
+ [11.  6.]
+ [15.  7.]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We are not limited to combining a vector with every row of an array. We can also combine a <a class="reference internal" href="glossary.html#vector"><span class="std std-doc">column vector</span></a> with every column. However, in this case the vector must indeed be a column vector, so that its shape matches up properly to the dimensions of our array.</p>
+<p>Remember that the entries in the input list represent rows, and each of these is a list of values. So to get a column vector we need to input a list of lists in which each ‘inner’ list contains just one value. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">column_vector</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">column_vector</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1.]
+ [2.]
+ [3.]
+ [4.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span> <span class="o">+</span> <span class="n">column_vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 4.,  5.],
+       [ 9.,  7.],
+       [14.,  9.],
+       [19., 11.]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>And we are also not limited to addition. We can apply other mathematical operations between arrays. For example multiplication:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span> <span class="o">*</span> <span class="n">column_vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 3.,  4.],
+       [14., 10.],
+       [33., 18.],
+       [60., 28.]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we combine arrays like this, the shapes of the arrays are matched up if possible, and then the smaller array is ‘repeated’ so as to cover all the rows or all the columns of the larger array. This is an example of what is known in array computing as <a class="reference internal" href="glossary.html#broadcasting"><span class="std std-doc">broadcasting</span></a> one array onto another.</p>
+<p>The <a class="reference external" href="https://numpy.org/devdocs/user/theory.broadcasting.html">braodcasting page</a> from the documentation for the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> package has some diagrams giving further explanations, and an interesting example use case.</p>
+<p>Of course not all arrays are of compatible shapes. If we attempt to combine arrays whose shapes do not match up, then we get an error message saying that no broadcasting was possible:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mf">186e551</span><span class="n">a999f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">coords</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+
+<span class="ne">ValueError</span>: operands could not be broadcast together with shapes (4,2) (3,) 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="matrix-multiplication-with-numpy">
+<h4>Matrix multiplication with numpy<a class="headerlink" href="#matrix-multiplication-with-numpy" title="Permalink to this headline">¶</a></h4>
+<p>Having learned a bit about how <code class="docutils literal notranslate"><span class="pre">numpy</span></code> works, we are finally ready to see how we can use it for our target task. We would like to apply matrix multiplication to two <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays, one representing some <em>x,y</em> coordinates, and one representing the rotation matrix.</p>
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> provides a very large selection of functions for various operations with arrays. One of these does matrix multiplication. Let’s try it for the example matrix multiplication we wrote out above:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 \\
+5 &amp; 3 \\
+9 &amp; 4 \\
+13 &amp; 5 \\
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 2 \\
+3 &amp; 4 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+7 &amp; 10 \\
+14 &amp; 22 \\
+21 &amp; 34 \\
+28 &amp; 46 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>First we create our two arrays:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is a good idea to check them visually first to make sure we got this step right:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.  2.]
+ [ 5.  3.]
+ [ 9.  4.]
+ [13.  5.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1. 2.]
+ [3. 4.]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>And then <code class="docutils literal notranslate"><span class="pre">numpy</span></code>’s matrix multiplication function, <code class="docutils literal notranslate"><span class="pre">matmul()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 7., 10.],
+       [14., 22.],
+       [21., 34.],
+       [28., 46.]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We are nearly ready to write our target function. As well as the new techniques we have just learned for creating and multiplying matrices with <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, we need a few other mathematical functions:</p>
+<ul class="simple">
+<li><p>Conversion from degrees to radians, so that users of our function can input an angle of rotation in the more familiar degree units (0° to 360°).</p></li>
+<li><p>The sine and cosine functions, needed to construct the rotation matrix.</p></li>
+</ul>
+<p>But these are all straightforward, and we can take them from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module in Python’s [standard library].</p>
+<p>You can see the code for the finished function in the example module <span class="xref myst">coordinates.py</span>. Here it is in action:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">coordinates</span>
+
+<span class="n">coords</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]])</span>
+
+<span class="n">coordinates</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.70710678,  2.12132034],
+       [ 1.41421356,  5.65685425],
+       [ 3.53553391,  9.19238816],
+       [ 5.65685425, 12.72792206]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="matplotlib">
+<h2>matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>If you are the sort of person who can see the positions of coordinates in your mind’s eye, you may see already that our <code class="docutils literal notranslate"><span class="pre">rotate()</span></code> function is working correctly. But if you are anything like me, you will want to see a picture to be sure. So let’s learn how to plot points in Python.</p>
+<p>Python’s <a class="reference internal" href="standard_library.html"><span class="doc std std-doc">standard library</span></a> does not contain any modules for displaying plots, but the popular <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> <a class="reference internal" href="glossary.html#package"><span class="std std-doc">package</span></a> does. This package is the basis for producing any graphs or technical drawings in Python programs. Like <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is included by default in the standard Anaconda installation, so if you have installed Anaconda you already have it.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is a fairly large package containing several submodules, it is a common practice to avoid importing all of it, and to save a bit of typing time later, by fetching just the relevant part using a selective import (which we learned about in the <a class="reference internal" href="modules.html"><span class="doc std std-doc">lesson on modules</span></a>). The module that we need is called <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And the <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> module contains a <code class="docutils literal notranslate"><span class="pre">scatter()</span></code> function that allows us to plot points as dots on a figure.</p>
+<p>The first <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> is a <a class="reference internal" href="glossary.html#vector"><span class="std std-doc">vector</span></a> of <em>x</em> coordinates, and the second argument is a vector of corresponding <em>y</em> coordinates. So in our case we can get these two input arguments from the two columns of our array.</p>
+<p>When we have finished drawing, the <code class="docutils literal notranslate"><span class="pre">show()</span></code> function will show the final plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/arrays_67_0.png" src="_images/arrays_67_0.png" />
+</div>
+</div>
+<p>We can overlay multiple sets of points on a figure by just using the plotting function multiple times before <code class="docutils literal notranslate"><span class="pre">show()</span></code>. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> even helpfully draws each set of points in a different color.</p>
+<p>For our example, we can use this to overlay our rotated coordinates on the original ones, to see whether the angle of rotation looks right:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rotated_coords</span> <span class="o">=</span> <span class="n">coordinates</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rotated_coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">rotated_coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/arrays_69_0.png" src="_images/arrays_69_0.png" />
+</div>
+</div>
+<div class="section" id="customizing-plots">
+<h3>Customizing plots<a class="headerlink" href="#customizing-plots" title="Permalink to this headline">¶</a></h3>
+<p>Often we will want to specify a few more details about the appearance of our plots. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> provides lots and lots of additional functions for adding features to a plot, and these functions accept many keyword arguments for changing things like colors, types of dots and lines, etc.</p>
+<p>To demonstrate the general idea, we will add just one slight flourish to our plot. It would be nice to have some lines on the plot showing the center of the coordinate space, so that we can verify that the points have been rotated around this center. And it would be nice if these lines were black rather than <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s default blue.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rotated_coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">rotated_coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/arrays_71_0.png" src="_images/arrays_71_0.png" />
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> can do a lot. But navigating its cornucopia of functions and arguments can be a real pain. For many specialized plotting tasks in data analysis, there are better packages available whose use is more straightforward. These packages still use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> in the background, but they set the necessary colors, styles, axis labels, and so on automatically without our having to specify them all one by one.</p>
+<p>We will learn more about other plotting packages later.</p>
+</div>
+</div>
+<div class="section" id="aliases">
+<h2>Aliases<a class="headerlink" href="#aliases" title="Permalink to this headline">¶</a></h2>
+<p>Once you are released into the wild and start reading more Python examples online, you will notice that some programs seem to refer to <code class="docutils literal notranslate"><span class="pre">numpy</span></code> as ‘np’ instead, and to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> as ‘plt’. These programs begin by importing <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, or <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (or some other module) under an alternative name, sometimes called an <a class="reference internal" href="glossary.html#alias"><span class="std std-doc">alias</span></a>.</p>
+<p>Such programs begin with <a class="reference internal" href="glossary.html#import"><span class="std std-doc">import</span></a> statements that additionally use the <code class="docutils literal notranslate"><span class="pre">as</span></code> <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> to import a module under a different name. Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In almost all cases, this slight difference from the standard method of importing is purely cosmetic. All it achieves is to allow the rest of the program to refer to the imported module by its alias. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Certain conventions have arisen about these aliases. <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is always ‘np’, <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> is always ‘plt’, and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> (which we met briefly in the <a class="reference internal" href="files.html#pandas"><span class="std std-doc">lesson on files</span></a>) is always ‘pd’. So you should be aware of these when you read other example programs.</p>
+<p>There are a couple of situations in which it is a good idea to use an alias for an imported module:</p>
+<ul class="simple">
+<li><p>The name of the module is horribly long and the module is used often in the program. Using a much shorter alias can make the program less cluttered and easier to read.</p></li>
+<li><p>There are other things (other modules, variables, etc.) in the program that have, or might have, the same name as the module. Using an alias avoids these naming conflicts.</p></li>
+</ul>
+<p>But in my semi-humble opinion, the common use of aliases for <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, and so on is a bit silly. Neither of the two situations above applies. These modules all have short names already, and you are probably more likely to want to call a variable in your program ‘np’ or ‘pd’ than you are to want to call it ‘numpy’ or ‘pandas’, unless you are doing research on actual pandas or have misspelled the word ‘<a class="reference external" href="https://en.wiktionary.org/wiki/numpty">numpty</a>’.</p>
+<p>So I won’t use aliases in my examples, except in one or two cases where it really makes sense. You should do whatever you prefer. Just be consistent and if you use aliases use the conventional ones rather than ones you have invented yourself, so that others understand what is going on in your program.</p>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>In geometry, to <a class="reference external" href="https://en.wikipedia.org/wiki/Translation_(geometry)">translate</a> some coordinates simply means to move them by a certain distance in a certain direction within the coordinate space. One way of representing this transformation is as the addition of a vector to the coordinates, as we learned above. For example, to move a pair of <em>(x,y)</em> coordinates 3 units rightward along the <em>x</em> axis and 2 units downward along the <em>y</em> axis we would add the vector <em>(3,-2)</em>.</p>
+<p>Add a new function to the <span class="xref myst">coordinates.py</span> module, called <code class="docutils literal notranslate"><span class="pre">translate()</span></code>. Like <code class="docutils literal notranslate"><span class="pre">rotate()</span></code>, <code class="docutils literal notranslate"><span class="pre">translate()</span></code> should take as its first <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> a 2-column <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array representing some coordinates, and it should <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return</span></a> a transformed version of the coordinates. The second argument should be a <a class="reference internal" href="glossary.html#list"><span class="std std-doc">list</span></a> (or a <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuple</span></a>, it doesn’t matter) whose two entries give the distances by which to shift the coordinates along the <em>x</em> and <em>y</em> axes, respectively. So for the example of shifting the coordinates 3 units rightwards along the <em>x</em> axis and 2 units downward along the <em>y</em> axis, this argument would be <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">-2]</span></code>.</p>
+<p>It will probably help to test your function visually using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> as you go along, to confirm that it works as expected.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="github.html" title="previous page">GitHub</a>
+    <a class='right-next' id="next-link" href="images.html" title="next page">Images</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

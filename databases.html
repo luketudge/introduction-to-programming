@@ -1,0 +1,2967 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relational databases &#8212; Introduction to Programming with Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The internet" href="internet.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Topics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  get started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spyder.html">
+   Spyder configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  the basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="types.html">
+   Variables and data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences_mappings.html">
+   Sequences and mappings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditions.html">
+   Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="standard_library.html">
+   The standard library
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  software development
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="command_line.html">
+   The command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  specialist topics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="arrays.html">
+   Array computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="images.html">
+   Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_analysis.html">
+   Data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nlp.html">
+   Natural language processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internet.html">
+   The internet
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Relational databases
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/databases.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luketudge/introduction-to-programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/luketudge/introduction-to-programming/issues/new?title=Issue%20on%20page%20%2Fdatabases.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?urlpath=tree/content/databases.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luketudge/introduction-to-programming/blob/master/content/databases.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective">
+   Objective
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#long-format">
+   Long format
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Relational databases
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#joining">
+     Joining
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#constraints">
+   Constraints
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sql">
+   SQL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pronunciation">
+     Pronunciation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#db-browser">
+     DB Browser
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sqlite3">
+     sqlite3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#queries">
+     Queries
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#select">
+       SELECT
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#order-by">
+       ORDER BY
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#where">
+       WHERE
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#join">
+       JOIN
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#miscellaneous-sql-syntax">
+     Miscellaneous SQL syntax
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#complex-commands">
+       Complex commands
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#case">
+       Case
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#comments">
+       Comments
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-tables">
+     Creating tables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-data">
+     Adding data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#insert">
+       INSERT
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#constraints-again">
+       Constraints again
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#python-variables">
+       Python variables
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#foreign-keys">
+       Foreign keys
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sql-scripts">
+     SQL scripts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sql-injection">
+     SQL injection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="relational-databases">
+<h1>Relational databases<a class="headerlink" href="#relational-databases" title="Permalink to this headline">¶</a></h1>
+<p>In the <a class="reference internal" href="files.html"><span class="doc std std-doc">lesson on files</span></a> we learned about a few different text formats that we can use to store data. And when we came to learn about <a class="reference internal" href="data_analysis.html"><span class="doc std std-doc">data analysis</span></a>, we focused in particular on the concept of organizing data in a table of rows and columns (or a ‘<a class="reference internal" href="glossary.html#dataframe"><span class="std std-doc">data frame</span></a>’), which can be accomplished for example in a <a class="reference internal" href="glossary.html#csv"><span class="std std-doc">csv</span></a> file.</p>
+<div class="section" id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+<p>The csv table format is great for many different data storage tasks. However, it has its limitations. To get an idea of what these limitations are and why they are important, let’s set ourselves another toy task.</p>
+<p>We would like to create a file that stores information about our favorite songs. The file should store the names of the songs, along with some other information:</p>
+<ul class="simple">
+<li><p>the name of the album that the song is from</p></li>
+<li><p>the position of the song in the album</p></li>
+<li><p>what year the album was released</p></li>
+<li><p>the name of the artist that made the album</p></li>
+<li><p>what country the artist is from</p></li>
+</ul>
+<p>We would like to be able to view different columns and subsets of our data file, for example to see all the songs from a particular album, or the earliest album by a particular artist, etc. And because our friends are constantly recommending new music for us, we would also like to be able to keep inserting new songs into the file.</p>
+</div>
+<div class="section" id="long-format">
+<h2>Long format<a class="headerlink" href="#long-format" title="Permalink to this headline">¶</a></h2>
+<p>We can of course already accomplish this task with a csv file. I have provided one as an example, <span class="xref myst">songs.csv</span>. Let’s load it and see what it looks like.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="n">songs_df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;songs.csv&#39;</span><span class="p">))</span>
+
+<span class="n">songs_df</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Artist</th>
+      <th>Country</th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>Song</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>This Ain’t the Summer of Love</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>True Confessions</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>(Don’t Fear) The Reaper</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>E.T.I. (Extra Terrestrial Intelligence)</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>The Revenge of Vera Gemini</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>Sinful Love</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>Tattoo Vampire</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>Morning Final</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>Tenderloin</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>Debbie Denise</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>White Flags</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>Dancin' in the Ruins</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>Make Rock Not War</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>Perfect Water</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>Spy in the House of the Night</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>Beat 'Em Up</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>When the War Comes</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>Shadow Warrior</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>Madness to the Method</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+      <td>Fire of Unknown Origin</td>
+      <td>1981</td>
+      <td>Fire of Unknown Origin</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>One minor disadvantage of the csv format may already strike you when you look at the first few rows above: There is a lot of repetition in this file. The first few songs are all from the album ‘Agents of Fortune’. In order to associate all these songs with this album and its year of release, there is really no alternative to just repeating the same album information on every row to which it applies. Likewise, the first few albums are all by the legendary rock band ‘Blue Öyster Cult’, so the name and country of the band must be repeated over many rows.</p>
+<p>This format, in which the complete set of information for each observation is contained on every row, even if this means repeating the same combinations of values many times, is sometimes known in data analysis as the ‘long format’. Its great advantage is that it ensures that each row is self-contained and complete; one row gives all the information we need about that observation. One of its disadvantages is inefficiency; if the file contains many observations, it will contain a lot of redundant text, taking up storage space unnecessarily, and making it computationally slower to load the file and search in it.</p>
+</div>
+<div class="section" id="id1">
+<h2>Relational databases<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>In order to avoid repeating text unnecessarily, we need multiple tables. We need separate tables for songs, albums, and artists, so that each row in each of these tables contains the information for just one unique song, album, or artist. For each song, we could then just refer to the relevant row in the ‘albums’ or ‘artists’ tables when we need this extra information, rather than repeating it throughout the ‘songs’ table. The repetitive columns in the ‘songs’ table would be replaced by a single ‘album’ column that just notes which album in the ‘albums’ table that song belongs to. Ideally, this ‘linking’ column should contain compact abbreviations, such as ID numbers for the albums, rather than the full album names.</p>
+<p>If you are having trouble imagining what such a data file would look like, just consider the ‘sheets’ functionality of a spreadsheet program like Microsoft Excel. Most spreadsheet programs allow for multiple tables in the same file, each table stored in a separate sheet. Take a look at the example file <span class="xref myst">songs.xlsx</span>. We will load the separate sheets in this file into Python in a moment, but to get an overview of the file’s structure it is probably easier to just open it in your preferred spreadsheet program, like Excel or OpenOffice.</p>
+<p>Here is the ‘songs’ sheet:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;songs.xlsx&#39;</span><span class="p">)</span>
+<span class="n">songs</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;songs&#39;</span><span class="p">)</span>
+
+<span class="n">songs</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Song</th>
+      <th>Number</th>
+      <th>AlbumID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>This Ain’t the Summer of Love</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>True Confessions</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>(Don’t Fear) The Reaper</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>E.T.I. (Extra Terrestrial Intelligence)</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>The Revenge of Vera Gemini</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Sinful Love</td>
+      <td>6</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Tattoo Vampire</td>
+      <td>7</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Morning Final</td>
+      <td>8</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Tenderloin</td>
+      <td>9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Debbie Denise</td>
+      <td>10</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>White Flags</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Dancin' in the Ruins</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Make Rock Not War</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Perfect Water</td>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Spy in the House of the Night</td>
+      <td>5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Beat 'Em Up</td>
+      <td>6</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>When the War Comes</td>
+      <td>7</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Shadow Warrior</td>
+      <td>8</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Madness to the Method</td>
+      <td>9</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Fire of Unknown Origin</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The album information for each song has here been replaced by a single ‘AlbumID’ column. This column states which row in the album table each song comes from, without duplicating all the album information.</p>
+<p>The album information is in turn contained in a separate table in which each album appears only once:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">albums</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;albums&#39;</span><span class="p">)</span>
+
+<span class="n">albums</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>ArtistID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fire of Unknown Origin</td>
+      <td>1981</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Spectres</td>
+      <td>1977</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>The Revölution by Night</td>
+      <td>1983</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>I’m No Hero</td>
+      <td>1980</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>The Young Ones</td>
+      <td>1961</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Clutching at Straws</td>
+      <td>1987</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Misplaced Childhood</td>
+      <td>1985</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>El disco de tu corazón</td>
+      <td>2007</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Sin restricciones</td>
+      <td>2004</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>All Around My Hat</td>
+      <td>1975</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Below the Salt</td>
+      <td>1972</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Commoners Crown</td>
+      <td>1975</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Hark! The Village Wait</td>
+      <td>1970</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Now We Are Six</td>
+      <td>1974</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Parcel of Rogues</td>
+      <td>1973</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Please to See the King</td>
+      <td>1971</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Storm Force Ten</td>
+      <td>1977</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>And finally, the same pattern is repeated in order to link the albums to the information about their respective artists. The ‘ArtistID’ column in the albums table refers to the corresponding row of the artists table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">artists</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;artists&#39;</span><span class="p">)</span>
+
+<span class="n">artists</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Artist</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cliff Richard</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Marillion</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Miranda</td>
+      <td>RA</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The basic principle here is that integer row IDs ‘relate’ the rows in one table to those in one or more other tables. This general concept of multiple linked tables is often called a ‘relational database’, and it is well suited to cases in which the data have a certain hierarchical or interconnected structure. In our case, we have a hierarchical structure in which songs are grouped within albums, which are grouped within artists.</p>
+<div class="section" id="joining">
+<h3>Joining<a class="headerlink" href="#joining" title="Permalink to this headline">¶</a></h3>
+<p>A relational database provides a tidy, efficient way of storing more complex data. However, when we actually come to view the data and work with them, we will often need to ‘reunite’ the information from multiple tables and get back to a ‘long format’ table, at least temporarily. For example, we might want to see a table of all the albums by artists from the UK. Since the artists’ country of origin is contained in the artists table, we need to put this table together with the albums table before we can select albums by country.</p>
+<p>The process of reuniting related information from more than one table in a relational database is known as ‘joining’ the tables. <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>s have a <code class="docutils literal notranslate"><span class="pre">join()</span></code> <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> for this operation. The first <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> is the additional table we want to join, and the <code class="docutils literal notranslate"><span class="pre">on</span></code> argument is the column that specifies which rows in this table relate to which rows in the first table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">albums_artists</span> <span class="o">=</span> <span class="n">albums</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">artists</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;ArtistID&#39;</span><span class="p">)</span>
+
+<span class="n">albums_artists</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>ArtistID</th>
+      <th>Artist</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>0</td>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>0</td>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fire of Unknown Origin</td>
+      <td>1981</td>
+      <td>0</td>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Spectres</td>
+      <td>1977</td>
+      <td>0</td>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>The Revölution by Night</td>
+      <td>1983</td>
+      <td>0</td>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>I’m No Hero</td>
+      <td>1980</td>
+      <td>1</td>
+      <td>Cliff Richard</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>The Young Ones</td>
+      <td>1961</td>
+      <td>1</td>
+      <td>Cliff Richard</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Clutching at Straws</td>
+      <td>1987</td>
+      <td>2</td>
+      <td>Marillion</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Misplaced Childhood</td>
+      <td>1985</td>
+      <td>2</td>
+      <td>Marillion</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>El disco de tu corazón</td>
+      <td>2007</td>
+      <td>3</td>
+      <td>Miranda</td>
+      <td>RA</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Sin restricciones</td>
+      <td>2004</td>
+      <td>3</td>
+      <td>Miranda</td>
+      <td>RA</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>All Around My Hat</td>
+      <td>1975</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Below the Salt</td>
+      <td>1972</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Commoners Crown</td>
+      <td>1975</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Hark! The Village Wait</td>
+      <td>1970</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Now We Are Six</td>
+      <td>1974</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Parcel of Rogues</td>
+      <td>1973</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Please to See the King</td>
+      <td>1971</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Storm Force Ten</td>
+      <td>1977</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>And now we can filter the albums by country:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">albums_artists</span><span class="p">[</span><span class="n">albums_artists</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;GB&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>ArtistID</th>
+      <th>Artist</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>I’m No Hero</td>
+      <td>1980</td>
+      <td>1</td>
+      <td>Cliff Richard</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>The Young Ones</td>
+      <td>1961</td>
+      <td>1</td>
+      <td>Cliff Richard</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Clutching at Straws</td>
+      <td>1987</td>
+      <td>2</td>
+      <td>Marillion</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Misplaced Childhood</td>
+      <td>1985</td>
+      <td>2</td>
+      <td>Marillion</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>All Around My Hat</td>
+      <td>1975</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Below the Salt</td>
+      <td>1972</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Commoners Crown</td>
+      <td>1975</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Hark! The Village Wait</td>
+      <td>1970</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Now We Are Six</td>
+      <td>1974</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Parcel of Rogues</td>
+      <td>1973</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Please to See the King</td>
+      <td>1971</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Storm Force Ten</td>
+      <td>1977</td>
+      <td>4</td>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="constraints">
+<h2>Constraints<a class="headerlink" href="#constraints" title="Permalink to this headline">¶</a></h2>
+<p>So a relational database is somewhat like a spreadsheet containing multiple related tables. But please don’t tell anyone that I said this. Most programmers who work with relational databases would be horrified at the suggestion of using a Microsoft Excel file as a database. Justifiably so. Microsoft Excel is a spectacularly awful program in lots of very creative ways. There is also one more very desirable feature of a database that neither an Excel spreadsheet nor the collection of <a class="reference internal" href="glossary.html#dataframe"><span class="std std-doc">dataframes</span></a> stored in it fulfills.</p>
+<p>To see what this feature is and why it is desirable, let’s try adding a new artist to our table of artists. But let’s make a deliberate mistake in doing so, and add an artist that is in fact already present. (You can imagine that this sort of mistake is bound to occur eventually in a big database that might be used by more than one member of a team).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_row</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Artist&#39;</span><span class="p">:</span><span class="s1">&#39;Blue Öyster Cult&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">:</span><span class="s1">&#39;USA&#39;</span><span class="p">}</span>
+<span class="n">artists</span> <span class="o">=</span> <span class="n">artists</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_row</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">artists</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Artist</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cliff Richard</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Marillion</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Miranda</td>
+      <td>RA</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Steeleye Span</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Blue Öyster Cult</td>
+      <td>USA</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Our table doesn’t care about the duplication. Why should it? It’s just a dumb table.</p>
+<p>Other more subtle mistakes are also possible. For example, we might add a new album to the albums table and accidentally assign it an artist ID that is not one of the rows of the artists table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_row</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Album&#39;</span><span class="p">:</span><span class="s1">&#39;憶蓮&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">:</span><span class="mi">1987</span><span class="p">,</span> <span class="s1">&#39;ArtistID&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
+<span class="n">albums</span> <span class="o">=</span> <span class="n">albums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_row</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">albums</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>ArtistID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Agents of Fortune</td>
+      <td>1976</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Club Ninja</td>
+      <td>1985</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fire of Unknown Origin</td>
+      <td>1981</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Spectres</td>
+      <td>1977</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>The Revölution by Night</td>
+      <td>1983</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>I’m No Hero</td>
+      <td>1980</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>The Young Ones</td>
+      <td>1961</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Clutching at Straws</td>
+      <td>1987</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Misplaced Childhood</td>
+      <td>1985</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>El disco de tu corazón</td>
+      <td>2007</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Sin restricciones</td>
+      <td>2004</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>All Around My Hat</td>
+      <td>1975</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Below the Salt</td>
+      <td>1972</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Commoners Crown</td>
+      <td>1975</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Hark! The Village Wait</td>
+      <td>1970</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Now We Are Six</td>
+      <td>1974</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Parcel of Rogues</td>
+      <td>1973</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Please to See the King</td>
+      <td>1971</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Storm Force Ten</td>
+      <td>1977</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>憶蓮</td>
+      <td>1987</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Our table doesn’t care about this kind of illogic either.</p>
+<p>Of course, we could just try to make sure that we and our colleagues don’t make this kind of mistake when working with the database. But we are human beings; trying hard not to make mistakes doesn’t usually work out too well for us.</p>
+<p>What we would really like from a good database is for it to be a little more than just an inert place of storage. As well as storing our data, it should also store and enforce a set of logical rules that describe how our data are organized. We can then rely on the database to alert us when we accidentally break one of our own rules. Rules about what constitutes a valid entry for a database are often termed ‘constraints’.</p>
+<p>For our example task, we would like to be able to set the following constraints:</p>
+<ul class="simple">
+<li><p>Every artist name must be unique (i.e. no duplicate artists).</p></li>
+<li><p>Every combination of artist and album must be unique (i.e. so that duplicate album names are allowed if they are by different artists, but not the same album for the same artist).</p></li>
+<li><p>The name of a song must be unique within the album (i.e. no duplicate songs on the same album).</p></li>
+<li><p>The number of a song must be unique within the album (i.e. not two first songs or two second songs on the same album).</p></li>
+<li><p>Every artist ID in the albums table must have a corresponding row in the artists table.</p></li>
+<li><p>Every album ID in the songs table must have a corresponding row in the albums table.</p></li>
+</ul>
+</div>
+<div class="section" id="sql">
+<h2>SQL<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h2>
+<p>To get a ‘proper’ relational database that doesn’t just store multiple related tables but also implements constraints on their relations, we need to move on from spreadsheets and dataframes. In fact, we need to learn a little bit of a completely new programming language, one that is designed specially for working with relational databases. <a class="reference internal" href="glossary.html#sql"><span class="std std-ref">SQL</span></a> (Structured Query Language) is a programming language that is very widely used in database management.</p>
+<p>SQL provides commands that are broadly of three different types:</p>
+<ul class="simple">
+<li><p>Define the relations and constraints that give a database its structure.</p></li>
+<li><p>Modify the data in a database, for example by inserting, deleting, or changing information.</p></li>
+<li><p>Fetch different combinations of information from a database (usually called ‘querying’ the database).</p></li>
+</ul>
+<div class="section" id="pronunciation">
+<h3>Pronunciation<a class="headerlink" href="#pronunciation" title="Permalink to this headline">¶</a></h3>
+<p>Some people like to pronounce ‘SQL’ as ‘sequel’. But other less imaginative people, like me, have always just pronounced it by spelling out the letters, ‘es queue ell’. Say it however you like and don’t let cool people snub you for not saying ‘sequel’.</p>
+</div>
+<div class="section" id="db-browser">
+<h3>DB Browser<a class="headerlink" href="#db-browser" title="Permalink to this headline">¶</a></h3>
+<p>We will now learn a bit of SQL. We will work our way up to creating our target database, but let’s first take a quick look at one I made earlier, so that we know what we are aiming for. You can find it in the file <span class="xref myst">songs.db</span>. You may of course wonder how to even open this file. There are a number of ways to interact with an SQL-compatible database file. One of those is of course by running SQL commands, as we will see shortly. But there are also programs that can display database contents in a friendlier clickable interface. The best basic one is the <a class="reference external" href="https://sqlitebrowser.org/">DB Browser for SQLite</a>. It is free to download. If you would like, you can install it and then use it to open up our example database file. You should see something like this:</p>
+<p><img alt="" src="_images/db_browser.png" /></p>
+<p>This ‘Database Structure’ view lists the tables in the database. Along with each table, you can see the SQL commands that set the structure and constraints of the table. You might already be able to work out what some of this means. SQL is a fairly human-readable programming language.</p>
+<p>We will learn about these commands in a moment. For now, just explore the DB Browser app. You can browse the individual tables from the ‘Browse Data’ tab:</p>
+<p><img alt="" src="_images/db_browser_browse.png" /></p>
+<p>Switch between tables using the drop-down menu, and take a look at the albums table. You will see that it has an ‘artist_id’ column that refers to the ‘id’ column in the artists table. Likewise, the songs table has an ‘album_id’ column that refers to the ‘id’ column in the albums table.</p>
+<p>You can also edit the database from the ‘Browse Data’ tab, via the ‘New Record’ button. Try this out. A new row will appear, in which you can enter values, much as in a normal spreadsheet. However, note that if you enter something that violates one of the constraints of the database, you will be suitably admonished:</p>
+<p><img alt="" src="_images/db_browser_unique.png" /></p>
+<p>Great! The database has got us covered if we make stupid mistakes. If you want to see what the warning looks like for one of the other constraints, go to the albums table and try to add an album with an artistID that is not in the artists table.</p>
+<p>Also note that nothing you do in the browser will alter the database unless you click the ‘Write Changes’ button. If you would like to erase any temporary changes you have made in the browser, you can click the ‘Revert Changes’ button:</p>
+<p><img alt="" src="_images/db_browser_write_revert.png" /></p>
+<p>Finally, take a look at the ‘Execute SQL’ tab. This tab provides a text field where you can enter SQL commands, run them, and see the results. Try typing in the following command, and then press the ‘Play’ (▶) button (we will learn what this command means in a moment):</p>
+<p><code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">album,</span> <span class="pre">year</span> <span class="pre">FROM</span> <span class="pre">albums;</span></code></p>
+<p>Like this:</p>
+<p><img alt="" src="_images/db_browser_select.png" /></p>
+<p>For the remaining SQL examples, I will abandon the DB browser and instead show how to run SQL commands from within a Python program. You can follow along in Python or if you prefer, you can try some of the SQL commands out in the DB browser ‘Execute SQL’ tab instead. However, the database file does not appreciate being open both in Python and in the DB Browser, since this could lead to conflicting edits, so you will need to use only one or the other at any one time.</p>
+</div>
+<div class="section" id="sqlite3">
+<h3>sqlite3<a class="headerlink" href="#sqlite3" title="Permalink to this headline">¶</a></h3>
+<p>As usual, we need to <a class="reference internal" href="glossary.html#import"><span class="std std-doc">import</span></a> an additional module for our task.  There are a few third-party <a class="reference internal" href="glossary.html#package"><span class="std std-doc">packages</span></a> that enable us to work with SQL from Python. Some of these are very good, but I will instead show here a very simple one that is already part of the Python <a class="reference internal" href="standard_library.html"><span class="doc std std-doc">standard library</span></a>, called <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>. This module provides a fairly limited set of functions, and its use mostly involves just sending SQL commands to the database. This simplicity will allow us to focus on learning SQL without introducing too much additional Python complexity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s work with the example finished database first, before we learn how to create a new one. The first step is to ‘connect’ to the database, with the <code class="docutils literal notranslate"><span class="pre">connect()</span></code> function and the <a class="reference internal" href="glossary.html#path"><span class="std std-doc">path</span></a> to the database file. This is very much like using <code class="docutils literal notranslate"><span class="pre">open()</span></code> to connect to a file as we learned in the <a class="reference internal" href="files.html"><span class="doc std std-doc">lesson on files</span></a>, in the sense that this command merely sets up a channel of communication from our program to the database, and does not yet ‘read in’ any of its contents.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;songs.db&#39;</span><span class="p">)</span> 
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_filepath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And let’s check the <a class="reference internal" href="glossary.html#type"><span class="std std-doc">type</span></a> and <a class="reference internal" href="glossary.html#attribute"><span class="std std-doc">attributes</span></a> of the resulting object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sqlite3.Connection
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;DataError&#39;,
+ &#39;DatabaseError&#39;,
+ &#39;Error&#39;,
+ &#39;IntegrityError&#39;,
+ &#39;InterfaceError&#39;,
+ &#39;InternalError&#39;,
+ &#39;NotSupportedError&#39;,
+ &#39;OperationalError&#39;,
+ &#39;ProgrammingError&#39;,
+ &#39;Warning&#39;,
+ &#39;__call__&#39;,
+ &#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__enter__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__exit__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;backup&#39;,
+ &#39;close&#39;,
+ &#39;commit&#39;,
+ &#39;create_aggregate&#39;,
+ &#39;create_collation&#39;,
+ &#39;create_function&#39;,
+ &#39;cursor&#39;,
+ &#39;enable_load_extension&#39;,
+ &#39;execute&#39;,
+ &#39;executemany&#39;,
+ &#39;executescript&#39;,
+ &#39;in_transaction&#39;,
+ &#39;interrupt&#39;,
+ &#39;isolation_level&#39;,
+ &#39;iterdump&#39;,
+ &#39;load_extension&#39;,
+ &#39;rollback&#39;,
+ &#39;row_factory&#39;,
+ &#39;set_authorizer&#39;,
+ &#39;set_progress_handler&#39;,
+ &#39;set_trace_callback&#39;,
+ &#39;text_factory&#39;,
+ &#39;total_changes&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will work with three main <a class="reference internal" href="glossary.html#method"><span class="std std-doc">methods</span></a> of our <code class="docutils literal notranslate"><span class="pre">sqlite3.Connection</span></code> variable:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">execute()</span></code>: run some SQL commands</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commit()</span></code>: actually write the current changes to the database file (note that this is similar to the sense of <a class="reference internal" href="glossary.html#commit"><span class="std std-doc">commit</span></a> in <a class="reference internal" href="glossary.html#versioning"><span class="std std-doc">version control</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">close()</span></code>: close the connection to the database</p></li>
+</ul>
+<p>In particular, it is a good idea to have <code class="docutils literal notranslate"><span class="pre">close()</span></code> ready to hand. We can occasionally get into trouble if we leave a connection to a database open. If we are writing a Python program, we should put the <code class="docutils literal notranslate"><span class="pre">close()</span></code> command at the bottom of our program file right from the start, so that each time we run and test our program, the database connection is properly closed before the next time we run the program.</p>
+</div>
+<div class="section" id="queries">
+<h3>Queries<a class="headerlink" href="#queries" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="select">
+<h4>SELECT<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h4>
+<p>We can begin with the example SQL command that we saw above. This command involves two SQL <a class="reference internal" href="glossary.html"><span class="doc std std-doc">keywords</span></a>: <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> and <code class="docutils literal notranslate"><span class="pre">FROM</span></code>. Thanks to their intuitive names, it is pretty clear what these keywords accomplish: together they select some columns from a table.</p>
+<p>There are just two other aspects of SQL <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> on display in this first command:</p>
+<ul class="simple">
+<li><p>Separate multiple names with commas.</p></li>
+<li><p>End the command with a semicolon (<code class="docutils literal notranslate"><span class="pre">;</span></code>). This indicates that a command is complete, and does not for example continue on the next line. This is a little different from Python; in Python the end of a line usually also indicates the end of a command, with only some exceptions.</p></li>
+</ul>
+<p>Since SQL commands are not valid Python expressions, we can’t simply type them as-is in our Python program. Instead, they need to be contained in a <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a>. This string is then passed in as the <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> to the <code class="docutils literal notranslate"><span class="pre">execute()</span></code> <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> of our database connection variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, year FROM albums;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What did we get from <code class="docutils literal notranslate"><span class="pre">execute()</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sqlite3.Cursor
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__next__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;arraysize&#39;,
+ &#39;close&#39;,
+ &#39;connection&#39;,
+ &#39;description&#39;,
+ &#39;execute&#39;,
+ &#39;executemany&#39;,
+ &#39;executescript&#39;,
+ &#39;fetchall&#39;,
+ &#39;fetchmany&#39;,
+ &#39;fetchone&#39;,
+ &#39;lastrowid&#39;,
+ &#39;row_factory&#39;,
+ &#39;rowcount&#39;,
+ &#39;setinputsizes&#39;,
+ &#39;setoutputsize&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We get a somewhat unintuitively-named <code class="docutils literal notranslate"><span class="pre">Cursor</span></code>. The idea here is that the SQL <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> command has inserted a ‘cursor’ into the database (rather like the cursor in a text editor) such that it is ready to read at the rows we selected.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Cursor</span></code> is <a class="reference internal" href="glossary.html#method"><span class="std std-doc">iterable</span></a>. If we iterate through it in a <code class="docutils literal notranslate"><span class="pre">for</span></code> <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a>, we get each selected row in turn:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Agents of Fortune&#39;, 1976)
+(&#39;Club Ninja&#39;, 1985)
+(&#39;Fire of Unknown Origin&#39;, 1981)
+(&#39;Spectres&#39;, 1977)
+(&#39;The Revölution by Night&#39;, 1983)
+(&#39;I’m No Hero&#39;, 1980)
+(&#39;The Young Ones&#39;, 1961)
+(&#39;Clutching at Straws&#39;, 1987)
+(&#39;Misplaced Childhood&#39;, 1985)
+(&#39;El disco de tu corazón&#39;, 2007)
+(&#39;Sin restricciones&#39;, 2004)
+(&#39;All Around My Hat&#39;, 1975)
+(&#39;Below the Salt&#39;, 1972)
+(&#39;Commoners Crown&#39;, 1975)
+(&#39;Hark! The Village Wait&#39;, 1970)
+(&#39;Now We Are Six&#39;, 1974)
+(&#39;Parcel of Rogues&#39;, 1973)
+(&#39;Please to See the King&#39;, 1971)
+(&#39;Storm Force Ten&#39;, 1977)
+</pre></div>
+</div>
+</div>
+</div>
+<p>What Python <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data type</span></a> are the rows that we get? They are <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuples</span></a> (We can see this by checking the final row variable left over from the loop that we just ran above):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tuple
+</pre></div>
+</div>
+</div>
+</div>
+<p>The type of each entry in the tuple depends on the type of data stored in the corresponding column of the table in our database:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<p>The order of the entries in each tuple will match the order in which we requested the columns in the original SQL <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> command. So for example if it happened to be convenient to have the year first, we can ask for this column ordering:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT year, album FROM albums;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1976, &#39;Agents of Fortune&#39;)
+(1985, &#39;Club Ninja&#39;)
+(1981, &#39;Fire of Unknown Origin&#39;)
+(1977, &#39;Spectres&#39;)
+(1983, &#39;The Revölution by Night&#39;)
+(1980, &#39;I’m No Hero&#39;)
+(1961, &#39;The Young Ones&#39;)
+(1987, &#39;Clutching at Straws&#39;)
+(1985, &#39;Misplaced Childhood&#39;)
+(2007, &#39;El disco de tu corazón&#39;)
+(2004, &#39;Sin restricciones&#39;)
+(1975, &#39;All Around My Hat&#39;)
+(1972, &#39;Below the Salt&#39;)
+(1975, &#39;Commoners Crown&#39;)
+(1970, &#39;Hark! The Village Wait&#39;)
+(1974, &#39;Now We Are Six&#39;)
+(1973, &#39;Parcel of Rogues&#39;)
+(1971, &#39;Please to See the King&#39;)
+(1977, &#39;Storm Force Ten&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alternatively, if we would just like to have all the selected rows at once and work with them as a whole, then the <code class="docutils literal notranslate"><span class="pre">fetchall()</span></code> <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> puts them all into a <a class="reference internal" href="glossary.html#list"><span class="std std-doc">list</span></a> of <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuples</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, year FROM albums;&#39;</span><span class="p">)</span>
+<span class="n">all_albums</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">all_albums</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_albums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Agents of Fortune&#39;, 1976)
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we would simply like all the columns from a table, the <a class="reference internal" href="glossary.html#wildcard"><span class="std std-doc">wildcard</span></a> symbol <code class="docutils literal notranslate"><span class="pre">*</span></code> can stand for ‘all columns’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM albums;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0, &#39;Agents of Fortune&#39;, 1976, 0)
+(1, &#39;Club Ninja&#39;, 1985, 0)
+(2, &#39;Fire of Unknown Origin&#39;, 1981, 0)
+(3, &#39;Spectres&#39;, 1977, 0)
+(4, &#39;The Revölution by Night&#39;, 1983, 0)
+(5, &#39;I’m No Hero&#39;, 1980, 1)
+(6, &#39;The Young Ones&#39;, 1961, 1)
+(7, &#39;Clutching at Straws&#39;, 1987, 2)
+(8, &#39;Misplaced Childhood&#39;, 1985, 2)
+(9, &#39;El disco de tu corazón&#39;, 2007, 3)
+(10, &#39;Sin restricciones&#39;, 2004, 3)
+(11, &#39;All Around My Hat&#39;, 1975, 4)
+(12, &#39;Below the Salt&#39;, 1972, 4)
+(13, &#39;Commoners Crown&#39;, 1975, 4)
+(14, &#39;Hark! The Village Wait&#39;, 1970, 4)
+(15, &#39;Now We Are Six&#39;, 1974, 4)
+(16, &#39;Parcel of Rogues&#39;, 1973, 4)
+(17, &#39;Please to See the King&#39;, 1971, 4)
+(18, &#39;Storm Force Ten&#39;, 1977, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<p>But it is best to reserve use of <code class="docutils literal notranslate"><span class="pre">*</span></code> for just exploring the database and seeing what columns it contains. When actually working with the data we should explicitly select the columns we want, so that we can be sure of what we are getting.</p>
+</div>
+<div class="section" id="order-by">
+<h4>ORDER BY<a class="headerlink" href="#order-by" title="Permalink to this headline">¶</a></h4>
+<p>If we plan on using a <a class="reference internal" href="glossary.html#loop"><span class="std std-doc">loop</span></a> to go through rows one by one, then it sometimes makes sense to state explicitly what order we would like to get them in. The additional SQL <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keywords</span></a> <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> accomplish this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, year FROM albums ORDER BY year;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;The Young Ones&#39;, 1961)
+(&#39;Hark! The Village Wait&#39;, 1970)
+(&#39;Please to See the King&#39;, 1971)
+(&#39;Below the Salt&#39;, 1972)
+(&#39;Parcel of Rogues&#39;, 1973)
+(&#39;Now We Are Six&#39;, 1974)
+(&#39;All Around My Hat&#39;, 1975)
+(&#39;Commoners Crown&#39;, 1975)
+(&#39;Agents of Fortune&#39;, 1976)
+(&#39;Spectres&#39;, 1977)
+(&#39;Storm Force Ten&#39;, 1977)
+(&#39;I’m No Hero&#39;, 1980)
+(&#39;Fire of Unknown Origin&#39;, 1981)
+(&#39;The Revölution by Night&#39;, 1983)
+(&#39;Club Ninja&#39;, 1985)
+(&#39;Misplaced Childhood&#39;, 1985)
+(&#39;Clutching at Straws&#39;, 1987)
+(&#39;Sin restricciones&#39;, 2004)
+(&#39;El disco de tu corazón&#39;, 2007)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The default is ascending order, but we can request descending order with <code class="docutils literal notranslate"><span class="pre">DESC</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, year FROM albums ORDER BY year DESC;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;El disco de tu corazón&#39;, 2007)
+(&#39;Sin restricciones&#39;, 2004)
+(&#39;Clutching at Straws&#39;, 1987)
+(&#39;Club Ninja&#39;, 1985)
+(&#39;Misplaced Childhood&#39;, 1985)
+(&#39;The Revölution by Night&#39;, 1983)
+(&#39;Fire of Unknown Origin&#39;, 1981)
+(&#39;I’m No Hero&#39;, 1980)
+(&#39;Spectres&#39;, 1977)
+(&#39;Storm Force Ten&#39;, 1977)
+(&#39;Agents of Fortune&#39;, 1976)
+(&#39;All Around My Hat&#39;, 1975)
+(&#39;Commoners Crown&#39;, 1975)
+(&#39;Now We Are Six&#39;, 1974)
+(&#39;Parcel of Rogues&#39;, 1973)
+(&#39;Below the Salt&#39;, 1972)
+(&#39;Please to See the King&#39;, 1971)
+(&#39;Hark! The Village Wait&#39;, 1970)
+(&#39;The Young Ones&#39;, 1961)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="where">
+<h4>WHERE<a class="headerlink" href="#where" title="Permalink to this headline">¶</a></h4>
+<p>What if we want only certain rows? We could use Python <a class="reference internal" href="glossary.html#condition"><span class="std std-doc">conditions</span></a> to get only those that we want:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, year FROM albums;&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1977</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Spectres&#39;, 1977)
+(&#39;Storm Force Ten&#39;, 1977)
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, behind the scenes this isn’t such an efficient way of applying conditions to a database. Although the details are hidden from us here, deep in the bowels of our computer the above commands result in the database doing some computational work getting certain rows, and then Python doing some additional work separately checking each of those rows.</p>
+<p>It is instead a good habit to let the database do as much filtering and organizing as possible first, and then just use Python to work with the finished set of selected data. Since database software has been optimized specially for reading and selecting data, it will almost always be computationally faster and more memory-efficient at these tasks than a general-purpose program like Python. The difference will be imperceptible for a small database and simple condition like this one, but if you one day work with really big quantities of data you may notice that selection with Python is slower than with the database itself.</p>
+<p>The SQL <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> keyword applies a condition for selecting only certain rows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, year FROM albums WHERE year=1977;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Spectres&#39;, 1977)
+(&#39;Storm Force Ten&#39;, 1977)
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you read the example above carefully, you may have noticed a subtle syntactical difference between Python conditions and SQL conditions. The ‘is equal to’ <a class="reference internal" href="glossary.html#operator"><span class="std std-doc">operator</span></a> is <code class="docutils literal notranslate"><span class="pre">==</span></code> in Python (because the single <code class="docutils literal notranslate"><span class="pre">=</span></code> is used for <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assignment</span></a> instead), but in SQL it is just <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<p>Most other logical conditions are the same in the two languages. For example ‘greater than’ <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> and ‘less than’ <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, year FROM albums WHERE year&gt;1977;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Club Ninja&#39;, 1985)
+(&#39;Fire of Unknown Origin&#39;, 1981)
+(&#39;The Revölution by Night&#39;, 1983)
+(&#39;I’m No Hero&#39;, 1980)
+(&#39;Clutching at Straws&#39;, 1987)
+(&#39;Misplaced Childhood&#39;, 1985)
+(&#39;El disco de tu corazón&#39;, 2007)
+(&#39;Sin restricciones&#39;, 2004)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="join">
+<h4>JOIN<a class="headerlink" href="#join" title="Permalink to this headline">¶</a></h4>
+<p>So far we have been selecting data from a single table. We haven’t yet made use of one of the key features of a relational database, relations among tables. What if we want information about some of the albums, but we also want the associated artist information from the artists table?</p>
+<p>We learned already about the concept of ‘joining’ related tables above, and we implemented it (somewhat primitively) using just <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <a class="reference internal" href="glossary.html#dataframe"><span class="std std-doc">dataframes</span></a>. Now let’s see how to do it with an SQL command. The <a class="reference internal" href="glossary.html#keyword"><span class="std std-doc">keyword</span></a> that we need is <code class="docutils literal notranslate"><span class="pre">JOIN</span></code>. If we add a <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> to a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, we can select columns from more than one table after the tables have been joined. The slight additional complexity here is that we need to specify which column in one table relates to which column in the other table. Following <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> and the name of the table to join, the <code class="docutils literal notranslate"><span class="pre">ON</span></code> keyword specifies which columns are related. The syntax for this is to link the columns with <code class="docutils literal notranslate"><span class="pre">=</span></code> and to specify the columns as ‘<em>table.column</em>’.</p>
+<p>An example is clearer than an explanation. Recall that the artists table has an ‘id’ column and that the albums table has a corresponding ‘artist_id’ column:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, artist, country FROM albums JOIN artists ON albums.artist_id=artists.id;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Agents of Fortune&#39;, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+(&#39;All Around My Hat&#39;, &#39;Steeleye Span&#39;, &#39;GB&#39;)
+(&#39;Below the Salt&#39;, &#39;Steeleye Span&#39;, &#39;GB&#39;)
+(&#39;Club Ninja&#39;, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+(&#39;Clutching at Straws&#39;, &#39;Marillion&#39;, &#39;GB&#39;)
+(&#39;Commoners Crown&#39;, &#39;Steeleye Span&#39;, &#39;GB&#39;)
+(&#39;El disco de tu corazón&#39;, &#39;Miranda&#39;, &#39;RA&#39;)
+(&#39;Fire of Unknown Origin&#39;, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+(&#39;Hark! The Village Wait&#39;, &#39;Steeleye Span&#39;, &#39;GB&#39;)
+(&#39;I’m No Hero&#39;, &#39;Cliff Richard&#39;, &#39;GB&#39;)
+(&#39;Misplaced Childhood&#39;, &#39;Marillion&#39;, &#39;GB&#39;)
+(&#39;Now We Are Six&#39;, &#39;Steeleye Span&#39;, &#39;GB&#39;)
+(&#39;Parcel of Rogues&#39;, &#39;Steeleye Span&#39;, &#39;GB&#39;)
+(&#39;Please to See the King&#39;, &#39;Steeleye Span&#39;, &#39;GB&#39;)
+(&#39;Sin restricciones&#39;, &#39;Miranda&#39;, &#39;RA&#39;)
+(&#39;Spectres&#39;, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+(&#39;Storm Force Ten&#39;, &#39;Steeleye Span&#39;, &#39;GB&#39;)
+(&#39;The Revölution by Night&#39;, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+(&#39;The Young Ones&#39;, &#39;Cliff Richard&#39;, &#39;GB&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nice. Joining is my favorite bit of SQL. I like to imagine a robot saying ‘yes, master’ in a computery voice and then flying around among the shelves of a medieval library joining up all the requested pages of magical books.</p>
+</div>
+</div>
+<div class="section" id="miscellaneous-sql-syntax">
+<h3>Miscellaneous SQL syntax<a class="headerlink" href="#miscellaneous-sql-syntax" title="Permalink to this headline">¶</a></h3>
+<p>We now know the basics of the ‘Q’ part of SQL: querying the database for combinations of rows and columns from one or more tables. Before we move on to creating our own new database, let’s note a few odds and ends about the structure of SQL.</p>
+<div class="section" id="complex-commands">
+<h4>Complex commands<a class="headerlink" href="#complex-commands" title="Permalink to this headline">¶</a></h4>
+<p>First of all, we may combine multiple keywords for more complex operations. A common combination is a <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> to combine tables plus a <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> to filter to certain rows. For example, to get only the first song from each album, and display its name together with the album name:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT song, album FROM songs JOIN albums ON songs.album_id=albums.id WHERE number=1;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;This Ain’t the Summer of Love&#39;, &#39;Agents of Fortune&#39;)
+(&#39;White Flags&#39;, &#39;Club Ninja&#39;)
+(&#39;Fire of Unknown Origin&#39;, &#39;Fire of Unknown Origin&#39;)
+(&#39;Godzilla&#39;, &#39;Spectres&#39;)
+(&#39;Take Me Away&#39;, &#39;The Revölution by Night&#39;)
+(&#39;Take Another Look&#39;, &#39;I’m No Hero&#39;)
+(&#39;Friday Night&#39;, &#39;The Young Ones&#39;)
+(&#39;Hotel Hobbies&#39;, &#39;Clutching at Straws&#39;)
+(&#39;Pseudo Silk Kimono&#39;, &#39;Misplaced Childhood&#39;)
+(&#39;Prisionero&#39;, &#39;El disco de tu corazón&#39;)
+(&#39;Yo te diré&#39;, &#39;Sin restricciones&#39;)
+(&#39;Black Jack Davy&#39;, &#39;All Around My Hat&#39;)
+(&#39;Spotted Cow&#39;, &#39;Below the Salt&#39;)
+(&#39;Little Sir Hugh&#39;, &#39;Commoners Crown&#39;)
+(&#39;A Calling-On Song&#39;, &#39;Hark! The Village Wait&#39;)
+(&#39;Seven Hundred Elves&#39;, &#39;Now We Are Six&#39;)
+(&#39;One Misty Moisty Morning&#39;, &#39;Parcel of Rogues&#39;)
+(&#39;The Blacksmith&#39;, &#39;Please to See the King&#39;)
+(&#39;Awake Awake&#39;, &#39;Storm Force Ten&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>For all but the simplest SQL commands, it can improve the clarity of our program a lot if we put each new keyword on a separate line. If we are running our SQL in a Python program, we can do this with a triple-quoted string, which may span multiple lines:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT song, artist, album FROM songs</span>
+<span class="s2">JOIN albums ON songs.album_id=albums.id</span>
+<span class="s2">JOIN artists ON albums.artist_id=artists.id</span>
+<span class="s2">WHERE year&lt;1982 AND number=1;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">command</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;This Ain’t the Summer of Love&#39;, &#39;Blue Öyster Cult&#39;, &#39;Agents of Fortune&#39;)
+(&#39;Fire of Unknown Origin&#39;, &#39;Blue Öyster Cult&#39;, &#39;Fire of Unknown Origin&#39;)
+(&#39;Godzilla&#39;, &#39;Blue Öyster Cult&#39;, &#39;Spectres&#39;)
+(&#39;Take Another Look&#39;, &#39;Cliff Richard&#39;, &#39;I’m No Hero&#39;)
+(&#39;Friday Night&#39;, &#39;Cliff Richard&#39;, &#39;The Young Ones&#39;)
+(&#39;Black Jack Davy&#39;, &#39;Steeleye Span&#39;, &#39;All Around My Hat&#39;)
+(&#39;Spotted Cow&#39;, &#39;Steeleye Span&#39;, &#39;Below the Salt&#39;)
+(&#39;Little Sir Hugh&#39;, &#39;Steeleye Span&#39;, &#39;Commoners Crown&#39;)
+(&#39;A Calling-On Song&#39;, &#39;Steeleye Span&#39;, &#39;Hark! The Village Wait&#39;)
+(&#39;Seven Hundred Elves&#39;, &#39;Steeleye Span&#39;, &#39;Now We Are Six&#39;)
+(&#39;One Misty Moisty Morning&#39;, &#39;Steeleye Span&#39;, &#39;Parcel of Rogues&#39;)
+(&#39;The Blacksmith&#39;, &#39;Steeleye Span&#39;, &#39;Please to See the King&#39;)
+(&#39;Awake Awake&#39;, &#39;Steeleye Span&#39;, &#39;Storm Force Ten&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>In multi-line SQL commands like this one we can see the importance of the semicolon rule to indicate that the whole command is finished. In SQL, each new keyword in the command just adds on one more refinement to our query, so the computer needs some way of knowing when we are done adding refinements.</p>
+<p>(In fact, Python’s <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> module lets you get away with omitting the semicolon, since it assumes that the end of the command <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> must be the end of the command. But this is special to <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>. If you use SQL in other contexts, you must end commands with the semicolon, so you might as well get used to it in Python as well.)</p>
+</div>
+<div class="section" id="case">
+<h4>Case<a class="headerlink" href="#case" title="Permalink to this headline">¶</a></h4>
+<p>Unlike in Python, SQL keywords are not case-sensitive. We can in fact write them in lowercase and the result is the same:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;select album, year from albums;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Agents of Fortune&#39;, 1976)
+(&#39;Club Ninja&#39;, 1985)
+(&#39;Fire of Unknown Origin&#39;, 1981)
+(&#39;Spectres&#39;, 1977)
+(&#39;The Revölution by Night&#39;, 1983)
+(&#39;I’m No Hero&#39;, 1980)
+(&#39;The Young Ones&#39;, 1961)
+(&#39;Clutching at Straws&#39;, 1987)
+(&#39;Misplaced Childhood&#39;, 1985)
+(&#39;El disco de tu corazón&#39;, 2007)
+(&#39;Sin restricciones&#39;, 2004)
+(&#39;All Around My Hat&#39;, 1975)
+(&#39;Below the Salt&#39;, 1972)
+(&#39;Commoners Crown&#39;, 1975)
+(&#39;Hark! The Village Wait&#39;, 1970)
+(&#39;Now We Are Six&#39;, 1974)
+(&#39;Parcel of Rogues&#39;, 1973)
+(&#39;Please to See the King&#39;, 1971)
+(&#39;Storm Force Ten&#39;, 1977)
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, it is a widespread convention to write SQL keywords in UPPERCASE. This helps to visually distinguish them from the names of tables and columns. I personally like this style convention, because SQL does not have so many other syntactical features to mark out the components of its commands, but not everybody agrees so be prepared for the occasional angry pedant to explain to you <em>at great length</em> why it is not necessary to write SQL keywords in uppercase (they will probably also be chanting ‘sequel, sequel, sequel’ at you).</p>
+</div>
+<div class="section" id="comments">
+<h4>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h4>
+<p>Finally, <a class="reference internal" href="glossary.html#comment"><span class="std std-doc">comments</span></a> are possible in SQL, as they are in Python. SQL comments are preceded by two dashes (<code class="docutils literal notranslate"><span class="pre">--</span></code>) rather than the Python hash symbol (<code class="docutils literal notranslate"><span class="pre">#</span></code>). If you are just writing SQL commands in a Python program, you won’t really need comments within your SQL, since you can just put them in your Python program instead. But you can also put SQL commands in their own text files, and in this case you might want to add some explanatory comments for yourself or for your collaborators.</p>
+<p>Let’s close the example database since we have finished with it for now:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-tables">
+<h3>Creating tables<a class="headerlink" href="#creating-tables" title="Permalink to this headline">¶</a></h3>
+<p>Now let’s create our own new database. To keep the example brief, we will start by just creating the artists and albums tables. This should give you enough examples for your to be able to finish the songs table yourself as an exercise afterwards if you wish.</p>
+<p>The first step is to connect to a new database file, one that does not yet exist:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we want to create our tables in the new database. Let’s start with the artists table. Believe it or not, the command we need is <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code>.</p>
+<p>However, there is a bit more that we will need to add to the <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> command. We need to specify the following things for our new table:</p>
+<ul class="simple">
+<li><p>what columns it should contain</p></li>
+<li><p>what data type each column should contain (e.g. text, numbers, or something else like a date)</p></li>
+<li><p>what constraints should apply to the table (e.g. what duplicate values are not allowed)</p></li>
+</ul>
+<p>Following <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> and the name of the new table, in parentheses we place the column names, followed by their types, and possibly further information about the column.</p>
+<p>Let’s see the full command for creating the artists table, then go through it line by line.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_artists</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE artists</span>
+<span class="s2">(id INTEGER PRIMARY KEY,</span>
+<span class="s2">artist TEXT UNIQUE,</span>
+<span class="s2">country TEXT);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first column we have called ‘id’. This column will store an identifying number for each artist. The <code class="docutils literal notranslate"><span class="pre">INTEGER</span></code> keyword states that this column will contain <a class="reference internal" href="glossary.html#integer"><span class="std std-doc">integers</span></a> (the names of most <a class="reference internal" href="glossary.html#type"><span class="std std-doc">data types</span></a> in SQL are easily understandable). The <code class="docutils literal notranslate"><span class="pre">PRIMARY</span> <span class="pre">KEY</span></code> statement is a bit more cryptic. These keywords together state that this column should be used as the main ‘ID’ column for the table. Telling our database explicitly that one of the columns is the <code class="docutils literal notranslate"><span class="pre">PRIMARY</span> <span class="pre">KEY</span></code> column has two main advantages. First, the database will ensure automatically that the numbers in this column are never duplicated, so that each artist row has a unique ID number. Second, when we add new artists, the database will automatically assign them an ID number in this column, without us having to decide on ID numbers ourselves.</p>
+<p>The second column we have called ‘artist’. Since this column is for the name of the artist, we have made it of type <code class="docutils literal notranslate"><span class="pre">TEXT</span></code>. In addition, we have used the <code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code> keyword to apply the constraint that no duplicate artist names are allowed.</p>
+<p>Finally, the third column is the name of the artist’s country of origin. This too is of type <code class="docutils literal notranslate"><span class="pre">TEXT</span></code>. We have not added a <code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code> constraint here, since more than one artist may come from the same country, so duplicate countries are allowed.</p>
+<p>Let’s run our command with the connection to the new database:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">create_artists</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x7fbb14a42490&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see from the output of our <code class="docutils literal notranslate"><span class="pre">execute()</span></code> command, we get a <code class="docutils literal notranslate"><span class="pre">Cursor</span></code> back from a <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> operation too, just as we do from a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> operation. But we don’t want to read anything this time, so there is no need for us to <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assign</span></a> it into a variable and then work with it as we did after a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>.</p>
+<p>Before we move on and add data to our new table, let’s also create the albums table, to see a few more useful bits of SQL:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_albums</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">CREATE TABLE albums</span>
+<span class="s2">(id INTEGER PRIMARY KEY,</span>
+<span class="s2">album TEXT,</span>
+<span class="s2">year INTEGER,</span>
+<span class="s2">artist_id INTEGER,</span>
+<span class="s2">UNIQUE(album, artist_id),</span>
+<span class="s2">FOREIGN KEY(artist_id) REFERENCES artists(id));</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">create_albums</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x7fbb14a42880&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first few lines of this <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> command should be clear given what we already saw when we created the artists table. The albums table too has a <code class="docutils literal notranslate"><span class="pre">PRIMARY</span> <span class="pre">KEY</span></code>, and it has some <code class="docutils literal notranslate"><span class="pre">INTEGER</span></code> and <code class="docutils literal notranslate"><span class="pre">TEXT</span></code> columns.</p>
+<p>There are two new features of SQL here. The first is that in this table we have a <code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code> constraint that refers to a <em>combination</em> of columns rather than a single column. We want to allow for the possibility that two different artists have albums with the same name (for example ‘<a class="reference external" href="https://en.wikipedia.org/wiki/Smile_(disambiguation)#Albums">Smile</a>’), but prevent the same artist from having two albums in the database with the same name. So it is the combination of values in the ‘album’ and ‘artist_id’ columns that must be unique. For this, we place the <code class="docutils literal notranslate"><span class="pre">UNIQUE</span></code> constraint on its own line, followed by the combination of columns, in parentheses and separated by commas.</p>
+<p>The second new feature is the final line, containing the keywords <code class="docutils literal notranslate"><span class="pre">FOREIGN</span> <span class="pre">KEY</span></code> and <code class="docutils literal notranslate"><span class="pre">REFERENCES</span></code>. This line declares that the numbers in the ‘artist_id’ column refer to the ‘id’ column in the artists table. A column that links to another table is known as a ‘foreign key’ (‘foreign’ because it refers to something outside the current table). The name of the linking column in the current table is in the first set of parentheses, and the name of the ‘foreign’ table, along with the name of its corresponding linking column, follows the <code class="docutils literal notranslate"><span class="pre">REFERENCES</span></code> keyword.</p>
+<p>We have created our first two tables. To make any changes to a database actually take effect, we need to ‘<a class="reference internal" href="glossary.html#commit"><span class="std std-doc">commit</span></a>’ them to the database.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then let’s also close the connection to the database file, so that we are free to go and open it in the DB Browser program.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you now head to the DB Browser and open the new file there, you should see the new tables. They will of course be empty of data, since we haven’t added any rows to the tables yet. You can try adding some manually, by going to the ‘Browse Data’ tab and clicking ‘New Record’ (in the vocabulary of relational databases, rows are often called ‘records’). Test out some of the constraints that we set, for example by trying to add two artists with the same name. You should see that a warning window prevents you from doing so.</p>
+</div>
+<div class="section" id="adding-data">
+<h3>Adding data<a class="headerlink" href="#adding-data" title="Permalink to this headline">¶</a></h3>
+<p>Make sure you close the DB Browser if you opened it, because we now want to open our database file again in Python so that we can add data to it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="insert">
+<h4>INSERT<a class="headerlink" href="#insert" title="Permalink to this headline">¶</a></h4>
+<p>To put new rows into a table, we need to specify what values should go into what columns. For our artists table, this means that we need to specify a value for the artist’s name and for their country of origin (remember that the ‘id’ column is a <code class="docutils literal notranslate"><span class="pre">PRIMARY</span> <span class="pre">KEY</span></code>, so the database will generate values for this column automatically).</p>
+<p>The keywords we need are <code class="docutils literal notranslate"><span class="pre">INSERT</span> <span class="pre">INTO</span></code>. Then we need:</p>
+<ul class="simple">
+<li><p>the name of the table to put the row into</p></li>
+<li><p>the column names, in parentheses and separated by commas</p></li>
+<li><p>the keyword <code class="docutils literal notranslate"><span class="pre">VALUES</span></code>, followed by the values to insert into those columns, also in parentheses and separated by commas</p>
+<ul>
+<li><p>The order of the values should correspond to the order that we used for the columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TEXT</span></code> values should be enclosed in quote marks (<code class="docutils literal notranslate"><span class="pre">''</span></code>), just as for text in Python.</p></li>
+</ul>
+</li>
+</ul>
+<p>Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO artists (artist, country) VALUES(&#39;Blue Öyster Cult&#39;, &#39;USA&#39;);&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x7fbb14a31ab0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s check the result with a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT id, artist, country FROM artists;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that we got a value for the ‘id’ <code class="docutils literal notranslate"><span class="pre">PRIMARY</span> <span class="pre">KEY</span></code> column without specifying it explicitly. More importantly, note that when we specify the values, their order must match the order of the column names <em>as given in our SQL INSERT command</em>, not their order <em>in the table</em>. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO artists (country, artist) VALUES(&#39;HK&#39;, &#39;林憶蓮&#39;);&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM artists;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+(2, &#39;林憶蓮&#39;, &#39;HK&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="constraints-again">
+<h4>Constraints again<a class="headerlink" href="#constraints-again" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">INSERT</span></code> commands are subject to the constraints that we set when we created the tables in the database. If we try an <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> that violates one of these constraints, we get an <a class="reference internal" href="glossary.html#exception"><span class="std std-doc">exception</span></a>, and the accompanying error message is fairly clear:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO artists (artist, country) VALUES(&#39;Blue Öyster Cult&#39;, &#39;USA&#39;);&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IntegrityError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">45</span><span class="o">-</span><span class="mi">88</span><span class="n">f83c01b347</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO artists (artist, country) VALUES(&#39;Blue Öyster Cult&#39;, &#39;USA&#39;);&quot;</span><span class="p">)</span>
+
+<span class="ne">IntegrityError</span>: UNIQUE constraint failed: artists.artist
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can handle these exceptions with a <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">except</span></code> <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statement</span></a>, as we learned in the <a class="reference internal" href="conditions.html"><span class="doc std std-doc">lesson on conditions</span></a>. Since the <code class="docutils literal notranslate"><span class="pre">IntegrityError</span></code> exception that we want to catch comes from the <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> module, we need to specify that it is to be found in the <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> <a class="reference internal" href="glossary.html#namespace"><span class="std std-doc">namespace</span></a>, using the ‘dot’ syntax (which we learned about in the <a class="reference internal" href="modules.html#namespaces"><span class="std std-doc">lesson on modules</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO artists (artist, country) VALUES(&#39;Blue Öyster Cult&#39;, &#39;USA&#39;);&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">IntegrityError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;That one is already in the database.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>That one is already in the database.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alternatively, SQL provides an <code class="docutils literal notranslate"><span class="pre">OR</span> <span class="pre">IGNORE</span></code> option for <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>, which either inserts a new row or just silently ignores our request to do so if the <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> violates a constraint:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT OR IGNORE INTO artists (artist, country) VALUES(&#39;Blue Öyster Cult&#39;, &#39;USA&#39;);&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x7fbb14a2d570&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="python-variables">
+<h4>Python variables<a class="headerlink" href="#python-variables" title="Permalink to this headline">¶</a></h4>
+<p>A Python program for interacting with a database is not going to be very useful if it can only execute fixed SQL commands that are already written explicitly in the Python code, like in the two <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> examples above. More often we will want to get some information from elsewhere, for example from a file, from the internet, or from the human user of the program, and then <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> this information into our database, whatever it happens to be.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> module of course allows us to do this. After the <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> containing the SQL command, the second <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> to <code class="docutils literal notranslate"><span class="pre">execute()</span></code> can be a <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuple</span></a> of values. These will be inserted into the SQL command wherever the placeholder <code class="docutils literal notranslate"><span class="pre">'?'</span></code> character appears.</p>
+<p>Like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_artist</span> <span class="o">=</span> <span class="s1">&#39;سيد خليفة&#39;</span>
+<span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;SUD&#39;</span>
+
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO artists (artist, country) VALUES(?, ?);&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">new_artist</span><span class="p">,</span> <span class="n">country</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM artists;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+(2, &#39;林憶蓮&#39;, &#39;HK&#39;)
+(3, &#39;سيد خليفة&#39;, &#39;SUD&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The variables in the tuple can for example come from user input, possibly followed by some checking or modification, for example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_artist</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Name an artist to add to the database: &#39;</span><span class="p">)</span>
+<span class="n">new_artist</span> <span class="o">=</span> <span class="n">new_artist</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">new_artist</span> <span class="o">==</span> <span class="s1">&#39;Kanye West&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">country</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What country does that artist come from? &#39;</span><span class="p">)</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO artists (artist, country) VALUES(?, ?);&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">new_artist</span><span class="p">,</span> <span class="n">country</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM artists;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name an artist to add to the database: 박재상
+What country does that artist come from? South Korea
+(1, &#39;Blue Öyster Cult&#39;, &#39;USA&#39;)
+(2, &#39;林憶蓮&#39;, &#39;HK&#39;)
+(3, &#39;سيد خليفة&#39;, &#39;SUD&#39;)
+(4, &#39;박재상&#39;, &#39;South Korea&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="foreign-keys">
+<h4>Foreign keys<a class="headerlink" href="#foreign-keys" title="Permalink to this headline">¶</a></h4>
+<p>Now we would like to add a new album for one of our new artists. This is very slightly trickier, because we need first to find out what artist ID number the database has assigned the artist in the artists table, so that we can put this ID number into the ‘artist_id’ column of the albums table.</p>
+<p>We can find out the artist ID number for an existing artist by using an SQL <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> to get that artist from the artists table. In this case, we know that our <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> is only going to get one row, so we can use the <code class="docutils literal notranslate"><span class="pre">fetchone()</span></code> method rather than a loop or <code class="docutils literal notranslate"><span class="pre">fetchall()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT id, artist FROM artists WHERE artist=&#39;林憶蓮&#39;;&quot;</span><span class="p">)</span>
+<span class="n">artist_row</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">artist_row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, &#39;林憶蓮&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>And now we can put just the artist ID number into a Python variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">artist_id</span> <span class="o">=</span> <span class="n">artist_row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And use it for the ‘artist_id’ column in an <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> into the albums table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_album</span> <span class="o">=</span> <span class="s1">&#39;憶蓮&#39;</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">1987</span>
+
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO albums (album, year, artist_id) VALUES(?, ?, ?);&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">new_album</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">artist_id</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM albums;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, &#39;憶蓮&#39;, 1987, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>To make sure, let’s just check that we really fetched the correct artist ID. We can confirm this by trying to use it in a <code class="docutils literal notranslate"><span class="pre">JOIN</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, artist FROM albums JOIN artists ON albums.artist_id=artists.id;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;憶蓮&#39;, &#39;林憶蓮&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great.</p>
+<p>Inserting new rows for which we might need to first fetch the right foreign keys from other tables is a bit tedious. If we are writing a program that will need to do this sequence of operations often, it is a good idea to put it into a <a class="reference internal" href="glossary.html#function"><span class="std std-doc">function</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">insert_new_album</span><span class="p">(</span><span class="n">connection</span><span class="p">,</span> <span class="n">album</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Inserts a new album into the albums table.</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">        connection: sqlite3.Connection to the database</span>
+<span class="sd">        album: str album name</span>
+<span class="sd">        artist: str artist name</span>
+<span class="sd">        year: int album release year</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">artists_result</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT id FROM artists WHERE artist=?;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">artist</span><span class="p">,))</span>
+    <span class="n">artist_id</span> <span class="o">=</span> <span class="n">artists_result</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">album_values</span> <span class="o">=</span> <span class="p">(</span><span class="n">album</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">artist_id</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO albums (album, year, artist_id) VALUES(?, ?, ?);&#39;</span><span class="p">,</span> <span class="n">album_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we can use the function to add many new albums without having to repeat all the SQL commands in our program every time:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">insert_new_album</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">album</span><span class="o">=</span><span class="s1">&#39;Cultösaurus Erectus&#39;</span><span class="p">,</span> <span class="n">artist</span><span class="o">=</span><span class="s1">&#39;Blue Öyster Cult&#39;</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="mi">1980</span><span class="p">)</span>
+<span class="n">insert_new_album</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">album</span><span class="o">=</span><span class="s1">&#39;Imaginos&#39;</span><span class="p">,</span> <span class="n">artist</span><span class="o">=</span><span class="s1">&#39;Blue Öyster Cult&#39;</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="mi">1988</span><span class="p">)</span>
+<span class="n">insert_new_album</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">album</span><span class="o">=</span><span class="s1">&#39;野花&#39;</span><span class="p">,</span> <span class="n">artist</span><span class="o">=</span><span class="s1">&#39;林憶蓮&#39;</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="mi">1991</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT album, artist FROM albums JOIN artists ON albums.artist_id=artists.id;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Cultösaurus Erectus&#39;, &#39;Blue Öyster Cult&#39;)
+(&#39;Imaginos&#39;, &#39;Blue Öyster Cult&#39;)
+(&#39;憶蓮&#39;, &#39;林憶蓮&#39;)
+(&#39;野花&#39;, &#39;林憶蓮&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sql-scripts">
+<h3>SQL scripts<a class="headerlink" href="#sql-scripts" title="Permalink to this headline">¶</a></h3>
+<p>That covers everything we need to know in order to write a Python program that creates our target database file and allows us to write new data into it. We haven’t yet created the songs table or added any songs, but this can be accomplished by adapting some of the SQL examples from above. If you would like to try writing SQL commands to create the songs table and to add a new song, you can try it out now as an exercise.</p>
+<p>If you want to see the final <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> command for the songs table, you can find it in the file <span class="xref myst">songs_tables.sql</span>, along with the commands for the other two tables. This file is a complete SQL <a class="reference internal" href="glossary.html#script"><span class="std std-doc">script</span></a>, i.e. a text file containing commands intended to be run one after the other. We can create script files for SQL just as we can for Python.</p>
+<p>If we have a series of fairly long SQL commands that we would like to use in a Python program (or indeed some other program), then we can store them in a separate script file and run this file when necessary. Let’s see this in action. First we read in the commands in <em>songs_tables.sql</em>, using Python’s functions for reading files as we learned about in the <a class="reference internal" href="files.html"><span class="doc std std-doc">lesson on files</span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_tables</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;songs_tables.sql&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To check it, let’s look only at the first <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> command, so as not to spoil the fun if you want to try writing the one for the songs table yourself:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">create_tables</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="s1">&#39;-- albums:&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-- SQL script for creating the tables in the &#39;songs.db&#39; database.
+
+-- artists:
+-- no duplicate artist names
+CREATE TABLE IF NOT EXISTS artists
+(id INTEGER PRIMARY KEY,
+artist TEXT UNIQUE,
+country TEXT);
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see some SQL <a class="reference internal" href="glossary.html#comment"><span class="std std-doc">comments</span></a>, preceded by <code class="docutils literal notranslate"><span class="pre">--</span></code>. There is also one other tiny new flourish here. The self-explanatory <code class="docutils literal notranslate"><span class="pre">IF</span> <span class="pre">NOT</span> <span class="pre">EXISTS</span></code> keywords ensure that a table is only created if it does not already exist in the database. This is sometimes useful in a program that could be either connecting to an existing database or to a new one, depending on when and where we are running the program.</p>
+<p>We can run the commands we just loaded from the SQL script file using the <code class="docutils literal notranslate"><span class="pre">executescript()</span></code> <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> of our database <code class="docutils literal notranslate"><span class="pre">Connection</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="n">create_tables</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x7fbad9225b90&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>And now the songs table has been created (the other two tables exist already as a result of our earlier commands and so their <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> commands were ignored). We can go ahead and insert a new song (not forgetting that we need to first fetch the corresponding album ID number from the albums table):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_song</span> <span class="o">=</span> <span class="s1">&#39;激情&#39;</span>
+<span class="n">number</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">album</span> <span class="o">=</span> <span class="s1">&#39;憶蓮&#39;</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT id FROM albums WHERE album=?;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">album</span><span class="p">,))</span>
+<span class="n">album_id</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO songs (song, number, album_id) VALUES(?, ?, ?);&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">new_song</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">album_id</span><span class="p">))</span>
+
+<span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT song, album, artist FROM songs</span>
+<span class="s2">JOIN albums ON songs.album_id=albums.id</span>
+<span class="s2">JOIN artists ON albums.artist_id=artists.id;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">command</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;激情&#39;, &#39;憶蓮&#39;, &#39;林憶蓮&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Of course, this too would be better turned into a function, like the one we created above for inserting a new album. Another exercise for you.</p>
+<p>We have made quite a few changes to our new database since we last opened it, so let’s commit the changes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sql-injection">
+<h3>SQL injection<a class="headerlink" href="#sql-injection" title="Permalink to this headline">¶</a></h3>
+<p>Something might be bothering you about many of the examples above. Why does <code class="docutils literal notranslate"><span class="pre">sqlite</span></code> have its own ‘placeholder’ character (the <code class="docutils literal notranslate"><span class="pre">'?'</span></code>) for inserting values into SQL commands? Why not just use the existing Python <a class="reference internal" href="glossary.html#string"><span class="std std-doc">string</span></a> <a class="reference internal" href="glossary.html#method"><span class="std std-doc">method</span></a> <code class="docutils literal notranslate"><span class="pre">format()</span></code> with its <code class="docutils literal notranslate"><span class="pre">'{}'</span></code> placeholder?</p>
+<p>For example, we could insert Python variables into an SQL command with string formatting like this instead:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO songs (song, number, album_id) VALUES(&#39;</span><span class="si">{}</span><span class="s2">&#39;, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">);&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_song</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">album_id</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INSERT INTO songs (song, number, album_id) VALUES(&#39;激情&#39;, 6, 1);
+</pre></div>
+</div>
+</div>
+</div>
+<p>This works. But there is a reason that <code class="docutils literal notranslate"><span class="pre">sqlite</span></code> provides its own way of inserting variables into SQL commands, and there is a good reason not to do it with standard Python string formatting instead.</p>
+<p>The reason is that the variables that we insert won’t necessarily always come from trusted sources. If they come from unknown users, for example people entering them in an online form on our website, then someone could make mischief by entering <em>an SQL command</em> instead of whatever value we expect them to enter. If our program just inserts the user’s input and runs the resulting SQL without checking it, then it is allowing anyone to just run their own SQL commands with our database.</p>
+<p>Let’s make this more concrete with an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_artist</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Name an artist to add to the database: &#39;</span><span class="p">)</span>
+<span class="n">country</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What country does that artist come from? &#39;</span><span class="p">)</span>
+
+<span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO artists (artist, country) VALUES(&#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;</span><span class="si">{}</span><span class="s2">&#39;);&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_artist</span><span class="p">,</span> <span class="n">country</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name an artist to add to the database: foo
+What country does that artist come from? foo&#39;); DROP TABLE artists; CREATE TABLE artists (name TEXT); INSERT INTO artists (name) VALUES (&#39;Kanye West&#39;), (&#39;Kanye West&#39;), (&#39;Kanye West&#39;), (&#39;Kanye West&#39;), (&#39;Kanye West&#39;); --
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sqlite3.Cursor at 0x7fbad9225810&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>That user’s input looked a bit suspicious. Let’s see the SQL command that resulted from inserting their input into our SQL string:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INSERT INTO artists (artist, country) VALUES(&#39;foo&#39;, &#39;foo&#39;); DROP TABLE artists; CREATE TABLE artists (name TEXT); INSERT INTO artists (name) VALUES (&#39;Kanye West&#39;), (&#39;Kanye West&#39;), (&#39;Kanye West&#39;), (&#39;Kanye West&#39;), (&#39;Kanye West&#39;); --&#39;);
+</pre></div>
+</div>
+</div>
+</div>
+<p>This naughty user made use of a few features of SQL syntax to insert some new commands into our string of SQL. First, they used the semicolon to prematurely end our intended SQL command. As we have seen, the semicolon marks the end of a command in SQL. Then at the end of their input, the naughty user placed the <a class="reference internal" href="glossary.html#comment"><span class="std std-doc">comment</span></a> characters <code class="docutils literal notranslate"><span class="pre">--</span></code> to prevent the remainder of our SQL from being run. In between these two things, the user inserted some of their own SQL commands.</p>
+<p>This method of hacking someone else’s database is known as ‘SQL injection’. In this particular case, the attacker has deleted our artists table, created one of their own, and filled it with ‘Kanye West’:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM artists;&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Kanye West&#39;,)
+(&#39;Kanye West&#39;,)
+(&#39;Kanye West&#39;,)
+(&#39;Kanye West&#39;,)
+(&#39;Kanye West&#39;,)
+</pre></div>
+</div>
+</div>
+</div>
+<p>But in more serious cases, attackers could fetch private data such as passwords or billing information, erase particular data, or change the constraints set on the database so as to allow other malicious activity. You can see a humorous example of SQL injection in <a class="reference external" href="https://xkcd.com/327">this famous xkccd comic</a>.</p>
+<p>Behind the scenes, a decent SQL package like <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> has its own checks for SQL injection. Whenever possible, we should use whatever method the package documentation recommends for inserting values from Python variables, rather than try to do it directly by formatting or <a class="reference internal" href="glossary.html#concatenate"><span class="std std-doc">concatenating</span></a> strings into SQL commands.</p>
+<p>On that note, we are done with SQL. Try an exercise.</p>
+</div>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>Open the example database file <span class="xref myst">songs.db</span> in the DB Browser program. Go to the ‘Execute SQL’ tab and run SQL commands there for each of the following tasks:</p>
+<ul class="simple">
+<li><p>Insert a new artist called Я́нка, from Russia (‘RUS’).</p></li>
+<li><p>Show all the artists and their countries of origin.</p></li>
+<li><p>Show the names of the first three songs from every album.</p></li>
+<li><p>Show the names of all the albums by Steeleye Span, ordered from oldest to newest.</p></li>
+<li><p>Show the names of all the songs by Blue Öyster Cult from albums before 1975.</p></li>
+</ul>
+<p>As an extension, you can also try writing a Python program that opens the database, runs the same commands, then commits the changes and closes the database.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="internet.html" title="previous page">The internet</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
