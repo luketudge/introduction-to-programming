@@ -1,6 +1,7 @@
 bokeh
 bs4
 flake8
+ghp-import
 imageio
 jupyter-book
 jupyterlab

@@ -4,7 +4,7 @@ Materials for the *Introduction to Programming* class.
 
 ## Reading the notes
 
-The [GitHub Pages version of this repository](https://luketudge.github.io/introduction-to-programming/content) provides static (non-interactive) versions of the topic notes. Interactive versions are available either on Binder or on Google Colab.
+The [GitHub Pages version of this repository](https://luketudge.github.io/introduction-to-programming) provides static (non-interactive) versions of the topic notes. Interactive versions are available either on Binder or on Google Colab.
 
 [![](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/luketudge/introduction-to-programming/master?filepath=content)
 
@@ -12,7 +12,7 @@ The [GitHub Pages version of this repository](https://luketudge.github.io/introd
 
 ## Example programs
 
-There are some example programs in the [examples directory](content/examples). These are linked to in the notes.
+There are some example programs in the [examples directory](content/examples). These are referred to in the notes.
 
 ## Contributing
 

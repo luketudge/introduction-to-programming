@@ -1,5 +1,6 @@
 #### Project-specific ignores ####
 
+content/_build/
 content/.guardian_api_key.txt
 
 

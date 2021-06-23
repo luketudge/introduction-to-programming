@@ -23,6 +23,8 @@ parts:
     - file: command_line
     - file: testing
     - file: github
+  - caption: specialist topics
+    chapters:
     - file: arrays
     - file: images
     - file: data_analysis

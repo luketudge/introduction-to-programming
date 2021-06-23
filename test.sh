@@ -4,4 +4,4 @@ echo '#### Tests ####'
 pytest --verbose tests
 
 echo '#### Style checks ####'
-flake8 content tests tools
+flake8 content tests
