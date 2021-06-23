@@ -6,3 +6,6 @@ html:
   use_issues_button: true
 execute:
   exclude_patterns: [types.ipynb, functions.ipynb, databases.ipynb]
+sphinx:
+  config:
+    myst_heading_anchors: 2
