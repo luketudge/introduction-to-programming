@@ -7,14 +7,18 @@ import os
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-LOCAL_URL = 'file://' + os.path.join(os.path.dirname(BASE_PATH), 'content', 'index.html')
-REMOTE_URL = 'https://luketudge.github.io/introduction-to-programming/content'
-REMOTE_URL_EXAMPLES = REMOTE_URL + '/examples/intro_prog_examples.zip'
+LOCAL_URL = 'file://' + os.path.join(os.path.dirname(BASE_PATH), 'content', '_build', 'html', 'index.html')
+REMOTE_URL = 'https://luketudge.github.io/introduction-to-programming/'
+REMOTE_URL_EXAMPLES = 'https://github.com/luketudge/introduction-to-programming/blob/master/content/examples/intro_prog_examples.zip'
 
 
 # %% Pages
 
 TOPIC_PAGES = [
+    'Welcome',
+    'Setup',
+    'Readings',
+    'Glossary',
     'Creating a computer program with Python',
     'Variables and data types',
     'Sequences and mappings',
@@ -39,6 +43,7 @@ TOPIC_PAGES = [
 # %% Filenames
 
 EXAMPLE_FILES = [
+    'README.md',
     'age_next_year.py',
     'alternative_ending.py',
     'circle.py',
@@ -86,12 +91,3 @@ DATA_FILES = [
 ]
 
 DATA_FILES = ['data/' + f for f in DATA_FILES]
-
-
-# %% Selenium parameters
-
-# Explicit wait (mainly for image loading).
-PAGE_WAIT = 1.0
-
-# For comparing screenshots, simplify by comparing only the first n bytes.
-IMAGE_BYTES = 15000
