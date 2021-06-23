@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Readings" href="readings.html" />
-    <link rel="prev" title="Spyder configuration" href="spyder.html" />
+    <link rel="next" title="Variables and data types" href="types.html" />
+    <link rel="prev" title="Glossary" href="glossary.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -83,7 +83,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="index.html">
-   Topics
+   Welcome
   </a>
  </li>
 </ul>
@@ -95,17 +95,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="setup.html">
-   Software
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="spyder.html">
-   Spyder configuration
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Creating a computer program with Python
+   Setup
   </a>
  </li>
  <li class="toctree-l1">
@@ -116,6 +106,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Creating a computer program with Python
   </a>
  </li>
 </ul>
@@ -347,18 +342,6 @@
   <a class="reference internal nav-link" href="#more-python-programs">
    More Python programs
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#greeting-py">
-     greeting.py
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#greeting-personal-py">
-     greeting_personal.py
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-an-ide">
@@ -433,7 +416,7 @@
 <p>The rules governing what counts as a valid command in a programming language are known as the <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a> of that programming language. Programming languages are strict about correct syntax, so make sure that you have put the right number of parentheses and quotation marks in the right places.</p>
 <p>Now save your new text file somewhere on your computer with the file extension <em>.py</em>, for example as <em>my_program.py</em>. Note also that most programming languages do not cope well with files that have spaces in their names (the interpreter may think that a file name with a space refers to two separate files or commands), so avoid spaces in the filename and use the underscore character (<code class="docutils literal notranslate"><span class="pre">_</span></code>) to separate words instead.</p>
 <p>The <em>.py</em> file extension does not alter the properties of the file in any special way; it is just a way of indicating that the file contains commands intended for Python. The file remains just a text file. We can now send it to the Python interpreter in order to run it. (To do this you will need a Python interpreter installed on your computer. Follow the installation instructions <a class="reference internal" href="setup.html"><span class="doc std std-doc">here</span></a> if you haven’t already.)</p>
-<p>There are various ways to run a <em>.py</em> file with the Python interpreter. For example, we can just run it the old-school way from the command line. However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first installed and <a class="reference internal" href="spyder.html"><span class="doc std std-doc">configured</span></a> Spyder, then start it up. In Spyder, use the <strong>Open</strong> option from the <strong>File</strong> menu (or the ‘open’ icon 📂) to open the text file that you just created.</p>
+<p>There are various ways to run a <em>.py</em> file with the Python interpreter. For example, we can just run it the old-school way from the command line. However, the steps for using the command line vary across different operating systems, so to avoid confusion we will omit this method here and instead go to the Spyder IDE for Python and open the file there. Make sure that you have first <a class="reference internal" href="setup.html#spyder"><span class="std std-doc">installed and configured Spyder</span></a>, then start it up. In Spyder, use the <strong>Open</strong> option from the <strong>File</strong> menu (or the ‘open’ icon 📂) to open the text file that you just created.</p>
 <p>The green <strong>Run</strong> arrow (▶) will run the currently open Python file. Click on this arrow, and then look at the <strong>Console</strong> window to see the effects of running your program. Whereas the editor window displays the <em>contents</em> of the text file containing the program, just as any other text editor would, the console window shows the <em>effects</em> of running the program (or of running other Python commands).</p>
 <p><img alt="" src="_images/console.png" /></p>
 <p>You should see the contents of the quoted text in your program (e.g. <code class="docutils literal notranslate"><span class="pre">Hello.</span></code>) printed out in the console window like in the screenshot above. We have now created and run our first Python program.</p>
@@ -464,9 +447,6 @@
 </div>
 <div class="section" id="more-python-programs">
 <h2>More Python programs<a class="headerlink" href="#more-python-programs" title="Permalink to this headline">¶</a></h2>
-<p>You can find all the example programs <span class="xref myst">here</span>. The compressed file <span class="xref myst">intro_prog_examples.zip</span> contains all the programs. Download this file and unzip it to the directory that you are working in.</p>
-<div class="section" id="greeting-py">
-<h3><a class="reference external" href="http://greeting.py">greeting.py</a><a class="headerlink" href="#greeting-py" title="Permalink to this headline">¶</a></h3>
 <p>Open the example program <span class="xref myst">greeting.py</span> in Spyder.</p>
 <p>This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.</p>
 <p>The first of these is the <a class="reference internal" href="glossary.html#docstring"><span class="std std-doc">docstring</span></a> at the top of the program:</p>
@@ -496,9 +476,6 @@
 <p>The exact contents of this automatic starter text may vary a little depending on how Spyder is configured on your operating system. For now, you may ignore any lines that appear before the docstring (like <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">-*-</span> <span class="pre">coding:</span> <span class="pre">utf-8</span> <span class="pre">-*-</span></code>); just leave these as they are and we will learn about them later.</p>
 <p>The second new feature in <em><a class="reference external" href="http://greeting.py">greeting.py</a></em> is the <a class="reference internal" href="glossary.html#comment"><span class="std std-doc">inline comment</span></a> on <span class="xref myst">line 8</span>. This line is clearly not a Python command. It is instead written in plain English. Python will ignore any text that follows a hash symbol <code class="docutils literal notranslate"><span class="pre">#</span></code>. This allows us to use this symbol to introduce human-readable explanations of the workings of our program. In such a simple program as this, the comment on line 8 is somewhat superfluous; the command on the following line is clear enough on its own. However, as a beginner you should get into the habit of writing comments for most of the Python commands that you put into your program. This helps you to focus and remember how you created your programs, and helps others understand what you did or where you went wrong if your program doesn’t work as you expected. Later when you have more experience you can save explanatory comments just for those sections of your program that are too complex to understand at a first glance.</p>
 <p>Finally, on <span class="xref myst">line 6</span> we see an example of another use of comments: to make a ‘note to self’ of what still needs to be added to the program. It is conventional to mark such comments with the text <code class="docutils literal notranslate"><span class="pre">TODO</span></code>. Here we have noted that we would like to make the greeting personal by asking the user to type in their name. This is what the next example program achieves.</p>
-</div>
-<div class="section" id="greeting-personal-py">
-<h3>greeting_personal.py<a class="headerlink" href="#greeting-personal-py" title="Permalink to this headline">¶</a></h3>
 <p>Open the <span class="xref myst">greeting_personal.py</span> program. Before you run it, read the Python commands that it contains and try to guess what the effect of running the program will be. Then run the program to check your guess.</p>
 <p>This program requires the user to type in some information. As with <em><a class="reference external" href="http://greeting.py">greeting.py</a></em>, all the action occurs over in the console window. After you click on the ‘run’ icon, look to the console window. You should see that the program has displayed a ‘prompt’, i.e. some text telling the user what they are expected to do, and is now waiting for the user to type something in.</p>
 <p><img alt="" src="_images/input.png" /></p>
@@ -519,7 +496,6 @@
 <p>Now look at <span class="xref myst">line 13</span> of <em>greeting_personal.py</em>. This line also assigns a new variable, called <code class="docutils literal notranslate"><span class="pre">message</span></code>. But in this case what is assigned is not the result of a function but an expression involving an <a class="reference internal" href="glossary.html#operator"><span class="std std-doc">operator</span></a>, the <code class="docutils literal notranslate"><span class="pre">+</span></code> symbol. When used with two pieces of text, the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator just sticks them together as one (<a class="reference internal" href="glossary.html#concatenate"><span class="std std-doc">concatenates</span></a> them). So this line creates a new piece of text with <em>Hello</em> and then whatever name the user typed in at the console.</p>
 <p>Note that the text <code class="docutils literal notranslate"><span class="pre">'Hello</span> <span class="pre">'</span></code>  is enclosed in quote marks, but the variable <code class="docutils literal notranslate"><span class="pre">name</span></code> is not. This is important. <em>Hello</em> is not a variable but simply literal text, so it must be in quote marks. In contrast, <code class="docutils literal notranslate"><span class="pre">name</span></code> <em>is</em> a variable and so it should not be enclosed in quote marks. To check your understanding, try to predict what the program would do if <code class="docutils literal notranslate"><span class="pre">name</span></code> on line 13 were enclosed in quote marks, then make the change and run this new version of the program to check whether you were right.</p>
 <p>Finally, the workings of <span class="xref myst">line 16</span> should be clear if you have understood everything we have covered up to this point.</p>
-</div>
 </div>
 <div class="section" id="using-an-ide">
 <h2>Using an IDE<a class="headerlink" href="#using-an-ide" title="Permalink to this headline">¶</a></h2>
@@ -553,7 +529,7 @@
 </div>
 </div>
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">%reset</span></code> command (and others that begin with the percent character <code class="docutils literal notranslate"><span class="pre">%</span></code>) is for use in the console only; it is not a valid Python command that you can put in a Python program.</p>
-<p>(If you have followed the <a class="reference internal" href="spyder.html"><span class="doc std std-doc">recommended configuration instructions</span></a> for Spyder, the console’s memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)</p>
+<p>(If you have followed the <a class="reference internal" href="setup.html#spyder"><span class="std std-doc">recommended configuration instructions</span></a> for Spyder, the console’s memory will also be reset every time you run a program. This is a good thing; it prevents any variables that you have defined in the console from interfering with the workings of your program.)</p>
 <p>If you want to check what variables you have currently defined in the console (if any), and see some information about them, you can look in Spyder’s <strong>Variable explorer</strong> tab. It looks like this:</p>
 <p><img alt="" src="_images/variable_explorer.png" /></p>
 </div>
@@ -582,7 +558,7 @@
 </div>
 </div>
 </div>
-<p>Wherever you see a link to an example program (for example <span class="xref myst">greeting_personal.py</span>), it will take you to an online page displaying the program. To run and edit the example programs yourself, you should first download them to your computer. You can get all the examples by downloading and unzipping the file <span class="xref myst">intro_prog_examples.zip</span>.</p>
+<p>Python programs have the file extension <em>.py</em>. Wherever you see a reference to an example program (for example <span class="xref myst">greeting_personal.py</span>), it can be found among the example programs for the class. To run and edit these programs yourself, you should first <a class="reference internal" href="setup.html#examples"><span class="std std-doc">download them to your computer</span></a>.</p>
 <p>Most of the other links in the topic pages will take you to the <a class="reference internal" href="glossary.html"><span class="doc std std-doc">glossary</span></a>. Here there are explanations of important Python and general programming terms. You can follow these links to refresh your memory if you have forgotten what a term means.</p>
 <p>That’s it for this topic. Try the exercises below to get some practice.</p>
 </div>
@@ -635,8 +611,8 @@ Your favorite color is: puce
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="spyder.html" title="previous page">Spyder configuration</a>
-    <a class='right-next' id="next-link" href="readings.html" title="next page">Readings</a>
+    <a class='left-prev' id="prev-link" href="glossary.html" title="previous page">Glossary</a>
+    <a class='right-next' id="next-link" href="types.html" title="next page">Variables and data types</a>
 
         </div>
         

@@ -83,7 +83,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="index.html">
-   Topics
+   Welcome
   </a>
  </li>
 </ul>
@@ -95,17 +95,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="setup.html">
-   Software
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="spyder.html">
-   Spyder configuration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Creating a computer program with Python
+   Setup
   </a>
  </li>
  <li class="toctree-l1">
@@ -116,6 +106,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Creating a computer program with Python
   </a>
  </li>
 </ul>
@@ -666,13 +661,15 @@ plugins: anyio-3.2.0
 <span class=" -Color -Color-Bold">collecting ... </span>
 <span class=" -Color -Color-Bold">collected 6 items                                                              </span>
 
-test_spoonerisms.py <span class=" -Color -Color-Green">....</span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
+test_spoonerisms.py <span class=" -Color -Color-Green">....</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
 
 =================================== FAILURES ===================================
 <span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    def test_spoonerize_with_qu():
+
+    def test_spoonerize_with_qu():
     
         result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
     
@@ -720,8 +717,9 @@ test_spoonerisms.py <span class=" -Color -Color-Green">....</span><span class=" 
 
 =================================== FAILURES ===================================
 <span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
-
-    def test_spoonerize_with_qu():
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    def test_spoonerize_with_qu():
     
         result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
     
@@ -735,7 +733,7 @@ test_spoonerisms.py <span class=" -Color -Color-Green">....</span><span class=" 
 <span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
 =========================== short test summary info ============================
 FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
-<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.06s ==========================</span>
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.07s ==========================</span>
 </pre></div>
 </div>
 </div>
@@ -780,14 +778,13 @@ cachedir: .pytest_cache
 rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
 plugins: anyio-3.2.0
 <span class=" -Color -Color-Bold">collecting ... </span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 <span class=" -Color -Color-Bold">collected 8 items                                                              </span>
 
 test_math_is_working_as_normal.py::test_two_plus_two_equals_four <span class=" -Color -Color-Green">PASSED  [ 12%]</span>
 test_math_is_working_as_normal.py::test_division_by_zero_is_undefined <span class=" -Color -Color-Green">PASSED [ 25%]</span>
-test_spoonerisms.py::test_find_first_vowel <span class=" -Color -Color-Green">PASSED                        [ 37%]</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_spoonerisms.py::test_find_first_vowel <span class=" -Color -Color-Green">PASSED                        [ 37%]</span>
 test_spoonerisms.py::test_spoonerize <span class=" -Color -Color-Green">PASSED                              [ 50%]</span>
 test_spoonerisms.py::test_spoonerize_with_multiple_consonants <span class=" -Color -Color-Green">PASSED     [ 62%]</span>
 test_spoonerisms.py::test_spoonerize_with_initial_vowel <span class=" -Color -Color-Green">PASSED           [ 75%]</span>
@@ -796,9 +793,8 @@ test_spoonerisms.py::test_spoonerize_exception <span class=" -Color -Color-Green
 
 =================================== FAILURES ===================================
 <span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    def test_spoonerize_with_qu():
+
+    def test_spoonerize_with_qu():
     
         result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
     
