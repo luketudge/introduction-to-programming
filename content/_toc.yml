@@ -1,0 +1,33 @@
+format: jb-book
+root: index
+parts:
+  - caption: get started
+    chapters:
+    - file: setup
+    - file: spyder
+    - file: intro
+    - file: readings
+    - file: glossary
+  - caption: the basics
+    chapters:
+    - file: types
+    - file: sequences_mappings
+    - file: conditions
+    - file: iteration
+    - file: functions
+    - file: modules
+    - file: standard_library
+    - file: files
+  - caption: software development
+    chapters:
+    - file: command_line
+    - file: testing
+    - file: github
+  - caption: specialist topics
+    chapters:
+    - file: arrays
+    - file: images
+    - file: data_analysis
+    - file: nlp
+    - file: internet
+    - file: databases

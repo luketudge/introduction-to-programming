@@ -1,0 +1,15 @@
+title: "Introduction to Programming with Python"
+repository:
+  url: https://github.com/luketudge/introduction-to-programming
+  path_to_book: content
+html:
+  use_repository_button: true
+  use_issues_button: true
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+execute:
+  exclude_patterns: [types.ipynb, functions.ipynb, databases.ipynb]
+sphinx:
+  config:
+    myst_heading_anchors: 4

@@ -1,12 +1,15 @@
 bokeh
 bs4
 flake8
+ghp-import
 imageio
+jupyter-book
 jupyterlab
 lxml
 matplotlib
 nltk
 numpy
+openpyxl
 pandas
 pytest
 regex
@@ -16,4 +19,3 @@ selenium
 scikit-image
 spyder
 statsmodels
-xlrd
