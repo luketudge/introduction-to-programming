@@ -4,10 +4,9 @@ parts:
   - caption: get started
     chapters:
     - file: setup
-    - file: spyder
-    - file: intro
     - file: readings
     - file: glossary
+    - file: intro
   - caption: the basics
     chapters:
     - file: types
