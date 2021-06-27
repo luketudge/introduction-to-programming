@@ -1,4 +1,5 @@
 title: "Introduction to Programming with Python"
+author: LT
 only_build_toc_files: true
 repository:
   url: https://github.com/luketudge/introduction-to-programming
