@@ -661,12 +661,10 @@ plugins: anyio-3.2.0
 <span class=" -Color -Color-Bold">collecting ... </span>
 <span class=" -Color -Color-Bold">collected 6 items                                                              </span>
 
-test_spoonerisms.py <span class=" -Color -Color-Green">....</span>
+test_spoonerisms.py <span class=" -Color -Color-Green">....</span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
-
-=================================== FAILURES ===================================
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=================================== FAILURES ===================================
 <span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
 
     def test_spoonerize_with_qu():
@@ -683,7 +681,7 @@ test_spoonerisms.py <span class=" -Color -Color-Green">....</span>
 <span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
 =========================== short test summary info ============================
 FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
-<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">5 passed</span><span class=" -Color -Color-Red"> in 0.06s ==========================</span>
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">5 passed</span><span class=" -Color -Color-Red"> in 0.08s ==========================</span>
 </pre></div>
 </div>
 </div>
@@ -707,21 +705,22 @@ platform linux -- Python 3.8.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
 rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
 plugins: anyio-3.2.0
 <span class=" -Color -Color-Bold">collecting ... </span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 <span class=" -Color -Color-Bold">collected 8 items                                                              </span>
 
 test_math_is_working_as_normal.py <span class=" -Color -Color-Green">..                                     [ 25%]</span>
-test_spoonerisms.py <span class=" -Color -Color-Green">....</span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
+test_spoonerisms.py <span class=" -Color -Color-Green">....</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
 
 =================================== FAILURES ===================================
 <span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
+
+    def test_spoonerize_with_qu():
+    
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    def test_spoonerize_with_qu():
-    
-        result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
     
 &gt;       assert result == <span class=" -Color -Color-Yellow">&#39;quaint fartz&#39;</span>
 <span class=" -Color -Color-Bold -Color-Bold-Red">E       AssertionError: assert &#39;qaint fuartz&#39; == &#39;quaint fartz&#39;</span>
@@ -733,7 +732,7 @@ test_spoonerisms.py <span class=" -Color -Color-Green">....</span><span class=" 
 <span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
 =========================== short test summary info ============================
 FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
-<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.07s ==========================</span>
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.10s ==========================</span>
 </pre></div>
 </div>
 </div>
@@ -779,12 +778,11 @@ rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
 plugins: anyio-3.2.0
 <span class=" -Color -Color-Bold">collecting ... </span>
 <span class=" -Color -Color-Bold">collected 8 items                                                              </span>
-
-test_math_is_working_as_normal.py::test_two_plus_two_equals_four <span class=" -Color -Color-Green">PASSED  [ 12%]</span>
-test_math_is_working_as_normal.py::test_division_by_zero_is_undefined <span class=" -Color -Color-Green">PASSED [ 25%]</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_spoonerisms.py::test_find_first_vowel <span class=" -Color -Color-Green">PASSED                        [ 37%]</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_math_is_working_as_normal.py::test_two_plus_two_equals_four <span class=" -Color -Color-Green">PASSED  [ 12%]</span>
+test_math_is_working_as_normal.py::test_division_by_zero_is_undefined <span class=" -Color -Color-Green">PASSED [ 25%]</span>
+test_spoonerisms.py::test_find_first_vowel <span class=" -Color -Color-Green">PASSED                        [ 37%]</span>
 test_spoonerisms.py::test_spoonerize <span class=" -Color -Color-Green">PASSED                              [ 50%]</span>
 test_spoonerisms.py::test_spoonerize_with_multiple_consonants <span class=" -Color -Color-Green">PASSED     [ 62%]</span>
 test_spoonerisms.py::test_spoonerize_with_initial_vowel <span class=" -Color -Color-Green">PASSED           [ 75%]</span>
@@ -793,8 +791,9 @@ test_spoonerisms.py::test_spoonerize_exception <span class=" -Color -Color-Green
 
 =================================== FAILURES ===================================
 <span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
-
-    def test_spoonerize_with_qu():
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    def test_spoonerize_with_qu():
     
         result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
     
@@ -808,7 +807,7 @@ test_spoonerisms.py::test_spoonerize_exception <span class=" -Color -Color-Green
 <span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
 =========================== short test summary info ============================
 FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
-<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.06s ==========================</span>
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.09s ==========================</span>
 </pre></div>
 </div>
 </div>
@@ -987,7 +986,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
     <div class="container">
       <p>
         
-          By The Jupyter Book community<br/>
+          By LT<br/>
         
             &copy; Copyright 2021.<br/>
       </p>
