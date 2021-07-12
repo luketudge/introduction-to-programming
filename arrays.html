@@ -380,6 +380,11 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#boolean-indexing">
+       Boolean indexing
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#broadcasting">
        Broadcasting
       </a>
@@ -868,7 +873,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="mf">1e454</span><span class="n">cc0dc4b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_9846</span><span class="o">/</span><span class="mf">825103235.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">coords_list</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 
 <span class="ne">TypeError</span>: list indices must be integers or slices, not tuple
@@ -877,9 +882,47 @@
 </div>
 </div>
 </div>
+<div class="section" id="boolean-indexing">
+<h4>Boolean indexing<a class="headerlink" href="#boolean-indexing" title="Permalink to this headline">¶</a></h4>
+<p>Sometimes we may wish to pick out all the entries in an array that meet a given condition. For example, we might want all the values greater than or equal to 10. We can apply <a class="reference internal" href="conditions.html"><span class="doc std std-doc">logical conditions</span></a> to <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays just as with other Python data types. But this time the result is not a single <a class="reference internal" href="glossary.html#boolean"><span class="std std-doc">boolean</span></a> value but an array of boolean values, where each entry in the array gives the status of the condition when applied to the corresponding entry in the original array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[False, False],
+       [False, False],
+       [ True, False],
+       [ True, False]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>This boolean array can be used as a kind of ‘filter’ for the original array, allowing us to index the entries in the array where the condition is true, and perform some operation with those entries. This boolean indexing is done using the same square parentheses as normal indexing.</p>
+<p>So for example to turn all entries that are greater than or equal to 10 into 0, we do the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coords</span><span class="p">[</span><span class="n">coords</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">coords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[2., 2.],
+       [6., 3.],
+       [0., 4.],
+       [0., 5.]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="broadcasting">
 <h4>Broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this headline">¶</a></h4>
-<p>We just learned how to change multiple values in a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array. We did this by adding a <a class="reference internal" href="glossary.html#scalar"><span class="std std-doc">scalar</span></a> (i.e. a single number) to each of those values. Let’s consider now a slightly more complex example. Imagine that we want to move the coordinate points in our matrix diagonally upwards in the coordinate space, by shifting the <em>x</em> values 1 unit further along the <em>x</em> axis, and the <em>y</em> values 2 units further up the <em>y</em> axis. In the terms of our matrix, this entails adding 1 to all the values in the first column, and adding 2 to all the values in the second column.</p>
+<p>We just learned how to change multiple values in a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array by indexing those values. Let’s consider now a slightly more complex example. Imagine that we want to move the coordinate points in our matrix diagonally upwards in the coordinate space, by shifting the <em>x</em> values 1 unit further along the <em>x</em> axis, and the <em>y</em> values 2 units further up the <em>y</em> axis. In the terms of our matrix, this entails adding 1 to all the values in the first column, and adding 2 to all the values in the second column.</p>
 <p>We could of course do this in two separate steps, one for each column. This would be fine for this simple example. But <code class="docutils literal notranslate"><span class="pre">numpy</span></code> provides a more general way of making structured changes to multiple values.</p>
 <p>Consider that the instruction ‘add 1 to all the values in the first column, and add 2 to all the values in the second column’ can also be rephrased as ‘add the <a class="reference internal" href="glossary.html#vector"><span class="std std-doc">vector</span></a> <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2]</span></code> to every row’. We can take a vector that has the same number of values as the number of columns in our matrix, and ‘pair up’ the values in this vector with the corresponding values in each row.</p>
 <p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> does this automatically if we add a vector to an array. Like this:</p>
@@ -904,10 +947,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 3.,  4.],
-       [ 7.,  5.],
-       [11.,  6.],
-       [15.,  7.]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3., 4.],
+       [7., 5.],
+       [1., 6.],
+       [1., 7.]])
 </pre></div>
 </div>
 </div>
@@ -920,10 +963,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2.  2.]
- [ 6.  3.]
- [10.  4.]
- [14.  5.]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2. 2.]
+ [6. 3.]
+ [0. 4.]
+ [0. 5.]]
 </pre></div>
 </div>
 </div>
@@ -937,10 +980,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 3.  4.]
- [ 7.  5.]
- [11.  6.]
- [15.  7.]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3. 4.]
+ [7. 5.]
+ [1. 6.]
+ [1. 7.]]
 </pre></div>
 </div>
 </div>
@@ -973,8 +1016,8 @@
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 4.,  5.],
        [ 9.,  7.],
-       [14.,  9.],
-       [19., 11.]])
+       [ 4.,  9.],
+       [ 5., 11.]])
 </pre></div>
 </div>
 </div>
@@ -989,8 +1032,8 @@
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 3.,  4.],
        [14., 10.],
-       [33., 18.],
-       [60., 28.]])
+       [ 3., 18.],
+       [ 4., 28.]])
 </pre></div>
 </div>
 </div>
@@ -1007,7 +1050,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mf">186e551</span><span class="n">a999f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_9846</span><span class="o">/</span><span class="mf">666826377.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">coords</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
 
 <span class="ne">ValueError</span>: operands could not be broadcast together with shapes (4,2) (3,) 
@@ -1099,7 +1142,7 @@
 <li><p>Conversion from degrees to radians, so that users of our function can input an angle of rotation in the more familiar degree units (0° to 360°).</p></li>
 <li><p>The sine and cosine functions, needed to construct the rotation matrix.</p></li>
 </ul>
-<p>But these are all straightforward, and we can take them from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module in Python’s [standard library].</p>
+<p>But these are all straightforward, and we can take them from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module in Python’s <a class="reference internal" href="standard_library.html"><span class="doc std std-doc">standard library</span></a>.</p>
 <p>You can see the code for the finished function in the example module <span class="xref myst">coordinates.py</span>. Here it is in action:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1147,7 +1190,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/arrays_67_0.png" src="_images/arrays_67_0.png" />
+<img alt="_images/arrays_71_0.png" src="_images/arrays_71_0.png" />
 </div>
 </div>
 <p>We can overlay multiple sets of points on a figure by just using the plotting function multiple times before <code class="docutils literal notranslate"><span class="pre">show()</span></code>. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> even helpfully draws each set of points in a different color.</p>
@@ -1164,7 +1207,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/arrays_69_0.png" src="_images/arrays_69_0.png" />
+<img alt="_images/arrays_73_0.png" src="_images/arrays_73_0.png" />
 </div>
 </div>
 <div class="section" id="customizing-plots">
@@ -1183,7 +1226,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/arrays_71_0.png" src="_images/arrays_71_0.png" />
+<img alt="_images/arrays_75_0.png" src="_images/arrays_75_0.png" />
 </div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> can do a lot. But navigating its cornucopia of functions and arguments can be a real pain. For many specialized plotting tasks in data analysis, there are better packages available whose use is more straightforward. These packages still use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> in the background, but they set the necessary colors, styles, axis labels, and so on automatically without our having to specify them all one by one.</p>
