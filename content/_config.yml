@@ -10,6 +10,7 @@ html:
 launch_buttons:
   binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
+exclude_patterns: [.pytest_cache/*]
 execute:
   exclude_patterns: [types.ipynb, functions.ipynb, databases.ipynb]
 sphinx:
