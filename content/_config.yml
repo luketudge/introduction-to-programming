@@ -1,18 +1,20 @@
 title: "Introduction to Programming with Python"
 author: LT
+exclude_patterns: [examples/.pytest_cache/*]
 only_build_toc_files: true
-repository:
-  url: https://github.com/luketudge/introduction-to-programming
-  path_to_book: content
+execute:
+  exclude_patterns: [types.ipynb, functions.ipynb, databases.ipynb]
+parse:
+  myst_enable_extensions: [colon_fence, dollarmath, substitution]
 html:
   use_repository_button: true
   use_issues_button: true
 launch_buttons:
-  binderhub_url: "https://mybinder.org"
-  colab_url: "https://colab.research.google.com"
-exclude_patterns: [.pytest_cache/*]
-execute:
-  exclude_patterns: [types.ipynb, functions.ipynb, databases.ipynb]
+  binderhub_url: https://mybinder.org
+  colab_url: https://colab.research.google.com
+repository:
+  url: https://github.com/luketudge/introduction-to-programming
+  path_to_book: content
 sphinx:
   config:
     myst_heading_anchors: 4
