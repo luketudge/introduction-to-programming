@@ -1,11 +1,8 @@
+# Requirements for running the pages but not editing or building them.
+# For example on a service like BinderHub.
 bokeh
 bs4
-flake8
-ghp-import
 imageio
-jupyter-book
-jupyterlab
-jupyterlab-spellchecker
 lxml
 matplotlib
 nltk
@@ -16,7 +13,5 @@ pytest
 regex
 requests
 seaborn
-selenium
 scikit-image
-spyder
 statsmodels

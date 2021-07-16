@@ -1,0 +1,24 @@
+# Requirements for writing and building the pages.
+# Includes (or should include) all requirements from requirements.txt.
+bokeh
+bs4
+flake8
+ghp-import
+imageio
+jupyter-book
+jupyterlab
+jupyterlab-spellchecker
+lxml
+matplotlib
+nltk
+numpy
+openpyxl
+pandas
+pytest
+regex
+requests
+seaborn
+selenium
+scikit-image
+spyder
+statsmodels
