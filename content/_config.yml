@@ -12,6 +12,7 @@ html:
 launch_buttons:
   binderhub_url: https://mybinder.org
   colab_url: https://colab.research.google.com
+  thebe: true
 repository:
   url: https://github.com/luketudge/introduction-to-programming
   path_to_book: content

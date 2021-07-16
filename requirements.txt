@@ -5,6 +5,7 @@ ghp-import
 imageio
 jupyter-book
 jupyterlab
+jupyterlab-spellchecker
 lxml
 matplotlib
 nltk
