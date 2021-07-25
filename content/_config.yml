@@ -1,9 +1,8 @@
 title: "Introduction to Programming with Python"
 author: LT
 exclude_patterns: [examples/.pytest_cache/*]
-only_build_toc_files: true
 execute:
-  exclude_patterns: [types.ipynb, functions.ipynb, databases.ipynb]
+  exclude_patterns: [examples/*.py, types.ipynb, functions.ipynb, databases.ipynb]
 parse:
   myst_enable_extensions: [colon_fence, dollarmath, substitution]
 html:
@@ -19,3 +18,7 @@ repository:
 sphinx:
   config:
     myst_heading_anchors: 4
+    nb_custom_formats:
+        .py:
+            - jupytext.reads
+            - fmt: py
