@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -314,6 +314,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -400,8 +403,6 @@
 <p>A computer program is a sequence of instructions for a computer. Ultimately, these instructions take the form of numbers, each of which refers to one action that the computer can take. But in modern computer programming we rarely have to concern ourselves directly with this ‘machine code’. Instead, modern computer programs begin their lives simply as one or more text files. These text files are entirely like any other text file; they contain human-readable characters, and have no special properties in themselves. We can open them in a normal text editor like Notepad.</p>
 <p>An intermediate step is required in order to run these text files as a program. There are different ways in which this intermediate step can be accomplished. Python, the programming language that we will learn, works via an intermediate computer program called the <a class="reference internal" href="glossary.html#interpreter"><span class="std std-doc">interpreter</span></a>. The Python interpreter reads the lines of a text file one by one, turns them into instructions for the computer, and gets the computer to execute those instructions immediately. The interpreter program does its work by applying a particular set of rules to the contents of the text file, rules that convert text commands into computer commands. It is this set of rules that constitutes a particular programming language.</p>
 <p>Most computer programs are organized as a collection of multiple such text files, each containing instructions for one aspect of the program’s capabilities. There may be one or two main files that represent the starting point of the program, and these main files then refer to others. In addition, the program may include non-text files containing data needed by the program, such as images, sounds, database files, and so on.</p>
-<p>Click <a class="reference external" href="https://github.com/metabrainz/picard">here</a> to see an example of a fairly complex computer program organized as a collection of files. This program, called <a class="reference external" href="https://picard.musicbrainz.org/">MusicBrainz Picard</a>, allows a user to tag music files with information about the artist, song name, album, etc. Take a look at just one file in the program, called <a class="reference external" href="https://github.com/metabrainz/picard/blob/master/picard/album.py">album.py</a>. This is a text file containing instructions written in Python. Its contents are not easily understandable at a first glance, even for an experienced programmer, but notice that it does at least contain some instructions that take the form of everyday English words, such as <code class="docutils literal notranslate"><span class="pre">from</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, and <code class="docutils literal notranslate"><span class="pre">if</span></code>. It also contains some preamble detailing the license information for the program, which is completely intelligible to a normal human being (or at least to a lawyer). Further down, the contents become too complex to understand by skim reading, but we may notice some regularities. For example, this file seems to refer to other files in the overall program (note a reference to <a class="reference external" href="https://github.com/metabrainz/picard/blob/master/picard/config.py">config.py</a> on <a class="reference external" href="https://github.com/metabrainz/picard/blob/64c4153801ed418c11033ad73981f7209b9cbf63/picard/album.py#L33">line 33</a>).</p>
-<p>We won’t create any programs that are as complex as Picard, which is the result of several programmers collaborating over a fairly long period of time. However, our programs will have approximately the same structure; they will be collections of text files containing instructions written according to the rules of the Python programming language.</p>
 </div>
 <div class="section" id="a-python-program">
 <h2>A Python program<a class="headerlink" href="#a-python-program" title="Permalink to this headline">¶</a></h2>
@@ -447,7 +448,7 @@
 </div>
 <div class="section" id="more-python-programs">
 <h2>More Python programs<a class="headerlink" href="#more-python-programs" title="Permalink to this headline">¶</a></h2>
-<p>Open the example program <span class="xref myst">greeting.py</span> in Spyder.</p>
+<p>Open the example program <a class="reference internal" href="examples/greeting.html"><span class="doc std std-doc">greeting.py</span></a> in Spyder.</p>
 <p>This program is functionally the same as the one we wrote above; it prints out a greeting. But it illustrates two non-functional but very important features of a Python program.</p>
 <p>The first of these is the <a class="reference internal" href="glossary.html#docstring"><span class="std std-doc">docstring</span></a> at the top of the program:</p>
 <div class="cell tag_remove-output docutils container">
@@ -476,7 +477,7 @@
 <p>The exact contents of this automatic starter text may vary a little depending on how Spyder is configured on your operating system. For now, you may ignore any lines that appear before the docstring (like <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">-*-</span> <span class="pre">coding:</span> <span class="pre">utf-8</span> <span class="pre">-*-</span></code>); just leave these as they are and we will learn about them later.</p>
 <p>The second new feature in <em>greeting.py</em> is the <a class="reference internal" href="glossary.html#comment"><span class="std std-doc">inline comment</span></a> on <span class="xref myst">line 8</span>. This line is clearly not a Python command. It is instead written in plain English. Python will ignore any text that follows a hash symbol <code class="docutils literal notranslate"><span class="pre">#</span></code>. This allows us to use this symbol to introduce human-readable explanations of the workings of our program. In such a simple program as this, the comment on line 8 is somewhat superfluous; the command on the following line is clear enough on its own. However, as a beginner you should get into the habit of writing comments for most of the Python commands that you put into your program. This helps you to focus and remember how you created your programs, and helps others understand what you did or where you went wrong if your program doesn’t work as you expected. Later when you have more experience you can save explanatory comments just for those sections of your program that are too complex to understand at a first glance.</p>
 <p>Finally, on <span class="xref myst">line 6</span> we see an example of another use of comments: to make a ‘note to self’ of what still needs to be added to the program. It is conventional to mark such comments with the text <code class="docutils literal notranslate"><span class="pre">TODO</span></code>. Here we have noted that we would like to make the greeting personal by asking the user to type in their name. This is what the next example program achieves.</p>
-<p>Open the <span class="xref myst">greeting_personal.py</span> program. Before you run it, read the Python commands that it contains and try to guess what the effect of running the program will be. Then run the program to check your guess.</p>
+<p>Open the <a class="reference internal" href="examples/greeting_personal.html"><span class="doc std std-doc">greeting_personal.py</span></a> program. Before you run it, read the Python commands that it contains and try to guess what the effect of running the program will be. Then run the program to check your guess.</p>
 <p>This program requires the user to type in some information. As with <em>greeting.py</em>, all the action occurs over in the console window. After you click on the ‘run’ icon, look to the console window. You should see that the program has displayed a ‘prompt’, i.e. some text telling the user what they are expected to do, and is now waiting for the user to type something in.</p>
 <p><img alt="" src="_images/input.png" /></p>
 <p>Beware that when you run a program that requires user input, the program will wait indefinitely until it has received that input. While your program is still running, you won’t be able to run it again or run any other program. You can tell that a program is currently running in the console if you see that the square ‘stop’ icon (■) above the console is lit red, like in the screenshot above. To finish your program and continue editing it or working on other programs, you must first let your running program finish. In this case, you can achieve this by doing as the program asks and typing in your name at the console where the input prompt is displayed.</p>
@@ -558,7 +559,7 @@
 </div>
 </div>
 </div>
-<p>Python programs have the file extension <em>.py</em>. Wherever you see a reference to an example program (for example <span class="xref myst">greeting_personal.py</span>), it can be found among the example programs for the class. To run and edit these programs yourself, you should first <a class="reference internal" href="setup.html#examples"><span class="std std-doc">download them to your computer</span></a>.</p>
+<p>Python programs have the file extension <em>.py</em>. Wherever you see a reference to an example program (for example <a class="reference internal" href="examples/greeting_personal.html"><span class="doc std std-doc">greeting_personal.py</span></a>), it can be found among the example programs for the class. To run and edit these programs yourself, you should first <a class="reference internal" href="setup.html#examples"><span class="std std-doc">download them to your computer</span></a>.</p>
 <p>Most of the other links in the topic pages will take you to the <a class="reference internal" href="glossary.html"><span class="doc std std-doc">glossary</span></a>. Here there are explanations of important Python and general programming terms. You can follow these links to refresh your memory if you have forgotten what a term means.</p>
 <p>That’s it for this topic. Try the exercises below to get some practice.</p>
 </div>
@@ -566,7 +567,7 @@
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Open the <span class="xref myst">greeting_personal.py</span> program. Save a new version called <em>greeting_personal_v2.py</em> (or whatever you like), and add the following small improvements:</p>
+<p>Open the <a class="reference internal" href="examples/greeting_personal.html"><span class="doc std std-doc">greeting_personal.py</span></a> program. Save a new version called <em>greeting_personal_v2.py</em> (or whatever you like), and add the following small improvements:</p>
 <ul class="simple">
 <li><p>Improve the input part of the program so that it looks a little neater for the user when they type in their name. Add a space between the input prompt and the position where the user starts typing, so that when they type they see for example <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?</span> <span class="pre">Mildred</span></code> instead of <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?Mildred</span></code>.</p></li>
 <li><p>Add a dot to the end of the printed output so that it forms a correctly punctuated sentence. So the user sees for example <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">Mildred.</span></code> instead of just <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">Mildred</span></code>.</p></li>
@@ -590,7 +591,7 @@ Your favorite color is: puce
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {

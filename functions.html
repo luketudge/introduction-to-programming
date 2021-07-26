@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -316,6 +316,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -1155,7 +1158,7 @@ JB
 <li><p>The <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return value</span></a>.</p></li>
 <li><p>Whether the function <a class="reference internal" href="glossary.html#raise"><span class="std std-doc">raises</span></a> any exceptions.</p></li>
 </ul>
-<p>You can see another example docstring for our <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> function in the example program <span class="xref myst">initials.py</span>. (In case you are wondering what is going on after line 43 of this file, this will be explained in the next lesson.)</p>
+<p>You can see another example docstring for our <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> function in the example program <a class="reference internal" href="examples/initials.html"><span class="doc std std-doc">initials.py</span></a>. (In case you are wondering what is going on after line 43 of this file, this will be explained in the next lesson.)</p>
 </div>
 <div class="section" id="building-functions">
 <h2>Building functions<a class="headerlink" href="#building-functions" title="Permalink to this headline">¶</a></h2>
@@ -1313,14 +1316,14 @@ Now adding the ID of the admin user...
 </div>
 </div>
 </div>
-<p>If this seems a little abstract to you, take a look at the second example program for this lesson, <span class="xref myst">fun_facts.py</span>. It demonstrates the re-use of a function (that gets the answer to a ‘yes/no’ question) in multiple places in a program.</p>
+<p>If this seems a little abstract to you, take a look at the second example program for this lesson, <a class="reference internal" href="examples/fun_facts.html"><span class="doc std std-doc">fun_facts.py</span></a>. It demonstrates the re-use of a function (that gets the answer to a ‘yes/no’ question) in multiple places in a program.</p>
 <p>The other important difference between loops and functions is that a function can be re-used in a <em>different</em> program, whereas a loop cannot (at least, not without manually copying and pasting it into the new program). Re-using functions in more than one file is the topic of the next lesson.</p>
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Take a look at the <span class="xref myst">fun_facts.py</span> example program. It defines a function <code class="docutils literal notranslate"><span class="pre">yorn()</span></code> for prompting the user to answer a ‘yes/no’ question. Currently, the function only accepts <code class="docutils literal notranslate"><span class="pre">'y'</span></code> or <code class="docutils literal notranslate"><span class="pre">'n'</span></code> as responses. Modify it so that it also allows the user to type in the complete words <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code>. Make sure to run your modified version of the program a few times and type in different responses at the console to check that your changes are correct.</p>
+<p>Take a look at the <a class="reference internal" href="examples/fun_facts.html"><span class="doc std std-doc">fun_facts.py</span></a> example program. It defines a function <code class="docutils literal notranslate"><span class="pre">yorn()</span></code> for prompting the user to answer a ‘yes/no’ question. Currently, the function only accepts <code class="docutils literal notranslate"><span class="pre">'y'</span></code> or <code class="docutils literal notranslate"><span class="pre">'n'</span></code> as responses. Modify it so that it also allows the user to type in the complete words <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code>. Make sure to run your modified version of the program a few times and type in different responses at the console to check that your changes are correct.</p>
 </div>
 <div class="section" id="id2">
 <h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
@@ -1364,7 +1367,7 @@ Now adding the ID of the admin user...
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {

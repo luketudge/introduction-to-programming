@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -314,6 +314,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -518,7 +521,7 @@ spoonerize(wordpair)
 </div>
 </div>
 <p>This helper function in turn depends on a variable called <code class="docutils literal notranslate"><span class="pre">VOWELS</span></code>, a string containing the characters considered to be vowels. These could just have been defined within the <code class="docutils literal notranslate"><span class="pre">find_first_vowel()</span></code> function, but including them as a variable allows us later to add more vowels easily if we want to extend the module’s capabilities.</p>
-<p>This is a good point to start writing tests; our program has gone beyond just a single function, and we might want to add to its capabilities in the future. Before we begin writing the tests, you might want to take a look at the module file <span class="xref myst">spoonerisms.py</span> and quickly assure yourself that you understand how it works.</p>
+<p>This is a good point to start writing tests; our program has gone beyond just a single function, and we might want to add to its capabilities in the future. Before we begin writing the tests, you might want to take a look at the module file <a class="reference internal" href="examples/spoonerisms.html"><span class="doc std std-doc">spoonerisms.py</span></a> and quickly assure yourself that you understand how it works.</p>
 </div>
 <div class="section" id="built-in-tests">
 <h2>Built-in tests<a class="headerlink" href="#built-in-tests" title="Permalink to this headline">¶</a></h2>
@@ -550,7 +553,7 @@ spoonerize(wordpair)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5937</span><span class="o">/</span><span class="mf">2886580342.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14397</span><span class="o">/</span><span class="mf">2886580342.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span>
 
 <span class="ne">AssertionError</span>: 
@@ -587,7 +590,7 @@ spoonerize(wordpair)
 </div>
 </div>
 </div>
-<p>Take a look at the finished test file for our example module, <span class="xref myst">test_spoonerisms.py</span>. You will see that it first imports the <em>spoonerisms</em> module, then defines several test functions like the one above. Each of these tests one aspect of the workings of the <em>spoonerisms</em> module. (There is one slightly different test function at the very end of the file. Ignore this for now; we will come to it in a moment.)</p>
+<p>Take a look at the finished test file for our example module, <a class="reference internal" href="examples/test_spoonerisms.html"><span class="doc std std-doc">test_spoonerisms.py</span></a>. You will see that it first imports the <em>spoonerisms</em> module, then defines several test functions like the one above. Each of these tests one aspect of the workings of the <em>spoonerisms</em> module. (There is one slightly different test function at the very end of the file. Ignore this for now; we will come to it in a moment.)</p>
 <p>If we would like to test any aspect of the <em>spoonerisms</em> module, we can import the test module and run its functions, confirming that no exceptions occur:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -612,7 +615,7 @@ spoonerize(wordpair)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5937</span><span class="o">/</span><span class="mf">1741611328.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14397</span><span class="o">/</span><span class="mf">1741611328.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">test_spoonerisms</span><span class="o">.</span><span class="n">test_spoonerize_with_qu</span><span class="p">()</span>
 
 <span class="nn">~/GitHub/introduction-to-programming/content/examples/test_spoonerisms.py</span> in <span class="ni">test_spoonerize_with_qu</span><span class="nt">()</span>
@@ -657,20 +660,19 @@ spoonerize(wordpair)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
 platform linux -- Python 3.8.10, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
 rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
-plugins: anyio-3.2.1
+plugins: anyio-3.3.0
 <span class=" -Color -Color-Bold">collecting ... </span>
 <span class=" -Color -Color-Bold">collected 6 items                                                              </span>
 
-test_spoonerisms.py <span class=" -Color -Color-Green">.</span>
+test_spoonerisms.py <span class=" -Color -Color-Green">....</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">...</span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">F</span><span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                               [100%]</span>
 
 =================================== FAILURES ===================================
 <span class=" -Color -Color-Bold -Color-Bold-Red">___________________________ test_spoonerize_with_qu ____________________________</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    def test_spoonerize_with_qu():
+
+    def test_spoonerize_with_qu():
     
         result = spoonerisms.spoonerize(<span class=" -Color -Color-Yellow">&#39;faint quartz&#39;</span>)  # tenuous, I know
     
@@ -684,7 +686,7 @@ test_spoonerisms.py <span class=" -Color -Color-Green">.</span>
 <span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
 =========================== short test summary info ============================
 FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
-<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">5 passed</span><span class=" -Color -Color-Red"> in 0.07s ==========================</span>
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">5 passed</span><span class=" -Color -Color-Red"> in 0.06s ==========================</span>
 </pre></div>
 </div>
 </div>
@@ -695,7 +697,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <li><p>Commands beginning with <code class="docutils literal notranslate"><span class="pre">!</span></code> are not standard Python commands, they are commands for the operating system’s command line. They only work in the Spyder console, not in a Python program.</p></li>
 </ul>
 <p>pytest can even be used to run tests from more than one test file. If we do not specify the name of a test file, then pytest will search for all files in the current working directory whose names begin with <em>test_</em>, and run all the functions within those files whose names begin with <code class="docutils literal notranslate"><span class="pre">test_</span></code>. This feature becomes very useful once we have a more complex program spread over multiple files. A typical pattern of organization is to create separate test files for each major component of the program to be tested.</p>
-<p>Here for demonstration purposes I have just included a second test file <span class="xref myst">test_math_is_working_as_normal.py</span> containing some spurious tests:</p>
+<p>Here for demonstration purposes I have just included a second test file <a class="reference internal" href="examples/test_math_is_working_as_normal.html"><span class="doc std std-doc">test_math_is_working_as_normal.py</span></a> containing some spurious tests:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> pytest
@@ -706,8 +708,11 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
 platform linux -- Python 3.8.10, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
 rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
-plugins: anyio-3.2.1
+plugins: anyio-3.3.0
 <span class=" -Color -Color-Bold">collecting ... </span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 <span class=" -Color -Color-Bold">collected 8 items                                                              </span>
 
 test_math_is_working_as_normal.py <span class=" -Color -Color-Green">..                                     [ 25%]</span>
@@ -731,7 +736,7 @@ test_spoonerisms.py <span class=" -Color -Color-Green">....</span><span class=" 
 <span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
 =========================== short test summary info ============================
 FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
-<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.08s ==========================</span>
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.07s ==========================</span>
 </pre></div>
 </div>
 </div>
@@ -772,9 +777,11 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
 platform linux -- Python 3.8.10, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- /home/lt/GitHub/introduction-to-programming/.venv/bin/python
-cachedir: .pytest_cache
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cachedir: .pytest_cache
 rootdir: /home/lt/GitHub/introduction-to-programming/content/examples
-plugins: anyio-3.2.1
+plugins: anyio-3.3.0
 <span class=" -Color -Color-Bold">collecting ... </span>
 <span class=" -Color -Color-Bold">collected 8 items                                                              </span>
 
@@ -805,7 +812,7 @@ test_spoonerisms.py::test_spoonerize_exception <span class=" -Color -Color-Green
 <span class=" -Color -Color-Bold -Color-Bold-Red">test_spoonerisms.py</span>:43: AssertionError
 =========================== short test summary info ============================
 FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
-<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.09s ==========================</span>
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.07s ==========================</span>
 </pre></div>
 </div>
 </div>
@@ -835,7 +842,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">Failed</span><span class="g g-Whitespace">                                    </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5937</span><span class="o">/</span><span class="mf">1699541855.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14397</span><span class="o">/</span><span class="mf">1699541855.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
 <span class="ne">----&gt; </span><span class="mi">2</span>     <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;52&#39;</span><span class="p">)</span>
 
@@ -864,7 +871,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5937</span><span class="o">/</span><span class="mf">2753776848.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14397</span><span class="o">/</span><span class="mf">2753776848.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;OMG that is not valid. You have broken your computer FOR EVER.&#39;</span><span class="p">):</span>
 <span class="ne">----&gt; </span><span class="mi">2</span>     <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;fifty-two&#39;</span><span class="p">)</span>
 
@@ -873,7 +880,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5937</span><span class="o">/</span><span class="mf">2753776848.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14397</span><span class="o">/</span><span class="mf">2753776848.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;OMG that is not valid. You have broken your computer FOR EVER.&#39;</span><span class="p">):</span>
 <span class="ne">----&gt; </span><span class="mi">2</span>     <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;fifty-two&#39;</span><span class="p">)</span>
 
@@ -925,7 +932,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>The test function <code class="docutils literal notranslate"><span class="pre">test_spoonerize_with_qu()</span></code> in our test file <span class="xref myst">test_spoonerisms.py</span> fails. Improve the main <span class="xref myst">spoonerisms module</span> so that this test passes. When you think that you have got it right, run all the tests in the test file using pytest. Check that <code class="docutils literal notranslate"><span class="pre">test_spoonerize_with_qu()</span></code> now passes, and make sure that your changes have not introduced any <a class="reference internal" href="glossary.html#regression"><span class="std std-doc">regressions</span></a> that cause the other tests to fail.</p>
+<p>The test function <code class="docutils literal notranslate"><span class="pre">test_spoonerize_with_qu()</span></code> in our test file <a class="reference internal" href="examples/test_spoonerisms.html"><span class="doc std std-doc">test_spoonerisms.py</span></a> fails. Improve the main <a class="reference internal" href="examples/spoonerisms.html"><span class="doc std std-doc">spoonerisms module</span></a> so that this test passes. When you think that you have got it right, run all the tests in the test file using pytest. Check that <code class="docutils literal notranslate"><span class="pre">test_spoonerize_with_qu()</span></code> now passes, and make sure that your changes have not introduced any <a class="reference internal" href="glossary.html#regression"><span class="std std-doc">regressions</span></a> that cause the other tests to fail.</p>
 </div>
 <div class="section" id="id2">
 <h3>2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
@@ -941,7 +948,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
 <ul class="simple">
 <li><p>sly drinkies → dry slinkies</p></li>
 </ul>
-<p>Modify the <span class="xref myst">spoonerisms module</span> to take this new rule into account. But do so according to the test-driven development pattern as described above. Write a new test function in the <span class="xref myst">test_spoonerisms.py</span> test file first, and verify that you get the expected failure. Only then may you write your planned improvement.</p>
+<p>Modify the <a class="reference internal" href="examples/spoonerisms.html"><span class="doc std std-doc">spoonerisms module</span></a> to take this new rule into account. But do so according to the test-driven development pattern as described above. Write a new test function in the <a class="reference internal" href="examples/test_spoonerisms.html"><span class="doc std std-doc">test_spoonerisms.py</span></a> test file first, and verify that you get the expected failure. Only then may you write your planned improvement.</p>
 <p>You might want to write more than one test function to make sure that you have covered all the relevant possibilities.</p>
 <p>When you have made your changes to <em>spoonerisms.py</em>, use pytest to run all of the test functions in the test file. Check that your new test function passes and that your changes have not caused any of the other tests to fail.</p>
 </div>
@@ -952,7 +959,7 @@ FAILED test_spoonerisms.py::test_spoonerize_with_qu - AssertionError: assert ...
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {

@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -314,6 +314,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -1233,7 +1236,7 @@ Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
 </div>
 </div>
 <p>So if you ever find yourself checking multiple possible values of a variable using <code class="docutils literal notranslate"><span class="pre">or</span></code>, consider using <code class="docutils literal notranslate"><span class="pre">in</span></code> instead.</p>
-<p>That concludes the techniques necessary to write a basic version of our target program. You can take a look at the finished version <span class="xref myst">hoff.py</span>. This program looks quite complex, but it is made of the building blocks we wrote above, with some very small refinements. Some extra blank lines have been added to clearly separate the multiple conditions that are checked.</p>
+<p>That concludes the techniques necessary to write a basic version of our target program. You can take a look at the finished version <a class="reference internal" href="examples/hoff.html"><span class="doc std std-doc">hoff.py</span></a>. This program looks quite complex, but it is made of the building blocks we wrote above, with some very small refinements. Some extra blank lines have been added to clearly separate the multiple conditions that are checked.</p>
 </div>
 <div class="section" id="handling-errors">
 <h2>Handling errors<a class="headerlink" href="#handling-errors" title="Permalink to this headline">¶</a></h2>
@@ -1255,7 +1258,7 @@ Your name is a bit like &#39;David&#39;, as in &#39;David Hasselhoff&#39;.
 </div>
 </div>
 <p>Other errors, however, are not necessarily fatal for our program.</p>
-<p>Consider an abbreviated version of one of our earlier programs, <span class="xref myst">age_next_year.py</span>, and see what happens if the user misunderstands what is required of them, and enters some input that our program cannot handle:</p>
+<p>Consider an abbreviated version of one of our earlier programs, <a class="reference internal" href="examples/age_next_year.html"><span class="doc std std-doc">age_next_year.py</span></a>, and see what happens if the user misunderstands what is required of them, and enters some input that our program cannot handle:</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">)</span>
@@ -1371,7 +1374,7 @@ There aren&#39;t that many items of shopping.
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Take a look at the finished <span class="xref myst">hoff.py</span> program. One thing that is not so good about this program is that it is not very easily modifiable. If we later changed our minds and wanted to adapt this program so that ‘Barbra Streisand’ is the interesting name instead of ‘David Hasselhoff’, then we would need to change the name in at least 8 different places. And we would need to go quite far down in our program to find the list of names similar to ‘David’ and change that.</p>
+<p>Take a look at the finished <a class="reference internal" href="examples/hoff.html"><span class="doc std std-doc">hoff.py</span></a> program. One thing that is not so good about this program is that it is not very easily modifiable. If we later changed our minds and wanted to adapt this program so that ‘Barbra Streisand’ is the interesting name instead of ‘David Hasselhoff’, then we would need to change the name in at least 8 different places. And we would need to go quite far down in our program to find the list of names similar to ‘David’ and change that.</p>
 <p>Re-write this program so that the string <code class="docutils literal notranslate"><span class="pre">'David</span> <span class="pre">Hasselhoff'</span></code> only appears once at the very beginning of the program, and the list of variants of ‘David’ also appears once at the beginning of the program. Once you have improved the program in this way, check that it still works as it did before. Then check that you only need to change these two initial lines so that the whole program uses a different interesting name. For example, you can try ‘Barbra Streisand’, with ‘Barbara’, ‘Barb’, and ‘Barbie’ as the variants of ‘Barbra’.</p>
 <p>(Improving a program but without changing its basic functionality is called <a class="reference internal" href="glossary.html#refactor"><span class="std std-doc">refactoring</span></a> the program.)</p>
 </div>
@@ -1398,7 +1401,7 @@ There aren&#39;t that many items of shopping.
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {

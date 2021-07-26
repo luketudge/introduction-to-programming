@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -314,6 +314,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -695,7 +698,7 @@ location : USA
 </div>
 <div class="section" id="indentation-again">
 <h2>Indentation again<a class="headerlink" href="#indentation-again" title="Permalink to this headline">¶</a></h2>
-<p>To once again test our understanding of the role of <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indentation</span></a> in Python <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a>, let’s look at an example of a <em>loop within a loop</em>. This is similar in structure to the example program <span class="xref myst">hoff.py</span> from the <a class="reference internal" href="conditions.html"><span class="doc std std-doc">previous lesson</span></a>, in which we saw some conditions ‘nested’ inside other conditions.</p>
+<p>To once again test our understanding of the role of <a class="reference internal" href="glossary.html#indentation"><span class="std std-doc">indentation</span></a> in Python <a class="reference internal" href="glossary.html#syntax"><span class="std std-doc">syntax</span></a>, let’s look at an example of a <em>loop within a loop</em>. This is similar in structure to the example program <a class="reference internal" href="examples/hoff.html"><span class="doc std std-doc">hoff.py</span></a> from the <a class="reference internal" href="conditions.html"><span class="doc std std-doc">previous lesson</span></a>, in which we saw some conditions ‘nested’ inside other conditions.</p>
 <p>Here it is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -980,7 +983,7 @@ Enter the name of an animal: european swallow
 <h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
 <p>Be careful with <code class="docutils literal notranslate"><span class="pre">while</span></code>. Because it repeats certain lines of our program indefinitely, we can get stuck running those lines <em>forever</em> if we forget to put something into the indented text of the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop that could stop it. When you write a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, check that among the indented lines below it there is something that can stop the loop, either a <code class="docutils literal notranslate"><span class="pre">break</span></code>, or a command that can make the condition in the <code class="docutils literal notranslate"><span class="pre">while</span></code> control statement false.</p>
 <p>If you run your program and you discover that you have made a mistake and it wants to run until the end of the universe, remember that you can stop a running program either by clicking the red stop square at the top of the console, or by pressing the key combination <em>ctrl</em> + <em>c</em>.</p>
-<p>That’s it, we now know everything we need to know in order to write our target program. At least in principle. If you feel like a challenge, you might like to have a go at finishing off the program yourself before you take a look at the finished example, <span class="xref myst">guess_the_animal.py</span>.</p>
+<p>That’s it, we now know everything we need to know in order to write our target program. At least in principle. If you feel like a challenge, you might like to have a go at finishing off the program yourself before you take a look at the finished example, <a class="reference internal" href="examples/guess_the_animal.html"><span class="doc std std-doc">guess_the_animal.py</span></a>.</p>
 <p>If you want to add some extra hints about African swallows, you can find some facts about them <a class="reference external" href="http://montypython.50webs.com/scripts/Holy_Grail/Scene1.htm">here</a>.</p>
 </div>
 </div>
@@ -988,7 +991,7 @@ Enter the name of an animal: european swallow
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Open up our example program <span class="xref myst">guess_the_animal.py</span> in the Spyder editor. Or, if you already wrote your own version of the program and you have made it work correctly, open that. Modify the program to add the following new features:</p>
+<p>Open up our example program <a class="reference internal" href="examples/guess_the_animal.html"><span class="doc std std-doc">guess_the_animal.py</span></a> in the Spyder editor. Or, if you already wrote your own version of the program and you have made it work correctly, open that. Modify the program to add the following new features:</p>
 <div class="section" id="a">
 <h4>a)<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h4>
 <p>Before each hint is printed, print a heading that announces which round of the game the user is currently on. So for example the printout for the first round should look like:</p>
@@ -1046,7 +1049,7 @@ It was the african swallow.
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {

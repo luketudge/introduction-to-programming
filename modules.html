@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -314,6 +314,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -419,14 +422,14 @@
   <div class="section" id="modules">
 <h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
 <p>In the <a class="reference internal" href="functions.html"><span class="doc std std-doc">previous lesson</span></a> we learned how to define our own <a class="reference internal" href="glossary.html#function"><span class="std std-doc">functions</span></a>. I mentioned the possibility of re-using functions in a different file from the file in which the functions are defined. This is the main thing that we will learn about in this lesson.</p>
-<p>You may reasonably ask why we would want to do this. If we are writing a program that requires one or more custom-defined functions, why not just define them in the same file that contains the program in which they are used? After all, this simpler one-file structure is the way that the <span class="xref myst">fun_facts.py</span> example program is organized, and that program was written by a well-respected expert programmer.</p>
+<p>You may reasonably ask why we would want to do this. If we are writing a program that requires one or more custom-defined functions, why not just define them in the same file that contains the program in which they are used? After all, this simpler one-file structure is the way that the <a class="reference internal" href="examples/fun_facts.html"><span class="doc std std-doc">fun_facts.py</span></a> example program is organized, and that program was written by a well-respected expert programmer.</p>
 <p>For a simple program like <em>fun_facts.py</em>, a single file is fine, and is even a good idea. Multiple files are unnecessary for simple, short programs. But for more complex programs, separating functions off from the rest of the program has some advantages:</p>
 <ul class="simple">
 <li><p><strong>Clarity</strong>. The functions file shows the algorithmic workings of each component of the program, but the main program file shows how those components are combined to create the overall program structure. We know which file to go to if we want to change either the overall structure or the details of the program.</p></li>
 <li><p><strong>Portability</strong>. A file that contains only functions can be re-used by a different program. The alternative, copying and pasting the function definition into every new program that needs it, is prone to mistakes and makes our programs inflexible (‘<a class="reference external" href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>’).</p></li>
 </ul>
 <p>A Python file that contains an actual program that will ‘do something’ when run is often termed a <a class="reference internal" href="glossary.html#script"><span class="std std-doc">script</span></a>, because it is providing the Python <a class="reference internal" href="glossary.html#interpreter"><span class="std std-doc">interpreter</span></a> with line-by-line instructions telling it what to do, like the script for an actor. A file that instead contains only function definitions (and possibly also some variables) intended to be used elsewhere is often termed a <a class="reference internal" href="glossary.html#module"><span class="std std-doc">module</span></a>. A basic structure for a simple multi-file Python program is to have one module file providing some functions, along with a script file (the ‘main’ file) that gets those functions and actually does something with them.</p>
-<p>Let’s see how this works, using the <span class="xref myst">initials.py</span> file that we saw in the previous lesson. Take a look at the example program <span class="xref myst">ids.py</span>. This program makes use of the <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> function that is defined in <em>initials.py</em>.</p>
+<p>Let’s see how this works, using the <a class="reference internal" href="examples/initials.html"><span class="doc std std-doc">initials.py</span></a> file that we saw in the previous lesson. Take a look at the example program <a class="reference internal" href="examples/ids.html"><span class="doc std std-doc">ids.py</span></a>. This program makes use of the <code class="docutils literal notranslate"><span class="pre">get_initials()</span></code> function that is defined in <em>initials.py</em>.</p>
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
 <p>We can almost already create a multi-file program given what we have learned so far, and there is very little in <em>ids.py</em> that is unfamiliar. We know how to use functions, and we know how to use additional <a class="reference internal" href="glossary.html#control"><span class="std std-doc">control statements</span></a> to determine what actions are taken when, how often, and so on.</p>
@@ -453,7 +456,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5827</span><span class="o">/</span><span class="mf">3348541540.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14319</span><span class="o">/</span><span class="mf">3348541540.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">nonexistent_module</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;nonexistent_module&#39;
@@ -469,7 +472,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_5827/2720324024.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_14319/2720324024.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="kn">import</span> <span class="nn">badly</span> <span class="n">named</span> <span class="n">module</span>
                  <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -490,7 +493,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5827</span><span class="o">/</span><span class="mf">2305843372.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14319</span><span class="o">/</span><span class="mf">2305843372.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_initials</span><span class="p">(</span><span class="s1">&#39;Mildred Bonk&#39;</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;get_initials&#39; is not defined
@@ -617,7 +620,7 @@
 <p>Python uses the ‘double underscore’ (you may sometimes see this called a ‘<a class="reference internal" href="glossary.html#dunder"><span class="std std-doc">dunder</span></a>’) to mark something as being involved in the ‘behind the scenes’ inner workings of a Python program. These things are not normally intended to be used directly, which is why I have so far instructed you on pain of benevolent chastisement to ignore them. However, we are now ready to learn a little bit more about these ‘special’ names.</p>
 <div class="section" id="special-variables">
 <h3>Special variables<a class="headerlink" href="#special-variables" title="Permalink to this headline">¶</a></h3>
-<p>Take a look at the list of the contents of the <code class="docutils literal notranslate"><span class="pre">initials</span></code> namespace above, and compare it with the actual contents of <span class="xref myst">initials.py</span>. You will notice that the things that appear enclosed in double underscores in the list above are not variables that are <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assigned</span></a> explicitly anywhere in the <em>initials.py</em> file.</p>
+<p>Take a look at the list of the contents of the <code class="docutils literal notranslate"><span class="pre">initials</span></code> namespace above, and compare it with the actual contents of <a class="reference internal" href="examples/initials.html"><span class="doc std std-doc">initials.py</span></a>. You will notice that the things that appear enclosed in double underscores in the list above are not variables that are <a class="reference internal" href="glossary.html#assignment"><span class="std std-doc">assigned</span></a> explicitly anywhere in the <em>initials.py</em> file.</p>
 <p>Python has added these special variables automatically, and does so for every Python file that we run or <a class="reference internal" href="glossary.html#import"><span class="std std-doc">import</span></a>. They contain various pieces of information that track the role of that file in our overall program. For example, the automatically-created <code class="docutils literal notranslate"><span class="pre">__file__</span></code> variable stores the full <a class="reference internal" href="glossary.html#path"><span class="std std-doc">path</span></a> to the file that the contents of a namespace came from.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -741,7 +744,7 @@
 </div>
 <p>The main namespace (i.e. the place where everything goes that wasn’t imported from elsewhere) is called <code class="docutils literal notranslate"><span class="pre">'__main__'</span></code>.</p>
 <p>We can make use of this fact within our programs to find out whether our program has been imported into another program (in which case it will have its own <code class="docutils literal notranslate"><span class="pre">__name__</span></code>, such as <code class="docutils literal notranslate"><span class="pre">'initials'</span></code> or <code class="docutils literal notranslate"><span class="pre">'my_module'</span></code> or whatever) or whether it is being run directly on its own (in which case its <code class="docutils literal notranslate"><span class="pre">__name__</span></code> will be <code class="docutils literal notranslate"><span class="pre">'__main__'</span></code>).</p>
-<p>The short educational program <span class="xref myst">slim_shady.py</span> demonstrates this difference in action. Let’s see first of all what happens if we import <em>slim_shady.py</em> as a module:</p>
+<p>The short educational program <a class="reference internal" href="examples/slim_shady.html"><span class="doc std std-doc">slim_shady.py</span></a> demonstrates this difference in action. Let’s see first of all what happens if we import <em>slim_shady.py</em> as a module:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">slim_shady</span>
@@ -929,7 +932,7 @@ Just purse your lips and whistle, that’s the thing</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {

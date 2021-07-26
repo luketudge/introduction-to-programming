@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -314,6 +314,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -565,7 +568,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1134723
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1188316
 </pre></div>
 </div>
 </div>
@@ -763,7 +766,7 @@ find_previous_siblings
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>409
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>417
 </pre></div>
 </div>
 </div>
@@ -784,7 +787,7 @@ find_previous_siblings
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>109
 </pre></div>
 </div>
 </div>
@@ -845,7 +848,7 @@ find_previous_siblings
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
@@ -859,16 +862,17 @@ find_previous_siblings
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/environment/2021/jul/14/amazon-rainforest-now-emitting-more-co2-than-it-absorbs&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Climate crisis&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Amazon rainforest now emitting more CO2 than it absorbs&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/us-news/2021/jul/14/donald-trump-reichstag-moment-general-mark-milley-book&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Donald Trump&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Top US general warned of ‘Reichstag moment’ in president&#39;s turbulent last days&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/14/taliban-claim-afghan-border-crossing-with-pakistan-in-major-gain&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Afghanistan&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Taliban claim border crossing with Pakistan in major gain&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/uk-news/2021/jul/14/uk-confirms-plan-for-statute-of-limitations-on-troubles-prosecutions&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Northern Ireland&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;UK confirms plan to call time on Troubles prosecutions&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/14/bolsonaro-brazil-hospital-hiccups&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Brazil&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Bolsonaro may have emergency surgery after hiccups persist for over 10 days&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/14/vigilante-groups-form-south-africa-tackle-looting-violence&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;South Africa&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Vigilante groups form to tackle looting and violence &lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/us-news/2021/jul/14/lego-handgun-block19-utah-cease-and-desist&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Lego&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Utah company halts sales of handgun case kits after cease and desist&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/14/cuban-musicians-support-protesters&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Cuba&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;High-profile musicians show rare public support to protesters &lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/14/legal-polexit-poland-court-rules-that-eu-measures-are-unconstitutional&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;‘Legal Polexit’&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Poland court rules that EU measures are unconstitutional&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
-&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/14/pro-onion-faction-triumphs-in-spains-great-omelette-debate&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Thriller in tortilla&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Pro-onion faction triumphs in Spain’s great omelette debate&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/25/emmanuel-macron-pushes-for-israeli-inquiry-into-nso-spyware-concerns&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;The Pegasus project&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Emmanuel Macron ‘pushes for Israeli inquiry’ into NSO spyware concerns&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/26/tunisian-president-dismisses-government-sparking-street-celebrations&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Tunisia&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;President dismisses government, sparking street celebrations&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/sport/live/2021/jul/25/olympics-2020-day-three-mens-triathlon-swimming-gymnastics-and-more-live&quot;&gt;&lt;span class=&quot;fc-item__kicker fc-item__kicker--breaking-news&quot;&gt;&lt;span class=&quot;live-pulse-icon flashing-image&quot;&gt;&lt;/span&gt;Live&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Olympics 2020 day three: Kristian Blummenfelt wins men’s triathlon, swimming, gymnastics and more &lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/uk-news/2021/jul/25/thunderstorms-leave-cars-and-buses-stranded-in-london&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;UK&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Thunderstorms leave roads and tube stations flooded in London&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/society/2021/jul/25/uk-ireland-child-sexual-abuse-scout-movement&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Exclusive&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt; More than 250 convicted of child sexual abuse in UK and Ireland while in Scout movement&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/25/at-least-10-dead-and-44-injured-in-bus-crash-in-croatia-after-driver-lost-control&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Croatia&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;At least 10 dead and 44 injured in bus crash after driver loses control&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/25/seriously-ill-young-people-in-current-covid-admissions-expert-warns&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;UK&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Doctors warn over increasing number of young people with Covid in ICU&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/media/2021/jul/25/tucker-carlson-fox-news-worst-human-being-viral-video-montana&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;‘You are the worst human being’&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Man confronts Fox News host Tucker Carlson&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/australia-news/2021/jul/26/dietary-supplements-causing-severe-liver-injuries-in-australians-with-some-requiring-transplants-study-shows&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Australia&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Dietary supplements causing severe liver injuries, study shows&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/25/scottish-climber-rick-allen-reportedly-dies-in-avalanche-on-k2&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;K2&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Scottish climber Rick Allen dies in avalanche while on new route&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/business/2021/jul/25/tobacco-firm-philip-morris-calls-for-ban-on-cigarettes-within-decade&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Philip Morris&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Tobacco firm calls for ban on cigarettes within decade&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
 </pre></div>
 </div>
 </div>
@@ -883,16 +887,17 @@ find_previous_siblings
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Climate crisis  Amazon rainforest now emitting more CO2 than it absorbs 
-Donald Trump  Top US general warned of ‘Reichstag moment’ in president&#39;s turbulent last days 
-Afghanistan  Taliban claim border crossing with Pakistan in major gain 
-Northern Ireland  UK confirms plan to call time on Troubles prosecutions 
-Brazil  Bolsonaro may have emergency surgery after hiccups persist for over 10 days 
-South Africa  Vigilante groups form to tackle looting and violence  
-Lego  Utah company halts sales of handgun case kits after cease and desist 
-Cuba  High-profile musicians show rare public support to protesters  
-‘Legal Polexit’  Poland court rules that EU measures are unconstitutional 
-Thriller in tortilla  Pro-onion faction triumphs in Spain’s great omelette debate 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Pegasus project  Emmanuel Macron ‘pushes for Israeli inquiry’ into NSO spyware concerns 
+Tunisia  President dismisses government, sparking street celebrations 
+Live  Olympics 2020 day three: Kristian Blummenfelt wins men’s triathlon, swimming, gymnastics and more  
+UK  Thunderstorms leave roads and tube stations flooded in London 
+Exclusive   More than 250 convicted of child sexual abuse in UK and Ireland while in Scout movement 
+Croatia  At least 10 dead and 44 injured in bus crash after driver loses control 
+UK  Doctors warn over increasing number of young people with Covid in ICU 
+‘You are the worst human being’  Man confronts Fox News host Tucker Carlson 
+Australia  Dietary supplements causing severe liver injuries, study shows 
+K2  Scottish climber Rick Allen dies in avalanche while on new route 
+Philip Morris  Tobacco firm calls for ban on cigarettes within decade 
 </pre></div>
 </div>
 </div>
@@ -908,7 +913,7 @@ Thriller in tortilla  Pro-onion faction triumphs in Spain’s great omelette deb
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/environment/2021/jul/14/amazon-rainforest-now-emitting-more-co2-than-it-absorbs&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;Climate crisis&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Amazon rainforest now emitting more CO2 than it absorbs&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;a class=&quot;fc-item__link&quot; data-link-name=&quot;article&quot; href=&quot;https://www.theguardian.com/world/2021/jul/25/emmanuel-macron-pushes-for-israeli-inquiry-into-nso-spyware-concerns&quot;&gt;&lt;span class=&quot;fc-item__kicker&quot;&gt;The Pegasus project&lt;/span&gt; &lt;span class=&quot;u-faux-block-link__cta fc-item__headline&quot;&gt; &lt;span class=&quot;js-headline-text&quot;&gt;Emmanuel Macron ‘pushes for Israeli inquiry’ into NSO spyware concerns&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;
 </pre></div>
 </div>
 </div>
@@ -927,7 +932,7 @@ Thriller in tortilla  Pro-onion faction triumphs in Spain’s great omelette deb
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://www.theguardian.com/environment/2021/jul/14/amazon-rainforest-now-emitting-more-co2-than-it-absorbs&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://www.theguardian.com/world/2021/jul/25/emmanuel-macron-pushes-for-israeli-inquiry-into-nso-spyware-concerns&#39;
 </pre></div>
 </div>
 </div>
@@ -937,7 +942,7 @@ Thriller in tortilla  Pro-onion faction triumphs in Spain’s great omelette deb
 <blockquote>
 <div><p>The first <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> tag with class “fc-item__link” and data-link-name “article” within the <code class="docutils literal notranslate"><span class="pre">&lt;section&gt;</span></code> tag with id “headlines”.</p>
 </div></blockquote>
-<p>We haven’t yet finished our target program. We said that we wanted to get the text of the main article, and the URLs of all the links contained in the main article. For this, we will need to now take the URL we have just found, which points to the main article page, <code class="docutils literal notranslate"><span class="pre">get()</span></code> this page using <code class="docutils literal notranslate"><span class="pre">requests</span></code>, then search again in the HTML of the page in order to find the article text and links. However, all of this involves only small variations on the techniques we have already covered. So if you would like to practice, you can try to finish off the example task yourself starting from here. The example <a class="reference internal" href="glossary.html#script"><span class="std std-doc">script</span></a> <span class="xref myst">guardian_top_article.py</span> shows one possible solution.</p>
+<p>We haven’t yet finished our target program. We said that we wanted to get the text of the main article, and the URLs of all the links contained in the main article. For this, we will need to now take the URL we have just found, which points to the main article page, <code class="docutils literal notranslate"><span class="pre">get()</span></code> this page using <code class="docutils literal notranslate"><span class="pre">requests</span></code>, then search again in the HTML of the page in order to find the article text and links. However, all of this involves only small variations on the techniques we have already covered. So if you would like to practice, you can try to finish off the example task yourself starting from here. The example <a class="reference internal" href="glossary.html#script"><span class="std std-doc">script</span></a> <a class="reference internal" href="examples/guardian_top_article.html"><span class="doc std std-doc">guardian_top_article.py</span></a> shows one possible solution.</p>
 </div>
 </div>
 </div>
@@ -1026,9 +1031,6 @@ Thriller in tortilla  Pro-onion faction triumphs in Spain’s great omelette deb
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT SPOILER ALERT 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1129,7 +1131,7 @@ Thriller in tortilla  Pro-onion faction triumphs in Spain’s great omelette deb
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {

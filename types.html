@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -316,6 +316,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -928,7 +931,7 @@
 </div>
 </div>
 </div>
-<p>The example program <span class="xref myst">age_next_year.py</span> shows how to use this pattern of Python commands in a simple program. If you would like to explore type conversion a little more, open up the file in Spyder, save a new copy of it, for example under the name <em>age_next_year_v2.py</em>, and try out a few changes:</p>
+<p>The example program <a class="reference internal" href="examples/age_next_year.html"><span class="doc std std-doc">age_next_year.py</span></a> shows how to use this pattern of Python commands in a simple program. If you would like to explore type conversion a little more, open up the file in Spyder, save a new copy of it, for example under the name <em>age_next_year_v2.py</em>, and try out a few changes:</p>
 <ul class="simple">
 <li><p>Does it matter for the workings of the program if you convert the user input to float instead of integer?</p></li>
 <li><p>Why is it necessary to use the <code class="docutils literal notranslate"><span class="pre">str()</span></code> type conversion function on <span class="xref myst">line 14</span>? What happens if you remove it?</p></li>
@@ -1197,7 +1200,7 @@ yes
 </div>
 </div>
 <p>We can see that if we have multiple <code class="docutils literal notranslate"><span class="pre">{}</span></code> replacement fields, these are replaced with the values of the variables that we give to <code class="docutils literal notranslate"><span class="pre">format()</span></code> in the order that we enter them. Notice also that we did not have to use the <code class="docutils literal notranslate"><span class="pre">str()</span></code> type conversion function to convert the two numeric variables <code class="docutils literal notranslate"><span class="pre">age</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> into strings; <code class="docutils literal notranslate"><span class="pre">format()</span></code> handles variables of different types automatically.</p>
-<p>There is a little bit more to the <code class="docutils literal notranslate"><span class="pre">format()</span></code> method than this. For example, we can also specify how many decimal places of a <a class="reference internal" href="glossary.html#float"><span class="std std-doc">float</span></a> to insert into the string, and other details. But this is enough for now about <code class="docutils literal notranslate"><span class="pre">format()</span></code>, and about string methods in general. If you would like to see an example of a program that makes use of a few string methods, take a look at <span class="xref myst">name_trivia.py</span>.</p>
+<p>There is a little bit more to the <code class="docutils literal notranslate"><span class="pre">format()</span></code> method than this. For example, we can also specify how many decimal places of a <a class="reference internal" href="glossary.html#float"><span class="std std-doc">float</span></a> to insert into the string, and other details. But this is enough for now about <code class="docutils literal notranslate"><span class="pre">format()</span></code>, and about string methods in general. If you would like to see an example of a program that makes use of a few string methods, take a look at <a class="reference internal" href="examples/name_trivia.html"><span class="doc std std-doc">name_trivia.py</span></a>.</p>
 </div>
 </div>
 <div class="section" id="other-types">
@@ -1463,7 +1466,7 @@ bacon
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {

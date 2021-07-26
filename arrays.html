@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -316,6 +316,9 @@
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -873,7 +876,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5645</span><span class="o">/</span><span class="mf">825103235.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14126</span><span class="o">/</span><span class="mf">825103235.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">coords_list</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 
 <span class="ne">TypeError</span>: list indices must be integers or slices, not tuple
@@ -1050,7 +1053,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5645</span><span class="o">/</span><span class="mf">666826377.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14126</span><span class="o">/</span><span class="mf">666826377.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">coords</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
 
 <span class="ne">ValueError</span>: operands could not be broadcast together with shapes (4,2) (3,) 
@@ -1143,7 +1146,7 @@
 <li><p>The sine and cosine functions, needed to construct the rotation matrix.</p></li>
 </ul>
 <p>But these are all straightforward, and we can take them from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module in Python’s <a class="reference internal" href="standard_library.html"><span class="doc std std-doc">standard library</span></a>.</p>
-<p>You can see the code for the finished function in the example module <span class="xref myst">coordinates.py</span>. Here it is in action:</p>
+<p>You can see the code for the finished function in the example module <a class="reference internal" href="examples/coordinates.html"><span class="doc std std-doc">coordinates.py</span></a>. Here it is in action:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">coordinates</span>
@@ -1270,7 +1273,7 @@
 <div class="section" id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
 <p>In geometry, to <a class="reference external" href="https://en.wikipedia.org/wiki/Translation_(geometry)">translate</a> some coordinates simply means to move them by a certain distance in a certain direction within the coordinate space. One way of representing this transformation is as the addition of a vector to the coordinates, as we learned above. For example, to move a pair of <em>(x,y)</em> coordinates 3 units rightward along the <em>x</em> axis and 2 units downward along the <em>y</em> axis we would add the vector <em>(3,-2)</em>.</p>
-<p>Add a new function to the <span class="xref myst">coordinates.py</span> module, called <code class="docutils literal notranslate"><span class="pre">translate()</span></code>. Like <code class="docutils literal notranslate"><span class="pre">rotate()</span></code>, <code class="docutils literal notranslate"><span class="pre">translate()</span></code> should take as its first <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> a 2-column <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array representing some coordinates, and it should <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return</span></a> a transformed version of the coordinates. The second argument should be a <a class="reference internal" href="glossary.html#list"><span class="std std-doc">list</span></a> (or a <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuple</span></a>, it doesn’t matter) whose two entries give the distances by which to shift the coordinates along the <em>x</em> and <em>y</em> axes, respectively. So for the example of shifting the coordinates 3 units rightwards along the <em>x</em> axis and 2 units downward along the <em>y</em> axis, this argument would be <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">-2]</span></code>.</p>
+<p>Add a new function to the <a class="reference internal" href="examples/coordinates.html"><span class="doc std std-doc">coordinates.py</span></a> module, called <code class="docutils literal notranslate"><span class="pre">translate()</span></code>. Like <code class="docutils literal notranslate"><span class="pre">rotate()</span></code>, <code class="docutils literal notranslate"><span class="pre">translate()</span></code> should take as its first <a class="reference internal" href="glossary.html#argument"><span class="std std-doc">argument</span></a> a 2-column <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array representing some coordinates, and it should <a class="reference internal" href="glossary.html#return"><span class="std std-doc">return</span></a> a transformed version of the coordinates. The second argument should be a <a class="reference internal" href="glossary.html#list"><span class="std std-doc">list</span></a> (or a <a class="reference internal" href="glossary.html#tuple"><span class="std std-doc">tuple</span></a>, it doesn’t matter) whose two entries give the distances by which to shift the coordinates along the <em>x</em> and <em>y</em> axes, respectively. So for the example of shifting the coordinates 3 units rightwards along the <em>x</em> axis and 2 units downward along the <em>y</em> axis, this argument would be <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">-2]</span></code>.</p>
 <p>It will probably help to test your function visually using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> as you go along, to confirm that it works as expected.</p>
 </div>
 </div>
@@ -1279,7 +1282,7 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "luketudge/introduction-to-programming",
             ref: "master",
         },
         codeMirrorConfig: {
