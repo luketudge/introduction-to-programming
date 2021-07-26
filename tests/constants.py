@@ -40,7 +40,13 @@ TOPIC_PAGES = [
 ]
 
 
-# %% Filenames
+# %% Pages for testing .py links
+
+INTRO_PAGE = 'Creating a computer program with Python'
+INTRO_EXAMPLE = 'greeting.py'
+
+
+# %% Filenames for testing downloads
 
 EXAMPLE_FILES = [
     'README.md',
