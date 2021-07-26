@@ -19,6 +19,6 @@ sphinx:
   config:
     myst_heading_anchors: 4
     nb_custom_formats:
-        .py:
-            - jupytext.reads
-            - fmt: py
+      .py:
+        - tools.code_to_node
+        - {}
